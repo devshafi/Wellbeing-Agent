@@ -55,21 +55,10 @@ with gr.Blocks(
     title="🧠 Wellbeing Agent - Modular Mental Health Assistant",
     theme=gr.themes.Soft(),
     css="""
-    .gradio-container {
-        max-width: 1400px !important;
-        margin: auto !important;
-    }
-    .chat-message {
-        padding: 15px !important;
-        margin: 8px 0 !important;
-        border-radius: 12px !important;
-        line-height: 1.6 !important;
-    }
-    .chatbot {
-        min-height: 600px !important;
-        max-height: 800px !important;
-        width: 800px !important;
-       
+    :root, body, #root, .gradio-container {
+        width: 100% !important;
+        max-width: none !important;
+        margin: 0 !important;
     }
     """
 ) as demo:
@@ -80,12 +69,12 @@ with gr.Blocks(
     with gr.Row():
         with gr.Column(scale=4):  # Made chat area bigger
             chatbot = gr.Chatbot(
-                height=600,  # Increased height
+                height=500,  # Increased height
                 show_label=False,
                 container=True,
-                bubble_full_width=False,
+                bubble_full_width=True,
                 show_copy_button=True,
-                avatar_images=None
+                avatar_images=None,
             )
             
             with gr.Row():

@@ -26,7 +26,6 @@ class FunctionCallingProcessor:
                 }
             ]
             
-            print("function calling is being called")
             
             tokenizer = self.model_manager.get_tokenizer("function_calling")
             model = self.model_manager.get_model("function_calling")
@@ -40,7 +39,7 @@ class FunctionCallingProcessor:
                     **inputs,
                     max_new_tokens=1024,
                     do_sample=True,
-                    temperature=0.1,
+                    temperature=0.01,
                     top_p=0.95,
                     repetition_penalty=1.0,
                     pad_token_id=tokenizer.eos_token_id,

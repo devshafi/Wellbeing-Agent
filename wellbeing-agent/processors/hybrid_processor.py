@@ -3,6 +3,7 @@ import json
 import re
 from models.model_manager import model_manager
 from utils.history_manager import history_manager
+from utils.few_shot_examples import FewShotExamples
 from function_registry import function_registry
 
 class HybridProcessor:
@@ -94,9 +95,9 @@ class HybridProcessor:
             with torch.no_grad():
                 outputs = model.generate(
                     **inputs,
-                    max_new_tokens=512,
+                    max_new_tokens=256,
                     do_sample=True,
-                    temperature=0.1,
+                    temperature=0.01,
                     top_p=0.95,
                     repetition_penalty=1.0,
                     pad_token_id=tokenizer.eos_token_id,
@@ -219,31 +220,18 @@ class HybridProcessor:
             # Create data context summary
             data_context = self._create_data_context(collected_data)
             
+            # Create dynamic few-shot examples based on collected data types
+            few_shot_examples = FewShotExamples.get_examples_for_data_types(list(collected_data.keys()))
+            
             messages = [
                 {
                     "role": "system",
                     "content": """You are a mental health assistant who analyzes actual health data. When provided with user data, you must reference specific dates, values, and patterns from that data in your response. Do not give generic advice - analyze the actual data provided and give personalized insights."""
                 },
-                {
-                    "role": "user", 
-                    "content": """I've been having trouble sleeping lately.
-
-My recent health data shows:
-=== SLEEP DATA ===
-Recent sleep records:
-• 2025-08-15: 4.2 hours, Poor quality
-• 2025-08-16: 4.8 hours, Poor quality
-• 2025-08-17: 7.1 hours, Fair quality
-
-Please analyze my actual data and provide personalized insights based on the specific patterns you can see."""
-                },
-                {
-                    "role": "assistant",
-                    "content": """Looking at your sleep data from August 15-17, I can see a clear pattern that explains your troubles. You had significantly insufficient sleep on August 15th and 16th with only 4.2 and 4.8 hours respectively, both rated as poor quality. While you managed to get closer to adequate sleep on August 17th with 7.1 hours, the quality was still only fair.
-
-This pattern shows you're experiencing both sleep duration issues and sleep quality problems. The consecutive nights of under 5 hours sleep would definitely leave you feeling sleep-deprived and struggling. Even when you did get more hours, the poor to fair quality suggests your sleep isn't restorative."""
-                },
             ]
+            
+            # Add dynamic few-shot examples
+            messages.extend(few_shot_examples)
             
             # Add conversation history
             messages.extend(history)
