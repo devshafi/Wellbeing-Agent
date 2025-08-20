@@ -1,0 +1,21 @@
+function_name,sample_count,avg_query_length,query_length_std,days_covered,unique_patients
+get_blood_glucose_data,200,59.64,3.83,"[np.int64(10), np.int64(7), np.int64(14), np.int64(3), np.int64(28), np.int64(5), np.int64(21), np.int64(30), np.int64(1), np.int64(15)]",176
+get_blood_pressure_data,200,60.14,6.64,"[np.int64(15), np.int64(21), np.int64(1), np.int64(30), np.int64(28), np.int64(10), np.int64(3), np.int64(5), np.int64(7), np.int64(14)]",182
+get_bmr_data,200,65.76,2.84,"[np.int64(28), np.int64(14), np.int64(15), np.int64(1), np.int64(30), np.int64(5), np.int64(7), np.int64(3), np.int64(10), np.int64(21)]",184
+get_body_fat_data,200,64.67,5.0,"[np.int64(28), np.int64(3), np.int64(7), np.int64(21), np.int64(1), np.int64(5), np.int64(15), np.int64(30), np.int64(10), np.int64(14)]",178
+get_body_temperature_data,200,64.0,5.75,"[np.int64(3), np.int64(1), np.int64(30), np.int64(21), np.int64(7), np.int64(14), np.int64(10), np.int64(28), np.int64(5), np.int64(15)]",184
+get_calories_burned_data,200,64.11,3.81,"[np.int64(21), np.int64(30), np.int64(7), np.int64(14), np.int64(28), np.int64(15), np.int64(10), np.int64(1), np.int64(5), np.int64(3)]",177
+get_distance_data,200,62.7,3.46,"[np.int64(21), np.int64(14), np.int64(10), np.int64(3), np.int64(15), np.int64(7), np.int64(1), np.int64(30), np.int64(5), np.int64(28)]",177
+get_exercise_heart_rate_data,200,65.26,3.1,"[np.int64(21), np.int64(5), np.int64(30), np.int64(28), np.int64(7), np.int64(1), np.int64(15), np.int64(10), np.int64(3), np.int64(14)]",179
+get_exercise_session_data,200,57.72,4.23,"[np.int64(10), np.int64(21), np.int64(14), np.int64(5), np.int64(28), np.int64(7), np.int64(30), np.int64(1), np.int64(3), np.int64(15)]",179
+get_heart_rate_data,200,60.7,4.67,"[np.int64(7), np.int64(5), np.int64(10), np.int64(1), np.int64(14), np.int64(30), np.int64(21), np.int64(28), np.int64(3), np.int64(15)]",181
+get_height_data,200,67.04,3.38,"[np.int64(21), np.int64(28), np.int64(14), np.int64(7), np.int64(15), np.int64(1), np.int64(3), np.int64(10), np.int64(5), np.int64(30)]",178
+get_nutrition_data,200,58.34,5.61,"[np.int64(14), np.int64(5), np.int64(1), np.int64(28), np.int64(15), np.int64(3), np.int64(7), np.int64(21), np.int64(30), np.int64(10)]",180
+get_oxygen_saturation_data,200,61.04,4.8,"[np.int64(5), np.int64(3), np.int64(7), np.int64(10), np.int64(15), np.int64(14), np.int64(30), np.int64(1), np.int64(21), np.int64(28)]",179
+get_power_data,200,64.72,3.49,"[np.int64(21), np.int64(28), np.int64(7), np.int64(30), np.int64(1), np.int64(3), np.int64(5), np.int64(14), np.int64(10), np.int64(15)]",179
+get_sleep_data,200,53.38,5.22,"[np.int64(10), np.int64(14), np.int64(30), np.int64(15), np.int64(7), np.int64(5), np.int64(28), np.int64(3), np.int64(21), np.int64(1)]",177
+get_speed_data,200,63.36,4.26,"[np.int64(7), np.int64(15), np.int64(30), np.int64(21), np.int64(5), np.int64(28), np.int64(3), np.int64(1), np.int64(10), np.int64(14)]",183
+get_steps_data,200,57.24,4.38,"[np.int64(30), np.int64(10), np.int64(14), np.int64(7), np.int64(3), np.int64(21), np.int64(28), np.int64(15), np.int64(1), np.int64(5)]",178
+get_stress_data,200,57.01,5.57,"[np.int64(5), np.int64(21), np.int64(30), np.int64(28), np.int64(7), np.int64(1), np.int64(10), np.int64(15), np.int64(14), np.int64(3)]",182
+get_vo2max_data,200,69.49,4.55,"[np.int64(7), np.int64(28), np.int64(1), np.int64(30), np.int64(3), np.int64(5), np.int64(14), np.int64(10), np.int64(15), np.int64(21)]",181
+get_weight_data,200,61.96,4.35,"[np.int64(1), np.int64(28), np.int64(5), np.int64(7), np.int64(30), np.int64(14), np.int64(21), np.int64(3), np.int64(15), np.int64(10)]",184

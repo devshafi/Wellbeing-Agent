@@ -1,0 +1,1759 @@
+[
+    {
+        "query": "I've been feeling really shaky and lightheaded after meals lately. Could my blood sugar be spiking?",
+        "type": "symptom",
+        "thinking": "The user is describing physical symptoms (shakiness, lightheadedness) that suggest concern about post-meal blood glucose spikes. Since they mention 'lately' but don't specify a timeframe, I'll default to 7 days of data to identify patterns after meals.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Show me my glucose trends for the past two weeks—I started a new workout routine and want to see if it's making a difference.",
+        "type": "behavioral",
+        "thinking": "The user explicitly requests glucose data to correlate with a behavioral change (new workout routine). They specify 'past two weeks', so I'll retrieve 14 days of data to match their stated timeframe and assess impact.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My numbers feel like a rollercoaster this month. Up, down, never steady.",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('rollercoaster') to express concern about glucose variability. While no exact timeframe is given, 'this month' suggests approximately 30 days of data would capture the described instability.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you check if my fasting levels have improved? I've been taking my meds on time for 10 days now.",
+        "type": "explicit",
+        "thinking": "This is a direct request to evaluate medication adherence impact on fasting glucose. The user specifies '10 days', so I'll retrieve exactly that timeframe to match their behavioral trial period.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Ever since the holidays started, my CGM alarms keep going off at night.",
+        "type": "implicit",
+        "thinking": "The user implies concern about nocturnal glucose levels during holiday period. 'Since the holidays started' likely refers to recent days; assuming holidays began roughly a week ago, I'll pull 7 days of nighttime data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I skipped breakfast three days in a row last week—did that mess with my averages?",
+        "type": "behavioral",
+        "thinking": "The user asks about the impact of a specific behavior (skipping breakfast) on glucose averages. They reference 'last week', so I'll analyze 7 days of data focusing on morning readings to answer their question.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My energy crashes every afternoon like clockwork. Could this be sugar-related?",
+        "type": "symptom",
+        "thinking": "The user describes recurring energy crashes suggesting possible hypoglycemia. No timeframe is specified, so I'll examine 7 days of afternoon glucose patterns to identify potential correlations.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Give me the full picture since my endo adjusted my basal rate.",
+        "type": "explicit",
+        "thinking": "This is a clear request for glucose data following a medical change. Without a specific duration but knowing basal rate adjustments typically need 5-7 days to evaluate, I'll retrieve 7 days for comprehensive assessment.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "It's like my body's thermostat is broken—can't seem to stabilize no matter what I eat.",
+        "type": "metaphorical",
+        "thinking": "The user employs a thermostat metaphor to describe glucose dysregulation. With no time reference, I'll default to 7 days of data to analyze their stability concerns across different meals.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How have my levels been during night shifts? I've worked five this month.",
+        "type": "implicit",
+        "thinking": "The user hints at concern about glucose patterns during night shifts. They mention 'five this month', so I'll retrieve 30 days of data to capture all five instances and compare against daytime patterns.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I've been feeling really tired lately, could my blood sugar be off?",
+        "type": "symptom",
+        "thinking": "The user is expressing a physical symptom (tiredness) that might be linked to blood glucose fluctuations. Calling get_blood_glucose_data is justified to check recent glucose levels for abnormalities. Since no specific time window is mentioned, I'll default to a 7-day period to assess recent trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you check my blood glucose trends for the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user directly requests an analysis of blood glucose trends over a specific period (past two weeks). get_blood_glucose_data is needed to retrieve this data. The time window 'past two weeks' clearly maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating a lot more carbs since the holidays started. How’s that affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (increased carb intake) that could impact blood glucose, implying a need to check its effects. get_blood_glucose_data will provide data to evaluate this impact. The reference to 'since the holidays started' suggests a recent period, which I'll interpret as the last 10 days to cover a typical holiday duration.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My energy feels like it’s on a rollercoaster these days. Is my blood sugar to blame?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('rollercoaster') to describe fluctuating energy levels, hinting at possible glucose instability. get_blood_glucose_data is necessary to examine glucose patterns. No specific time is given, so I'll use a 7-day default to capture recent fluctuations.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose levels might be spiking at night over the last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about nighttime glucose spikes, suggesting a need to monitor trends. get_blood_glucose_data is appropriate to analyze nighttime patterns. The time window 'last month' aligns with 30 days, the maximum in the allowed range.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How have my blood sugar levels been since Sunday?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for blood sugar levels over a defined period (since Sunday). get_blood_glucose_data will retrieve this data. Assuming today is Tuesday, August 5, 2025, 'since Sunday' refers to August 3, 2025, so I'll use 5 days to include data from Sunday to today.",
+        "numdays": 5,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been super irritable this week. Could it be my blood glucose acting up?",
+        "type": "symptom",
+        "thinking": "The user reports an emotional symptom (irritability) that might relate to blood glucose issues. get_blood_glucose_data is needed to check for correlations with glucose levels. The time window 'this week' suggests a 7-day period to cover the current week.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I skipped breakfast a few times over the last 10 days. Did that mess with my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a behavioral change (skipping breakfast) that could affect glucose stability. get_blood_glucose_data will help assess any resulting patterns. The query specifies 'last 10 days,' which directly maps to a 10-day period.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My body feels like it’s running on empty by midday. Is my blood sugar crashing?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('running on empty') to describe a midday energy drop, possibly indicating glucose crashes. get_blood_glucose_data is required to check for low glucose levels. No time window is specified, so I'll default to 7 days to evaluate recent patterns.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you look at my glucose data for the last three weekends?",
+        "type": "explicit",
+        "thinking": "The user directly requests glucose data for a specific period (last three weekends). get_blood_glucose_data will retrieve this data. 'Last three weekends' implies the past three weeks, focusing on weekend days, but to simplify, I'll interpret it as the last 21 days to cover three full weeks including weekends.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Why do I feel so drained by 3 PM? My friends say it might be blood sugar crashes.",
+        "type": "symptom",
+        "thinking": "User describes afternoon fatigue potentially linked to hypoglycemia. No specific timeframe mentioned, so analyzing 7 days of afternoon glucose data will help identify patterns.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you compare my glucose from weekdays vs. weekends? I suspect my sleep schedule affects it.",
+        "type": "explicit",
+        "thinking": "Direct request to compare glucose patterns between weekdays and weekends. Defaulting to 14 days (2 weeks) to capture at least one full cycle of each.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been craving sweets nonstop for days—could this mean my levels are unstable?",
+        "type": "implicit",
+        "thinking": "User implies concern about cravings as a sign of glucose instability. 'For days' suggests a short timeframe; defaulting to 7 days to investigate trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My focus at work is all over the place. Could blood sugar swings be the culprit?",
+        "type": "symptom",
+        "thinking": "Cognitive symptoms (poor focus) may correlate with glucose variability. No timeframe given; using 7 days to assess fluctuations during work hours.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Since switching to a low-carb diet 10 days ago, I’ve had fewer highs. Can you confirm?",
+        "type": "behavioral",
+        "thinking": "User links dietary change to glucose improvements. Specifies '10 days ago,' so pulling data for that exact period to validate their observation.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My CGM says I’m in range, but I still feel off. What’s going on?",
+        "type": "implicit",
+        "thinking": "User questions the discrepancy between device readings and subjective feelings. No timeframe provided; analyzing 7 days to check for subtle patterns.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Show me my glucose spikes after dinner for the past 5 days—I’ve been experimenting with portion sizes.",
+        "type": "explicit",
+        "thinking": "Explicit request for post-dinner data tied to a behavioral experiment. User specifies 'past 5 days,' so retrieving exactly that timeframe.",
+        "numdays": 5,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like my body’s reacting differently to stress this month. Are my levels more volatile?",
+        "type": "metaphorical",
+        "thinking": "Metaphorical language ('reacting differently') suggests concern about stress-induced glucose changes. 'This month' implies ~30 days of data for analysis.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My morning readings are higher than usual. Did anything change last week?",
+        "type": "symptom",
+        "thinking": "User notes a symptom (elevated fasting glucose) and asks about recent changes. 'Last week' directs us to 7 days of data to identify potential triggers.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been walking 10K steps daily for 3 weeks. Has it flattened my curves?",
+        "type": "behavioral",
+        "thinking": "User connects increased activity to potential glucose stabilization. '3 weeks' maps to 21 days of data to evaluate the impact.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Why does my sugar drop like a rock during meetings?",
+        "type": "metaphorical",
+        "thinking": "Metaphor ('drop like a rock') highlights concern about hypoglycemia in specific contexts. Defaulting to 7 days to analyze meeting-time trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Check my overnight levels since I got the new mattress—I’ve slept better but wake up dizzy.",
+        "type": "behavioral",
+        "thinking": "User links sleep changes to morning symptoms. No exact timeframe, but 'since' implies recent changes; using 7 days for overnight data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My doctor says I’m prediabetic. Can you show me how bad it’s been the past month?",
+        "type": "explicit",
+        "thinking": "Direct request for retrospective analysis following a diagnosis. 'Past month' clearly indicates 30 days of data.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been forgetting to bolus for snacks. How much damage did that do in the last 2 weeks?",
+        "type": "behavioral",
+        "thinking": "User admits to medication lapses and asks about consequences. 'Last 2 weeks' translates to 14 days of post-snack glucose data.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My mood swings are wild when I skip meals. Is my glucose the reason?",
+        "type": "symptom",
+        "thinking": "Emotional symptoms (mood swings) tied to meal-skipping. No timeframe given; examining 7 days to correlate missed meals with fluctuations.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Post-workout numbers are confusing—sometimes high, sometimes low. What’s the trend for June?",
+        "type": "implicit",
+        "thinking": "User expresses confusion about exercise’s glucose impact. 'June' implies current month; using 30 days if recent, else capping at 30.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Breakfast seems to set off a domino effect for my day. Can we look at the last 10 mornings?",
+        "type": "metaphorical",
+        "thinking": "Metaphor ('domino effect') suggests breakfast’s systemic impact. User specifies 'last 10 mornings,' so pulling 10 days of AM data.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I traveled for work last week—did time zones mess with my levels?",
+        "type": "behavioral",
+        "thinking": "User attributes potential glucose changes to travel. 'Last week' directs us to 7 days of data covering the trip.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Are my highs and lows more extreme than usual?",
+        "type": "implicit",
+        "thinking": "Implied concern about glucose variability. No timeframe mentioned; comparing current 7-day data to historical baselines.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Since my partner cooks dinner now, my evenings feel smoother. Is my glucose more stable?",
+        "type": "behavioral",
+        "thinking": "User links dietary changes to subjective improvement. 'Since' implies recent change; defaulting to 7 days of evening data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m always thirsty after lunch. Could that mean something?",
+        "type": "symptom",
+        "thinking": "Physical symptom (thirst) potentially tied to postprandial hyperglycemia. No timeframe; analyzing 7 days of post-lunch readings.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Show me my data from the holidays—I indulged a bit and want to see the impact.",
+        "type": "explicit",
+        "thinking": "Direct request for holiday-period analysis. Assuming holidays lasted ~10 days (e.g., Christmas to New Year’s), retrieving that range.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My levels feel like they’re on a seesaw since I started night shifts.",
+        "type": "metaphorical",
+        "thinking": "Metaphor ('seesaw') describes instability linked to schedule changes. 'Since' implies recent shift; using 14 days to capture multiple rotations.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my glucose variability compared to last month?",
+        "type": "explicit",
+        "thinking": "Direct comparison request. 'Last month' means 30 days of historical data versus current.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I started meditation 5 days ago—any effect on my fasting numbers?",
+        "type": "behavioral",
+        "thinking": "User connects new habit to potential glucose changes. Specifies '5 days ago,' so pulling that exact timeframe.",
+        "numdays": 5,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My fingers are always prickly when I check my sugar. Is that normal?",
+        "type": "symptom",
+        "thinking": "Physical symptom (prickly fingers) during glucose checks. No timeframe; reviewing 7 days of testing patterns.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you graph my levels against my sleep data for the past 2 weeks?",
+        "type": "explicit",
+        "thinking": "Explicit cross-analysis request. 'Past 2 weeks' maps to 14 days of paired glucose/sleep data.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been under a ton of stress—are my numbers reflecting that?",
+        "type": "implicit",
+        "thinking": "Implied concern about stress’s glucose impact. No timeframe; examining 7 days for stress-correlated trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My CGM alarms keep waking me up. What’s happening overnight?",
+        "type": "symptom",
+        "thinking": "Nocturnal symptoms (alarms) suggest nighttime fluctuations. Defaulting to 7 days of overnight data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I ate pizza last night and expected a spike, but my numbers were fine. Why?",
+        "type": "behavioral",
+        "thinking": "User notes unexpected glucose response to a specific food. 'Last night' implies 1-day analysis, but expanding to 7 days for context.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Since my diagnosis, I’ve been paranoid about every carb. Am I overreacting?",
+        "type": "implicit",
+        "thinking": "Implied anxiety about dietary choices post-diagnosis. No timeframe; using 7 days to assess actual glucose responses to carbs.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My gym sessions leave me wiped. Is it my blood sugar crashing?",
+        "type": "symptom",
+        "thinking": "Exercise-related fatigue may indicate hypoglycemia. No timeframe; analyzing 7 days of post-workout trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How consistent are my levels during my menstrual cycle?",
+        "type": "explicit",
+        "thinking": "Direct request for cycle-phase analysis. Assuming a 28-day cycle, retrieving 30 days to cover full phases.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been intermittent fasting for 3 weeks—any improvements in my baseline?",
+        "type": "behavioral",
+        "thinking": "User links fasting regimen to potential glucose benefits. '3 weeks' translates to 21 days of data.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My afternoon coffee seems to trigger a spike. Can we check the last 5 times I had it?",
+        "type": "explicit",
+        "thinking": "Direct hypothesis about coffee’s impact. User specifies 'last 5 times,' so retrieving 5 days (assuming daily coffee).",
+        "numdays": 5,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m always hangry by 11 AM. What’s my sugar doing before lunch?",
+        "type": "symptom",
+        "thinking": "Emotional/physical symptom ('hangry') tied to pre-lunch glucose. Defaulting to 7 days of late-morning data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My levels are a mystery after eating out. Show me restaurant vs. home meals this month.",
+        "type": "explicit",
+        "thinking": "Direct comparison request. 'This month' implies ~30 days of data to separate dining contexts.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I switched to a vegan diet 15 days ago. Any noticeable changes?",
+        "type": "behavioral",
+        "thinking": "User connects dietary shift to potential glucose trends. Specifies '15 days ago,' so pulling that exact duration.",
+        "numdays": 15,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Why do I feel shaky even when my CGM says I’m in range?",
+        "type": "symptom",
+        "thinking": "User reports symptoms contradicting device readings. No timeframe; reviewing 7 days for sensor accuracy or delayed effects.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My levels dip every weekend. Is it because I sleep in?",
+        "type": "implicit",
+        "thinking": "Implied link between sleep changes and glucose patterns. 'Every weekend' suggests analyzing 14 days (2 weekends) for consistency.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you flag days where my glucose swung more than 100 points?",
+        "type": "explicit",
+        "thinking": "Direct request for volatility analysis. No timeframe; defaulting to 7 days to identify extreme swings.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I started a new probiotic 10 days ago—any effect on my post-meal spikes?",
+        "type": "behavioral",
+        "thinking": "User hypothesizes about supplement’s impact. '10 days ago' maps to that timeframe for postprandial analysis.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My brain fog is worse when I eat late. Is there a glucose connection?",
+        "type": "symptom",
+        "thinking": "Cognitive symptom tied to meal timing. No timeframe; examining 7 days of late meals and subsequent fog.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How does my glucose behave during long flights? I have data from 3 trips last month.",
+        "type": "explicit",
+        "thinking": "Direct inquiry about travel’s impact. 'Last month' implies 30 days, but focusing on the 3 flight days within that period.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been testing less often but feel fine. Am I missing something?",
+        "type": "implicit",
+        "thinking": "Implied concern about reduced monitoring. No timeframe; comparing 7 days of sparse data to symptoms.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My levels are like a calm lake in the morning but a stormy sea by afternoon.",
+        "type": "metaphorical",
+        "thinking": "Metaphors ('calm lake,' 'stormy sea') contrast AM/PM glucose. Defaulting to 7 days to quantify this pattern.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Did my glucose improve after cutting soda 3 weeks ago?",
+        "type": "behavioral",
+        "thinking": "User links dietary change to potential improvement. '3 weeks ago' directs us to 21 days of post-change data.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I get headaches when my sugar rises fast. Can we pinpoint when this happens?",
+        "type": "symptom",
+        "thinking": "Physical symptom (headaches) tied to rapid glucose increases. Analyzing 7 days to correlate spikes with symptoms.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Show me my glucose during my kid’s soccer games—I’m always stressed on Saturdays.",
+        "type": "explicit",
+        "thinking": "Direct request for event-specific data. Assuming weekly games, pulling 21 days (3 weekends) for consistency.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My fasting sugar is higher on Mondays. Is this a real pattern?",
+        "type": "implicit",
+        "thinking": "User suspects a weekly trend. Analyzing 28 days (4 weeks) to validate Monday-specific elevations.",
+        "numdays": 28,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been snacking on nuts instead of chips. Any difference in my spikes?",
+        "type": "behavioral",
+        "thinking": "User compares snack choices’ glucose impact. No timeframe; using 7 days to compare nut vs. chip days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My CGM says I’m low, but I feel fine. Is it faulty?",
+        "type": "symptom",
+        "thinking": "User questions device accuracy due to symptom mismatch. Reviewing 7 days of sensor vs. symptom alignment.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How does alcohol affect my levels? I had two drinks last weekend.",
+        "type": "explicit",
+        "thinking": "Direct inquiry about alcohol’s impact. Focusing on 7 days to capture the weekend event and aftermath.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My numbers are better when I walk the dog. Can you quantify this?",
+        "type": "behavioral",
+        "thinking": "User links activity to glucose improvement. No timeframe; analyzing 7 days with/without dog walks.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m always ravenous after workouts. Is my glucose dropping too much?",
+        "type": "symptom",
+        "thinking": "Post-exercise hunger may indicate hypoglycemia. Reviewing 7 days of post-workout trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My endo says I’m ‘brittle.’ Show me what that looks like over 30 days.",
+        "type": "explicit",
+        "thinking": "Direct request for long-term volatility analysis. Specifies '30 days' to match clinical terminology.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I've been drinking more coffee this month. Could that be messing with my blood sugar?",
+        "type": "behavioral",
+        "thinking": "The user mentions a change in behavior (increased coffee consumption) that might influence blood glucose levels. get_blood_glucose_data is needed to assess any correlation with glucose trends. The time window 'this month' suggests a 30-day period, aligning with the maximum allowed range.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My hands have been shaky in the mornings lately. Is my glucose too low?",
+        "type": "symptom",
+        "thinking": "The user describes a physical symptom (shaky hands in the morning) that could indicate hypoglycemia. get_blood_glucose_data is justified to check morning glucose levels. No specific time window is provided, so I’ll default to 7 days to capture recent morning trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you tell me how my blood sugar’s been since I started my new workout routine two weeks ago?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood sugar data tied to a recent change (new workout routine). get_blood_glucose_data will retrieve the relevant data. The time window 'two weeks ago' clearly maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’m stuck in a fog most afternoons. Could my blood sugar be involved?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('stuck in a fog') to describe afternoon mental cloudiness, possibly linked to glucose fluctuations. get_blood_glucose_data is needed to check for afternoon glucose patterns. No time window is mentioned, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be all over the place since I got sick last week.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about unstable glucose levels following an illness. get_blood_glucose_data is appropriate to analyze post-illness glucose trends. The time window 'last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been holding up over the last 10 days with all this stress?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar stability during a stressful period. get_blood_glucose_data will provide the necessary data. The time window 'last 10 days' explicitly maps to 10 days.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been snacking late at night for the past couple of weeks. How’s that affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral change (late-night snacking) that could impact glucose levels. get_blood_glucose_data is needed to evaluate nighttime or overall glucose trends. The time window 'past couple of weeks' suggests 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been so thirsty all the time this week. Is my blood sugar too high?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (excessive thirst) that may indicate hyperglycemia. get_blood_glucose_data is justified to check for elevated glucose levels. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My mood’s been like a stormy sea this month. Is my glucose playing a role?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('stormy sea') to describe mood swings, possibly linked to glucose instability. get_blood_glucose_data is needed to examine glucose patterns. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Could my glucose levels have been off since I switched medications three weeks ago?",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about glucose levels potentially being affected by a medication change. get_blood_glucose_data is appropriate to analyze trends since the switch. The time window 'three weeks ago' maps to 21 days.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you check my blood glucose for the last 12 days? I’ve been feeling off.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests glucose data for a specific period and mentions feeling unwell, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'last 12 days' directly maps to 12 days.",
+        "numdays": 12,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been cutting back on sugar since Monday. Has that helped my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a dietary change (reducing sugar intake) that could affect glucose levels. get_blood_glucose_data is needed to assess the impact. Assuming today is Tuesday, August 5, 2025, 'since Monday' (August 4) implies a 5-day period to include recent data.",
+        "numdays": 5,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I keep getting headaches in the evenings lately. Could it be my blood sugar?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (evening headaches) that might be related to glucose fluctuations. get_blood_glucose_data is justified to check evening glucose levels. No time window is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My mood’s been like a stormy sea this month. Is my glucose playing a role?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('stormy sea') to describe mood swings, possibly linked to glucose instability. get_blood_glucose_data is needed to examine glucose patterns. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be dipping too low during the night this week.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about nighttime hypoglycemia. get_blood_glucose_data is appropriate to analyze overnight glucose trends. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been over the last three weeks with my new diet?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends in relation to a new diet. get_blood_glucose_data will provide the necessary data. The time window 'last three weeks' maps to 21 days.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been sleeping poorly for the past 10 days. Could my glucose be off?",
+        "type": "symptom",
+        "thinking": "The user reports a symptom (poor sleep) that could be linked to glucose fluctuations. get_blood_glucose_data is needed to check for correlations. The time window 'past 10 days' directly maps to 10 days.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been walking more since the start of the month. How’s that affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral change (increased walking) that could influence glucose levels. get_blood_glucose_data is needed to evaluate the impact. The time window 'start of the month' (assuming August 1, 2025) maps to 5 days as of August 5.",
+        "numdays": 5,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’m dragging through quicksand by lunchtime. Is my blood sugar crashing?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('dragging through quicksand') to describe a midday energy drop, possibly indicating glucose crashes. get_blood_glucose_data is required to check for low glucose levels. No time window is specified, so I’ll default to 7 days to evaluate recent patterns.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you look at my glucose data for the last three weekends?",
+        "type": "explicit",
+        "thinking": "The user directly requests glucose data for a specific period (last three weekends). get_blood_glucose_data will retrieve this data. 'Last three weekends' implies the past three weeks, focusing on weekend days, but to simplify, I’ll interpret it as the last 21 days to cover three full weeks including weekends.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling super anxious since last Friday. Could my blood sugar be a factor?",
+        "type": "symptom",
+        "thinking": "The user reports an emotional symptom (anxiety) that might be linked to glucose fluctuations. get_blood_glucose_data is needed to check for correlations. Assuming today is Tuesday, August 5, 2025, 'since last Friday' (July 31) maps to 5 days.",
+        "numdays": 5,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I started a new job two weeks ago, and I’m wondering if stress is messing with my glucose.",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests that stress from a new job might be affecting glucose levels. get_blood_glucose_data is appropriate to analyze trends during this period. The time window 'two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more fast food this month. How’s that impacting my blood sugar?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (more fast food) that could affect glucose levels. get_blood_glucose_data is needed to evaluate the impact. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My vision’s been blurry at times over the past week. Is my glucose spiking?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (blurry vision) that could indicate high glucose levels. get_blood_glucose_data is justified to check for hyperglycemia. The time window 'past week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like my body’s a car running out of gas by evening. Could it be my blood sugar?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('car running out of gas') to describe evening fatigue, possibly linked to glucose drops. get_blood_glucose_data is needed to check evening glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you check my glucose levels for the past 15 days? I’ve been feeling unsteady.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests glucose data and mentions feeling unsteady, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'past 15 days' directly maps to 15 days.",
+        "numdays": 15,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been skipping lunch some days this month. Is that affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a behavioral change (skipping lunch) that could impact glucose stability. get_blood_glucose_data is needed to assess the effects. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be unstable since I started working night shifts two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about glucose instability due to a schedule change (night shifts). get_blood_glucose_data is appropriate to analyze trends during this period. The time window 'two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My energy’s been all over the map this week. Could my blood sugar be the issue?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('all over the map') to describe fluctuating energy, possibly linked to glucose issues. get_blood_glucose_data is needed to check for irregular patterns. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling unusually sweaty at night for the past 10 days. Is my glucose dropping?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (nighttime sweating) that could indicate hypoglycemia. get_blood_glucose_data is justified to check nighttime glucose levels. The time window 'past 10 days' maps to 10 days.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you review my blood sugar data since I started that new medication last month?",
+        "type": "explicit",
+        "thinking": "The user directly requests blood sugar data related to a medication change. get_blood_glucose_data will provide the necessary data. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been drinking more soda over the last three weeks. How’s that affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (increased soda consumption) that could impact glucose levels. get_blood_glucose_data is needed to evaluate the effects. The time window 'last three weeks' maps to 21 days.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’m wading through molasses in the mornings. Is my blood sugar low?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('wading through molasses') to describe morning sluggishness, possibly due to low glucose. get_blood_glucose_data is needed to check morning glucose levels. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be spiking after meals this week.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about post-meal glucose spikes. get_blood_glucose_data is appropriate to analyze postprandial glucose trends. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been since I started running every morning last week?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends since starting a new exercise routine. get_blood_glucose_data will provide the data. The time window 'last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling super cranky in the afternoons lately. Could it be my glucose?",
+        "type": "symptom",
+        "thinking": "The user reports an emotional symptom (afternoon crankiness) that might be linked to glucose fluctuations. get_blood_glucose_data is needed to check afternoon glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more sweets since the holidays. How’s that impacting my blood sugar?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (more sweets) that could affect glucose levels. get_blood_glucose_data is needed to evaluate the impact. The time window 'since the holidays' suggests a period of 10 days, assuming recent holiday season.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My focus feels like it’s unraveling by midday this month. Is my glucose to blame?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('unraveling') to describe midday concentration issues, possibly linked to glucose fluctuations. get_blood_glucose_data is needed to check midday glucose patterns. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be off since I started a low-carb diet two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about glucose levels due to a dietary change (low-carb diet). get_blood_glucose_data is appropriate to analyze trends since the diet change. The time window 'two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you check my blood glucose data for the last 20 days? I’ve been feeling weird.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests glucose data for a specific period and mentions feeling unwell, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'last 20 days' directly maps to 20 days.",
+        "numdays": 20,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been staying up late for the past week. Could that be affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral change (staying up late) that could impact glucose stability. get_blood_glucose_data is needed to assess the effects. The time window 'past week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been getting dizzy spells in the mornings this week. Is my blood sugar low?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (morning dizziness) that could indicate hypoglycemia. get_blood_glucose_data is justified to check morning glucose levels. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’m riding a wave of exhaustion by afternoon. Could my glucose be off?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('riding a wave') to describe afternoon fatigue, possibly linked to glucose issues. get_blood_glucose_data is needed to check afternoon glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be fluctuating since I moved to a new city last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about glucose fluctuations due to a major life change (moving). get_blood_glucose_data is appropriate to analyze trends since the move. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been over the last 15 days with all these late-night study sessions?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends during a period of late-night studying. get_blood_glucose_data will provide the data. The time window 'last 15 days' maps to 15 days.",
+        "numdays": 15,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more snacks on the go this week. Is that messing with my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral change (snacking on the go) that could affect glucose levels. get_blood_glucose_data is needed to evaluate the impact. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling like my brain’s in a haze this month. Could my blood sugar be involved?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('brain’s in a haze') to describe mental fog, possibly linked to glucose fluctuations. get_blood_glucose_data is needed to check for irregular patterns. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be spiking after dinner for the past two weeks.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about post-dinner glucose spikes. get_blood_glucose_data is appropriate to analyze evening glucose trends. The time window 'past two weeks' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you look at my blood sugar data for the last 10 days? I’ve been feeling off-balance.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood sugar data and mentions feeling off-balance, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'last 10 days' directly maps to 10 days.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been forgetting meals sometimes this month. Is that throwing off my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a behavioral change (forgetting meals) that could disrupt glucose stability. get_blood_glucose_data is needed to evaluate the impact on glucose levels. The time window 'this month' maps to 30 days, covering the maximum allowed range.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My legs feel heavy after meals lately. Could my blood sugar be spiking?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (heavy legs post-meal) that might indicate postprandial glucose spikes. get_blood_glucose_data is justified to check glucose levels after meals. No time window is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you analyze my blood glucose since I started yoga last week?",
+        "type": "explicit",
+        "thinking": "The user directly requests blood glucose analysis tied to a new activity (yoga). get_blood_glucose_data will retrieve the relevant data. The time window 'last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’m climbing a mountain just to get through the day. Is my glucose off?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('climbing a mountain') to describe daily fatigue, possibly linked to glucose issues. get_blood_glucose_data is needed to check for irregular glucose patterns. No time window is mentioned, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my blood sugar might be unstable since I caught that cold two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about glucose instability following a recent illness. get_blood_glucose_data is appropriate to analyze trends post-illness. The time window 'two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my glucose been over the last 20 days with these new work hours?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about glucose trends during a period of changed work hours. get_blood_glucose_data will provide the necessary data. The time window 'last 20 days' directly maps to 20 days.",
+        "numdays": 20,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been drinking energy drinks for the past 10 days. How’s that affecting my blood sugar?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (consuming energy drinks) that could impact glucose levels. get_blood_glucose_data is needed to assess the effects. The time window 'past 10 days' maps to 10 days.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been waking up with a racing heart this week. Could my glucose be low?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (racing heart upon waking) that might indicate hypoglycemia. get_blood_glucose_data is justified to check morning glucose levels. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My emotions are like a pendulum swinging wildly this month. Is my blood sugar involved?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('pendulum swinging') to describe emotional volatility, possibly linked to glucose fluctuations. get_blood_glucose_data is needed to examine glucose patterns. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be off since I started a new sleep schedule last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about glucose levels due to a new sleep schedule. get_blood_glucose_data is appropriate to analyze trends since the change. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you check my blood sugar data for the last 15 days? I’ve been feeling out of sorts.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood sugar data and mentions feeling unwell, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'last 15 days' directly maps to 15 days.",
+        "numdays": 15,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more fruit since last Monday. Has that impacted my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a dietary change (increased fruit consumption) that could affect glucose levels. get_blood_glucose_data is needed to evaluate the impact. Assuming today is Tuesday, August 5, 2025, 'since last Monday' (July 28) maps to 8 days.",
+        "numdays": 8,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been getting muscle cramps at night lately. Could my blood sugar be off?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (nighttime muscle cramps) that might be related to glucose fluctuations. get_blood_glucose_data is justified to check nighttime glucose levels. No time window is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’m running on fumes by late afternoon. Is my glucose crashing?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('running on fumes') to describe afternoon fatigue, possibly indicating glucose drops. get_blood_glucose_data is needed to check afternoon glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be spiking in the mornings since I started a new job two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about morning glucose spikes linked to a new job. get_blood_glucose_data is appropriate to analyze morning trends. The time window 'two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been since I stopped drinking soda three weeks ago?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends since discontinuing soda. get_blood_glucose_data will provide the data. The time window 'three weeks ago' maps to 21 days.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating bigger dinners this month. Is that affecting my glucose levels?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (larger dinners) that could impact glucose stability. get_blood_glucose_data is needed to assess evening or overnight glucose trends. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling lightheaded after lunch this week. Could my blood sugar be dropping?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (post-lunch lightheadedness) that might indicate hypoglycemia. get_blood_glucose_data is justified to check postprandial glucose levels. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My energy’s like a flickering light bulb lately. Is my glucose to blame?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('flickering light bulb') to describe inconsistent energy, possibly linked to glucose fluctuations. get_blood_glucose_data is needed to check for irregular patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be off since I started fasting intermittently last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about glucose levels due to intermittent fasting. get_blood_glucose_data is appropriate to analyze trends since the change. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you look at my blood glucose for the last 10 days? I’ve been feeling jittery.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests glucose data and mentions feeling jittery, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'last 10 days' directly maps to 10 days.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more protein since last week. How’s that affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a dietary change (increased protein intake) that could influence glucose levels. get_blood_glucose_data is needed to evaluate the impact. The time window 'last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling unusually cold in the evenings lately. Could my glucose be low?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (feeling cold in the evenings) that might indicate hypoglycemia. get_blood_glucose_data is justified to check evening glucose levels. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like my body’s stuck in low gear this month. Is my blood sugar off?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('stuck in low gear') to describe persistent low energy, possibly linked to glucose issues. get_blood_glucose_data is needed to check for irregular patterns. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be unstable since I started a new workout plan two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about glucose instability due to a new workout plan. get_blood_glucose_data is appropriate to analyze trends since the change. The time window 'two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been over the last 12 days with all this travel?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends during a period of travel. get_blood_glucose_data will provide the necessary data. The time window 'last 12 days' maps to 12 days.",
+        "numdays": 12,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more processed foods this week. Is that messing with my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (more processed foods) that could impact glucose levels. get_blood_glucose_data is needed to assess the effects. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been having trouble concentrating in the mornings lately. Could my blood sugar be off?",
+        "type": "symptom",
+        "thinking": "The user reports a cognitive symptom (trouble concentrating in the mornings) that might be related to glucose fluctuations. get_blood_glucose_data is justified to check morning glucose levels. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My mood’s been like a rollercoaster this week. Is my glucose playing a part?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('rollercoaster') to describe mood swings, possibly linked to glucose instability. get_blood_glucose_data is needed to examine glucose patterns. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be spiking after snacks since last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about post-snack glucose spikes. get_blood_glucose_data is appropriate to analyze postprandial glucose trends. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you check my blood sugar data for the last 18 days? I’ve been feeling off.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood sugar data and mentions feeling unwell, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'last 18 days' directly maps to 18 days.",
+        "numdays": 18,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been drinking more water since last week. Has that helped my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a behavioral change (increased water intake) that could influence glucose levels. get_blood_glucose_data is needed to evaluate the impact. The time window 'last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling tingling in my feet at night this month. Could my glucose be high?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (tingling feet at night) that might indicate hyperglycemia. get_blood_glucose_data is justified to check nighttime glucose levels. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’m trudging through mud in the afternoons. Is my blood sugar low?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('trudging through mud') to describe afternoon sluggishness, possibly due to low glucose. get_blood_glucose_data is needed to check afternoon glucose levels. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be off since I started a new medication three weeks ago.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about glucose levels due to a new medication. get_blood_glucose_data is appropriate to analyze trends since the change. The time window 'three weeks ago' maps to 21 days.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been since I started meditating daily last week?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends since starting daily meditation. get_blood_glucose_data will provide the data. The time window 'last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more carbs on weekends this month. Is that affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (more carbs on weekends) that could impact glucose levels. get_blood_glucose_data is needed to evaluate weekend trends. The time window 'this month' maps to 30 days to cover multiple weekends.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling unusually irritable after breakfast lately. Could my glucose be spiking?",
+        "type": "symptom",
+        "thinking": "The user reports an emotional symptom (irritability post-breakfast) that might indicate glucose spikes. get_blood_glucose_data is justified to check postprandial glucose levels. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My energy’s like a balloon losing air by evening. Is my blood sugar crashing?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('balloon losing air') to describe evening energy drops, possibly linked to glucose crashes. get_blood_glucose_data is needed to check evening glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be unstable since I started a new project at work last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about glucose instability due to work-related stress. get_blood_glucose_data is appropriate to analyze trends since the project started. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you review my blood glucose for the last 10 days? I’ve been feeling shaky.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests glucose data and mentions feeling shaky, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'last 10 days' directly maps to 10 days.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been skipping snacks since last week. How’s that impacting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a behavioral change (skipping snacks) that could affect glucose stability. get_blood_glucose_data is needed to assess the impact. The time window 'last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been getting headaches after dinner this week. Could my blood sugar be high?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (post-dinner headaches) that might indicate hyperglycemia. get_blood_glucose_data is justified to check evening glucose levels. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’m sinking into quicksand by midday. Is my glucose off?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('sinking into quicksand') to describe midday fatigue, possibly linked to glucose issues. get_blood_glucose_data is needed to check midday glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be dipping at night since I started a new diet two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about nighttime glucose dips due to a new diet. get_blood_glucose_data is appropriate to analyze overnight trends. The time window 'two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been over the last 15 days with these new meal times?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends since changing meal times. get_blood_glucose_data will provide the data. The time window 'last 15 days' maps to 15 days.",
+        "numdays": 15,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been drinking more juice this month. Is that affecting my glucose levels?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (increased juice consumption) that could impact glucose levels. get_blood_glucose_data is needed to evaluate the effects. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling foggy after meals lately. Could my blood sugar be spiking?",
+        "type": "symptom",
+        "thinking": "The user reports a cognitive symptom (post-meal fogginess) that might indicate glucose spikes. get_blood_glucose_data is justified to check postprandial glucose levels. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My energy’s like a yo-yo this week. Is my glucose causing that?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('like a yo-yo') to describe fluctuating energy, possibly linked to glucose instability. get_blood_glucose_data is needed to check for irregular patterns. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be off since I started working longer hours last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about glucose levels due to extended work hours. get_blood_glucose_data is appropriate to analyze trends since the change. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been cutting out desserts since last Monday. Has that changed my glucose levels?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (cutting out desserts) that could impact blood glucose. get_blood_glucose_data is needed to assess the effect on glucose trends. Assuming today is Tuesday, August 5, 2025, 'since last Monday' (July 28) maps to 8 days.",
+        "numdays": 8,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My hands feel tingly after lunch lately. Could my blood sugar be spiking?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (tingling hands post-lunch) that might indicate postprandial hyperglycemia. get_blood_glucose_data is justified to check glucose levels after meals. No time window is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you look at my blood sugar data for the past 17 days? I’ve been feeling off.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood sugar data and mentions feeling unwell, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'past 17 days' directly maps to 17 days.",
+        "numdays": 17,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’m slogging through mud every morning. Is my glucose out of whack?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('slogging through mud') to describe morning sluggishness, possibly linked to glucose issues. get_blood_glucose_data is needed to check morning glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be off since I started working weekends last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about glucose instability due to a new work schedule. get_blood_glucose_data is appropriate to analyze trends since the change. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been since I started swimming three weeks ago?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends since starting a new exercise (swimming). get_blood_glucose_data will provide the data. The time window 'three weeks ago' maps to 21 days.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more bread this week. Is that messing with my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (increased bread consumption) that could affect glucose levels. get_blood_glucose_data is needed to evaluate the impact. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been super moody after breakfast this month. Could my blood sugar be the cause?",
+        "type": "symptom",
+        "thinking": "The user reports an emotional symptom (moodiness post-breakfast) that might indicate glucose fluctuations. get_blood_glucose_data is justified to check postprandial glucose levels. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My energy’s like a candle burning out by noon. Is my glucose dropping?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('candle burning out') to describe midday energy loss, possibly linked to hypoglycemia. get_blood_glucose_data is needed to check midday glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be spiking at night since I got a new job two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about nighttime glucose spikes linked to a new job. get_blood_glucose_data is appropriate to analyze overnight trends. The time window 'two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you check my glucose levels for the last 12 days? I’ve been feeling unsteady.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests glucose data and mentions feeling unsteady, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'last 12 days' directly maps to 12 days.",
+        "numdays": 12,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been skipping dinner a few times this week. How’s that affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a behavioral change (skipping dinner) that could impact glucose stability. get_blood_glucose_data is needed to assess the effects. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been waking up sweaty for the past 10 days. Could my blood sugar be low?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (waking up sweaty) that might indicate nighttime hypoglycemia. get_blood_glucose_data is justified to check overnight glucose levels. The time window 'past 10 days' maps to 10 days.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My focus feels like it’s unraveling by evening. Is my glucose to blame?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('unraveling') to describe evening concentration issues, possibly linked to glucose fluctuations. get_blood_glucose_data is needed to check evening glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be off since I started a new medication last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about glucose levels due to a new medication. get_blood_glucose_data is appropriate to analyze trends since the change. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been over the last 15 days with my new sleep schedule?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends since adopting a new sleep schedule. get_blood_glucose_data will provide the data. The time window 'last 15 days' maps to 15 days.",
+        "numdays": 15,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been drinking more tea since last week. Is that affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral change (increased tea consumption) that could influence glucose levels. get_blood_glucose_data is needed to evaluate the impact. The time window 'last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been getting headaches after snacks lately. Could my glucose be spiking?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (headaches post-snacks) that might indicate glucose spikes. get_blood_glucose_data is justified to check postprandial glucose levels. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My body feels like it’s stuck in slow motion after lunch. Is my blood sugar low?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('stuck in slow motion') to describe post-lunch sluggishness, possibly due to low glucose. get_blood_glucose_data is needed to check midday glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be dipping after workouts since last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about glucose dips post-workout. get_blood_glucose_data is appropriate to analyze post-exercise glucose trends. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you review my blood glucose for the last 20 days? I’ve been feeling off-balance.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests glucose data and mentions feeling off-balance, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'last 20 days' directly maps to 20 days.",
+        "numdays": 20,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more pasta since last Tuesday. How’s that impacting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a dietary change (increased pasta consumption) that could affect glucose levels. get_blood_glucose_data is needed to assess the impact. Assuming today is Tuesday, August 5, 2025, 'since last Tuesday' (July 29) maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling dizzy in the evenings this week. Could my blood sugar be off?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (evening dizziness) that might be related to glucose fluctuations. get_blood_glucose_data is justified to check evening glucose levels. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My mood’s like a stormy ocean this month. Is my glucose playing a role?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('stormy ocean') to describe emotional volatility, possibly linked to glucose instability. get_blood_glucose_data is needed to examine glucose patterns. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be unstable since I started night shifts two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about glucose instability due to a new work schedule. get_blood_glucose_data is appropriate to analyze trends since the shift change. The time window 'two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been since I started cycling last week?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends since starting a new exercise (cycling). get_blood_glucose_data will provide the data. The time window 'last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more snacks at night this month. Is that affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral change (nighttime snacking) that could impact glucose levels. get_blood_glucose_data is needed to evaluate overnight trends. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling really anxious in the mornings lately. Could my glucose be low?",
+        "type": "symptom",
+        "thinking": "The user reports an emotional symptom (morning anxiety) that might indicate hypoglycemia. get_blood_glucose_data is justified to check morning glucose levels. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’m running out of steam by mid-afternoon. Is my blood sugar crashing?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('running out of steam') to describe afternoon fatigue, possibly linked to glucose drops. get_blood_glucose_data is needed to check afternoon glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be off since I started a low-carb diet three weeks ago.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about glucose levels due to a new low-carb diet. get_blood_glucose_data is appropriate to analyze trends since the dietary change. The time window 'three weeks ago' maps to 21 days.",
+        "numdays": 21,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you check my blood glucose for the last 10 days? I’ve been feeling shaky.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests glucose data and mentions feeling shaky, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'last 10 days' directly maps to 10 days.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been drinking more coffee since last Friday. Has that changed my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a behavioral change (increased coffee consumption) that could influence glucose levels. get_blood_glucose_data is needed to assess the impact. Assuming today is Tuesday, August 5, 2025, 'since last Friday' (August 1) maps to 5 days.",
+        "numdays": 5,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been getting muscle cramps after dinner lately. Could my glucose be high?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (post-dinner muscle cramps) that might indicate hyperglycemia. get_blood_glucose_data is justified to check evening glucose levels. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My energy’s like a fading signal by evening. Is my glucose to blame?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('fading signal') to describe evening energy loss, possibly linked to glucose fluctuations. get_blood_glucose_data is needed to check evening glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be spiking after meals since I moved last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about post-meal glucose spikes linked to a recent move. get_blood_glucose_data is appropriate to analyze postprandial trends. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been over the last 18 days with my new work stress?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends during a period of increased work stress. get_blood_glucose_data will provide the data. The time window 'last 18 days' maps to 18 days.",
+        "numdays": 18,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more fast food since last week. Is that messing with my glucose?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (increased fast food consumption) that could impact glucose levels. get_blood_glucose_data is needed to evaluate the effects. The time window 'last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling foggy in the afternoons this week. Could my blood sugar be off?",
+        "type": "symptom",
+        "thinking": "The user reports a cognitive symptom (afternoon fogginess) that might indicate glucose fluctuations. get_blood_glucose_data is justified to check afternoon glucose levels. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My mood’s been like a seesaw this month. Could my glucose be involved?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('seesaw') to describe mood swings, possibly linked to glucose instability. get_blood_glucose_data is needed to examine glucose patterns. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be dipping at night since I started a new workout last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about nighttime glucose dips due to a new workout routine. get_blood_glucose_data is appropriate to analyze overnight trends. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you look at my blood sugar data for the last 15 days? I’ve been feeling tired.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood sugar data and mentions feeling tired, suggesting a need for analysis. get_blood_glucose_data will retrieve the data. The time window 'last 15 days' directly maps to 15 days.",
+        "numdays": 15,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more fruit juice since last week. How’s that affecting my glucose?",
+        "type": "behavioral",
+        "thinking": "The user describes a dietary change (increased fruit juice consumption) that could affect glucose levels. get_blood_glucose_data is needed to assess the impact. The time window 'last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling lightheaded after breakfast this month. Could my glucose be spiking?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (post-breakfast lightheadedness) that might indicate glucose spikes. get_blood_glucose_data is justified to check postprandial glucose levels. The time window 'this month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’m dragging a heavy load by midday. Is my blood sugar low?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('dragging a heavy load') to describe midday fatigue, possibly linked to hypoglycemia. get_blood_glucose_data is needed to check midday glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m worried my glucose might be off since I started a new job last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about glucose levels due to a new job’s stress. get_blood_glucose_data is appropriate to analyze trends since the change. The time window 'last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How’s my blood sugar been since I started hiking two weeks ago?",
+        "type": "explicit",
+        "thinking": "The user directly asks about blood sugar trends since starting a new activity (hiking). get_blood_glucose_data will provide the data. The time window 'two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been eating more rice this week. Is that affecting my glucose levels?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (increased rice consumption) that could impact glucose levels. get_blood_glucose_data is needed to evaluate the effects. The time window 'this week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling really thirsty in the evenings lately. Could my glucose be high?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (evening thirst) that might indicate hyperglycemia. get_blood_glucose_data is justified to check evening glucose levels. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My energy’s like a sinking ship by late afternoon. Is my glucose crashing?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('sinking ship') to describe afternoon energy loss, possibly linked to glucose drops. get_blood_glucose_data is needed to check afternoon glucose patterns. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m concerned my glucose might be unstable since I started a new medication two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about glucose instability due to a new medication. get_blood_glucose_data is appropriate to analyze trends since the change. The time window 'two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you show me how my blood sugar has been behaving this week?",
+        "type": "explicit",
+        "thinking": "The user directly requests a summary of blood glucose levels. To fulfill this, I’ll retrieve the past 7 days of data using get_blood_glucose_data. 'This week' is interpreted as the last 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been feeling jittery after meals lately — what’s going on?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom possibly linked to blood glucose spikes. Since no time is mentioned, I’ll default to retrieving 7 days of glucose data using get_blood_glucose_data to investigate trends.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Last 10 days I’ve tried cutting back on sugar. Any improvements?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral change related to diet and wants to evaluate its impact. I’ll pull 10 days of blood glucose data using get_blood_glucose_data to assess progress.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been sluggish in the mornings for about a week now.",
+        "type": "symptom",
+        "thinking": "The user describes low energy, which could correlate with glucose fluctuations. Since 'about a week' is specified, I’ll retrieve 7 days of blood glucose data using get_blood_glucose_data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Let’s look at how my glucose was during Ramadan fasting.",
+        "type": "implicit",
+        "thinking": "The user indirectly refers to a fasting period that may affect blood sugar. As no specific date range is given, I’ll default to the past 7 days using get_blood_glucose_data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Are my sugar levels steadier now that I’m exercising?",
+        "type": "behavioral",
+        "thinking": "The user connects a new exercise routine to potential improvements. I’ll use get_blood_glucose_data to retrieve the last 14 days to evaluate any trends.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My cravings have been wild the past few days — any clue why?",
+        "type": "symptom",
+        "thinking": "Cravings can be tied to unstable glucose. The user mentions 'past few days', so I’ll pull 5 days of data with get_blood_glucose_data to analyze fluctuations.",
+        "numdays": 5,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Have my blood sugar numbers settled down lately?",
+        "type": "explicit",
+        "thinking": "The user requests a general analysis of recent glucose trends. No timeframe is mentioned, so I’ll default to 7 days of data using get_blood_glucose_data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been trying intermittent fasting — is it helping?",
+        "type": "behavioral",
+        "thinking": "Intermittent fasting can impact glucose regulation. The user implies a recent behavioral shift; I’ll retrieve the last 10 days of data with get_blood_glucose_data to assess results.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Was my sugar out of control over the weekend?",
+        "type": "explicit",
+        "thinking": "The user refers to a specific timeframe — 'over the weekend'. Assuming 3 days, I’ll retrieve 5 days of blood glucose data with get_blood_glucose_data for context.",
+        "numdays": 5,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Check if my levels dipped low at night recently.",
+        "type": "explicit",
+        "thinking": "The user suspects nighttime hypoglycemia. 'Recently' is vague, so I’ll default to the past 7 days and use get_blood_glucose_data to analyze patterns.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "It feels like a rollercoaster inside — up and down all day.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to describe possible blood sugar swings. As there’s no timeframe, I’ll use get_blood_glucose_data to analyze the last 7 days.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Ever since I started keto last week, I’ve felt weird.",
+        "type": "behavioral",
+        "thinking": "The user adopted a new diet and reports unusual sensations. I’ll pull 7 days of blood glucose data using get_blood_glucose_data to detect any diet-related changes.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can we compare my sugar readings from the last two weekends?",
+        "type": "explicit",
+        "thinking": "The user specifies a time frame — 'last two weekends'. I’ll gather 10 days of data with get_blood_glucose_data to capture both weekends and surrounding trends.",
+        "numdays": 10,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Lately I crash hard in the afternoons — is that sugar-related?",
+        "type": "symptom",
+        "thinking": "Afternoon crashes may signal glucose dips. The user says 'lately', so I’ll retrieve the last 7 days of blood glucose data with get_blood_glucose_data for investigation.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Ever since that cold last week, I feel off.",
+        "type": "implicit",
+        "thinking": "The user implies illness may have impacted glucose. I’ll use get_blood_glucose_data to check the past 7 days for irregularities.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Can you see if my levels were stable the past 12 days?",
+        "type": "explicit",
+        "thinking": "The user clearly states a timeframe. I’ll retrieve 12 days of data using get_blood_glucose_data to evaluate stability.",
+        "numdays": 12,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’ve been cutting carbs for two weeks. Is it working?",
+        "type": "behavioral",
+        "thinking": "The user is testing the impact of a diet change. I’ll pull 14 days of blood glucose data with get_blood_glucose_data to assess trends.",
+        "numdays": 14,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I’m feeling cloudy-headed in the mornings lately.",
+        "type": "symptom",
+        "thinking": "Brain fog can be linked to glucose variation. The user references 'lately', so I’ll use get_blood_glucose_data to retrieve 7 days of data for analysis.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Does my sugar crash after coffee every morning?",
+        "type": "explicit",
+        "thinking": "The user suspects a morning pattern. I’ll retrieve 7 days of blood glucose data with get_blood_glucose_data to check for consistent dips.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "I feel like I’ve been bouncing between extremes lately.",
+        "type": "metaphorical",
+        "thinking": "The user describes unstable energy metaphorically. Since no period is mentioned, I’ll retrieve 7 days of blood glucose data with get_blood_glucose_data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Since Sunday, I’ve felt off after every meal.",
+        "type": "symptom",
+        "thinking": "The user refers to a specific temporal start. If today is Tuesday, that’s 2 days. I’ll round up to 5 days and fetch data using get_blood_glucose_data.",
+        "numdays": 5,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "My sugar seemed fine but now I’m suddenly drained.",
+        "type": "symptom",
+        "thinking": "The user experiences a sudden shift. No timeframe is mentioned, so I’ll default to retrieving 7 days of blood glucose data with get_blood_glucose_data.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "How were my numbers in the evenings last week?",
+        "type": "explicit",
+        "thinking": "The user asks for evening patterns over 'last week'. I’ll use get_blood_glucose_data to retrieve 7 days of data and filter for evening entries.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Check if there’s a pattern before my afternoon walks.",
+        "type": "implicit",
+        "thinking": "The user hints at a potential recurring trend. No timeframe given, so I’ll pull 7 days of glucose data with get_blood_glucose_data for pattern detection.",
+        "numdays": 7,
+        "function": "get_blood_glucose_data"
+    },
+    {
+        "query": "Ever since I skipped breakfast last Monday, something feels off.",
+        "type": "implicit",
+        "thinking": "The user implies a dietary disruption that may have impacted their blood glucose. They reference a specific start point — last Monday. Assuming today is Tuesday, that's 8 days, so I’ll retrieve 8 days of data using get_blood_glucose_data to investigate potential changes since then.",
+        "numdays": 8,
+        "function": "get_blood_glucose_data"
+    }
+]

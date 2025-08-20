@@ -1,0 +1,1780 @@
+[
+    {
+        "query": "Show my stress levels during last Tuesday's marathon work session.",
+        "type": "explicit",
+        "thinking": "User references a specific high-intensity event. Using get_stress_data for that day isolates acute work-related stress.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My jaw clenching has gotten worse this month.",
+        "type": "implicit",
+        "thinking": "Jaw tension is a chronic stress marker. get_stress_data over 30 days captures the trend shift implied by 'this month'.",
+        "numdays": 30,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My mind feels like a stormy ocean after meetings with my manager.",
+        "type": "metaphorical",
+        "thinking": "Metaphor implies post-meeting stress spikes. get_stress_data for 7 meetings (default) quantifies the pattern.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Was I more stressed before or after starting meditation?",
+        "type": "explicit",
+        "thinking": "User seeks pre/post intervention analysis. get_stress_data for 7 days before and after provides a clear contrast.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I keep waking up at 3 AM with racing thoughts.",
+        "type": "implicit",
+        "thinking": "Nocturnal stress suggests circadian disruption. get_stress_data for 7 nights identifies recurring spikes.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "If my stress trends continue, how will I feel by Friday?",
+        "type": "explicit",
+        "thinking": "User requests projection. get_stress_data for the last 7 days establishes a baseline trend.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Commuting turns my nerves into guitar strings—tight and vibrating.",
+        "type": "metaphorical",
+        "thinking": "Metaphor highlights transportation stress. get_stress_data for 5 commutes isolates context-specific responses.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How stressed was I during the 2-hour flight delay yesterday?",
+        "type": "explicit",
+        "thinking": "User asks about a discrete event. get_stress_data for that day pinpoints the acute stress window.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My Apple Watch keeps warning me about high heart rate variability.",
+        "type": "implicit",
+        "thinking": "HRV warnings correlate with stress. get_stress_data for 7 days cross-references physiological data.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Is my stress higher during coding or writing tasks?",
+        "type": "explicit",
+        "thinking": "User compares task-specific stress. get_stress_data for 10 sessions per activity ensures statistical significance.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Can you show me how my stress levels have been over the past 14 days?",
+        "type": "explicit",
+        "thinking": "They’re asking for a direct review of their stress data over two weeks. I’ll retrieve 14 days of records to give a clear picture.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Pull up my stress history from the last 10 days, please.",
+        "type": "explicit",
+        "thinking": "This is a straightforward request for stress data. I’ll fetch the last 10 days so they can monitor their recent trends.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’d like to check my stress levels for the past 7 days.",
+        "type": "explicit",
+        "thinking": "They want to evaluate their stress levels over the past week. I’ll gather a 7-day summary to support that.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Could you provide an overview of my stress for the past 12 days?",
+        "type": "explicit",
+        "thinking": "This is a direct analysis request. I’ll return 12 days of stress metrics to help identify patterns.",
+        "numdays": 12,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Over the last 9 days, I’ve been unusually tense without a clear reason.",
+        "type": "implicit",
+        "thinking": "The user senses persistent tension but hasn’t pinpointed a cause. Reviewing 9 days of stress data may uncover hidden fluctuations.",
+        "numdays": 9,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "For about 6 days now, I’ve felt emotionally exhausted.",
+        "type": "implicit",
+        "thinking": "Emotional fatigue over nearly a week could signal a chronic stress pattern. I’ll check the last 6 days of stress data.",
+        "numdays": 6,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been edgy and restless these past 8 days.",
+        "type": "implicit",
+        "thinking": "Restlessness and irritability often align with stress. I’ll pull 8 days of data to see if there's a consistent elevation.",
+        "numdays": 8,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Something feels off lately — probably over the last 11 days.",
+        "type": "implicit",
+        "thinking": "Vague unease can stem from untracked stress. Reviewing 11 days of data may clarify the root cause.",
+        "numdays": 11,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I started journaling every evening 10 days ago. Has it helped my stress?",
+        "type": "behavioral",
+        "thinking": "They implemented a reflective habit. I’ll retrieve 10 days of stress data to look for positive effects.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve avoided social media for the last 7 days — curious if it affected my stress.",
+        "type": "behavioral",
+        "thinking": "Reducing digital input can reduce stress. I’ll check the past week of data to validate that.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been meditating each morning for the past 9 days. Any visible impact?",
+        "type": "behavioral",
+        "thinking": "Meditation often improves resilience. I’ll review 9 days of stress trends to assess results.",
+        "numdays": 9,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I started deep breathing exercises 6 days ago. Is my stress decreasing?",
+        "type": "behavioral",
+        "thinking": "They've added a calming routine. I’ll analyze the 6-day span to evaluate stress reduction.",
+        "numdays": 6,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Lately I’ve been waking up anxious — it’s been happening for about 10 days.",
+        "type": "symptom",
+        "thinking": "Morning anxiety could reflect overnight stress buildup. I’ll examine data from the last 10 days.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "The last 8 days have been filled with headaches and tension.",
+        "type": "symptom",
+        "thinking": "Physical symptoms like headaches can be stress-related. I’ll pull 8 days of data for analysis.",
+        "numdays": 8,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been losing focus a lot these past 9 days. Could it be stress?",
+        "type": "symptom",
+        "thinking": "Cognitive disruption is often linked to stress. I’ll retrieve 9 days of stress data to explore the connection.",
+        "numdays": 9,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been on edge for nearly 12 days now — everything feels overwhelming.",
+        "type": "symptom",
+        "thinking": "This emotional overload may stem from prolonged stress. I’ll analyze the last 12 days of data.",
+        "numdays": 12,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "The last 7 days have felt like a mental pressure cooker.",
+        "type": "metaphorical",
+        "thinking": "The user uses strong metaphor to describe psychological strain. I’ll look at stress patterns over the past 7 days.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "It’s like I’ve been carrying a weight on my chest for the last 6 days.",
+        "type": "metaphorical",
+        "thinking": "This symbolic expression points to emotional burden. I’ll evaluate stress markers over 6 days to correlate it.",
+        "numdays": 6,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My thoughts have been stormy for about 9 days now.",
+        "type": "metaphorical",
+        "thinking": "The 'stormy thoughts' metaphor suggests inner turmoil. I’ll check 9 days of data for elevated stress.",
+        "numdays": 9,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "For 8 nights straight, it’s felt like I’ve been holding my breath emotionally.",
+        "type": "metaphorical",
+        "thinking": "That imagery suggests suppressed tension. I’ll review 8 days of stress trends for any escalation.",
+        "numdays": 8,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Stress has wrapped around me like fog these past 10 days.",
+        "type": "metaphorical",
+        "thinking": "The fog metaphor implies persistent stress. I’ll examine the last 10 days for trends in elevated stress levels.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Can you give me a breakdown of how my stress levels changed over the past 13 days?",
+        "type": "explicit",
+        "thinking": "They’re seeking a structured summary. I’ll retrieve 13 days of stress data to highlight fluctuations.",
+        "numdays": 13,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’d like to understand my stress patterns for the last 15 days.",
+        "type": "explicit",
+        "thinking": "This is a direct request for insight into stress trends. I’ll fetch 15 days of data for a detailed review.",
+        "numdays": 15,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I've been feeling overwhelmed for nearly 14 days — can you check my stress?",
+        "type": "symptom",
+        "thinking": "The emotional overload could be chronic stress. I’ll review stress patterns over 14 days to verify.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "These past 11 days have been emotionally heavy.",
+        "type": "symptom",
+        "thinking": "Emotional heaviness may stem from sustained stress. I’ll pull stress data for the last 11 days.",
+        "numdays": 11,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I've been restless for about 10 days now — is there a pattern in my stress levels?",
+        "type": "symptom",
+        "thinking": "Restlessness is a typical stress response. I’ll analyze the past 10 days to identify possible links.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I started drinking herbal tea at night 7 days ago. Any signs of stress reduction?",
+        "type": "behavioral",
+        "thinking": "They introduced a relaxation strategy. I’ll examine stress data over the past 7 days for changes.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Since I reduced my workload 12 days ago, I’ve felt different. Is my stress lower?",
+        "type": "behavioral",
+        "thinking": "Less workload may impact stress positively. I’ll evaluate the last 12 days for improvement.",
+        "numdays": 12,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been going outside more in the past 6 days. Has that helped my stress?",
+        "type": "behavioral",
+        "thinking": "Increased outdoor time often lowers stress. I’ll check 6 days of data to explore the effect.",
+        "numdays": 6,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I cut down on caffeine about 11 days ago. Curious if that changed my stress levels.",
+        "type": "behavioral",
+        "thinking": "Caffeine reduction may reduce nervous energy. I’ll look at 11 days of stress trends to find out.",
+        "numdays": 11,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "The past 13 days have felt emotionally loud, even when it’s quiet.",
+        "type": "metaphorical",
+        "thinking": "This metaphor of 'emotional noise' suggests internal stress. I’ll analyze 13 days of data to see if it matches.",
+        "numdays": 13,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "It’s like I’ve been drowning in thoughts these last 12 days.",
+        "type": "metaphorical",
+        "thinking": "Describing mental overload points to elevated stress. I’ll evaluate 12 days of stress trends.",
+        "numdays": 12,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "For the past 9 days, I’ve felt like I’m racing without moving.",
+        "type": "metaphorical",
+        "thinking": "The 'racing in place' metaphor signals mental strain. I’ll review stress metrics for the last 9 days.",
+        "numdays": 9,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been irritable for the past 8 days — can you check if stress is climbing?",
+        "type": "symptom",
+        "thinking": "Irritability is a classic stress indicator. I’ll analyze 8 days of data for a correlation.",
+        "numdays": 8,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve had chest tension off and on over the past 10 days. Could that be stress?",
+        "type": "symptom",
+        "thinking": "Somatic stress symptoms like chest tightness are worth exploring. I’ll check 10 days of data for signs.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Can you summarize my stress activity for the last 16 days?",
+        "type": "explicit",
+        "thinking": "They want a multi-week stress overview. I’ll retrieve data from the past 16 days to support analysis.",
+        "numdays": 16,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I'd like to evaluate how stable my stress has been during the last 13 days.",
+        "type": "explicit",
+        "thinking": "The request is for trend stability. I’ll retrieve 13 days of stress records for consistency review.",
+        "numdays": 13,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I've had trouble staying calm these past 7 days — has my stress changed?",
+        "type": "implicit",
+        "thinking": "Emotional agitation over a week could indicate fluctuations. I’ll review stress markers for the past 7 days.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "The past 6 days I’ve been feeling emotionally raw — I’m not sure why.",
+        "type": "implicit",
+        "thinking": "Unexplained emotional sensitivity could be related to stress. I’ll analyze 6 days of stress data.",
+        "numdays": 6,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Started taking nature walks again 10 days ago. Curious if that helped my stress.",
+        "type": "behavioral",
+        "thinking": "They resumed a calming habit. I’ll review 10 days of data for signs of stress improvement.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I've been more patient these last 8 days — is my stress level lower?",
+        "type": "behavioral",
+        "thinking": "Improved mood may indicate reduced stress. I’ll examine data from the past 8 days to confirm.",
+        "numdays": 8,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I ditched late-night emails 11 days ago. Did that change my stress pattern?",
+        "type": "behavioral",
+        "thinking": "Avoiding late digital work can help recovery. I’ll pull 11 days of data to check the effect.",
+        "numdays": 11,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like I’ve been emotionally sprinting these past 9 days.",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically describes stress buildup. I’ll check 9 days of data to validate that sensation.",
+        "numdays": 9,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "It’s like I’ve been under an invisible deadline for 10 days straight.",
+        "type": "metaphorical",
+        "thinking": "Describing ongoing tension suggests stress overload. I’ll evaluate the last 10 days for high stress levels.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Everything’s been overwhelming for about 14 days — even small things.",
+        "type": "symptom",
+        "thinking": "Perceived overload may stem from sustained stress. I’ll check 14 days of data for consistent elevation.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Lately I’ve been clenching my jaw all day — it started around 6 days ago.",
+        "type": "symptom",
+        "thinking": "Physical tension like jaw clenching often reflects stress. I’ll review the past 6 days of data.",
+        "numdays": 6,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Can you help me visualize my stress over the past 15 days?",
+        "type": "explicit",
+        "thinking": "The user is asking for a visualization of recent stress trends. I’ll retrieve 15 days of data for that purpose.",
+        "numdays": 15,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I'd love to know how my stress has shifted over the last 12 days.",
+        "type": "explicit",
+        "thinking": "They want a trend view. I’ll pull 12 days of data to highlight any changes in stress levels.",
+        "numdays": 12,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "It’s been a whirlwind of emotions for the past 7 days — check my stress?",
+        "type": "metaphorical",
+        "thinking": "Describing chaos suggests stress spikes. I’ll examine the last 7 days of data for verification.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve had an underlying nervousness for about 8 days now.",
+        "type": "symptom",
+        "thinking": "Persistent anxiety could reflect sustained stress. I’ll check 8 days of data to evaluate.",
+        "numdays": 8,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Could you check how my stress levels have been over the past three weeks?",
+        "type": "explicit",
+        "thinking": "The user is interested in a broad trend. Retrieving 21 days of data will help spot fluctuations.",
+        "numdays": 21,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Please show me my stress trend since the beginning of this month.",
+        "type": "explicit",
+        "thinking": "The user specified a general time frame. I’ll use the last 30 days to reflect a full month.",
+        "numdays": 30,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Can I see how my stress levels were during the last five days?",
+        "type": "explicit",
+        "thinking": "User asked for a specific time window, so I’ll retrieve stress data from the past five days.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I want to know if I’ve been less stressed in the past ten days.",
+        "type": "explicit",
+        "thinking": "The user is expecting insight into recent stress. Ten days will provide a good snapshot.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Give me a summary of my stress since last weekend.",
+        "type": "explicit",
+        "thinking": "Assuming they mean a 7-day span from now, I’ll use that period to generate a report.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been feeling weirdly tense lately, maybe over the last week or so.",
+        "type": "implicit",
+        "thinking": "The user's unease likely relates to stress. A 7-day history should help identify changes.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Not sure why, but I've been overwhelmed this past fortnight.",
+        "type": "implicit",
+        "thinking": "They described ongoing emotional discomfort. I'll pull 14 days of stress data for context.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "The past couple of days felt heavy, emotionally speaking.",
+        "type": "implicit",
+        "thinking": "Short-term emotional strain suggests checking stress patterns from the last two days.",
+        "numdays": 2,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Lately, I can’t focus at all. Maybe it’s been like this for the past 12 days?",
+        "type": "implicit",
+        "thinking": "Difficulty focusing can signal chronic stress. I’ll review data from the last 12 days.",
+        "numdays": 12,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "For about eight days now, I’ve felt emotionally drained.",
+        "type": "implicit",
+        "thinking": "User reports fatigue with a duration. I’ll retrieve eight days of stress data to investigate.",
+        "numdays": 8,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been practicing daily gratitude for 11 days. Has it lowered my stress?",
+        "type": "behavioral",
+        "thinking": "They’ve adopted a wellness habit. Pulling data from the last 11 days will show if it’s helping.",
+        "numdays": 11,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I cut down on caffeine two weeks ago — is there a difference in stress?",
+        "type": "behavioral",
+        "thinking": "Reducing stimulants often affects stress. I’ll check the last 14 days for measurable changes.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been journaling every morning for six days. Curious how my stress responded.",
+        "type": "behavioral",
+        "thinking": "They’re evaluating a new routine. A 6-day window will help measure any improvement.",
+        "numdays": 6,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Since I started yoga a month ago, I feel more grounded.",
+        "type": "behavioral",
+        "thinking": "Yoga often helps with stress. I’ll pull 30 days of data to assess long-term effects.",
+        "numdays": 30,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been avoiding the news for the past nine days — has my stress gone down?",
+        "type": "behavioral",
+        "thinking": "This habit change may reduce stress. I’ll examine stress trends over the past nine days.",
+        "numdays": 9,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "The tension in my shoulders hasn’t gone away in two weeks.",
+        "type": "symptom",
+        "thinking": "Physical tension can result from chronic stress. I’ll check the past 14 days to explore patterns.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been waking up with headaches for a week now.",
+        "type": "symptom",
+        "thinking": "Frequent headaches can correlate with high stress. A 7-day view should reveal any link.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "For the last 15 days, my heart’s been racing more than usual.",
+        "type": "symptom",
+        "thinking": "User is reporting anxiety-like symptoms. I'll fetch 15 days of stress data to analyze correlations.",
+        "numdays": 15,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been getting sick more often these past 18 days. Could stress be affecting my immune system?",
+        "type": "symptom",
+        "thinking": "Stress weakens immunity. Reviewing 18 days of data might reveal contributing patterns.",
+        "numdays": 18,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’m feeling mentally foggy this week. What’s going on?",
+        "type": "symptom",
+        "thinking": "Cognitive symptoms often relate to stress. I’ll examine the last 7 days of data.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "It’s like I’ve been carrying an invisible weight for the last 20 days.",
+        "type": "metaphorical",
+        "thinking": "That metaphor likely reflects chronic stress. I’ll pull 20 days of data to validate their feeling.",
+        "numdays": 20,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Every day lately feels like I’m walking a tightrope — must be stress.",
+        "type": "metaphorical",
+        "thinking": "The user is expressing pressure and imbalance. I’ll check stress metrics from the last 13 days.",
+        "numdays": 13,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "The past month has felt like an emotional rollercoaster.",
+        "type": "metaphorical",
+        "thinking": "User’s description implies fluctuating stress. I’ll analyze a full 30-day window.",
+        "numdays": 30,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "It’s been like a cloud hanging over me for the past 17 days.",
+        "type": "metaphorical",
+        "thinking": "That visual evokes persistent stress. I’ll pull stress data over the last 17 days to explore.",
+        "numdays": 17,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "These last four days felt like my brain’s in overdrive.",
+        "type": "metaphorical",
+        "thinking": "Mental overload suggests stress spikes. A 4-day view may reveal triggers.",
+        "numdays": 4,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’d like a 28-day view of how my stress levels have shifted.",
+        "type": "explicit",
+        "thinking": "User wants a broad summary. Retrieving 28 days will show meaningful trends and fluctuations.",
+        "numdays": 28,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How have I been doing stress-wise over the last 16 days?",
+        "type": "explicit",
+        "thinking": "A check-in across 16 days will give a good view of medium-term stress patterns.",
+        "numdays": 16,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been restless and anxious since last Monday.",
+        "type": "implicit",
+        "thinking": "They’re describing stress-related symptoms over the past 8 days. I’ll pull data for that window.",
+        "numdays": 8,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I started nightly stretching 13 days ago — has that helped?",
+        "type": "behavioral",
+        "thinking": "User is trying a calming technique. I’ll retrieve stress data since that practice began.",
+        "numdays": 13,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "For three days, I’ve felt on edge nonstop.",
+        "type": "symptom",
+        "thinking": "Persistent stress-like symptoms for three days require short-term monitoring.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "The last two weeks have been a blur of tension.",
+        "type": "metaphorical",
+        "thinking": "User’s metaphor hints at high stress. I’ll fetch 14 days of relevant data.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Check if there’s been any improvement in my stress across the past 6 days.",
+        "type": "explicit",
+        "thinking": "User asked for a short-term trend review. Six days will give clear insights.",
+        "numdays": 6,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been snapping at everyone this past week — what’s happening?",
+        "type": "symptom",
+        "thinking": "Irritability can signal stress overload. I’ll check the past 7 days to spot any spikes.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve had zero patience in the last 9 days. Can you check my stress?",
+        "type": "symptom",
+        "thinking": "Impatience and short temper may reflect rising stress. I’ll review 9 days of data.",
+        "numdays": 9,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like I’ve been burning out slowly over the last 19 days.",
+        "type": "metaphorical",
+        "thinking": "Burnout cues often signal prolonged stress. Nineteen days should be enough to verify that.",
+        "numdays": 19,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Even small things have been triggering me the last 25 days.",
+        "type": "symptom",
+        "thinking": "Emotional reactivity points to chronic stress. I’ll pull 25 days of data for analysis.",
+        "numdays": 25,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’m experimenting with cold showers since the last 10 days. Any change in stress?",
+        "type": "behavioral",
+        "thinking": "They’re testing a new stress-relief habit. Let’s see how it’s affected their stress markers.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I’ve been less reactive after starting breathwork two weeks ago.",
+        "type": "behavioral",
+        "thinking": "Breathwork is meant to lower stress. I’ll check 14 days of data to see the effect.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "The last 23 days have been unusually calm for me.",
+        "type": "implicit",
+        "thinking": "User may be experiencing reduced stress. Reviewing 23 days of data will confirm it.",
+        "numdays": 23,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I just want to check if stress levels dipped during that vacation last week.",
+        "type": "explicit",
+        "thinking": "They’re referencing a relaxing period. A 7-day window should capture it accurately.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Everything's been tense since midweek.",
+        "type": "implicit",
+        "thinking": "Assuming midweek means around 5 days ago, I’ll check stress data for that period.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My stress levels feel like a rollercoaster during tax season",
+        "type": "metaphorical",
+        "thinking": "Financial periods cause predictable stress patterns. get_stress_data for the last 14 days captures tax season fluctuations.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Why do I feel tension headaches building by Wednesday afternoons?",
+        "type": "implicit",
+        "thinking": "Midweek patterns suggest work-related stress accumulation. get_stress_data for last 4 Wednesdays identifies peak times.",
+        "numdays": 4,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Show me my stress data from the day I presented to executives",
+        "type": "explicit",
+        "thinking": "High-stakes events create acute stress. get_stress_data for that specific day reveals presentation impact.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My body feels like a compressed spring during deadlines",
+        "type": "metaphorical",
+        "thinking": "Metaphor indicates deadline-induced tension. get_stress_data for 3 deadline periods quantifies the effect.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Has my baseline stress improved since switching to decaf?",
+        "type": "explicit",
+        "thinking": "Dietary changes affect stress physiology. get_stress_data compares 7 days pre- and post-caffeine change.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I notice my shoulders tense up during team standups",
+        "type": "implicit",
+        "thinking": "Physical cues suggest meeting stress. get_stress_data for last 10 standups correlates timing with tension.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Breakdown my stress levels during yesterday's family gathering",
+        "type": "explicit",
+        "thinking": "Social events trigger varied stress responses. get_stress_data for the event duration provides granular analysis.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My anxiety spreads like wildfire when I'm multitasking",
+        "type": "metaphorical",
+        "thinking": "Metaphor illustrates cognitive overload stress. get_stress_data during 5 multitasking episodes quantifies impact.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my weekend vs weekday stress averages",
+        "type": "explicit",
+        "thinking": "Work-life balance reflects in stress patterns. get_stress_data for 2 typical weeks shows contrast.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I wake up with clenched fists after stressful dreams",
+        "type": "implicit",
+        "thinking": "Nocturnal physical symptoms indicate sleep stress. get_stress_data for 7 nights correlates with dream recall.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Show stress spikes during my last certification exam",
+        "type": "explicit",
+        "thinking": "High-pressure testing creates acute stress. get_stress_data for exam day shows physiological response.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My mind becomes a tangled web during budget planning",
+        "type": "metaphorical",
+        "thinking": "Metaphor describes cognitive stress. get_stress_data during 3 planning sessions measures intensity.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How does my stress during morning workouts compare to evening ones?",
+        "type": "explicit",
+        "thinking": "Circadian rhythms affect exercise stress. get_stress_data for 5 AM vs 5 PM sessions reveals patterns.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My neck stiffness correlates with project milestones",
+        "type": "implicit",
+        "thinking": "Physical symptoms track work stress. get_stress_data for last 3 project deadlines shows progression.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Analyze my stress during the product launch week",
+        "type": "explicit",
+        "thinking": "Critical work periods create sustained stress. get_stress_data for those 7 days shows cumulative impact.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Conversations with my advisor leave me feeling like a shaken soda can",
+        "type": "metaphorical",
+        "thinking": "Metaphor indicates pent-up stress. get_stress_data during 5 advisor meetings quantifies buildup.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I grind my teeth more during fiscal quarter-ends",
+        "type": "implicit",
+        "thinking": "Physical stress markers show cyclical patterns. get_stress_data for last 2 quarter-ends establishes trend.",
+        "numdays": 2,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Map my stress during the 12-hour coding marathon",
+        "type": "explicit",
+        "thinking": "Extended focus sessions test endurance. get_stress_data for that specific day shows hourly patterns.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Client negotiations make my nerves feel like live wires",
+        "type": "metaphorical",
+        "thinking": "Metaphor describes high-stakes stress. get_stress_data during 5 negotiations measures physiological response.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How does my stress before lunch compare to after lunch?",
+        "type": "explicit",
+        "thinking": "Nutrition affects stress regulation. get_stress_data compares AM/PM for 5 workdays.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My eczema flares up during audit seasons",
+        "type": "implicit",
+        "thinking": "Skin conditions reflect chronic stress. get_stress_data for last 3 audit periods correlates timelines.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Show my stress data from the day my flight was canceled",
+        "type": "explicit",
+        "thinking": "Travel disruptions test stress management. get_stress_data for that day captures acute reaction.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Performance reviews make my confidence feel like a deflating balloon",
+        "type": "metaphorical",
+        "thinking": "Metaphor illustrates evaluation stress. get_stress_data during 3 review cycles tracks patterns.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I get stomach knots before investor meetings",
+        "type": "implicit",
+        "thinking": "Gut reactions signal anticipatory stress. get_stress_data for last 5 meetings shows preparation impact.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Analyze my stress levels during the system migration week",
+        "type": "explicit",
+        "thinking": "Technical transitions create sustained pressure. get_stress_data for those 5 workdays shows adaptation.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My patience wears thin like old rubber bands during sprint planning",
+        "type": "metaphorical",
+        "thinking": "Metaphor describes depletion stress. get_stress_data during 3 planning sessions quantifies fatigue.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How does my stress during deep work compare to collaborative work?",
+        "type": "explicit",
+        "thinking": "Work styles affect stress differently. get_stress_data compares 5 sessions of each type.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My cold sores appear during legal contract reviews",
+        "type": "implicit",
+        "thinking": "Viral symptoms track high-stress periods. get_stress_data during last 3 contract cycles confirms triggers.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Show stress fluctuations during my last conference presentation",
+        "type": "explicit",
+        "thinking": "Public speaking creates predictable stress arcs. get_stress_data for that day shows preparation/performance phases.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Dealing with legacy code feels like untangling Christmas lights",
+        "type": "metaphorical",
+        "thinking": "Metaphor illustrates frustration stress. get_stress_data during 5 legacy work sessions measures impact.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I blink excessively during UX testing sessions",
+        "type": "implicit",
+        "thinking": "Nervous tics reveal task-specific stress. get_stress_data during last 5 tests correlates with behavior.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Analyze my stress during the fundraising campaign",
+        "type": "explicit",
+        "thinking": "Financial pressure creates unique stress. get_stress_data for the 10-day campaign shows progression.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Job interviews make my palms sweat like ice cubes in summer",
+        "type": "metaphorical",
+        "thinking": "Metaphor describes nervous stress. get_stress_data during 3 interviews quantifies physiological response.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How does my stress during planning differ from execution phases?",
+        "type": "explicit",
+        "thinking": "Project stages require different stress responses. get_stress_data compares 5 planning vs 5 execution days.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My tinnitus worsens during compliance audits",
+        "type": "implicit",
+        "thinking": "Auditory symptoms track work stress. get_stress_data during last 2 audits shows correlation.",
+        "numdays": 2,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Show my stress data from the day the server crashed",
+        "type": "explicit",
+        "thinking": "Crises test real-time stress response. get_stress_data for that 24-hour period captures the event arc.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Writing documentation makes my creativity feel like a dried-up well",
+        "type": "metaphorical",
+        "thinking": "Metaphor illustrates cognitive friction stress. get_stress_data during 5 documentation sessions measures effect.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I develop eye twitches during regulatory inspections",
+        "type": "implicit",
+        "thinking": "Nervous tics reveal inspection stress. get_stress_data during last 3 inspections tracks severity.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Analyze my stress levels during the merger negotiations",
+        "type": "explicit",
+        "thinking": "Organizational changes create prolonged stress. get_stress_data for the 2-week negotiation period shows trends.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Debugging sessions turn my focus into a strobe light - intense but flickering",
+        "type": "metaphorical",
+        "thinking": "Metaphor describes cognitive stress patterns. get_stress_data during 5 debugging marathons quantifies fluctuations.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How does my stress during innovation work compare to maintenance work?",
+        "type": "explicit",
+        "thinking": "Work types demand different stress responses. get_stress_data compares 5 days of each work type.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My resting heart rate climbs during performance review seasons",
+        "type": "implicit",
+        "thinking": "Physiological markers reflect appraisal stress. get_stress_data for last 2 review cycles shows duration impact.",
+        "numdays": 2,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Show stress spikes during yesterday's production outage",
+        "type": "explicit",
+        "thinking": "System failures create acute operational stress. get_stress_data for the outage window captures real-time response.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Staff conflicts make my empathy feel like an overused muscle",
+        "type": "metaphorical",
+        "thinking": "Metaphor illustrates interpersonal stress fatigue. get_stress_data during 5 conflict resolutions measures drain.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My allergies flare up during annual budgeting",
+        "type": "implicit",
+        "thinking": "Immune responses track financial stress. get_stress_data during last 2 budgeting periods confirms pattern.",
+        "numdays": 2,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Analyze my stress during the investor pitch preparation",
+        "type": "explicit",
+        "thinking": "High-stakes preparation creates unique stress. get_stress_data for the 5-day prep period shows buildup.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Back-to-back meetings make my energy feel like a phone at 5%",
+        "type": "metaphorical",
+        "thinking": "Metaphor describes depletion stress. get_stress_data during 5 meeting-heavy days quantifies drain.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I've been waking up with headaches every morning this week",
+        "type": "implicit",
+        "thinking": "Morning headaches often link to stress. Let's check your stress levels over the past 7 mornings to spot patterns.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How stressed was I last Tuesday when I had that big interview?",
+        "type": "explicit",
+        "thinking": "Big events like interviews can really spike stress. I'll look at just that day to see how your body reacted.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My shoulders get so tense during family video calls",
+        "type": "implicit",
+        "thinking": "Physical tension during calls suggests stress. Let's review your last 5 family calls to see how long it takes to build up.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a shaken soda bottle after staff meetings",
+        "type": "metaphorical",
+        "thinking": "That fizzy feeling often means pent-up stress. Let's check your last 3 meetings to see how long it takes to calm down afterward.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Has my stress improved since I started morning walks two weeks ago?",
+        "type": "explicit",
+        "thinking": "New routines can help. I'll compare the 14 days before walks to the 14 days after to see the difference.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My jaw hurts from clenching during my commute",
+        "type": "implicit",
+        "thinking": "Teeth grinding often happens during stressful times. Let's look at your last 10 commutes to find the worst stretches.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How stressed was I during my kid's school play last weekend?",
+        "type": "explicit",
+        "thinking": "Even happy events can be stressful. I'll check that specific evening to see how your body handled it.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Sunday nights make my stomach twist into knots",
+        "type": "implicit",
+        "thinking": "That Sunday dread is common. Let's review your last 4 Sunday evenings to see when the stress starts building.",
+        "numdays": 4,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My hands shake when checking work emails after hours",
+        "type": "implicit",
+        "thinking": "Physical reactions to messages are telling. Let's check your stress during evening email checks over the past week.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Was I more stressed during my sister's wedding or my graduation?",
+        "type": "explicit",
+        "thinking": "Big life events affect everyone differently. I'll compare those two important days side by side.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a computer overheating when deadlines approach",
+        "type": "metaphorical",
+        "thinking": "That overheating feeling is usually stress building. Let's look at the 3 days before your last few deadlines.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My stress dreams have been worse this month",
+        "type": "implicit",
+        "thinking": "Stress often shows up in dreams. I'll check your nighttime stress levels over the past 30 days to spot changes.",
+        "numdays": 30,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How did my stress change during our vacation last week?",
+        "type": "explicit",
+        "thinking": "Trips should help us unwind. I'll compare your vacation week to the week before to see how much you relaxed.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My heart races when my mom calls unexpectedly",
+        "type": "implicit",
+        "thinking": "Sudden calls can be startling. Let's check your stress during the last 5 surprise calls from family.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during morning meetings vs afternoon ones",
+        "type": "explicit",
+        "thinking": "Time of day affects how we handle stress. I'll compare your last 5 morning and afternoon meetings.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a deflated balloon after long work weeks",
+        "type": "metaphorical",
+        "thinking": "That drained feeling often comes from accumulated stress. Let's look at your Friday evenings over the past month.",
+        "numdays": 4,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My skin breaks out during exam periods",
+        "type": "implicit",
+        "thinking": "Stress can show on our skin. I'll check your stress levels during the last 2 exam weeks to find connections.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How stressed was I during yesterday's doctor appointment?",
+        "type": "explicit",
+        "thinking": "Medical visits can be nerve-wracking. I'll look at just that hour to see how your body reacted.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Sunday meal prep leaves me exhausted",
+        "type": "implicit",
+        "thinking": "Chores can be surprisingly stressful. Let's review your last 3 Sunday cooking sessions to see when fatigue sets in.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress on days I exercise vs days I don't",
+        "type": "explicit",
+        "thinking": "Movement should help manage stress. I'll compare your last 7 active days to 7 rest days.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My legs won't stop bouncing during parent-teacher conferences",
+        "type": "implicit",
+        "thinking": "That restless energy often means nervousness. Let's check your stress during the last 2 school meetings.",
+        "numdays": 2,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a phone battery draining at family gatherings",
+        "type": "metaphorical",
+        "thinking": "Social exhaustion is real. I'll check your stress levels during the last 3 family events to see how quickly you tire.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Was I more stressed during my driving test or my job interview?",
+        "type": "explicit",
+        "thinking": "Different challenges stress us differently. I'll compare those two big test days to see which was harder.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My stomach hurts when thinking about Monday mornings",
+        "type": "implicit",
+        "thinking": "Anticipatory stress can be physical. Let's check your Sunday night and Monday morning stress over the past month.",
+        "numdays": 30,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How did my stress change after we got the new puppy?",
+        "type": "explicit",
+        "thinking": "Big life changes affect stress. I'll compare the week before and after puppy arrival to see the impact.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My hands get clammy during video presentations",
+        "type": "implicit",
+        "thinking": "Physical reactions show presentation nerves. Let's review your last 4 virtual presentations to find stress patterns.",
+        "numdays": 4,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress on days I meditate vs days I forget",
+        "type": "explicit",
+        "thinking": "Mindfulness should help. I'll compare 5 days with meditation to 5 without to see if it makes a difference.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a pressure cooker when helping with homework",
+        "type": "metaphorical",
+        "thinking": "That building pressure is real stress. Let's check your stress levels during the last 5 homework sessions.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My neck stiffens during budget discussions with my partner",
+        "type": "implicit",
+        "thinking": "Money talks often cause tension. I'll check your stress during the last 3 financial conversations.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How stressed was I during last month's family reunion?",
+        "type": "explicit",
+        "thinking": "Big gatherings can be overwhelming. I'll look at just that weekend to see how you coped.",
+        "numdays": 2,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My breathing gets shallow before client meetings",
+        "type": "implicit",
+        "thinking": "Breath changes often signal anxiety. Let's check your pre-meeting stress during the last 5 client calls.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during school drop-off vs pick-up",
+        "type": "explicit",
+        "thinking": "Different times of day bring different stresses. I'll compare your last 5 mornings and afternoons at school.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a wind-up toy before doctor appointments",
+        "type": "metaphorical",
+        "thinking": "That wound-up feeling is nervous energy. Let's check your stress in the hours before your last 3 check-ups.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My sleep gets worse during tax season",
+        "type": "implicit",
+        "thinking": "Financial stress often disrupts rest. I'll check your nighttime stress levels over the last 2 tax seasons.",
+        "numdays": 60,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How did my stress change after starting the new medication?",
+        "type": "explicit",
+        "thinking": "Medications can affect stress. I'll compare the week before and after you started to see any differences.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My knees ache during difficult conversations with my teen",
+        "type": "implicit",
+        "thinking": "Physical pain can mirror emotional stress. Let's review your last 4 tough talks to find connections.",
+        "numdays": 4,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress on days I see friends vs days I don't",
+        "type": "explicit",
+        "thinking": "Social time should help. I'll compare your last 5 social days to 5 quiet days to see the effect.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a computer with too many tabs open when multitasking",
+        "type": "metaphorical",
+        "thinking": "That overwhelmed feeling is real. Let's check your stress during the last 3 days you juggled multiple projects.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My palms itch when thinking about public speaking",
+        "type": "implicit",
+        "thinking": "Physical reactions can anticipate stress. I'll check your stress levels while preparing for last 2 presentations.",
+        "numdays": 2,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How stressed was I during last week's power outage?",
+        "type": "explicit",
+        "thinking": "Unexpected disruptions can be stressful. I'll look at just that day to see how you handled the challenge.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My back tightens during monthly budget planning",
+        "type": "implicit",
+        "thinking": "Money management can be physically stressful. Let's review your last 3 budgeting sessions.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during summer vs winter holidays",
+        "type": "explicit",
+        "thinking": "Different seasons bring different stresses. I'll compare last summer's vacation to last winter's break.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a stretched rubber band during finals week",
+        "type": "metaphorical",
+        "thinking": "That tension builds up over time. Let's check your stress levels each day of last finals week to see when it peaks.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My jaw locks up during difficult work conversations",
+        "type": "implicit",
+        "thinking": "Physical tension often mirrors work stress. I'll check your last 5 tough discussions with colleagues.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How did my stress change after we moved offices?",
+        "type": "explicit",
+        "thinking": "New environments affect stress. I'll compare the week before and after your office move.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My shoulders hike up during video calls with my boss",
+        "type": "implicit",
+        "thinking": "Posture changes can signal stress. Let's review your last 5 check-in meetings to spot tension patterns.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress on days I cook vs days we order takeout",
+        "type": "explicit",
+        "thinking": "Meal prep can be stressful or relaxing. I'll compare your last 5 cooking days to 5 takeout nights.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a shaken snowglobe after surprise visits from in-laws",
+        "type": "metaphorical",
+        "thinking": "Unexpected guests can be disruptive. Let's check your stress during the last 2 unplanned visits.",
+        "numdays": 2,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My stomach drops when checking my bank account on payday",
+        "type": "implicit",
+        "thinking": "Financial stress often hits physically. I'll check your stress levels during last month's payday routine.",
+        "numdays": 30,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How stressed was I during last month's big snowstorm?",
+        "type": "explicit",
+        "thinking": "Weather disruptions can be stressful. I'll look at just those 3 storm days to see how you coped.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My breathing quickens when the phone rings after hours",
+        "type": "implicit",
+        "thinking": "After-hours calls often bring stress. Let's check your reactions to the last 5 unexpected evening calls.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during morning workouts vs evening walks",
+        "type": "explicit",
+        "thinking": "Different exercises affect stress differently. I'll compare your last 5 of each to see what helps most.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My hands tremble when I have to speak up in team meetings",
+        "type": "implicit",
+        "thinking": "Public speaking anxiety often manifests physically. Let's check your stress levels during the last few meetings to identify patterns.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a mouse trapped in a maze during tax season",
+        "type": "metaphorical",
+        "thinking": "Financial paperwork can create overwhelming stress. This metaphor suggests feeling lost and pressured.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress levels during morning commutes vs evening commutes last week",
+        "type": "explicit",
+        "thinking": "Rush hour affects people differently. Let's analyze both time periods to see which commute stresses you more.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My neck stiffens whenever I think about my upcoming performance review",
+        "type": "implicit",
+        "thinking": "Anticipatory stress about evaluations can cause physical tension, even before the event occurs.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How stressed was I during yesterday's dental appointment compared to my last one?",
+        "type": "explicit",
+        "thinking": "Medical visits often cause anxiety. Comparing these two events can show if your stress is improving.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Social media scrolling leaves me feeling drained and inadequate for a couple of days",
+        "type": "implicit",
+        "thinking": "Overuse of social media can definitely increase stress levels. Let's examine your stress patterns from the last 2 days to better understand the situation",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a overcooked noodle after back-to-back Zoom calls",
+        "type": "metaphorical",
+        "thinking": "Virtual meetings can be mentally exhausting. This suggests complete depletion of energy.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My stomach knots up when I hear my phone ping with work messages after hours",
+        "type": "implicit",
+        "thinking": "Boundary violations between work and personal time often cause stress reactions.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Analyze my stress patterns during the last apartment hunting weekend",
+        "type": "explicit",
+        "thinking": "Housing searches are notoriously stressful. Let's look at those two days to see how you coped.",
+        "numdays": 2,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My jaw clenches whenever I interact with that difficult colleague",
+        "type": "implicit",
+        "thinking": "Toxic work relationships create immediate physical stress responses that are worth tracking.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a deflating balloon when my creative ideas get rejected",
+        "type": "metaphorical",
+        "thinking": "Creative work is personal, and criticism can feel crushing. This metaphor captures that depletion.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during meal prep days vs takeout days last month",
+        "type": "explicit",
+        "thinking": "Cooking can be either therapeutic or stressful. Comparing these will show which works better for you.",
+        "numdays": 30,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My palms sweat when I have to ask for help at work",
+        "type": "implicit",
+        "thinking": "Fear of appearing incompetent can trigger physical stress symptoms that are important to recognize.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How did my stress levels fluctuate during last week's family visit?",
+        "type": "explicit",
+        "thinking": "Family dynamics often create predictable stress patterns. Let's examine that 5-day period closely.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a computer running too many programs when juggling childcare and work",
+        "type": "metaphorical",
+        "thinking": "Work-life balance challenges often lead to cognitive overload and system crashes.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My shoulders hike up to my ears during difficult conversations with my partner",
+        "type": "implicit",
+        "thinking": "Relationship tensions manifest physically. Tracking these reactions can help identify triggers.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during creative work vs administrative tasks",
+        "type": "explicit",
+        "thinking": "Different work modes affect us differently. Let's analyze your last 10 sessions of each type.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My breathing gets shallow when I think about climate change",
+        "type": "implicit",
+        "thinking": "Eco-anxiety is a growing concern that can trigger physical stress responses.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a rubber band about to snap during holiday preparations",
+        "type": "metaphorical",
+        "thinking": "Festive seasons often come with unrealistic expectations and mounting pressure.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Analyze my stress patterns during last month's job search",
+        "type": "explicit",
+        "thinking": "Career transitions are major stressors. Examining that 30-day period could reveal helpful patterns.",
+        "numdays": 30,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My legs won't stop bouncing during medical waiting room visits",
+        "type": "implicit",
+        "thinking": "Healthcare anxiety often manifests as restless energy worth monitoring.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during indoor workouts vs outdoor activities",
+        "type": "explicit",
+        "thinking": "Exercise environments affect stress differently. Let's compare your last 5 of each.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a phone battery draining rapidly during social gatherings",
+        "type": "metaphorical",
+        "thinking": "Social exhaustion is real, especially for introverts. This metaphor captures that depletion.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My skin breaks out during periods of financial uncertainty",
+        "type": "implicit",
+        "thinking": "Money worries often surface physically. Tracking these connections can be enlightening.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How stressed was I during the car breakdown last Wednesday?",
+        "type": "explicit",
+        "thinking": "Unexpected emergencies create acute stress worth examining to build resilience.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My teeth grind when I'm stuck in traffic with important meetings",
+        "type": "implicit",
+        "thinking": "Time pressure combined with lack of control creates perfect stress storms.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a pressure cooker when family visits exceed three days",
+        "type": "metaphorical",
+        "thinking": "Houseguests often follow predictable stress curves as patience wears thin.",
+        "numdays": 3,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during morning journaling vs no journaling days",
+        "type": "explicit",
+        "thinking": "Reflective practices should help manage stress. Let's compare 5 days with and without.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My chest tightens when I think about retirement savings",
+        "type": "implicit",
+        "thinking": "Long-term financial security is a common stressor that affects people physically.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Analyze my stress levels during last week's important work presentation",
+        "type": "explicit",
+        "thinking": "High-stakes professional moments create unique stress patterns worth examining.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a frayed rope when sleep-deprived and overworked",
+        "type": "metaphorical",
+        "thinking": "The combination of exhaustion and pressure creates a fragile, worn-out state.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My hands get clammy during difficult conversations with my teenager",
+        "type": "implicit",
+        "thinking": "Parenting challenges often trigger physical stress responses that are worth noting.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during city driving vs highway driving",
+        "type": "explicit",
+        "thinking": "Different driving conditions affect stress levels differently. Let's analyze your last 10 trips of each.",
+        "numdays": 10,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My stomach drops when I hear certain notification sounds from my phone",
+        "type": "implicit",
+        "thinking": "Conditioned stress responses to digital cues are increasingly common and worth examining.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a overstretched elastic band during final exam weeks",
+        "type": "metaphorical",
+        "thinking": "Academic crunch periods create tension that threatens to snap.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How did my stress levels change after implementing the new morning routine?",
+        "type": "explicit",
+        "thinking": "Habit changes should theoretically reduce stress. Let's compare the week before and after.",
+        "numdays": 14,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My shoulders ache after long hours helping my kids with remote learning",
+        "type": "implicit",
+        "thinking": "Educational support roles create unique physical and mental stress combinations.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during planned social events vs spontaneous ones",
+        "type": "explicit",
+        "thinking": "Preparation affects social stress. Let's examine your last 5 of each type of gathering.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a candle burning at both ends during conference seasons",
+        "type": "metaphorical",
+        "thinking": "Professional networking marathons create unsustainable energy expenditure.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My breathing patterns change when discussing politics with certain relatives",
+        "type": "implicit",
+        "thinking": "Polarizing topics with close relations create measurable physiological stress.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Analyze my stress during the home renovation last month",
+        "type": "explicit",
+        "thinking": "Living through construction is notoriously stressful. Examining that 30-day period could reveal coping patterns.",
+        "numdays": 30,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a overloaded circuit breaker during product launch weeks",
+        "type": "metaphorical",
+        "thinking": "Work crunch periods threaten to short-circuit normal functioning.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My jaw tightens when I hear my alarm clock on Monday mornings",
+        "type": "implicit",
+        "thinking": "Weekend-to-workweek transitions create predictable stress responses worth tracking.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during yoga days vs non-yoga days",
+        "type": "explicit",
+        "thinking": "Mind-body practices should theoretically help. Let's compare 7 days with and without.",
+        "numdays": 7,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My skin gets sensitive when I'm behind on creative deadlines",
+        "type": "implicit",
+        "thinking": "Artistic pressure often manifests in unexpected physical ways.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "How stressed was I during the flight delay last vacation?",
+        "type": "explicit",
+        "thinking": "Travel disruptions test our stress management skills. That 8-hour window would be revealing.",
+        "numdays": 1,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a shaken soda can during custody exchange days",
+        "type": "metaphorical",
+        "thinking": "Co-parenting transitions create pressurized emotions that threaten to explode.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My posture collapses when reviewing monthly expenses",
+        "type": "implicit",
+        "thinking": "Financial stress often physically manifests as literal weight on the shoulders.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Compare my stress during podcast listening vs news listening days",
+        "type": "explicit",
+        "thinking": "Media consumption affects mood differently. Let's analyze your last 5 days of each.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a wind-up toy running down during endless paperwork days",
+        "type": "metaphorical",
+        "thinking": "Bureaucratic tasks drain energy in distinctive, mechanical ways.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My temples throb when reconciling differing parenting approaches",
+        "type": "implicit",
+        "thinking": "Co-parenting disagreements create unique stress signatures worth examining.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "Analyze my stress patterns during the last jury duty week",
+        "type": "explicit",
+        "thinking": "Civic responsibilities create unusual stress patterns worth documenting.",
+        "numdays": 5,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "I feel like a over-watered plant during periods of unwanted advice",
+        "type": "metaphorical",
+        "thinking": "Unsolicited input can create a sense of being drowned in good intentions.",
+        "numdays": null,
+        "function": "get_stress_data"
+    },
+    {
+        "query": "My breathing shallows when preparing difficult feedback for employees",
+        "type": "implicit",
+        "thinking": "Leadership responsibilities often conflict with our desire to be liked, creating stress.",
+        "numdays": null,
+        "function": "get_stress_data"
+    }
+]

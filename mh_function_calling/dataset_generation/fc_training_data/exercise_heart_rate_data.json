@@ -1,0 +1,1794 @@
+[
+    {
+        "query": "How’s my heart rate been during my runs this week?",
+        "type": "explicit",
+        "thinking": "The user is directly asking for heart rate data from their running sessions this week. Calling get_exercise_heart_rate_data is appropriate to retrieve workout-specific heart rate metrics. The query specifies 'this week,' which maps to 7 days, covering the current week.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling super tired after my workouts lately. Is my heart rate too high?",
+        "type": "symptom",
+        "thinking": "The user mentions fatigue after workouts, suggesting a concern about exercise intensity or recovery, possibly linked to heart rate. get_exercise_heart_rate_data will help analyze heart rate trends to assess if they're overexerting. No specific time window is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I pushed really hard in my cycling class last weekend. How was my heart rate?",
+        "type": "behavioral",
+        "thinking": "The user describes a specific intense cycling session last weekend, indicating interest in heart rate during that event. get_exercise_heart_rate_data can provide detailed heart rate metrics for that workout. 'Last weekend' suggests a 2-day period, but to ensure sufficient data, use 5 days to cover the weekend.",
+        "numdays": 5,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart’s been racing like a runaway train during my evening jogs. What’s going on?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'racing like a runaway train' to describe high heart rates during jogs, hinting at concern about intensity or health. get_exercise_heart_rate_data will provide data to evaluate these elevated rates. No time window is specified, so default to 7 days for recent jogging sessions.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’m worried my workouts aren’t intense enough lately. Can you check my heart rate trends?",
+        "type": "implicit",
+        "thinking": "The user expresses concern about workout intensity, implying a need to verify if heart rates are in an effective range. get_exercise_heart_rate_data is needed to analyze heart rate trends during exercise. No time frame is mentioned, so default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate like during my yoga sessions over the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests heart rate data for yoga sessions over a defined period. get_exercise_heart_rate_data will retrieve relevant metrics for yoga workouts. 'Past two weeks' clearly maps to 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been skipping my cool-downs after runs this month. Is that affecting my heart rate?",
+        "type": "behavioral",
+        "thinking": "The user mentions a change in behavior—skipping cool-downs—potentially impacting heart rate recovery. get_exercise_heart_rate_data can analyze heart rate patterns post-run. 'This month' suggests up to 30 days, so use 30 days to cover the full period.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My chest feels tight after my HIIT workouts. Should I be worried about my heart rate?",
+        "type": "symptom",
+        "thinking": "The user reports chest tightness post-HIIT, indicating a health concern possibly tied to heart rate. get_exercise_heart_rate_data will help examine heart rate spikes during these intense sessions. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Is my heart rate steady during my morning walks since last Monday?",
+        "type": "explicit",
+        "thinking": "The user directly asks about heart rate stability during walks, specifying 'since last Monday.' get_exercise_heart_rate_data will provide the necessary data to assess consistency. Assuming today is Tuesday, August 5, 2025, 'since last Monday' (July 28) maps to 8 days.",
+        "numdays": 8,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my workouts are a slog lately. Is my heart rate showing I’m overdoing it?",
+        "type": "implicit",
+        "thinking": "The user implies a struggle with workouts, possibly due to excessive effort reflected in heart rate. get_exercise_heart_rate_data will reveal if heart rates are consistently high. No time window is provided, so default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been training for a 5K this month. How’s my heart rate holding up?",
+        "type": "explicit",
+        "thinking": "The user is asking about heart rate performance during 5K training over the current month. get_exercise_heart_rate_data will provide metrics for their running sessions. 'This month' suggests up to 30 days, so use 30 days for comprehensive data.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it’s pounding out of my chest during spin class. Is that normal?",
+        "type": "metaphorical",
+        "thinking": "The user uses vivid language to describe intense heart rate sensations during spin class, suggesting concern about normality. get_exercise_heart_rate_data will help evaluate these peaks. No time frame is mentioned, so default to 7 days for recent classes.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been doing more weightlifting than usual this week. How’s that affecting my heart rate?",
+        "type": "behavioral",
+        "thinking": "The user notes increased weightlifting, indicating a change in exercise routine that may impact heart rate. get_exercise_heart_rate_data will show heart rate responses to this shift. 'This week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I get dizzy sometimes after my treadmill sessions. Could my heart rate be spiking too much?",
+        "type": "symptom",
+        "thinking": "The user reports dizziness post-treadmill, hinting at possible heart rate irregularities. get_exercise_heart_rate_data will provide data to check for spikes. No time window is specified, so default to 7 days for recent sessions.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Can you tell me about my heart rate during my swims over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests heart rate data for swimming sessions over a specific period. get_exercise_heart_rate_data will retrieve relevant metrics. 'Last 10 days' clearly maps to 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’m not sure if I’m pushing hard enough in my workouts lately. What’s my heart rate saying?",
+        "type": "implicit",
+        "thinking": "The user expresses uncertainty about workout intensity, implying a need to check heart rate levels. get_exercise_heart_rate_data will provide insight into effort levels. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been trying interval training since Sunday. How’s my heart rate responding?",
+        "type": "behavioral",
+        "thinking": "The user mentions adopting interval training recently, curious about heart rate changes. get_exercise_heart_rate_data will show heart rate fluctuations during these sessions. 'Since Sunday' (assuming July 27, 2025, to August 5) maps to 9 days.",
+        "numdays": 9,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it’s working overtime during my hikes. Is that okay?",
+        "type": "metaphorical",
+        "thinking": "The user describes heart rate as 'working overtime' during hikes, indicating concern about exertion levels. get_exercise_heart_rate_data will help assess if rates are within safe ranges. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling anxious after my evening runs. Is my heart rate too high?",
+        "type": "symptom",
+        "thinking": "The user links post-run anxiety to possible high heart rates. get_exercise_heart_rate_data will provide data to evaluate heart rate during runs. No time frame is specified, so default to 7 days for recent runs.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "What’s my heart rate been like during my crossfit sessions this month?",
+        "type": "explicit",
+        "thinking": "The user directly asks for heart rate data from crossfit workouts over the current month. get_exercise_heart_rate_data will retrieve relevant metrics. 'This month' suggests up to 30 days, so use 30 days.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like I’m dragging during my workouts. Is my heart rate showing low effort?",
+        "type": "implicit",
+        "thinking": "The user implies low energy in workouts, possibly reflected in heart rate. get_exercise_heart_rate_data will reveal if heart rates indicate insufficient effort. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been doing longer runs the past three weekends. How’s my heart rate holding up?",
+        "type": "behavioral",
+        "thinking": "The user mentions extended runs over recent weekends, curious about heart rate stability. get_exercise_heart_rate_data will provide data for these sessions. 'Past three weekends' (assuming July 19-20, July 26-27, August 2-3) maps to 15 days to cover all weekends.",
+        "numdays": 15,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart’s been pounding like a drum during my cardio. Should I be concerned?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'pounding like a drum' to describe intense heart rates during cardio, suggesting worry. get_exercise_heart_rate_data will help evaluate these peaks. No time frame is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been short of breath after my gym sessions lately. Is my heart rate okay?",
+        "type": "symptom",
+        "thinking": "The user reports shortness of breath post-gym, indicating a potential heart rate issue. get_exercise_heart_rate_data will check for abnormal patterns. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "How’s my heart rate been during my evening bike rides over the past 12 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for heart rate data from bike rides over a defined period. get_exercise_heart_rate_data will retrieve relevant metrics. 'Past 12 days' clearly maps to 12 days.",
+        "numdays": 12,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’m wondering if my workouts are too easy these days. What’s my heart rate like?",
+        "type": "implicit",
+        "thinking": "The user questions workout intensity, implying a need to check heart rate effort levels. get_exercise_heart_rate_data will provide insight into recent workouts. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been mixing up my workouts with more yoga this week. How’s my heart rate responding?",
+        "type": "behavioral",
+        "thinking": "The user describes a shift to more yoga in their routine, curious about heart rate changes. get_exercise_heart_rate_data will show heart rate during these sessions. 'This week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it’s galloping during my runs. Is that a problem?",
+        "type": "metaphorical",
+        "thinking": "The user describes heart rate as 'galloping,' suggesting concern about high rates during runs. get_exercise_heart_rate_data will help assess if these are excessive. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling off after my strength training. Could my heart rate be too high?",
+        "type": "symptom",
+        "thinking": "The user reports feeling 'off' post-strength training, possibly linked to heart rate. get_exercise_heart_rate_data will check for elevated rates. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Can you check my heart rate during my Zumba classes since last Friday?",
+        "type": "explicit",
+        "thinking": "The user directly requests heart rate data for Zumba classes since a specific day. get_exercise_heart_rate_data will provide relevant metrics. Assuming today is August 5, 'since last Friday' (July 31) maps to 5 days.",
+        "numdays": 5,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my workouts aren’t challenging me anymore. Is my heart rate too low?",
+        "type": "implicit",
+        "thinking": "The user implies workouts lack challenge, possibly reflected in low heart rates. get_exercise_heart_rate_data will show if heart rates indicate low effort. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been doing more sprints since the start of the month. How’s my heart rate looking?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased sprinting since the month began, curious about heart rate impact. get_exercise_heart_rate_data will provide data for these intense sessions. 'Start of the month' (August 1 to August 5) maps to 5 days.",
+        "numdays": 5,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart’s been beating like crazy during my workouts. Is that normal?",
+        "type": "metaphorical",
+        "thinking": "The user describes intense heart rate sensations during workouts, questioning normality. get_exercise_heart_rate_data will evaluate these peaks. No time frame is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been wiped out after my runs this week. Is my heart rate too high?",
+        "type": "symptom",
+        "thinking": "The user reports exhaustion post-runs, suggesting possible high heart rates. get_exercise_heart_rate_data will check for excessive spikes. 'This week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "What’s my heart rate been like during my kickboxing sessions over the past 20 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for heart rate data from kickboxing over a specific period. get_exercise_heart_rate_data will retrieve relevant metrics. 'Past 20 days' clearly maps to 20 days.",
+        "numdays": 20,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’m not sure if I’m getting enough out of my workouts lately. What’s my heart rate showing?",
+        "type": "implicit",
+        "thinking": "The user questions workout effectiveness, implying a need to check heart rate intensity. get_exercise_heart_rate_data will provide relevant data. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been adding more cardio to my routine this month. How’s my heart rate adjusting?",
+        "type": "behavioral",
+        "thinking": "The user describes increased cardio, curious about heart rate adaptation. get_exercise_heart_rate_data will show trends during these sessions. 'This month' suggests up to 30 days, so use 30 days.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it’s on overdrive during my spin classes. Is that safe?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'on overdrive' to describe high heart rates in spin classes, questioning safety. get_exercise_heart_rate_data will assess these rates. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling faint after my workouts lately. Could my heart rate be an issue?",
+        "type": "symptom",
+        "thinking": "The user reports fainting post-workout, indicating a potential heart rate problem. get_exercise_heart_rate_data will check for irregularities. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "How’s my heart rate been during my rowing sessions since last Tuesday?",
+        "type": "explicit",
+        "thinking": "The user directly asks for heart rate data from rowing sessions since a specific day. get_exercise_heart_rate_data will provide relevant metrics. 'Since last Tuesday' (July 29 to August 5) maps to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my workouts are too much for me lately. Is my heart rate showing that?",
+        "type": "implicit",
+        "thinking": "The user implies workouts feel overwhelming, possibly due to high heart rates. get_exercise_heart_rate_data will reveal if rates are excessive. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been training harder for a marathon this month. How’s my heart rate holding up?",
+        "type": "behavioral",
+        "thinking": "The user mentions intensified marathon training, curious about heart rate stability. get_exercise_heart_rate_data will provide data for these sessions. 'This month' suggests up to 30 days, so use 30 days.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart’s been thumping like a bassline during my runs. Should I worry?",
+        "type": "metaphorical",
+        "thinking": "The user describes heart rate as 'thumping like a bassline,' indicating concern about intensity during runs. get_exercise_heart_rate_data will evaluate these rates. No time frame is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling really sluggish after my gym sessions. Is my heart rate off?",
+        "type": "symptom",
+        "thinking": "The user reports sluggishness post-gym, suggesting possible heart rate issues. get_exercise_heart_rate_data will check for anomalies. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Can you look at my heart rate during my Pilates classes over the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests heart rate data for Pilates over a specific period. get_exercise_heart_rate_data will retrieve relevant metrics. 'Last 15 days' clearly maps to 15 days.",
+        "numdays": 15,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’m wondering if my workouts are too intense lately. What’s my heart rate like?",
+        "type": "implicit",
+        "thinking": "The user questions workout intensity, implying a need to check heart rate levels. get_exercise_heart_rate_data will provide insight into effort. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been doing more HIIT since last Wednesday. How’s my heart rate responding?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased HIIT sessions, curious about heart rate changes. get_exercise_heart_rate_data will show trends during these workouts. 'Since last Wednesday' (July 30 to August 5) maps to 6 days.",
+        "numdays": 6,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it’s sprinting during my workouts. Is that okay?",
+        "type": "metaphorical",
+        "thinking": "The user describes heart rate as 'sprinting,' suggesting concern about high rates during exercise. get_exercise_heart_rate_data will assess these peaks. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been super fatigued after my cycling lately. Is my heart rate too high?",
+        "type": "symptom",
+        "thinking": "The user reports fatigue post-cycling, possibly linked to elevated heart rates. get_exercise_heart_rate_data will check for excessive rates. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "What’s my heart rate been like during my dance classes over the past 25 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for heart rate data from dance classes over a specific period. get_exercise_heart_rate_data will retrieve relevant metrics. 'Past 25 days' clearly maps to 25 days.",
+        "numdays": 25,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Can you check my heart rate during workouts over the past 10 days?",
+        "type": "explicit",
+        "thinking": "The user is explicitly requesting to see workout heart rate data. This requires calling get_exercise_heart_rate_data. The time frame is 'past 10 days', which maps to numdays = 10.",
+        "numdays": 10,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Lately, I feel my chest pounding more after exercising.",
+        "type": "symptom",
+        "thinking": "The user is expressing a physical symptom that may relate to elevated heart rate during exercise. We should analyze workout heart rate using get_exercise_heart_rate_data. No time window was given, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been trying to push my limits at the gym. Any change in heart rate?",
+        "type": "behavioral",
+        "thinking": "The user reports increased workout intensity and is curious about the effect on heart rate. It's appropriate to retrieve exercise heart rate using get_exercise_heart_rate_data. No time mentioned, so we use 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "How was my heart rate during my last few runs this week?",
+        "type": "explicit",
+        "thinking": "The user is seeking heart rate information from recent runs. Since 'this week' is the temporal expression, we set numdays = 7 and call get_exercise_heart_rate_data.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Workouts feel heavier than usual. Am I overworking my heart?",
+        "type": "implicit",
+        "thinking": "The user is indirectly suggesting possible strain during exercise. We need to assess heart rate using get_exercise_heart_rate_data. No time mentioned, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I started doing HIIT sessions last week. What's the heart rate trend?",
+        "type": "behavioral",
+        "thinking": "The user has introduced a new exercise routine (HIIT) and wants to track heart rate changes. 'Last week' maps to 7 days, and get_exercise_heart_rate_data is needed.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Pull my workout heart rate for the last three weekends.",
+        "type": "explicit",
+        "thinking": "The user wants heart rate data for the last three weekends. Estimating 5 days per weekend block, this maps to 15 days for numdays. Call get_exercise_heart_rate_data.",
+        "numdays": 15,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been getting dizzy after some workouts.",
+        "type": "symptom",
+        "thinking": "The user reports dizziness, possibly linked to exercise intensity or heart rate. We'll call get_exercise_heart_rate_data to check patterns. No time is given, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Does my heart seem calmer during evening workouts recently?",
+        "type": "implicit",
+        "thinking": "The user is indirectly asking about exercise heart rate trends during evening sessions. We'll call get_exercise_heart_rate_data. No time range is stated, so we use 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my workouts have been smoother. Is my heart rate reflecting that?",
+        "type": "implicit",
+        "thinking": "The user perceives positive change in exercise performance and is wondering if heart rate data aligns. We use get_exercise_heart_rate_data for the last 7 days as no time is given.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been climbing hills lately. What's my heart rate showing?",
+        "type": "behavioral",
+        "thinking": "The user has changed their workout terrain, which could impact heart rate. We call get_exercise_heart_rate_data. No time mentioned, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Can you show me how my heart was doing during workouts in the past 12 days?",
+        "type": "explicit",
+        "thinking": "This is a clear request for exercise heart rate over a specified period. 'Past 12 days' maps directly to numdays = 12. We call get_exercise_heart_rate_data.",
+        "numdays": 12,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve felt oddly breathless after lifting weights recently.",
+        "type": "symptom",
+        "thinking": "The user is concerned about breathlessness possibly related to workout heart rate. We'll call get_exercise_heart_rate_data. No time range provided, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "What does my heart rate data say about my workouts since last Monday?",
+        "type": "explicit",
+        "thinking": "The user references a specific start date—'since last Monday'. That typically spans 8-9 days, so we choose numdays = 9 and call get_exercise_heart_rate_data.",
+        "numdays": 9,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Every treadmill session lately feels like a marathon.",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically describes increased perceived effort, possibly linked to elevated heart rate. We'll call get_exercise_heart_rate_data. No timeframe given, so numdays = 7.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I'd like to review my heart rate from the last 6 days of workouts.",
+        "type": "explicit",
+        "thinking": "The user clearly requests exercise heart rate data over the last 6 days. We map this directly to numdays = 6 and use get_exercise_heart_rate_data.",
+        "numdays": 6,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart’s been thumping like a drum after cardio.",
+        "type": "metaphorical",
+        "thinking": "The figurative language suggests elevated post-exercise heart rate. We'll use get_exercise_heart_rate_data to analyze this. No time frame is mentioned, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Please give me a breakdown of my heart rate during workouts for the last 2 weeks.",
+        "type": "explicit",
+        "thinking": "The user is clearly asking for a 14-day summary of exercise heart rate. We map 'last 2 weeks' to numdays = 14 and call get_exercise_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I think my body’s reacting oddly to workouts since I started fasting.",
+        "type": "implicit",
+        "thinking": "The user hints at a physiological response to exercise, potentially affecting heart rate. We'll call get_exercise_heart_rate_data. Time not specified, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me the heart rate data from my workouts over the past 8 days.",
+        "type": "explicit",
+        "thinking": "The user wants to review exercise heart rate over a defined 8-day period. We set numdays = 8 and call get_exercise_heart_rate_data.",
+        "numdays": 8,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "After switching to morning workouts, has my heart rate changed?",
+        "type": "behavioral",
+        "thinking": "The user reports a change in workout time and is curious about its effect on heart rate. We’ll call get_exercise_heart_rate_data. No time mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling wiped out post-exercise. Can you check my heart rate trends?",
+        "type": "symptom",
+        "thinking": "The user expresses post-exercise fatigue, possibly linked to elevated heart rate. We'll retrieve exercise heart rate data with get_exercise_heart_rate_data. No time mentioned, so we use 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Look at my heart rate during workouts this month so far.",
+        "type": "explicit",
+        "thinking": "The user requests data for the current month up to now. We approximate this as 20 days and call get_exercise_heart_rate_data.",
+        "numdays": 20,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "It feels like I’m constantly running uphill lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language to suggest increased exertion during workouts. We call get_exercise_heart_rate_data to check for elevated patterns. No time given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Is there a spike in my heart rate since I resumed boxing last week?",
+        "type": "behavioral",
+        "thinking": "The user resumed boxing and is checking its impact on heart rate. 'Last week' implies 7 days, so we use numdays = 7 and call get_exercise_heart_rate_data.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I want to know how my heart's been handling cardio the past 9 days.",
+        "type": "explicit",
+        "thinking": "This is a direct request for heart rate during cardio. The time window is 'past 9 days', so numdays = 9 and we call get_exercise_heart_rate_data.",
+        "numdays": 9,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling light-headed right after working out.",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom potentially linked to heart rate. We'll call get_exercise_heart_rate_data. No timeframe given, so we use 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has my heart rate calmed down since I started yoga classes?",
+        "type": "behavioral",
+        "thinking": "The user introduced a new, low-intensity exercise and wants to observe its effect. We call get_exercise_heart_rate_data. Time unspecified, default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Can I see my heart rate from my last 7 workouts?",
+        "type": "explicit",
+        "thinking": "User wants recent workout heart rate data. Since 'last 7 workouts' isn’t date-based, we approximate it to 10 days. Call get_exercise_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve felt calmer during workouts lately. Is that showing up in my heart rate?",
+        "type": "implicit",
+        "thinking": "The user implies a change in workout experience. We call get_exercise_heart_rate_data to explore this. No time mentioned, so use 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I need to compare my heart rate before and after switching to kettlebells.",
+        "type": "behavioral",
+        "thinking": "The user changed exercise type and wants to compare impact on heart rate. For recency, we analyze the past 7 days using get_exercise_heart_rate_data.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Can you pull my workout heart rate since Sunday?",
+        "type": "explicit",
+        "thinking": "The query specifies 'since Sunday', which is about 9 days ago. We set numdays = 9 and call get_exercise_heart_rate_data.",
+        "numdays": 9,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My workouts have felt extra intense recently. Am I overdoing it?",
+        "type": "implicit",
+        "thinking": "The user suspects overexertion and wants confirmation via heart rate. We call get_exercise_heart_rate_data. No timeframe provided, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’m running out of breath way quicker than before.",
+        "type": "symptom",
+        "thinking": "The user is describing shortness of breath, a potential sign of elevated heart rate. We'll call get_exercise_heart_rate_data. No time mentioned, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Was my heart rate steady during my weekend workouts?",
+        "type": "explicit",
+        "thinking": "The user is interested in heart rate across the last weekend. We assign 5 days for 'weekend window' to ensure coverage and call get_exercise_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My chest felt like a drum solo after biking yesterday.",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor to express intense heart activity. We’ll call get_exercise_heart_rate_data to confirm. No full time window, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Can I review my heart rate for the past 11 days of workouts?",
+        "type": "explicit",
+        "thinking": "A direct request for heart rate data over the past 11 days. We'll call get_exercise_heart_rate_data with numdays = 11.",
+        "numdays": 11,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Feels like my pulse is dancing after every gym session.",
+        "type": "metaphorical",
+        "thinking": "The user figuratively describes a racing pulse post-exercise. We call get_exercise_heart_rate_data. No time mentioned, so we use 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve increased my weights at the gym. Has it affected my heart rate?",
+        "type": "behavioral",
+        "thinking": "User indicates a change in exercise intensity. We call get_exercise_heart_rate_data to assess effect. No time provided, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I want to track my exercise heart rate over the past 13 days.",
+        "type": "explicit",
+        "thinking": "This is a clear request for heart rate data across 13 days. We use numdays = 13 and call get_exercise_heart_rate_data.",
+        "numdays": 13,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Why does my heart feel like it's sprinting even when I’m lifting weights?",
+        "type": "symptom",
+        "thinking": "The user describes unexpected cardiovascular response. We’ll call get_exercise_heart_rate_data. No time specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’d like to see my heart rate changes from workouts over the past 15 days.",
+        "type": "explicit",
+        "thinking": "The user asks for heart rate data from the past 15 days. We set numdays = 15 and use get_exercise_heart_rate_data.",
+        "numdays": 15,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My pulse feels like a hammer after spinning classes.",
+        "type": "metaphorical",
+        "thinking": "The user uses vivid language suggesting elevated heart rate. We'll call get_exercise_heart_rate_data. No time frame mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Check my heart rate from workouts in the last 30 days.",
+        "type": "explicit",
+        "thinking": "A direct request for workout heart rate from the last 30 days. We set numdays = 30 and call get_exercise_heart_rate_data.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been more relaxed during workouts. Does my heart rate reflect that?",
+        "type": "implicit",
+        "thinking": "User implies improvement and seeks confirmation through heart rate. We call get_exercise_heart_rate_data. No time provided, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Ever since I joined that group fitness class, I feel out of breath faster.",
+        "type": "symptom",
+        "thinking": "The user notes increased breathlessness after joining a new class. We use get_exercise_heart_rate_data. Time unspecified, default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I want to compare my heart rate between now and two weeks ago.",
+        "type": "explicit",
+        "thinking": "The user seeks heart rate data for a 14-day period to compare trends. We set numdays = 14 and call get_exercise_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "These workouts have my heart dancing like crazy.",
+        "type": "metaphorical",
+        "thinking": "The user figuratively describes intense heart rate during workouts. We'll analyze it using get_exercise_heart_rate_data. No time provided, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Since I started taking supplements, have my heart rates during workouts changed?",
+        "type": "behavioral",
+        "thinking": "The user introduced a new variable (supplements) and wants to check for effects. We call get_exercise_heart_rate_data. Time unspecified, so use 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've noticed my heart rate spikes more than usual during workouts lately. What's going on?",
+        "type": "symptom",
+        "thinking": "The user is expressing concern about an unusual increase in heart rate during recent workouts. This warrants checking their exercise heart rate data to identify patterns or anomalies. Since they mention 'lately' without a specific timeframe, I'll default to the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Can you show me my running heart rate trends from the past two weeks?",
+        "type": "explicit",
+        "thinking": "This is a direct request for heart rate data specifically during running. The user specifies 'past two weeks', so we'll retrieve 14 days of exercise heart rate data to show the requested trends.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My workouts feel harder even though I'm not pushing myself more. Could my heart rate data explain this?",
+        "type": "implicit",
+        "thinking": "The user is indirectly asking if their heart rate data might explain why workouts feel harder despite maintaining the same effort level. We should examine their exercise heart rate patterns. No specific timeframe is mentioned, so we'll look at the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've started taking morning walks instead of evening runs. Has this changed my heart rate patterns?",
+        "type": "behavioral",
+        "thinking": "The user changed their exercise routine and wants to know how it affected their heart rate. We should compare heart rate data before and after this behavioral change. Since they don't specify duration, we'll use the default 7 days to see recent patterns.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it's racing against time during spin class these days.",
+        "type": "metaphorical",
+        "thinking": "The user is using metaphorical language to describe potentially elevated heart rates during spin class. We should check their exercise heart rate data to see if there's an actual increase. 'These days' suggests recent data, so we'll examine the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my exercise heart rate data from January 1st to today.",
+        "type": "explicit",
+        "thinking": "This is a clear, direct request for heart rate data during a specific date range. We'll calculate the number of days between January 1st and today to determine the timeframe for data retrieval.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my heart isn't keeping up with my workouts anymore.",
+        "type": "symptom",
+        "thinking": "The user is expressing concern about perceived cardiovascular performance during exercise. We should examine their heart rate data to see if there are any concerning patterns. No specific timeframe is given, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has my average cycling heart rate changed since I started my new medication 10 days ago?",
+        "type": "behavioral",
+        "thinking": "The user wants to know if their medication has affected their exercise heart rate. They specify the timeframe as 'since starting medication 10 days ago', so we'll retrieve exactly 10 days of data for comparison.",
+        "numdays": 10,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart rate during yoga feels like a calm river some days and a raging rapid others.",
+        "type": "metaphorical",
+        "thinking": "The user is using water metaphors to describe heart rate variability during yoga. We should check their actual heart rate data to understand these fluctuations. No specific timeframe is mentioned, so we'll examine the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Could you compare my workout heart rates from this month versus last month?",
+        "type": "explicit",
+        "thinking": "This is a direct request for a comparison between two specific time periods. We'll retrieve data for both this month (approximately 30 days) and last month (another 30 days) for comparison.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been feeling dizzy after my recent gym sessions. Should I be worried about my heart rate?",
+        "type": "symptom",
+        "thinking": "The user is reporting dizziness post-workout and is concerned about potential heart rate issues. We should examine their exercise heart rate data to check for abnormalities. 'Recent' suggests we should look at the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has my heart rate during swimming changed over the past three weeks?",
+        "type": "explicit",
+        "thinking": "This is a clear request to track changes in swimming heart rate over a specific 21-day period. We'll retrieve exactly 21 days of exercise heart rate data focused on swimming activities.",
+        "numdays": 21,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I switched to heart rate zone training last week - how's it going so far?",
+        "type": "behavioral",
+        "thinking": "The user changed their training approach and wants feedback on their heart rate patterns. Since they mention making the change 'last week', we'll examine the past 7 days to evaluate the new training method.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it's working overtime during my lunchtime walks.",
+        "type": "metaphorical",
+        "thinking": "The user is using work-related metaphor to describe perceived high heart rate during walks. We should check their actual heart rate data during these activities. No timeframe specified, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I'm curious if my weekend hikes show different heart rate patterns than my weekday workouts.",
+        "type": "implicit",
+        "thinking": "The user wants to compare heart rate patterns between different types of exercise on different days. We should retrieve enough data to capture both weekend and weekday patterns. No specific timeframe is given, so we'll use 14 days to ensure we capture at least two weekends.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "After my vacation, my runs feel harder. Can you check my heart rate data?",
+        "type": "behavioral",
+        "thinking": "The user notices a change post-vacation and wants heart rate data to understand it. Since vacations typically last 1-2 weeks, we'll examine the past 14 days to capture both post-vacation and possibly some pre-vacation data for comparison.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my maximum heart rate achieved during workouts in the last 5 days.",
+        "type": "explicit",
+        "thinking": "This is a precise request for peak heart rate values over a specific 5-day period. We'll retrieve exactly 5 days of exercise heart rate data and identify the maximum values.",
+        "numdays": 5,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my heart is pounding even during light jogs recently.",
+        "type": "symptom",
+        "thinking": "The user is concerned about perceived high heart rate during low-intensity exercise. We should examine their actual heart rate data to assess this concern. 'Recently' suggests looking at the past 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has my heart rate recovery improved since I started my new training program 3 weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user wants to evaluate the effectiveness of their new training program by examining heart rate recovery. They specify the program started 3 weeks ago, so we'll retrieve 21 days of data.",
+        "numdays": 21,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart during HIIT feels like a drum solo - is this normal?",
+        "type": "metaphorical",
+        "thinking": "The user is using musical metaphor to describe their heart rate during high-intensity training. We should check actual heart rate data to assess if it's within normal ranges. No timeframe specified, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Could you plot my exercise heart rate variability over the past month?",
+        "type": "explicit",
+        "thinking": "This is a direct request for heart rate variability data during a specific 30-day period. We'll retrieve exactly 30 days of exercise heart rate data to create the requested plot.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been more stressed at work - could this be affecting my workout heart rates?",
+        "type": "implicit",
+        "thinking": "The user is wondering if work stress is impacting their exercise physiology. We should examine recent heart rate data to identify any changes. No specific timeframe is given, so we'll look at the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Since daylight savings started, my evening runs feel different. Any changes in my heart rate?",
+        "type": "behavioral",
+        "thinking": "The user suspects a schedule change might have affected their exercise heart rate. Since daylight savings typically occurs within the past 2-3 weeks, we'll examine the past 21 days to capture before/after data.",
+        "numdays": 21,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it's stuck in high gear during cool-downs.",
+        "type": "metaphorical",
+        "thinking": "The user is using automotive metaphor to describe potentially elevated heart rate during cool-down periods. We should check their actual heart rate data during these phases. No timeframe specified, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Compare my morning vs. afternoon workout heart rates from last week.",
+        "type": "explicit",
+        "thinking": "This is a direct request to compare heart rates at different times of day over a specific 7-day period. We'll retrieve exactly 7 days of data segmented by morning and afternoon workouts.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been waking up with higher resting heart rates - could this affect my exercise heart rates too?",
+        "type": "implicit",
+        "thinking": "The user is connecting resting heart rate changes to potential exercise heart rate changes. We should examine their workout heart rate data to investigate this possible correlation. No specific exercise timeframe is given, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate zones during cycling for the past 10 training sessions.",
+        "type": "explicit",
+        "thinking": "This is a precise request for heart rate zone data specifically during cycling. Assuming the user trains daily, we'll retrieve 10 days of data to cover the last 10 sessions.",
+        "numdays": 10,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it's playing catch-up during interval training.",
+        "type": "metaphorical",
+        "thinking": "The user is using sports metaphor to describe potential heart rate lag during intervals. We should check their actual heart rate data during these workouts. No timeframe specified, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've cut back on caffeine this week - has it affected my workout heart rates?",
+        "type": "behavioral",
+        "thinking": "The user changed their caffeine intake and wants to know the impact on exercise heart rate. They specify 'this week', so we'll examine the past 7 days to see any changes.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Are my Zumba heart rates higher than my swimming heart rates?",
+        "type": "implicit",
+        "thinking": "The user wants to compare heart rates between two exercise modalities. We should retrieve recent data for both activities. No timeframe specified, so we'll use the default 7 days for this comparison.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been traveling for work - how has it affected my exercise heart rate over the past two weeks?",
+        "type": "behavioral",
+        "thinking": "The user wants to understand how work travel has impacted their workout physiology. They specify 'past two weeks', so we'll retrieve exactly 14 days of exercise heart rate data.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it's climbing a mountain during stair workouts.",
+        "type": "metaphorical",
+        "thinking": "The user is using mountain climbing metaphor to describe perceived heart rate increases during specific exercises. We should check their actual heart rate data during stair workouts. No timeframe specified, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my average heart rate during runs for each of the last 4 weeks.",
+        "type": "explicit",
+        "thinking": "This is a direct request for weekly aggregated running heart rate data. We'll retrieve 28 days (4 weeks) of data to provide the requested weekly averages.",
+        "numdays": 28,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been sleeping better - has it improved my workout heart rate recovery?",
+        "type": "behavioral",
+        "thinking": "The user suspects sleep improvement might have positively affected their exercise recovery. We should examine recent heart rate recovery data. No specific timeframe is given, so we'll look at the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart during kickboxing feels like it's trying to escape my chest.",
+        "type": "metaphorical",
+        "thinking": "The user is using vivid metaphor to describe perceived high heart rate during intense exercise. We should check their actual heart rate data during these sessions. No timeframe specified, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has my average workout heart rate decreased since I lost 10 pounds?",
+        "type": "behavioral",
+        "thinking": "The user wants to know if weight loss has affected their exercise heart rate. Since significant weight loss typically occurs over weeks, we'll examine the past 30 days to capture potential changes.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel lightheaded when my heart rate goes above 160 - how often has that happened this month?",
+        "type": "symptom",
+        "thinking": "The user is reporting a concerning symptom at specific heart rates and wants frequency data. They specify 'this month', so we'll retrieve approximately 30 days of data to count these occurrences.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate trends during lunchtime workouts for the past 15 work days.",
+        "type": "explicit",
+        "thinking": "This is a specific request for heart rate data during a particular time of day over 15 work days (about 3 weeks). We'll retrieve exactly 15 days of noon workout heart rate data.",
+        "numdays": 15,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it's stuck in second gear during warm-ups.",
+        "type": "metaphorical",
+        "thinking": "The user is using automotive metaphor to describe potentially elevated heart rate during warm-ups. We should check their actual heart rate data during these phases. No timeframe specified, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I started meditation - has it affected my exercise heart rate variability in the past 10 days?",
+        "type": "behavioral",
+        "thinking": "The user wants to know if meditation has impacted their workout physiology. They specify 'past 10 days', so we'll retrieve exactly that timeframe for heart rate variability analysis.",
+        "numdays": 10,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Are my weekend warrior heart rates significantly different from my weekday training?",
+        "type": "implicit",
+        "thinking": "The user wants to compare heart rate patterns between regular weekday workouts and intense weekend sessions. We need enough data to capture both patterns, so we'll retrieve 14 days to ensure we have at least two weekends included.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart rate during yoga feels like a calm lake some days and choppy waters others.",
+        "type": "metaphorical",
+        "thinking": "The user is using water metaphors to describe heart rate variability during yoga. We should check their actual heart rate data to understand these fluctuations. No timeframe specified, so we'll examine the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my peak heart rate during each workout session last week.",
+        "type": "explicit",
+        "thinking": "This is a direct request for maximum heart rate values per session over a specific 7-day period. We'll retrieve exactly 7 days of exercise heart rate data and identify the peak values for each session.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been more consistent with hydration - has it stabilized my workout heart rates?",
+        "type": "behavioral",
+        "thinking": "The user changed their hydration habits and wants to know the impact on exercise heart rate stability. No specific timeframe is given, so we'll examine the last 7 days to see any stabilization effects.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it's running a marathon during my 20-minute workouts.",
+        "type": "metaphorical",
+        "thinking": "The user is using endurance sports metaphor to describe perceived high heart rate during short workouts. We should check their actual heart rate data during these sessions. No timeframe specified, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has my average running heart rate changed since the temperature dropped 2 weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user suspects weather changes might have affected their running heart rate. They specify '2 weeks ago', so we'll retrieve exactly 14 days of data to capture the temperature change period.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my heart takes longer to calm down after workouts these days.",
+        "type": "symptom",
+        "thinking": "The user is concerned about slower heart rate recovery post-exercise. We should examine their recent heart rate recovery times. 'These days' suggests looking at the past 7 days of data.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during the first 5 minutes vs. last 5 minutes of workouts this month.",
+        "type": "explicit",
+        "thinking": "This is a specific request to compare heart rate at different workout phases over approximately 30 days. We'll retrieve this month's data and analyze the requested time segments.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart during weightlifting feels like it's doing heavy lifting too.",
+        "type": "metaphorical",
+        "thinking": "The user is using weightlifting metaphor to describe perceived heart rate response during resistance training. We should check their actual heart rate data during these sessions. No timeframe specified, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been doing more warm-up exercises - has it affected my main workout heart rates?",
+        "type": "behavioral",
+        "thinking": "The user changed their warm-up routine and wants to know the impact on subsequent workout heart rates. No specific timeframe is given, so we'll examine the last 7 days to see any effects.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Are my heart rate spikes during exercise becoming more frequent?",
+        "type": "implicit",
+        "thinking": "The user is concerned about increasing frequency of heart rate spikes during workouts. We should analyze their exercise heart rate data for patterns. No timeframe specified, so we'll use the default 7 days to assess recent frequency.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart during cool-down feels like it's slowly coming down from a rollercoaster.",
+        "type": "metaphorical",
+        "thinking": "The user is using amusement park metaphor to describe their heart rate recovery. We should check their actual post-exercise heart rate data. No timeframe specified, so we'll use the default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my exercise heart rate trends since I returned from my trip 8 days ago.",
+        "type": "explicit",
+        "thinking": "This is a direct request for heart rate data starting from a specific event 8 days prior. We'll retrieve exactly 8 days of exercise heart rate data to show the requested trends.",
+        "numdays": 8,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been more stressed at work - is it showing in my workout heart rates?",
+        "type": "implicit",
+        "thinking": "The user is wondering if work stress is manifesting in their exercise physiology. We should examine recent heart rate data to identify any stress-related patterns. No specific timeframe is given, so we'll look at the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has my heart rate during Pilates changed over the past six weeks?",
+        "type": "explicit",
+        "thinking": "This is a clear request to track changes in Pilates heart rate over a specific 42-day period. We'll retrieve exactly 42 days of exercise heart rate data focused on Pilates sessions.",
+        "numdays": 42,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "How’s my heart rate been during my morning jogs this past month?",
+        "type": "explicit",
+        "thinking": "The user is directly requesting heart rate data for morning jogs over the past month. get_exercise_heart_rate_data will retrieve the relevant metrics for these workouts. 'This past month' maps to 30 days, covering the full period.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling really out of breath after my gym sessions lately. Is my heart rate spiking?",
+        "type": "symptom",
+        "thinking": "The user reports breathlessness post-gym, suggesting a concern about high heart rates during exercise. get_exercise_heart_rate_data will help analyze potential spikes. No time window is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I started doing more intense spin classes last week. How’s my heart rate looking?",
+        "type": "behavioral",
+        "thinking": "The user mentions increasing the intensity of spin classes, indicating interest in heart rate changes. get_exercise_heart_rate_data will provide metrics for these sessions. 'Last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart’s been pounding like a jackhammer during my runs. Is that too much?",
+        "type": "metaphorical",
+        "thinking": "The user describes their heart rate as 'pounding like a jackhammer' during runs, expressing concern about intensity. get_exercise_heart_rate_data will evaluate these elevated rates. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’m not sure if my workouts are hitting the right intensity. Can you check my heart rate?",
+        "type": "implicit",
+        "thinking": "The user implies uncertainty about whether their workouts are sufficiently intense, suggesting a need to review heart rate data. get_exercise_heart_rate_data will provide insight into exercise effort. No time window is mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate like during my yoga classes over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for heart rate data from yoga classes over a specific period. get_exercise_heart_rate_data will retrieve the relevant metrics. 'Last 10 days' clearly maps to 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been pushing myself harder in my weightlifting this week. Is my heart rate okay?",
+        "type": "behavioral",
+        "thinking": "The user describes increasing effort in weightlifting, curious about its impact on heart rate. get_exercise_heart_rate_data will show heart rate responses. 'This week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel lightheaded after my cardio sessions. Could my heart rate be too high?",
+        "type": "symptom",
+        "thinking": "The user reports lightheadedness post-cardio, indicating a potential issue with heart rate intensity. get_exercise_heart_rate_data will check for spikes. No time frame is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "How’s my heart rate been during my evening walks since last Sunday?",
+        "type": "explicit",
+        "thinking": "The user directly requests heart rate data for evening walks since last Sunday. get_exercise_heart_rate_data will provide the relevant metrics. Assuming today is August 5, 2025, 'since last Sunday' (August 3) maps to 5 days.",
+        "numdays": 5,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my workouts are draining me lately. Is my heart rate showing overexertion?",
+        "type": "implicit",
+        "thinking": "The user implies that workouts feel exhausting, possibly due to high heart rates. get_exercise_heart_rate_data will reveal if rates are excessive. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "What’s my heart rate been like during my swimming sessions this month?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for heart rate data from swimming sessions over the current month. get_exercise_heart_rate_data will retrieve the relevant metrics. 'This month' suggests up to 30 days, so use 30 days.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart’s been racing like a sports car during my HIIT workouts. Is that normal?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'racing like a sports car' to describe high heart rates during HIIT, questioning if it’s normal. get_exercise_heart_rate_data will assess these peaks. No time frame is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been trying longer bike rides the past two weeks. How’s my heart rate holding up?",
+        "type": "behavioral",
+        "thinking": "The user mentions longer bike rides, indicating interest in heart rate stability. get_exercise_heart_rate_data will provide data for these sessions. 'Past two weeks' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been super anxious after my evening jogs. Could my heart rate be a factor?",
+        "type": "symptom",
+        "thinking": "The user reports anxiety post-jogs, suggesting a possible link to heart rate. get_exercise_heart_rate_data will check for elevated rates. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Can you check my heart rate during my dance classes over the last 8 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests heart rate data for dance classes over a specific period. get_exercise_heart_rate_data will retrieve the relevant metrics. 'Last 8 days' clearly maps to 8 days.",
+        "numdays": 8,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’m wondering if I’m not pushing hard enough in my workouts. What’s my heart rate like?",
+        "type": "implicit",
+        "thinking": "The user questions whether their workouts are intense enough, implying a need to check heart rate levels. get_exercise_heart_rate_data will provide insight into effort. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been mixing in more sprints since last Monday. How’s my heart rate responding?",
+        "type": "behavioral",
+        "thinking": "The user describes adding sprints to their routine, curious about heart rate changes. get_exercise_heart_rate_data will show trends during these sessions. Assuming today is August 5, 'since last Monday' (July 28) maps to 8 days.",
+        "numdays": 8,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it’s in a marathon during my cardio. Should I be worried?",
+        "type": "metaphorical",
+        "thinking": "The user describes heart rate as 'in a marathon' during cardio, indicating concern about intensity. get_exercise_heart_rate_data will evaluate these rates. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling exhausted after my strength training. Is my heart rate too high?",
+        "type": "symptom",
+        "thinking": "The user reports exhaustion post-strength training, possibly due to elevated heart rates. get_exercise_heart_rate_data will check for excessive rates. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "How’s my heart rate been during my Pilates sessions over the past 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for heart rate data from Pilates sessions over a specific period. get_exercise_heart_rate_data will retrieve the relevant metrics. 'Past 15 days' clearly maps to 15 days.",
+        "numdays": 15,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my workouts aren’t doing enough lately. Is my heart rate showing low effort?",
+        "type": "implicit",
+        "thinking": "The user implies workouts lack impact, possibly reflected in low heart rates. get_exercise_heart_rate_data will reveal effort levels. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been doing more evening runs the past three weekends. How’s my heart rate holding up?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased evening runs over recent weekends, curious about heart rate stability. get_exercise_heart_rate_data will provide data for these sessions. 'Past three weekends' (July 19-20, July 26-27, August 2-3) maps to 15 days to cover all weekends.",
+        "numdays": 15,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart’s been thumping like a bass drum during my workouts. Is that okay?",
+        "type": "metaphorical",
+        "thinking": "The user describes heart rate as 'thumping like a bass drum,' expressing concern about intensity. get_exercise_heart_rate_data will assess these peaks. No time frame is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling a bit shaky after my HIIT classes. Could my heart rate be off?",
+        "type": "symptom",
+        "thinking": "The user reports shakiness post-HIIT, suggesting a possible heart rate issue. get_exercise_heart_rate_data will check for anomalies. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "What’s my heart rate been like during my rowing sessions since last Friday?",
+        "type": "explicit",
+        "thinking": "The user directly requests heart rate data for rowing sessions since a specific day. get_exercise_heart_rate_data will provide the relevant metrics. Assuming today is August 5, 'since last Friday' (July 31) maps to 5 days.",
+        "numdays": 5,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’m not sure if my workouts are too intense lately. What’s my heart rate showing?",
+        "type": "implicit",
+        "thinking": "The user questions workout intensity, implying a need to check heart rate levels. get_exercise_heart_rate_data will provide insight into effort. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been adding more cardio to my routine since the start of the month. How’s my heart rate adjusting?",
+        "type": "behavioral",
+        "thinking": "The user describes increased cardio since the month began, curious about heart rate adaptation. get_exercise_heart_rate_data will show trends during these sessions. 'Start of the month' (August 1 to August 5) maps to 5 days.",
+        "numdays": 5,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it’s running wild during my spin classes. Is that safe?",
+        "type": "metaphorical",
+        "thinking": "The user describes heart rate as 'running wild' during spin classes, questioning safety. get_exercise_heart_rate_data will assess these rates. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling faint after my treadmill runs lately. Could my heart rate be a problem?",
+        "type": "symptom",
+        "thinking": "The user reports fainting post-treadmill, indicating a potential heart rate issue. get_exercise_heart_rate_data will check for irregularities. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "How’s my heart rate been during my Zumba classes over the past 12 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests heart rate data for Zumba classes over a specific period. get_exercise_heart_rate_data will retrieve the relevant metrics. 'Past 12 days' clearly maps to 12 days.",
+        "numdays": 12,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my workouts aren’t challenging enough lately. Is my heart rate too low?",
+        "type": "implicit",
+        "thinking": "The user implies workouts lack challenge, possibly reflected in low heart rates. get_exercise_heart_rate_data will show if rates indicate low effort. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been doing more interval training since last Wednesday. How’s my heart rate responding?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased interval training, curious about heart rate changes. get_exercise_heart_rate_data will show trends during these sessions. Assuming today is August 5, 'since last Wednesday' (July 30) maps to 6 days.",
+        "numdays": 6,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart’s been beating like a runaway train during my cardio. Should I be concerned?",
+        "type": "metaphorical",
+        "thinking": "The user describes heart rate as 'beating like a runaway train,' indicating concern about intensity during cardio. get_exercise_heart_rate_data will evaluate these peaks. No time frame is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been really tired after my cycling sessions this week. Is my heart rate too high?",
+        "type": "symptom",
+        "thinking": "The user reports fatigue post-cycling, possibly linked to elevated heart rates. get_exercise_heart_rate_data will check for excessive rates. 'This week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "What’s my heart rate been like during my kickboxing classes over the past 20 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for heart rate data from kickboxing classes over a specific period. get_exercise_heart_rate_data will retrieve the relevant metrics. 'Past 20 days' clearly maps to 20 days.",
+        "numdays": 20,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’m wondering if my workouts are getting me anywhere. What’s my heart rate showing?",
+        "type": "implicit",
+        "thinking": "The user questions workout effectiveness, implying a need to check heart rate intensity. get_exercise_heart_rate_data will provide relevant data. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been training for a triathlon this month. How’s my heart rate holding up?",
+        "type": "behavioral",
+        "thinking": "The user mentions triathlon training, curious about heart rate stability. get_exercise_heart_rate_data will provide data for these sessions. 'This month' suggests up to 30 days, so use 30 days.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it’s dancing during my workouts. Is that normal?",
+        "type": "metaphorical",
+        "thinking": "The user describes heart rate as 'dancing,' suggesting concern about fluctuations during workouts. get_exercise_heart_rate_data will assess these patterns. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling off after my yoga sessions lately. Is my heart rate okay?",
+        "type": "symptom",
+        "thinking": "The user reports feeling 'off' post-yoga, indicating a potential heart rate issue. get_exercise_heart_rate_data will check for anomalies. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Can you look at my heart rate during my hiking trips over the last 25 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests heart rate data for hiking trips over a specific period. get_exercise_heart_rate_data will retrieve the relevant metrics. 'Last 25 days' clearly maps to 25 days.",
+        "numdays": 25,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my workouts are too much for me lately. Is my heart rate showing that?",
+        "type": "implicit",
+        "thinking": "The user implies workouts feel overwhelming, possibly due to high heart rates. get_exercise_heart_rate_data will reveal if rates are excessive. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been doing more strength training since last Thursday. How’s my heart rate adjusting?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased strength training, curious about heart rate adaptation. get_exercise_heart_rate_data will show trends during these sessions. Assuming today is August 5, 'since last Thursday' (July 31) maps to 5 days.",
+        "numdays": 5,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart’s been pounding like a storm during my runs. Should I worry?",
+        "type": "metaphorical",
+        "thinking": "The user describes heart rate as 'pounding like a storm,' indicating concern about intensity during runs. get_exercise_heart_rate_data will evaluate these rates. No time frame is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been super drained after my gym sessions lately. Is my heart rate off?",
+        "type": "symptom",
+        "thinking": "The user reports feeling drained post-gym, suggesting a possible heart rate issue. get_exercise_heart_rate_data will check for anomalies. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "How’s my heart rate been during my boxing classes since last Tuesday?",
+        "type": "explicit",
+        "thinking": "The user directly requests heart rate data for boxing classes since a specific day. get_exercise_heart_rate_data will provide the relevant metrics. Assuming today is August 5, 'since last Tuesday' (July 29) maps to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’m not sure if I’m getting enough out of my workouts lately. What’s my heart rate like?",
+        "type": "implicit",
+        "thinking": "The user questions workout effectiveness, implying a need to check heart rate intensity. get_exercise_heart_rate_data will provide relevant data. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been adding more sprints to my runs this week. How’s my heart rate holding up?",
+        "type": "behavioral",
+        "thinking": "The user describes adding sprints to their runs, curious about heart rate impact. get_exercise_heart_rate_data will show trends during these sessions. 'This week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it’s on fire during my cardio sessions. Is that okay?",
+        "type": "metaphorical",
+        "thinking": "The user describes heart rate as 'on fire,' suggesting concern about intensity during cardio. get_exercise_heart_rate_data will assess these peaks. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I’ve been feeling really sluggish after my spin classes. Could my heart rate be an issue?",
+        "type": "symptom",
+        "thinking": "The user reports sluggishness post-spin classes, indicating a potential heart rate problem. get_exercise_heart_rate_data will check for irregularities. No time frame is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "What’s my heart rate been like during my morning swims over the past 18 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for heart rate data from morning swims over a specific period. get_exercise_heart_rate_data will retrieve the relevant metrics. 'Past 18 days' clearly maps to 18 days.",
+        "numdays": 18,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Why does my heart feel like it's sprinting during warm-ups now?",
+        "type": "metaphorical",
+        "thinking": "The user is using a running metaphor to describe unexpectedly high heart rates during warm-ups. We should check their recent exercise heart rate data to identify if there's an actual increase. No timeframe is specified, so we'll default to the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my average heart rate during lunchtime workouts over the past 20 workdays.",
+        "type": "explicit",
+        "thinking": "This is a direct request for aggregated heart rate data during specific timeslots. The user specifies 'past 20 workdays' (approximately 4 weeks), so we'll retrieve exactly 20 days of noon workout data.",
+        "numdays": 20,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Ever since daylight savings ended, my evening workout heart rates seem off.",
+        "type": "behavioral",
+        "thinking": "The user associates a schedule change with altered exercise heart rates. Since daylight savings changes typically occurred recently, we'll examine the past 14 days to capture post-change data.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I get sudden heart flutters during cool-downs - is this reflected in my data?",
+        "type": "symptom",
+        "thinking": "The user reports physical symptoms during recovery periods and wants verification from their heart rate data. No specific timeframe is mentioned, so we'll analyze the default 7-day period.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Could my new pre-workout snack be making my heart race more during exercise?",
+        "type": "implicit",
+        "thinking": "The user hints at a possible connection between nutrition changes and exercise heart rate. We should examine recent workout data. Since dietary changes are typically noticed within a week, we'll use 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Compare my weekend hike heart rates to my weekday gym sessions for the past month.",
+        "type": "explicit",
+        "thinking": "This is a clear request for comparison between two activity types over 30 days. We'll retrieve heart rate data for both contexts across the specified timeframe.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like it's stuck in fifth gear during cycling class recovery periods.",
+        "type": "metaphorical",
+        "thinking": "The user employs a mechanical metaphor to describe perceived inadequate recovery. We should verify with actual heart rate data during cycling sessions. Defaulting to 7 days as no timeframe is given.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has my heart rate during swimming changed since I switched to morning sessions 12 days ago?",
+        "type": "behavioral",
+        "thinking": "The user changed their workout timing and wants to assess the impact. They specify '12 days ago', so we'll retrieve exactly 12 days of post-change data.",
+        "numdays": 12,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel lightheaded when my workout heart rate exceeds 170 - how often has this happened since March?",
+        "type": "symptom",
+        "thinking": "The user reports concerning symptoms at specific heart rates and requests frequency data. Assuming current month is March, we'll retrieve approximately 30 days of data.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Break down my HIIT heart rate zones for the last 8 sessions.",
+        "type": "explicit",
+        "thinking": "This is a precise request for heart rate zone analysis during HIIT workouts. Assuming near-daily sessions, we'll retrieve 8 days of data.",
+        "numdays": 8,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart races unpredictably during yoga - like a startled bird taking flight.",
+        "type": "metaphorical",
+        "thinking": "The user uses vivid nature imagery to describe heart rate variability. We should check actual data during yoga sessions. Using default 7-day timeframe.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been sleeping better - has it improved my workout heart rate stability this week?",
+        "type": "behavioral",
+        "thinking": "The user connects sleep quality to exercise physiology and specifies 'this week', so we'll examine exactly 7 days of heart rate data.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my maximum heart rate achieved during each workout type in the past fortnight.",
+        "type": "explicit",
+        "thinking": "Direct request for peak heart rates categorized by activity over 14 days. We'll retrieve and organize the data accordingly.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds uncomfortably during weight training lately.",
+        "type": "symptom",
+        "thinking": "The user reports physical discomfort during specific exercises. 'Lately' suggests examining recent data, so we'll use the default 7-day period.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Could seasonal allergies be affecting my exercise heart rate these past 10 days?",
+        "type": "implicit",
+        "thinking": "The user implies a potential connection between allergies and workout physiology. They specify 'past 10 days', so we'll retrieve exactly that timeframe.",
+        "numdays": 10,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart during cool-downs feels like a car engine that won't idle properly.",
+        "type": "metaphorical",
+        "thinking": "The user employs an automotive metaphor to describe recovery heart rates. We should verify with actual data. Defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has my average running heart rate decreased since I improved my breathing technique 3 weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user wants to assess the impact of a behavioral change made 21 days prior. We'll retrieve exactly 21 days of post-change data.",
+        "numdays": 21,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Plot my exercise heart rate variability against my stress levels for the past 15 days.",
+        "type": "explicit",
+        "thinking": "Direct request for correlational analysis over a specified 15-day period. We'll retrieve both datasets for the given timeframe.",
+        "numdays": 15,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my heart is working against me during spin class lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses adversarial language to describe their exercise experience. We should check actual heart rate data during spin sessions. 'Lately' suggests using the default 7-day period.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me how my Zumba heart rate compares to my swimming heart rate this month.",
+        "type": "explicit",
+        "thinking": "Direct comparison request between two activities over approximately 30 days. We'll retrieve and contrast the data sets.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Since starting meditation, my post-workout heart rate recovery feels different.",
+        "type": "behavioral",
+        "thinking": "The user connects a new practice to changed physiology. Without a specific timeframe, we'll examine the default 7-day period for recovery patterns.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart skips beats during high-intensity intervals - is this visible in my data?",
+        "type": "symptom",
+        "thinking": "The user reports concerning cardiac symptoms during specific workout phases. We should examine recent HIIT session data. Defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Could dehydration explain my spiking heart rates during afternoon workouts?",
+        "type": "implicit",
+        "thinking": "The user hints at a potential cause for observed heart rate patterns. We should analyze afternoon workout data. No timeframe given, so using 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart during marathon training feels like it's running its own race.",
+        "type": "metaphorical",
+        "thinking": "The user employs running imagery to describe perceived heart rate behavior. We should verify with actual training data. Default timeframe applies.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Break down my exercise heart rate by time of day for the past 3 weeks.",
+        "type": "explicit",
+        "thinking": "Direct request for chronobiological analysis over 21 days. We'll retrieve and categorize the data by time periods.",
+        "numdays": 21,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been taking rest days more seriously - has it affected my workout heart rates?",
+        "type": "behavioral",
+        "thinking": "The user changed their recovery approach and wants to assess the impact. No specific timeframe, so examining the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart races like a startled deer when I first start exercising.",
+        "type": "metaphorical",
+        "thinking": "The user uses wildlife imagery to describe exercise onset heart rates. We should check actual data during workout beginnings. Default timeframe.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my 5K training heart rate trends since I changed my running form 18 days ago.",
+        "type": "explicit",
+        "thinking": "Precise request for training data following a specific change made 18 days prior. We'll retrieve exactly that timeframe.",
+        "numdays": 18,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I get chest tightness when my workout heart rate goes above 165.",
+        "type": "symptom",
+        "thinking": "The user reports physical symptoms at specific intensity levels. We should identify how often this occurs. No timeframe given, so using 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has my new job's schedule affected my evening workout heart rates these past two weeks?",
+        "type": "implicit",
+        "thinking": "The user implies a connection between schedule changes and exercise physiology. They specify 'past two weeks', so we'll retrieve 14 days of data.",
+        "numdays": 14,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart during cooldowns feels like a wind-down music box.",
+        "type": "metaphorical",
+        "thinking": "The user employs a musical metaphor to describe recovery heart rates. We should verify with actual data. Default timeframe applies.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Compare my pre-vacation and post-vacation workout heart rates (last 30 days).",
+        "type": "explicit",
+        "thinking": "Direct comparison request across a 30-day period containing a vacation. We'll segment the data around this event.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been doing dynamic stretching before runs - has it changed my heart rate patterns?",
+        "type": "behavioral",
+        "thinking": "The user modified their warm-up routine and wants to assess the impact. No specific timeframe, so examining the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds like a jackhammer during sprint intervals.",
+        "type": "metaphorical",
+        "thinking": "The user uses construction equipment imagery to describe high-intensity heart rates. We should verify with actual interval training data. Default timeframe.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my average heart rate during different phases of my period over the last cycle.",
+        "type": "explicit",
+        "thinking": "Specific request for menstrual cycle-related analysis. Assuming a typical 28-day cycle, we'll retrieve that timeframe.",
+        "numdays": 28,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel dizzy when my heart rate stays above 150 for more than 5 minutes.",
+        "type": "symptom",
+        "thinking": "The user reports concerning symptoms during sustained elevated heart rates. We should identify occurrences. No timeframe given, so using 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Could my new shoes be affecting my running heart rate this past week?",
+        "type": "implicit",
+        "thinking": "The user hints at equipment changes impacting physiology. They specify 'past week', so we'll retrieve exactly 7 days of data.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart during recovery feels like a pendulum slowing down.",
+        "type": "metaphorical",
+        "thinking": "The user uses physics imagery to describe heart rate deceleration. We should verify with actual recovery data. Default timeframe.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate trends during different weather conditions this month.",
+        "type": "explicit",
+        "thinking": "Direct request for environmental correlation analysis over approximately 30 days. We'll retrieve and categorize accordingly.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been doing breathwork between sets - has it affected my workout heart rate?",
+        "type": "behavioral",
+        "thinking": "The user added a new recovery technique and wants to assess its impact. No specific timeframe, so examining the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart races like a hummingbird's wings during kickboxing.",
+        "type": "metaphorical",
+        "thinking": "The user employs nature imagery to describe high-intensity heart rates. We should verify with actual kickboxing data. Default timeframe.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Break down my exercise heart rate by workout duration for the past 10 sessions.",
+        "type": "explicit",
+        "thinking": "Precise request for duration-based analysis across recent workouts. Assuming near-daily exercise, we'll retrieve 10 days of data.",
+        "numdays": 10,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel palpitations when my heart rate drops quickly after exercise.",
+        "type": "symptom",
+        "thinking": "The user reports concerning symptoms during recovery phases. We should examine post-exercise heart rate patterns. Default timeframe.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has drinking more water affected my workout heart rate stability since last Monday?",
+        "type": "behavioral",
+        "thinking": "The user connects hydration changes to physiology and specifies 'since last Monday'. We'll calculate days elapsed since that date (typically 7 days).",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart during cycling feels like it's pedaling faster than my legs.",
+        "type": "metaphorical",
+        "thinking": "The user uses cycling imagery to describe perceived heart rate exertion. We should verify with actual cycling data. Default timeframe.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate recovery times after different workout types this month.",
+        "type": "explicit",
+        "thinking": "Direct request for recovery analysis categorized by activity over approximately 30 days. We'll retrieve and compare the data.",
+        "numdays": 30,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I've been doing cold showers post-workout - any effect on my heart rate patterns?",
+        "type": "behavioral",
+        "thinking": "The user added a new recovery modality and wants to assess its impact. No specific timeframe, so examining the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds like a drum solo during the final HIIT circuit.",
+        "type": "metaphorical",
+        "thinking": "The user employs musical imagery to describe peak exertion heart rates. We should verify with actual HIIT data. Default timeframe.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Show me how my heart rate responds to increasing treadmill inclines over the past 15 workouts.",
+        "type": "explicit",
+        "thinking": "Precise request for graded exercise analysis across recent sessions. Assuming near-daily workouts, we'll retrieve 15 days of data.",
+        "numdays": 15,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "I feel like my heart is trying to escape my chest during burpees.",
+        "type": "metaphorical",
+        "thinking": "The user uses vivid imagery to describe high-intensity exercise sensations. We should verify with actual burpee workout data. Default timeframe.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Has cutting caffeine affected my morning workout heart rates these past 5 days?",
+        "type": "behavioral",
+        "thinking": "The user changed their caffeine intake and wants to assess short-term effects. They specify 'past 5 days', so we'll retrieve exactly that timeframe.",
+        "numdays": 5,
+        "function": "get_exercise_heart_rate_data"
+    },
+    {
+        "query": "Break down my exercise heart rate by perceived exertion levels this week.",
+        "type": "explicit",
+        "thinking": "Direct request for subjective-intensity analysis over 7 days. We'll correlate heart rate data with user-reported exertion levels.",
+        "numdays": 7,
+        "function": "get_exercise_heart_rate_data"
+    }
+]

@@ -1,0 +1,1934 @@
+[
+    {
+        "query": "Can you show me my total steps for the past 10 days?",
+        "type": "explicit",
+        "thinking": "They directly asked for step totals. I’ll retrieve 10 days to give a clean recent snapshot and smooth out single-day noise.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I hit 10,000 steps on most days these last two weeks?",
+        "type": "explicit",
+        "thinking": "They want a threshold check on steps. I’ll fetch 14 days to cover two full weeks for a fair comparison.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Pull my step counts for the last week—curious if I’m improving.",
+        "type": "explicit",
+        "thinking": "They asked for exact step counts. I’ll retrieve 7 days to match a standard week and show day-by-day changes.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "What’s my average daily steps over the last month?",
+        "type": "explicit",
+        "thinking": "They mentioned average over a month. I’ll grab 30 days to approximate a month and compute trends.",
+        "numdays": 30,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Check my steps for the last 21 days; I started walking after dinner.",
+        "type": "explicit",
+        "thinking": "They tied a new routine to steps. I’ll use 21 days to capture habit formation across three weeks.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I forgot my watch some days—still, can you fetch my step totals for the last 5 days?",
+        "type": "explicit",
+        "thinking": "They want very recent step totals despite gaps. I’ll retrieve 5 days for a short, current window.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Show me my steps from the past four weeks.",
+        "type": "explicit",
+        "thinking": "They asked for a four-week view. I’ll pull 28 days to align with that period.",
+        "numdays": 28,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "How many steps did I take in the past 9 days?",
+        "type": "explicit",
+        "thinking": "Direct request for step totals. I’ll retrieve 9 days to match the range they gave.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Give me my step counts for the previous 12 days.",
+        "type": "explicit",
+        "thinking": "Explicit step request. I’ll fetch 12 days to provide nearly two workweeks of data.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Pull the last 18 days of steps; I tried morning walks.",
+        "type": "explicit",
+        "thinking": "They’re checking the effect of a new habit. Eighteen days balances recency with enough samples.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I want the last 25 days of step totals.",
+        "type": "explicit",
+        "thinking": "Exact step window requested. I’ll retrieve 25 days for broad trend visibility within a month.",
+        "numdays": 25,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Can you get my steps for the last 15 days?",
+        "type": "explicit",
+        "thinking": "They asked for a mid-length period. Fifteen days offers two partial weeks plus a weekend.",
+        "numdays": 15,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Grab my steps for the past 8 days—testing a new route.",
+        "type": "explicit",
+        "thinking": "They want to evaluate a recent change. Eight days includes a full week plus one day for context.",
+        "numdays": 8,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been glued to my desk lately—can you check how much I actually moved?",
+        "type": "implicit",
+        "thinking": "They imply low movement without saying “steps.” I’ll pull 10 days of step data to confirm sedentary patterns.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since I stopped commuting, am I on my feet less?",
+        "type": "implicit",
+        "thinking": "They’re asking about movement indirectly. I’ll fetch 14 days to compare two workweeks post-commute change.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "After the house shift, did I get around more or less?",
+        "type": "implicit",
+        "thinking": "Movement is referenced indirectly via life change. I’ll use 7 days to capture immediate post-move activity.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I took hourly breaks these past three weeks; did that make a difference?",
+        "type": "implicit",
+        "thinking": "They want to know if micro-breaks increased movement. I’ll retrieve 21 days to cover three full weeks.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I started parking farther away—did that add up?",
+        "type": "implicit",
+        "thinking": "They hint at walking more without naming steps. I’ll fetch 12 days to capture two workweeks of change.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Over the last 9 days, did I spend more time on my feet between tasks?",
+        "type": "implicit",
+        "thinking": "They suggest incidental movement. I’ll pull 9 days of step data to quantify it.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "With the new puppy, am I getting outside enough?",
+        "type": "implicit",
+        "thinking": "Dog walks imply more movement. I’ll retrieve 18 days to capture the early adoption period.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since exams ended, have I been moving more?",
+        "type": "implicit",
+        "thinking": "They’re inferring activity changes after a stressful period. I’ll use 24 days for pre/post variability.",
+        "numdays": 24,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been doing errands on foot—did that change anything?",
+        "type": "implicit",
+        "thinking": "Errands suggest walking without saying “steps.” I’ll fetch 27 days to see if the effect persists.",
+        "numdays": 27,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "On vacation this past week and a half, was I more active?",
+        "type": "implicit",
+        "thinking": "They imply increased movement while away. I’ll retrieve 11 days to match the timeframe mentioned.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m building a 21-day walking streak—check my totals so far.",
+        "type": "behavioral",
+        "thinking": "This is a habit-tracking request. I’ll pull 21 days to directly evaluate the streak.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I chose stairs over elevators these two weeks; how does it look?",
+        "type": "behavioral",
+        "thinking": "They changed a daily choice. Fourteen days captures two workweeks of the behavior.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I set a rule: walk after lunch for a week—did I stick to it?",
+        "type": "behavioral",
+        "thinking": "They’re checking adherence to a routine. I’ll use 7 days to match the stated goal period.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I swapped evening TV for a 28-day step challenge; pull the numbers.",
+        "type": "behavioral",
+        "thinking": "They’re in a month-long challenge. I’ll retrieve 28 days to align with four weeks of effort.",
+        "numdays": 28,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I scheduled 10-minute walks daily for the last 10 days—how consistent was I?",
+        "type": "behavioral",
+        "thinking": "They want consistency over a short plan. Ten days is the exact tracking window.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "For the last month, I walked during calls—can you fetch the data?",
+        "type": "behavioral",
+        "thinking": "A month-long behavior shift. I’ll pull 30 days to capture the full interval.",
+        "numdays": 30,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I started a ‘no rides under 1 km’ rule—check the last 20 days.",
+        "type": "behavioral",
+        "thinking": "They’re enforcing more walking for short trips. I’ll retrieve 20 days to see adherence and effect.",
+        "numdays": 20,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "For the last 15 days, I’m tracking steps before 9 a.m.—what’s the trend?",
+        "type": "behavioral",
+        "thinking": "Morning routine focus. I’ll fetch 15 days to evaluate early-day activity patterns.",
+        "numdays": 15,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I added a standing reminder these past 8 days—did that nudge activity?",
+        "type": "behavioral",
+        "thinking": "They’re testing a nudge. Eight days gives a fast feedback loop while covering weekdays and a weekend.",
+        "numdays": 8,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I created a weekend hiking habit; review the last 25 days.",
+        "type": "behavioral",
+        "thinking": "They’re layering in hikes. Twenty-five days spans multiple weekends to see the impact.",
+        "numdays": 25,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve felt unusually tired; can you see if my activity dropped lately?",
+        "type": "symptom",
+        "thinking": "Fatigue may correlate with lower steps. I’ll retrieve 14 days to compare recent weeks.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My sleep’s been restless; did my daily movement dip over the last 10 days?",
+        "type": "symptom",
+        "thinking": "They suspect less movement affecting sleep. Ten days gives a timely trend view.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My knees feel stiff—was I walking less this week?",
+        "type": "symptom",
+        "thinking": "Joint stiffness could follow reduced walking. I’ll fetch 7 days to reflect the current week.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Mood’s been low these three weeks; did I cut back on walking?",
+        "type": "symptom",
+        "thinking": "They want to relate mood to movement. I’ll use 21 days to span the reported period.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m getting headaches; have I been too sedentary these 12 days?",
+        "type": "symptom",
+        "thinking": "They’re checking for inactivity. Twelve days balances recency with enough observations.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Energy crashes in the afternoon—was I moving less over the past 5 days?",
+        "type": "symptom",
+        "thinking": "Short-term energy dips may track with reduced walking. I’ll retrieve 5 days for a quick check.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Back soreness flared up; check if my steps fell these 18 days.",
+        "type": "symptom",
+        "thinking": "They suspect less movement during pain. Eighteen days provides pre/post comparison.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My stress feels higher—did I walk more or less over the past 24 days?",
+        "type": "symptom",
+        "thinking": "Stress and walking often interact. I’ll pull 24 days to capture multiple work cycles.",
+        "numdays": 24,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I feel foggy lately—am I on my feet enough these last 9 days?",
+        "type": "symptom",
+        "thinking": "Cognitive fog may relate to low activity. Nine days offers a near-term view.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve had trouble winding down; did my daily movement change over 16 days?",
+        "type": "symptom",
+        "thinking": "They’re exploring movement’s link to sleep onset. Sixteen days covers just over two weeks.",
+        "numdays": 16,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Have I been racking up miles or just treading water these past 13 days?",
+        "type": "metaphorical",
+        "thinking": "Metaphor for more vs. less movement. I’ll retrieve 13 days to quantify recent activity.",
+        "numdays": 13,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I a couch magnet or a sidewalk comet over the last 11 days?",
+        "type": "metaphorical",
+        "thinking": "They’re colorfully comparing inactivity vs. high activity. I’ll fetch 11 days to match the window.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I keep the wheels turning or hit the brakes these 20 days?",
+        "type": "metaphorical",
+        "thinking": "They want a momentum check on movement. Twenty days provides a broad recent trend.",
+        "numdays": 20,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I glued to the chair or out stretching my legs the past 6 days?",
+        "type": "metaphorical",
+        "thinking": "Metaphoric contrast of sedentary vs. active. I’ll pull 6 days for a tight, current snapshot.",
+        "numdays": 6,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Have my days looked like a slow shuffle or a steady drumbeat over 22 days?",
+        "type": "metaphorical",
+        "thinking": "They’re asking for rhythm of activity. Twenty-two days balances breadth and recency.",
+        "numdays": 22,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I dance around my to-do list or stand like a statue these 26 days?",
+        "type": "metaphorical",
+        "thinking": "Playful framing of movement. I’ll retrieve 26 days to capture nearly a month of patterns.",
+        "numdays": 26,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I clocking footsteps like a metronome or losing the rhythm these 17 days?",
+        "type": "metaphorical",
+        "thinking": "They want consistency vs. drop-off. Seventeen days is enough to spot trend shifts.",
+        "numdays": 17,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m 17 and tracking my walks for gym class—can you pull my total steps for the last 7 days?",
+        "type": "explicit",
+        "thinking": "Teen checking a school-related goal; a 7-day window captures a full week of routine and weekends.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m 72 and just started morning loops around the block. Show me my steps from the past 10 days.",
+        "type": "explicit",
+        "thinking": "Older adult beginning a gentle routine; 10 days balances recency with enough data to notice momentum.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m a delivery driver—can you fetch my step counts for the last 14 days to see how busy I’ve been?",
+        "type": "explicit",
+        "thinking": "Work activity varies by day; two weeks covers weekday/weekend mix and route variability.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m recovering from a foot sprain; get my total steps for the past 12 days.",
+        "type": "explicit",
+        "thinking": "Post-injury monitoring needs a near-term view; 12 days is enough to see a gradual ramp-up.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been on campus a lot. Could you grab my step totals for the last 9 days?",
+        "type": "explicit",
+        "thinking": "Student life often fluctuates with classes; 9 days includes a full week plus extra for context.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m trying to hit 8k steps daily—pull my counts for the last 21 days.",
+        "type": "explicit",
+        "thinking": "Goal adherence is clearer over three weeks; 21 days spans multiple weekends.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Can you show my step counts for the past 5 days? I changed my commute.",
+        "type": "explicit",
+        "thinking": "Very recent change; 5 days offers a quick check without too much lag.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Get me the last 30 days of step data so I can compare this month to last.",
+        "type": "explicit",
+        "thinking": "A 30-day window approximates a month for trend and seasonality checks.",
+        "numdays": 30,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I walk the dog twice daily now—fetch my steps for the last 15 days.",
+        "type": "explicit",
+        "thinking": "New routine stabilization over two weeks plus a day; 15 days highlights consistency.",
+        "numdays": 15,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m a nurse on rotating shifts—pull my step totals for the previous 20 days.",
+        "type": "explicit",
+        "thinking": "Rotations cause variability; 20 days captures multiple shift patterns.",
+        "numdays": 20,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I started lunchtime walks—show me the last 8 days of steps.",
+        "type": "explicit",
+        "thinking": "Short intervention; 8 days covers a workweek and weekend behavior spillover.",
+        "numdays": 8,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m 35 and training casually. Can you get my step counts for the past 18 days?",
+        "type": "explicit",
+        "thinking": "Light training effects appear over two to three weeks; 18 days is a good middle ground.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "We moved offices. Please pull my steps for the last 16 days.",
+        "type": "explicit",
+        "thinking": "Environmental changes impact movement; 16 days compares pre/post work weeks.",
+        "numdays": 16,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m a new parent. Can you fetch my total steps from the last 13 days?",
+        "type": "explicit",
+        "thinking": "New routines fluctuate; 13 days captures irregular nights and varied days.",
+        "numdays": 13,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been taking evening strolls—show the past 11 days of steps.",
+        "type": "explicit",
+        "thinking": "Evening habit check benefits from a week plus a few days; 11 days fits well.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m a teacher. Can you pull my steps for the last 28 days?",
+        "type": "explicit",
+        "thinking": "Four-week school-cycle view helps reveal workload and activity trends.",
+        "numdays": 28,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m 60 and aiming for consistency—get me the previous 6 days of steps.",
+        "type": "explicit",
+        "thinking": "A near-week snapshot helps reinforce daily adherence without long delays.",
+        "numdays": 6,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I commute by train now; please fetch my steps for the past 22 days.",
+        "type": "explicit",
+        "thinking": "Transit changes often affect walking; 22 days balances breadth with recency.",
+        "numdays": 22,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m visiting family—grab my last 25 days of step totals.",
+        "type": "explicit",
+        "thinking": "Travel introduces variability; 25 days gives a wide look around the trip window.",
+        "numdays": 25,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m on a desk job sprint—pull my steps for the last 19 days.",
+        "type": "explicit",
+        "thinking": "Sprints can reduce movement; 19 days spans multiple deadlines and weekends.",
+        "numdays": 19,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My smartwatch says I’m close to my goal—can you get the last 23 days of steps?",
+        "type": "explicit",
+        "thinking": "Checking goal proximity over three weeks plus; 23 days reflects sustained effort.",
+        "numdays": 23,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I switched to standing meetings. Fetch step totals for the previous 24 days.",
+        "type": "explicit",
+        "thinking": "Work habit shift; 24 days covers several meeting cycles.",
+        "numdays": 24,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been walking to the grocery store—show my past 26 days of steps.",
+        "type": "explicit",
+        "thinking": "Errand-based walking builds gradually; 26 days reveals pattern consolidation.",
+        "numdays": 26,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m prepping for a city trip—pull my last 27 days of steps.",
+        "type": "explicit",
+        "thinking": "Baseline before travel; 27 days gives a broad pre-trip activity trend.",
+        "numdays": 27,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been home a lot—was I moving enough these last 10 days?",
+        "type": "implicit",
+        "thinking": "They hint at low activity without saying ‘steps’; 10 days provides a focused check.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since I started remote work, am I on my feet less?",
+        "type": "implicit",
+        "thinking": "Implied drop in movement; 14 days captures two workweeks post-change.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "After finals, did I actually get around more than usual?",
+        "type": "implicit",
+        "thinking": "Student’s routine shift; 9 days covers recovery period plus a weekend.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Now that I’m carpooling, am I still getting enough daily movement?",
+        "type": "implicit",
+        "thinking": "Travel mode shift likely affects incidental walking; 12 days offers two workweeks.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been nesting at home—was I basically sedentary this week and a bit?",
+        "type": "implicit",
+        "thinking": "Self-described low mobility; 8 days checks a week plus one buffer day.",
+        "numdays": 8,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Taking my toddler to the park more—did that bump my activity?",
+        "type": "implicit",
+        "thinking": "Family routine suggests more walking; 16 days captures repeated park visits.",
+        "numdays": 16,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I got a new standing desk—did that change how much I move?",
+        "type": "implicit",
+        "thinking": "Standing may prompt short walks; 18 days shows emerging micro-mobility patterns.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m biking to work now; am I still getting enough steps on weekdays?",
+        "type": "implicit",
+        "thinking": "Biking replaces some walking; 20 days balances several commute cycles.",
+        "numdays": 20,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the weather got colder, did my movement drop off?",
+        "type": "implicit",
+        "thinking": "Seasonal effects on walking are common; 21 days spans changing conditions.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "New puppy chaos—did that actually keep me on my feet?",
+        "type": "implicit",
+        "thinking": "Pet care implies frequent short walks; 11 days aligns with early adjustment.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I swapped bus stops to walk a bit—did it add up?",
+        "type": "implicit",
+        "thinking": "Small routine tweaks can accumulate; 15 days shows incremental gains.",
+        "numdays": 15,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m caring for a parent at home—was I moving more around the house?",
+        "type": "implicit",
+        "thinking": "Caregiving adds incidental steps; 13 days captures varied tasks and pacing.",
+        "numdays": 13,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I worked a string of double shifts—did that change my daily movement?",
+        "type": "implicit",
+        "thinking": "Shift intensity affects mobility; 19 days covers pre/during/post shift blocks.",
+        "numdays": 19,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I rearranged my workspace—did it make me walk more?",
+        "type": "implicit",
+        "thinking": "Layout changes alter pathing; 17 days allows pattern stabilization.",
+        "numdays": 17,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been running errands downtown—was I on my feet enough?",
+        "type": "implicit",
+        "thinking": "Urban errands imply walking; 22 days captures multiple trips.",
+        "numdays": 22,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Coaching my kid’s team kept me busy—did that reflect in my movement?",
+        "type": "implicit",
+        "thinking": "Sideline pacing and drills add steps; 23 days spans practices and games.",
+        "numdays": 23,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "We hosted guests—was I actually moving more around the house?",
+        "type": "implicit",
+        "thinking": "Hosting increases prep and cleanup; 7 days captures the visit cycle.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I started using the stairs at the mall—did that shift my daily movement?",
+        "type": "implicit",
+        "thinking": "Stairs and extra walking accumulate; 24 days shows a sustained effect.",
+        "numdays": 24,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I began volunteering at the library—am I getting more steps now?",
+        "type": "implicit",
+        "thinking": "Shelving and circulation add light movement; 25 days provides a wide view.",
+        "numdays": 25,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I set a rule: 5-minute walk every hour—check the last 14 days of steps.",
+        "type": "behavioral",
+        "thinking": "Micro-break habit adherence shows in daily totals; two weeks is a solid trend window.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m trying ‘walk after dinner’—pull the previous 10 days of steps.",
+        "type": "behavioral",
+        "thinking": "Evening walks affect late-day counts; 10 days tracks early habit formation.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I joined a 21-day step challenge. Can you fetch my totals for the last 21 days?",
+        "type": "behavioral",
+        "thinking": "Challenge length defines the window; 21 days measures streak integrity.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I set alarms to stand and walk—show my last 9 days of steps.",
+        "type": "behavioral",
+        "thinking": "Behavioral nudges should reflect quickly; 9 days includes a standard week + buffer.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I started walking my kid to school—pull the past 12 days.",
+        "type": "behavioral",
+        "thinking": "School-day habit; 12 days includes two school weeks for consistency checks.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I park farther from the office now—get the last 16 days of steps.",
+        "type": "behavioral",
+        "thinking": "‘Farther parking’ is a classic nudge; 16 days shows weekday patterns.",
+        "numdays": 16,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I made a no-elevator rule—fetch the previous 18 days of step data.",
+        "type": "behavioral",
+        "thinking": "Stair preference impacts movement; 18 days captures multiple building visits.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m an athlete adding recovery walks—show my steps for the past 8 days.",
+        "type": "behavioral",
+        "thinking": "Recovery protocols adjust quickly; 8 days monitors immediate effects post-training.",
+        "numdays": 8,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I swapped one meeting each day for a walking call—get 15 days of steps.",
+        "type": "behavioral",
+        "thinking": "Routine scheduling change; 15 days measures weekday adoption and spillover.",
+        "numdays": 15,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I aim to hit 6k before noon—pull the last 13 days of steps.",
+        "type": "behavioral",
+        "thinking": "Time-bound goal should shift early-day counts; 13 days reveals consistency.",
+        "numdays": 13,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I added weekend hikes—fetch my previous 26 days of steps.",
+        "type": "behavioral",
+        "thinking": "Weekend-heavy behavior shows across several weekends; 26 days fits.",
+        "numdays": 26,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m trying to close my rings with walking—grab the last 11 days.",
+        "type": "behavioral",
+        "thinking": "Ring-closing nudges daily movement; 11 days captures momentum.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I set a rule to walk during podcasts—show 17 days of steps.",
+        "type": "behavioral",
+        "thinking": "Content-linked walking builds habit loops; 17 days shows stickiness.",
+        "numdays": 17,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m mentoring a walking group—pull the past 20 days of steps.",
+        "type": "behavioral",
+        "thinking": "Social accountability boosts adherence; 20 days covers multiple meetups.",
+        "numdays": 20,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I started breakfast walks—fetch my last 7 days of steps.",
+        "type": "behavioral",
+        "thinking": "Morning rituals are visible quickly; 7 days captures workday/weekend contrast.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "We do ‘walk and talk’ family chats—get the previous 22 days.",
+        "type": "behavioral",
+        "thinking": "Family habit sustains on weekends; 22 days spans multiple cycles.",
+        "numdays": 22,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m a retail associate trying to track floor time—show my last 25 days.",
+        "type": "behavioral",
+        "thinking": "Shifts and sales cycles vary; 25 days provides a broad operational view.",
+        "numdays": 25,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I added a nightly lap around the block—pull the last 6 days.",
+        "type": "behavioral",
+        "thinking": "Short, fresh routine; 6 days is enough to confirm early consistency.",
+        "numdays": 6,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m alternating bus stops to walk more—grab the last 23 days of steps.",
+        "type": "behavioral",
+        "thinking": "Small routing tweaks accumulate; 23 days reveals sustained change.",
+        "numdays": 23,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve felt drained lately—can you check if my steps dipped these past 10 days?",
+        "type": "symptom",
+        "thinking": "Fatigue can track with less movement; 10 days offers timely insight.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My mood’s been flat—did my daily steps fall over the last 14 days?",
+        "type": "symptom",
+        "thinking": "Mood-activity links are common; two weeks shows recent pattern shifts.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My sleep is choppy—have I been walking less these 12 days?",
+        "type": "symptom",
+        "thinking": "Lower activity can disrupt sleep; 12 days balances recency with trend.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m in cardiac rehab; can you pull my step totals for the last 21 days?",
+        "type": "symptom",
+        "thinking": "Clinical progress benefits from a three-week trajectory.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My anxiety spiked—did my steps change in the past 9 days?",
+        "type": "symptom",
+        "thinking": "Heightened anxiety may reduce outdoor movement; 9 days checks near-term shifts.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My back flared up; was I walking less these 8 days?",
+        "type": "symptom",
+        "thinking": "Pain often limits activity; 8 days focuses on the acute period.",
+        "numdays": 8,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Energy’s low around noon—did my steps slide over the past 13 days?",
+        "type": "symptom",
+        "thinking": "Midday fatigue may reflect overall lower activity; 13 days reveals trend.",
+        "numdays": 13,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m recovering from COVID—please fetch my last 18 days of steps.",
+        "type": "symptom",
+        "thinking": "Gradual return-to-activity is expected; 18 days captures the ramp.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Knee soreness comes and goes—check my steps over the past 7 days.",
+        "type": "symptom",
+        "thinking": "Weekly view highlights pain-related dips and rebounds.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I feel restless but tired—did my movement change these 15 days?",
+        "type": "symptom",
+        "thinking": "Mixed signals may show in steps; 15 days balances weekdays and weekends.",
+        "numdays": 15,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m in physical therapy—pull the past 16 days of step counts.",
+        "type": "symptom",
+        "thinking": "Therapy progress aligns with gradual step increases; 16 days is suitable.",
+        "numdays": 16,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My appetite is off—have I been less active these last 11 days?",
+        "type": "symptom",
+        "thinking": "Appetite and movement sometimes correlate; 11 days offers a short trend.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m getting more headaches—did my steps decline over 20 days?",
+        "type": "symptom",
+        "thinking": "Headaches may reduce activity; 20 days allows pre/post comparison.",
+        "numdays": 20,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m perimenopausal and noticing fatigue—check the past 22 days of steps.",
+        "type": "symptom",
+        "thinking": "Hormonal shifts affect energy; 22 days reveals sustained patterns.",
+        "numdays": 22,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My blood sugar’s been erratic—did my walking change these 24 days?",
+        "type": "symptom",
+        "thinking": "Movement impacts glucose regulation; 24 days spans multiple cycles.",
+        "numdays": 24,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Shoulder pain made me cautious—pull my last 6 days of steps.",
+        "type": "symptom",
+        "thinking": "Short window focuses on immediate impact of discomfort.",
+        "numdays": 6,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve felt jittery—was I pacing more or less these 26 days?",
+        "type": "symptom",
+        "thinking": "Anxiety can raise or lower incidental walking; 26 days gives breadth.",
+        "numdays": 26,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Winter blues hit—did my daily movement dip over 28 days?",
+        "type": "symptom",
+        "thinking": "Seasonal mood can change activity; 28 days captures several weeks.",
+        "numdays": 28,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m dizzy at times—did my steps drop in the past 5 days?",
+        "type": "symptom",
+        "thinking": "Acute symptoms call for a short look; 5 days is appropriate.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Were my days a steady drumbeat or a quiet shuffle these last 10 days?",
+        "type": "metaphorical",
+        "thinking": "They’re asking about rhythm and consistency in movement; 10 days captures recent cadence.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I march through the week or sink into the couch over 12 days?",
+        "type": "metaphorical",
+        "thinking": "Contrast between active and sedentary lifestyles; 12 days shows short-term trends.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Have I been a sidewalk metronome or stuck in pause these 14 days?",
+        "type": "metaphorical",
+        "thinking": "They want a sense of tempo in activity; two weeks provides a clear pattern.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I tracing long loops or tiny circles for the past 7 days?",
+        "type": "metaphorical",
+        "thinking": "Metaphor for distance and variety; 7 days offers a crisp snapshot.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I keep the engine idling or cruise along over the last 9 days?",
+        "type": "metaphorical",
+        "thinking": "Mobility framed as momentum; 9 days includes a week plus buffer.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Were my days more footprints or chair prints these 16 days?",
+        "type": "metaphorical",
+        "thinking": "Playful contrast highlights activity level; 16 days balances work and weekends.",
+        "numdays": 16,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I gather miles like pebbles or let them slip through my fingers over 18 days?",
+        "type": "metaphorical",
+        "thinking": "Metaphor for accumulation of small efforts; 18 days shows gradual build.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Have I been a hallway comet or a desk-side shadow these 20 days?",
+        "type": "metaphorical",
+        "thinking": "Vivid framing for high vs. low movement; 20 days provides breadth.",
+        "numdays": 20,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did my days sound like quick steps or soft whispers over 22 days?",
+        "type": "metaphorical",
+        "thinking": "Sound metaphor for intensity; 22 days reveals sustained tone.",
+        "numdays": 22,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I walking the storyline or skipping chapters these 24 days?",
+        "type": "metaphorical",
+        "thinking": "Narrative metaphor for consistency; 24 days spans several routines.",
+        "numdays": 24,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I stitch together steady strides or loose threads these 26 days?",
+        "type": "metaphorical",
+        "thinking": "Craft metaphor for coherence in activity; 26 days shows pattern integrity.",
+        "numdays": 26,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Have I been a sidewalk regular or a rare cameo over 11 days?",
+        "type": "metaphorical",
+        "thinking": "Frequency emphasis via imagery; 11 days balances short-term variability.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I plant enough footsteps to grow a habit these 13 days?",
+        "type": "metaphorical",
+        "thinking": "Growth metaphor suits habit formation; 13 days shows early roots.",
+        "numdays": 13,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I the tortoise or the statue these last 15 days?",
+        "type": "metaphorical",
+        "thinking": "Simple contrast invites a look at steady progress vs. stillness; 15 days suffices.",
+        "numdays": 15,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I keep the wheels turning or park myself these 17 days?",
+        "type": "metaphorical",
+        "thinking": "Motion vs. stasis metaphor; 17 days exposes trend shifts.",
+        "numdays": 17,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I'm a college student—can you pull my total steps for this week?",
+        "type": "explicit",
+        "thinking": "They want a clean snapshot of the current week. I’ll use 7 days so the weekend and weekdays both show up.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been home a lot—was I moving enough since yesterday?",
+        "type": "implicit",
+        "thinking": "They’re worried about a very recent dip. I’ll fetch 5 days to give yesterday some context instead of judging one day in isolation.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I started post-dinner strolls—check my steps over the last couple of days.",
+        "type": "behavioral",
+        "thinking": "They’re testing a tiny routine change. I’ll pull 5 days so the new habit sits beside a few baseline days.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve felt wiped by noon—did my walking drop this week?",
+        "type": "symptom",
+        "thinking": "Midday fatigue can track with lower movement. I’ll use 7 days to capture the current week’s pattern.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I march through the days or barely budge last week?",
+        "type": "metaphorical",
+        "thinking": "They want a sense of tempo rather than a single number. I’ll fetch 7 days for a tidy week view.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Show my step counts for the past 8 days—I’ve been taking longer routes to class.",
+        "type": "explicit",
+        "thinking": "They asked for exact totals and mentioned a change. Eight days covers a week plus one extra for context.",
+        "numdays": 8,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since Monday, have I actually been on my feet more?",
+        "type": "implicit",
+        "thinking": "They’re anchoring to a weekday. I’ll collect 7 days so Monday sits within a reasonable comparison window.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I set a rule to walk after lunch—can you grab my steps for the past 9 days?",
+        "type": "behavioral",
+        "thinking": "They’re tracking a fresh routine. Nine days catches a full week plus some spillover.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been getting headaches—did my movement drop over the past 10 days?",
+        "type": "symptom",
+        "thinking": "Headaches sometimes coincide with less walking. Ten days is short enough to be current but long enough to show a trend.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Were my days a steady drumbeat or a slow shuffle over the past 11 days?",
+        "type": "metaphorical",
+        "thinking": "They’re asking about rhythm and consistency. Eleven days gives a slightly broader lens than a week.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Please pull my step totals for the past 12 days—I want to see progress.",
+        "type": "explicit",
+        "thinking": "They want measurable progress. Twelve days is nearly two workweeks and shows weekday/weekend balance.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since last Friday, have I been moving more or less?",
+        "type": "implicit",
+        "thinking": "They’re comparing against a specific anchor. I’ll use 7 days so Friday’s not judged alone.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I park farther from the office—fetch my steps for the past 13 days.",
+        "type": "behavioral",
+        "thinking": "They’ve nudged their routine. Thirteen days should reveal whether the change is sticking.",
+        "numdays": 13,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My sleep’s been choppy—did my steps fall during the last two weeks?",
+        "type": "symptom",
+        "thinking": "Lower movement can affect sleep quality. I’ll pull 14 days to compare weekdays and weekends.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I keep the wheels turning or park myself these last two weeks?",
+        "type": "metaphorical",
+        "thinking": "They’re framing momentum in simple terms. Two weeks (14 days) tells a clear story.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Can you show my total steps for the past 15 days?",
+        "type": "explicit",
+        "thinking": "They requested totals without extra context. Fifteen days provides two partial weeks plus a weekend.",
+        "numdays": 15,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the cold snap started, did I walk less this week?",
+        "type": "implicit",
+        "thinking": "Weather often dampens activity. I’ll pull 7 days to capture the current week’s shift.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I started ‘walk and talk’ calls—check my steps for the past 16 days.",
+        "type": "behavioral",
+        "thinking": "They’re building a social habit. Sixteen days should show consistency beyond novelty.",
+        "numdays": 16,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My knees felt stiff—was I walking less over the past 17 days?",
+        "type": "symptom",
+        "thinking": "Joint discomfort can cut movement. Seventeen days gives enough room for flare-ups to show.",
+        "numdays": 17,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Were my days more footprints or chair prints these past 18 days?",
+        "type": "metaphorical",
+        "thinking": "Playful contrast to describe activity. Eighteen days balances recency and breadth.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Pull my step totals for the past 19 days—I’ve been aiming for 8k.",
+        "type": "explicit",
+        "thinking": "They’re goal-focused and want the numbers. Nineteen days exposes streaks and dips.",
+        "numdays": 19,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since I switched to the early train, did my movement change?",
+        "type": "implicit",
+        "thinking": "Commute tweaks alter incidental steps. I’ll use 14 days so two workweeks are represented.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I replaced TV time with short walks—show the past 20 days.",
+        "type": "behavioral",
+        "thinking": "They traded a sedentary slot for steps. Twenty days should reveal a clear pattern.",
+        "numdays": 20,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve felt foggy—did my walking dip over the past 21 days?",
+        "type": "symptom",
+        "thinking": "Cognitive fog sometimes tracks low activity. Twenty-one days helps separate blips from trends.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I glide or grind to a halt these last three weeks?",
+        "type": "metaphorical",
+        "thinking": "They want a high-level feel. Three weeks (21 days) shows momentum or stall.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Please fetch my total steps for the past 22 days.",
+        "type": "explicit",
+        "thinking": "Straight request. Twenty-two days offers breadth without drifting too far back.",
+        "numdays": 22,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since we moved desks, am I actually walking more?",
+        "type": "implicit",
+        "thinking": "Layout changes impact pathing. I’ll use 14 days for a fair pre/post sense within the same month.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I made a ‘no elevator’ rule—grab my steps for the past 23 days.",
+        "type": "behavioral",
+        "thinking": "They’re testing a daily choice. Twenty-three days is long enough to see if it stuck.",
+        "numdays": 23,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Energy’s been low—was I on my feet less over the past 24 days?",
+        "type": "symptom",
+        "thinking": "Lower energy often pairs with less walking. Twenty-four days shows multiple cycles.",
+        "numdays": 24,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I a sidewalk regular or a rare cameo these past 25 days?",
+        "type": "metaphorical",
+        "thinking": "They’re asking about frequency and presence. Twenty-five days gives a broad look.",
+        "numdays": 25,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Show my step counts for the past 26 days—curious how consistent I’ve been.",
+        "type": "explicit",
+        "thinking": "They want evidence of consistency. Twenty-six days bridges several weekends.",
+        "numdays": 26,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the semester started, did my day-to-day movement change last week?",
+        "type": "implicit",
+        "thinking": "School rhythms shift walking. I’ll use 7 days to reflect the last full week directly.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I walk my kid to school—check the past 27 days of steps.",
+        "type": "behavioral",
+        "thinking": "School-day routines can be steady. Twenty-seven days shows weekday cadence with multiple weekends.",
+        "numdays": 27,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been anxious—did my walking pattern change over the past four weeks?",
+        "type": "symptom",
+        "thinking": "Anxiety can nudge activity up or down. Four weeks (28 days) reveals the broader arc.",
+        "numdays": 28,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I stitch together a stride or lose the rhythm these past four weeks?",
+        "type": "metaphorical",
+        "thinking": "They want the month’s storyline, not just totals. Twenty-eight days fits ‘four weeks’.",
+        "numdays": 28,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Please pull my total steps for this month.",
+        "type": "explicit",
+        "thinking": "They want a month-level read. Thirty days is a practical approximation for most months.",
+        "numdays": 30,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the holiday break began, have I actually moved more?",
+        "type": "implicit",
+        "thinking": "Holidays can swing either way. I’ll use 10 days to cover the typical break window.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m trying to close my rings—grab the last 5 weekdays of steps.",
+        "type": "behavioral",
+        "thinking": "They want a weekday-focused check. I’ll use 5 days to mirror ‘last 5 weekdays’.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My back flared up—was I walking less during exam week?",
+        "type": "symptom",
+        "thinking": "Pain and exams both cut movement. I’ll use 7 days to represent that week cleanly.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I drift or drive forward over reading week?",
+        "type": "metaphorical",
+        "thinking": "They’re asking about momentum during a known period. Seven days maps nicely to that week.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Show me my steps for the last pay period.",
+        "type": "explicit",
+        "thinking": "They’re thinking in payroll cycles. I’ll use 14 days as a common pay-period window.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since we got the new puppy, have I been out walking more?",
+        "type": "implicit",
+        "thinking": "Pet care boosts incidental steps. I’ll pull 11 days to catch the early adjustment phase.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I set a 10-minute after-dinner walk—check the past fortnight.",
+        "type": "behavioral",
+        "thinking": "They’re testing a simple routine. A fortnight (14 days) shows whether it’s sticking.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve felt restless—did my steps jump over the past week and a half?",
+        "type": "symptom",
+        "thinking": "Restlessness might increase pacing. Eleven days captures that mid-sized window.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Were my days more sprint or standstill over the past two and a half weeks?",
+        "type": "metaphorical",
+        "thinking": "They want an overarching feel. Eighteen days fits ‘two and a half weeks’.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Please fetch my steps for the last two weekends.",
+        "type": "explicit",
+        "thinking": "They want weekend activity specifically. I’ll use 14 days so both weekends sit in context.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the conference started, am I getting enough steps?",
+        "type": "implicit",
+        "thinking": "Events change movement patterns. I’ll pull 10 days to cover the conference and buffer days.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I swapped one meeting a day for a walking call—show the past 6 workdays.",
+        "type": "behavioral",
+        "thinking": "They’re experimenting with work routines. Six workdays shows if it’s catching on.",
+        "numdays": 6,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My anxiety spiked—did my movement drop since last Friday?",
+        "type": "symptom",
+        "thinking": "They’re anchoring to a stressful point. I’ll use 7 days so we don’t overread one day.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I a hallway comet or a desk-side shadow this month?",
+        "type": "metaphorical",
+        "thinking": "They’re painting a picture of the month. Thirty days captures that arc cleanly.",
+        "numdays": 30,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Show my step totals for the past 5 days—I changed my commute.",
+        "type": "explicit",
+        "thinking": "They want a quick read on a new pattern. Five days is recent but still comparative.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the rain started, did my movement fall off this week?",
+        "type": "implicit",
+        "thinking": "Weather affects walking. I’ll use 7 days for a tidy ‘this week’ view.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m taking stairs at the mall—pull the past 20 days of steps.",
+        "type": "behavioral",
+        "thinking": "They’ve added incidental activity. Twenty days should reveal a real shift.",
+        "numdays": 20,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been dizzy at times—did my steps decline over the last couple of days?",
+        "type": "symptom",
+        "thinking": "Acute symptoms are tricky. I’ll use 5 days so we don’t misread a blip.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I plant steady footsteps or just a few scattered ones in the past 12 days?",
+        "type": "metaphorical",
+        "thinking": "They want consistency more than counts. Twelve days gives enough canvas.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Please show my step counts for last week.",
+        "type": "explicit",
+        "thinking": "They want a closed, clean window. Seven days maps to last week directly.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since finals ended, am I on my feet more?",
+        "type": "implicit",
+        "thinking": "Post-exam routines can rebound. I’ll use 9 days to capture the immediate aftermath.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I added a morning lap around the block—check the past 6 days.",
+        "type": "behavioral",
+        "thinking": "It’s a fresh habit. Six days is enough to see if it’s taking root.",
+        "numdays": 6,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My sleep’s lighter—did my walking change over the past 13 days?",
+        "type": "symptom",
+        "thinking": "Movement often connects to sleep quality. Thirteen days gives a near-term trend.",
+        "numdays": 13,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I pushing the pace or idling in place over the past 16 days?",
+        "type": "metaphorical",
+        "thinking": "They’re asking about momentum, not raw totals. Sixteen days balances recency and signal.",
+        "numdays": 16,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Pull my total steps for the past 23 days.",
+        "type": "explicit",
+        "thinking": "Straightforward request. Twenty-three days offers a broad look without drifting too far back.",
+        "numdays": 23,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since I started carpooling, did my walking dip?",
+        "type": "implicit",
+        "thinking": "Carpooling can cut incidental steps. I’ll fetch 12 days to cover two workweeks.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m doing short walks between calls—show the past 7 days.",
+        "type": "behavioral",
+        "thinking": "They’re adding movement micro-doses. Seven days is a good first check.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My shoulders have been tight—did I move less over the past 18 days?",
+        "type": "symptom",
+        "thinking": "Discomfort can reduce activity. Eighteen days helps distinguish trend from noise.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I keep a steady beat or fade out over the past 22 days?",
+        "type": "metaphorical",
+        "thinking": "They want a feel for consistency. Twenty-two days is a generous read.",
+        "numdays": 22,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Show me the past 24 days of step counts—curious about my baseline.",
+        "type": "explicit",
+        "thinking": "They want a broader baseline. Twenty-four days includes several full weeks.",
+        "numdays": 24,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the new standing desk arrived, am I moving more?",
+        "type": "implicit",
+        "thinking": "Standing can prompt little walks. I’ll use 16 days to see if the effect sticks.",
+        "numdays": 16,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I switched to walking podcasts—pull the past 14 days.",
+        "type": "behavioral",
+        "thinking": "They tied walking to a cue. Fourteen days shows whether it’s habit-forming.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve felt jittery—did my steps spike or sag over the past 19 days?",
+        "type": "symptom",
+        "thinking": "Anxiety can move steps either way. Nineteen days captures that ebb and flow.",
+        "numdays": 19,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Were these days a gentle hum or radio silence over the past 21 days?",
+        "type": "metaphorical",
+        "thinking": "They’re asking about the overall vibe. Twenty-one days is a solid span.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Please pull my steps for the last three weekends.",
+        "type": "explicit",
+        "thinking": "They want a weekend lens. I’ll use 21 days so three weekends appear with context.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since I changed bus stops, did my daily movement go up?",
+        "type": "implicit",
+        "thinking": "A small routing tweak can add up. I’ll fetch 15 days to show a stable pattern.",
+        "numdays": 15,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m walking the dog before bed—show the past 6 days of steps.",
+        "type": "behavioral",
+        "thinking": "New evening routine. Six days is enough to catch early consistency.",
+        "numdays": 6,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My appetite’s been off—have I been less active over the past 11 days?",
+        "type": "symptom",
+        "thinking": "Appetite and activity sometimes move together. Eleven days is a fair sample.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I carving clear paths or just dots on the map these past 26 days?",
+        "type": "metaphorical",
+        "thinking": "They’re hunting for a pattern more than totals. Twenty-six days shows the shape.",
+        "numdays": 26,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Show me my step totals for the past 10 days—trying to hit 7k.",
+        "type": "explicit",
+        "thinking": "They’re tracking a reachable goal. Ten days should reveal adherence.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the kids’ practices started, am I moving more?",
+        "type": "implicit",
+        "thinking": "Sideline pacing and errands add steps. I’ll pull 23 days to catch multiple practices.",
+        "numdays": 23,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I swapped rides under 1 km for walks—check the past 17 days.",
+        "type": "behavioral",
+        "thinking": "A rule-based nudge should show up quickly. Seventeen days balances novelty and habit.",
+        "numdays": 17,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve had afternoon crashes—did my activity slide the past 12 days?",
+        "type": "symptom",
+        "thinking": "Energy dips may mirror lower movement. Twelve days keeps it recent.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I tap a steady rhythm or skip beats the past 20 days?",
+        "type": "metaphorical",
+        "thinking": "They want the feel of consistency. Twenty days is a healthy window.",
+        "numdays": 20,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Please fetch my step totals for the past 9 days.",
+        "type": "explicit",
+        "thinking": "They want recent totals. Nine days gives a week plus buffer.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the move, have I actually been on my feet more?",
+        "type": "implicit",
+        "thinking": "New layouts change routes. I’ll use 16 days for pattern settling.",
+        "numdays": 16,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m mentoring a walking group—grab the past 22 days.",
+        "type": "behavioral",
+        "thinking": "Social accountability tends to stick. Twenty-two days shows the arc.",
+        "numdays": 22,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My stress felt higher—did my steps change over the past 25 days?",
+        "type": "symptom",
+        "thinking": "Stress can suppress or spur walking. Twenty-five days reveals direction.",
+        "numdays": 25,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Were my days a calm stroll or a standstill the past 24 days?",
+        "type": "metaphorical",
+        "thinking": "They’re asking for vibe over detail. Twenty-four days captures multiple cycles.",
+        "numdays": 24,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Show the past 7 days of steps—I tried morning loops.",
+        "type": "explicit",
+        "thinking": "They want a quick status on a new routine. Seven days gives a clean slice.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the snow hit, did I cut back on walking?",
+        "type": "implicit",
+        "thinking": "Weather has a strong effect. I’ll use 14 days to compare across two weeks.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I started lunchtime walks—pull the past 8 days.",
+        "type": "behavioral",
+        "thinking": "A small daily change should surface quickly. Eight days includes a weekend.",
+        "numdays": 8,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve felt achy—was I moving less over the past 15 days?",
+        "type": "symptom",
+        "thinking": "Aches can trim steps. Fifteen days mixes workdays and weekends.",
+        "numdays": 15,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I thread a steady path or scatter steps over the past 27 days?",
+        "type": "metaphorical",
+        "thinking": "They want cohesion vs. randomness. Twenty-seven days makes patterns visible.",
+        "numdays": 27,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Please show my step totals for the past 6 days—I tried a new route.",
+        "type": "explicit",
+        "thinking": "They want rapid feedback. Six days keeps it tight but comparable.",
+        "numdays": 6,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since I started volunteering at the library, am I walking more?",
+        "type": "implicit",
+        "thinking": "Shelving and circulation add movement. I’ll pull 25 days to catch the rhythm.",
+        "numdays": 25,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I park far on purpose—fetch the past 18 days of steps.",
+        "type": "behavioral",
+        "thinking": "Intentional inconvenience nudges walking. Eighteen days shows whether it’s stuck.",
+        "numdays": 18,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve been under the weather—did my steps drop over the past 5 days?",
+        "type": "symptom",
+        "thinking": "Recent illness likely reduced movement. Five days is a focused check.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I moving like a metronome or skipping notes the past 13 days?",
+        "type": "metaphorical",
+        "thinking": "They’re asking about consistency. Thirteen days is a fair read.",
+        "numdays": 13,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Pull my step counts for the past 28 days—I want a four-week view.",
+        "type": "explicit",
+        "thinking": "They asked for a period-level summary. Twenty-eight days equals four weeks.",
+        "numdays": 28,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since my shifts changed, am I walking more between tasks?",
+        "type": "implicit",
+        "thinking": "Shift patterns change movement. I’ll use 20 days to span several rotations.",
+        "numdays": 20,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I walk during podcasts—show the past 11 days of steps.",
+        "type": "behavioral",
+        "thinking": "They’re tying steps to a cue. Eleven days shows whether the cue sticks.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve had restless nights—did my daily movement change over the past 9 days?",
+        "type": "symptom",
+        "thinking": "Sleep and movement often connect. Nine days gives near-term clarity.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Were these days a gentle climb or a flat line over the past 23 days?",
+        "type": "metaphorical",
+        "thinking": "They want a sense of trajectory. Twenty-three days shows the slope.",
+        "numdays": 23,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Show me my total steps for the last school fortnight.",
+        "type": "explicit",
+        "thinking": "They’re thinking in school cycles. Fourteen days lines up with a fortnight.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since orientation week, did I keep moving consistently?",
+        "type": "implicit",
+        "thinking": "Orientation is busy; the follow-through matters. I’ll pull 21 days to gauge momentum.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I swapped elevators for stairs—grab the past 12 days.",
+        "type": "behavioral",
+        "thinking": "Daily choice changes add up. Twelve days offers a clean read.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My mood’s been flat—did my steps fall over the past 7 days?",
+        "type": "symptom",
+        "thinking": "Mood-activity links are common. Seven days provides a crisp window.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I putting down steady tracks or scattered footprints the past 29 days?",
+        "type": "metaphorical",
+        "thinking": "They’re after the month’s texture. Twenty-nine days gives a near-month sweep.",
+        "numdays": 29,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Please pull my step totals for the past 14 days—I’m checking a new goal.",
+        "type": "explicit",
+        "thinking": "They’re testing adherence. Fourteen days compares two workweeks nicely.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the gyms got crowded, did I make up for it with walking?",
+        "type": "implicit",
+        "thinking": "When the gym’s busy, steps can fill the gap. I’ll fetch 10 days for a quick check.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I do a lap every coffee break—show the past 13 days.",
+        "type": "behavioral",
+        "thinking": "They embedded movement in a routine. Thirteen days should reveal consistency.",
+        "numdays": 13,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve had headaches on and off—did my movement shrink over the past 6 days?",
+        "type": "symptom",
+        "thinking": "Short, recent window keeps the comparison relevant. Six days is enough to spot a dip.",
+        "numdays": 6,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I keep pace or hit pause over the last pay period?",
+        "type": "metaphorical",
+        "thinking": "They want a period-level feel. Fourteen days fits a common payroll cycle.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Show my step counts for the past 21 days—I’m chasing a streak.",
+        "type": "explicit",
+        "thinking": "They’re tracking streak durability. Twenty-one days is a classic streak span.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since we started car-free Sundays, did my weekly steps rise?",
+        "type": "implicit",
+        "thinking": "That habit should spike weekend movement. I’ll use 14 days to include two Sundays.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I walk the dog at dawn—pull the past 5 days.",
+        "type": "behavioral",
+        "thinking": "Fresh routine; quick feedback helps. Five days keeps it focused and fair.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My recovery’s in progress—did I move more this week and a half?",
+        "type": "symptom",
+        "thinking": "Post-illness pacing matters. Eleven days shows a gentle ramp without overextending.",
+        "numdays": 11,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Were my days more footnotes or full chapters over the past fortnight?",
+        "type": "metaphorical",
+        "thinking": "They want to know if walking became part of the story. Fourteen days fits a fortnight.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Please fetch my steps for the past 30 days—I want the full month vibe.",
+        "type": "explicit",
+        "thinking": "They asked for the broad month view. Thirty days will do it.",
+        "numdays": 30,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since I changed to a standing tram stop, am I walking more?",
+        "type": "implicit",
+        "thinking": "Transit habits alter step totals. I’ll pull 12 days to span two workweeks.",
+        "numdays": 12,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m doing hallway laps at home—grab the past 7 days.",
+        "type": "behavioral",
+        "thinking": "Small indoor walks can add up. Seven days shows whether it’s consistent.",
+        "numdays": 7,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My stress climbed—did my daily steps change in the past 8 days?",
+        "type": "symptom",
+        "thinking": "Stress can either stall or spur movement. Eight days offers a tight read.",
+        "numdays": 8,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I idling or cruising over the last three weekends?",
+        "type": "metaphorical",
+        "thinking": "Weekends carry a different rhythm. Twenty-one days captures three of them.",
+        "numdays": 21,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Show my total steps for the past 5 days—I tried errands on foot.",
+        "type": "explicit",
+        "thinking": "They want immediate feedback. Five days is recent but not myopic.",
+        "numdays": 5,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the kids’ bedtime shifted, am I getting out for walks?",
+        "type": "implicit",
+        "thinking": "Evening routine changes matter. I’ll use 15 days to see if the new rhythm holds.",
+        "numdays": 15,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I added a noon loop around the block—pull the past 10 days.",
+        "type": "behavioral",
+        "thinking": "A midday habit should show quickly. Ten days balances speed and signal.",
+        "numdays": 10,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "My joints were cranky—did I walk less over the past 9 days?",
+        "type": "symptom",
+        "thinking": "Discomfort can clamp down movement. Nine days keeps it recent.",
+        "numdays": 9,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Did I trace long arcs or tiny circles over the past 28 days?",
+        "type": "metaphorical",
+        "thinking": "They want distance and variety in feel. Twenty-eight days equals four weeks.",
+        "numdays": 28,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Please show the past 6 workdays of steps—I switched to stairs.",
+        "type": "explicit",
+        "thinking": "Workday-specific request. Six days reflects the recent work stretch.",
+        "numdays": 6,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Since the weather warmed up, did my weekly steps climb?",
+        "type": "implicit",
+        "thinking": "Season changes affect walking. I’ll use 14 days to reduce one-off noise.",
+        "numdays": 14,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’m trying to hit 6k before noon—grab the past 13 days.",
+        "type": "behavioral",
+        "thinking": "A time-bound goal changes pacing. Thirteen days shows how it’s going.",
+        "numdays": 13,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "I’ve felt drained—did my steps dip during this month?",
+        "type": "symptom",
+        "thinking": "Energy and movement often echo each other. Thirty days gives the month’s story.",
+        "numdays": 30,
+        "function": "get_steps_data"
+    },
+    {
+        "query": "Was I a steady walker or a cameo appearance over the past 22 days?",
+        "type": "metaphorical",
+        "thinking": "They’re asking about presence. Twenty-two days gives a generous sample.",
+        "numdays": 22,
+        "function": "get_steps_data"
+    }
+]

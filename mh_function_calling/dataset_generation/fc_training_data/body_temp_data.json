@@ -1,0 +1,1759 @@
+[
+    {
+        "query": "What's my average body temperature this past week?",
+        "type": "explicit",
+        "thinking": "Direct request for temperature metrics requires calling get_body_temperature_data for the last 7 days to calculate the mean value.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I feel feverish - can you check if my temperature has been elevated?",
+        "type": "symptom",
+        "thinking": "Subjective fever report needs objective verification via get_body_temperature_data for recent measurements.",
+        "numdays": 3,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Has my nighttime temperature pattern changed this month?",
+        "type": "explicit",
+        "thinking": "Identifying circadian rhythm changes requires get_body_temperature_data for nightly readings over 30 days.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do I run hotter on days I drink coffee?",
+        "type": "behavioral",
+        "thinking": "Assessing caffeine's thermal impact needs get_body_temperature_data comparing days with/without consumption.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My skin feels like a radiator when I'm anxious",
+        "type": "metaphorical",
+        "thinking": "Metaphorical description suggests checking get_body_temperature_data during anxiety episodes for physiological correlation.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Show my temperature fluctuations during yesterday's migraine",
+        "type": "symptom",
+        "thinking": "Migraine-associated temperature changes require get_body_temperature_data for that specific 24-hour period.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "What's my normal temperature range?",
+        "type": "explicit",
+        "thinking": "Establishing baseline needs get_body_temperature_data over sufficient days (14) to account for natural variation.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature drop after meditation?",
+        "type": "behavioral",
+        "thinking": "Testing relaxation's effect requires get_body_temperature_data before/after 10 sessions.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I'm always cold in the office - is my body temperature actually lower?",
+        "type": "implicit",
+        "thinking": "Perception vs reality check needs get_body_temperature_data from 5 workdays.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Compare my temperature before and after starting this medication",
+        "type": "explicit",
+        "thinking": "Drug side effect assessment requires get_body_temperature_data for 7 days pre/post prescription.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My forehead burns during stressful calls",
+        "type": "symptom",
+        "thinking": "Localized thermal symptom needs get_body_temperature_data during 3 call events.",
+        "numdays": 3,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "What time of day do I typically run warmest?",
+        "type": "explicit",
+        "thinking": "Identifying diurnal patterns requires get_body_temperature_data across 21 days for reliable averages.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does alcohol affect my overnight temperature?",
+        "type": "behavioral",
+        "thinking": "Substance impact evaluation needs get_body_temperature_data comparing drinking vs sober nights.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I feel like a human thermometer - always registering others' stress",
+        "type": "metaphorical",
+        "thinking": "Empathy metaphor suggests checking get_body_temperature_data in social situations.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Was my temperature abnormal last night?",
+        "type": "explicit",
+        "thinking": "Single-night assessment requires get_body_temperature_data for that specific sleep period.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do I have a temperature spike before panic attacks?",
+        "type": "symptom",
+        "thinking": "Predictive marker search needs get_body_temperature_data preceding 3 attacks.",
+        "numdays": 3,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How does my temperature vary across menstrual cycles?",
+        "type": "explicit",
+        "thinking": "Hormonal impact analysis requires get_body_temperature_data over 2 full cycles.",
+        "numdays": 60,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Is my temperature different after eating spicy food?",
+        "type": "behavioral",
+        "thinking": "Dietary effect test needs get_body_temperature_data after 5 spicy meals.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My hands are ice cubes in meetings",
+        "type": "implicit",
+        "thinking": "Peripheral circulation comment requires get_body_temperature_data during 3 meetings.",
+        "numdays": 3,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Show my temperature trend since getting this fever",
+        "type": "explicit",
+        "thinking": "Illness monitoring requires get_body_temperature_data since symptom onset.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does exercise lower my core temperature later in the day?",
+        "type": "behavioral",
+        "thinking": "Post-activity thermoregulation check needs get_body_temperature_data after 7 workouts.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I'm a human barometer - my temperature predicts weather changes",
+        "type": "metaphorical",
+        "thinking": "Weather sensitivity claim requires get_body_temperature_data during pressure changes.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Was my temperature elevated when I had that allergic reaction?",
+        "type": "symptom",
+        "thinking": "Allergy response analysis needs get_body_temperature_data from that event day.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "What's my temperature range during deep sleep?",
+        "type": "explicit",
+        "thinking": "Sleep stage specificity requires get_body_temperature_data with sleep architecture data.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do I maintain temperature better since starting breathwork?",
+        "type": "behavioral",
+        "thinking": "Intervention efficacy needs get_body_temperature_data pre/post practice.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My nose gets cold when anxious",
+        "type": "implicit",
+        "thinking": "Unusual symptom report requires get_body_temperature_data during 5 anxiety episodes.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Compare my temperature at high altitude vs sea level",
+        "type": "explicit",
+        "thinking": "Environmental impact test needs get_body_temperature_data from both locations.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does screen time before bed affect my temperature drop?",
+        "type": "behavioral",
+        "thinking": "Digital impact assessment requires get_body_temperature_data with usage logs.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I'm a furnace when sleeping poorly",
+        "type": "metaphorical",
+        "thinking": "Sleep-quality metaphor needs get_body_temperature_data on 5 restless nights.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Was my temperature rising before yesterday's headache?",
+        "type": "symptom",
+        "thinking": "Prodrome detection requires get_body_temperature_data preceding symptom onset.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How quickly does my temperature normalize after stress?",
+        "type": "explicit",
+        "thinking": "Recovery rate measurement needs get_body_temperature_data post 5 stressful events.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do I have different temperature patterns on workdays vs weekends?",
+        "type": "behavioral",
+        "thinking": "Lifestyle impact analysis requires get_body_temperature_data separated by day type.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My cheeks flame up during presentations",
+        "type": "implicit",
+        "thinking": "Social stress marker requires get_body_temperature_data during 3 presentations.",
+        "numdays": 3,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Show my temperature during that heatwave last month",
+        "type": "explicit",
+        "thinking": "Environmental stressor analysis requires get_body_temperature_data from that period.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does hydration level affect my daily temperature stability?",
+        "type": "behavioral",
+        "thinking": "Fluid balance test requires get_body_temperature_data with intake logs.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I'm a reptile - can't regulate temperature when exhausted",
+        "type": "metaphorical",
+        "thinking": "Fatigue metaphor requires get_body_temperature_data on 5 tired days.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Was my temperature cycling abnormally last week?",
+        "type": "explicit",
+        "thinking": "Irregularity check requires get_body_temperature_data for that 7-day period.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my temperature dips predict mood drops?",
+        "type": "symptom",
+        "thinking": "Biomarker correlation requires get_body_temperature_data with mood logs.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Compare my temperature before and after meals",
+        "type": "behavioral",
+        "thinking": "Postprandial effect needs get_body_temperature_data around 10 meals.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My hands are thermometers - they cool when overwhelmed",
+        "type": "implicit",
+        "thinking": "Stress indicator requires get_body_temperature_data during 5 overwhelm events.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "What was my temperature pattern during my last illness?",
+        "type": "explicit",
+        "thinking": "Pathological profile requires get_body_temperature_data from sick days.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature rise during creative flow states?",
+        "type": "behavioral",
+        "thinking": "Cognitive state correlation requires get_body_temperature_data during 7 creative sessions.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I'm a mood ring - my temperature reflects emotional states",
+        "type": "metaphorical",
+        "thinking": "Emotion biomarker claim requires get_body_temperature_data during varied moods.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Was my temperature elevated before yesterday's insomnia?",
+        "type": "symptom",
+        "thinking": "Sleep disruption predictor needs get_body_temperature_data preceding the event.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How does air conditioning affect my office temperature regulation?",
+        "type": "behavioral",
+        "thinking": "Environmental control impact requires get_body_temperature_data under different AC settings.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My temperature swings like a pendulum during hormonal shifts",
+        "type": "metaphorical",
+        "thinking": "Endocrine metaphor requires get_body_temperature_data across cycles.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Show my temperature readings from last Tuesday's workout",
+        "type": "explicit",
+        "thinking": "Activity-specific analysis requires get_body_temperature_data from that session.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do I maintain better temperature stability since using weighted blankets?",
+        "type": "behavioral",
+        "thinking": "Intervention test requires get_body_temperature_data before/after adoption.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My core feels like it's burning during flashbacks",
+        "type": "symptom",
+        "thinking": "Trauma response requires get_body_temperature_data during 3 episodes.",
+        "numdays": 3,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Compare my temperature in morning meetings vs afternoon ones",
+        "type": "explicit",
+        "thinking": "Circadian work impact requires get_body_temperature_data separated by time.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I felt awful last Tuesday - how high did my fever actually get?",
+        "type": "explicit",
+        "thinking": "Let's check your temperature readings from that day to see if your perception matches the physiological data.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My fever kept coming back last week - can you show me the pattern?",
+        "type": "explicit",
+        "thinking": "I'll pull your temperature data from the past 7 days to identify any recurring spikes that might explain this pattern.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Did I actually have a fever yesterday or was I just feeling warm?",
+        "type": "symptom",
+        "thinking": "Sometimes our perceptions can be misleading - I'll verify with your temperature readings from yesterday.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How long did my fever last during that stomach bug I had two weeks ago?",
+        "type": "explicit",
+        "thinking": "Looking back at your temperature data from those 5 sick days will show exactly how long you were febrile.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I started antibiotics on Friday - when did my temperature finally normalize?",
+        "type": "explicit",
+        "thinking": "Let's examine your temperature trend from the weekend to see when the medication really kicked in.",
+        "numdays": 3,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Was I running a low-grade fever all last month or just feeling rundown?",
+        "type": "symptom",
+        "thinking": "Reviewing your daily temperatures from the past 30 days will help distinguish actual fevers from general fatigue.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How bad was my fever during that nasty cold in January?",
+        "type": "explicit",
+        "thinking": "I can pull up your temperature records from that 10-day illness period to show the severity and duration.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Did my temperature spike before or after the chills started yesterday?",
+        "type": "symptom",
+        "thinking": "Checking your hourly readings from yesterday will reveal which symptom came first - the fever or the chills.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I felt hot all weekend but didn't check - was I actually febrile?",
+        "type": "symptom",
+        "thinking": "Your wearable should have recorded whether those warm feelings translated to actual elevated temperatures.",
+        "numdays": 2,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How quickly did my fever respond to the ibuprofen I took this morning?",
+        "type": "explicit",
+        "thinking": "Let's look at your temperature curve from today to see how effective the medication was at reducing your fever.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Was my fever worse at night during last week's infection?",
+        "type": "explicit",
+        "thinking": "I'll compare your daytime and nighttime temperatures from those 5 sick days to spot any patterns.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Did I have a fever the day before my cough started?",
+        "type": "symptom",
+        "thinking": "Checking your temperature readings from 24 hours before symptoms appeared might reveal early warning signs.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How high did my temperature get during that 24-hour virus I had?",
+        "type": "explicit",
+        "thinking": "Even brief illnesses can cause significant fevers - let's check your peak reading from that day.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Was I still running a fever when I went back to work last Thursday?",
+        "type": "symptom",
+        "thinking": "It's important to know if you returned too soon - I'll verify your temperature from that first day back.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How long after starting Tamiflu did my fever break?",
+        "type": "explicit",
+        "thinking": "Let's analyze your temperature data from the first 48 hours of treatment to gauge its effectiveness.",
+        "numdays": 2,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Did I have any fever spikes I didn't notice while sleeping last night?",
+        "type": "symptom",
+        "thinking": "Your overnight temperature readings will show if you had any asymptomatic febrile episodes.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How does this current fever compare to the one I had in March?",
+        "type": "explicit",
+        "thinking": "Comparing your temperature patterns from both illnesses might reveal similarities or differences.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Was my temperature elevated when I first woke up feeling sick yesterday?",
+        "type": "symptom",
+        "thinking": "Checking your morning reading from yesterday will show if the fever preceded other symptoms.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How long did it take for my fever to go down after that ice bath?",
+        "type": "explicit",
+        "thinking": "Let's look at your temperature trend from that evening to see how effective the cooling measure was.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Did I have any low-grade fevers in the week before getting really sick?",
+        "type": "symptom",
+        "thinking": "Reviewing your temperatures from the pre-symptomatic period might show early indicators.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How high was my fever at its worst point last illness?",
+        "type": "explicit",
+        "thinking": "I'll scan your temperature records from those 7 sick days to find the absolute peak reading.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Was my temperature normal between fever spikes last week?",
+        "type": "explicit",
+        "thinking": "Checking your baseline readings between febrile episodes will show if you fully returned to normal.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Did I develop a fever within 24 hours of that vaccination?",
+        "type": "symptom",
+        "thinking": "It would be helpful to know if your immune response included a temperature increase post-shot.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How long after my fever broke did I feel completely better?",
+        "type": "explicit",
+        "thinking": "Comparing your temperature normalization with symptom logs from that week will show the recovery timeline.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Was I still contagious based on my temperature when I saw friends last weekend?",
+        "type": "symptom",
+        "thinking": "Checking if you still had a fever during that social interaction would help assess transmission risk.",
+        "numdays": 2,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Can I see my body temperature trend from the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user wants to understand temperature trends over a 14-day period, possibly to detect hormonal or environmental effects.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I've been feeling unusually warm lately. Could my temperature be elevated?",
+        "type": "implicit",
+        "thinking": "The user notices an internal warmth. Reviewing the last 7 days may reveal a subtle rise in temperature.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I stopped taking cold showers this month — has my body temp changed?",
+        "type": "behavioral",
+        "thinking": "They altered a behavior that could impact thermoregulation. A 30-day review will provide insights.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I've had light chills for about five days now. What's my temperature been like?",
+        "type": "symptom",
+        "thinking": "Chills suggest a temperature irregularity. I’ll pull the past 5 days to verify.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Lately, it feels like I’m burning from the inside out.",
+        "type": "metaphorical",
+        "thinking": "This dramatic description might indicate a prolonged temperature elevation. A 10-day review will help assess.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Check my temperature changes since the beginning of this month.",
+        "type": "explicit",
+        "thinking": "They want a full-month view to observe long-term fluctuations. I’ll retrieve 30 days of data.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "For some reason, I've felt flushed in the evenings for over a week.",
+        "type": "implicit",
+        "thinking": "Evening flushing may suggest circadian variation. I'll examine 9 days of temperature data.",
+        "numdays": 9,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I've started drinking warm water every morning. Has that influenced my body heat?",
+        "type": "behavioral",
+        "thinking": "A wellness habit like warm water might slightly affect temperature. Checking the last 12 days may show patterns.",
+        "numdays": 12,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I’ve been recovering from a cold. What was my temperature like through it?",
+        "type": "symptom",
+        "thinking": "Post-cold recovery often shifts temperature baseline. Reviewing 14 days can capture this transition.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My body feels like a slow-burning furnace lately.",
+        "type": "metaphorical",
+        "thinking": "That imagery suggests chronic temperature elevation. A 15-day history may provide answers.",
+        "numdays": 15,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Show me my temperature pattern over the past 10 days.",
+        "type": "explicit",
+        "thinking": "They want a short-term overview. A 10-day span will help track recent changes.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I don’t know why, but I’ve been feeling overheated after lunch every day.",
+        "type": "implicit",
+        "thinking": "They’re noticing midday heat patterns. I’ll pull 8 days of data to check if it's consistent.",
+        "numdays": 8,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I’ve been sleeping with heavier blankets this winter — any temp change?",
+        "type": "behavioral",
+        "thinking": "Bedding habits may affect thermoregulation during sleep. I'll analyze the past 20 days.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "The fever seemed to break three days ago. Can you confirm that?",
+        "type": "symptom",
+        "thinking": "They’re referring to a past fever event. A 5-day window should validate the drop.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "The last week has felt like I’m radiating heat from my core.",
+        "type": "metaphorical",
+        "thinking": "That vivid sensation may indicate stress-induced or hormonal temperature spikes. I’ll check the last 7 days.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Could you pull my temperature records from the last 16 days?",
+        "type": "explicit",
+        "thinking": "They asked for a specific time span. I’ll retrieve 16 days of temperature data.",
+        "numdays": 16,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Every evening for the last 6 days, I’ve felt warm — is it just me?",
+        "type": "implicit",
+        "thinking": "This could be a real temperature rhythm. I’ll review data from the past 6 days.",
+        "numdays": 6,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I’ve switched to vegan food for a couple of weeks now. Any effect on my body temperature?",
+        "type": "behavioral",
+        "thinking": "Dietary changes can impact metabolic rate. A 14-day window will help examine shifts.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I’m sweating a lot at night. Is my temperature high during sleep?",
+        "type": "symptom",
+        "thinking": "Night sweats are classic signs of temperature spikes. I’ll analyze the past 10 days.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "This whole week felt like I’ve been slowly boiling from the inside.",
+        "type": "metaphorical",
+        "thinking": "The poetic phrasing suggests internal discomfort. I’ll review temperature over the last 7 days.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Can you show me my temperature readings for the last 13 days?",
+        "type": "explicit",
+        "thinking": "They’ve requested 13 days of data directly. I’ll provide that view to track fluctuations.",
+        "numdays": 13,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Since I started working night shifts, I’ve felt warmer. Is that true?",
+        "type": "implicit",
+        "thinking": "Night shifts affect circadian rhythms. I’ll examine temperature patterns for 11 days.",
+        "numdays": 11,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I’ve been trying cold showers every morning for the past 9 days. Curious about the result.",
+        "type": "behavioral",
+        "thinking": "They’re implementing cold exposure. I’ll check 9 days of data to evaluate its effect.",
+        "numdays": 9,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I felt like I had a mild fever all through the weekend. Can you confirm?",
+        "type": "symptom",
+        "thinking": "That covers around 3 days. I’ll pull data from the last 4 days to verify.",
+        "numdays": 4,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "These past few days, I’ve felt like I’m overheating even when it’s cold outside.",
+        "type": "metaphorical",
+        "thinking": "Perceived internal heat suggests a possible temp elevation. I'll analyze the last 6 days.",
+        "numdays": 6,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Pull up my temperature data from the past 18 days.",
+        "type": "explicit",
+        "thinking": "They want a specific timeframe — 18 days. I’ll gather that data for insight.",
+        "numdays": 18,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I’ve felt odd and a bit feverish every evening for the last five days.",
+        "type": "implicit",
+        "thinking": "Evening warmth could be due to hormonal or metabolic shifts. I’ll retrieve 5 days of data.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I’ve been hydrating more than usual for two weeks. Any difference in my temperature?",
+        "type": "behavioral",
+        "thinking": "Hydration affects regulation. A 14-day history will show trends.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "The flu hit me last week. How was my temperature through that?",
+        "type": "symptom",
+        "thinking": "They want to analyze post-infection temperature shifts. A 7-day window makes sense.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "It feels like my body’s on a slow simmer lately.",
+        "type": "metaphorical",
+        "thinking": "That imagery reflects prolonged warmth. I’ll examine the last 7 days of temperature data.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My muscles feel like they're burning during HIIT sessions—is my core temperature spiking dangerously?",
+        "type": "symptom",
+        "thinking": "Intense exercise increases core temp. Let's check your peak readings from 5 recent workouts to ensure safety limits aren't exceeded.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I'm TTC—can we confirm ovulation from my temperature dip and rise last cycle?",
+        "type": "explicit",
+        "thinking": "The 'thermal shift' post-ovulation is key. I'll analyze your basal temps from days 10-20 of last cycle for the characteristic pattern.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Why do I wake up overheated at 3 AM despite a cool room?",
+        "type": "symptom",
+        "thinking": "Nighttime overheating often reflects poor thermoregulation. Let's review your sleep-phase-matched temps from 7 nights to pinpoint disruptions.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My hands stay icy on keto—is my metabolism slowing down?",
+        "type": "symptom",
+        "thinking": "Peripheral cooling can indicate metabolic adaptation. I'll compare your fingertip temps from 10 pre- and post-keto days.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my panic attacks actually raise my temperature, or is it just a feeling?",
+        "type": "symptom",
+        "thinking": "Stress responses often include real thermal changes. I'll correlate your subjective episodes with temp data from 3 recent events.",
+        "numdays": 3,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Moving from Boston to Miami—how long did it take my body to stop overheating last summer?",
+        "type": "explicit",
+        "thinking": "Heat acclimation typically takes 7-14 days. Let's analyze your daytime temps from that transition period to map your adaptation curve.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Since turning 50, I feel colder—has my baseline temperature actually dropped?",
+        "type": "symptom",
+        "thinking": "Aging can lower resting metabolic rate. I'll compare your morning temps from 30 days this year vs. same period 5 years ago.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My Raynaud's flares seem worse this winter—are my finger temps dropping lower than last year?",
+        "type": "symptom",
+        "thinking": "Vasospasm severity shows in temperature extremes. I'll compare your coldest readings from 10 winter days each year.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I solve problems faster in a chilly room—does my brain actually work better when cooler?",
+        "type": "behavioral",
+        "thinking": "Mild cold may enhance focus. Let's correlate your coding productivity logs with hand temps from 15 work sessions.",
+        "numdays": 15,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Since starting beta-blockers, I feel colder—are my extremities retaining less heat?",
+        "type": "symptom",
+        "thinking": "These drugs often reduce peripheral circulation. I'll compare your fingertip temps from 7 days pre- and post-medication.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My scrotal temperature feels higher since switching to tight underwear—is this concerning for fertility?",
+        "type": "symptom",
+        "thinking": "Testicular temp must stay below core body temp. I'll check your wearable data from 7 days with different underwear types.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "After 30 days of cold showers, does my body now conserve heat more efficiently?",
+        "type": "explicit",
+        "thinking": "Brown fat activation improves thermogenesis. I'll compare your rewarming rates after cold exposure from before/after the experiment.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My toddler's fever spiked to 103°F last night—how long did it stay above 102?",
+        "type": "explicit",
+        "thinking": "High fever duration matters more than peak temp alone. I'll analyze the 12-hour window from onset to breaking.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My MS makes me heat-sensitive—exactly how much does a 2°F rise worsen my symptoms?",
+        "type": "symptom",
+        "thinking": "Uhthoff's phenomenon is temperature-dependent. I'll correlate your symptom logs with temp increases from 5 flare-ups.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Climbing Kilimanjaro—did my body maintain stable temps better on summit day than during training?",
+        "type": "explicit",
+        "thinking": "Altitude acclimatization improves thermoregulation. I'll compare your summit day temps with 3 high-altitude training days.",
+        "numdays": 4,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "During marathon training, does my core temperature stabilize after 8 weeks of conditioning?",
+        "type": "explicit",
+        "thinking": "Aerobic fitness improves thermal regulation. Let's compare your long-run temps from weeks 1 vs 8 of training.",
+        "numdays": 56,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My luteal phase temps are erratic—could this indicate hormonal imbalance?",
+        "type": "symptom",
+        "thinking": "Progesterone stability reflects in temperature patterns. I'll analyze your post-ovulation temps from 3 cycles.",
+        "numdays": 45,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "I sleep worse when my feet are cold—what's my ideal pre-bed foot temperature?",
+        "type": "symptom",
+        "thinking": "Peripheral vasodilation aids sleep onset. Let's find your optimal foot temp from 10 nights with different warming methods.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My face flushes when embarrassed—does this local heating affect my core temperature?",
+        "type": "symptom",
+        "thinking": "Blushing is localized vasodilation. I'll compare your facial vs core temps during 5 awkward moments.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Visiting Death Valley next week—how quickly did my body adjust to extreme heat last summer?",
+        "type": "explicit",
+        "thinking": "Extreme heat adaptation follows predictable curves. I'll review your temp stabilization rate from that 5-day desert trip.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My resting temperature has gradually declined since menopause—is this normal?",
+        "type": "symptom",
+        "thinking": "Estrogen withdrawal affects thermoregulation. I'll chart your 6-month temperature trend against typical postmenopausal ranges.",
+        "numdays": 180,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does typing speed decrease when my hand temperature drops below 90°F?",
+        "type": "behavioral",
+        "thinking": "Fine motor skills decline with cold. I'll correlate your keyboard metrics with hand temps from 20 work sessions.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Since increasing my SSRI dosage, I sweat more at night—are my temperatures actually higher?",
+        "type": "symptom",
+        "thinking": "Serotonin affects thermoregulation. I'll compare your nighttime temps from 7 days before/after dosage change.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My testicular temperature rises 2°F after long drives—is this concerning for sperm health?",
+        "type": "symptom",
+        "thinking": "Prolonged scrotal heating impacts fertility. I'll analyze your wearable data from 5 road trips over 3 hours.",
+        "numdays": 15,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "After switching to a vegan diet, do I maintain temperature stability during cold hikes?",
+        "type": "explicit",
+        "thinking": "Diet affects cold adaptation. I'll compare your hand/foot temps from 5 winter hikes pre- and post-diet change.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My baby's fever patterns changed after vaccinations—is this typical?",
+        "type": "symptom",
+        "thinking": "Vaccine responses vary. I'll compare temperature curves from 3 post-vaccination periods to establish their normal pattern.",
+        "numdays": 3,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does Parkinson's tremor severity correlate with my hand temperature fluctuations?",
+        "type": "symptom",
+        "thinking": "Autonomic dysfunction may link these symptoms. I'll analyze synchronized tremor and temp data from 7 symptomatic days.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "At 14,000 feet, does my body maintain core temperature better with acetazolamide?",
+        "type": "explicit",
+        "thinking": "Altitude meds affect thermoregulation. I'll compare your temps from 3 summit attempts with/without the medication.",
+        "numdays": 6,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my powerlifting sessions raise core temperature more than cardio?",
+        "type": "explicit",
+        "thinking": "Different exercise modalities have distinct thermal impacts. I'll compare peak temps from 5 sessions of each type.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Can we detect pregnancy earlier by analyzing my temperature curve this cycle?",
+        "type": "explicit",
+        "thinking": "Early pregnancy alters basal patterns. I'll scrutinize your daily temps from days 1-28 for the characteristic triphasic shift.",
+        "numdays": 28,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My sleep tracker says I overheat during REM—does this match my actual skin temperature?",
+        "type": "symptom",
+        "thinking": "REM sleep involves thermoregulatory changes. I'll align your sleep stage data with torso temps from 10 nights.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does intermittent fasting help maintain stable body temperatures during work?",
+        "type": "behavioral",
+        "thinking": "Fasting may reduce metabolic fluctuations. I'll compare your workday temp variability from 10 fasting vs 10 non-fasting days.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "After moving to Arizona, how many days until my nighttime temperature stabilized?",
+        "type": "explicit",
+        "thinking": "Dry heat adaptation follows predictable stages. I'll analyze your sleep temps from the first 21 days in the new climate.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My grandmother says elders run colder—have my baseline temps decreased since 60?",
+        "type": "symptom",
+        "thinking": "Aging affects metabolic rate. I'll compare your morning temps from 30 recent days vs 30 days five years ago.",
+        "numdays": 60,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my eczema flares correlate with localized skin temperature changes?",
+        "type": "symptom",
+        "thinking": "Inflammation alters cutaneous blood flow. I'll map your lesion locations against thermal imaging from 5 flare-ups.",
+        "numdays": 15,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Can we predict my migraine onset from subtle temperature changes?",
+        "type": "symptom",
+        "thinking": "Prodromal phases often include thermal shifts. I'll analyze your temp patterns from 24 hours before 5 recent migraines.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my ADHD medication cause abnormal temperature spikes during focus sessions?",
+        "type": "symptom",
+        "thinking": "Stimulants affect cardiovascular function. I'll check your temps during 5 medication peaks versus troughs.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My fertility doctor wants 3 months of basal temps—can you compile this clearly?",
+        "type": "explicit",
+        "thinking": "Long-term patterns reveal cycle irregularities. I'll organize your daily waking temps from the last 90 days with ovulation markers.",
+        "numdays": 90,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do weighted blankets help stabilize my nighttime temperature fluctuations?",
+        "type": "behavioral",
+        "thinking": "Deep pressure may improve thermoregulation. I'll compare your sleep temp variance from 10 nights with/without the blanket.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My child's fever spiked faster with this virus than last—is that clinically significant?",
+        "type": "explicit",
+        "thinking": "Fever kinetics indicate infection severity. I'll compare temperature rise rates from both illnesses' first 24 hours.",
+        "numdays": 2,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my prosthetic leg affect my contralateral limb temperature?",
+        "type": "symptom",
+        "thinking": "Altered gait may impact circulation. I'll compare your intact vs prosthetic side temps from 5 days of activity logs.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "At Everest Base Camp, did my oxygen saturation correlate with temperature stability?",
+        "type": "explicit",
+        "thinking": "Hypoxia affects thermoregulation. I'll align your SpO2 readings with core temps from that 7-day acclimatization period.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do CrossFit workouts raise my core temperature more than traditional weightlifting?",
+        "type": "explicit",
+        "thinking": "High-intensity training creates unique thermal stress. I'll compare peak temps from 5 sessions of each workout type.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Can we identify implantation dip from my temperature curve this cycle?",
+        "type": "explicit",
+        "thinking": "The characteristic 1-day drop around 6-10 DPO is telling. I'll scrutinize your temps from days 5-12 post-ovulation.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My CPAP seems to reduce night sweats—are my temperatures actually more stable?",
+        "type": "symptom",
+        "thinking": "Improved breathing may enhance thermoregulation. I'll compare your sleep temp variance from 10 nights with/without CPAP.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my body temperature drop during 'flow state' at work?",
+        "type": "behavioral",
+        "thinking": "Deep focus may alter autonomic function. I'll correlate your productivity logs with temps from 10 focused work blocks.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "After moving from Florida to Alaska, how long until my cold tolerance improved?",
+        "type": "explicit",
+        "thinking": "Cold adaptation occurs in phases. I'll analyze your hand temperature responses from the first 30 outdoor exposures.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Since my thyroidectomy, do I reach lower temperatures during cold exposure?",
+        "type": "symptom",
+        "thinking": "Thyroid hormone affects thermogenesis. I'll compare your cold challenge tests from before/after surgery.",
+        "numdays": 2,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my arthritic joints show temperature increases before flare-ups?",
+        "type": "symptom",
+        "thinking": "Inflammation precedes symptoms. I'll analyze your joint temps from 5 days preceding recent flares.",
+        "numdays": 15,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Can my temperature patterns help differentiate between anxiety and illness?",
+        "type": "explicit",
+        "thinking": "Stress vs infection have distinct thermal signatures. I'll compare your temp curves from 5 anxiety episodes vs 5 sick days.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my new blood pressure medication affect my temperature regulation during exercise?",
+        "type": "symptom",
+        "thinking": "Antihypertensives can impair thermoregulation. I'll compare your workout temps from 5 pre- and post-medication sessions.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My andrologist wants 60 days of scrotal temperature logs—can you format this clearly?",
+        "type": "explicit",
+        "thinking": "Varicocele assessment requires longitudinal data. I'll organize your daily measurements with activity annotations.",
+        "numdays": 60,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do infrared sauna sessions improve my next-day temperature stability?",
+        "type": "behavioral",
+        "thinking": "Heat therapy may enhance thermoregulation. I'll compare your daytime temp variance from 10 sauna vs non-sauna days.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My infant's fever responded differently to Tylenol vs Advil—can we compare the curves?",
+        "type": "explicit",
+        "thinking": "Antipyretics have distinct mechanisms. I'll overlay temperature profiles from 2 medication events for each drug.",
+        "numdays": 2,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my paralyzed limb maintain temperature differently than my mobile one?",
+        "type": "symptom",
+        "thinking": "Neurological impairment affects circulation. I'll compare bilateral measurements from 5 days of routine monitoring.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "At high altitude, does Diamox help maintain my nighttime temperature stability?",
+        "type": "explicit",
+        "thinking": "Acetazolamide affects multiple systems. I'll compare your sleep temp variance from 3 nights with/without medication at elevation.",
+        "numdays": 6,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do marathon runners maintain better temperature stability than sprinters?",
+        "type": "explicit",
+        "thinking": "Aerobic capacity influences thermoregulation. I'll compare your peak temps from 5 endurance vs sprint sessions.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Can we detect perimenopause onset through subtle temperature pattern changes?",
+        "type": "explicit",
+        "thinking": "Hormonal shifts alter basal rhythms. I'll analyze your 90-day temp chart for emerging irregularities characteristic of transition.",
+        "numdays": 90,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My sleep doctor says my temperature doesn't dip normally—can you show me the data?",
+        "type": "explicit",
+        "thinking": "Delayed cooling impairs sleep onset. I'll visualize your 14-night temperature curves against ideal circadian benchmarks.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my body temperature rise during intense creative work?",
+        "type": "behavioral",
+        "thinking": "Cognitive exertion may increase metabolic activity. I'll correlate your writing logs with temps from 10 creative bursts.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "After moving to a humid climate, how long until my sweat efficiency improved?",
+        "type": "explicit",
+        "thinking": "Humidity adaptation affects cooling. I'll analyze your exercise temp profiles from the first 14 days in the new environment.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Since my hysterectomy, do I have fewer temperature fluctuations at night?",
+        "type": "symptom",
+        "thinking": "Hormonal changes alter thermoregulation. I'll compare your sleep temp variance from 30 nights pre- and post-surgery.",
+        "numdays": 60,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my rosacea flares correlate with localized facial temperature increases?",
+        "type": "symptom",
+        "thinking": "Vascular changes drive both symptoms. I'll map your flare locations against thermal imaging from 5 events.",
+        "numdays": 15,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Can my temperature patterns help distinguish between viral and bacterial infections?",
+        "type": "explicit",
+        "thinking": "Different pathogens induce distinct fever patterns. I'll compare your temp curves from 3 confirmed viral vs bacterial illnesses.",
+        "numdays": 6,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my new antidepressant affect my temperature response to exercise?",
+        "type": "symptom",
+        "thinking": "SSRIs can alter thermoregulation. I'll compare your workout temp profiles from 5 sessions before/after starting medication.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My reproductive endocrinologist needs 6 months of basal temps—can you summarize trends?",
+        "type": "explicit",
+        "thinking": "Long-term data reveals cycle patterns. I'll condense your 180 days of measurements with key hormonal event markers.",
+        "numdays": 180,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do cooling vests help maintain my core temperature during MS flare-ups?",
+        "type": "behavioral",
+        "thinking": "Temperature control is crucial for symptom management. I'll compare your flare severity with/without cooling from 5 episodes.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My twins had different fever patterns with the same virus—is this normal?",
+        "type": "explicit",
+        "thinking": "Individual immune responses vary. I'll overlay both children's temperature curves from that 5-day illness period.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my prosthetic affect my residual limb's temperature regulation?",
+        "type": "symptom",
+        "thinking": "Device interface may impair circulation. I'll compare residual vs intact limb temps from 7 days of activity logs.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "At 18,000 feet, did my oxygen use correlate with temperature stability?",
+        "type": "explicit",
+        "thinking": "Supplemental O2 affects high-altitude adaptation. I'll align your usage logs with core temps from that critical ascent day.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do powerlifters have different workout temperature profiles than bodybuilders?",
+        "type": "explicit",
+        "thinking": "Training styles create distinct metabolic demands. I'll compare your peak temps from 5 sessions of each workout type.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Can we identify anovulatory cycles through temperature pattern analysis?",
+        "type": "explicit",
+        "thinking": "Missing thermal shifts indicate anovulation. I'll scrutinize your 35-day chart for characteristic monophasic patterns.",
+        "numdays": 35,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My circadian rhythm disorder means delayed temperature drops—can you quantify this?",
+        "type": "explicit",
+        "thinking": "DSPD involves abnormal thermoregulation. I'll measure your nightly cooling onset against healthy controls from 21 nights.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my body temperature drop during deep meditation?",
+        "type": "behavioral",
+        "thinking": "Relaxation may lower metabolic rate. I'll correlate your practice logs with temps from 10 meditation sessions.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "After moving from sea level to Denver, how long until my exercise temperatures stabilized?",
+        "type": "explicit",
+        "thinking": "Altitude affects workout thermoregulation. I'll analyze your training temp profiles from the first 28 days post-move.",
+        "numdays": 28,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Since starting testosterone therapy, do I maintain higher basal temperatures?",
+        "type": "symptom",
+        "thinking": "Androgens increase metabolic rate. I'll compare your morning temps from 30 days pre- and post-treatment.",
+        "numdays": 60,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my gout flares correlate with toe temperature changes?",
+        "type": "symptom",
+        "thinking": "Urate crystallization involves inflammation. I'll analyze your toe temps from 24 hours before 3 recent flares.",
+        "numdays": 3,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Can temperature patterns differentiate between flu and COVID?",
+        "type": "explicit",
+        "thinking": "Different viruses induce distinct fever curves. I'll compare your temp profiles from confirmed cases of each infection.",
+        "numdays": 2,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my ADHD stimulant medication impair temperature regulation in heat?",
+        "type": "symptom",
+        "thinking": "Stimulants may compromise cooling. I'll compare your exercise temps from 5 hot days with/without medication.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My fertility clinic wants 3 cycles of basal temps—can you highlight key features?",
+        "type": "explicit",
+        "thinking": "Multi-cycle analysis reveals patterns. I'll annotate your 90-day chart with ovulation signs and luteal phase lengths.",
+        "numdays": 90,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do pre-cooling strategies help maintain my temperature during marathon training?",
+        "type": "behavioral",
+        "thinking": "Thermal management improves endurance. I'll compare your long run temps from 5 sessions with/without pre-cooling.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My identical twins had identical fever curves with the same virus—how unusual is this?",
+        "type": "explicit",
+        "thinking": "Genetics influence immune responses. I'll quantify the similarity between both children's 5-day temperature profiles.",
+        "numdays": 5,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my wheelchair use affect my lower body temperature regulation?",
+        "type": "symptom",
+        "thinking": "Reduced muscle activity may impair circulation. I'll compare your upper/lower body temps from 7 days of activity logs.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "On K2 summit day, did my core temperature correlate with supplemental oxygen flow?",
+        "type": "explicit",
+        "thinking": "Extreme altitude challenges thermoregulation. I'll synchronize your O2 flow rates with core temps from that critical 18-hour push.",
+        "numdays": 1,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do CrossFit athletes recover core temperature faster than powerlifters post-workout?",
+        "type": "explicit",
+        "thinking": "Metabolic adaptations differ by training. I'll compare your cooldown rates from 5 sessions of each workout type.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Can we detect early pregnancy loss through temperature pattern deviations?",
+        "type": "explicit",
+        "thinking": "Chemical pregnancies alter hormonal patterns. I'll analyze your temp chart from the suspected cycle for secondary drops.",
+        "numdays": 28,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "My non-24 disorder means erratic temperature rhythms—can you visualize this?",
+        "type": "explicit",
+        "thinking": "Free-running rhythms lack consistency. I'll plot your 30-day temp data against a normal circadian template to highlight deviations.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my body temperature rise during intense problem-solving?",
+        "type": "behavioral",
+        "thinking": "Cognitive load may increase metabolic demand. I'll correlate your math/logic test scores with temps from 10 sessions.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does drinking alcohol in the evening affect my next-day morning temperature?",
+        "type": "behavioral",
+        "thinking": "Alcohol can disrupt thermoregulation. Let's compare your morning body temperatures from 10 evenings with alcohol versus 10 without to identify any consistent patterns.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How does my pre-workout meal timing influence my exercise temperature spikes?",
+        "type": "behavioral",
+        "thinking": "Nutrition timing affects workout thermogenesis. We should analyze your body temperature during 5 workouts after immediate pre-exercise meals versus 5 with 2-hour gaps.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do I maintain better temperature stability on days I meditate for 20+ minutes?",
+        "type": "behavioral",
+        "thinking": "Meditation may improve autonomic regulation. Let's examine your daytime body temperature variability from 15 meditation days versus 15 non-meditation days.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How long after switching to a weighted blanket does my nighttime temperature stabilize?",
+        "type": "behavioral",
+        "thinking": "Deep pressure stimulation affects thermoregulation. We should track your overnight body temperature patterns for 14 nights before and after introducing the weighted blanket.",
+        "numdays": 28,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my afternoon coffee cause different temperature effects than morning coffee?",
+        "type": "behavioral",
+        "thinking": "Circadian timing influences caffeine metabolism. Let's compare your body temperature changes from 10 morning coffees versus 10 afternoon ones.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many days of consistent hydration does it take to improve my temperature regulation?",
+        "type": "behavioral",
+        "thinking": "Fluid balance is crucial for thermoregulation. We should analyze your daily body temperature stability across a 21-day hydration challenge.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my weekend sleep-in days affect my temperature rhythm differently than workdays?",
+        "type": "behavioral",
+        "thinking": "Sleep schedule changes impact circadian biology. Let's compare your body temperature curves from 5 weekend days versus 5 matched workdays.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How does my post-workout cooldown routine affect my temperature recovery time?",
+        "type": "behavioral",
+        "thinking": "Active recovery may speed thermoregulation. We should measure how long it takes your body temperature to normalize after 10 workouts with versus without cooldowns.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does screen time before bed delay my nighttime temperature drop?",
+        "type": "behavioral",
+        "thinking": "Blue light may interfere with thermal regulation. Let's compare your pre-sleep body temperature decline on 10 nights with screens versus 10 without.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many days of sauna use does it take to see improved temperature resilience?",
+        "type": "behavioral",
+        "thinking": "Heat acclimation occurs gradually. We should track your body temperature responses to standard workouts across 30 days of regular sauna sessions.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my work-from-home days show different temperature patterns than office days?",
+        "type": "behavioral",
+        "thinking": "Environment affects thermoregulation. Let's compare your daytime body temperature profiles from 10 remote days versus 10 in-office days.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How quickly does my temperature adapt when switching from AC to natural ventilation?",
+        "type": "behavioral",
+        "thinking": "Climate control affects thermal flexibility. We should monitor your body temperature stability during the first 7 days of turning off air conditioning.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature respond differently to cardio versus weights workouts?",
+        "type": "behavioral",
+        "thinking": "Exercise modalities create distinct thermal demands. Let's compare your body temperature changes during 10 cardio sessions versus 10 strength sessions.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many nights of good sleep does it take to restore my temperature rhythm after travel?",
+        "type": "behavioral",
+        "thinking": "Jet lag disrupts circadian thermoregulation. We should track your nighttime body temperature patterns for 10 nights post-travel to map recovery.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my meal macros (carbs vs fats) affect my postprandial temperature differently?",
+        "type": "behavioral",
+        "thinking": "Nutrient types influence thermogenesis. Let's compare your body temperature changes after 10 high-carb meals versus 10 high-fat meals.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How does my temperature stability change during a 7-day digital detox?",
+        "type": "behavioral",
+        "thinking": "Screen reduction may improve autonomic function. We should monitor your body temperature variability throughout a week without digital devices.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature respond differently to morning versus evening yoga?",
+        "type": "behavioral",
+        "thinking": "Circadian timing affects exercise responses. Let's compare your body temperature changes from 10 AM yoga sessions versus 10 PM ones.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many days of consistent protein intake does it take to improve my thermal regulation?",
+        "type": "behavioral",
+        "thinking": "Amino acids support metabolic function. We should analyze your daily body temperature stability across a 14-day high-protein intervention.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my temperature patterns differ between high-stress and low-stress work weeks?",
+        "type": "behavioral",
+        "thinking": "Stress impacts thermoregulation. Let's compare your body temperature profiles from 5 high-pressure work weeks versus 5 relaxed ones.",
+        "numdays": 35,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How quickly does cold shower adaptation show in my temperature responses?",
+        "type": "behavioral",
+        "thinking": "Cold exposure training improves resilience. We should track your body temperature recovery times after cold showers across 21 consecutive days.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature maintain better stability on days I take walking meetings?",
+        "type": "behavioral",
+        "thinking": "Movement breaks affect metabolic regulation. Let's compare your afternoon body temperature patterns from 10 sedentary meeting days versus 10 walking ones.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many weeks of time-restricted eating until my fasting temperature stabilizes?",
+        "type": "behavioral",
+        "thinking": "Metabolic flexibility develops over time. We should monitor your morning body temperature consistency across 6 weeks of 16:8 intermittent fasting.",
+        "numdays": 42,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my temperature patterns differ between creative work days and analytical ones?",
+        "type": "behavioral",
+        "thinking": "Cognitive modes may affect physiology. Let's compare your body temperature profiles from 10 creative work days versus 10 analytical ones.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How does my temperature respond to different hydration beverages during workouts?",
+        "type": "behavioral",
+        "thinking": "Fluid composition affects cooling. We should compare your exercise body temperature changes with 10 water sessions versus 10 electrolyte drink sessions.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature rhythm adapt faster to daylight savings changes when I prepare in advance?",
+        "type": "behavioral",
+        "thinking": "Gradual adjustment may ease transitions. Let's compare your body temperature curve adaptation from 5 prepared time changes versus 5 unprepared ones.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many days of blue light blocking before bed until my sleep temperature improves?",
+        "type": "behavioral",
+        "thinking": "Light exposure affects circadian thermoregulation. We should track your nighttime body temperature patterns across 14 nights of blue light reduction.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my temperature recovery times improve after 4 weeks of breathwork training?",
+        "type": "behavioral",
+        "thinking": "Respiratory control influences autonomic function. Let's compare your post-exercise body temperature recovery before versus after a month of breathwork.",
+        "numdays": 56,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How does my temperature stability change during a 10-day elimination diet?",
+        "type": "behavioral",
+        "thinking": "Food sensitivities may affect thermoregulation. We should monitor your body temperature variability throughout a dietary elimination protocol.",
+        "numdays": 10,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature respond differently to outdoor versus treadmill running?",
+        "type": "behavioral",
+        "thinking": "Environment affects exercise thermogenesis. Let's compare your body temperature changes during 10 outdoor runs versus 10 matched treadmill sessions.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many nights of camping does it take for my temperature rhythm to sync with sunrise?",
+        "type": "behavioral",
+        "thinking": "Natural light resets circadian biology. We should track your body temperature curve alignment during a 7-day camping trip.",
+        "numdays": 7,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my temperature patterns differ between high-carb and low-carb training days?",
+        "type": "behavioral",
+        "thinking": "Fuel availability affects metabolic heat. Let's compare your workout body temperature profiles from 10 high-carb days versus 10 low-carb days.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How quickly does my temperature adapt when increasing workout intensity?",
+        "type": "behavioral",
+        "thinking": "Exercise progression requires thermal adaptation. We should monitor your body temperature responses across the first 14 days of intensified training.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature maintain better stability on days I practice gratitude journaling?",
+        "type": "behavioral",
+        "thinking": "Positive affect influences autonomic balance. Let's compare your body temperature variability from 15 journaling days versus 15 non-journaling days.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many weeks of magnesium supplementation until my nighttime temperature improves?",
+        "type": "behavioral",
+        "thinking": "Magnesium affects thermoregulation. We should track your sleep-phase body temperature patterns across 6 weeks of consistent magnesium intake.",
+        "numdays": 42,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my temperature responses differ between high-intensity and moderate workouts?",
+        "type": "behavioral",
+        "thinking": "Exercise intensity creates distinct thermal demands. Let's compare your body temperature changes during 10 HIIT sessions versus 10 steady-state cardio sessions.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How does my temperature stability change during a 30-day digital wellbeing challenge?",
+        "type": "behavioral",
+        "thinking": "Tech reduction may improve nervous system function. We should monitor your body temperature variability throughout a month of intentional tech use.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature respond differently to plant-based versus animal-based protein meals?",
+        "type": "behavioral",
+        "thinking": "Protein sources affect thermogenesis. Let's compare your postprandial body temperature changes after 10 plant protein meals versus 10 animal protein meals.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many days of morning sunlight exposure until my daytime temperature stabilizes?",
+        "type": "behavioral",
+        "thinking": "Natural light strengthens circadian rhythms. We should track your daytime body temperature consistency across 21 days of intentional morning light exposure.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my temperature patterns differ between focused work days and multitasking days?",
+        "type": "behavioral",
+        "thinking": "Cognitive style affects physiology. Let's compare your body temperature profiles from 10 deep work days versus 10 fragmented work days.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How quickly does my temperature adapt when switching to a standing desk?",
+        "type": "behavioral",
+        "thinking": "Posture changes affect circulation. We should monitor your body temperature stability during the first 14 days of using a standing workstation.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature maintain better stability on days I take omega-3 supplements?",
+        "type": "behavioral",
+        "thinking": "Anti-inflammatory fats may support thermoregulation. Let's compare your body temperature variability from 15 supplement days versus 15 non-supplement days.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many weeks of consistent sleep scheduling until my temperature rhythm sharpens?",
+        "type": "behavioral",
+        "thinking": "Sleep regularity strengthens circadian biology. We should track your body temperature curve definition across 6 weeks of strict sleep scheduling.",
+        "numdays": 42,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my temperature responses differ between social workouts and solo sessions?",
+        "type": "behavioral",
+        "thinking": "Social context affects exercise physiology. Let's compare your body temperature changes during 10 group workouts versus 10 individual ones.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How does my temperature stability change during a 14-day news fast?",
+        "type": "behavioral",
+        "thinking": "Stress reduction may improve autonomic balance. We should monitor your body temperature variability throughout a two-week break from news consumption.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature respond differently to morning versus afternoon caffeine?",
+        "type": "behavioral",
+        "thinking": "Circadian timing affects stimulant responses. Let's compare your body temperature changes from 10 AM coffees versus 10 PM ones.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many days of nasal breathing during exercise until my temperature regulation improves?",
+        "type": "behavioral",
+        "thinking": "Breathing style affects thermoregulation. We should track your workout body temperature stability across 21 days of conscious nasal breathing.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my temperature patterns differ between high-vegetable and low-vegetable days?",
+        "type": "behavioral",
+        "thinking": "Plant nutrients support metabolic function. Let's compare your body temperature profiles from 10 high-veg days versus 10 low-veg days.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How quickly does my temperature adapt when starting a new supplementation regimen?",
+        "type": "behavioral",
+        "thinking": "Nutrient adjustments require physiological adaptation. We should monitor your body temperature responses during the first 30 days of a new supplement protocol.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature maintain better stability on days I practice progressive muscle relaxation?",
+        "type": "behavioral",
+        "thinking": "Conscious relaxation may improve autonomic function. Let's compare your body temperature variability from 15 relaxation days versus 15 non-practice days.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many weeks of consistent hydration before my temperature regulation optimizes?",
+        "type": "behavioral",
+        "thinking": "Fluid balance develops gradually. We should track your body temperature stability across 8 weeks of monitored hydration tracking.",
+        "numdays": 56,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my temperature responses differ between outdoor and indoor cycling?",
+        "type": "behavioral",
+        "thinking": "Environmental factors affect exercise thermogenesis. Let's compare your body temperature changes during 10 outdoor bike rides versus 10 indoor ones.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How does my temperature stability change during a 21-day digital minimalism challenge?",
+        "type": "behavioral",
+        "thinking": "Tech reduction may lower stress responses. We should monitor your body temperature variability throughout a three-week intentional tech usage period.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature respond differently to complex carbs versus simple sugars pre-workout?",
+        "type": "behavioral",
+        "thinking": "Carbohydrate quality affects metabolic heat. Let's compare your exercise body temperature changes after 10 complex carb meals versus 10 simple sugar snacks.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many days of earthing/grounding until my nighttime temperature improves?",
+        "type": "behavioral",
+        "thinking": "Grounding may influence circadian biology. We should track your sleep-phase body temperature patterns across 14 days of regular earthing practice.",
+        "numdays": 14,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Do my temperature patterns differ between high-social and low-social days?",
+        "type": "behavioral",
+        "thinking": "Social interaction affects physiology. Let's compare your body temperature profiles from 10 highly social days versus 10 solitary ones.",
+        "numdays": 20,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How quickly does my temperature adapt when implementing a new sleep hygiene routine?",
+        "type": "behavioral",
+        "thinking": "Sleep improvements require physiological adjustment. We should monitor your body temperature responses during the first 21 nights of enhanced sleep habits.",
+        "numdays": 21,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "Does my temperature maintain better stability on days I take adaptogenic herbs?",
+        "type": "behavioral",
+        "thinking": "Adaptogens may support stress resilience. Let's compare your body temperature variability from 15 days with adaptogens versus 15 without.",
+        "numdays": 30,
+        "function": "get_body_temp_data"
+    },
+    {
+        "query": "How many weeks of cold exposure training until my temperature resilience improves?",
+        "type": "behavioral",
+        "thinking": "Cold adaptation occurs gradually. We should track your body temperature responses to standard cold exposure across 8 weeks of consistent practice.",
+        "numdays": 56,
+        "function": "get_body_temp_data"
+    }
+]

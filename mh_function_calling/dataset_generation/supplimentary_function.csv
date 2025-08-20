@@ -1,0 +1,13 @@
+Health Data,DataType,Function,Description
+Mood tracking,MoodRecord,get_mood_data,"Retrieve mood ratings, patterns, and emotional state tracking"
+Sleep quality,SleepQualityRecord,get_sleep_quality_data,"Get sleep quality from mental health perspective - insomnia, nightmares"
+Stress levels,StressRecord,get_stress_indicators,"Retrieve stress levels, triggers, and coping patterns"
+Anxiety symptoms,AnxietyRecord,get_anxiety_data,"Get anxiety severity, frequency, and trigger analysis"
+Depression screening,DepressionRecord,get_depression_data,"Retrieve depression scores, symptoms, and progression"
+Medication adherence,MedicationRecord,get_medication_data,"Get psychiatric medication compliance and side effects"
+Therapy sessions,TherapyRecord,get_therapy_notes,"Retrieve therapy session summaries and progress notes"
+Crisis indicators,CrisisRecord,get_crisis_assessment,"Get suicide risk, self-harm indicators, and safety planning"
+Cognitive function,CognitionRecord,get_cognitive_data,"Retrieve memory, concentration, and cognitive assessment data"
+Social functioning,SocialRecord,get_social_data,"Get social interaction patterns and relationship quality"
+Substance use,SubstanceRecord,get_substance_data,"Retrieve alcohol/drug use patterns and dependencies"
+Physical symptoms,SomaticRecord,get_somatic_symptoms,"Get physical symptoms related to mental health conditions"

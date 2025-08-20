@@ -1,0 +1,1759 @@
+[
+    {
+        "query": "I've been feeling sluggish lately. Can you check what I've been eating this week?",
+        "type": "symptom",
+        "thinking": "The user mentions feeling sluggish, which could be linked to their nutrition. Checking their dietary intake for the past week, as mentioned in the query, will help identify potential nutritional deficiencies or patterns contributing to their fatigue. The time window 'this week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I want to know if my diet has enough protein for the last 10 days.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests an analysis of protein intake over the last 10 days. Calling get_nutrition_data is appropriate to retrieve detailed dietary information for that period. The query specifies 'last 10 days,' so numdays is set to 10.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been skipping breakfast since Monday. How's that affecting my nutrition?",
+        "type": "behavioral",
+        "thinking": "The user indicates a change in behavior by skipping breakfast since Monday, which suggests a potential nutritional impact. Retrieving nutrition data from Monday (assuming today is Sunday, 6 days ago) will help assess the effects of this change. The time window 'since Monday' maps to 6 days, but I'll use 7 days as the minimum for consistency.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My energy feels like it's running on empty. What's my diet been like?",
+        "type": "metaphorical",
+        "thinking": "The user's metaphorical expression 'running on empty' suggests low energy, possibly tied to nutrition. To explore this, I'll retrieve their dietary data to check for imbalances or deficiencies. No specific time is mentioned, so I'll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I think my diet might be off since I started working late shifts two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user implies a concern about their diet due to a lifestyle change (late shifts) starting two weeks ago. Analyzing their nutrition data over this period will reveal any dietary shifts. The query specifies 'two weeks,' which maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you look at my carb intake for the past month?",
+        "type": "explicit",
+        "thinking": "The user directly asks for an analysis of carbohydrate intake over the past month. get_nutrition_data will provide the necessary dietary details. The query specifies 'past month,' which approximates to 30 days, the maximum for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been eating more fast food lately. How bad is it?",
+        "type": "behavioral",
+        "thinking": "The user mentions a recent increase in fast food consumption, indicating a behavioral change that could impact nutrition. Retrieving dietary data will help evaluate the nutritional consequences. No specific time is given, so I'll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I feel bloated all the time. Could my diet from the last two weeks be the cause?",
+        "type": "symptom",
+        "thinking": "The user reports bloating, a physical symptom that might be diet-related. Checking their nutrition data for the last two weeks, as specified, will help identify potential triggers like high-sodium or low-fiber intake. 'Last two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet's been a bit of a rollercoaster. Can you check it out?",
+        "type": "metaphorical",
+        "thinking": "The user's metaphor 'rollercoaster' suggests inconsistent or erratic eating habits. Retrieving nutrition data will help clarify these patterns. No time window is provided, so I'll default to 7 days to capture recent dietary behavior.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Since last Sunday, I've been trying to eat healthier. How am I doing?",
+        "type": "behavioral",
+        "thinking": "The user indicates a deliberate change in eating habits starting last Sunday, likely seeking validation of their efforts. get_nutrition_data will assess their dietary improvements. Assuming today is Sunday, 'since last Sunday' is 7 days, so numdays is set to 7.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Is my diet balanced enough for the last three weekends?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about the balance of their diet over the last three weekends. get_nutrition_data will provide insights into their weekend eating patterns. Three weekends (assuming Saturday and Sunday) span roughly 6 days of data, but I'll use 7 days as the minimum for a broader context.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I keep craving sweets. What's my sugar intake been like this month?",
+        "type": "symptom",
+        "thinking": "The user mentions cravings for sweets, a symptom that could relate to high or imbalanced sugar consumption. Retrieving nutrition data for the month, as specified, will help analyze their sugar intake. 'This month' approximates to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I might not be eating enough veggies. Can you check my diet?",
+        "type": "implicit",
+        "thinking": "The user expresses concern about insufficient vegetable intake, implying a need to evaluate their diet. get_nutrition_data will reveal their vegetable consumption and overall dietary balance. No time is specified, so I'll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My meals feel like they're stuck in a rut. What's been going on with my diet?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'stuck in a rut' suggests repetitive or uninspired eating habits. Analyzing nutrition data will highlight patterns or lack of variety. No time window is mentioned, so I'll use 7 days as the default for a recent overview.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been snacking a lot at night for the past 10 days. How's that impacting my diet?",
+        "type": "behavioral",
+        "thinking": "The user notes increased nighttime snacking, a behavioral change that could affect nutritional balance. get_nutrition_data for the past 10 days, as specified, will show the impact of these snacks. 'Past 10 days' directly maps to numdays 10.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you analyze my vitamin intake for the last two weeks?",
+        "type": "explicit",
+        "thinking": "The user directly requests an analysis of vitamin intake over the last two weeks. get_nutrition_data will provide detailed nutritional information for this period. 'Last two weeks' corresponds to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I feel like my diet's been all over the place since the holidays.",
+        "type": "metaphorical",
+        "thinking": "The user's phrase 'all over the place' suggests chaotic or inconsistent eating since the holidays. Assuming recent holidays (e.g., about a month ago), I'll retrieve nutrition data to assess this. The query implies a longer period, so I'll use 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My stomach's been upset lately. Could my diet from the past week be why?",
+        "type": "symptom",
+        "thinking": "The user reports an upset stomach, a symptom potentially linked to diet. Checking their nutrition data for the past week, as mentioned, will help identify possible dietary causes. 'Past week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I started cutting out dairy last month. How's my nutrition looking?",
+        "type": "behavioral",
+        "thinking": "The user mentions eliminating dairy, a significant dietary change that could affect nutrient intake. get_nutrition_data for the last month, as specified, will reveal the impact on their nutrition. 'Last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I wonder if my diet's been healthy enough this week.",
+        "type": "implicit",
+        "thinking": "The user implicitly questions the healthiness of their diet for this week. Retrieving nutrition data will provide insights into their dietary quality. The query specifies 'this week,' which maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you check if I'm getting enough fiber for the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks about fiber intake over the last 15 days. get_nutrition_data will provide the necessary dietary details to evaluate this. The query specifies 'last 15 days,' so numdays is set to 15.",
+        "numdays": 15,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been stress-eating a lot. What’s my diet been like?",
+        "type": "behavioral",
+        "thinking": "The user mentions stress-eating, a behavioral pattern that could lead to nutritional imbalances. Retrieving nutrition data will help assess the impact. No time is specified, so I'll default to 7 days for a recent perspective.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet feels like a sinking ship. Can you look into it?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'sinking ship' implies a diet in disarray or decline. Analyzing nutrition data will reveal problematic patterns. No time window is provided, so I'll use 7 days as the default for recent data.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been super tired since last Friday. Is my diet to blame?",
+        "type": "symptom",
+        "thinking": "The user reports fatigue since last Friday, suggesting a possible dietary link. get_nutrition_data for this period will help identify nutritional factors. Assuming today is Thursday, 'since last Friday' is 6 days, but I'll use 7 days as the minimum.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I might be overdoing the caffeine. Can you check my intake for the last two weeks?",
+        "type": "implicit",
+        "thinking": "The user implies concern about excessive caffeine consumption. Retrieving nutrition data for the last two weeks, as specified, will quantify their intake. 'Last two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you tell me about my calorie intake since the start of the month?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests calorie intake data since the start of the month. get_nutrition_data will provide this information. Assuming the month started about 5 days ago (if today is August 5), I'll use 5 days for numdays.",
+        "numdays": 5,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been eating out a lot since my trip last week. How’s that affecting me?",
+        "type": "behavioral",
+        "thinking": "The user notes increased eating out since a trip last week, indicating a dietary change. get_nutrition_data will assess the nutritional impact. 'Last week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet’s been a patchwork quilt lately. What’s the big picture?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'patchwork quilt' suggests a fragmented or inconsistent diet. Retrieving nutrition data will provide a comprehensive view. No time is specified, so I'll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been having headaches for the past 10 days. Could my diet be involved?",
+        "type": "symptom",
+        "thinking": "The user reports headaches, a symptom that might be diet-related. Checking nutrition data for the past 10 days, as specified, will help identify potential triggers like dehydration or excessive sodium. 'Past 10 days' maps to numdays 10.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’m worried my diet’s too heavy on carbs this month.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about excessive carbohydrate intake this month. get_nutrition_data will quantify their carb consumption. 'This month' approximates to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you review my fat intake for the last three weeks?",
+        "type": "explicit",
+        "thinking": "The user directly requests an analysis of fat intake over the last three weeks. get_nutrition_data will provide the relevant data. 'Last three weeks' maps to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been trying vegan meals since last Monday. How’s my nutrition holding up?",
+        "type": "behavioral",
+        "thinking": "The user mentions adopting vegan meals, a significant dietary shift since last Monday. Retrieving nutrition data will assess nutrient balance. Assuming today is Sunday, 'since last Monday' is 6 days, but I'll use 7 days as the minimum.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet feels like it’s spiraling. Can you check what’s going on?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'spiraling' suggests a diet out of control. Analyzing nutrition data will clarify the extent of this issue. No time is mentioned, so I'll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been feeling off since cutting out gluten two weeks ago. What’s my diet like now?",
+        "type": "symptom",
+        "thinking": "The user reports feeling 'off' after eliminating gluten, indicating a potential dietary issue. get_nutrition_data for the last two weeks will reveal changes in their diet. 'Two weeks ago' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I might not be getting enough iron. Can you look at my diet?",
+        "type": "implicit",
+        "thinking": "The user implies concern about low iron intake, suggesting a need for dietary analysis. get_nutrition_data will check their iron consumption. No time is specified, so I'll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you check my sodium intake for the past 20 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests sodium intake data for the past 20 days. get_nutrition_data will provide this information. The query specifies 'past 20 days,' so numdays is set to 20.",
+        "numdays": 20,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been eating more processed foods since my new job started. How’s that going?",
+        "type": "behavioral",
+        "thinking": "The user notes increased processed food consumption tied to a new job, indicating a dietary shift. Retrieving nutrition data will assess the impact. No specific time is given, but assuming the job started recently, I'll use 7 days as the default.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet’s been like a house of cards. Can you see what’s wrong?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'house of cards' implies a fragile or unstable diet. get_nutrition_data will reveal underlying issues. No time window is provided, so I'll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been irritable lately. Could my diet from the last week be a factor?",
+        "type": "symptom",
+        "thinking": "The user reports irritability, a symptom possibly linked to diet. Checking nutrition data for the last week, as specified, will help identify factors like sugar spikes or nutrient deficiencies. 'Last week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’m worried I’m not eating enough healthy fats this month.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about insufficient healthy fat intake. get_nutrition_data will evaluate their fat consumption for the month. 'This month' approximates to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you look at my sugar intake since last weekend?",
+        "type": "explicit",
+        "thinking": "The user directly asks for sugar intake data since last weekend. get_nutrition_data will provide the details. Assuming today is Sunday, 'since last weekend' (Saturday-Sunday) is about 7 days, so numdays is set to 7.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been drinking more energy drinks lately. How’s that affecting my diet?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased energy drink consumption, a behavior that could impact nutrition. Retrieving nutrition data will quantify this effect. No time is specified, so I'll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet’s been a bit of a trainwreck. What’s the damage?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'trainwreck' suggests a severely disrupted diet. get_nutrition_data will assess the extent of the issue. No time window is provided, so I'll use 7 days as the default for recent data.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been feeling foggy for the past two weeks. Is my diet involved?",
+        "type": "symptom",
+        "thinking": "The user reports mental fogginess, a symptom that could be diet-related. Checking nutrition data for the past two weeks, as specified, will help identify potential causes like low B vitamins. 'Past two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I might be eating too much junk food. Can you check my diet?",
+        "type": "implicit",
+        "thinking": "The user implies concern about excessive junk food consumption. get_nutrition_data will evaluate their dietary patterns. No time is specified, so I'll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you analyze my protein intake for the last 25 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests protein intake data for the last 25 days. get_nutrition_data will provide the necessary details. The query specifies 'last 25 days,' so numdays is set to 25.",
+        "numdays": 25,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been cutting back on carbs since last Tuesday. How’s my diet now?",
+        "type": "behavioral",
+        "thinking": "The user indicates a deliberate reduction in carb intake since last Tuesday. Retrieving nutrition data will assess the impact of this change. Assuming today is Monday, 'since last Tuesday' is 6 days, but I'll use 7 days as the minimum.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet feels like it’s falling apart. Can you take a look?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'falling apart' suggests a disorganized or poor diet. Analyzing nutrition data will clarify the issue. No time is mentioned, so I'll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been having muscle cramps this week. Could my diet be the cause?",
+        "type": "symptom",
+        "thinking": "The user reports muscle cramps, a symptom potentially linked to diet (e.g., low magnesium or potassium). Checking nutrition data for this week, as specified, will help identify causes. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’m not sure if I’m eating enough calories since starting my new workout routine last month.",
+        "type": "implicit",
+        "thinking": "The user implies concern about calorie intake due to a new workout routine. get_nutrition_data for the last month will assess their calorie consumption. 'Last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been eating a lot of fast food over the past two weeks and feel sluggish. Could this be related?",
+        "type": "symptom",
+        "thinking": "The user is connecting their fast food consumption to feeling sluggish, implying a nutritional cause for their physical state. The get_nutrition_data function is needed to analyze their recent diet patterns. They specified 'past two weeks', so we'll use 14 days for the analysis.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you show me my protein intake since I started weight training last month?",
+        "type": "explicit",
+        "thinking": "This is a direct request for protein intake data correlated with a new exercise regimen. We need get_nutrition_data to track macronutrients. 'Since last month' suggests approximately 30 days of data.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My energy crashes around 3pm every day. Could my lunch choices be affecting this?",
+        "type": "implicit",
+        "thinking": "The user hints at a potential connection between midday meals and energy levels without directly asking for nutrition data. The function is justified to examine lunch composition. No specific time given, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've switched to a plant-based diet and feel like I'm floating on clouds!",
+        "type": "behavioral",
+        "thinking": "The user reports positive effects from a dietary change, suggesting interest in how nutrition impacts wellbeing. get_nutrition_data can quantify this transition. No timeframe mentioned, using default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My stomach has been a stormy sea since the holidays ended.",
+        "type": "metaphorical",
+        "thinking": "The metaphorical language suggests digestive issues potentially linked to post-holiday eating patterns. Nutritional analysis is warranted to identify correlations. 'Since holidays ended' implies about 10 days for many cultures.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Have I been getting enough fiber in the last week?",
+        "type": "explicit",
+        "thinking": "Clear request for fiber intake analysis over a specific period. Directly calls for get_nutrition_data functionality. 'Last week' clearly indicates 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My skin broke out after that weekend barbecue fest.",
+        "type": "symptom",
+        "thinking": "User associates skin issues with a specific eating event. Nutritional data can help identify potential dietary triggers. 'Weekend barbecue fest' suggests focusing on past 3-4 days.",
+        "numdays": 4,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been meal prepping religiously but don't feel any different.",
+        "type": "behavioral",
+        "thinking": "Expresses disappointment that a behavior change (meal prepping) hasn't yielded expected results. Nutritional analysis can assess if intake has actually changed. No timeframe specified, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Is there a pattern to my late-night snacking?",
+        "type": "implicit",
+        "thinking": "Indirect concern about nighttime eating habits that requires nutritional pattern analysis. The function can identify timing and composition of snacks. No time window given, using 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet has been a rollercoaster since my work project started.",
+        "type": "metaphorical",
+        "thinking": "Figurative language suggests unstable eating patterns correlated with work stress. Nutritional data can quantify these fluctuations. 'Since project started' likely refers to about 2 weeks for most projects.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Show me my caffeine consumption over the past 5 days.",
+        "type": "explicit",
+        "thinking": "Direct request for specific nutrient data over a precise timeframe. Clearly requires get_nutrition_data. User specified exactly 5 days.",
+        "numdays": 5,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I feel like a balloon after meals lately.",
+        "type": "metaphorical",
+        "thinking": "Metaphor suggests bloating after eating, implying interest in meal composition. Nutritional analysis can identify potential culprits. 'Lately' with no specifics defaults to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Have my vitamin C levels improved since I started eating more citrus?",
+        "type": "behavioral",
+        "thinking": "Links behavior change (increased citrus) to nutritional outcome. Requires vitamin tracking via get_nutrition_data. 'Since started' implies needing data since behavior began, approximately 10 days for new habits.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My joints ache more when I eat certain foods.",
+        "type": "implicit",
+        "thinking": "Suggests but doesn't directly state need for dietary analysis related to joint pain. Nutritional data can help identify correlations. No timeframe mentioned, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Breakdown my carb intake by meal for the past 3 days.",
+        "type": "explicit",
+        "thinking": "Clear, specific request for macronutrient data segmented by meal timing. Exactly matches get_nutrition_data capabilities. Precisely asks for 3 days.",
+        "numdays": 3,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I'm a bottomless pit this week - why am I so hungry?",
+        "type": "metaphorical",
+        "thinking": "Figurative language describes increased hunger needing nutritional interpretation. Analyzing intake patterns may reveal causes. Specifies 'this week' (7 days).",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Since switching to night shifts, my eating feels off.",
+        "type": "behavioral",
+        "thinking": "Reports dietary disruption following schedule change. Nutritional analysis can quantify these changes. 'Since switching' implies needing data since transition, approximately 14 days for adjustment period.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Do I eat more processed foods when stressed?",
+        "type": "implicit",
+        "thinking": "Asks indirectly about stress-eating patterns requiring nutritional correlation. get_nutrition_data can compare intake during different states. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My lunch salads don't seem to keep me full through the afternoon.",
+        "type": "symptom",
+        "thinking": "Describes physical experience (hunger) potentially linked to meal composition. Nutritional analysis can assess salad content. No specific time, using 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Give me a sugar report for the last 10 days.",
+        "type": "explicit",
+        "thinking": "Direct command for specific nutrient analysis over defined period. Perfect use case for get_nutrition_data. Precisely requests 10 days.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've become a grazing animal since working from home.",
+        "type": "metaphorical",
+        "thinking": "Figurative language describes constant snacking behavior. Nutritional data can quantify this grazing pattern. 'Since WFH' suggests needing data since routine changed, approximately 21 days.",
+        "numdays": 21,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My energy dips after breakfast - should I change what I eat?",
+        "type": "symptom",
+        "thinking": "Links morning meal to subsequent energy crash, implying nutritional interest. Analyzing breakfast composition is warranted. No timeframe specified, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Have I reduced my sodium intake like my doctor suggested last visit?",
+        "type": "behavioral",
+        "thinking": "Asks about progress on prescribed dietary change. Requires sodium tracking via get_nutrition_data. 'Since last visit' typically means 30 days in medical context.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I think my hydration affects my mood more than I realized.",
+        "type": "implicit",
+        "thinking": "Suggests but doesn't directly request fluid intake analysis related to emotions. Justifies examining beverage consumption. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Compare my weekend eating to weekdays over the past month.",
+        "type": "explicit",
+        "thinking": "Clear request for nutritional comparison across time segments. Directly requires get_nutrition_data capabilities. Specifies 'past month' (30 days).",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My stomach is a ticking time bomb after dairy.",
+        "type": "metaphorical",
+        "thinking": "Figurative language suggests lactose intolerance symptoms. Nutritional analysis can confirm dairy consumption patterns. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been craving red meat constantly this past week.",
+        "type": "behavioral",
+        "thinking": "Reports unusual food cravings as behavior change. Nutritional data can assess iron/protein intake. Specifies 'past week' (7 days).",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Do I consume more calories when I skip breakfast?",
+        "type": "implicit",
+        "thinking": "Implies question about compensatory eating patterns without directly asking. Requires meal timing and calorie analysis. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I feel like my lunch isn't giving me enough fuel for my workouts.",
+        "type": "symptom",
+        "thinking": "Expresses physical experience suggesting nutritional inadequacy. Analyzing lunch composition relative to exercise is warranted. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Show me my iron intake since starting these new supplements.",
+        "type": "explicit",
+        "thinking": "Direct request for nutrient tracking related to supplementation. Perfect for get_nutrition_data. 'Since starting' implies supplement duration, approximately 14 days.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet goes off the rails when I travel.",
+        "type": "metaphorical",
+        "thinking": "Figurative language describes dietary disruption during trips. Nutritional analysis can quantify travel-related changes. No specific trips mentioned, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Have I eaten more vegetables since joining the CSA three weeks ago?",
+        "type": "behavioral",
+        "thinking": "Asks about dietary change following CSA enrollment. Requires produce consumption analysis. Specifies 'three weeks ago' (21 days).",
+        "numdays": 21,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I get headaches when I don't eat regularly.",
+        "type": "implicit",
+        "thinking": "Suggests but doesn't directly request meal timing analysis related to symptoms. Nutritional pattern examination is justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Breakdown my dinner calories for the past fortnight.",
+        "type": "explicit",
+        "thinking": "Clear request for meal-specific nutrient data over defined period. Directly requires get_nutrition_data. 'Fortnight' means 14 days.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My energy levels are like a yo-yo depending on what I eat.",
+        "type": "metaphorical",
+        "thinking": "Figurative language connects diet to energy fluctuations. Nutritional analysis can identify problematic foods. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been unconsciously snacking while watching TV these days.",
+        "type": "behavioral",
+        "thinking": "Reports automatic eating behavior needing quantification. get_nutrition_data can assess snack patterns. 'These days' suggests recent period, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Do I consume more alcohol on weekends than I realize?",
+        "type": "implicit",
+        "thinking": "Implies question about drinking patterns without directly asking. Requires beverage analysis. No timeframe, default 7 days to capture weekend comparison.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I feel bloated after eating out - is it the salt?",
+        "type": "symptom",
+        "thinking": "Connects restaurant meals to physical symptom, implying nutritional interest. Analyzing sodium in dining-out meals is warranted. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Give me a macronutrient pie chart for the last 15 days.",
+        "type": "explicit",
+        "thinking": "Direct, specific request for formatted nutritional data over precise period. Exactly matches get_nutrition_data capabilities. Clearly requests 15 days.",
+        "numdays": 15,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My willpower against sweets disappears by Wednesday.",
+        "type": "metaphorical",
+        "thinking": "Figurative language describes weekly sugar craving pattern. Nutritional analysis can quantify midweek treat consumption. Implies weekly cycle (7 days).",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been eating more mindfully since the meditation retreat.",
+        "type": "behavioral",
+        "thinking": "Reports intentional dietary change following an event. Nutritional data can assess if intake has changed. 'Since retreat' implies needing data since return, approximately 10 days.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Does my water intake correlate with my afternoon headaches?",
+        "type": "implicit",
+        "thinking": "Suggests but doesn't directly request hydration-symptom analysis. Fluid tracking is justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I crash every day at 4pm no matter what I eat for lunch.",
+        "type": "symptom",
+        "thinking": "Describes consistent energy dip potentially related to nutrition. Meal composition analysis may reveal patterns. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Show me my fiber trends over the past 3 weeks.",
+        "type": "explicit",
+        "thinking": "Clear request for nutrient trend analysis over specific duration. Directly requires get_nutrition_data. Precisely asks for 21 days.",
+        "numdays": 21,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My appetite is a furnace since I started this training program.",
+        "type": "metaphorical",
+        "thinking": "Figurative language describes increased hunger from exercise. Nutritional analysis can quantify increased intake. 'Since program started' implies about 14 days for new routines.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been reaching for comfort food more during this rainy spell.",
+        "type": "behavioral",
+        "thinking": "Reports weather-influenced dietary change needing quantification. get_nutrition_data can identify comfort food patterns. 'Rainy spell' suggests about 5 days of weather.",
+        "numdays": 5,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Do I eat differently when I'm working late?",
+        "type": "implicit",
+        "thinking": "Implies question about work hours affecting diet without directly asking. Requires meal timing analysis. No timeframe, default 7 days to capture work patterns.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My digestion feels off since adding more protein to my diet.",
+        "type": "symptom",
+        "thinking": "Connects dietary change to physical symptoms. Nutritional analysis can assess protein increase timing and amounts. 'Since adding' implies change began approximately 10 days ago.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Compare my caffeine intake on workdays vs weekends for the past month.",
+        "type": "explicit",
+        "thinking": "Direct request for segmented nutrient comparison over defined period. Perfect use of get_nutrition_data. Specifies 'past month' (30 days).",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My willpower is a sandcastle against office donuts.",
+        "type": "metaphorical",
+        "thinking": "Figurative language describes difficulty resisting workplace treats. Nutritional analysis can quantify office snack consumption. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been intermittent fasting for 10 days - how's my nutrient balance?",
+        "type": "behavioral",
+        "thinking": "Reports specific dietary practice and requests nutritional assessment. Requires analysis of eating window nutrition. Precisely states 10 day duration.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Do I consume more empty calories when I'm tired?",
+        "type": "implicit",
+        "thinking": "Suggests but doesn't directly ask about fatigue-nutrition connection. Justifies analyzing snack quality relative to energy levels. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you show me what I’ve been eating this week?",
+        "type": "explicit",
+        "thinking": "The user is directly requesting a review of their dietary intake. It's appropriate to call get_nutrition_data to retrieve detailed nutrition information. The phrase 'this week' indicates a time window of 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I feel like my eating habits have been off lately.",
+        "type": "symptom",
+        "thinking": "The user is expressing a concern about possible unhealthy dietary patterns. Retrieving nutrition data can help validate and analyze this change. Since no specific time is mentioned, defaulting to the past 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Just wondering how my meals have looked over the past 10 days.",
+        "type": "explicit",
+        "thinking": "The user is curious about their nutrition over a defined period. Calling get_nutrition_data will help provide insights into their dietary intake. 'Past 10 days' maps directly to numdays = 10.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Ever since the holidays, I've been snacking way too much.",
+        "type": "behavioral",
+        "thinking": "The user is describing a behavioral shift in snacking since a reference point. Calling get_nutrition_data will help review their diet. 'Since the holidays' is interpreted as the past 20 days.",
+        "numdays": 20,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been eating more veggies, but I’m not sure if I’m balanced.",
+        "type": "implicit",
+        "thinking": "The user hints at concern about dietary balance despite positive changes. Retrieving nutrition data helps analyze whether all nutrient groups are met. No timeframe mentioned, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Track what I ate since last Friday.",
+        "type": "explicit",
+        "thinking": "The user wants a log of their nutrition starting from a specific day. Calling get_nutrition_data provides that dietary overview. 'Since last Friday' is interpreted as 5 days.",
+        "numdays": 5,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Food's been weird lately—can we look into that?",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically describes a shift in eating habits. get_nutrition_data will help uncover objective patterns. 'Lately' is vague, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Last three weekends were full of junk food. Can we assess that?",
+        "type": "behavioral",
+        "thinking": "The user mentions specific periods with poor nutrition. get_nutrition_data will help review those patterns. 'Last three weekends' maps to 15 days.",
+        "numdays": 15,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My energy’s been low. Could it be something I’m eating?",
+        "type": "symptom",
+        "thinking": "The user is experiencing fatigue possibly related to diet. Calling get_nutrition_data will help identify any deficiencies or excesses. No time mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’d like a summary of what I’ve been eating this month.",
+        "type": "explicit",
+        "thinking": "The user is asking for a summary of nutritional intake. get_nutrition_data will provide a comprehensive view. 'This month' is interpreted as 30 days.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "What does my meal data look like since Sunday?",
+        "type": "explicit",
+        "thinking": "The user wants to see their nutritional habits starting from Sunday. get_nutrition_data is appropriate here. Assuming it's Tuesday, 'since Sunday' equals 2 days, but for coverage, using 3 days.",
+        "numdays": 3,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My clothes feel tighter this week.",
+        "type": "symptom",
+        "thinking": "The user is noticing physical symptoms that may be linked to diet. Reviewing nutrition through get_nutrition_data can help identify dietary causes. 'This week' implies 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve tried eating cleaner the past 8 days. How’s it going?",
+        "type": "behavioral",
+        "thinking": "The user made a behavior change and wants feedback. get_nutrition_data will help analyze this shift. 'Past 8 days' maps to numdays = 8.",
+        "numdays": 8,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can we look at my meals from the last 5 days?",
+        "type": "explicit",
+        "thinking": "The user is directly requesting nutritional data. get_nutrition_data will provide detailed insights. 'Last 5 days' maps to numdays = 5.",
+        "numdays": 5,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been stress eating again.",
+        "type": "behavioral",
+        "thinking": "The user reports a recurring eating behavior under emotional stress. get_nutrition_data helps evaluate the extent and impact. No time given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Lately, my meals haven’t felt satisfying.",
+        "type": "symptom",
+        "thinking": "The user describes a subjective symptom related to food. get_nutrition_data can help examine caloric and nutritional adequacy. 'Lately' defaults to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Is it just me or have I been eating more carbs recently?",
+        "type": "implicit",
+        "thinking": "The user suspects a dietary trend and seeks confirmation. get_nutrition_data will reveal macronutrient breakdown. 'Recently' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Something’s been off with my food the past week.",
+        "type": "symptom",
+        "thinking": "The user suspects a dietary issue is affecting them. Reviewing data through get_nutrition_data will help clarify. 'Past week' is 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "How healthy was my eating over the last two weeks?",
+        "type": "explicit",
+        "thinking": "The user seeks a nutritional health check over a defined period. get_nutrition_data will offer a breakdown. 'Last two weeks' is 14 days.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Ever since I started meal prepping, I feel more in control.",
+        "type": "behavioral",
+        "thinking": "The user reflects on a positive dietary change. get_nutrition_data will validate and assess nutritional patterns. No timeframe given, so use 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been relying on takeout lately. Is it showing in my nutrition?",
+        "type": "implicit",
+        "thinking": "The user hints at concern about the health impact of frequent takeout. get_nutrition_data can confirm dietary quality. No specific time is provided, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Let’s review my food choices over the past 10 days.",
+        "type": "explicit",
+        "thinking": "The user wants to evaluate dietary decisions over a defined period. get_nutrition_data will retrieve the necessary details. 'Past 10 days' means numdays = 10.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I think I’ve been skipping breakfast too often.",
+        "type": "behavioral",
+        "thinking": "The user is acknowledging a pattern in their meals. Reviewing nutrition data will help quantify the behavior. No time mentioned, so using default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My stomach feels off—could it be my meals lately?",
+        "type": "symptom",
+        "thinking": "The user reports physical discomfort possibly linked to diet. get_nutrition_data helps investigate recent intake. 'Lately' maps to 7 days by default.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can we pull my nutrition info from the last three weekends?",
+        "type": "explicit",
+        "thinking": "The user requests specific nutritional data related to weekends. get_nutrition_data will help evaluate those patterns. 'Last three weekends' approximates to 15 days.",
+        "numdays": 15,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Why do I feel so bloated after meals this week?",
+        "type": "symptom",
+        "thinking": "The user is experiencing bloating and suspects dietary causes. get_nutrition_data is needed to examine meals. 'This week' is 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been trying intermittent fasting. How’s my nutrition holding up?",
+        "type": "behavioral",
+        "thinking": "The user is experimenting with a new eating pattern and wants to assess its impact. get_nutrition_data will provide clarity. No time specified, so using 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Food-wise, how have I done since the start of the month?",
+        "type": "explicit",
+        "thinking": "The user wants a nutritional summary starting from a point in time. get_nutrition_data will provide that data. Assuming it's the 20th, that's 20 days.",
+        "numdays": 20,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I feel like I haven’t eaten enough protein recently.",
+        "type": "implicit",
+        "thinking": "The user suspects a nutrient imbalance. Retrieving macronutrient breakdown with get_nutrition_data can verify this. 'Recently' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Show me what my meals have looked like the last 8 days.",
+        "type": "explicit",
+        "thinking": "The user asks for a direct dietary breakdown. get_nutrition_data is suitable. 'Last 8 days' = numdays 8.",
+        "numdays": 8,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been eating like a garbage truck this week.",
+        "type": "metaphorical",
+        "thinking": "The user humorously implies poor eating habits. get_nutrition_data can confirm the quality of their intake. 'This week' equals 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My cravings have been wild lately.",
+        "type": "symptom",
+        "thinking": "The user is noticing increased cravings, possibly due to imbalanced meals. get_nutrition_data can identify patterns. 'Lately' defaults to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Let’s see how my diet has shifted since I started therapy.",
+        "type": "behavioral",
+        "thinking": "The user suspects a connection between mental health support and diet. get_nutrition_data can help track changes. No exact time provided, so using 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "What’s been going into my body this past fortnight?",
+        "type": "explicit",
+        "thinking": "The user wants a detailed nutritional review over the last 14 days. get_nutrition_data will help. 'Past fortnight' = 14 days.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve had way too many cheat days recently.",
+        "type": "implicit",
+        "thinking": "The user hints at frequent indulgences. get_nutrition_data helps verify this trend. 'Recently' means 7 days by default.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "How bad was my eating during the holidays?",
+        "type": "explicit",
+        "thinking": "The user wants to assess holiday eating patterns. get_nutrition_data helps evaluate intake during that period. 'During the holidays' is roughly 20 days.",
+        "numdays": 20,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "It’s like I’ve been feeding stress instead of myself.",
+        "type": "metaphorical",
+        "thinking": "The user symbolically associates eating with emotional stress. get_nutrition_data can provide insight into recent patterns. No time stated, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Do my recent meals reflect my new diet goals?",
+        "type": "implicit",
+        "thinking": "The user is indirectly checking alignment with health goals. get_nutrition_data will help compare trends. 'Recent' defaults to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I want to understand what I’ve been eating since last Monday.",
+        "type": "explicit",
+        "thinking": "The user asks for a nutritional breakdown starting from a specific day. get_nutrition_data is needed. 'Since last Monday' is 8 days.",
+        "numdays": 8,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve stopped logging food. Can we see how that’s affected my diet?",
+        "type": "behavioral",
+        "thinking": "The user is noting a change in food tracking behavior. get_nutrition_data helps evaluate if diet quality shifted. No specific time mentioned, so using 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Every meal this week felt like a sugar bomb.",
+        "type": "metaphorical",
+        "thinking": "The user is exaggerating the sweetness of recent meals. get_nutrition_data can confirm sugar intake. 'This week' equals 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’m feeling sluggish—maybe my food is to blame?",
+        "type": "symptom",
+        "thinking": "The user suspects diet is affecting energy levels. get_nutrition_data can highlight any issues. No time mentioned, so 7 days by default.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Could we go over what I’ve been eating over the past two weekends?",
+        "type": "explicit",
+        "thinking": "The user requests a weekend-specific nutrition review. get_nutrition_data can offer insights. 'Two weekends' approximates to 10 days.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been juicing a lot lately. Is it helping?",
+        "type": "behavioral",
+        "thinking": "The user is trying a new dietary approach and seeks feedback. get_nutrition_data will help assess impact. 'Lately' means 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Food-wise, it’s been chaos since exams ended.",
+        "type": "metaphorical",
+        "thinking": "The user figuratively describes disordered eating. get_nutrition_data will help quantify this. Assuming exams ended 10 days ago.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Did I get enough iron this week?",
+        "type": "explicit",
+        "thinking": "The user is asking about a specific nutrient. get_nutrition_data will provide micronutrient data. 'This week' = 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "It feels like I’ve been living on bread and coffee.",
+        "type": "metaphorical",
+        "thinking": "The user figuratively implies limited food variety. get_nutrition_data helps verify intake patterns. No time stated, default to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I want to reflect on how I’ve eaten over the last 12 days.",
+        "type": "explicit",
+        "thinking": "The user seeks a dietary reflection. get_nutrition_data can retrieve intake over that time. 'Last 12 days' means 12 days.",
+        "numdays": 12,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I haven't had the appetite to cook much lately.",
+        "type": "symptom",
+        "thinking": "The user may be skipping meals or undernourished. get_nutrition_data will provide insight. 'Lately' defaults to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "How balanced has my diet been over the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user is looking for a nutritional balance check. get_nutrition_data can provide macronutrient insights. 'Past two weeks' = 14 days.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been feeling super anxious lately. Could my diet over the past two weeks be a factor?",
+        "type": "symptom",
+        "thinking": "The user reports anxiety, which may be influenced by dietary factors like high caffeine or low nutrient intake. Retrieving nutrition data for the past two weeks, as mentioned, will help identify potential triggers. 'Past two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you check if I’m getting enough calcium since I stopped drinking milk last month?",
+        "type": "explicit",
+        "thinking": "The user directly asks about calcium intake after cutting out milk, indicating a specific dietary concern. get_nutrition_data will provide details on their calcium sources. The query specifies 'last month,' which maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been eating a lot of takeout since starting my new job. What’s that doing to my diet?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased takeout consumption due to a job change, suggesting a shift in eating habits. Analyzing nutrition data will reveal the impact of this behavior. No specific time is given, so I’ll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet’s been like a wildfire lately. Can you figure out what’s going on?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'wildfire' suggests an uncontrolled or chaotic diet. Retrieving nutrition data will help identify patterns or imbalances. No time window is provided, so I’ll use 7 days as the default for recent data.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’m worried I might not be eating enough fruits lately. Can you check?",
+        "type": "implicit",
+        "thinking": "The user implies concern about low fruit intake, suggesting a need for dietary evaluation. get_nutrition_data will assess their fruit consumption and overall diet. No time is specified, so I’ll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you look at my vitamin D intake for the past 20 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests an analysis of vitamin D intake over the past 20 days. get_nutrition_data will provide the necessary nutritional details. The query specifies 'past 20 days,' so numdays is set to 20.",
+        "numdays": 20,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been grabbing quick snacks instead of meals since last Tuesday. How’s my nutrition looking?",
+        "type": "behavioral",
+        "thinking": "The user indicates a shift to snacking over full meals, which could affect nutrient balance. Retrieving nutrition data since last Tuesday (assuming today is Monday, 6 days ago) will assess this change. I’ll use 7 days as the minimum for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been so moody this week. Could my diet be messing with me?",
+        "type": "symptom",
+        "thinking": "The user reports moodiness, a symptom that might be linked to dietary factors like sugar spikes or low omega-3s. Checking nutrition data for this week, as specified, will help identify potential causes. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet feels like it’s stuck in quicksand. Can you help me sort it out?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'stuck in quicksand' implies a diet that’s difficult to manage or improve. Analyzing nutrition data will reveal underlying issues. No time is mentioned, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I might be eating too much processed sugar. Can you take a look at my diet?",
+        "type": "implicit",
+        "thinking": "The user expresses concern about excessive processed sugar intake. get_nutrition_data will quantify their sugar consumption and overall diet. No time is specified, so I’ll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you review my omega-3 intake for the last three weeks?",
+        "type": "explicit",
+        "thinking": "The user directly requests an analysis of omega-3 intake over the last three weeks. get_nutrition_data will provide the relevant data. 'Last three weeks' maps to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been trying to eat more plant-based meals since last Sunday. How am I doing?",
+        "type": "behavioral",
+        "thinking": "The user mentions a shift toward plant-based meals, indicating a dietary change. Retrieving nutrition data since last Sunday (assuming today is Monday, 8 days ago) will evaluate their progress. I’ll use 8 days for numdays to cover the period.",
+        "numdays": 8,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been feeling really low-energy since last weekend. Is my diet the problem?",
+        "type": "symptom",
+        "thinking": "The user reports low energy, potentially linked to diet. Checking nutrition data since last weekend (assuming Saturday-Sunday, about 9 days ago) will help identify causes like low iron or carbs. I’ll use 9 days for numdays.",
+        "numdays": 9,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’m not sure if my diet’s been balanced since I moved last month.",
+        "type": "implicit",
+        "thinking": "The user implies concern about dietary balance after a move, suggesting lifestyle changes. get_nutrition_data for the last month will assess their diet. 'Last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet’s been like a stormy sea. Can you check what’s going on?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'stormy sea' suggests a turbulent or inconsistent diet. Retrieving nutrition data will clarify patterns. No time window is provided, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you check my fiber intake for the past 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests fiber intake data for the past 15 days. get_nutrition_data will provide the necessary details. The query specifies 'past 15 days,' so numdays is set to 15.",
+        "numdays": 15,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been eating a lot of comfort food lately. How’s that affecting my nutrition?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased comfort food consumption, indicating a dietary shift. Analyzing nutrition data will reveal the impact. No time is specified, so I’ll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been having trouble sleeping this week. Could my diet be involved?",
+        "type": "symptom",
+        "thinking": "The user reports sleep issues, which could be diet-related (e.g., high caffeine or low magnesium). Checking nutrition data for this week, as specified, will help identify potential factors. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I might not be getting enough protein since I started working out. Can you check?",
+        "type": "implicit",
+        "thinking": "The user implies concern about protein intake due to a new workout routine. get_nutrition_data will evaluate their protein consumption. No time is specified, so I’ll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet’s been a bit of a maze lately. Can you help me navigate it?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'maze' suggests a confusing or complex diet. Analyzing nutrition data will provide clarity on their eating patterns. No time is mentioned, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you look at my carb intake since the start of August?",
+        "type": "explicit",
+        "thinking": "The user directly requests carb intake data since the start of August. Assuming today is August 5, this is 5 days ago. get_nutrition_data will provide the details. The query specifies 'since the start of August,' so numdays is set to 5.",
+        "numdays": 5,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been cutting out red meat since last Friday. How’s my diet looking now?",
+        "type": "behavioral",
+        "thinking": "The user indicates a dietary change by eliminating red meat since last Friday. Retrieving nutrition data will assess the impact. Assuming today is Tuesday, August 5, 'since last Friday' is 4 days, but I’ll use 5 days as the minimum for numdays.",
+        "numdays": 5,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been feeling dizzy lately. Could my diet from the past 10 days be why?",
+        "type": "symptom",
+        "thinking": "The user reports dizziness, a symptom that might be linked to dietary issues like low blood sugar or dehydration. Checking nutrition data for the past 10 days, as specified, will help identify causes. 'Past 10 days' maps to numdays 10.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’m worried my diet’s too high in sodium this month.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about high sodium intake. get_nutrition_data will quantify their sodium consumption for the month. 'This month' approximates to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet feels like it’s on shaky ground. What’s the situation?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'shaky ground' implies an unstable or problematic diet. Retrieving nutrition data will reveal issues. No time window is provided, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you analyze my iron intake for the last two weeks?",
+        "type": "explicit",
+        "thinking": "The user directly requests iron intake data for the last two weeks. get_nutrition_data will provide the necessary details. 'Last two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been eating more sweets since my breakup last month. How’s that affecting me?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased sweet consumption tied to an emotional event, indicating a dietary shift. Analyzing nutrition data for the last month, as specified, will assess the impact. 'Last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been feeling bloated since last weekend. Is my diet to blame?",
+        "type": "symptom",
+        "thinking": "The user reports bloating, possibly diet-related. Checking nutrition data since last weekend (assuming Saturday-Sunday, about 9 days ago) will help identify triggers like high sodium. I’ll use 9 days for numdays.",
+        "numdays": 9,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I might be eating too many carbs lately. Can you check my diet?",
+        "type": "implicit",
+        "thinking": "The user implies concern about high carb intake. get_nutrition_data will evaluate their carbohydrate consumption. No time is specified, so I’ll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet’s been like a broken compass. Can you help me find direction?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'broken compass' suggests a diet lacking guidance or balance. Analyzing nutrition data will provide clarity. No time is mentioned, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you check my calorie intake for the past 25 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests calorie intake data for the past 25 days. get_nutrition_data will provide the details. The query specifies 'past 25 days,' so numdays is set to 25.",
+        "numdays": 25,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been skipping lunch a lot since starting school. How’s that impacting my nutrition?",
+        "type": "behavioral",
+        "thinking": "The user mentions skipping lunch due to school, indicating a dietary change. Retrieving nutrition data will assess the impact. No specific time is given, so I’ll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been having stomach aches this week. Could my diet be the cause?",
+        "type": "symptom",
+        "thinking": "The user reports stomach aches, which could be diet-related. Checking nutrition data for this week, as specified, will help identify potential triggers like high fat or low fiber. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’m not sure if I’m getting enough healthy fats since last month.",
+        "type": "implicit",
+        "thinking": "The user implies concern about insufficient healthy fat intake. get_nutrition_data will evaluate their fat consumption for the last month. 'Last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet feels like a runaway train. Can you check what’s happening?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'runaway train' suggests an out-of-control diet. Retrieving nutrition data will clarify the issue. No time window is provided, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you look at my magnesium intake for the past 12 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests magnesium intake data for the past 12 days. get_nutrition_data will provide the necessary details. The query specifies 'past 12 days,' so numdays is set to 12.",
+        "numdays": 12,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been eating more frozen meals since I got sick last week. How’s my diet now?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased frozen meal consumption due to illness, indicating a dietary shift. Retrieving nutrition data for the last week, as specified, will assess the impact. 'Last week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been feeling jittery lately. Could my diet be involved?",
+        "type": "symptom",
+        "thinking": "The user reports feeling jittery, possibly linked to diet (e.g., high caffeine). Checking nutrition data will help identify causes. No time is specified, so I’ll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I might not be eating enough veggies since moving to a new city. Can you check?",
+        "type": "implicit",
+        "thinking": "The user implies concern about low vegetable intake due to a move. get_nutrition_data will assess their vegetable consumption. No time is specified, so I’ll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet’s been like a tangled web. Can you sort it out?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'tangled web' suggests a complicated or messy diet. Analyzing nutrition data will provide clarity. No time is mentioned, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you review my vitamin C intake for the last 18 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests vitamin C intake data for the last 18 days. get_nutrition_data will provide the details. The query specifies 'last 18 days,' so numdays is set to 18.",
+        "numdays": 18,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been eating more fast food since my schedule got crazy. What’s the impact?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased fast food consumption due to a busy schedule, indicating a dietary change. Retrieving nutrition data will assess the impact. No time is specified, so I’ll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been feeling sluggish since last Monday. Could my diet be why?",
+        "type": "symptom",
+        "thinking": "The user reports feeling sluggish, possibly diet-related. Checking nutrition data since last Monday (8 days ago, assuming today is Tuesday) will help identify causes like low energy nutrients. I’ll use 8 days for numdays.",
+        "numdays": 8,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’m worried my diet’s too low in fiber this month.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about low fiber intake. get_nutrition_data will evaluate their fiber consumption for the month. 'This month' approximates to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet feels like it’s lost in the fog. Can you clear things up?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'lost in the fog' suggests a lack of clarity or poor dietary choices. Retrieving nutrition data will provide insight. No time window is provided, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Can you check my sugar intake for the past 10 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests sugar intake data for the past 10 days. get_nutrition_data will provide the details. The query specifies 'past 10 days,' so numdays is set to 10.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been relying on protein shakes since last week. How’s my nutrition holding up?",
+        "type": "behavioral",
+        "thinking": "The user mentions a shift to protein shakes, indicating a dietary change. Retrieving nutrition data for the last week, as specified, will assess nutrient balance. 'Last week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I’ve been having heart palpitations lately. Could my diet be a factor?",
+        "type": "symptom",
+        "thinking": "The user reports heart palpitations, which could be linked to diet (e.g., high caffeine or low potassium). Checking nutrition data will help identify causes. No time is specified, so I’ll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I might not be getting enough nutrients since I started traveling. Can you check my diet?",
+        "type": "implicit",
+        "thinking": "The user implies concern about nutrient intake due to travel. get_nutrition_data will evaluate their diet. No time is specified, so I’ll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My diet’s been like a ship without a rudder. Can you help me steer it?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'ship without a rudder' suggests a directionless diet. Analyzing nutrition data will provide guidance. No time is mentioned, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been tracking my macros but still feel off—can you analyze my last 2 weeks?",
+        "type": "symptom",
+        "thinking": "The user is experiencing discomfort despite macro tracking, suggesting a need for deeper nutritional analysis. get_nutrition_data will help identify potential imbalances. They specified 'last 2 weeks', so we'll use 14 days.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Breakdown my alcohol vs. water intake since New Year's",
+        "type": "explicit",
+        "thinking": "Direct comparison request between two beverage types tied to a specific event. Requires hydration and alcohol tracking. 'Since New Year's' implies about 21 days for January entries.",
+        "numdays": 21,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My meal prep containers are gathering dust lately...",
+        "type": "metaphorical",
+        "thinking": "Metaphor indicates abandoned healthy eating habits needing quantification. Nutritional analysis can compare current vs. past patterns. 'Lately' without specifics defaults to 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Have I actually increased vegetable intake like my nutritionist suggested 3 weeks ago?",
+        "type": "behavioral",
+        "thinking": "Asks about adherence to professional dietary advice requiring produce consumption analysis. '3 weeks ago' clearly indicates 21-day window.",
+        "numdays": 21,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I get hangry by 11am no matter how big breakfast is",
+        "type": "symptom",
+        "thinking": "Describes consistent morning hunger suggesting breakfast nutritional inadequacy. Macronutrient analysis of morning meals is justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Show me my nighttime carb consumption patterns",
+        "type": "implicit",
+        "thinking": "Indirectly requests analysis of evening carbohydrate intake without specifying timeframe. Nutritional timing analysis required. No window given, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My energy crashes after client lunches - what am I ordering wrong?",
+        "type": "symptom",
+        "thinking": "Links business meals to energy dips, implying need for restaurant meal analysis. Comparing lunch compositions is warranted. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've become a smoothie addict this month - is this balanced?",
+        "type": "behavioral",
+        "thinking": "Reports significant dietary shift toward liquid meals needing nutritional assessment. 'This month' suggests 30-day analysis.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My snack drawer at work is a nutritional black hole",
+        "type": "metaphorical",
+        "thinking": "Figurative language suggests concern about workplace snacking quality. Nutritional analysis can quantify office snack habits. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Compare my weekday vs. holiday eating patterns from December",
+        "type": "explicit",
+        "thinking": "Direct request for seasonal dietary comparison requiring segmented analysis. 'From December' implies 30-day period covering holidays.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I feel like my digestion slows down when I eat late",
+        "type": "implicit",
+        "thinking": "Suggests but doesn't directly request analysis of meal timing effects. Justifies examining dinner timing and composition. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My chocolate consumption has skyrocketed since the breakup",
+        "type": "behavioral",
+        "thinking": "Reports emotional eating pattern change needing quantification. get_nutrition_data can track treat intake. 'Since breakup' implies recent 10-day period.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Am I getting enough protein for muscle recovery on workout days?",
+        "type": "explicit",
+        "thinking": "Clear request linking protein intake to exercise recovery. Requires workout-day specific nutrition analysis. No timeframe, default 7 days to capture multiple sessions.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My willpower against office pastries is nonexistent this week",
+        "type": "metaphorical",
+        "thinking": "Figurative language describes workplace treat consumption needing quantification. Bakery item analysis justified. 'This week' means 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been eating dinner after 9pm since starting this project - how bad is it?",
+        "type": "behavioral",
+        "thinking": "Reports schedule-driven late eating habit requiring nutritional timing assessment. 'Since starting project' implies about 14-day period.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Do I consume more calories when I'm bored working from home?",
+        "type": "implicit",
+        "thinking": "Implies question about emotional eating patterns without directly asking. Requires calorie analysis correlated with work context. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My jeans feel tighter after that vacation buffet marathon",
+        "type": "symptom",
+        "thinking": "Physical change linked to specific eating event needing nutritional analysis. 'After vacation' suggests focusing on past 5 days post-trip.",
+        "numdays": 5,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Show me my iron intake since switching to vegetarian meals",
+        "type": "explicit",
+        "thinking": "Direct nutrient tracking request tied to dietary change. Requires mineral analysis. 'Since switching' implies about 21 days for dietary transition.",
+        "numdays": 21,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I'm a bottomless pit when premenstrual - is my nutrition different?",
+        "type": "metaphorical",
+        "thinking": "Figurative language connects hormonal phase to eating patterns. Nutritional comparison across cycles is warranted. No timeframe, default 7 days to capture current phase.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Have I reduced processed sugar like I planned to after Thanksgiving?",
+        "type": "behavioral",
+        "thinking": "Asks about progress on post-holiday dietary intention requiring sugar analysis. 'After Thanksgiving' implies about 30-day period.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My energy feels more stable since cutting out afternoon soda",
+        "type": "symptom",
+        "thinking": "Reports positive change from beverage modification needing nutritional confirmation. Caffeine/sugar reduction analysis justified. 'Since cutting out' implies 14-day period.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Does my protein intake match my new weightlifting regimen?",
+        "type": "implicit",
+        "thinking": "Suggests but doesn't directly request exercise-nutrition alignment check. Macronutrient analysis relative to workout logs needed. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Analyze my weekend vs. weekday alcohol units for the past month",
+        "type": "explicit",
+        "thinking": "Direct request for segmented beverage analysis over defined period. Perfect for get_nutrition_data. 'Past month' means 30 days.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My lunch salads vanish like magic when I'm stressed",
+        "type": "metaphorical",
+        "thinking": "Figurative language suggests stress-related overeating needing quantification. Meal pattern analysis during stress periods justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been craving salt constantly since starting this medication",
+        "type": "behavioral",
+        "thinking": "Reports medication-linked dietary change requiring sodium intake analysis. 'Since starting' implies about 10 days for new prescriptions.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Do I eat more frozen meals when my partner travels?",
+        "type": "implicit",
+        "thinking": "Implies question about convenience food patterns during alone time. Prepared meal analysis is warranted. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My stomach rebels whenever I eat before morning meetings",
+        "type": "symptom",
+        "thinking": "Describes digestive issues tied to rushed breakfasts needing analysis. Morning meal composition examination justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Compare my caffeine intake before and after daylight savings time",
+        "type": "explicit",
+        "thinking": "Clear request for circadian-rhythm-related beverage analysis. Requires about 14 days pre/post time change.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My snack habits turn into a horror movie after 8pm",
+        "type": "metaphorical",
+        "thinking": "Figurative language describes nighttime overeating needing quantification. Evening snack analysis justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been unconsciously finishing my kids' leftovers all week",
+        "type": "behavioral",
+        "thinking": "Reports automatic eating behavior requiring calorie intake assessment. 'All week' specifies 7-day window.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Does my hydration drop on days I skip the gym?",
+        "type": "implicit",
+        "thinking": "Suggests but doesn't directly ask about exercise-hydration connection. Fluid intake comparison needed. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I feel bloated after eating at my mother-in-law's",
+        "type": "symptom",
+        "thinking": "Connects specific dining context to physical symptoms needing analysis. Meal composition comparison justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Show me my sugar spikes during PMS week",
+        "type": "explicit",
+        "thinking": "Direct request for nutrient analysis tied to hormonal phase. Requires about 7 days of cycle-specific data.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My appetite's been hibernating since I caught that cold",
+        "type": "metaphorical",
+        "thinking": "Figurative language describes illness-related eating changes needing quantification. 'Since cold' implies about 5-day sickness period.",
+        "numdays": 5,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been taste-testing while cooking dinner - how many extra calories is that?",
+        "type": "behavioral",
+        "thinking": "Reports unaccounted eating during meal prep requiring intake adjustment analysis. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Do I consume more bread when it's cold outside?",
+        "type": "implicit",
+        "thinking": "Implies question about weather-diet connection without directly asking. Carb intake analysis during cold spells needed. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My energy plummets when I skip afternoon tea",
+        "type": "symptom",
+        "thinking": "Links beverage habit to energy levels needing nutritional analysis. Caffeine/snack pattern examination justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Breakdown my protein sources for the past 10 workouts",
+        "type": "explicit",
+        "thinking": "Clear request for exercise-linked nutrient analysis. Requires about 10 days assuming daily workouts.",
+        "numdays": 10,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My willpower against vending machines is tissue-paper thin",
+        "type": "metaphorical",
+        "thinking": "Figurative language describes snack machine vulnerability needing quantification. Processed food intake analysis justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been eating standing up since the kitchen renovation started",
+        "type": "behavioral",
+        "thinking": "Reports changed eating behavior due to home disruption needing analysis. 'Since renovation' implies about 14-day period.",
+        "numdays": 14,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Does my fruit intake drop when berries aren't in season?",
+        "type": "implicit",
+        "thinking": "Suggests seasonal produce availability affects diet without directly asking. Fruit consumption analysis justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I feel like my metabolism changed since turning 30 last month",
+        "type": "symptom",
+        "thinking": "Describes perceived age-related metabolic shift needing nutritional confirmation. 'Since last month' implies 30-day window.",
+        "numdays": 30,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Analyze my post-marathon carb loading for recovery",
+        "type": "explicit",
+        "thinking": "Direct request for event-specific nutrient assessment. Marathon recovery typically analyzed over 5 days post-event.",
+        "numdays": 5,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My lunchbox comes home full when I'm busy, then I binge at night",
+        "type": "behavioral",
+        "thinking": "Describes work-stress eating pattern requiring intake timing analysis. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Do I eat more takeout when working late?",
+        "type": "implicit",
+        "thinking": "Implies question about work hours affecting meal choices without directly asking. Restaurant meal analysis needed. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My skin breaks out after pizza night",
+        "type": "symptom",
+        "thinking": "Connects specific food event to physical symptoms needing analysis. Meal composition examination justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "Show me my sodium intake during that heatwave last week",
+        "type": "explicit",
+        "thinking": "Direct request for weather-event-specific nutrient analysis. 'Last week' means 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "My resistance to dessert crumbles like week-old cake at parties",
+        "type": "metaphorical",
+        "thinking": "Figurative language describes social eating challenges needing quantification. Event-based treat analysis justified. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    },
+    {
+        "query": "I've been unconsciously eating cereal straight from the box after work",
+        "type": "behavioral",
+        "thinking": "Reports automatic eating behavior requiring portion control analysis. No timeframe, default 7 days.",
+        "numdays": 7,
+        "function": "get_nutrition_data"
+    }
+]

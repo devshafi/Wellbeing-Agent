@@ -1,0 +1,1773 @@
+[
+    {
+        "query": "How has my weight been trending over the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user is directly asking about their weight trend over a specific period, the past two weeks. This requires retrieving weight data to analyze changes over that time. The query specifies 'past two weeks,' which translates to 14 days for the numdays parameter.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I'm carrying extra weight lately, can you check?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'carrying extra weight' as a metaphor, likely indicating concern about recent weight gain. To address this, we need to retrieve recent weight data to confirm or quantify their perception. No specific time is mentioned, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've been eating more junk food this month, how's that affecting my weight?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavior change—eating more junk food—and wants to know its impact on their weight. This requires weight data to assess any correlation with their dietary shift. The query references 'this month,' so we use 30 days to capture the full period.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel heavier than usual, can you look at my weight from the last 10 days?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom—feeling heavier—suggesting concern about weight gain. We need to retrieve weight data to verify this sensation. The query specifies 'last 10 days,' so we set numdays to 10.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Is my weight stable since last Monday?",
+        "type": "explicit",
+        "thinking": "The user is directly asking if their weight has remained stable since last Monday. This requires weight data to compare measurements from that starting point. Assuming today is Tuesday, August 5, 2025, 'last Monday' is July 28, 2025, which is 8 days ago, so we use 8 days.",
+        "numdays": 8,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been so stressed lately, has it messed with my weight?",
+        "type": "symptom",
+        "thinking": "The user links stress to potential weight changes, implying concern about its impact. We need weight data to evaluate any fluctuations. No specific time is mentioned, so we default to 7 days to assess recent trends.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I started jogging last week, any change in my weight?",
+        "type": "behavioral",
+        "thinking": "The user mentions a new behavior—starting to jog—and wants to know if it affected their weight. We need weight data to check for changes. The query specifies 'last week,' which maps to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My clothes feel tighter this month, what’s going on with my weight?",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about weight gain through tighter clothes. We need to retrieve weight data to confirm if there’s been an increase. The query mentions 'this month,' so we use 30 days.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you tell me about my weight over the last three weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for weight information over the last three weeks. This requires retrieving weight data to analyze trends. The query specifies 'last three weeks,' which translates to 21 days.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I’m sinking under my own weight these days.",
+        "type": "metaphorical",
+        "thinking": "The user uses 'sinking under my own weight' as a metaphor, likely expressing discomfort with their current weight. We need weight data to assess recent measurements. No time frame is specified, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been skipping breakfast for the past 12 days, has my weight changed?",
+        "type": "behavioral",
+        "thinking": "The user reports a dietary change—skipping breakfast—and asks about its effect on weight. We need weight data to evaluate changes. The query specifies 'past 12 days,' so we set numdays to 12.",
+        "numdays": 12,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m feeling sluggish lately, is my weight part of it?",
+        "type": "symptom",
+        "thinking": "The user describes a physical symptom—feeling sluggish—and wonders if weight is a factor. We need weight data to check for recent changes that might contribute. No time is specified, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "How’s my weight been since the start of this month?",
+        "type": "explicit",
+        "thinking": "The user directly asks about weight trends since the start of the month. Assuming today is August 5, 2025, this refers to August 1 to now, or 5 days. We need weight data for this period, so we set numdays to 5.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been feeling off, like my body’s out of balance this week.",
+        "type": "implicit",
+        "thinking": "The user vaguely expresses discomfort, possibly hinting at weight changes with 'out of balance.' We need weight data to check for fluctuations. The query mentions 'this week,' so we use 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been hitting the gym for the past 15 days, any weight difference?",
+        "type": "behavioral",
+        "thinking": "The user mentions a new exercise routine and asks about weight changes. We need weight data to assess the impact. The query specifies 'past 15 days,' so we set numdays to 15.",
+        "numdays": 15,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My energy’s been low since Sunday, could my weight be involved?",
+        "type": "symptom",
+        "thinking": "The user links low energy to a possible weight issue. We need weight data to explore any connection. The query mentions 'since Sunday,' and assuming today is Tuesday, August 5, 2025, Sunday was August 3, so we use 3 days, but adjust to the minimum of 5 days for meaningful data.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you check my weight trends for the last 20 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests weight trends for a specific period. We need to retrieve weight data to analyze this timeframe. The query specifies 'last 20 days,' so we set numdays to 20.",
+        "numdays": 20,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I’m dragging a heavy load around lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses 'dragging a heavy load' to possibly express feeling weighed down by their body weight. We need weight data to check recent measurements. No time frame is given, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been drinking more water over the past 9 days, has it affected my weight?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased water intake and wonders about its effect on weight. We need weight data to evaluate any changes. The query specifies 'past 9 days,' so we set numdays to 9.",
+        "numdays": 9,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My jeans don’t fit like they did last month, what’s my weight doing?",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests weight gain through ill-fitting jeans. We need weight data to confirm changes. The query mentions 'last month,' so we use 30 days.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "What’s my weight been like over the past 25 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for weight information over a specific period. We need weight data to analyze trends. The query specifies 'past 25 days,' so we set numdays to 25.",
+        "numdays": 25,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m feeling bloated this week, is my weight up?",
+        "type": "symptom",
+        "thinking": "The user reports bloating, a physical symptom, and questions if their weight has increased. We need weight data to check for changes. The query mentions 'this week,' so we use 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been cutting carbs for the last 10 days, any weight changes?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change—cutting carbs—and asks about weight impact. We need weight data to assess changes. The query specifies 'last 10 days,' so we set numdays to 10.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like my body’s holding me back lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses 'holding me back' metaphorically, possibly indicating discomfort with their weight. We need weight data to evaluate recent measurements. No time is specified, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you look at my weight since the last two weekends?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests weight data since the last two weekends. Assuming today is Tuesday, August 5, 2025, two weekends ago starts on Saturday, July 26, 2025, which is 10 days ago. We need weight data for this period, so we set numdays to 10.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been snacking a lot this month, how’s my weight looking?",
+        "type": "behavioral",
+        "thinking": "The user reports increased snacking and wants to know its effect on weight. We need weight data to check for changes. The query mentions 'this month,' so we use 30 days.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m feeling out of sorts physically, could my weight be off?",
+        "type": "implicit",
+        "thinking": "The user vaguely expresses physical discomfort, possibly hinting at weight issues. We need weight data to explore any fluctuations. No time is specified, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "How’s my weight been since I started yoga 12 days ago?",
+        "type": "explicit",
+        "thinking": "The user directly asks about weight changes since starting yoga. We need weight data to analyze this period. The query specifies '12 days ago,' so we set numdays to 12.",
+        "numdays": 12,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been so tired lately, is my weight contributing?",
+        "type": "symptom",
+        "thinking": "The user links fatigue to potential weight issues. We need weight data to check for changes that might relate. No time is specified, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I’m weighed down by life right now.",
+        "type": "metaphorical",
+        "thinking": "The user uses 'weighed down' as a metaphor, possibly reflecting concern about their physical weight. We need weight data to assess recent measurements. No time is given, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been walking more for the past 18 days, any weight change?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased walking and asks about weight impact. We need weight data to evaluate changes. The query specifies 'past 18 days,' so we set numdays to 18.",
+        "numdays": 18,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My body feels different since last Friday, what’s my weight doing?",
+        "type": "implicit",
+        "thinking": "The user vaguely notes a change in how their body feels, possibly hinting at weight changes. We need weight data to check. Assuming today is Tuesday, August 5, 2025, last Friday was August 1, so we use 5 days.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you show me my weight trends for the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests weight trends for a specific period. We need weight data to analyze this timeframe. The query specifies 'last 15 days,' so we set numdays to 15.",
+        "numdays": 15,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been sleeping poorly this week, is my weight stable?",
+        "type": "symptom",
+        "thinking": "The user mentions poor sleep and asks about weight stability. We need weight data to check for fluctuations. The query mentions 'this week,' so we use 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I started a new diet 20 days ago, how’s my weight trending?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting a new diet and wants to know its effect on weight. We need weight data to assess trends. The query specifies '20 days ago,' so we set numdays to 20.",
+        "numdays": 20,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like my body’s heavier than it was last month.",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests concern about weight gain by feeling heavier. We need weight data to confirm changes. The query mentions 'last month,' so we use 30 days.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "What’s my weight been like over the last 9 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for weight information over a specific period. We need weight data to analyze trends. The query specifies 'last 9 days,' so we set numdays to 9.",
+        "numdays": 9,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I’m carrying a burden physically these days.",
+        "type": "metaphorical",
+        "thinking": "The user uses 'carrying a burden' metaphorically, likely indicating concern about weight. We need weight data to check recent measurements. No time is specified, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been eating less for the past two weeks, any weight drop?",
+        "type": "behavioral",
+        "thinking": "The user mentions reduced eating and asks about weight changes. We need weight data to evaluate the impact. The query specifies 'past two weeks,' so we set numdays to 14.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been feeling puffy lately, is my weight up?",
+        "type": "symptom",
+        "thinking": "The user describes feeling puffy, a physical symptom, and questions if their weight has increased. We need weight data to check for changes. No time is specified, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you check my weight since last Wednesday?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for weight data since last Wednesday. Assuming today is Tuesday, August 5, 2025, last Wednesday was July 30, 2025, which is 6 days ago. We need weight data for this period, so we set numdays to 6.",
+        "numdays": 6,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My body feels sluggish since the weekend, what’s my weight like?",
+        "type": "implicit",
+        "thinking": "The user vaguely notes feeling sluggish, possibly hinting at weight issues. We need weight data to check for changes. The query mentions 'since the weekend,' and assuming today is Tuesday, August 5, 2025, the weekend starts on August 2, so we use 5 days.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been training harder for the last 16 days, any weight changes?",
+        "type": "behavioral",
+        "thinking": "The user mentions intensified training and asks about weight impact. We need weight data to evaluate changes. The query specifies 'last 16 days,' so we set numdays to 16.",
+        "numdays": 16,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I’m stuck in a heavier version of myself.",
+        "type": "metaphorical",
+        "thinking": "The user uses 'heavier version of myself' metaphorically, expressing discomfort with their weight. We need weight data to assess recent measurements. No time is specified, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "How’s my weight been since I started fasting 10 days ago?",
+        "type": "explicit",
+        "thinking": "The user directly asks about weight changes since starting fasting. We need weight data to analyze this period. The query specifies '10 days ago,' so we set numdays to 10.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been feeling achy this month, could my weight be a factor?",
+        "type": "symptom",
+        "thinking": "The user links physical aches to a possible weight issue. We need weight data to check for changes that might contribute. The query mentions 'this month,' so we use 30 days.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been drinking protein shakes for the past 11 days, how’s my weight?",
+        "type": "behavioral",
+        "thinking": "The user mentions consuming protein shakes and wants to know the effect on weight. We need weight data to assess changes. The query specifies 'past 11 days,' so we set numdays to 11.",
+        "numdays": 11,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My body doesn’t feel right since last week, what’s my weight doing?",
+        "type": "implicit",
+        "thinking": "The user vaguely expresses physical discomfort, possibly hinting at weight changes. We need weight data to check for fluctuations. The query mentions 'last week,' so we use 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you tell me my weight trends for the past 22 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests weight trends for a specific period. We need weight data to analyze this timeframe. The query specifies 'past 22 days,' so we set numdays to 22.",
+        "numdays": 22,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like my body’s weighing me down this month.",
+        "type": "metaphorical",
+        "thinking": "The user uses 'weighing me down' metaphorically, likely indicating concern about their weight. We need weight data to check recent measurements. The query mentions 'this month,' so we use 30 days.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you show me how my weight changed over the last two weeks?",
+        "type": "explicit",
+        "thinking": "The user is directly requesting an overview of weight changes in the past 14 days. This clearly maps to retrieving historical weight data using get_weight_data. 'Last two weeks' corresponds to numdays = 14.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been feeling heavier lately—do you think I’ve gained weight?",
+        "type": "symptom",
+        "thinking": "The user is expressing a physical symptom of feeling heavier, which may indicate weight gain. To verify this concern, it makes sense to call get_weight_data. No time range is mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Every time I look in the mirror, I feel like my belly’s getting rounder.",
+        "type": "metaphorical",
+        "thinking": "The metaphor about the belly getting rounder hints at perceived weight gain. To validate or disprove this impression, weight trend data should be retrieved via get_weight_data. Defaulting to the past 7 days due to no explicit timeframe.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I stopped eating junk food last Monday—has that helped my weight?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral change (cutting junk food) starting from last Monday, likely expecting to see weight improvements. get_weight_data should be called. Assuming today is Tuesday, 'since last Monday' maps to numdays = 8.",
+        "numdays": 8,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m worried I’ve been gaining weight again.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about possible weight gain. To assess the trend, we should retrieve recent weight data with get_weight_data. No time frame mentioned, so use the default 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Has there been any progress in my weight this week?",
+        "type": "explicit",
+        "thinking": "The user is asking for a summary of weight changes during the current week. This justifies a call to get_weight_data. 'This week' maps to approximately 5 days if today is Friday.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've been fasting intermittently for 10 days. Any weight changes?",
+        "type": "behavioral",
+        "thinking": "The user reports a 10-day fasting period and seeks weight feedback. It's appropriate to analyze the weight trend using get_weight_data. The time range is clearly 'past 10 days'.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Feels like my clothes are getting tighter.",
+        "type": "symptom",
+        "thinking": "The user is describing a physical symptom suggestive of weight gain. This warrants a review of recent weight patterns using get_weight_data. No time range given, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "How has my weight fluctuated since the start of this month?",
+        "type": "explicit",
+        "thinking": "The user is requesting weight data since the beginning of the month. Assuming today is the 20th, we use get_weight_data for the past 20 days.",
+        "numdays": 20,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I started walking every morning for the past 15 days. Any impact?",
+        "type": "behavioral",
+        "thinking": "A new daily habit (walking) is being evaluated for weight impact. We should analyze weight trends using get_weight_data over the past 15 days.",
+        "numdays": 15,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Honestly, I feel like I’ve ballooned lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to express concern about possible rapid weight gain. We call get_weight_data to validate this feeling. No timeframe mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Do you think my weight is stabilizing now?",
+        "type": "implicit",
+        "thinking": "The user hints at prior fluctuations and wonders about stabilization. Weight trend analysis via get_weight_data is needed. Without time info, default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Check my weight trend over the last 30 days.",
+        "type": "explicit",
+        "thinking": "This is a clear request for a month-long weight history. Use get_weight_data with the maximum supported duration of 30 days.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Lately I’ve been stress-eating a lot. Is that affecting my weight?",
+        "type": "behavioral",
+        "thinking": "The user reports a behavioral change (stress-eating) and is worried about consequences. get_weight_data should be used to examine changes. 'Lately' is vague, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "How did my weight change after the holidays?",
+        "type": "implicit",
+        "thinking": "The user implies possible post-holiday weight gain. To evaluate this, we should call get_weight_data. Assuming a week since holidays ended, we use 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you show me how my weight’s been since Sunday?",
+        "type": "explicit",
+        "thinking": "The user wants weight data starting from Sunday. If today is Thursday, that would be 4 days ago. So numdays = 4.",
+        "numdays": 4,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "It feels like I’ve lost some weight this past week.",
+        "type": "symptom",
+        "thinking": "The user is expressing a perception of weight loss. We use get_weight_data to confirm the trend. 'This past week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been trying to gain weight—has it worked this month?",
+        "type": "behavioral",
+        "thinking": "The user mentions intentional behavior (trying to gain weight) and wants progress insight. 'This month' implies around 25 days if it’s near month end.",
+        "numdays": 25,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Compare my weight between this weekend and last weekend.",
+        "type": "explicit",
+        "thinking": "The user is requesting a comparison over two recent weekends. To capture this, we look at the past 14 days of weight data using get_weight_data.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I don’t know why I feel so bloated these days.",
+        "type": "symptom",
+        "thinking": "Bloating can be perceived as weight gain. get_weight_data is appropriate to investigate the recent trend. 'These days' defaults to 7.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Feels like I’ve been carrying a backpack made of bricks.",
+        "type": "metaphorical",
+        "thinking": "The figurative language suggests the user feels heavier. get_weight_data will help assess actual weight change. No timeframe, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Have I dropped any pounds in the last 10 days?",
+        "type": "explicit",
+        "thinking": "This is a direct question about weight loss over the past 10 days. get_weight_data is needed for this analysis.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve stopped late-night snacking for 2 weeks. Has that helped?",
+        "type": "behavioral",
+        "thinking": "The user changed behavior and wants to see if it impacted weight. '2 weeks' maps to 14 days of data via get_weight_data.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I want to know if I gained anything over the last 5 days.",
+        "type": "explicit",
+        "thinking": "The user wants to see recent weight changes over 5 days. get_weight_data should be called with numdays = 5.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Just wondering if I’ve been holding steady with my weight.",
+        "type": "implicit",
+        "thinking": "The user is subtly asking whether their weight has remained consistent. get_weight_data can clarify this. No time mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I stopped drinking soda two weeks ago. Any shift in weight?",
+        "type": "behavioral",
+        "thinking": "The user is referencing a specific lifestyle change and seeking results. 'Two weeks ago' corresponds to 14 days of data for get_weight_data.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Does my weight trend look healthier now?",
+        "type": "implicit",
+        "thinking": "The user wants to know if there’s an improvement in their weight trajectory. get_weight_data is the right tool. No timeframe specified, so use 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been going to the gym this past week. Any changes in my weight?",
+        "type": "behavioral",
+        "thinking": "The user is asking about the effect of a new habit (gym). 'This past week' maps to 7 days of get_weight_data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My friends say I look slimmer. Are they right?",
+        "type": "symptom",
+        "thinking": "The user is reflecting on external feedback suggesting weight loss. To confirm, we analyze recent data with get_weight_data. No time given, default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Feels like I’ve been shedding pounds like autumn leaves.",
+        "type": "metaphorical",
+        "thinking": "The metaphor suggests the user perceives ongoing weight loss. get_weight_data is needed to verify. Defaulting to 7 days due to lack of explicit time.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Let’s see if my weight dipped since last Friday.",
+        "type": "explicit",
+        "thinking": "The user wants to analyze weight change since last Friday. If today is Wednesday, that’s 5 days ago, so use numdays = 5.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Why do I feel like I gained 10 pounds overnight?",
+        "type": "metaphorical",
+        "thinking": "The user exaggerates sudden weight gain, expressing concern. We check recent data with get_weight_data. Since no period is specified, default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Show me how my weight moved over the last 3 weekends.",
+        "type": "explicit",
+        "thinking": "The user wants a view of weight trends over the past 3 weekends. We use a 21-day window to cover that using get_weight_data.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Do you think my new diet made any difference?",
+        "type": "implicit",
+        "thinking": "The user hints at expecting weight change from a new diet. get_weight_data can show the impact. No duration specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I stopped eating sugar for 20 days—has it paid off?",
+        "type": "behavioral",
+        "thinking": "The user refers to a 20-day sugar detox and wants to measure weight impact. get_weight_data should cover the past 20 days.",
+        "numdays": 20,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I’m shrinking every day.",
+        "type": "metaphorical",
+        "thinking": "This figurative language implies perceived weight loss. It’s reasonable to verify with get_weight_data. No period mentioned, so use 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I had a cheat week—did it mess up my weight?",
+        "type": "behavioral",
+        "thinking": "The user suspects a week of indulgence affected weight. get_weight_data will help assess this. 'Cheat week' implies 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Tell me if my weight has been trending downward lately.",
+        "type": "explicit",
+        "thinking": "This is a direct request to evaluate a downward trend in weight. 'Lately' is interpreted as the last 7 days for get_weight_data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Honestly, my scale feels like it’s mocking me lately.",
+        "type": "metaphorical",
+        "thinking": "The user expresses frustration through metaphor, suggesting concern about weight. get_weight_data can clarify recent changes. No time window, so use 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I want to understand how my weight changed over the past 12 days.",
+        "type": "explicit",
+        "thinking": "A clear request for weight trend over a specific 12-day window. get_weight_data will retrieve this period accurately.",
+        "numdays": 12,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I skipped dinner for a week. What’s the effect?",
+        "type": "behavioral",
+        "thinking": "Skipping dinner for a week likely impacts weight. We call get_weight_data over the past 7 days to see results.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Lately I’ve been so bloated, I’m scared to weigh myself.",
+        "type": "symptom",
+        "thinking": "The user is experiencing bloating and is afraid of weight gain. To assess actual changes, we use get_weight_data over the past 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Show me my weight trend since I started keto 18 days ago.",
+        "type": "behavioral",
+        "thinking": "The user started a keto diet 18 days ago and wants to evaluate its effect. get_weight_data is used with numdays = 18.",
+        "numdays": 18,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Check if I’ve gained weight since Tuesday.",
+        "type": "explicit",
+        "thinking": "The user wants a weight comparison starting from Tuesday. If today is Friday, we retrieve data for the last 3 days using get_weight_data.",
+        "numdays": 3,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've been tracking my weight daily for the past two weeks and noticed some fluctuations. Can you help me understand the trend?",
+        "type": "explicit",
+        "thinking": "The user is directly asking for analysis of their weight data over a specified period of 14 days. The explicit mention of 'past two weeks' clearly indicates we should retrieve data for 14 days to identify patterns in the fluctuations they're observing.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My clothes feel tighter since the holidays ended. What's been happening with my weight?",
+        "type": "implicit",
+        "thinking": "The user implies concern about potential weight gain through their observation about clothing fit. Since they mention 'since the holidays ended', which typically refers to the past 2-3 weeks, we'll default to 21 days of data to capture this period.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I started walking 10,000 steps daily about 10 days ago. Has this made any difference to my weight?",
+        "type": "behavioral",
+        "thinking": "The user connects a specific behavior change (increased walking) with potential weight changes. They provide a clear timeframe of 10 days since implementing this change, so we'll analyze data for exactly that duration to assess impact.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've been feeling unusually bloated and heavy this whole week. Is this reflected in my numbers?",
+        "type": "symptom",
+        "thinking": "The user reports physical symptoms (bloating, heaviness) and associates them with potential weight changes. They specify 'this whole week', which translates to 7 days of data needed to correlate symptoms with actual measurements.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "The scale keeps playing yo-yo with me lately. What's going on?",
+        "type": "metaphorical",
+        "thinking": "The user employs metaphorical language ('yo-yo') to describe weight fluctuations. 'Lately' is vague, so we'll default to 7 days of data to identify the pattern of variability they're experiencing.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Show me my weight progression since I began the new medication 3 weeks ago.",
+        "type": "explicit",
+        "thinking": "This is a direct request to examine weight changes correlated with medication use. The user specifies a precise 3-week timeframe (21 days) since starting treatment, which requires exactly that duration of data.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I'm curious if my weight has changed at all in May so far.",
+        "type": "implicit",
+        "thinking": "The user implies interest in month-to-date weight changes without stating explicit concern. Since May has 31 days and they want 'so far', we'll calculate days elapsed in current month (assuming today is May 15 for this example).",
+        "numdays": 15,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Ever since I stopped drinking soda last month, I wonder if it affected my weight.",
+        "type": "behavioral",
+        "thinking": "The user links a behavior modification (stopping soda consumption) with potential weight changes. 'Last month' suggests we should examine 30 days of data to capture the full period since this change.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like gravity's been working overtime on me these past few days.",
+        "type": "metaphorical",
+        "thinking": "The user uses creative language to express feeling heavier recently. 'Past few days' is vague but typically means 3-5 days; we'll use 5 days to capture this short-term trend.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My joints have been aching more, and I'm wondering if weight could be a factor. Can you show my recent trend?",
+        "type": "symptom",
+        "thinking": "The user connects physical symptoms (joint pain) with potential weight changes. No specific timeframe is given, so we'll default to 7 days of recent data to identify any concerning trends.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Give me a weight report for the last fortnight.",
+        "type": "explicit",
+        "thinking": "This is a clear, direct request for weight data covering the last 14 days (fortnight). The instruction is unambiguous about the required timeframe.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Has my weight been stable since my birthday party? It was 10 days ago.",
+        "type": "implicit",
+        "thinking": "The user implies concern about potential weight changes following a specific event. They provide the exact timeframe of 10 days since the event, which determines our data retrieval period.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I switched to a standing desk 3 weeks back. Any weight changes correlated with that?",
+        "type": "behavioral",
+        "thinking": "The user asks to examine weight changes following an environmental/behavioral modification. The precise 3-week timeframe (21 days) since the change is specified and will guide our analysis.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My energy levels have dropped significantly in the past week. Could weight fluctuations explain this?",
+        "type": "symptom",
+        "thinking": "The user associates fatigue with potential weight changes. They specify 'past week', so we'll examine 7 days of data to explore this possible correlation.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like a balloon that's been slowly deflating since spring started.",
+        "type": "metaphorical",
+        "thinking": "The user employs vivid imagery to describe perceived weight loss. 'Since spring started' is seasonally dependent; assuming it's been approximately 3 weeks since spring began in their location.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Display my weight measurements from the past 5 days in a chart.",
+        "type": "explicit",
+        "thinking": "This is a straightforward request for specific visualization of recent weight data. The user clearly specifies they want the last 5 days displayed graphically.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My doctor said I should monitor my weight more closely. What does the last month look like?",
+        "type": "implicit",
+        "thinking": "The user implies compliance with medical advice by requesting weight data. They specify 'last month' as their timeframe of interest, which typically means 30 days of data.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Since incorporating weight training into my routine 15 days ago, how has my weight responded?",
+        "type": "behavioral",
+        "thinking": "The user connects a specific fitness routine change with potential weight changes. They provide the exact duration (15 days) since implementing this change, which determines our analysis period.",
+        "numdays": 15,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've been waking up feeling heavier this week. Is this just in my head?",
+        "type": "symptom",
+        "thinking": "The user reports a physical sensation (morning heaviness) and questions its validity. They specify 'this week', so we'll examine 7 days of data to confirm or allay their concerns.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My weight seems to be on a rollercoaster ride since vacation.",
+        "type": "metaphorical",
+        "thinking": "The user employs a common metaphor to describe weight fluctuations. 'Since vacation' is vague; assuming their vacation ended approximately 2 weeks ago based on typical durations.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Compare my morning vs evening weight over the last 8 days.",
+        "type": "explicit",
+        "thinking": "This is a precise request for comparative analysis between different times of day. The user specifies an exact 8-day period for the comparison.",
+        "numdays": 8,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I think my weight might be affecting my sleep quality recently.",
+        "type": "implicit",
+        "thinking": "The user suggests a possible connection between weight and sleep without direct confirmation. 'Recently' is non-specific, so we'll default to 7 days of data to explore this potential relationship.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "After 20 days of meal prepping, I'm curious about the impact on my weight.",
+        "type": "behavioral",
+        "thinking": "The user links a dietary behavior change with potential weight impact. They specify the exact duration (20 days) of this practice, which determines our analysis timeframe.",
+        "numdays": 20,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've noticed more shortness of breath when climbing stairs this month. Could weight be a factor?",
+        "type": "symptom",
+        "thinking": "The user associates a physical symptom with potential weight changes. 'This month' suggests we should examine 30 days of data to assess any concerning trends that might explain their symptom.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My scale and I are in a complicated relationship these days.",
+        "type": "metaphorical",
+        "thinking": "The user humorously describes uncertainty about their weight measurements. 'These days' is vague but typically refers to the recent 1-2 week period; we'll use 10 days for analysis.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Plot my weight trend from the first of this month to today.",
+        "type": "explicit",
+        "thinking": "This is a clear instruction for a specific date-range visualization. Assuming today is the 18th, we'll retrieve 18 days of month-to-date data as requested.",
+        "numdays": 18,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I'm worried my weight might be creeping up since I stopped gym sessions.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about potential gradual weight gain following a lifestyle change. No specific timeframe is given, but 'creeping up' suggests examining a longer period - we'll use 14 days.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Has my intermittent fasting for the past 12 days made any noticeable difference?",
+        "type": "behavioral",
+        "thinking": "The user inquires about weight impact from a specific dietary practice. They provide the exact duration (12 days) of this behavior, which determines our analysis period.",
+        "numdays": 12,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've been experiencing more back pain lately and wonder if weight distribution changes could be involved.",
+        "type": "symptom",
+        "thinking": "The user connects a physical symptom with potential weight changes. 'Lately' is non-specific, so we'll examine the default 7 days of data to identify any relevant patterns.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My weight graph looks like a mountain range this past week!",
+        "type": "metaphorical",
+        "thinking": "The user creatively describes significant weight fluctuations. They specify 'past week', so we'll analyze 7 days of data to understand these variations.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Show me a daily breakdown of my weight for the previous 9 days.",
+        "type": "explicit",
+        "thinking": "This is a straightforward request for detailed daily data over a precise 9-day period in the immediate past.",
+        "numdays": 9,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Could my recent fatigue be related to weight changes?",
+        "type": "implicit",
+        "thinking": "The user suggests a possible connection between energy levels and weight without direct evidence. 'Recent' is vague, so we'll examine the default 7 days of data to explore this.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've been getting 8 hours of sleep nightly for 2 weeks now. Any weight correlation?",
+        "type": "behavioral",
+        "thinking": "The user links improved sleep habits with potential weight changes. They specify the exact duration (14 days) of this behavior change for our analysis.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My knees have been bothering me more in the evenings. Has my weight changed significantly?",
+        "type": "symptom",
+        "thinking": "The user associates joint pain with potential weight changes. No timeframe is specified, so we'll examine the default 7 days of recent data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "The numbers on my scale have been doing the cha-cha all month!",
+        "type": "metaphorical",
+        "thinking": "The user humorously describes weight fluctuations through dance metaphor. 'All month' suggests we should examine 30 days of data to capture these variations.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Give me a weight summary for each of the last 6 days.",
+        "type": "explicit",
+        "thinking": "This is a clear, direct request for daily weight data over a precise 6-day period in the immediate past.",
+        "numdays": 6,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I think stress might be affecting my weight this tax season.",
+        "type": "implicit",
+        "thinking": "The user implies a connection between stress and weight changes during a specific period. 'Tax season' typically refers to the past 4-6 weeks; we'll use 28 days for analysis.",
+        "numdays": 28,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Since cutting out processed foods 25 days ago, what's happened to my weight?",
+        "type": "behavioral",
+        "thinking": "The user inquires about weight impact from a specific dietary change. They provide the exact duration (25 days) since implementing this change for our analysis.",
+        "numdays": 25,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've been feeling more sluggish after meals in the past 10 days. Could weight be playing a role?",
+        "type": "symptom",
+        "thinking": "The user connects digestive symptoms with potential weight changes. They specify the exact 10-day period of experiencing these symptoms for our correlation analysis.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My bathroom scale has developed a sense of humor recently.",
+        "type": "metaphorical",
+        "thinking": "The user creatively describes unpredictable or surprising weight measurements. 'Recently' is vague, so we'll examine the default 7 days of data to understand these variations.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Display my weight data in hourly increments for the past 48 hours.",
+        "type": "explicit",
+        "thinking": "This is a precise request for high-frequency weight data. While our function typically uses daily data, we'll interpret this as needing 2 days (48 hours) of daily measurements.",
+        "numdays": 2,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I'm concerned my weight might be affecting my blood pressure readings this month.",
+        "type": "implicit",
+        "thinking": "The user suggests a health concern potentially related to weight changes. 'This month' indicates we should examine 30 days of data to assess any correlation.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "After 18 days of consistent hydration tracking, has my weight responded?",
+        "type": "behavioral",
+        "thinking": "The user links a specific health behavior with potential weight changes. They provide the exact duration (18 days) of this practice for our analysis period.",
+        "numdays": 18,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've noticed more frequent headaches since last weekend. Could water retention/weight be involved?",
+        "type": "symptom",
+        "thinking": "The user associates physical symptoms with potential weight/fluid changes. 'Since last weekend' is approximately 5 days ago (assuming today is Thursday), which determines our analysis timeframe.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My weight chart looks like a toddler's scribble this past fortnight!",
+        "type": "metaphorical",
+        "thinking": "The user vividly describes erratic weight measurements. 'Past fortnight' clearly indicates we should examine 14 days of data to understand these fluctuations.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Show me my weight trajectory since the summer solstice.",
+        "type": "explicit",
+        "thinking": "This is a direct request using a specific astronomical reference point. Assuming today is 3 weeks after summer solstice, we'll retrieve 21 days of data.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I suspect my weight might be contributing to my recent snoring issues.",
+        "type": "implicit",
+        "thinking": "The user implies a connection between weight and a new health symptom. 'Recent' is non-specific, so we'll examine the default 7 days of data to identify any relevant trends.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Has my weight changed since I started taking the stairs instead of the elevator 3 weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user connects a lifestyle modification with potential weight changes. They specify the exact duration (21 days) since implementing this change for our analysis.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've been feeling more joint stiffness when I wake up this week. Any weight connection?",
+        "type": "symptom",
+        "thinking": "The user associates morning stiffness with potential weight changes. They specify 'this week', so we'll examine 7 days of data to explore this possible relationship.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My scale and I need couples counseling - we can't agree on anything lately!",
+        "type": "metaphorical",
+        "thinking": "The user humorously describes frustration with weight measurements. 'Lately' is vague but suggests recent days; we'll examine 7 days of data to understand the discrepancies.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Generate a report of my weight variability over the past 11 days.",
+        "type": "explicit",
+        "thinking": "This is a clear, direct request for analysis of weight fluctuations over a specified 11-day period in the immediate past.",
+        "numdays": 11,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I'm worried my weight might be affecting my new workout performance.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about potential weight impact on physical performance. No timeframe is specified, so we'll examine the default 7 days of recent data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "After 7 days of tracking macros precisely, what's the impact on my weight?",
+        "type": "behavioral",
+        "thinking": "The user inquires about weight changes following a specific dietary tracking practice. They provide the exact duration (7 days) of this behavior for our analysis.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've noticed more acid reflux this month. Could weight fluctuations be related?",
+        "type": "symptom",
+        "thinking": "The user connects a digestive symptom with potential weight changes. 'This month' suggests examining 30 days of data to assess any possible correlation.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My weight graph resembles the stock market lately - all peaks and valleys!",
+        "type": "metaphorical",
+        "thinking": "The user creatively describes significant weight variability through financial metaphor. 'Lately' is non-specific, so we'll examine the default 7 days of data to understand these fluctuations.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "How has my weight been trending over the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user is directly asking for an analysis of their weight trend over a specific period, the past two weeks. Calling get_weight_data is appropriate to fetch weight measurements for this timeframe. The query specifies 'past two weeks,' which maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been feeling heavier lately, can you check my weight changes?",
+        "type": "implicit",
+        "thinking": "The user expresses a feeling of being 'heavier,' suggesting a concern about potential weight gain. get_weight_data is needed to retrieve recent weight data to confirm or clarify this perception. No specific time window is mentioned, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been eating more takeout this month, has it affected my weight?",
+        "type": "behavioral",
+        "thinking": "The user mentions a change in eating habits (more takeout), implying a concern about its impact on weight. get_weight_data will provide weight measurements to assess any changes. The query references 'this month,' which I’ll interpret as roughly 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m so tired all the time, could my weight be part of it?",
+        "type": "symptom",
+        "thinking": "The user reports fatigue and wonders if weight is a factor, indicating a need to explore weight trends as part of their health. get_weight_data will help retrieve weight data to check for patterns that might relate to their symptom. No time window is specified, so I’ll use 7 days as a default.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I’m carrying a heavier load these days, what’s my weight doing?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('heavier load') to express a sense of increased weight or burden. This likely refers to physical weight, so get_weight_data is needed to analyze recent measurements. No time frame is given, so I’ll default to 7 days for analysis.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you show me my weight trends since last Monday?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests weight trends starting from last Monday, indicating a clear interest in recent data. get_weight_data is the right function to fetch this information. 'Since last Monday' suggests a 7-day period, assuming today is Monday, so numdays is set to 7.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I haven’t been myself lately, has my weight shifted at all?",
+        "type": "implicit",
+        "thinking": "The user’s mention of not feeling themselves hints at a possible concern about physical changes, including weight. get_weight_data will help check for any weight fluctuations. No specific time is mentioned, so I’ll use a default of 7 days to provide a recent overview.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I started running three weeks ago, how’s my weight looking?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting a new exercise routine (running), suggesting curiosity about its impact on weight. get_weight_data is needed to retrieve weight measurements since the change. 'Three weeks ago' translates to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My clothes feel tighter, is my weight up this week?",
+        "type": "symptom",
+        "thinking": "The user describes a physical sensation (tighter clothes), likely indicating concern about weight gain. get_weight_data will provide weight data to confirm this. The query specifies 'this week,' which maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My scale feels like it’s mocking me lately, what’s my weight trend?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative language about the scale 'mocking' them suggests frustration or concern about weight changes. get_weight_data is necessary to analyze recent weight trends. No time frame is provided, so I’ll default to 7 days for a recent view.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "What’s my weight been like over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for weight data over a specific period, the last 10 days. get_weight_data is the appropriate function to retrieve this data. The query explicitly states 'last 10 days,' so numdays is set to 10.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m worried I’ve put on a few pounds recently, can you check?",
+        "type": "implicit",
+        "thinking": "The user expresses concern about possible weight gain without specifying a time frame. get_weight_data will help verify if their weight has increased. Since no time window is mentioned, I’ll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been skipping breakfast for two weeks, has my weight changed?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (skipping breakfast) and wants to know its effect on weight. get_weight_data will retrieve weight measurements to assess this. 'Two weeks' is specified, which maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel sluggish and heavy, is my weight part of the problem?",
+        "type": "symptom",
+        "thinking": "The user reports feeling sluggish and heavy, suggesting weight might be contributing to their physical state. get_weight_data is needed to check weight trends for potential correlations. No time frame is given, so I’ll use 7 days as a default.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m sinking under extra weight, what does my scale say lately?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphorical reference to 'sinking under extra weight' implies concern about weight gain. get_weight_data will provide recent weight data to address this. No specific time is mentioned, so I’ll default to 7 days for analysis.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you track my weight changes since the start of the month?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests weight changes since the start of the month, indicating a clear need for historical data. get_weight_data is the correct function to fetch this. Assuming today is August 5, 'start of the month' suggests about 5 days for numdays.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been feeling off, could my weight have crept up?",
+        "type": "implicit",
+        "thinking": "The user’s vague sense of feeling 'off' and mention of weight creeping up suggests concern about weight gain. get_weight_data will help confirm any changes. No time frame is specified, so I’ll use a default of 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been hitting the gym for the past 20 days, any weight progress?",
+        "type": "behavioral",
+        "thinking": "The user mentions a new gym routine, indicating interest in whether it’s affected their weight. get_weight_data is needed to retrieve weight data since starting the routine. 'Past 20 days' directly maps to 20 for numdays.",
+        "numdays": 20,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My knees have been aching lately, is my weight a factor?",
+        "type": "symptom",
+        "thinking": "The user reports knee pain and questions if weight is contributing, suggesting a need to review weight trends. get_weight_data will provide relevant data to explore this. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I’m dragging an anchor, how’s my weight trending?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative 'dragging an anchor' suggests a feeling of being weighed down, likely physically. get_weight_data is needed to check weight trends. No time frame is mentioned, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Show me my weight data for the past three weeks.",
+        "type": "explicit",
+        "thinking": "The user directly requests weight data for a specific period, the past three weeks. get_weight_data is the appropriate function to retrieve this information. 'Past three weeks' translates to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m not fitting into my jeans like I used to, what’s up with my weight?",
+        "type": "implicit",
+        "thinking": "The user implies concern about weight gain through difficulty fitting into clothes. get_weight_data will help verify if their weight has changed. No time frame is specified, so I’ll use 7 days as a default for recent data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been drinking more water this week, has it impacted my weight?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased water intake and wonders about its effect on weight. get_weight_data is needed to check for any weight changes. The query specifies 'this week,' which maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been so bloated lately, could my weight be up?",
+        "type": "symptom",
+        "thinking": "The user reports bloating and questions if it’s related to weight gain. get_weight_data will provide weight data to assess this. No specific time window is mentioned, so I’ll default to 7 days for a recent view.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m feeling weighed down by life, is my scale showing it too?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphorical 'weighed down by life' likely hints at physical weight concerns alongside emotional ones. get_weight_data is needed to check weight trends. No time frame is given, so I’ll use 7 days as a default.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "How’s my weight been since I got back from vacation 12 days ago?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for weight trends since returning from vacation, a clear time reference. get_weight_data will fetch the relevant data. '12 days ago' directly maps to 12 for numdays.",
+        "numdays": 12,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been snacking a lot at night, am I gaining weight?",
+        "type": "behavioral",
+        "thinking": "The user mentions a habit of late-night snacking, implying concern about weight gain. get_weight_data is needed to check for weight changes. No time frame is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My energy’s been low this month, is my weight stable?",
+        "type": "symptom",
+        "thinking": "The user reports low energy and asks about weight stability, suggesting a possible link. get_weight_data will provide weight data to check for fluctuations. 'This month' is interpreted as 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I’m ballooning up, what’s my weight trend?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative 'ballooning up' suggests worry about rapid weight gain. get_weight_data is needed to analyze recent weight trends. No time frame is mentioned, so I’ll default to 7 days for analysis.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you check my weight trends for the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests weight trends for a specific period, the last 15 days. get_weight_data is the appropriate function to retrieve this data. The query specifies 'last 15 days,' so numdays is set to 15.",
+        "numdays": 15,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been super stressed, has my weight changed at all?",
+        "type": "implicit",
+        "thinking": "The user mentions stress and implies it might have affected their weight. get_weight_data will help check for any weight changes. No time window is given, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I started a new diet last Sunday, how’s my weight doing?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting a new diet, indicating interest in its impact on weight. get_weight_data is needed to retrieve weight measurements since then. 'Last Sunday' suggests 8 days (assuming today is Monday), so numdays is 8.",
+        "numdays": 8,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My back’s been hurting, could my weight be contributing?",
+        "type": "symptom",
+        "thinking": "The user reports back pain and wonders if weight is a factor, suggesting a need to review weight trends. get_weight_data will provide relevant data. No time frame is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m feeling like a sinking ship, what’s my weight like lately?",
+        "type": "metaphorical",
+        "thinking": "The user’s 'sinking ship' metaphor implies a sense of being weighed down, likely physically. get_weight_data is needed to check recent weight trends. No time frame is mentioned, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "What’s my weight trend been like since the holidays ended?",
+        "type": "explicit",
+        "thinking": "The user asks for weight trends since the holidays ended, likely referring to early January. Assuming today is August 5, I’ll estimate this as about 7 months, but since numdays is capped at 30, I’ll use 30 days for a recent view. get_weight_data will fetch the data.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been avoiding the scale, any changes in my weight?",
+        "type": "implicit",
+        "thinking": "The user implies discomfort with checking their weight, suggesting concern about potential changes. get_weight_data is needed to provide an update. No time frame is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been walking more for the past 10 days, has my weight shifted?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased walking, indicating curiosity about its effect on weight. get_weight_data will retrieve weight data to assess this. 'Past 10 days' directly maps to 10 for numdays.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been feeling puffy lately, is my weight up?",
+        "type": "symptom",
+        "thinking": "The user describes feeling 'puffy,' likely indicating concern about weight gain or bloating. get_weight_data will help confirm any weight changes. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I’m lugging around extra baggage, how’s my weight?",
+        "type": "metaphorical",
+        "thinking": "The user’s 'extra baggage' metaphor suggests concern about physical weight gain. get_weight_data is needed to analyze recent weight trends. No time frame is mentioned, so I’ll default to 7 days for analysis.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Can you look at my weight data for the past month?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests weight data for the past month. get_weight_data is the right function to fetch this information. 'Past month' is interpreted as 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been eating less lately, has it made a difference in my weight?",
+        "type": "behavioral",
+        "thinking": "The user mentions reduced eating, implying interest in its impact on weight. get_weight_data will retrieve weight measurements to check for changes. No specific time is mentioned, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m feeling out of breath a lot, is my weight involved?",
+        "type": "symptom",
+        "thinking": "The user reports breathlessness and questions if weight is a factor, suggesting a need to review weight trends. get_weight_data will provide relevant data. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’m carrying too much these days, what’s my weight trend?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative 'carrying too much' likely refers to physical weight concerns. get_weight_data is needed to check weight trends. No time frame is mentioned, so I’ll default to 7 days for a recent view.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "How’s my weight been since I started yoga two weeks ago?",
+        "type": "explicit",
+        "thinking": "The user directly asks for weight trends since starting yoga, a clear time reference. get_weight_data will fetch the relevant data. 'Two weeks ago' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been feeling bulkier, any weight changes recently?",
+        "type": "implicit",
+        "thinking": "The user’s mention of feeling 'bulkier' suggests concern about weight gain. get_weight_data will help verify any changes. No time frame is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been cutting out carbs for 10 days, how’s my weight?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (cutting carbs) and wants to know its effect on weight. get_weight_data is needed to retrieve weight measurements. '10 days' directly maps to 10 for numdays.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My joints feel stiff, could my weight be part of it?",
+        "type": "symptom",
+        "thinking": "The user reports joint stiffness and questions if weight is contributing, indicating a need to review weight trends. get_weight_data will provide relevant data. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I’m trudging through mud, what’s my weight doing?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor of 'trudging through mud' suggests a feeling of being weighed down, likely physically. get_weight_data is needed to check recent weight trends. No time frame is mentioned, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "What’s my weight trend been like over the last 25 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests weight trends for a specific period, the last 25 days. get_weight_data is the appropriate function to retrieve this data. The query specifies 'last 25 days,' so numdays is set to 25.",
+        "numdays": 25,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I’ve been indulging a bit, has my weight gone up?",
+        "type": "implicit",
+        "thinking": "The user implies possible weight gain by mentioning indulgence, suggesting concern about their habits. get_weight_data will help check for weight changes. No time frame is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I stepped on the scale today and got three different numbers within minutes. What's my actual trend been?",
+        "type": "implicit",
+        "thinking": "The user is frustrated with scale inconsistencies but wants to understand their true weight pattern. No specific timeframe is mentioned, so we'll use the default 7 days to identify the actual trend beyond daily fluctuations.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Chart my weight every Monday morning for the last 6 weeks.",
+        "type": "explicit",
+        "thinking": "This is a precise request for weekly snapshots. Six weeks translates to 42 days, but since they only want Monday measurements, we'll retrieve the full period to isolate those specific data points.",
+        "numdays": 42,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Since switching to night shifts three weeks ago, my eating patterns changed. Has this affected my weight?",
+        "type": "behavioral",
+        "thinking": "The user connects work schedule changes to potential weight impact. They specify the exact 21-day period since this change occurred, which determines our analysis timeframe.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My wedding ring feels tighter this month - should I be concerned about my weight?",
+        "type": "symptom",
+        "thinking": "The user notices physical swelling through jewelry fit and associates it with weight. 'This month' suggests examining 30 days of data to identify any gradual changes.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My weight graph looks like a seismograph during an earthquake!",
+        "type": "metaphorical",
+        "thinking": "The user vividly describes extreme weight volatility through analogy. No timeframe is specified, so we'll examine 7 days to understand these dramatic fluctuations.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Break down my weight by time of day for the past 5 workdays.",
+        "type": "explicit",
+        "thinking": "Clear request for diurnal patterns specifically on workdays. The user precisely asks for the last 5 instances of workdays (likely Monday-Friday).",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like I'm carrying around invisible sandbags since returning from vacation.",
+        "type": "metaphorical",
+        "thinking": "Creative expression suggesting perceived weight gain. Assuming vacation ended approximately 10 days ago based on typical durations.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Has my new antidepressant affected my weight in the 18 days since starting it?",
+        "type": "behavioral",
+        "thinking": "The user inquires about medication side effects. They provide the exact 18-day timeframe since beginning treatment for precise correlation analysis.",
+        "numdays": 18,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My knees crack more when I stand up now. Could recent weight changes explain this?",
+        "type": "symptom",
+        "thinking": "The user connects joint symptoms with potential weight impact. 'Recent' is vague, so we'll examine the default 7-day period.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Compare my weight now to when I began physical therapy 24 days ago.",
+        "type": "explicit",
+        "thinking": "Direct request for before/after comparison. The user specifies the exact 24-day period since starting therapy for clear progress assessment.",
+        "numdays": 24,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've been craving sweets nonstop this week. Has this shown up on the scale?",
+        "type": "implicit",
+        "thinking": "The user implies concern about dietary changes affecting weight. They specify 'this week', so we'll analyze 7 days of data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Since daylight savings time ended, my sleep schedule changed. Any weight correlation?",
+        "type": "behavioral",
+        "thinking": "The user links circadian rhythm disruption to potential weight changes. Assuming DST ended 14 days ago in their region.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My scale keeps winking at me with unexpectedly low numbers this month.",
+        "type": "metaphorical",
+        "thinking": "Humorous personification suggesting surprising weight measurements. 'This month' indicates we should examine 30 days of data.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've had persistent water retention since my flight 5 days ago. What's the trend?",
+        "type": "symptom",
+        "thinking": "The user associates travel with physical symptoms. They specify the exact 5-day period since the flight for targeted analysis.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Show me my weight trajectory since the full moon two weeks ago.",
+        "type": "explicit",
+        "thinking": "Unique temporal reference to lunar cycle. The user clearly requests data for the 14-day period since that astronomical event.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My jeans from last winter won't button. Has my weight changed significantly?",
+        "type": "implicit",
+        "thinking": "The user implies concern through clothing fit issues. No timeframe is specified, so we'll examine the default 7 days plus consider seasonal comparison.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "After 9 days of probiotic use, has my gut health improvement affected weight?",
+        "type": "behavioral",
+        "thinking": "The user connects supplement use with potential weight impact. They specify the exact 9-day duration for precise analysis.",
+        "numdays": 9,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I feel like a water balloon about to pop after salty meals lately.",
+        "type": "metaphorical",
+        "thinking": "Vivid description of bloating sensations. 'Lately' suggests examining the default 7-day period for fluid retention patterns.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Plot my weight against my menstrual cycle for the past 30 days.",
+        "type": "explicit",
+        "thinking": "Clear request for physiological correlation analysis. The user specifies the exact 30-day period needed.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My smartwatch says I'm burning more calories, but I don't see weight changes.",
+        "type": "implicit",
+        "thinking": "The user questions expected weight loss from activity. No timeframe is specified, so we'll examine the default 7 days to assess this discrepancy.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Since adopting a dog 3 weeks ago, my step count tripled. Weight impact?",
+        "type": "behavioral",
+        "thinking": "The user links lifestyle change to potential weight effects. They specify the exact 21-day period since this change occurred.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My face looks puffier in morning selfies this week. Is this reflected in numbers?",
+        "type": "symptom",
+        "thinking": "The user notices physical changes through photography. 'This week' specifies the 7-day analysis period needed.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My weight readings are playing hard to get - never the same twice!",
+        "type": "metaphorical",
+        "thinking": "Creative expression describing measurement inconsistency. No timeframe is given, so we'll analyze 7 days to identify patterns.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Compare my pre-dinner and post-dinner weights for the last 10 days.",
+        "type": "explicit",
+        "thinking": "Precise request for mealtime comparison. The user specifies the exact 10-day analysis period.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I think my weight plateaued despite diet changes. Can you check?",
+        "type": "implicit",
+        "thinking": "The user suggests stalled progress despite efforts. No timeframe is specified, so we'll examine the default 7 days to assess the plateau.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "After 12 days of cold showers, has my brown fat activation affected weight?",
+        "type": "behavioral",
+        "thinking": "The user inquires about a specific biohacking practice. They provide the exact 12-day duration for analysis.",
+        "numdays": 12,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My ankles look like tree trunks by evening lately. Water weight?",
+        "type": "symptom",
+        "thinking": "The user describes edema symptoms. 'Lately' suggests examining the default 7-day period for patterns.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My scale is like a moody teenager - never predictable!",
+        "type": "metaphorical",
+        "thinking": "Humorous analogy for measurement volatility. No timeframe is given, so we'll analyze 7 days of data.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Show me weight distribution between weekdays and weekends last month.",
+        "type": "explicit",
+        "thinking": "Clear request for lifestyle pattern analysis. 'Last month' specifies the 30-day analysis period.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My weight hasn't budged despite marathon training. What gives?",
+        "type": "implicit",
+        "thinking": "The user expresses frustration about expected weight changes. No timeframe is specified, so we'll examine the default 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Since cutting caffeine 16 days ago, any weight fluctuations?",
+        "type": "behavioral",
+        "thinking": "The user links substance elimination to potential weight changes. They specify the exact 16-day period for analysis.",
+        "numdays": 16,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I wake up feeling like I gained 10 pounds overnight sometimes.",
+        "type": "symptom",
+        "thinking": "The user describes dramatic morning sensations. No timeframe is specified, so we'll examine 7 days to identify nocturnal patterns.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My weight chart looks like a polygraph test of a nervous suspect!",
+        "type": "metaphorical",
+        "thinking": "Creative analogy for erratic measurements. No timeframe is given, so we'll analyze 7 days to understand these fluctuations.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Display my weight percent change since New Year's resolutions began.",
+        "type": "explicit",
+        "thinking": "Direct request with cultural timeframe reference. Assuming today is January 22nd (22 days into the new year).",
+        "numdays": 22,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My weight seems stuck no matter what I do. Am I missing something?",
+        "type": "implicit",
+        "thinking": "The user expresses frustration about perceived plateau. No timeframe is specified, so we'll examine the default 7 days for subtle changes.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Has my weight responded to the sauna sessions I started 8 days ago?",
+        "type": "behavioral",
+        "thinking": "The user inquires about thermal therapy effects. They specify the exact 8-day period since beginning this practice.",
+        "numdays": 8,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My watch band leaves marks on my wrist now. Weight-related?",
+        "type": "symptom",
+        "thinking": "The user notices physical changes through accessory fit. No timeframe is specified, so we'll examine the default 7 days.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "The numbers on my scale are doing the hokey pokey - in and out constantly!",
+        "type": "metaphorical",
+        "thinking": "Humorous dance analogy for weight variability. No timeframe is given, so we'll analyze 7 days to identify patterns.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Graph my weight against my hydration levels for the past 14 days.",
+        "type": "explicit",
+        "thinking": "Clear request for physiological correlation. The user specifies the exact 14-day analysis period.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I'm worried water retention is masking actual weight loss.",
+        "type": "implicit",
+        "thinking": "The user suggests concern about measurement accuracy. No timeframe is specified, so we'll examine the default 7 days for patterns.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Since starting creatine supplementation 10 days ago, what's the weight impact?",
+        "type": "behavioral",
+        "thinking": "The user inquires about supplement effects. They specify the exact 10-day period since beginning use.",
+        "numdays": 10,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My belly feels distended after meals this week. Is this showing on the scale?",
+        "type": "symptom",
+        "thinking": "The user connects digestive sensations with weight. 'This week' specifies the 7-day analysis period needed.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My scale displays numbers like a slot machine - always surprising!",
+        "type": "metaphorical",
+        "thinking": "Gambling analogy for unpredictable measurements. No timeframe is given, so we'll analyze 7 days to understand variability.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Show me my weight trend since the start of monsoon season 3 weeks ago.",
+        "type": "explicit",
+        "thinking": "Distinct seasonal timeframe reference. The user clearly requests data for the 21-day period since this weather pattern began.",
+        "numdays": 21,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I weigh less at the doctor's office than at home. Which is accurate?",
+        "type": "implicit",
+        "thinking": "The user questions measurement consistency across scales. No timeframe is specified, so we'll examine the default 7 days of home data for comparison.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "After 15 days of strict gluten-free diet, any weight changes?",
+        "type": "behavioral",
+        "thinking": "The user inquires about dietary restriction effects. They specify the exact 15-day period for analysis.",
+        "numdays": 15,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My rings leave indentations by afternoon lately. Fluid retention?",
+        "type": "symptom",
+        "thinking": "The user notices physical changes through jewelry. 'Lately' suggests examining the default 7-day period.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My weight graph resembles a toddler's fever chart - all over the place!",
+        "type": "metaphorical",
+        "thinking": "Vivid medical analogy for erratic measurements. No timeframe is given, so we'll analyze 7 days to identify patterns.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Compare my weight before and after my work trips this month.",
+        "type": "explicit",
+        "thinking": "Clear request for travel-related analysis. 'This month' specifies the 30-day period to identify business trip impacts.",
+        "numdays": 30,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My weight's been like a yo-yo diet commercial - up and down constantly since my birthday 2 weeks ago.",
+        "type": "metaphorical",
+        "thinking": "The user creatively describes weight fluctuations through advertising analogy. They specify the exact 14-day period since their birthday for analysis of these variations.",
+        "numdays": 14,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "Show me a side-by-side comparison of my morning vs night weight for the last 5 days I worked from home.",
+        "type": "explicit",
+        "thinking": "Precise request for WFH-specific diurnal patterns. The user wants exactly 5 days of home office data comparing different times of day.",
+        "numdays": 5,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "I've been stress-eating since the project deadline was moved up 9 days ago. Has it shown on the scale?",
+        "type": "behavioral",
+        "thinking": "The user connects emotional eating to a work stressor. They provide the exact 9-day timeframe since this triggering event for impact analysis.",
+        "numdays": 9,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "My ankles disappear when I sit for too long these days. Water retention or weight gain?",
+        "type": "symptom",
+        "thinking": "The user describes edema symptoms through visual changes. 'These days' is vague but suggests examining the default 7-day period for patterns.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    },
+    {
+        "query": "The scale at my gym and my home scale are telling completely different stories this week.",
+        "type": "implicit",
+        "thinking": "The user implies concern about measurement inconsistency between devices. 'This week' specifies the 7-day period needed to compare the discrepancies.",
+        "numdays": 7,
+        "function": "get_weight_data"
+    }
+]

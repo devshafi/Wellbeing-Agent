@@ -1,0 +1,1815 @@
+[
+    {
+        "query": "My resting heart rate has increased by 10 bpm over the past month. Should I be concerned?",
+        "type": "symptom",
+        "thinking": "Sustained RHR elevation may indicate stress, illness, or cardiovascular changes. Analyzing 30 days will establish trend significance and correlate with activity/sleep data.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Why does my heart race every night around 2 AM? It's been happening for 2 weeks.",
+        "type": "symptom",
+        "thinking": "Nocturnal tachycardia warrants investigation. Reviewing 14 nights will identify if spikes align with sleep stages (REM), apnea events, or stress markers.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate variability (HRV) trends from last Tuesday to Friday.",
+        "type": "explicit",
+        "thinking": "Targeted request for autonomic nervous system analysis. Isolating these 4 days will reveal workweek stress patterns.",
+        "numdays": 4,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting HIIT workouts 3 weeks ago, my recovery heart rate seems slower. Is this normal?",
+        "type": "behavioral",
+        "thinking": "Exercise adaptation often temporarily increases cardiac strain. Comparing 21 days pre/post HIIT will differentiate normal adaptation from concerning patterns.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like a bird trapped in my chest during work meetings.",
+        "type": "metaphorical",
+        "thinking": "Metaphor for stress-induced palpitations. Analyzing 7 days of work-hour HR data will quantify sympathetic activation during meetings.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you compare my daytime vs nighttime heart rates over the past 6 months?",
+        "type": "explicit",
+        "thinking": "Request for circadian rhythm assessment. 180-day comparison will establish robust diurnal variation baselines.",
+        "numdays": 180,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "For the past 5 days, my heart rate drops below 40 bpm during sleep. Is this dangerous?",
+        "type": "symptom",
+        "thinking": "Sinus bradycardia during sleep is common in athletes but requires evaluation. Isolating these 5 nights will assess depth/duration of dips.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since quitting caffeine last week, my resting HR has dropped. Is this permanent?",
+        "type": "behavioral",
+        "thinking": "Caffeine withdrawal typically shows immediate cardiovascular effects. Tracking 7 more days will determine if stabilization occurs.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a drumline missing beats - occasional weird thumps all morning.",
+        "type": "metaphorical",
+        "thinking": "Suggests premature ventricular contractions (PVCs). Reviewing 10 days of AM HR data will quantify ectopic beat frequency.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "How does my average workout heart rate this month compare to last?",
+        "type": "explicit",
+        "thinking": "Fitness progress inquiry. Comparing 30-day periods will reveal cardiovascular efficiency changes.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "I get dizzy when standing up quickly. Does my HR data show abnormal spikes?",
+        "type": "symptom",
+        "thinking": "Possible orthostatic hypotension. Analyzing 14 days of postural transitions will measure if HR increases >30 bpm within 2 minutes.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since my COVID infection cleared 10 days ago, my heart rate stays elevated. When will it normalize?",
+        "type": "symptom",
+        "thinking": "Post-viral tachycardia is common. Monitoring next 14 days will track recovery trajectory against typical 3-4 week resolution.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart rate variability looks terrible this week. What could explain this?",
+        "type": "implicit",
+        "thinking": "Low HRV suggests stress or overtraining. Correlating 7 days of HRV with sleep/activity logs may identify triggers.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you show my HR zones during yesterday's marathon?",
+        "type": "explicit",
+        "thinking": "Request for event-specific analysis. Isolating race day will assess cardiovascular endurance under stress.",
+        "numdays": 1,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My Apple Watch says I had 'unexplained tachycardia' last night. Should I worry?",
+        "type": "symptom",
+        "thinking": "Nocturnal arrhythmias require investigation. Reviewing that night's HR pattern will differentiate benign sinus tachy from concerning rhythms.",
+        "numdays": 1,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting beta blockers, my exercise heart rate won't go above 120. Is this safe?",
+        "type": "behavioral",
+        "thinking": "Pharmacological HR limitation is expected. Comparing 21 days pre/post medication will confirm therapeutic effect versus over-suppression.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a rusty engine - slow to start in mornings but races unpredictably.",
+        "type": "metaphorical",
+        "thinking": "Suggests autonomic dysfunction. Analyzing 14 mornings will quantify post-awakening HR instability.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my stress-induced heart rate spikes during tax season last year.",
+        "type": "explicit",
+        "thinking": "Request for historical stress response analysis. Isolating the 30-day tax period will quantify psychological cardiovascular impact.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "For 3 days after my flu shot, my resting HR was elevated. Normal immune response?",
+        "type": "symptom",
+        "thinking": "Vaccines often cause transient inflammation. Reviewing those 72 hours will confirm if HR increase aligns with typical 1-3 day immune activation.",
+        "numdays": 3,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since using a standing desk, my afternoon heart rate is higher. Should I adjust?",
+        "type": "behavioral",
+        "thinking": "Prolonged standing increases orthostatic stress. Comparing 14 days pre/post change will determine if adaptation occurs within 2 weeks.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart rate jumps 40 bpm when I check work emails after hours. Can we quantify this?",
+        "type": "symptom",
+        "thinking": "Work-related stress response. Tracking 7 evenings will measure HR reactivity to digital stressors.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "How does my pregnancy affect normal heart rate ranges? Third trimester vs pre-pregnancy.",
+        "type": "explicit",
+        "thinking": "Gestational cardiovascular changes inquiry. Comparing 30-day periods will establish expected HR elevation baselines.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a metronome with a dying battery - sometimes steady, sometimes erratic.",
+        "type": "metaphorical",
+        "thinking": "Describes intermittent arrhythmia. Reviewing 21 days will identify frequency of irregular rhythm episodes.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since moving to high altitude, my resting HR stays elevated. When will I acclimate?",
+        "type": "symptom",
+        "thinking": "Hypoxia-induced tachycardia typically resolves in 2-6 weeks. Monitoring 30 days will track acclimatization progress.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you analyze my HR during panic attacks versus normal anxiety?",
+        "type": "explicit",
+        "thinking": "Request for psychophysiological differentiation. Comparing 10 episodes of each will contrast autonomic signatures.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My nighttime heart rate dips below 35 bpm. As a runner, is this dangerous?",
+        "type": "symptom",
+        "thinking": "Athletic bradycardia is common but requires evaluation. Analyzing 14 nights will assess duration/severity of bradycardic episodes.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting ADHD meds, my afternoon HR is consistently 20 bpm higher. Problem?",
+        "type": "behavioral",
+        "thinking": "Stimulants increase sympathetic tone. Reviewing 7 days will determine if elevation remains within safe therapeutic range.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart rate recovery after workouts has slowed this season. Overtraining?",
+        "type": "implicit",
+        "thinking": "Delayed HR recovery suggests fatigue. Comparing 28 days to previous season will quantify detraining effects.",
+        "numdays": 28,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my HR patterns during migraines versus headache-free days.",
+        "type": "explicit",
+        "thinking": "Request for pain-autonomic correlation. Isolating 10 migraine days will contrast autonomic activity.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a flickering lightbulb - occasional bursts of rapid fluttering.",
+        "type": "metaphorical",
+        "thinking": "Suggests paroxysmal atrial fibrillation. Analyzing 5 symptomatic days will document arrhythmia burden.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "For 48 hours after my surgery, my heart rate was unstable. Normal recovery?",
+        "type": "symptom",
+        "thinking": "Post-anesthetic autonomic instability is common. Reviewing those 2 days will assess whether fluctuations followed expected resolution timeline.",
+        "numdays": 2,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since my concussion, my heart rate jumps when I read. Persistent autonomic issue?",
+        "type": "symptom",
+        "thinking": "Post-concussion dysautonomia may manifest as cognitive stress reactions. Tracking 21 days will monitor recovery progression.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you compare my workday vs weekend heart rate variability?",
+        "type": "explicit",
+        "thinking": "Request for stress load analysis. Contrasting 10 workdays with 4 weekend days will quantify occupational autonomic impact.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart rate drops suddenly after lunch. Postprandial hypotension?",
+        "type": "symptom",
+        "thinking": "Digestion diverts blood flow. Analyzing 7 days of post-meal HR will identify if drops exceed normal 10-15 bpm decline.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting hot yoga, my peak heart rate is lower. Improved fitness or dehydration?",
+        "type": "behavioral",
+        "thinking": "Heat acclimation affects cardiovascular response. Comparing 14 sessions will correlate HR changes with hydration markers.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a car stuck in high gear - constantly racing even at rest.",
+        "type": "metaphorical",
+        "thinking": "Describes inappropriate sinus tachycardia. Reviewing 30 days will document resting HR exceeding 100 bpm frequency.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during allergy attacks this spring versus baseline.",
+        "type": "explicit",
+        "thinking": "Request for histamine-autonomic analysis. Isolating 10 high-pollen days will quantify allergic stress response.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "For 3 nights after time zone changes, my sleeping HR is elevated. Jet lag effect?",
+        "type": "symptom",
+        "thinking": "Circadian misalignment increases sympathetic tone. Reviewing these 72-hour periods will map recovery curves.",
+        "numdays": 3,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since my dog passed, my resting heart rate won't settle below 80. Grief response?",
+        "type": "symptom",
+        "thinking": "Bereavement increases sympathetic activation. Monitoring 14 days will track whether HR normalizes with grief timeline.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you analyze my HR during work presentations versus casual speaking?",
+        "type": "explicit",
+        "thinking": "Request for performance anxiety assessment. Comparing 5 events of each will quantify stress reactivity differences.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart rate variability plummets during my menstrual cycle. Normal?",
+        "type": "symptom",
+        "thinking": "Hormonal fluctuations affect autonomic tone. Tracking 28 days will correlate HRV dips with menstrual phases.",
+        "numdays": 28,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting antidepressants, my heart rate is more stable. Placebo or physiological?",
+        "type": "behavioral",
+        "thinking": "SSRIs may reduce anxiety-driven HR fluctuations. Comparing 21 days pre/post medication will differentiate psychological vs direct effects.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a wind-up toy - starts slow but races uncontrollably when stressed.",
+        "type": "metaphorical",
+        "thinking": "Suggests delayed stress response. Analyzing 5 high-stress days will measure HR acceleration patterns.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate recovery times after different workout types.",
+        "type": "explicit",
+        "thinking": "Fitness modality comparison request. Analyzing 14 sessions of cardio vs strength training will contrast autonomic recovery.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "During my last 5 flights, my heart rate stayed above 100 bpm. Anxiety or altitude?",
+        "type": "symptom",
+        "thinking": "Differentiating physiological stress sources. Isolating flight days will assess whether HR normalizes post-flight.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since using a CPAP machine, my nighttime heart rate is calmer. Expected improvement?",
+        "type": "behavioral",
+        "thinking": "Sleep apnea treatment reduces autonomic stress. Comparing 7 nights pre/post CPAP will quantify HR stabilization.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart rate jumps when I check my fitness tracker. Irony or real concern?",
+        "type": "symptom",
+        "thinking": "Device-related anxiety ('white coat syndrome' for wearables). Tracking 10 instances will measure HR reactivity to self-monitoring.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "How has my average resting heart rate changed this month compared to last?",
+        "type": "explicit",
+        "thinking": "Request for comparative trend analysis. Pulling 30 days for each period provides sufficient data for reliable comparison.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "I started meditation last week. Has it lowered my daytime heart rate?",
+        "type": "behavioral",
+        "thinking": "Intervention impact inquiry. Comparing 7 days pre/post practice will measure physiological relaxation effects.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like a calm lake today. Does my HR data reflect this?",
+        "type": "metaphorical",
+        "thinking": "Metaphor for low arousal state. Checking today's data will correlate subjective calmness with objective HR/HRV metrics.",
+        "numdays": 1,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during yesterday's morning walk.",
+        "type": "explicit",
+        "thinking": "Activity-specific request. Isolating that workout session provides targeted cardiovascular response data.",
+        "numdays": 1,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since daylight savings started, my evening HR seems higher. Real or imagined?",
+        "type": "behavioral",
+        "thinking": "Circadian rhythm inquiry. Comparing 7 days pre/post time change will quantify schedule disruption effects.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you compare my work-from-home vs office heart rate averages?",
+        "type": "explicit",
+        "thinking": "Environment impact analysis. Contrasting 10 days of each will reveal location-based stress differences.",
+        "numdays": 20,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart rate is a steady drumbeat during yoga but jumps when I check emails.",
+        "type": "metaphorical",
+        "thinking": "Describes activity-contingent HR patterns. Analyzing 5 sessions of each will quantify focus vs stress responses.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Has my peak hiking heart rate improved this season?",
+        "type": "explicit",
+        "thinking": "Fitness progress check. Comparing 10 recent hikes to 10 early-season ones shows cardiovascular adaptation.",
+        "numdays": 20,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since switching to decaf, my afternoon HR seems more stable. True?",
+        "type": "behavioral",
+        "thinking": "Dietary change analysis. Reviewing 7 days pre/post switch will identify caffeine-related HR variability.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate variability during last week's vacation?",
+        "type": "explicit",
+        "thinking": "Request for relaxation period assessment. Isolating those 7 days measures autonomic recovery.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a metronome during deep work but a jazz solo when distracted.",
+        "type": "metaphorical",
+        "thinking": "Illustrates focus-dependent HR patterns. Comparing 5 focused vs distracted workdays quantifies cognitive load effects.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "How does my heart rate differ between podcast listening and music?",
+        "type": "explicit",
+        "thinking": "Media preference inquiry. Analyzing 10 sessions of each reveals auditory stimulation impacts.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since getting a standing desk, my workday HR averages 5 bpm higher. Normal?",
+        "type": "behavioral",
+        "thinking": "Postural change analysis. Reviewing 14 days pre/post transition establishes expected orthostatic increase.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate trends during the last book I read.",
+        "type": "explicit",
+        "thinking": "Activity-correlated request. Tracking HR across reading sessions (typically 7-10 days) shows engagement patterns.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart rate drops like a falling leaf when I do breathing exercises.",
+        "type": "metaphorical",
+        "thinking": "Describes paced breathing response. Analyzing 5 practice sessions quantifies HR decline rates.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you compare my weekend vs weekday resting heart rates?",
+        "type": "explicit",
+        "thinking": "Lifestyle rhythm analysis. Contrasting 10 weekends with 20 weekdays reveals work-life balance impacts.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Has my sleeping heart rate changed since using a weighted blanket?",
+        "type": "behavioral",
+        "thinking": "Intervention effectiveness check. Comparing 14 nights pre/post will measure potential autonomic calming effects.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What's my typical heart rate during creative work versus admin tasks?",
+        "type": "explicit",
+        "thinking": "Cognitive state inquiry. Analyzing 10 instances of each reveals flow state vs stress HR signatures.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a lazy river on Sundays but a rushing stream on Mondays.",
+        "type": "metaphorical",
+        "thinking": "Weekly rhythm metaphor. Comparing 4 Sundays to 4 Mondays quantifies weekend-weekday transition effects.",
+        "numdays": 28,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since tracking my water intake, I notice HR drops when hydrated. Real pattern?",
+        "type": "behavioral",
+        "thinking": "Hydration correlation check. Reviewing 14 days of intake logs against HR data identifies fluid volume effects.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during morning journaling versus evening reflection.",
+        "type": "explicit",
+        "thinking": "Temporal activity analysis. Comparing 10 AM vs PM sessions reveals diurnal autonomic differences.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart rate is a gentle wave during baths but a choppy sea in traffic.",
+        "type": "metaphorical",
+        "thinking": "Environment response metaphor. Analyzing 5 of each scenario quantifies relaxation vs stress differentials.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "How does petting my dog affect my heart rate compared to phone scrolling?",
+        "type": "explicit",
+        "thinking": "Behavioral contrast request. Tracking 10 instances of each measures companionship vs digital stimulation effects.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting garden work, my post-activity HR recovery seems faster. Accurate?",
+        "type": "behavioral",
+        "thinking": "Physical activity adaptation check. Comparing 7 gardening days to 7 sedentary days quantifies recovery improvements.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate pattern during the week I tried a digital detox?",
+        "type": "explicit",
+        "thinking": "Intervention period analysis. Isolating those 7 days shows technology reduction impacts.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a steady clock during puzzles but a fluttering bird before deadlines.",
+        "type": "metaphorical",
+        "thinking": "Task-dependent metaphor. Contrasting 5 relaxed vs high-pressure workdays quantifies cognitive stress responses.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you show my heart rate during rainy days versus sunny ones?",
+        "type": "explicit",
+        "thinking": "Weather impact inquiry. Comparing 10 days of each reveals meteorological influences on autonomic function.",
+        "numdays": 20,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since using blue-light glasses, my evening HR seems calmer. Verifiable?",
+        "type": "behavioral",
+        "thinking": "Device effectiveness check. Analyzing 14 evenings pre/post usage measures circadian stabilization.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "How does my cooking heart rate compare to my eating heart rate?",
+        "type": "explicit",
+        "thinking": "Meal preparation inquiry. Tracking 10 cooking/eating sessions quantifies anticipatory vs digestive responses.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart rate is a sleepy cat during audiobooks but a playful puppy during podcasts.",
+        "type": "metaphorical",
+        "thinking": "Media content metaphor. Comparing 5 sessions of each reveals narrative style impacts on arousal.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What's my average heart rate during virtual meetings versus in-person ones?",
+        "type": "explicit",
+        "thinking": "Communication format analysis. Contrasting 10 of each quantifies social presence effects.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since decluttering my workspace, my focus-time HR seems more stable. Real effect?",
+        "type": "behavioral",
+        "thinking": "Environmental change check. Reviewing 7 days pre/post declutter measures visual stress reduction.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during handwritten notes versus typing.",
+        "type": "explicit",
+        "thinking": "Motor activity inquiry. Analyzing 10 sessions of each reveals kinesthetic-cardiovascular links.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a slow dancer during tea time but a tap dancer after coffee.",
+        "type": "metaphorical",
+        "thinking": "Beverage response metaphor. Comparing 5 tea vs coffee days quantifies stimulant differentials.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you compare my heart rate during baking versus cooking savory meals?",
+        "type": "explicit",
+        "thinking": "Culinary activity analysis. Contrasting 10 sweet vs savory sessions measures emotional valence effects.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since using a sunrise alarm, my waking HR seems gentler. Does data agree?",
+        "type": "behavioral",
+        "thinking": "Device impact verification. Comparing 14 mornings pre/post implementation quantifies awakening stress reduction.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What's my heart rate pattern during museum visits versus movie theaters?",
+        "type": "explicit",
+        "thinking": "Leisure activity inquiry. Analyzing 5 outings to each reveals cultural engagement autonomic profiles.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a hibernating bear in winter but a playful dolphin in summer.",
+        "type": "metaphorical",
+        "thinking": "Seasonal variation metaphor. Comparing 30 winter vs summer days quantifies photoperiod/temperature effects.",
+        "numdays": 60,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "How does my heart rate differ between handwritten journaling and digital logging?",
+        "type": "explicit",
+        "thinking": "Recording method analysis. Contrasting 10 sessions of each measures analog vs digital cognitive loads.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since adding houseplants, my workday HR variability improved. Confirmed?",
+        "type": "behavioral",
+        "thinking": "Biophilic design check. Reviewing 21 days pre/post addition quantifies environmental enrichment effects.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during creative writing versus email responses.",
+        "type": "explicit",
+        "thinking": "Writing mode inquiry. Comparing 10 sessions of each reveals compositional stress differentials.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is a lullaby during knitting but a rock anthem during gaming.",
+        "type": "metaphorical",
+        "thinking": "Hobby intensity metaphor. Analyzing 5 sessions of each quantifies craft vs digital excitement levels.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you compare my heart rate during indoor vs outdoor workouts?",
+        "type": "explicit",
+        "thinking": "Training environment analysis. Contrasting 10 sessions of each reveals nature's impact on exercise physiology.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since practicing gratitude, my evening HR seems lower. Actual trend?",
+        "type": "behavioral",
+        "thinking": "Positive psychology check. Reviewing 14 days pre/post practice measures reflection-induced calm.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What's my average heart rate during pottery versus painting?",
+        "type": "explicit",
+        "thinking": "Artistic medium inquiry. Analyzing 5 sessions of each quantifies tactile vs visual creative arousal.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart feels calmer since I started morning walks. Does the data back this up?",
+        "type": "behavioral",
+        "thinking": "It makes sense that regular walks would lower resting HR. Let's check the last two weeks - that's enough time to see if there's a steady downward trend in your morning readings.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Why does my heart race when I work late? It's been happening all month.",
+        "type": "implicit",
+        "thinking": "Evening stress and fatigue can definitely spike your HR. Looking at the past 30 days, I'll check if those late-night work sessions consistently show higher rates compared to your daytime baseline.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during last Saturday's hike",
+        "type": "explicit",
+        "thinking": "You're asking for activity-specific data. I'll pull just that day's workout to show how your heart responded to the trail's intensity.",
+        "numdays": 1,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a drum solo when I'm rushing to meet deadlines",
+        "type": "metaphorical",
+        "thinking": "That's a vivid way to describe stress reactions! Let's look at the past 5 work deadlines to see exactly how much your HR spikes during crunch times.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Has my resting HR improved since I quit caffeine three weeks ago?",
+        "type": "behavioral",
+        "thinking": "Caffeine withdrawal can take weeks to stabilize. Comparing the 21 days before and after you quit should reveal whether your body's adjusted to lower baseline rates.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you compare my heart rate during yoga vs. weightlifting?",
+        "type": "explicit",
+        "thinking": "Interesting! These activities stress your cardiovascular system differently. I'll analyze your last 5 sessions of each to show the contrast between aerobic calm and strength-training spikes.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart feels like a lazy river on vacation but a waterfall when I check emails",
+        "type": "metaphorical",
+        "thinking": "Love this imagery! To quantify it, I'll compare your vacation HR data from last month to a typical workweek - we should see those 'waterfall' spikes during inbox time.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since getting a dog, my evening heart rate seems lower. Real or wishful thinking?",
+        "type": "behavioral",
+        "thinking": "Pets do reduce stress for many people. Let's look at the 6 weeks since adoption versus the 6 weeks before - that's enough data to spot meaningful relaxation trends.",
+        "numdays": 42,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate pattern during the week I visited the mountains?",
+        "type": "explicit",
+        "thinking": "Altitude affects everyone differently. I'll isolate those 7 travel days to see if your body showed higher resting rates or slower recovery from activity.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart races during meetings but not when I message the same people. Why?",
+        "type": "implicit",
+        "thinking": "This is so common! In-person interactions trigger stronger stress responses. I'll compare your HR during 10 meetings versus 10 chat sessions - we'll likely see a 10-20 bpm difference.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart races during work calls lately",
+        "type": "symptom",
+        "thinking": "This suggests work-related anxiety. To quantify it, I'll analyze your last 7 days of heart rate data during call times versus quiet periods using get_heart_rate_data.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate trends from March 1-15 when I was adjusting to new meds",
+        "type": "explicit",
+        "thinking": "Medication transitions often affect cardiovascular response. I'll examine that specific 15-day period with get_heart_rate_data to identify adaptation patterns.",
+        "numdays": 15,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart rate stay elevated after therapy sessions?",
+        "type": "behavioral",
+        "thinking": "Emotionally intense sessions can prolong physiological arousal. Let's compare your HR for 2 hours post-therapy versus baseline with get_heart_rate_data (defaulting to last 7 sessions).",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds like a drum when I check my bank account",
+        "type": "metaphorical",
+        "thinking": "Financial stress creates measurable physiological responses. I'll use get_heart_rate_data to analyze HR spikes during 5 recent banking app interactions.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "How did my body react during last week's anxiety episode?",
+        "type": "explicit",
+        "thinking": "Acute anxiety produces distinct cardiac patterns. I'll retrieve that specific 7-day period with get_heart_rate_data to correlate your logged episode with HR fluctuations.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "I wake up with my heart racing. Is this normal?",
+        "type": "symptom",
+        "thinking": "Morning cortisol spikes can trigger this. I'll check get_heart_rate_data for the last 7 mornings to see if your awakening HR exceeds your normal resting range.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting breathwork, has my resting HR changed?",
+        "type": "behavioral",
+        "thinking": "Breath training should improve autonomic regulation. I'll compare pre- and post-intervention 14-day windows using get_heart_rate_data to measure progress.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart flutters like a caged bird when I think about my ex",
+        "type": "metaphorical",
+        "thinking": "Emotional triggers cause palpable physiological changes. I'll use get_heart_rate_data to analyze HR during 5 recent instances when you logged these thoughts.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate pattern during my recent depressive episode?",
+        "type": "explicit",
+        "thinking": "Depression often alters circadian rhythms. I'll examine that 21-day period with get_heart_rate_data to identify any characteristic daytime HR elevations.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart rate stay high all day when I'm stressed?",
+        "type": "implicit",
+        "thinking": "Chronic stress creates sustained autonomic activation. I'll use get_heart_rate_data to compare your last 7 high-stress days versus calm ones.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart skips beats when I get up too fast since my fall last month",
+        "type": "symptom",
+        "thinking": "Post-fall orthostatic changes are common in seniors. I'll use get_heart_rate_data to compare your standing HR spikes over the past 30 days to pre-fall baselines.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart race more after morning medications?",
+        "type": "behavioral",
+        "thinking": "Medication timing can affect cardiovascular response. Let's analyze your post-dose HR for the last 7 days using get_heart_rate_data to identify patterns.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate when I garden versus watching TV",
+        "type": "explicit",
+        "thinking": "Activity-specific HR comparisons help tailor exercise plans. I'll retrieve data from your last 5 gardening sessions and 5 sedentary evenings with get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Ever since my wife passed, my heart feels heavy and slow",
+        "type": "metaphorical",
+        "thinking": "Bereavement often impacts cardiac rhythms. I'll examine your resting HR trends over the past 90 days using get_heart_rate_data to assess physiological grief responses.",
+        "numdays": 90,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Why does my heart pound when I try to remember things?",
+        "type": "symptom",
+        "thinking": "Cognitive effort can stress aging cardiovascular systems. I'll use get_heart_rate_data to compare your HR during 7 recent memory tasks versus relaxed states.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Has my heart rate changed since reducing blood pressure meds?",
+        "type": "behavioral",
+        "thinking": "Medication adjustments require careful monitoring. I'll analyze your daytime HR averages for 14 days pre- and post-change using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart flutters like a moth when I nap after lunch",
+        "type": "metaphorical",
+        "thinking": "Postprandial arrhythmias are common in elderly. I'll check get_heart_rate_data for your last 10 post-lunch rest periods to identify patterns.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate doing during last week's confusion episode?",
+        "type": "explicit",
+        "thinking": "Cognitive events may correlate with cardiac changes. I'll retrieve that specific 7-day period with get_heart_rate_data to investigate connections.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My chest feels shaky when I walk to the mailbox now",
+        "type": "symptom",
+        "thinking": "Age-related cardiovascular deconditioning often manifests this way. I'll use get_heart_rate_data to compare your walking HR over the last 14 days to last month's.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since moving to assisted living, my resting HR seems lower",
+        "type": "behavioral",
+        "thinking": "Reduced home maintenance stress may improve cardiac metrics. I'll analyze 30 days pre- and post-move with get_heart_rate_data to quantify this change.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my nighttime heart rate patterns",
+        "type": "explicit",
+        "thinking": "Nocturnal HR provides important aging health signals. I'll retrieve your last 7 nights of data using get_heart_rate_data to assess stability.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like an old clock - sometimes fast, sometimes slow",
+        "type": "metaphorical",
+        "thinking": "Age-related autonomic instability often causes variability. I'll use get_heart_rate_data to calculate your HR standard deviation over 21 days.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart work harder when I talk to my grandkids on video?",
+        "type": "implicit",
+        "thinking": "Emotional excitement affects seniors differently. I'll compare your HR during 5 recent video calls versus normal conversations using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate during last month's UTI?",
+        "type": "explicit",
+        "thinking": "Infections significantly impact elderly cardiovascular systems. I'll examine that 10-day illness period with get_heart_rate_data to identify febrile patterns.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart races when I can't find my glasses",
+        "type": "symptom",
+        "thinking": "Age-related frustration triggers can be physiologically taxing. I'll use get_heart_rate_data to analyze HR spikes during 7 recent search episodes.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting chair yoga, has my exercise HR improved?",
+        "type": "behavioral",
+        "thinking": "Gentle movement benefits elderly cardiac adaptation. I'll compare your last 10 sessions to pre-yoga baselines using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds like a tired engine when I climb stairs now",
+        "type": "metaphorical",
+        "thinking": "Age-related exertion tolerance changes are expected. I'll analyze your stair-climbing HR over the past 14 days with get_heart_rate_data to quantify effort.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate before and after cataract surgery",
+        "type": "explicit",
+        "thinking": "Medical procedures stress aging bodies differently. I'll retrieve 7 days pre-op and 7 days post-op data using get_heart_rate_data to assess recovery.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Why does my heart rate drop when I listen to big band music?",
+        "type": "implicit",
+        "thinking": "Familiar music often calms elderly patients. I'll use get_heart_rate_data to compare your HR during 5 music sessions versus silent periods.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart flutters when I forget names at bridge club",
+        "type": "symptom",
+        "thinking": "Social cognitive stress impacts elderly cardiovascularly. I'll analyze your HR during 4 recent bridge games using get_heart_rate_data.",
+        "numdays": 4,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Has my resting HR changed since switching arthritis meds?",
+        "type": "behavioral",
+        "thinking": "NSAID changes can affect cardiac function. I'll compare 14 days pre- and post-switch using get_heart_rate_data to monitor impacts.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a fragile vase when I get bad news",
+        "type": "metaphorical",
+        "thinking": "Elderly stress responses can be pronounced. I'll use get_heart_rate_data to examine HR fluctuations during 3 recent stressful events.",
+        "numdays": 3,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate pattern during the heatwave?",
+        "type": "explicit",
+        "thinking": "Elderly are vulnerable to temperature extremes. I'll retrieve that 5-day period with get_heart_rate_data to assess thermal stress responses.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart work harder when I cook for guests?",
+        "type": "implicit",
+        "thinking": "Meal preparation stress is common in aging hosts. I'll compare your HR during 3 recent cooking events using get_heart_rate_data.",
+        "numdays": 3,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart races when I can't sleep past 4 AM",
+        "type": "symptom",
+        "thinking": "Age-related sleep changes often affect cardiac rhythms. I'll use get_heart_rate_data to analyze your early morning HR over 7 days.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since using a walker, my walking HR seems lower",
+        "type": "behavioral",
+        "thinking": "Mobility aids reduce cardiovascular demand. I'll compare your last 10 walks with/without assistance using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart flutters like a falling leaf when I read sad news",
+        "type": "metaphorical",
+        "thinking": "Elderly emotional responses often manifest physically. I'll examine your HR during 5 recent reading sessions using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during physical therapy sessions",
+        "type": "explicit",
+        "thinking": "Rehab exertion needs careful monitoring. I'll retrieve your last 8 PT sessions with get_heart_rate_data to track tolerance.",
+        "numdays": 8,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate doing when I felt dizzy last Tuesday?",
+        "type": "explicit",
+        "thinking": "Syncopal episodes require cardiac correlation. I'll examine that specific day's data using get_heart_rate_data to identify precipitants.",
+        "numdays": 1,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds when I struggle with packaging",
+        "type": "symptom",
+        "thinking": "Age-related fine motor challenges create frustration. I'll use get_heart_rate_data to analyze HR during 5 recent packaging attempts.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since moving to the ground floor, my stairs HR is better",
+        "type": "behavioral",
+        "thinking": "Reduced stair use improves cardiac strain. I'll compare your last 14 stair attempts to pre-move baselines using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like an old radio - sometimes clear, sometimes static",
+        "type": "metaphorical",
+        "thinking": "Age-related cardiac variability is common. I'll use get_heart_rate_data to calculate your HR consistency over 21 days.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart rate stay elevated after family visits?",
+        "type": "implicit",
+        "thinking": "Social interactions affect elderly physiology differently. I'll analyze your post-visit HR for 5 recent gatherings using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate pattern during the cold snap?",
+        "type": "explicit",
+        "thinking": "Cold weather stresses aging cardiovascular systems. I'll retrieve that 7-day period with get_heart_rate_data to assess thermal responses.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart races when I can't hear conversations",
+        "type": "symptom",
+        "thinking": "Hearing loss frustration manifests physiologically. I'll use get_heart_rate_data to examine HR during 7 recent communication struggles.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since using a pill organizer, my morning HR is steadier",
+        "type": "behavioral",
+        "thinking": "Medication routine improvements help cardiac stability. I'll compare 14 days pre- and post-implementation using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart flutters like a baby bird when I'm lonely",
+        "type": "metaphorical",
+        "thinking": "Social isolation affects elderly cardiac patterns. I'll analyze your HR during 5 self-reported lonely evenings using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during water aerobics",
+        "type": "explicit",
+        "thinking": "Aquatic exercise is gentler on aging hearts. I'll retrieve your last 6 pool sessions with get_heart_rate_data to confirm appropriate intensity.",
+        "numdays": 6,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Why does my heart rate drop when I pet my cat?",
+        "type": "implicit",
+        "thinking": "Animal companionship has proven calming effects. I'll use get_heart_rate_data to compare your HR during 5 recent petting sessions versus baseline.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds when I worry about falling again",
+        "type": "symptom",
+        "thinking": "Post-fall anxiety creates measurable stress responses. I'll analyze your HR during 7 recent worry episodes using get_heart_rate_data.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since switching to compression socks, my walking HR improved",
+        "type": "behavioral",
+        "thinking": "Circulatory support reduces cardiac workload. I'll compare your last 10 walks pre- and post-change using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a grandfather clock - steady but slower now",
+        "type": "metaphorical",
+        "thinking": "Age-related bradycardia is often benign. I'll use get_heart_rate_data to calculate your average resting HR over 30 days for context.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate doing during last month's insomnia?",
+        "type": "explicit",
+        "thinking": "Sleep disturbances significantly impact elderly cardiac health. I'll examine that 14-day period with get_heart_rate_data to identify nocturnal patterns.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart work harder when I garden in the morning?",
+        "type": "implicit",
+        "thinking": "Morning stiffness affects elderly exertion. I'll compare your HR during 5 AM versus PM gardening sessions using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart races when I can't remember where I put things",
+        "type": "symptom",
+        "thinking": "Age-related memory struggles create frustration. I'll use get_heart_rate_data to analyze HR spikes during 7 recent search episodes.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since my hearing aid adjustment, my conversation HR is calmer",
+        "type": "behavioral",
+        "thinking": "Reduced communication stress benefits cardiac health. I'll compare your last 10 social interactions pre- and post-adjustment using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart flutters like autumn leaves when I think of the past",
+        "type": "metaphorical",
+        "thinking": "Reminiscence evokes strong elderly cardiac responses. I'll examine your HR during 5 recent memory reflections using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during Sunday crossword time",
+        "type": "explicit",
+        "thinking": "Cognitive activities reveal aging cardiovascular patterns. I'll retrieve your last 4 Sunday puzzle sessions with get_heart_rate_data to assess mental exertion.",
+        "numdays": 4,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Why does my heart rate drop when I knit?",
+        "type": "implicit",
+        "thinking": "Repetitive motions often calm elderly physiology. I'll use get_heart_rate_data to compare your HR during 5 knitting sessions versus idle time.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart rate stays elevated for hours after stressful workouts. Is this hurting my anxiety?",
+        "type": "symptom",
+        "thinking": "Prolonged post-exercise arousal could exacerbate anxiety. I'll use get_heart_rate_data to analyze your recovery times after 5 recent high-stress sessions.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate variability during yoga versus HIIT this month",
+        "type": "explicit",
+        "thinking": "Different exercise types affect autonomic balance differently. I'll retrieve the last 15 yoga and 15 HIIT sessions with get_heart_rate_data to compare HRV patterns.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart rate recover faster now that I meditate post-workout?",
+        "type": "behavioral",
+        "thinking": "Mindfulness should accelerate parasympathetic reactivation. I'll compare your last 10 meditative cooldowns to previous sessions using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds like a jackhammer during workout anxiety. Can we see the numbers?",
+        "type": "metaphorical",
+        "thinking": "Exercise-induced anxiety creates measurable spikes. I'll use get_heart_rate_data to analyze HR during 5 recent panic-tagged workouts versus calm sessions.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my resting HR trend during my 30-day running streak?",
+        "type": "explicit",
+        "thinking": "Consistent aerobic exercise should lower resting HR. I'll retrieve that entire period with get_heart_rate_data to visualize adaptation progress.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Why does my heart race more during evening workouts?",
+        "type": "implicit",
+        "thinking": "Circadian rhythms affect exercise physiology. I'll compare your last 7 AM and PM sessions using get_heart_rate_data to quantify diurnal differences.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since tracking my mood, I notice higher HR on depressed days. Real pattern?",
+        "type": "behavioral",
+        "thinking": "Depression often elevates resting HR. I'll cross-reference your last 14 mood logs with get_heart_rate_data to confirm correlations.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a stormy sea during stressful runs but calm during swims",
+        "type": "metaphorical",
+        "thinking": "Different cardio modalities affect mental state differently. I'll analyze your last 5 runs and 5 swims with get_heart_rate_data to compare HR stability.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you show my HR during nature runs versus treadmill sessions?",
+        "type": "explicit",
+        "thinking": "Green exercise benefits mental health. I'll retrieve your last 10 outdoor and indoor runs using get_heart_rate_data to contrast physiological stress.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Has my exercise HR improved since starting antidepressants?",
+        "type": "behavioral",
+        "thinking": "Medications can affect workout physiology. I'll compare your last 15 pre-med and 15 post-med sessions with get_heart_rate_data.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart races uncontrollably when I think about work during runs",
+        "type": "symptom",
+        "thinking": "Cognitive intrusions spike stress responses. I'll use get_heart_rate_data to analyze HR during 5 recent workout thought logs.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What's my ideal zone 2 HR for anxiety-reducing cardio?",
+        "type": "explicit",
+        "thinking": "Moderate cardio stabilizes mood. I'll calculate your optimal 60-70% max HR range using get_heart_rate_data from recent comfortable sessions.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since switching to morning workouts, my all-day HR seems calmer",
+        "type": "behavioral",
+        "thinking": "Morning exercise regulates circadian rhythms. I'll compare your last 14 days to pre-change baselines using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a pendulum - steady during yoga but wild after work emails",
+        "type": "metaphorical",
+        "thinking": "Work stress may counteract exercise benefits. I'll analyze your last 5 yoga sessions and 5 post-work spikes with get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my HR during social runs versus solo sessions",
+        "type": "explicit",
+        "thinking": "Social exercise boosts mental health. I'll retrieve your last 8 group and 8 solo runs using get_heart_rate_data to compare physiological enjoyment.",
+        "numdays": 16,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart rate stay elevated longer after evening caffeine?",
+        "type": "behavioral",
+        "thinking": "Late stimulants disrupt recovery. I'll compare your last 5 post-caffeine and 5 caffeine-free workouts using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my HR pattern during that relaxing beach vacation?",
+        "type": "explicit",
+        "thinking": "Getaways provide natural stress reset. I'll retrieve that 7-day period with get_heart_rate_data to establish your relaxation baseline.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds more during workouts since the breakup",
+        "type": "symptom",
+        "thinking": "Emotional stress alters exercise physiology. I'll compare your last 10 post-breakup sessions to pre-breakup using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since adding post-workout breathing, my HR normalizes faster",
+        "type": "behavioral",
+        "thinking": "Intentional recovery aids mental health. I'll analyze your last 12 cooldowns with get_heart_rate_data to quantify improvement.",
+        "numdays": 12,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a tuning fork - perfectly steady only during cycling",
+        "type": "metaphorical",
+        "thinking": "Certain exercises optimize your physiology. I'll use get_heart_rate_data to compare HR stability across 5 activity types.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you show my HR during forest hikes versus city runs?",
+        "type": "explicit",
+        "thinking": "Nature exposure enhances mental benefits. I'll retrieve your last 6 hikes and 6 urban runs with get_heart_rate_data to contrast effects.",
+        "numdays": 12,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Why does my HR spike when I check my pace too often?",
+        "type": "implicit",
+        "thinking": "Performance anxiety undermines workouts. I'll analyze your last 7 sessions with get_heart_rate_data to correlate pace checks with HR jumps.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Has my workout HR become more stable since therapy?",
+        "type": "behavioral",
+        "thinking": "Mental health treatment improves physiological regulation. I'll compare your last 15 sessions to pre-therapy using get_heart_rate_data.",
+        "numdays": 15,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart races like a scared rabbit when I push too hard",
+        "type": "metaphorical",
+        "thinking": "Overtraining triggers stress responses. I'll use get_heart_rate_data to identify intensity thresholds where your HR spikes abnormally.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my HR during dance workouts versus weight training",
+        "type": "explicit",
+        "thinking": "Joyful movement benefits mental health. I'll retrieve your last 8 dance and 8 lifting sessions with get_heart_rate_data to compare physiological enjoyment.",
+        "numdays": 16,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart rate stay calmer during outdoor cycling?",
+        "type": "implicit",
+        "thinking": "Environment affects exercise stress. I'll compare your last 10 indoor and outdoor rides using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my HR doing during that week I felt mentally amazing?",
+        "type": "explicit",
+        "thinking": "Peak mental states leave physiological traces. I'll retrieve that 7-day period with get_heart_rate_data to identify optimal patterns.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since reducing alcohol, my workout HR seems steadier",
+        "type": "behavioral",
+        "thinking": "Substance changes affect cardiovascular response. I'll compare your last 14 dry workouts to previous sessions using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a drum circle - chaotic during stress, harmonious after yoga",
+        "type": "metaphorical",
+        "thinking": "Mind-body practices regulate physiology. I'll analyze your last 5 stressful days and 5 yoga sessions with get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you show my HR during team sports versus solo workouts?",
+        "type": "explicit",
+        "thinking": "Social connection enhances exercise benefits. I'll retrieve your last 6 group and 6 individual sessions with get_heart_rate_data.",
+        "numdays": 12,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Why does my HR stay high after late-night workouts?",
+        "type": "implicit",
+        "thinking": "Evening exercise can disrupt sleep physiology. I'll analyze your last 7 post-8pm sessions with get_heart_rate_data to track recovery delays.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Has my resting HR improved since consistent zone 2 training?",
+        "type": "behavioral",
+        "thinking": "Aerobic base building enhances cardiac efficiency. I'll compare your last 21 mornings to pre-training using get_heart_rate_data.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds like a war drum during stressful gym sessions",
+        "type": "metaphorical",
+        "thinking": "Environment affects workout stress. I'll use get_heart_rate_data to analyze your last 5 crowded gym visits versus home workouts.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my HR during Pilates versus running",
+        "type": "explicit",
+        "thinking": "Different modalities serve different mental health needs. I'll retrieve your last 8 Pilates and 8 run sessions with get_heart_rate_data.",
+        "numdays": 16,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart rate recover faster when I hydrate properly?",
+        "type": "behavioral",
+        "thinking": "Hydration supports cardiovascular function. I'll compare your last 10 well-hydrated and 10 poorly-hydrated workouts using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my HR pattern during my best mental health month?",
+        "type": "explicit",
+        "thinking": "Optimal states provide physiological benchmarks. I'll retrieve that 30-day period with get_heart_rate_data to identify ideal ranges.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since using a HR alarm, I panic less during cardio",
+        "type": "behavioral",
+        "thinking": "Biofeedback tools reduce exercise anxiety. I'll analyze your last 15 sessions with get_heart_rate_data to quantify stabilization.",
+        "numdays": 15,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a river - calm during flow states, turbulent when distracted",
+        "type": "metaphorical",
+        "thinking": "Cognitive focus affects physiology. I'll compare your last 5 'in the zone' versus distracted workouts using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you show my HR during sunrise versus sunset runs?",
+        "type": "explicit",
+        "thinking": "Timing affects exercise psychology. I'll retrieve your last 7 morning and evening runs with get_heart_rate_data to compare effects.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Why does my HR spike when I check my fitness tracker too often?",
+        "type": "implicit",
+        "thinking": "Self-monitoring can backfire. I'll analyze your last 7 sessions with get_heart_rate_data to correlate device checks with arousal.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Has my workout HR variability improved with better sleep?",
+        "type": "behavioral",
+        "thinking": "Sleep quality enhances exercise resilience. I'll compare your last 14 well-rested sessions to sleep-deprived using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart races like a runaway train during deadline stress workouts",
+        "type": "metaphorical",
+        "thinking": "Cognitive load impacts physiology. I'll use get_heart_rate_data to analyze your last 5 high-stress work-to-workout transitions.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my HR during barefoot beach runs versus shoe runs",
+        "type": "explicit",
+        "thinking": "Ground contact affects exercise stress. I'll retrieve your last 6 barefoot and 6 shod runs with get_heart_rate_data.",
+        "numdays": 12,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Does my heart rate stay calmer during 'fun' workouts?",
+        "type": "implicit",
+        "thinking": "Enjoyment modulates effort perception. I'll compare your last 8 playful versus serious sessions using get_heart_rate_data.",
+        "numdays": 8,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my HR doing during that zen-like meditation retreat?",
+        "type": "explicit",
+        "thinking": "Deep relaxation resets physiology. I'll retrieve that 5-day period with get_heart_rate_data to establish your calm baseline.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since practicing gratitude during cooldowns, my HR drops faster",
+        "type": "behavioral",
+        "thinking": "Positive psychology aids recovery. I'll analyze your last 10 gratitude cooldowns with get_heart_rate_data to quantify benefits.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a jazz solo - creative during dance but rigid on machines",
+        "type": "metaphorical",
+        "thinking": "Exercise type affects physiological freedom. I'll compare your last 5 dance and 5 machine sessions using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Lately my heart won't calm down after evening workouts",
+        "type": "implicit",
+        "thinking": "Evening exercise can disrupt circadian rhythms. I'll use get_heart_rate_data to analyze your post-workout recovery over the last 7 nights.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Ever since increasing my meds, my resting heart rate feels off",
+        "type": "implicit",
+        "thinking": "Medication changes often affect cardiovascular function. I'll compare your last 14 mornings to pre-adjustment using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during last Tuesday's panic episode",
+        "type": "explicit",
+        "thinking": "Acute anxiety produces identifiable HR patterns. I'll retrieve that specific day's data with get_heart_rate_data to correlate with your report.",
+        "numdays": 1,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My chest feels fluttery during morning meetings this month",
+        "type": "implicit",
+        "thinking": "Work stress manifests physiologically. I'll analyze your 9-11 AM HR for the last 20 workdays using get_heart_rate_data.",
+        "numdays": 20,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since my breakup, even easy workouts spike my heart rate",
+        "type": "implicit",
+        "thinking": "Emotional stress lowers exercise tolerance. I'll compare your last 10 post-breakup sessions to previous efforts using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you display my heart rate variability from the stress management workshop week?",
+        "type": "explicit",
+        "thinking": "Interventions should improve autonomic balance. I'll retrieve that 7-day period with get_heart_rate_data to assess workshop impact.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds for hours after arguments with my partner",
+        "type": "implicit",
+        "thinking": "Relationship stress creates prolonged arousal. I'll analyze your HR for 5 recent post-conflict evenings using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Why does my heart race when I try to meditate lately?",
+        "type": "implicit",
+        "thinking": "Meditation difficulties may indicate underlying anxiety. I'll check your last 7 meditation attempts with get_heart_rate_data for paradoxical responses.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my nighttime heart rate trends during last month's work crunch",
+        "type": "explicit",
+        "thinking": "Work stress affects sleep physiology. I'll retrieve that 30-day period with get_heart_rate_data to correlate deadlines with nocturnal HR.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since daylight savings, my afternoon heart rate feels chaotic",
+        "type": "implicit",
+        "thinking": "Time changes disrupt circadian rhythms. I'll compare your 2-4 PM HR for the last 14 days to pre-change using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a trapped bird during therapy sessions",
+        "type": "metaphorical",
+        "thinking": "Emotional work creates physiological stress. I'll analyze your last 5 therapy hours with get_heart_rate_data to quantify this response.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate pattern during the family visit weekend?",
+        "type": "explicit",
+        "thinking": "Family interactions trigger complex stress responses. I'll retrieve that 3-day period with get_heart_rate_data to assess physiological impact.",
+        "numdays": 3,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Lately my heart won't settle during my evening wind-down routine",
+        "type": "implicit",
+        "thinking": "Evening hyperarousal suggests circadian disruption. I'll analyze your last 10 nights' pre-sleep HR using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting the new project, my workout heart rate stays elevated",
+        "type": "implicit",
+        "thinking": "Cognitive load affects exercise recovery. I'll compare your last 8 post-work workouts to baseline using get_heart_rate_data.",
+        "numdays": 8,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you show my heart rate during last week's vacation versus normal weeks?",
+        "type": "explicit",
+        "thinking": "Getaways provide stress reset benchmarks. I'll contrast that 7-day period with your typical week using get_heart_rate_data.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart races when I check work emails before bed",
+        "type": "implicit",
+        "thinking": "Digital stress disrupts sleep preparation. I'll analyze your last 5 pre-sleep email checks with get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate doing during that week I couldn't stop worrying?",
+        "type": "explicit",
+        "thinking": "Rumination leaves physiological traces. I'll retrieve that 7-day period with get_heart_rate_data to identify stress signatures.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since the neighbor's dog started barking at night, my morning heart rate is higher",
+        "type": "implicit",
+        "thinking": "Sleep interruptions affect cardiovascular recovery. I'll compare your last 14 mornings to pre-disturbance using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds like a drum during difficult conversations",
+        "type": "metaphorical",
+        "thinking": "Social stress creates measurable responses. I'll analyze your HR during 5 recent tough talks using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate trends during the therapy break last month",
+        "type": "explicit",
+        "thinking": "Treatment pauses reveal baseline states. I'll retrieve that 21-day period with get_heart_rate_data to assess stability.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Lately my heart races when I'm idle but calms during chores",
+        "type": "implicit",
+        "thinking": "Rumination differs from engaged activity. I'll compare your last 7 days' resting versus active HR using get_heart_rate_data.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since reducing caffeine, my afternoon heart rate dips feel extreme",
+        "type": "implicit",
+        "thinking": "Withdrawal affects autonomic regulation. I'll analyze your 1-3 PM HR for the last 10 days using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you compare my heart rate during creative work versus admin tasks last week?",
+        "type": "explicit",
+        "thinking": "Task types affect mental load differently. I'll retrieve that 7-day period with get_heart_rate_data to contrast flow versus stress states.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart flutters when I think about unfinished tasks at night",
+        "type": "implicit",
+        "thinking": "Cognitive intrusions disrupt relaxation. I'll analyze your last 5 bedtime worry episodes with get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate pattern during the holiday family gathering?",
+        "type": "explicit",
+        "thinking": "Family events trigger complex responses. I'll retrieve that 4-day period with get_heart_rate_data to assess physiological impact.",
+        "numdays": 4,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting deep breathing, my heart rate drops faster after stress",
+        "type": "implicit",
+        "thinking": "Breathwork should improve recovery. I'll compare your last 8 stressful events to pre-practice using get_heart_rate_data.",
+        "numdays": 8,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a storm during traffic but calm in nature",
+        "type": "metaphorical",
+        "thinking": "Environments differentially affect stress. I'll analyze your HR during 5 commutes versus 5 park visits using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during the week I tried digital detox",
+        "type": "explicit",
+        "thinking": "Technology breaks may reduce stress. I'll retrieve that 7-day period with get_heart_rate_data to evaluate physiological benefits.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Lately my heart won't settle during my morning journaling",
+        "type": "implicit",
+        "thinking": "Morning anxiety disrupts routines. I'll analyze your last 10 journaling sessions with get_heart_rate_data to identify triggers.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since the time change, my evening heart rate feels erratic",
+        "type": "implicit",
+        "thinking": "Circadian disruptions affect autonomic function. I'll compare your 6-8 PM HR for the last 14 days using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you display my heart rate during last month's mindfulness challenge?",
+        "type": "explicit",
+        "thinking": "Mindfulness should stabilize physiology. I'll retrieve that 30-day period with get_heart_rate_data to assess practice impact.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds when I check social media before bed",
+        "type": "implicit",
+        "thinking": "Digital stimulation disrupts wind-down. I'll analyze your last 7 pre-sleep scrolls with get_heart_rate_data.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate doing during that weekend at the cabin?",
+        "type": "explicit",
+        "thinking": "Nature getaways provide relaxation benchmarks. I'll retrieve that 3-day period with get_heart_rate_data to establish your calm baseline.",
+        "numdays": 3,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting the gratitude practice, my resting heart rate feels steadier",
+        "type": "implicit",
+        "thinking": "Positive psychology improves autonomic regulation. I'll compare your last 21 mornings to pre-practice using get_heart_rate_data.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a jackhammer during deadlines but a gentle stream during painting",
+        "type": "metaphorical",
+        "thinking": "Activity types differentially affect stress. I'll analyze your HR during 5 work crunches versus 5 art sessions using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate trends during the therapy-intensive month",
+        "type": "explicit",
+        "thinking": "Treatment density affects physiological adaptation. I'll retrieve that 30-day period with get_heart_rate_data to evaluate progress.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Lately my heart races when I'm alone but calms with friends",
+        "type": "implicit",
+        "thinking": "Isolation affects mental health physiologically. I'll compare your last 10 solo versus social evenings using get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since cutting out news before bed, my morning heart rate is lower",
+        "type": "implicit",
+        "thinking": "Media consumption affects sleep quality. I'll analyze your last 14 mornings to pre-change baselines using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you compare my heart rate during yoga versus scrolling before bed?",
+        "type": "explicit",
+        "thinking": "Evening routines differentially affect relaxation. I'll retrieve your last 7 yoga nights and 7 scroll nights with get_heart_rate_data.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart flutters when I think about past mistakes at night",
+        "type": "implicit",
+        "thinking": "Rumination prolongs physiological arousal. I'll analyze your last 5 bedtime regret episodes with get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate pattern during the weekend I felt truly relaxed?",
+        "type": "explicit",
+        "thinking": "Peak relaxation states provide optimal benchmarks. I'll retrieve that 2-day period with get_heart_rate_data to identify your calm signature.",
+        "numdays": 2,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since using blue-light filters, my evening heart rate seems calmer",
+        "type": "implicit",
+        "thinking": "Light exposure affects circadian regulation. I'll compare your last 14 evenings to pre-intervention using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a thunderstorm during work calls but sunshine during walks",
+        "type": "metaphorical",
+        "thinking": "Activity contrasts reveal stress triggers. I'll analyze your HR during 5 calls versus 5 walks using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Show me my heart rate during the month I took a social media break",
+        "type": "explicit",
+        "thinking": "Digital detoxes may reduce stress. I'll retrieve that 30-day period with get_heart_rate_data to assess physiological benefits.",
+        "numdays": 30,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Lately my heart won't calm down after reading the news",
+        "type": "implicit",
+        "thinking": "Media consumption triggers stress responses. I'll analyze your last 7 post-news reading sessions with get_heart_rate_data.",
+        "numdays": 7,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since starting weighted blankets, my nighttime heart rate seems steadier",
+        "type": "implicit",
+        "thinking": "Deep pressure aids autonomic regulation. I'll compare your last 21 nights to pre-use baselines using get_heart_rate_data.",
+        "numdays": 21,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Can you display my heart rate during creative writing versus email time?",
+        "type": "explicit",
+        "thinking": "Task types differentially affect mental load. I'll retrieve your last 10 writing and 10 email sessions with get_heart_rate_data.",
+        "numdays": 10,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart pounds when I wake up from stress dreams",
+        "type": "implicit",
+        "thinking": "Nocturnal stress affects morning physiology. I'll analyze your last 5 stress dream mornings with get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "What was my heart rate doing during that perfect self-care weekend?",
+        "type": "explicit",
+        "thinking": "Ideal self-care states provide targets. I'll retrieve that 2-day period with get_heart_rate_data to model optimal recovery patterns.",
+        "numdays": 2,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "Since practicing morning sunlight, my daytime heart rate feels more even",
+        "type": "implicit",
+        "thinking": "Light exposure stabilizes circadian rhythms. I'll compare your last 14 days to pre-practice using get_heart_rate_data.",
+        "numdays": 14,
+        "function": "get_heart_rate_data"
+    },
+    {
+        "query": "My heart is like a wild horse during stress but a sleeping cat during massage",
+        "type": "metaphorical",
+        "thinking": "Therapies differentially affect arousal. I'll analyze your HR during 5 stress peaks versus 5 massage sessions using get_heart_rate_data.",
+        "numdays": 5,
+        "function": "get_heart_rate_data"
+    }
+]

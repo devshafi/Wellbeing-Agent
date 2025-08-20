@@ -1,0 +1,1794 @@
+[
+    {
+        "query": "Can you check if my BMR has changed over the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user is directly asking to analyze potential changes in their basal metabolic rate. I will retrieve BMR data for the past 14 days using get_bmr_data to track any variations.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I've been feeling unusually tired in the mornings—could it be related to my metabolism?",
+        "type": "symptom",
+        "thinking": "The user is reporting fatigue and suspects it may be linked to metabolic rate. I'll fetch 7 days of BMR data by default to explore if there's a correlation.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My routine's been all over the place this week. Think it’s messed with my BMR?",
+        "type": "behavioral",
+        "thinking": "The user mentions erratic habits and suspects an impact on metabolic rate. I’ll retrieve data for this week, which maps to 7 days, using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Is my body burning calories differently since I started eating clean 10 days ago?",
+        "type": "behavioral",
+        "thinking": "The user has made a dietary change and wants to assess its effect on BMR. I’ll use get_bmr_data to retrieve BMR values for the past 10 days.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Feels like my metabolism went on vacation. Can you check?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor to express concern about decreased metabolic activity. I’ll use get_bmr_data for the default 7-day window to investigate trends.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I've been skipping breakfast this week—wondering if it’s affected my metabolism.",
+        "type": "behavioral",
+        "thinking": "The user changed a key habit that might impact BMR. I’ll retrieve 7 days of BMR data to analyze potential metabolic changes using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Does my BMR look normal over the last 20 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests a long-term BMR overview. I’ll use get_bmr_data to analyze BMR data across the past 20 days.",
+        "numdays": 20,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve lost some weight recently. Can you see if my BMR has dropped too?",
+        "type": "symptom",
+        "thinking": "The user associates weight loss with possible changes in BMR. I’ll retrieve 7 days of data by default to identify any trends.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How's my metabolism doing lately?",
+        "type": "implicit",
+        "thinking": "The user asks a vague question indicating interest in recent BMR trends. I’ll use get_bmr_data for the past 7 days to provide insights.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Check if my BMR has been stable since last Monday.",
+        "type": "explicit",
+        "thinking": "The user wants a stability check starting from a specific day. Assuming today is Tuesday, that maps to 8 days. I’ll retrieve 8 days of BMR data using get_bmr_data.",
+        "numdays": 8,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Lately, I feel like I’m burning less even when I’m active. What’s my BMR saying?",
+        "type": "symptom",
+        "thinking": "The user perceives reduced calorie burning. I’ll retrieve BMR data for the last 7 days by default to investigate any decline.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you review how my metabolism's been behaving over the past 25 days?",
+        "type": "explicit",
+        "thinking": "The user seeks an extended metabolic trend. I’ll retrieve BMR data for the past 25 days using get_bmr_data to analyze changes.",
+        "numdays": 25,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Just curious—has my BMR been consistent this month?",
+        "type": "implicit",
+        "thinking": "The user casually asks for consistency over a month. I’ll map 'this month' to 30 days and retrieve that range with get_bmr_data.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "After that awful cold I had last week, has my BMR bounced back?",
+        "type": "symptom",
+        "thinking": "The user refers to illness possibly impacting metabolism. I’ll use get_bmr_data to fetch the last 7 days to check for recovery trends.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been walking a lot more since last Saturday—has that done anything to my BMR?",
+        "type": "behavioral",
+        "thinking": "The user reports increased physical activity. Assuming today is Tuesday, I’ll retrieve 10 days of BMR data using get_bmr_data.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Did my BMR spike during those stressful days last week?",
+        "type": "symptom",
+        "thinking": "The user suggests stress may have affected BMR. I’ll fetch 7 days of data for that week using get_bmr_data to investigate.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Let’s see how my body’s resting energy burn has looked lately.",
+        "type": "implicit",
+        "thinking": "The user is referring to BMR in casual terms. Since no timeframe is given, I’ll default to 7 days using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Ever since I stopped snacking late at night, I wonder if my metabolism adjusted.",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral change that could affect BMR. I’ll retrieve 7 days of BMR data using get_bmr_data to analyze the impact.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Pull up my BMR stats from the past nine days.",
+        "type": "explicit",
+        "thinking": "The user is making a clear request for BMR data. I’ll retrieve 9 days of information using get_bmr_data as specified.",
+        "numdays": 9,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Is my metabolism slowing down or is it just me feeling sluggish?",
+        "type": "symptom",
+        "thinking": "The user expresses concern over possible metabolic slowdown. I’ll retrieve 7 days of BMR data using get_bmr_data to assess their energy burn.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I was super active this weekend. Did my BMR respond to that?",
+        "type": "behavioral",
+        "thinking": "The user links weekend activity to BMR shifts. I’ll retrieve data for the last 3 days (Friday–Sunday) using get_bmr_data.",
+        "numdays": 3,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Since I started intermittent fasting two weeks ago, I’m curious about my BMR.",
+        "type": "behavioral",
+        "thinking": "The user is evaluating a dietary intervention. I’ll use get_bmr_data to fetch 14 days of BMR data to track any metabolic response.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been feeling like a low-burn engine lately. Any truth to that?",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically expresses a concern about low metabolic rate. I’ll retrieve 7 days of BMR data using get_bmr_data to validate their perception.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body doesn’t seem to be burning calories like it used to—check my BMR for last week?",
+        "type": "symptom",
+        "thinking": "The user suspects reduced metabolic rate. I’ll retrieve 7 days of BMR data using get_bmr_data to investigate.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Does my BMR data for the last 12 days show anything odd?",
+        "type": "explicit",
+        "thinking": "The user is looking for anomalies in recent BMR trends. I’ll fetch 12 days of data using get_bmr_data for analysis.",
+        "numdays": 12,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been more relaxed since finishing exams. Curious if my BMR reflects that.",
+        "type": "behavioral",
+        "thinking": "The user links reduced stress to potential BMR changes. I’ll retrieve 7 days of data using get_bmr_data to assess the effect.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Did that flu from two weeks ago tank my metabolism?",
+        "type": "symptom",
+        "thinking": "The user refers to illness as a disruptor of BMR. I’ll retrieve 14 days of BMR data using get_bmr_data to examine the impact.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Could you show my BMR stats for the past week and a half?",
+        "type": "explicit",
+        "thinking": "The user wants to see BMR over a 10-day period. I’ll use get_bmr_data to retrieve data from the last 10 days.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been drinking more water this week—did that change my metabolism at all?",
+        "type": "behavioral",
+        "thinking": "The user suspects a hydration-related effect on BMR. I’ll retrieve 7 days of data using get_bmr_data to check for any influence.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you fetch my BMR since the start of this month?",
+        "type": "explicit",
+        "thinking": "The user wants a month-to-date view. Assuming today is the 20th, I’ll retrieve 20 days of BMR data using get_bmr_data.",
+        "numdays": 20,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How has my metabolism been trending over the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user is directly asking about their basal metabolic rate trend over a specific period. Calling get_bmr_data is appropriate to fetch BMR measurements for analysis. The query mentions 'past two weeks,' which translates to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been feeling sluggish lately, is my metabolism off?",
+        "type": "symptom",
+        "thinking": "The user expresses a physical symptom (sluggishness) that may relate to metabolic changes. get_bmr_data is needed to check recent BMR trends for potential irregularities. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I started eating less last month, how’s that affecting my metabolism?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavior change (eating less) and seeks its impact on metabolism. get_bmr_data will provide BMR data to assess changes. 'Last month' suggests a 30-day period for numdays.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My energy feels like a rollercoaster this week, is my metabolism stable?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language ('rollercoaster') to describe fluctuating energy, hinting at metabolic concerns. get_bmr_data can reveal BMR stability. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you check if my metabolism’s been consistent since last Monday?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests a check on metabolism consistency with a clear time reference. get_bmr_data is needed to retrieve BMR data. 'Since last Monday' implies 8 days, assuming today is Tuesday.",
+        "numdays": 8,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m always cold these days, could my metabolism be slowing down?",
+        "type": "symptom",
+        "thinking": "The user describes a physical symptom (feeling cold) that may indicate a slower metabolism. get_bmr_data will help analyze recent BMR trends. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been hitting the gym hard for the past 10 days, how’s my metabolism doing?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased exercise, a behavior change that could affect BMR. get_bmr_data is required to evaluate metabolic changes. 'Past 10 days' directly maps to numdays.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body feels like it’s running on empty, what’s going on with my metabolism?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('running on empty') to express low energy, suggesting a metabolic issue. get_bmr_data will provide BMR data to investigate. No time window is specified, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you tell me about my metabolism for the last three weeks?",
+        "type": "explicit",
+        "thinking": "The user directly asks for metabolic data over a specific period. get_bmr_data is needed to fetch BMR measurements. 'Last three weeks' translates to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m worried my metabolism isn’t keeping up with my new diet.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about metabolism adjusting to a new diet. get_bmr_data can provide BMR trends to address this. No time window is mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been sleeping more this month, does that affect my metabolism?",
+        "type": "behavioral",
+        "thinking": "The user notes a behavior change (increased sleep) and questions its metabolic impact. get_bmr_data will retrieve BMR data to explore this. 'This month' suggests 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body’s like a dimming light bulb, is my metabolism fading?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('dimming light bulb') to describe declining energy, hinting at metabolic changes. get_bmr_data is needed to check BMR trends. No time window, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How’s my metabolism been since I started my new job two weeks ago?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about metabolism with a time reference tied to a life event. get_bmr_data will fetch BMR data. 'Two weeks ago' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like I’m dragging through the day, is my metabolism to blame?",
+        "type": "symptom",
+        "thinking": "The user describes a symptom (feeling dragged) that may relate to metabolism. get_bmr_data will provide BMR data to investigate. No time window is given, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been skipping breakfast for the past 12 days, how’s that affecting my metabolism?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary behavior change (skipping breakfast) and its potential metabolic impact. get_bmr_data is needed for BMR trends. 'Past 12 days' sets numdays to 12.",
+        "numdays": 12,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My energy’s like a flickering candle, is my metabolism acting up?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('flickering candle') to describe unstable energy, suggesting metabolic issues. get_bmr_data will provide BMR data. No time window, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you look at my metabolism data for the past 5 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests BMR data for a specific period. get_bmr_data is appropriate to retrieve this data. 'Past 5 days' directly maps to numdays.",
+        "numdays": 5,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m not sure if my body’s burning calories like it used to.",
+        "type": "implicit",
+        "thinking": "The user indirectly questions if their metabolism has changed. get_bmr_data will provide BMR trends to address this concern. No time window is specified, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been drinking more coffee this week, does that mess with my metabolism?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavior change (increased coffee intake) and its potential metabolic effect. get_bmr_data will fetch BMR data. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like my engine’s sputtering, is my metabolism off track?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('sputtering engine') to describe low energy, hinting at metabolic issues. get_bmr_data will provide BMR data. No time window, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "What’s my metabolism been like since the holidays started 10 days ago?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about metabolism with a time reference to a life event. get_bmr_data will retrieve BMR data. '10 days ago' sets numdays to 10.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been so tired this month, could my metabolism be low?",
+        "type": "symptom",
+        "thinking": "The user describes a symptom (tiredness) that may indicate low metabolism. get_bmr_data will provide BMR trends. 'This month' suggests 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I started a new workout routine last week, how’s my metabolism responding?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavior change (new workout routine) and its metabolic impact. get_bmr_data will fetch BMR data. 'Last week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body feels like a slow-burning fire, is my metabolism steady?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('slow-burning fire') to describe energy, questioning metabolic stability. get_bmr_data will provide BMR data. No time window, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you analyze my metabolism for the past 15 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests metabolic analysis for a specific period. get_bmr_data is needed to fetch BMR data. 'Past 15 days' directly maps to numdays.",
+        "numdays": 15,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m worried my metabolism’s not handling stress well lately.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about metabolism under stress. get_bmr_data will provide BMR trends to evaluate. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been eating more carbs since Sunday, how’s my metabolism doing?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (more carbs) with a time reference. get_bmr_data will fetch BMR data. 'Since Sunday' implies 9 days, assuming today is Tuesday.",
+        "numdays": 9,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My energy’s like a dying battery, is my metabolism slowing?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('dying battery') to describe low energy, suggesting metabolic decline. get_bmr_data will provide BMR data. No time window, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How’s my metabolism been over the last two weekends?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about metabolism over a specific period. get_bmr_data is needed. 'Last two weekends' (4 days, assuming Saturday and Sunday) maps to numdays.",
+        "numdays": 4,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been gaining weight despite eating less, is my metabolism off?",
+        "type": "symptom",
+        "thinking": "The user describes a symptom (weight gain despite less food) that may indicate metabolic issues. get_bmr_data will provide BMR trends. No time window, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been fasting every other day for two weeks, how’s that affecting my metabolism?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavior change (intermittent fasting) and its metabolic impact. get_bmr_data will fetch BMR data. 'Two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body feels like it’s stuck in low gear, is my metabolism sluggish?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('low gear') to describe low energy, hinting at metabolic issues. get_bmr_data will provide BMR data. No time window, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you check my metabolism trends since last month?",
+        "type": "explicit",
+        "thinking": "The user directly requests BMR trends with a time reference. get_bmr_data is needed to fetch data. 'Last month' suggests 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like my body’s not burning energy right anymore.",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests a metabolic issue with energy burning. get_bmr_data will provide BMR trends to investigate. No time window, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been more active since the new year, how’s my metabolism adjusting?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased activity with a time reference. get_bmr_data will fetch BMR data. 'Since the new year' (assuming early August) suggests 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My energy’s like a stalled car, is my metabolism to blame?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('stalled car') to describe low energy, suggesting metabolic issues. get_bmr_data will provide BMR data. No time window, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How’s my metabolism been since I got sick two weeks ago?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about metabolism tied to a health event. get_bmr_data will fetch BMR data. 'Two weeks ago' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m always hungry lately, could my metabolism be speeding up?",
+        "type": "symptom",
+        "thinking": "The user describes a symptom (increased hunger) that may indicate a faster metabolism. get_bmr_data will provide BMR trends. No time window, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been cutting out sugar for 10 days, how’s my metabolism reacting?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (cutting sugar) and its metabolic impact. get_bmr_data will fetch BMR data. '10 days' directly maps to numdays.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body feels like it’s running on fumes, is my metabolism low?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('running on fumes') to describe low energy, suggesting metabolic issues. get_bmr_data will provide BMR data. No time window, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you look at my metabolism for the past three weeks?",
+        "type": "explicit",
+        "thinking": "The user directly requests metabolic data for a specific period. get_bmr_data is needed. 'Past three weeks' translates to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m not sure if my body’s keeping up with my new schedule.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about metabolism adjusting to a new schedule. get_bmr_data will provide BMR trends. No time window, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been walking daily for the past 12 days, how’s my metabolism doing?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavior change (daily walking) and its metabolic impact. get_bmr_data will fetch BMR data. 'Past 12 days' sets numdays to 12.",
+        "numdays": 12,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My energy’s like a fading spark, is my metabolism slowing down?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('fading spark') to describe declining energy, suggesting metabolic issues. get_bmr_data will provide BMR data. No time window, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How’s my metabolism been since I started meds last week?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about metabolism tied to starting medication. get_bmr_data will fetch BMR data. 'Last week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been feeling off since I changed my sleep schedule.",
+        "type": "symptom",
+        "thinking": "The user describes feeling off, potentially linked to a sleep change affecting metabolism. get_bmr_data will provide BMR trends. No time window, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been eating smaller meals for two weeks, how’s my metabolism holding up?",
+        "type": "behavioral",
+        "thinking": "The user mentions a dietary change (smaller meals) and its metabolic impact. get_bmr_data will fetch BMR data. 'Two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body’s like a rusty machine, is my metabolism out of whack?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('rusty machine') to describe poor energy, suggesting metabolic issues. get_bmr_data will provide BMR data. No time window, so use 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you check my metabolism since my vacation started 10 days ago?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about metabolism tied to a life event. get_bmr_data will fetch BMR data. '10 days ago' sets numdays to 10.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been super stressed this week, is my metabolism affected?",
+        "type": "symptom",
+        "thinking": "The user describes a symptom (stress) that may impact metabolism. get_bmr_data will provide BMR trends. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has my resting burn rate changed since I cut carbs last Monday?",
+        "type": "behavioral",
+        "thinking": "The user made a dietary adjustment and wants to monitor the metabolic effect. Assuming today is Wednesday, that maps to 9 days. I’ll retrieve 9 days of BMR data using get_bmr_data.",
+        "numdays": 9,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Lately, I feel like I’m moving in slow motion. Could it be my BMR?",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically suggests sluggishness might relate to metabolism. I’ll use get_bmr_data to fetch 7 days of data to explore any low BMR trends.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How did my BMR behave during the last three weekends?",
+        "type": "explicit",
+        "thinking": "The user wants BMR trends across the last three weekends. I’ll map this to a 9-day window (3 weekends) and retrieve that using get_bmr_data.",
+        "numdays": 9,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Ever since I’ve started taking those supplements, I wonder if my metabolism changed.",
+        "type": "implicit",
+        "thinking": "The user hints at a potential metabolic effect from supplementation. I’ll retrieve the last 7 days of BMR data by default using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Please pull my BMR readings from the last 17 days.",
+        "type": "explicit",
+        "thinking": "The user clearly specifies the timeframe. I’ll use get_bmr_data to fetch BMR data for the past 17 days.",
+        "numdays": 17,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been feeling overheated without much effort—any BMR spikes recently?",
+        "type": "symptom",
+        "thinking": "The user reports overheating, possibly linked to elevated metabolism. I’ll retrieve 7 days of BMR data using get_bmr_data to check for anomalies.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you look at my metabolic rate since last Thursday?",
+        "type": "explicit",
+        "thinking": "The user is requesting BMR data starting from last Thursday. Assuming today is Friday, I’ll retrieve 8 days of data using get_bmr_data.",
+        "numdays": 8,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Do you think my metabolism has improved since I resumed yoga two weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user resumed a physical practice and is curious about metabolic effects. I’ll fetch 14 days of BMR data using get_bmr_data.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m burning out emotionally and physically—does my BMR reflect that?",
+        "type": "symptom",
+        "thinking": "The user is reporting emotional and physical fatigue. I’ll use get_bmr_data to analyze BMR trends over the past 7 days for any correlation.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Just want to check if my BMR’s been steady this past week.",
+        "type": "explicit",
+        "thinking": "The user wants to confirm BMR stability. I’ll retrieve BMR data for the last 7 days using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you see if that daily walk habit I started a week ago has done anything to my metabolism?",
+        "type": "behavioral",
+        "thinking": "The user began a consistent physical routine and seeks metabolic insight. I’ll fetch 7 days of BMR data using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Something feels off with my body’s baseline energy—can we check the numbers?",
+        "type": "symptom",
+        "thinking": "The user senses physiological imbalance and seeks data verification. I’ll retrieve the last 7 days of BMR data using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Look at my BMR trend for the last 15 days, please.",
+        "type": "explicit",
+        "thinking": "The user requests BMR insights over a 15-day window. I’ll retrieve 15 days of data using get_bmr_data.",
+        "numdays": 15,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I stopped drinking coffee this week—has that messed with my metabolism?",
+        "type": "behavioral",
+        "thinking": "The user removed a stimulant and is curious about BMR effects. I’ll use get_bmr_data to analyze the past 7 days of data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Do I seem like a low-energy machine lately? Can you peek at my metabolism?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphor to express fatigue. I’ll retrieve 7 days of BMR data using get_bmr_data to examine metabolic function.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve felt strangely energetic this week. Is my BMR unusually high?",
+        "type": "symptom",
+        "thinking": "The user suspects an elevated metabolic state. I’ll retrieve BMR data for the past 7 days using get_bmr_data to confirm.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How has my BMR changed since I started that HIIT program 12 days ago?",
+        "type": "behavioral",
+        "thinking": "The user started high-intensity training and wants metabolic feedback. I’ll use get_bmr_data to fetch the past 12 days of data.",
+        "numdays": 12,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Lately, I feel like my body’s engine is stalling. What does the data say?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphor to suggest a decline in metabolism. I’ll retrieve 7 days of BMR data using get_bmr_data to analyze trends.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Pull up my BMR info from the last 6 days.",
+        "type": "explicit",
+        "thinking": "The user clearly defines a 6-day range. I’ll use get_bmr_data to retrieve that specific window of data.",
+        "numdays": 6,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Have my metabolism patterns shifted over the past three weeks?",
+        "type": "explicit",
+        "thinking": "The user wants to understand metabolic changes over an extended period. I’ll retrieve 21 days of BMR data using get_bmr_data.",
+        "numdays": 21,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I've been feeling sluggish lately, and I wonder if my metabolism has slowed down.",
+        "type": "symptom",
+        "thinking": "The user is expressing fatigue, which could be linked to metabolic changes. Fetching their BMR data will help identify trends. Since no time window is specified, default to the last 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you show me my BMR trends from the last two weeks?",
+        "type": "explicit",
+        "thinking": "The user is directly asking for BMR data over a specific period. The query mentions 'last two weeks', so we'll retrieve data for 14 days.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Ever since I started intermittent fasting, I feel colder than usual. Is my body burning less energy?",
+        "type": "behavioral",
+        "thinking": "The user connects a behavior change (intermittent fasting) to a physical symptom (feeling cold). Analyzing BMR data will clarify if their metabolism has adjusted. Defaulting to 7 days as no timeframe is given.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My energy levels have been like a rollercoaster this month.",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor to describe fluctuating energy, possibly hinting at metabolic instability. We'll analyze BMR data for the last 30 days ('this month') to identify patterns.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been eating more but losing weight. Is something off with my metabolism?",
+        "type": "implicit",
+        "thinking": "The user implies concern about metabolic efficiency despite increased intake. Checking BMR trends will help assess this. Defaulting to 7 days due to no explicit timeframe.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Show me my BMR data since I started my new workout routine 10 days ago.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests BMR data tied to a behavioral change ('new workout routine') with a clear timeframe ('10 days ago'). We'll retrieve data for the past 10 days.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like my body’s furnace is stuck on low.",
+        "type": "metaphorical",
+        "thinking": "The user compares their metabolism to a malfunctioning furnace, suggesting concerns about low energy expenditure. Fetching BMR data for the last 7 days (default) will provide insights.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has my BMR changed much over the past 3 weeks?",
+        "type": "explicit",
+        "thinking": "This is a direct query about BMR trends over a specified period ('past 3 weeks'). We'll retrieve data for 21 days.",
+        "numdays": 21,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been craving sweets nonstop—could this mean my metabolism is off?",
+        "type": "symptom",
+        "thinking": "The user associates cravings (a symptom) with potential metabolic issues. Analyzing recent BMR data (default 7 days) may reveal correlations.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "After switching to a night shift, my appetite is all over the place. How’s my BMR?",
+        "type": "behavioral",
+        "thinking": "The user links a lifestyle change (night shift) to appetite disruptions, implying metabolic curiosity. Defaulting to 7 days of BMR data for analysis.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Why do I feel like I’m running on empty these days?",
+        "type": "implicit",
+        "thinking": "The user hints at fatigue without directly mentioning metabolism, but BMR data could explain energy levels. Using a 7-day default timeframe.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Compare my BMR from last weekend to this weekend.",
+        "type": "explicit",
+        "thinking": "The user wants a specific comparison between two time points (two weekends). We'll retrieve 7 days of data to cover both weekends.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My jeans fit tighter even though I’m not eating differently. What’s going on?",
+        "type": "implicit",
+        "thinking": "The user implies metabolic concerns due to unexplained weight changes. Fetching BMR data for the last 7 days may reveal shifts.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been a sloth all week—could my metabolism be to blame?",
+        "type": "metaphorical",
+        "thinking": "The user compares themselves to a sloth, suggesting low activity and potential metabolic slowdown. Analyzing BMR for the last 7 days ('all week') is appropriate.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Give me a snapshot of my metabolism since New Year’s.",
+        "type": "explicit",
+        "thinking": "The user requests BMR data tied to a holiday marker ('New Year’s'). Assuming this is a recent reference, we'll use 30 days for a broad view.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My doctor said to monitor my BMR—can you show the last 5 days?",
+        "type": "explicit",
+        "thinking": "This is a direct request for BMR data with a clear timeframe ('last 5 days'). We'll retrieve exactly 5 days of data.",
+        "numdays": 5,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been waking up sweating at night. Could my BMR be spiking?",
+        "type": "symptom",
+        "thinking": "The user reports night sweats (a physical symptom) and wonders about metabolic causes. Checking BMR trends for the last 7 days (default) may help.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Since upping my protein intake, I’ve felt warmer. Is my BMR higher?",
+        "type": "behavioral",
+        "thinking": "The user connects a dietary change to a physical sensation, implying metabolic interest. Defaulting to 7 days of BMR data for analysis.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My fitness tracker says my resting calories are down. What’s my BMR look like?",
+        "type": "implicit",
+        "thinking": "The user references indirect data (tracker metrics) to ask about BMR. Fetching the last 7 days of BMR data will provide clarity.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Plot my BMR over the last 20 days—I’m curious about fluctuations.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests a 20-day BMR trend visualization. We'll retrieve data for the specified period.",
+        "numdays": 20,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m always hungry now, like my body’s a bottomless pit.",
+        "type": "metaphorical",
+        "thinking": "The user uses vivid language to describe increased hunger, possibly hinting at metabolic changes. Analyzing BMR for the last 7 days (default) may explain this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has my metabolism shifted since I quit caffeine 2 weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user connects a behavior change (quitting caffeine) to potential metabolic effects. We'll retrieve BMR data for the specified 14-day period.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Why do I feel like I gain weight just by looking at food lately?",
+        "type": "implicit",
+        "thinking": "The user humorously implies concerns about metabolic efficiency. Fetching BMR data for the last 7 days (default) could identify trends.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Show me my BMR data from the past month—I’ve been extra tired.",
+        "type": "symptom",
+        "thinking": "The user links fatigue (symptom) to potential metabolic issues and requests a 30-day BMR review.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body feels like it’s in standby mode. What’s my BMR been like?",
+        "type": "metaphorical",
+        "thinking": "The user compares their body to a device on standby, suggesting low metabolic activity. Defaulting to 7 days of BMR data for insights.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Did my vacation binge affect my BMR? Show me the last 10 days.",
+        "type": "behavioral",
+        "thinking": "The user asks about the impact of a specific event (vacation binge) on metabolism, specifying a 10-day window.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been freezing all week—could my metabolism have dropped?",
+        "type": "symptom",
+        "thinking": "The user reports feeling cold (symptom) and wonders about metabolic slowdown. Analyzing BMR for the last 7 days ('all week') is appropriate.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Give me my BMR stats since Monday.",
+        "type": "explicit",
+        "thinking": "The user directly requests BMR data from a specific day ('since Monday'). Assuming this is the most recent Monday, we'll calculate days accordingly (e.g., 5 days if today is Friday).",
+        "numdays": 5,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My friend says my metabolism must be fast because I eat so much. What’s my data say?",
+        "type": "implicit",
+        "thinking": "The user references external commentary about their metabolism, implying curiosity. Defaulting to 7 days of BMR data for objective insights.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been meal prepping religiously—has it impacted my BMR?",
+        "type": "behavioral",
+        "thinking": "The user connects a dietary habit change to potential metabolic effects. Fetching BMR data for the last 7 days (default) will help assess impact.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My energy crashes every afternoon like clockwork. Metabolic issue?",
+        "type": "symptom",
+        "thinking": "The user describes a recurring energy dip (symptom) and wonders about metabolic causes. Analyzing BMR trends for the last 7 days may reveal patterns.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Chart my BMR over the last 15 days—I want to see dips and peaks.",
+        "type": "explicit",
+        "thinking": "This is a direct request for a 15-day BMR visualization with focus on variability. We'll retrieve data for the specified period.",
+        "numdays": 15,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like my body’s burning energy at warp speed lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses a sci-fi metaphor ('warp speed') to describe perceived high metabolic activity. Checking BMR for the last 7 days (default) will quantify this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has my BMR stabilized since my thyroid meds adjustment 3 weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user links a medication change to potential metabolic effects and specifies a 21-day timeframe.",
+        "numdays": 21,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m eating less but not losing weight. What’s my BMR trend?",
+        "type": "implicit",
+        "thinking": "The user implies metabolic concerns due to unexpected weight stagnation. Fetching BMR data for the last 7 days (default) may explain this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Break down my BMR day-by-day for the past week.",
+        "type": "explicit",
+        "thinking": "The user directly requests daily BMR data for a 7-day period ('past week').",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My digestion feels slower—could my metabolism be slowing too?",
+        "type": "symptom",
+        "thinking": "The user connects a physical symptom (slow digestion) to potential metabolic changes. Analyzing BMR for the last 7 days (default) may correlate.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m like a hibernating bear—sleeping more, moving less. BMR impact?",
+        "type": "metaphorical",
+        "thinking": "The user compares themselves to a hibernating bear, suggesting low activity and potential metabolic drop. Fetching BMR data for the last 7 days will quantify this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Show me my BMR before and after I started taking probiotics 10 days ago.",
+        "type": "behavioral",
+        "thinking": "The user wants to compare BMR data around a specific intervention (probiotics) with a clear 10-day timeframe.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Why do I feel like I need twice as much food to feel full this month?",
+        "type": "implicit",
+        "thinking": "The user implies increased hunger possibly tied to metabolic changes. Analyzing BMR for the last 30 days ('this month') may reveal shifts.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Give me a weekly average of my BMR for the last 4 weeks.",
+        "type": "explicit",
+        "thinking": "The user requests aggregated BMR data over a 28-day period ('last 4 weeks').",
+        "numdays": 28,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My hands are always cold now—metabolism related?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (cold hands) and wonders about metabolic causes. Checking BMR trends for the last 7 days (default) may help.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m burning through meals like a furnace—what’s my BMR say?",
+        "type": "metaphorical",
+        "thinking": "The user compares their metabolism to an intense furnace. Fetching BMR data for the last 7 days (default) will provide objective data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How has my BMR changed since increasing my water intake 2 weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user links a hydration change to potential metabolic effects and specifies a 14-day timeframe.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been stress-eating for days—is my BMR all over the place?",
+        "type": "behavioral",
+        "thinking": "The user connects emotional eating to potential metabolic instability. Defaulting to 7 days of BMR data to assess fluctuations.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Plot my BMR against my sleep hours for the last 10 days.",
+        "type": "explicit",
+        "thinking": "The user wants a comparative analysis of BMR and sleep over a specified 10-day period.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like my body’s stuck in first gear—everything’s sluggish.",
+        "type": "metaphorical",
+        "thinking": "The user uses a car metaphor to describe low energy, possibly hinting at metabolic slowdown. Fetching BMR data for the last 7 days (default) may confirm this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has my BMR improved since I started weight training 3 weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user connects an exercise change to potential metabolic improvement over a 21-day period.",
+        "numdays": 21,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Why am I shivering when it’s not even cold? Metabolic issue?",
+        "type": "symptom",
+        "thinking": "The user reports unexplained shivering (symptom) and wonders about metabolic causes. Analyzing BMR for the last 7 days (default) may help.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Show me my BMR fluctuations during my last menstrual cycle.",
+        "type": "explicit",
+        "thinking": "The user requests BMR data tied to a biological cycle. Assuming a typical 28-day cycle, we'll retrieve that period.",
+        "numdays": 28,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m eating like a bird but not losing an ounce.",
+        "type": "metaphorical",
+        "thinking": "The user compares their eating to a bird's (small portions) and implies metabolic confusion. Fetching BMR data for the last 7 days (default) may explain weight stagnation.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has my BMR dropped since I hit menopause last year?",
+        "type": "behavioral",
+        "thinking": "The user connects a life stage change to potential metabolic effects. Since 'last year' is too broad, we'll default to 30 days for recent trends.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Break down my BMR by time of day for the past 5 days.",
+        "type": "explicit",
+        "thinking": "The user requests granular BMR data segmented by time over a specified 5-day period.",
+        "numdays": 5,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’m always tired, no matter how much I sleep. Metabolic slowdown?",
+        "type": "symptom",
+        "thinking": "The user reports persistent fatigue (symptom) and wonders about metabolic causes. Checking BMR trends for the last 7 days (default) may help.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body feels like it’s burning calories in slow motion.",
+        "type": "metaphorical",
+        "thinking": "The user uses a film metaphor ('slow motion') to describe perceived low metabolic rate. Fetching BMR data for the last 7 days (default) will quantify this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you check how my BMR has trended over the last 11 days?",
+        "type": "explicit",
+        "thinking": "The user wants a clear analysis of their metabolic rate over a specific time. I’ll retrieve BMR data for the past 11 days using get_bmr_data to identify trends or anomalies.",
+        "numdays": 11,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like I’ve been dragging myself around—what’s up with my metabolism?",
+        "type": "symptom",
+        "thinking": "The user is experiencing fatigue and suspects it might be due to metabolic changes. I’ll use get_bmr_data to retrieve 7 days of BMR data to investigate any drop.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Ever since I switched to a plant-based diet 2 weeks ago, I’ve been curious about my BMR.",
+        "type": "behavioral",
+        "thinking": "The user has changed their dietary habits and wants to see if their metabolism has been affected. I’ll retrieve 14 days of BMR data using get_bmr_data.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has my engine been firing hot or cold lately?",
+        "type": "metaphorical",
+        "thinking": "The user is using figurative language to inquire about their metabolic activity. I’ll retrieve 7 days of BMR data by default using get_bmr_data to check for shifts.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Could you pull my BMR stats since last Sunday?",
+        "type": "explicit",
+        "thinking": "The user is requesting BMR data from a specific day. Assuming today is Friday, that covers 5 days. I’ll retrieve 5 days of BMR data using get_bmr_data.",
+        "numdays": 5,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I've been hitting the gym hard this past week—has my metabolism responded?",
+        "type": "behavioral",
+        "thinking": "The user has increased physical activity and wants to monitor metabolic effects. I’ll retrieve 7 days of BMR data using get_bmr_data to check for changes.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Is it just me or does my body feel like it’s burning less fuel these days?",
+        "type": "symptom",
+        "thinking": "The user suspects a decrease in metabolic rate. I’ll use get_bmr_data to retrieve 7 days of data to evaluate if there’s been a slowdown.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Take a look at my BMR for the past three weekends.",
+        "type": "explicit",
+        "thinking": "The user wants data from a recurring time frame. I’ll consider the past three weekends as 9 days (3 x 3-day periods) and retrieve that using get_bmr_data.",
+        "numdays": 9,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve cut sugar completely this week—has it made a dent in my metabolism?",
+        "type": "behavioral",
+        "thinking": "The user changed a dietary factor and is curious about BMR changes. I’ll use get_bmr_data to retrieve the past 7 days of data for analysis.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Just wondering if my metabolism has picked up since I started morning runs two weeks ago.",
+        "type": "behavioral",
+        "thinking": "The user adopted a new exercise habit and wants to evaluate its effect. I’ll retrieve 14 days of BMR data using get_bmr_data.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "What does my metabolic activity look like this month?",
+        "type": "explicit",
+        "thinking": "The user requests a broad overview. I’ll interpret ‘this month’ as 30 days and retrieve that span of BMR data using get_bmr_data.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "It feels like my body’s running in low gear—can you check?",
+        "type": "metaphorical",
+        "thinking": "The user is using metaphor to express concern over low energy. I’ll retrieve the past 7 days of BMR data using get_bmr_data to investigate.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Any weird dips in my BMR last week?",
+        "type": "explicit",
+        "thinking": "The user is seeking unusual patterns in their recent BMR. I’ll retrieve BMR data for the past 7 days using get_bmr_data for anomaly detection.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How’s my BMR been holding up over the past 18 days?",
+        "type": "explicit",
+        "thinking": "The user wants a trend analysis across a specific time frame. I’ll retrieve 18 days of BMR data using get_bmr_data for evaluation.",
+        "numdays": 18,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My sleep’s been a mess—do you think my metabolism got affected?",
+        "type": "implicit",
+        "thinking": "The user suggests sleep disruption and wonders about metabolic impact. I’ll retrieve 7 days of BMR data using get_bmr_data by default.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Let’s see if my BMR has shifted since that stressful week I had.",
+        "type": "implicit",
+        "thinking": "The user links a stressful period to potential metabolic effects. I’ll retrieve 7 days of BMR data by default using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Please review how my metabolism’s been over the last 21 days.",
+        "type": "explicit",
+        "thinking": "The user clearly asks for a 21-day window of metabolic data. I’ll retrieve 21 days of BMR data using get_bmr_data.",
+        "numdays": 21,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve noticed I sweat less lately—does my BMR say anything about that?",
+        "type": "symptom",
+        "thinking": "The user is experiencing physical symptoms possibly linked to a metabolic slowdown. I’ll retrieve 7 days of BMR data using get_bmr_data to check.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I stopped doing late-night snacking this week—any impact on my burn rate?",
+        "type": "behavioral",
+        "thinking": "The user changed a behavior that may affect metabolism. I’ll use get_bmr_data to fetch BMR data for the past 7 days.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has my BMR been flatlining or showing some action lately?",
+        "type": "metaphorical",
+        "thinking": "The user figuratively inquires about metabolic fluctuations. I’ll retrieve 7 days of BMR data using get_bmr_data to analyze variation.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Let’s take a look at how my BMR has changed in the last 13 days.",
+        "type": "explicit",
+        "thinking": "The user provides a specific time range. I’ll retrieve BMR data for the past 13 days using get_bmr_data for trend analysis.",
+        "numdays": 13,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I've been feeling extra warm lately. Could it be my metabolism speeding up?",
+        "type": "symptom",
+        "thinking": "The user describes physical symptoms indicating increased BMR. I’ll use get_bmr_data to retrieve the past 7 days for confirmation.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How’s my body’s baseline energy looking this week?",
+        "type": "implicit",
+        "thinking": "The user is indirectly asking about BMR for the current week. I’ll retrieve 7 days of data using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My weight hasn’t budged—could my BMR be stalling?",
+        "type": "implicit",
+        "thinking": "The user suspects that stagnant weight loss might be due to changes in metabolism. I’ll retrieve 7 days of BMR data using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you pull up my BMR readings from the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user has made a specific data request. I’ll retrieve 10 days of BMR data using get_bmr_data.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I've been feeling like my body's battery drains faster than it charges these days.",
+        "type": "metaphorical",
+        "thinking": "The user compares their energy levels to a battery, suggesting concerns about metabolic efficiency. Fetching BMR data will help identify any unusual patterns. Since no specific timeframe is mentioned, we'll use the default 7-day period.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you show me how my metabolism has changed since I started my new medication three weeks ago?",
+        "type": "explicit",
+        "thinking": "The user directly requests BMR data tied to a medication change with a clear 21-day timeframe. This will help assess if the medication has affected their metabolic rate.",
+        "numdays": 21,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My weight hasn't budged despite walking 10,000 steps daily for the past fortnight.",
+        "type": "behavioral",
+        "thinking": "The user connects consistent exercise behavior to unexpected weight results, implying metabolic curiosity. We'll analyze BMR data for the mentioned 14-day period to investigate.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I wake up feeling exhausted even after 8 hours of sleep. Could my BMR be off?",
+        "type": "symptom",
+        "thinking": "The user reports persistent fatigue (a physical symptom) and wonders about metabolic causes. Checking BMR trends for the default 7-day period may reveal correlations.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body feels like it's stuck in energy-saving mode.",
+        "type": "metaphorical",
+        "thinking": "The user uses a tech metaphor to describe low energy, hinting at potential metabolic slowdown. Fetching BMR data for the default 7 days will provide objective measurements.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Show me my BMR fluctuations during my last business trip (5 days).",
+        "type": "explicit",
+        "thinking": "This is a direct request for BMR data tied to a specific 5-day event. The user likely wants to see how travel affected their metabolism.",
+        "numdays": 5,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I've been craving salty foods all week - could this mean my metabolism is changing?",
+        "type": "symptom",
+        "thinking": "The user connects recent food cravings (a symptom) to potential metabolic shifts. Analyzing BMR data for the mentioned 7-day period may show relevant patterns.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Since switching to a plant-based diet 10 days ago, I've noticed some changes in my energy.",
+        "type": "behavioral",
+        "thinking": "The user links a dietary change to energy fluctuations, suggesting metabolic interest. We'll retrieve BMR data for the specified 10-day period to assess impact.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Why do I feel like I'm running on fumes by mid-afternoon?",
+        "type": "implicit",
+        "thinking": "The user hints at energy crashes without directly mentioning metabolism. Fetching BMR data for the default 7-day period may help explain these slumps.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Compare my BMR from the first and second halves of this month.",
+        "type": "explicit",
+        "thinking": "The user wants a clear comparison between two 15-day periods within a month. This will show if their metabolism has shifted noticeably.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My rings feel tighter lately, but I haven't changed my eating habits.",
+        "type": "implicit",
+        "thinking": "The user implies concern about potential metabolic slowdown through subtle physical changes. Checking BMR data for the default 7-day period may provide insights.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like my internal engine is revving too high at night.",
+        "type": "metaphorical",
+        "thinking": "The user describes nighttime restlessness using car terminology, suggesting metabolic curiosity. Fetching BMR data for the default 7 days will quantify this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has my BMR stabilized since recovering from the flu two weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user connects post-illness recovery to metabolic concerns with a clear 14-day timeframe. This will show if their metabolism has returned to baseline.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Give me a weekly breakdown of my BMR for the last 3 weeks.",
+        "type": "explicit",
+        "thinking": "This direct request asks for segmented BMR data over a 21-day period, showing weekly trends rather than daily fluctuations.",
+        "numdays": 21,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My hands are always cold now, even when it's warm outside.",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (cold extremities) that may indicate metabolic changes. Analyzing BMR data for the default 7-day period could reveal connections.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I've been a couch potato since my injury - how's that affected my BMR?",
+        "type": "behavioral",
+        "thinking": "The user acknowledges decreased activity due to injury and wonders about metabolic impact. Since no timeframe is specified, we'll use the default 7-day period.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Plot my BMR against my stress levels for the past 10 days.",
+        "type": "explicit",
+        "thinking": "The user wants to correlate two metrics over a specific 10-day period to identify potential relationships between stress and metabolism.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like my body's thermostat is broken - always too hot or too cold.",
+        "type": "metaphorical",
+        "thinking": "The user uses a temperature control metaphor to describe thermal dysregulation, possibly hinting at metabolic issues. Fetching BMR data for the default 7 days may help.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has cutting out alcohol for the past 18 days changed my BMR?",
+        "type": "behavioral",
+        "thinking": "The user connects a lifestyle change (sobriety) to potential metabolic effects with a clear 18-day timeframe. This will show if the change impacted their metabolism.",
+        "numdays": 18,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Why do I feel hungrier now than when I was training for my marathon?",
+        "type": "implicit",
+        "thinking": "The user compares current hunger levels to a period of intense activity, implying metabolic curiosity. Since no timeframe is given, we'll use the default 7-day period.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Show me my BMR trends since daylight savings time started.",
+        "type": "explicit",
+        "thinking": "The user requests BMR data tied to a seasonal time change. Assuming this was recent, we'll use a 14-day period to capture the transition effects.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My digestion has been slower since returning from vacation last week.",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (slow digestion) connected to a recent event. Analyzing BMR data for the past 7 days may show related changes.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like my metabolism has gone into hibernation mode.",
+        "type": "metaphorical",
+        "thinking": "The user compares their metabolism to a hibernating animal, suggesting perceived slowdown. Fetching BMR data for the default 7-day period will provide concrete data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Break down my BMR by time of day for the last 5 workdays.",
+        "type": "explicit",
+        "thinking": "The user wants granular data segmented by time over a specific 5-day period, focusing on workdays which likely have different routines than weekends.",
+        "numdays": 5,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Since turning 40 last month, I've noticed changes in my energy levels.",
+        "type": "behavioral",
+        "thinking": "The user connects an age milestone to physical changes, implying metabolic interest. We'll analyze BMR data for the past 30 days to assess any shifts.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My face looks puffier in the mornings lately - metabolic connection?",
+        "type": "implicit",
+        "thinking": "The user hints at potential metabolic causes for recent physical changes. Checking BMR data for the default 7-day period may reveal relevant patterns.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I'm eating less but my stomach feels bloated all the time.",
+        "type": "symptom",
+        "thinking": "The user reports contradictory digestive symptoms that might indicate metabolic changes. Analyzing BMR data for the default 7-day period could provide insights.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Chart my BMR against my menstrual cycle for the last 28 days.",
+        "type": "explicit",
+        "thinking": "The user wants to see how metabolism fluctuates across a complete biological cycle. This requires the full 28-day period they specified.",
+        "numdays": 28,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body feels like it's stuck in first gear - no energy to get going.",
+        "type": "metaphorical",
+        "thinking": "The user uses vehicle transmission imagery to describe low energy, suggesting metabolic concerns. Fetching BMR data for the default 7-day period will quantify this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has my BMR changed since I stopped drinking coffee 12 days ago?",
+        "type": "behavioral",
+        "thinking": "The user connects caffeine cessation to potential metabolic effects with a clear 12-day timeframe. This will show if quitting coffee impacted their metabolism.",
+        "numdays": 12,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I'm gaining weight despite eating healthier than ever - what's going on?",
+        "type": "implicit",
+        "thinking": "The user expresses confusion about weight changes despite good habits, implying metabolic curiosity. Checking BMR data for the default 7-day period may explain this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Show me my BMR trends during the workweek versus weekends for the past month.",
+        "type": "explicit",
+        "thinking": "The user wants to compare metabolic patterns between different types of days over a 30-day period to identify routine-based fluctuations.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I've been waking up drenched in sweat for the past several nights.",
+        "type": "symptom",
+        "thinking": "The user reports night sweats (a physical symptom) that may indicate metabolic changes. Analyzing BMR data for the default 7-day period could reveal connections.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My metabolism feels like it's stuck in molasses these days.",
+        "type": "metaphorical",
+        "thinking": "The user compares their metabolism to a slow-moving substance, suggesting perceived slowdown. Fetching BMR data for the default 7-day period will provide objective measurements.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How has my BMR responded to increasing my protein intake over the last 15 days?",
+        "type": "behavioral",
+        "thinking": "The user connects a dietary modification to potential metabolic effects with a clear 15-day timeframe. This will show if the change impacted their metabolism.",
+        "numdays": 15,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I'm always hungry right after eating a full meal now.",
+        "type": "symptom",
+        "thinking": "The user reports unusual hunger patterns (a symptom) that might indicate metabolic changes. Checking BMR data for the default 7-day period may help explain this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Compare my BMR from before and after I started taking these supplements 20 days ago.",
+        "type": "explicit",
+        "thinking": "The user wants to assess the metabolic impact of supplements with a clear 20-day before/after comparison period.",
+        "numdays": 20,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My energy levels have been yo-yoing all week - is my metabolism unstable?",
+        "type": "symptom",
+        "thinking": "The user describes fluctuating energy (a symptom) and wonders about metabolic causes. Analyzing BMR data for the mentioned 7-day period may show patterns.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like my internal furnace keeps changing temperatures randomly.",
+        "type": "metaphorical",
+        "thinking": "The user compares their metabolism to an inconsistent heating system, suggesting metabolic variability concerns. Fetching BMR data for the default 7-day period will quantify this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Show me my BMR trends since I began working the night shift 3 weeks ago.",
+        "type": "behavioral",
+        "thinking": "The user connects a work schedule change to potential metabolic effects with a clear 21-day timeframe. This will show how night shifts have impacted their metabolism.",
+        "numdays": 21,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Why do I feel colder than everyone else in the room lately?",
+        "type": "implicit",
+        "thinking": "The user hints at temperature sensitivity without directly mentioning metabolism. Checking BMR data for the default 7-day period may reveal relevant patterns.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Break down my BMR by hour for the last 3 days when I was sick.",
+        "type": "explicit",
+        "thinking": "The user requests granular hourly data over a specific 3-day illness period to see how being sick affected their metabolism throughout each day.",
+        "numdays": 3,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My weight fluctuates wildly day to day now - metabolic issue?",
+        "type": "symptom",
+        "thinking": "The user reports unstable weight (a symptom) and wonders about metabolic causes. Analyzing BMR data for the default 7-day period may explain these fluctuations.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I feel like my body's fuel efficiency has gone way down.",
+        "type": "metaphorical",
+        "thinking": "The user compares their metabolism to vehicle efficiency, suggesting perceived metabolic slowdown. Fetching BMR data for the default 7-day period will provide concrete data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Has my BMR changed since starting HRT 25 days ago?",
+        "type": "behavioral",
+        "thinking": "The user connects hormone replacement therapy to potential metabolic effects with a clear 25-day timeframe. This will show if HRT has impacted their metabolism.",
+        "numdays": 25,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Show me my BMR data from the week before and after my vacation.",
+        "type": "explicit",
+        "thinking": "The user wants to compare metabolic patterns surrounding a specific event (vacation), requiring two 7-day periods (total 14 days) for complete context.",
+        "numdays": 14,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I'm always tired now, even after a full night's sleep.",
+        "type": "symptom",
+        "thinking": "The user reports persistent fatigue (a symptom) that might indicate metabolic changes. Checking BMR data for the default 7-day period may reveal underlying patterns.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My metabolism feels like it's stuck in traffic - not moving anywhere.",
+        "type": "metaphorical",
+        "thinking": "The user uses traffic imagery to describe perceived metabolic stagnation. Fetching BMR data for the default 7-day period will provide objective measurements.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How has my BMR responded to cutting out sugar over the last 9 days?",
+        "type": "behavioral",
+        "thinking": "The user connects dietary changes to potential metabolic effects with a clear 9-day timeframe. This will show if eliminating sugar impacted their metabolism.",
+        "numdays": 9,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I'm gaining weight while eating the same as always - what gives?",
+        "type": "implicit",
+        "thinking": "The user expresses confusion about unexpected weight changes, implying metabolic curiosity. Analyzing BMR data for the default 7-day period may explain this.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Show me my BMR trends during my most and least stressful weeks this month.",
+        "type": "explicit",
+        "thinking": "The user wants to compare metabolic patterns during different stress periods within a 30-day timeframe to identify potential correlations.",
+        "numdays": 30,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Since I started that strength training routine 3 weeks ago, has my metabolism shifted?",
+        "type": "behavioral",
+        "thinking": "The user began a new workout program and wants to assess metabolic impact. I’ll retrieve 21 days of BMR data using get_bmr_data to analyze changes.",
+        "numdays": 21,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Why do I feel like my body’s in energy-saving mode lately?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to express concern over low energy and possible reduced BMR. I’ll fetch the past 7 days of BMR data using get_bmr_data to verify.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Let’s see how my BMR behaved during the past two weekends.",
+        "type": "explicit",
+        "thinking": "The user wants to analyze BMR trends during weekends. I’ll map this to the last 6 days (Friday to Sunday x2) and retrieve BMR data using get_bmr_data.",
+        "numdays": 6,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I haven’t been eating properly lately—what’s going on with my metabolism?",
+        "type": "implicit",
+        "thinking": "The user hints at poor nutrition and suspects it may have impacted their BMR. I’ll retrieve 7 days of BMR data using get_bmr_data to investigate.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Just wondering if my BMR has been steady since I started working night shifts 10 days ago.",
+        "type": "behavioral",
+        "thinking": "The user introduced a major lifestyle shift and wants to know if it affected their metabolism. I’ll retrieve BMR data for the past 10 days using get_bmr_data.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can we check if there’s been a spike in my metabolism since last Friday?",
+        "type": "explicit",
+        "thinking": "The user suspects a recent increase in BMR and refers to a specific day. Assuming today is Tuesday, I’ll retrieve 5 days of data using get_bmr_data.",
+        "numdays": 5,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Does my metabolism show anything interesting since I started that new medication?",
+        "type": "implicit",
+        "thinking": "The user is connecting recent medication to possible BMR changes. No specific timeframe is given, so I’ll default to retrieving 7 days of data using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve felt wired and restless for the past 8 days—could my BMR explain that?",
+        "type": "symptom",
+        "thinking": "The user is experiencing physical symptoms that might be due to elevated metabolism. I’ll retrieve BMR data for the past 8 days using get_bmr_data.",
+        "numdays": 8,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I just want to see if my metabolism slowed down over the last 16 days.",
+        "type": "explicit",
+        "thinking": "The user is clearly asking for a 16-day window to assess metabolic slowdown. I’ll retrieve BMR data for that range using get_bmr_data.",
+        "numdays": 16,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "My body feels like it’s in idle mode—check my BMR?",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically implies a sluggish metabolic state. I’ll retrieve 7 days of BMR data by default using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I stopped drinking alcohol 9 days ago—has my metabolism reacted?",
+        "type": "behavioral",
+        "thinking": "The user quit drinking and wants to see if it influenced their BMR. I’ll retrieve 9 days of data using get_bmr_data.",
+        "numdays": 9,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you see how my BMR’s been since I started meal prepping on Sundays?",
+        "type": "behavioral",
+        "thinking": "The user refers to a routine change starting on Sundays. I’ll interpret this as 7 days and retrieve the latest week’s data using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Why do I feel like I’m burning more fuel at rest lately?",
+        "type": "symptom",
+        "thinking": "The user suspects an increase in resting metabolism. I’ll retrieve 7 days of BMR data using get_bmr_data to verify.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "How has my basal metabolism changed in the last 19 days?",
+        "type": "explicit",
+        "thinking": "The user is requesting BMR data for a 19-day span. I’ll use get_bmr_data to retrieve the data accordingly.",
+        "numdays": 19,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can we look at my BMR pattern this week so far?",
+        "type": "explicit",
+        "thinking": "The user is referring to the current week. Assuming today is Thursday, I’ll retrieve 4 days of BMR data using get_bmr_data.",
+        "numdays": 4,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Ever since that stressful family event, I feel like my metabolism’s been off.",
+        "type": "symptom",
+        "thinking": "The user links an emotional stressor to metabolic changes. I’ll retrieve 7 days of BMR data using get_bmr_data to examine the pattern.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Pull up my BMR stats from the past 22 days, please.",
+        "type": "explicit",
+        "thinking": "The user is making a direct request for a 22-day trend. I’ll use get_bmr_data to retrieve BMR data for that duration.",
+        "numdays": 22,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been more active and mindful with my eating for the past 15 days—what does my BMR say?",
+        "type": "behavioral",
+        "thinking": "The user reports positive lifestyle changes and wants to analyze their effect on metabolism. I’ll retrieve 15 days of BMR data using get_bmr_data.",
+        "numdays": 15,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you show if my BMR has been all over the place or steady since the month began?",
+        "type": "explicit",
+        "thinking": "The user wants to check for fluctuations since the start of the month. Assuming today is the 20th, I’ll retrieve 20 days of BMR data using get_bmr_data.",
+        "numdays": 20,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Lately, I feel like my inner engine’s been revving nonstop.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to imply elevated metabolism. I’ll retrieve 7 days of BMR data by default using get_bmr_data.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I’ve been doing cold showers every morning for 12 days—does my BMR reflect any boost?",
+        "type": "behavioral",
+        "thinking": "The user is testing a cold exposure routine and wants to assess metabolic effects. I’ll retrieve 12 days of BMR data using get_bmr_data.",
+        "numdays": 12,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "I don’t feel as hungry as usual—does that show up in my BMR at all?",
+        "type": "symptom",
+        "thinking": "The user reports reduced appetite and suspects metabolic changes. I’ll retrieve 7 days of BMR data using get_bmr_data to check for any decrease.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "What’s my metabolic rhythm been like since last Wednesday?",
+        "type": "explicit",
+        "thinking": "The user refers to a specific point in time. Assuming today is Saturday, I’ll retrieve 10 days of BMR data using get_bmr_data.",
+        "numdays": 10,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "Can you analyze how stable my BMR has been over the past 28 days?",
+        "type": "explicit",
+        "thinking": "The user wants a long-term overview of metabolic stability. I’ll retrieve 28 days of BMR data using get_bmr_data for analysis.",
+        "numdays": 28,
+        "function": "get_bmr_data"
+    },
+    {
+        "query": "After cutting down on caffeine this week, my energy's weird. Can we check my metabolism?",
+        "type": "behavioral",
+        "thinking": "The user reduced caffeine intake and is experiencing odd energy levels. I’ll retrieve 7 days of BMR data using get_bmr_data to analyze the effect.",
+        "numdays": 7,
+        "function": "get_bmr_data"
+    }
+]

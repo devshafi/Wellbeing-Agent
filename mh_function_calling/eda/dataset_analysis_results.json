@@ -1,0 +1,59 @@
+{
+  "total_samples": 4000,
+  "unique_functions": 20,
+  "unique_patients": 888,
+  "avg_query_length": 61.913,
+  "function_distribution": {
+    "get_steps_data": 200,
+    "get_blood_glucose_data": 200,
+    "get_oxygen_saturation_data": 200,
+    "get_blood_pressure_data": 200,
+    "get_exercise_session_data": 200,
+    "get_calories_burned_data": 200,
+    "get_distance_data": 200,
+    "get_exercise_heart_rate_data": 200,
+    "get_power_data": 200,
+    "get_speed_data": 200,
+    "get_vo2max_data": 200,
+    "get_heart_rate_data": 200,
+    "get_nutrition_data": 200,
+    "get_sleep_data": 200,
+    "get_weight_data": 200,
+    "get_body_fat_data": 200,
+    "get_bmr_data": 200,
+    "get_height_data": 200,
+    "get_stress_data": 200,
+    "get_body_temperature_data": 200
+  },
+  "mental_health_keywords": {
+    "anxiety": 609,
+    "stress": 458,
+    "depression": 455,
+    "medication": 320,
+    "panic": 309,
+    "mood": 257,
+    "therapist": 188,
+    "eating disorder": 183,
+    "sleep": 165,
+    "adhd": 127
+  },
+  "num_days_distribution": {
+    "1": 408,
+    "3": 400,
+    "5": 385,
+    "7": 390,
+    "10": 404,
+    "14": 412,
+    "15": 413,
+    "21": 391,
+    "28": 370,
+    "30": 427
+  },
+  "quality_scores": {
+    "Consistent function format": "4000",
+    "Proper thinking tags": "4000",
+    "Valid patient IDs": "4000",
+    "Reasonable query lengths": "4000",
+    "Valid num_days range": "4000"
+  }
+}

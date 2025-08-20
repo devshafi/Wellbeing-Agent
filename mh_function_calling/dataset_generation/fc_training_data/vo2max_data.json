@@ -1,0 +1,1780 @@
+[
+    {
+        "query": "I've been feeling more winded than usual after my runs this week. Is my fitness declining?",
+        "type": "symptom",
+        "thinking": "The user is expressing concern about increased breathlessness during runs, which may indicate changes in cardio fitness. Checking VO2 max trends will help assess if there's an actual decline. Since they mentioned 'this week', I'll look at the past 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Show me my VO2 max progression over the last 2 weeks",
+        "type": "explicit",
+        "thinking": "This is a direct request for VO2 max data with a clear time frame. The function will provide the cardio fitness metrics they're asking for. 'Last 2 weeks' translates to 14 days of data.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My marathon training doesn't seem to be paying off anymore",
+        "type": "implicit",
+        "thinking": "The user implies their training isn't yielding expected results, possibly indicating a VO2 max plateau. Checking recent VO2 max trends can verify this concern. No specific time mentioned, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Ever since I switched to morning workouts, I feel like a different person - is this affecting my endurance?",
+        "type": "behavioral",
+        "thinking": "The user changed workout timing and wants to know if it impacts endurance. VO2 max data will show any cardio fitness changes since this behavioral shift. No timeframe specified, using default 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My heart feels like it's working overtime during spin class lately",
+        "type": "metaphorical",
+        "thinking": "The metaphorical language suggests perceived increased cardiovascular strain. VO2 max analysis can objectively show if their fitness has changed. 'Lately' is vague, so defaulting to 7 days of data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Compare my VO2 max from the past month to the month before",
+        "type": "explicit",
+        "thinking": "Clear request for comparative VO2 max data between two specific periods. Need to retrieve two 30-day datasets for proper comparison.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I've been hitting the gym regularly but still get tired climbing stairs",
+        "type": "implicit",
+        "thinking": "User implies their gym workouts aren't translating to everyday endurance. VO2 max data can reveal if their cardio fitness matches their concern. No timeframe given, using 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since starting my new job, my lunchtime runs feel harder",
+        "type": "behavioral",
+        "thinking": "A lifestyle change (new job) may be affecting workout performance. VO2 max trends since this change began can show impacts. Need to know when job started for exact days, but defaulting to 7.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My breathing feels like I'm trying to suck air through a straw during HIIT",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor suggests possible cardio respiratory strain. Checking VO2 max can assess if this reflects actual fitness changes. No time reference, using 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Has my VO2 max improved since I quit smoking 3 weeks ago?",
+        "type": "explicit",
+        "thinking": "Direct question about VO2 max changes following smoking cessation. Need data since this health behavior change (21 days).",
+        "numdays": 21,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like my engine is running out of fuel faster these days",
+        "type": "metaphorical",
+        "thinking": "Car metaphor implies perceived endurance decline. VO2 max data can verify if this matches objective fitness metrics. 'These days' is vague - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Give me my cardio fitness numbers for the past 10 days",
+        "type": "explicit",
+        "thinking": "Clear request for cardio fitness data with specific timeframe. VO2 max is the primary metric for this. Exactly 10 days as requested.",
+        "numdays": 10,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My smartwatch says my fitness age has increased - should I be worried?",
+        "type": "implicit",
+        "thinking": "User is concerned about their fitness age, which relates to VO2 max. Providing actual VO2 max trends will give better insight. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since switching to a plant-based diet, my recovery seems slower",
+        "type": "behavioral",
+        "thinking": "Diet change may be affecting cardio recovery. VO2 max trends since dietary shift can show impacts. Need exact diet start date for precise days, but defaulting to 7.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like I'm carrying an invisible weight during my workouts",
+        "type": "metaphorical",
+        "thinking": "Metaphor suggests perceived increased workout difficulty. VO2 max data can show if this correlates with fitness changes. No time reference, using 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Show me how my VO2 max has changed since summer started",
+        "type": "explicit",
+        "thinking": "Direct request for seasonal VO2 max comparison. Need to calculate days since summer began (typically ~30 days at summer start).",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My running partner is leaving me in the dust lately",
+        "type": "implicit",
+        "thinking": "Implied concern about relative performance decline. Comparing their VO2 max trends can assess fitness changes. 'Lately' suggests recent data - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Ever since I turned 40, my workouts feel harder",
+        "type": "behavioral",
+        "thinking": "Age-related concern about workout difficulty. VO2 max trends since birthday can show actual changes. Need exact birthday date for precise days, but defaulting to 7.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm gasping like a fish out of water during my usual cycling route",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor indicates breathing difficulties. VO2 max can show if this reflects cardio fitness changes. No timeframe, using 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Has my VO2 max dropped since I had COVID last month?",
+        "type": "explicit",
+        "thinking": "Clear question about post-illness fitness impact. Need VO2 max data since COVID recovery (approximately 30 days ago).",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My heart rate takes forever to come down after workouts now",
+        "type": "symptom",
+        "thinking": "Describes slowed recovery heart rate, potentially indicating fitness changes. VO2 max data can confirm or deny this concern. 'Now' implies recent change - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Breakdown my VO2 max by week for the past 3 weeks",
+        "type": "explicit",
+        "thinking": "Direct request for weekly segmented VO2 max data. Three weeks equals 21 days of data needed.",
+        "numdays": 21,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I used to breeze through spin class but now I'm struggling",
+        "type": "implicit",
+        "thinking": "Implied concern about performance decline over time. VO2 max trends can show if this matches objective data. No specific timeframe, using 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since getting a standing desk, my afternoon workouts feel different",
+        "type": "behavioral",
+        "thinking": "Work habit change may be affecting workouts. VO2 max since this change can reveal impacts. Need exact change date for precise days, but defaulting to 7.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My lungs feel like they're two sizes too small lately",
+        "type": "metaphorical",
+        "thinking": "Metaphor suggests perceived breathing capacity issues. VO2 max data can assess actual cardio changes. 'Lately' is vague - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How has my VO2 max trended since I started altitude training?",
+        "type": "explicit",
+        "thinking": "Direct question about training intervention effects. Need VO2 max data since altitude training began (exact days depends on start date, defaulting to 7).",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm not seeing the same calorie burn from my usual workouts",
+        "type": "implicit",
+        "thinking": "Implied concern about workout efficiency changes that may relate to VO2 max. Checking cardio fitness trends can help explain. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Ever since daylight savings ended, my evening runs feel harder",
+        "type": "behavioral",
+        "thinking": "Schedule change due to time shift may be affecting performance. VO2 max since this change can show impacts. Typically ~30 days since daylight savings ended.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My chest feels like there's a vice grip during sprints",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor suggests workout discomfort. VO2 max can show if this correlates with fitness changes. No timeframe, using 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Display my VO2 max readings from the past 5 training sessions",
+        "type": "explicit",
+        "thinking": "Clear request for recent VO2 max data by session. Assuming training every other day, this covers about 10 days.",
+        "numdays": 10,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm getting passed by people I used to keep up with at the track",
+        "type": "implicit",
+        "thinking": "Implied performance decline relative to others. VO2 max trends can show if their fitness has changed. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since cutting back on alcohol, my endurance feels different",
+        "type": "behavioral",
+        "thinking": "Lifestyle change may be affecting cardio performance. VO2 max since this change can reveal impacts. Need exact change date, but defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My breathing sounds like a broken accordion during intervals",
+        "type": "metaphorical",
+        "thinking": "Creative metaphor suggests breathing difficulties. VO2 max can show if this reflects fitness changes. No timeframe, using 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Plot my VO2 max against my sleep quality for the past fortnight",
+        "type": "explicit",
+        "thinking": "Direct request for VO2 max and sleep correlation analysis. Fortnight equals 14 days of data needed.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I need to take more walk breaks during my usual running route",
+        "type": "symptom",
+        "thinking": "Describes increased fatigue during exercise. VO2 max trends can show if this matches fitness changes. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My fitness tracker says my VO2 max is down - show me the details",
+        "type": "explicit",
+        "thinking": "Direct request for VO2 max data following an alert. Need recent data to verify the tracker's claim - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like I'm running through molasses these days",
+        "type": "metaphorical",
+        "thinking": "Viscous metaphor suggests perceived performance decline. VO2 max data can verify if this matches actual fitness changes. 'These days' is vague - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How has my VO2 max changed in the 3 weeks since my marathon?",
+        "type": "explicit",
+        "thinking": "Clear question about post-event fitness changes. Need data since marathon (21 days ago).",
+        "numdays": 21,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My usual cycling power output feels harder to maintain",
+        "type": "symptom",
+        "thinking": "Describes perceived increased effort for same output. VO2 max trends can show if fitness has changed. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since moving to the city, my outdoor runs feel more taxing",
+        "type": "behavioral",
+        "thinking": "Environmental change may be affecting workouts. VO2 max since relocation can show impacts. Need exact move date, but defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm huffing and puffing like the big bad wolf during workouts",
+        "type": "metaphorical",
+        "thinking": "Fairytale metaphor suggests breathing difficulties. VO2 max can assess if this reflects fitness changes. No timeframe, using 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Show me my VO2 max trends since I started this training program 20 days ago",
+        "type": "explicit",
+        "thinking": "Direct request for program effectiveness evaluation. Exactly 20 days as specified.",
+        "numdays": 20,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm sweating buckets during workouts that never used to faze me",
+        "type": "symptom",
+        "thinking": "Describes increased physiological stress during exercise. VO2 max trends can show if fitness has changed. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Ever since I started meditating, my running feels different",
+        "type": "behavioral",
+        "thinking": "New mindfulness practice may be affecting workouts. VO2 max since starting can reveal impacts. Need exact start date, but defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My heart feels like it's trying to escape my chest during cardio",
+        "type": "metaphorical",
+        "thinking": "Dramatic metaphor suggests perceived cardiovascular strain. VO2 max can show if this matches fitness changes. No timeframe, using 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Compare my VO2 max from this month to last month",
+        "type": "explicit",
+        "thinking": "Direct request for monthly comparison. Typically need ~30 days of data for each month.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm yawning constantly during my morning runs - is that normal?",
+        "type": "symptom",
+        "thinking": "Unusual fatigue symptom during exercise. VO2 max trends can show if fitness has changed. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since switching from coffee to tea, my workout energy feels different",
+        "type": "behavioral",
+        "thinking": "Caffeine source change may be affecting workout performance. VO2 max since this change can show impacts. Need exact change date, but defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My breathing during runs sounds like a steam engine chugging uphill",
+        "type": "metaphorical",
+        "thinking": "Industrial metaphor suggests labored breathing. VO2 max can assess if this reflects fitness changes. No timeframe, using 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Give me a VO2 max progress report for the last 15 days",
+        "type": "explicit",
+        "thinking": "Clear request for specific timeframe data. Exactly 15 days as requested.",
+        "numdays": 15,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I need more recovery time between sets than I did a few weeks ago",
+        "type": "symptom",
+        "thinking": "Describes increased recovery needs, potentially indicating fitness changes. VO2 max trends can verify. 'Few weeks' is vague - defaulting to 14 days.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My fitness feels like it's stuck in quicksand",
+        "type": "metaphorical",
+        "thinking": "Metaphor suggests perceived fitness plateau. VO2 max data can show if progress has actually stalled. No timeframe, using 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How's my cardio fitness been trending over the last two weeks?",
+        "type": "explicit",
+        "thinking": "The user is directly asking about their cardio fitness trend, specifically mentioning the last two weeks. This indicates a clear intent to analyze recent VO2 max data. Calling get_vo2max_data is appropriate to retrieve this data. The time window 'last two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been feeling really out of breath lately, is my VO2 max okay?",
+        "type": "symptom",
+        "thinking": "The user mentions feeling out of breath, suggesting a concern about their cardio respiratory fitness. This symptom prompts an analysis of recent VO2 max data to assess their fitness level. Since no time window is specified, default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I started running every morning this month, has it improved my stamina?",
+        "type": "behavioral",
+        "thinking": "The user describes a new running habit started this month, implying interest in whether this has boosted their VO2 max. The function get_vo2max_data will provide data to evaluate stamina improvements. 'This month' suggests a time frame of about 30 days, so numdays is set to 30.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My heart feels like it’s racing too fast during workouts, what’s going on?",
+        "type": "symptom",
+        "thinking": "The user reports a racing heart during exercise, indicating a potential issue with cardio fitness. Checking VO2 max data via get_vo2max_data can help assess their cardiovascular health. No specific time is mentioned, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my engine running strong these past 10 days?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'engine' as a metaphor for their cardio fitness, asking about performance over the past 10 days. This suggests interest in VO2 max trends. get_vo2max_data will provide the necessary data, with 'past 10 days' mapping to numdays of 10.",
+        "numdays": 10,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been slacking on cardio, how’s my fitness level holding up?",
+        "type": "behavioral",
+        "thinking": "The user admits to reduced cardio activity, expressing concern about their fitness level. This implies a need to check VO2 max data to evaluate current status. No time frame is given, so default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can you check my VO2 max for the past three weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests a check on their VO2 max over the past three weeks, indicating a clear intent to analyze this period. get_vo2max_data is needed to retrieve the data. 'Past three weeks' translates to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like my lungs are giving out too soon, is my cardio fitness dropping?",
+        "type": "symptom",
+        "thinking": "The user describes a sensation of lung fatigue, hinting at declining cardio fitness. This symptom warrants checking VO2 max data using get_vo2max_data to assess trends. No time window is provided, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been pushing hard in spin class since last Monday, any gains in my VO2 max?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased effort in spin class since last Monday, suggesting interest in VO2 max improvements. get_vo2max_data will provide relevant data. Assuming today is Tuesday, August 5, 2025, 'since last Monday' (July 28) is 8 days, so numdays is 8.",
+        "numdays": 8,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my cardio health on the right track this week?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks about their cardio health status for this week, implying a need to review VO2 max trends. get_vo2max_data is appropriate to fetch this data. 'This week' maps to 7 days for numdays, assuming a week-long period.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My runs feel like climbing a mountain lately, what’s my VO2 max like?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'climbing a mountain' to describe tough runs, suggesting concern about cardio fitness. This prompts a VO2 max analysis via get_vo2max_data. No time frame is specified, so default to 7 days for a recent evaluation.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How’s my aerobic capacity been since I started training for the marathon?",
+        "type": "explicit",
+        "thinking": "The user directly asks about aerobic capacity (VO2 max) since starting marathon training, indicating a need for historical data. get_vo2max_data will provide this. Without a specific start date, assume a typical training period of 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been cycling a lot more this past month, is it paying off?",
+        "type": "behavioral",
+        "thinking": "The user notes increased cycling over the past month, questioning its impact on fitness. This suggests a VO2 max check using get_vo2max_data. 'Past month' corresponds to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why am I so winded after short runs these days?",
+        "type": "symptom",
+        "thinking": "The user reports being winded after short runs, indicating a potential cardio fitness issue. get_vo2max_data is needed to analyze recent VO2 max trends. No time frame is given, so default to 7 days for a current snapshot.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my heart in good shape over the last 12 days?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks about heart health over the last 12 days, implying a concern about cardio fitness. get_vo2max_data will provide relevant VO2 max data. The time window 'last 12 days' maps directly to numdays of 12.",
+        "numdays": 12,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My stamina feels like a fading battery, what’s my VO2 max trend?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'fading battery' to describe declining stamina, hinting at VO2 max concerns. get_vo2max_data is needed to check trends. No time frame is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can you look at my VO2 max since Sunday?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests VO2 max data since Sunday. Assuming today is Tuesday, August 5, 2025, 'since Sunday' (August 3) is 2 days, but as numdays must be 5–30, set to minimum 5 days. get_vo2max_data will fetch the data.",
+        "numdays": 5,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been hitting the gym hard for two weeks, how’s my cardio doing?",
+        "type": "behavioral",
+        "thinking": "The user mentions intense gym workouts for two weeks, asking about cardio performance. This prompts a VO2 max check via get_vo2max_data. 'Two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like I’m gasping for air after stairs, is my fitness level okay?",
+        "type": "symptom",
+        "thinking": "The user describes gasping for air after climbing stairs, suggesting a cardio fitness concern. get_vo2max_data will help assess their VO2 max. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my cardio system keeping up with my new hiking routine?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their cardio fitness supports their new hiking routine, implying a need for VO2 max data. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My endurance feels like a weak flame, how’s my VO2 max holding up?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'weak flame' to describe low endurance, indicating a VO2 max concern. get_vo2max_data will provide trend data. No time frame is mentioned, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "What’s my VO2 max been like over the last 20 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for VO2 max data over the last 20 days, showing clear intent for analysis. get_vo2max_data is needed to retrieve this data. 'Last 20 days' maps directly to numdays of 20.",
+        "numdays": 20,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been swimming a lot since last weekend, any cardio improvements?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased swimming since last weekend, asking about cardio gains. get_vo2max_data will provide VO2 max data. Assuming today is Tuesday, August 5, 2025, 'since last weekend' (July 26–27) is about 9–10 days, so set numdays to 10.",
+        "numdays": 10,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why do I feel so tired after light exercise these days?",
+        "type": "symptom",
+        "thinking": "The user reports fatigue after light exercise, suggesting a possible decline in cardio fitness. get_vo2max_data is needed to check VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my fitness level up to par since I started my new workout plan?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their fitness level has improved since starting a new workout plan, implying VO2 max analysis. get_vo2max_data is appropriate. No specific time frame is given, so default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My cardio feels like a rusty bike chain, what’s the data say?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'rusty bike chain' to describe poor cardio performance, indicating concern about VO2 max. get_vo2max_data will provide relevant data. No time frame is specified, so default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can you show me my VO2 max for the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests VO2 max data for the last 15 days, clearly intending to analyze this period. get_vo2max_data is needed. 'Last 15 days' maps directly to numdays of 15.",
+        "numdays": 15,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been doing HIIT workouts for three weeks, any progress?",
+        "type": "behavioral",
+        "thinking": "The user mentions three weeks of HIIT workouts, asking about progress in fitness. This prompts a VO2 max check via get_vo2max_data. 'Three weeks' maps to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’m struggling to keep up in soccer games, is my cardio off?",
+        "type": "symptom",
+        "thinking": "The user reports difficulty keeping up in soccer, suggesting a cardio fitness issue. get_vo2max_data will help assess VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my aerobic fitness solid for the past month?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks about aerobic fitness over the past month, implying a need for VO2 max data. get_vo2max_data is appropriate. 'Past month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My runs feel like wading through mud, how’s my VO2 max?",
+        "type": "metaphorical",
+        "thinking": "The user describes runs as 'wading through mud,' indicating poor cardio performance. get_vo2max_data is needed to check VO2 max trends. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "What’s my cardio fitness been like since I got back from vacation?",
+        "type": "explicit",
+        "thinking": "The user directly asks about cardio fitness since returning from vacation, suggesting a VO2 max analysis. get_vo2max_data will provide the data. Without a specific date, assume a reasonable period of 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been walking more this week, has it helped my stamina?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased walking this week, asking about stamina improvements. get_vo2max_data will provide VO2 max data. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I get dizzy after quick sprints, is something wrong with my fitness?",
+        "type": "symptom",
+        "thinking": "The user reports dizziness after sprints, indicating a potential cardio issue. get_vo2max_data is needed to assess VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my cardio keeping pace with my new yoga routine?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their cardio fitness supports their new yoga routine, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My energy feels like a sputtering car, what’s my VO2 max trend?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'sputtering car' to describe low energy, suggesting concern about VO2 max. get_vo2max_data will provide trend data. No time frame is mentioned, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How’s my VO2 max been since I started crossfit last month?",
+        "type": "explicit",
+        "thinking": "The user directly asks about VO2 max since starting crossfit last month, indicating a clear need for data analysis. get_vo2max_data is needed. 'Last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been training for a 5K over the last 10 days, any cardio gains?",
+        "type": "behavioral",
+        "thinking": "The user mentions training for a 5K over the last 10 days, asking about cardio improvements. get_vo2max_data will provide VO2 max data. 'Last 10 days' maps directly to numdays of 10.",
+        "numdays": 10,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why do my legs feel so heavy during runs lately?",
+        "type": "symptom",
+        "thinking": "The user reports heavy legs during runs, suggesting a possible cardio fitness issue. get_vo2max_data is needed to check VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my heart ready for the hiking trip next week?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their cardio fitness is sufficient for an upcoming hiking trip, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My cardio feels like a dimming light, what’s the data show?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'dimming light' to describe declining cardio performance, indicating a VO2 max concern. get_vo2max_data will provide trend data. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can you check my VO2 max for the past two weekends?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests VO2 max data for the past two weekends. Assuming weekends are Saturday–Sunday, this covers July 26–27 and August 2–3, 2025, totaling 4 days. As numdays must be 5–30, set to 5 days. get_vo2max_data will fetch the data.",
+        "numdays": 5,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been doing more cardio since last Friday, is it helping?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased cardio since last Friday, asking about its impact. Assuming today is Tuesday, August 5, 2025, 'since last Friday' (July 31) is 5 days. get_vo2max_data will provide VO2 max data, with numdays set to 5.",
+        "numdays": 5,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like I’m running out of steam too fast, what’s my cardio like?",
+        "type": "symptom",
+        "thinking": "The user reports running out of steam quickly, suggesting a cardio fitness concern. get_vo2max_data is needed to assess VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my aerobic system strong enough for my new dance classes?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their aerobic fitness supports new dance classes, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My fitness feels like a stalled engine, how’s my VO2 max?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'stalled engine' to describe poor fitness, indicating a VO2 max concern. get_vo2max_data will provide trend data. No time frame is mentioned, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "What’s my VO2 max trend for the last 25 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests a VO2 max trend for the last 25 days, showing clear intent for analysis. get_vo2max_data is needed. 'Last 25 days' maps directly to numdays of 25.",
+        "numdays": 25,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been jogging every evening for two weeks, any fitness boost?",
+        "type": "behavioral",
+        "thinking": "The user mentions jogging every evening for two weeks, asking about fitness improvements. get_vo2max_data will provide VO2 max data. 'Two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why am I so out of breath after playing with my kids?",
+        "type": "symptom",
+        "thinking": "The user reports being out of breath after playing with their kids, suggesting a cardio issue. get_vo2max_data is needed to check VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my cardio fitness up to speed for my new running group?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their cardio fitness is sufficient for a new running group, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can you show me how my VO2 max has changed over the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user is directly requesting an analysis of their VO2 max trends over the last 14 days. To fulfill this request, we need to retrieve VO2 max data using get_vo2max_data. The specified time window of 'past two weeks' maps to numdays = 14.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like I’m getting out of breath quicker than usual during my runs.",
+        "type": "symptom",
+        "thinking": "The user is expressing a physical symptom of decreased cardio fitness, which may be reflected in their VO2 max. We should call get_vo2max_data to assess recent changes. Since no time frame was specified, we'll default to the past 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been training harder this month—has my VO2 max improved?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavior change (increased training) and wants to evaluate its impact on their VO2 max. We should call get_vo2max_data to assess data over the past 30 days. 'This month' maps to numdays = 30.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My endurance feels way off lately. Can you check if my VO2 max dropped?",
+        "type": "symptom",
+        "thinking": "The user suspects a decline in endurance, potentially linked to VO2 max. We’ll use get_vo2max_data to verify any recent drops. As no specific time frame is mentioned, defaulting to 7 days makes sense.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How has my VO2 max looked since last Friday?",
+        "type": "explicit",
+        "thinking": "The user is asking for VO2 max data starting from 'last Friday.' Assuming today is Tuesday, that maps to a 4-day window. We’ll use get_vo2max_data for the last 4 days.",
+        "numdays": 4,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can we compare my VO2 max between this week and the last?",
+        "type": "explicit",
+        "thinking": "The user wants a comparative VO2 max analysis over the current and previous week. We'll retrieve data from the past 14 days using get_vo2max_data to cover both weeks.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Something tells me I’m not as fit as I was during winter.",
+        "type": "metaphorical",
+        "thinking": "The user is metaphorically expressing concerns about reduced fitness, possibly related to VO2 max. We'll use get_vo2max_data to check recent fitness levels. No time frame is given, so we'll default to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been running more regularly since the start of this month—has it helped my VO2 max?",
+        "type": "behavioral",
+        "thinking": "The user links consistent running behavior to expected VO2 max improvement. 'Since the start of this month' implies around 25 days (assuming it's the 25th). We'll call get_vo2max_data for 25 days.",
+        "numdays": 25,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Lately I’ve felt sluggish, even during short workouts.",
+        "type": "symptom",
+        "thinking": "The user is reporting feeling sluggish during workouts, which might indicate a decline in aerobic capacity. We’ll call get_vo2max_data to examine recent changes. No timeframe is specified, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can you check if my VO2 max improved over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user wants to assess improvement in VO2 max over a specific 10-day window. We'll retrieve the relevant data using get_vo2max_data with numdays = 10.",
+        "numdays": 10,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Ever since I switched to cycling, I feel more winded.",
+        "type": "behavioral",
+        "thinking": "The user implies a behavioral change (switching to cycling) may have affected their cardio capacity. We'll use get_vo2max_data to review data. No time reference was mentioned, so we'll default to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How did my VO2 max hold up during the last three weekends?",
+        "type": "explicit",
+        "thinking": "The user is asking for VO2 max data across three weekends, typically covering ~15 days. We'll use get_vo2max_data with numdays = 15 to capture that period.",
+        "numdays": 15,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can you show how my cardio fitness changed since I started interval training two weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user began interval training 14 days ago and wants to see if it impacted VO2 max. We'll retrieve data from the last 14 days using get_vo2max_data.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why does it feel like I’m hitting a wall sooner when I jog?",
+        "type": "symptom",
+        "thinking": "The user describes a potential cardio limitation, suggesting a drop in VO2 max. We’ll retrieve recent data using get_vo2max_data. No explicit time given, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "It’s like my lungs aren’t keeping up anymore.",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically expresses concern about reduced aerobic capacity, which may be seen in VO2 max. We'll call get_vo2max_data for the last 7 days as no specific time was mentioned.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can I see my VO2 max trend from the past week?",
+        "type": "explicit",
+        "thinking": "The user directly requests VO2 max data from 'the past week,' which maps to 7 days. We'll use get_vo2max_data with numdays = 7.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I've been feeling more energized—has my VO2 max gone up lately?",
+        "type": "symptom",
+        "thinking": "The user perceives improved energy and suspects an increase in VO2 max. We'll confirm this by calling get_vo2max_data for the last 7 days, since no time frame is mentioned.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since Sunday, I’ve been really consistent with my cardio. Is it paying off?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavior change beginning 'since Sunday'. Assuming today is Friday, that’s 5 days. We'll call get_vo2max_data with numdays = 5.",
+        "numdays": 5,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Compare my VO2 max this week to last month’s average.",
+        "type": "explicit",
+        "thinking": "The user wants a comparison involving current and past data. To cover this week and last month, we’ll retrieve data for 30 days using get_vo2max_data.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I think my stamina’s finally catching up to my training.",
+        "type": "implicit",
+        "thinking": "The user implies improved aerobic fitness, possibly reflected in VO2 max. We'll verify this by retrieving recent data. No time is specified, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why am I gasping after climbing stairs lately?",
+        "type": "symptom",
+        "thinking": "The user shows signs of reduced cardio capacity. VO2 max data could provide insight. As no time is mentioned, we'll call get_vo2max_data for the past 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Ever since I got sick two weeks ago, I feel weaker during workouts.",
+        "type": "behavioral",
+        "thinking": "The user notes a drop in performance since falling ill two weeks ago. We'll use get_vo2max_data to review data over the past 14 days.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I wonder if my new pre-workout routine is affecting my performance.",
+        "type": "implicit",
+        "thinking": "The user is hinting at possible changes in cardio efficiency. To explore this, we’ll call get_vo2max_data. No time specified, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is there a noticeable VO2 max trend from the past 20 days?",
+        "type": "explicit",
+        "thinking": "The user is seeking a trend analysis over 20 days. We’ll retrieve this data using get_vo2max_data with numdays = 20.",
+        "numdays": 20,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like my engine's running low lately.",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically describes decreased stamina. This could relate to VO2 max decline. We'll call get_vo2max_data for the last 7 days due to no specified timeframe.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How's my VO2 max been since I joined the gym three weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user wants to track VO2 max since starting gym workouts three weeks ago. We'll retrieve data for the past 21 days using get_vo2max_data.",
+        "numdays": 21,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Could you check if my cardio fitness dipped last week?",
+        "type": "explicit",
+        "thinking": "The user is asking about a potential dip in cardio fitness during 'last week', which maps to 7 days. We'll use get_vo2max_data with numdays = 7.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I don’t feel as strong during cardio anymore.",
+        "type": "symptom",
+        "thinking": "The user is expressing concern about reduced performance during cardio, potentially related to VO2 max. We’ll call get_vo2max_data to investigate. Defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Ever since I cut back on caffeine, my endurance feels better.",
+        "type": "behavioral",
+        "thinking": "The user believes reduced caffeine improved their endurance, which may reflect in VO2 max. We'll check the past 10 days using get_vo2max_data.",
+        "numdays": 10,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My coach said my breathing control has improved—can we confirm that with data?",
+        "type": "implicit",
+        "thinking": "The user refers to improved breathing, implying better aerobic capacity. We’ll verify any VO2 max improvements using get_vo2max_data. No timeframe is specified, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Has my VO2 max changed at all in the last 6 days?",
+        "type": "explicit",
+        "thinking": "The user is requesting a direct check on VO2 max over the last 6 days. We will use get_vo2max_data with numdays = 6 to fulfill this query.",
+        "numdays": 6,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’m pushing myself more lately but don’t feel much improvement.",
+        "type": "symptom",
+        "thinking": "The user is experiencing a disconnect between effort and perceived gains, possibly related to VO2 max. We'll retrieve data for the past 7 days using get_vo2max_data as no timeframe was given.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How does my VO2 max this week compare to the week before last?",
+        "type": "explicit",
+        "thinking": "The user wants to compare two specific weeks, which requires at least 14 days of data. We'll retrieve data for the past 14 days using get_vo2max_data.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "These past 9 days, I’ve been jogging every morning—can you see if it's helped?",
+        "type": "behavioral",
+        "thinking": "The user adopted a consistent jogging habit and wants to assess its effect on VO2 max. We'll call get_vo2max_data with numdays = 9.",
+        "numdays": 9,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been feeling more out of shape than usual.",
+        "type": "symptom",
+        "thinking": "The user suspects declining fitness, potentially reflected in VO2 max data. We'll retrieve the last 7 days using get_vo2max_data since no time was specified.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Lately it feels like my cardio engine is stalling.",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically expresses concern about reduced aerobic performance. We'll use get_vo2max_data to analyze the last 7 days, as no specific timeframe was provided.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "What does my VO2 max data say about the last 12 days?",
+        "type": "explicit",
+        "thinking": "The user wants a VO2 max analysis for a 12-day span. We'll call get_vo2max_data with numdays = 12 to address this.",
+        "numdays": 12,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been sleeping better this past week—has that helped my VO2 max?",
+        "type": "behavioral",
+        "thinking": "The user is correlating better sleep with potential aerobic gains. We'll use get_vo2max_data to check the past 7 days of data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like my fitness peaked earlier this month. Can we confirm that?",
+        "type": "implicit",
+        "thinking": "The user suspects a VO2 max peak occurred earlier this month and wants confirmation. We'll retrieve 25 days of data using get_vo2max_data to cover that range.",
+        "numdays": 25,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I've cut back on intense workouts—did it hurt my VO2 max?",
+        "type": "behavioral",
+        "thinking": "The user reduced training intensity and is concerned about the impact on VO2 max. We'll review the last 14 days using get_vo2max_data.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "It feels like my heart and lungs aren’t syncing right anymore.",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language to express concern about cardiovascular fitness. We'll analyze the past 7 days using get_vo2max_data as no timeframe was stated.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I want to review my VO2 max trend for the last 18 days.",
+        "type": "explicit",
+        "thinking": "The user directly asks for VO2 max data over an 18-day window. We'll call get_vo2max_data with numdays = 18.",
+        "numdays": 18,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can you show how my VO2 max has shifted this week?",
+        "type": "explicit",
+        "thinking": "The user wants to analyze VO2 max during 'this week', which we interpret as the last 7 days. We'll call get_vo2max_data with numdays = 7.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been more consistent with my workouts since last Tuesday.",
+        "type": "behavioral",
+        "thinking": "The user is noting a behavior change since last Tuesday. Assuming today is Wednesday, that maps to 8 days. We'll call get_vo2max_data with numdays = 8.",
+        "numdays": 8,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How’s my VO2 max been trending for the past 30 days?",
+        "type": "explicit",
+        "thinking": "The user wants a full month’s trend analysis of their VO2 max. We'll retrieve 30 days of data using get_vo2max_data.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been climbing stairs more often—has it improved anything?",
+        "type": "behavioral",
+        "thinking": "The user adopted a new physical activity (stair climbing) and wants to assess cardio fitness impact. We'll use get_vo2max_data for the past 7 days as no timeframe was stated.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is there any sign my endurance dropped over the past 8 days?",
+        "type": "explicit",
+        "thinking": "The user is checking for a decline in endurance, related to VO2 max, across 8 days. We'll call get_vo2max_data with numdays = 8.",
+        "numdays": 8,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Feels like my gas tank is running empty sooner.",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically indicates reduced aerobic stamina. To investigate this, we'll call get_vo2max_data for the last 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I want to see if last week’s altitude training helped.",
+        "type": "behavioral",
+        "thinking": "The user participated in altitude training last week and wants to evaluate its effect. We'll use get_vo2max_data to retrieve data from the past 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My heart's racing too fast after short workouts these days.",
+        "type": "symptom",
+        "thinking": "The user describes elevated heart rate and poor recovery, possibly linked to VO2 max. We'll call get_vo2max_data for the past 7 days due to no specific time reference.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How’s my VO2 max looking over the past month?",
+        "type": "explicit",
+        "thinking": "The user directly asks about their VO2 max for the past month, indicating a clear intent to review cardio fitness trends. get_vo2max_data is needed to retrieve this data. 'Past month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’m always out of breath after climbing hills, is my cardio okay?",
+        "type": "symptom",
+        "thinking": "The user reports breathlessness after climbing hills, suggesting a concern about cardio fitness. get_vo2max_data will help assess recent VO2 max trends. No time frame is specified, so default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I started kickboxing classes two weeks ago, has my fitness improved?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting kickboxing two weeks ago, asking about fitness improvements. This implies a need to check VO2 max via get_vo2max_data. 'Two weeks ago' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my heart keeping up with my new morning jogs?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their cardio fitness supports their new jogging routine, implying a VO2 max analysis. get_vo2max_data is appropriate. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My stamina feels like a flickering candle, what’s my VO2 max like?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'flickering candle' to describe low stamina, indicating concern about VO2 max. get_vo2max_data will provide trend data. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can you check my cardio fitness for the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests cardio fitness data for the last 10 days, showing clear intent for VO2 max analysis. get_vo2max_data is needed. 'Last 10 days' maps directly to numdays of 10.",
+        "numdays": 10,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been hiking every weekend for three weeks, any cardio gains?",
+        "type": "behavioral",
+        "thinking": "The user mentions hiking every weekend for three weeks, asking about cardio improvements. get_vo2max_data will provide VO2 max data. Three weekends (6 days) is below the 5-day minimum, so set numdays to 5 to include recent data.",
+        "numdays": 5,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why do I feel so drained after short bike rides?",
+        "type": "symptom",
+        "thinking": "The user reports feeling drained after short bike rides, suggesting a cardio fitness issue. get_vo2max_data is needed to assess VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my aerobic fitness strong enough for my new spin classes?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their aerobic fitness supports new spin classes, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My runs feel like slogging through quicksand, how’s my cardio?",
+        "type": "metaphorical",
+        "thinking": "The user describes runs as 'slogging through quicksand,' indicating poor cardio performance. get_vo2max_data will provide VO2 max trends. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "What’s my VO2 max been like since last Tuesday?",
+        "type": "explicit",
+        "thinking": "The user directly asks for VO2 max data since last Tuesday. Assuming today is Tuesday, August 5, 2025, 'since last Tuesday' (July 29) is 7 days. get_vo2max_data will fetch the data, with numdays set to 7.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been doing yoga daily for the past 20 days, has it helped my cardio?",
+        "type": "behavioral",
+        "thinking": "The user mentions daily yoga for 20 days, asking about cardio benefits. get_vo2max_data will provide VO2 max data. 'Past 20 days' maps directly to numdays of 20.",
+        "numdays": 20,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I get winded so fast during Zumba, is my fitness level dropping?",
+        "type": "symptom",
+        "thinking": "The user reports getting winded quickly during Zumba, suggesting a decline in cardio fitness. get_vo2max_data is needed to check VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my cardio health on track for the past two weeks?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks about cardio health over the past two weeks, implying a need for VO2 max data. get_vo2max_data is appropriate. 'Past two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My endurance is like a leaky balloon, what’s my VO2 max trend?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'leaky balloon' to describe fading endurance, indicating a VO2 max concern. get_vo2max_data will provide trend data. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How’s my VO2 max been since I started swimming last month?",
+        "type": "explicit",
+        "thinking": "The user directly asks about VO2 max since starting swimming last month, indicating a need for data analysis. get_vo2max_data is needed. 'Last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been rowing three times a week for 15 days, any progress?",
+        "type": "behavioral",
+        "thinking": "The user mentions rowing three times a week for 15 days, asking about progress. get_vo2max_data will provide VO2 max data. '15 days' maps directly to numdays of 15.",
+        "numdays": 15,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why am I so tired after playing tennis lately?",
+        "type": "symptom",
+        "thinking": "The user reports fatigue after tennis, suggesting a cardio fitness issue. get_vo2max_data is needed to assess VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my heart ready for the charity run next weekend?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their cardio fitness is sufficient for an upcoming charity run, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My cardio feels like a worn-out motor, what’s the data say?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'worn-out motor' to describe poor cardio performance, indicating a VO2 max concern. get_vo2max_data will provide trend data. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can you look at my VO2 max for the last three weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests VO2 max data for the last three weeks, showing clear intent for analysis. get_vo2max_data is needed. 'Last three weeks' maps to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been taking dance lessons since last Monday, any cardio boost?",
+        "type": "behavioral",
+        "thinking": "The user mentions dance lessons since last Monday, asking about cardio improvements. Assuming today is Tuesday, August 5, 2025, 'since last Monday' (July 28) is 8 days. get_vo2max_data will provide data, with numdays set to 8.",
+        "numdays": 8,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like my chest is tight after short workouts, is my fitness okay?",
+        "type": "symptom",
+        "thinking": "The user reports chest tightness after short workouts, suggesting a cardio fitness concern. get_vo2max_data is needed to assess VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my aerobic system up to speed for my new cycling group?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their aerobic fitness supports their new cycling group, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My runs feel like pushing a boulder uphill, how’s my VO2 max?",
+        "type": "metaphorical",
+        "thinking": "The user describes runs as 'pushing a boulder uphill,' indicating poor cardio performance. get_vo2max_data will provide VO2 max trends. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "What’s my cardio fitness been like over the last 12 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks about cardio fitness for the last 12 days, indicating a clear need for VO2 max data. get_vo2max_data is needed. 'Last 12 days' maps directly to numdays of 12.",
+        "numdays": 12,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been training for a triathlon since last month, any improvements?",
+        "type": "behavioral",
+        "thinking": "The user mentions triathlon training since last month, asking about improvements. get_vo2max_data will provide VO2 max data. 'Last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why do I feel so sluggish during my morning runs?",
+        "type": "symptom",
+        "thinking": "The user reports feeling sluggish during runs, suggesting a cardio fitness issue. get_vo2max_data is needed to assess VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my cardio strong enough for my new martial arts classes?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their cardio fitness supports new martial arts classes, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My stamina’s like a dying campfire, what’s my VO2 max trend?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'dying campfire' to describe low stamina, indicating a VO2 max concern. get_vo2max_data will provide trend data. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How’s my VO2 max been since I started my new gym routine?",
+        "type": "explicit",
+        "thinking": "The user directly asks about VO2 max since starting a new gym routine, suggesting a need for data analysis. get_vo2max_data is needed. No specific start date is given, so assume a typical period of 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been doing more cardio this month, has it made a difference?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased cardio this month, asking about its impact. get_vo2max_data will provide VO2 max data. 'This month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’m panting too much during soccer practice, is my cardio off?",
+        "type": "symptom",
+        "thinking": "The user reports excessive panting during soccer, suggesting a cardio fitness issue. get_vo2max_data is needed to assess VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my fitness level ready for the hiking trip this weekend?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their fitness is sufficient for an upcoming hiking trip, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My cardio feels like a rusty old machine, what’s the data show?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'rusty old machine' to describe poor cardio performance, indicating a VO2 max concern. get_vo2max_data will provide trend data. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Can you check my VO2 max since last weekend?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests VO2 max data since last weekend. Assuming today is Tuesday, August 5, 2025, 'last weekend' (August 2–3) is 2–3 days, but as numdays must be 5–30, set to 5 days. get_vo2max_data will fetch the data.",
+        "numdays": 5,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been jogging daily for 10 days, any cardio improvements?",
+        "type": "behavioral",
+        "thinking": "The user mentions daily jogging for 10 days, asking about cardio gains. get_vo2max_data will provide VO2 max data. '10 days' maps directly to numdays of 10.",
+        "numdays": 10,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why do I feel so weak after short swims?",
+        "type": "symptom",
+        "thinking": "The user reports feeling weak after short swims, suggesting a cardio fitness issue. get_vo2max_data is needed to assess VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my cardio system up for my new running club?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their cardio fitness supports a new running club, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My endurance feels like a fading spark, how’s my VO2 max?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'fading spark' to describe low endurance, indicating a VO2 max concern. get_vo2max_data will provide trend data. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "What’s my VO2 max trend for the last 25 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests a VO2 max trend for the last 25 days, showing clear intent for analysis. get_vo2max_data is needed. 'Last 25 days' maps directly to numdays of 25.",
+        "numdays": 25,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been cycling every morning for two weeks, any fitness gains?",
+        "type": "behavioral",
+        "thinking": "The user mentions cycling every morning for two weeks, asking about fitness improvements. get_vo2max_data will provide VO2 max data. 'Two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel exhausted after light walks, is my cardio okay?",
+        "type": "symptom",
+        "thinking": "The user reports exhaustion after light walks, suggesting a cardio fitness concern. get_vo2max_data is needed to assess VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my aerobic fitness ready for my new dance team?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their aerobic fitness is sufficient for a new dance team, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My cardio’s like a sputtering engine, what’s my VO2 max like?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'sputtering engine' to describe poor cardio performance, indicating a VO2 max concern. get_vo2max_data will provide trend data. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How’s my VO2 max been over the last 18 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for VO2 max data over the last 18 days, indicating a clear need for analysis. get_vo2max_data is needed. 'Last 18 days' maps directly to numdays of 18.",
+        "numdays": 18,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I’ve been training for a 10K since last month, any cardio progress?",
+        "type": "behavioral",
+        "thinking": "The user mentions training for a 10K since last month, asking about cardio progress. get_vo2max_data will provide VO2 max data. 'Last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why am I so out of breath after quick jogs?",
+        "type": "symptom",
+        "thinking": "The user reports being out of breath after quick jogs, suggesting a cardio fitness issue. get_vo2max_data is needed to assess VO2 max trends. No time frame is given, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Is my cardio up to par for my new soccer team?",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their cardio fitness is sufficient for a new soccer team, implying a VO2 max check. get_vo2max_data is appropriate. No time frame is specified, so default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My fitness feels like a wilting flower, what’s my VO2 max trend?",
+        "type": "metaphorical",
+        "thinking": "The user uses 'wilting flower' to describe declining fitness, indicating a VO2 max concern. get_vo2max_data will provide trend data. No time frame is specified, so default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Why do I feel like I'm running in slow motion during my lunchtime workouts?",
+        "type": "metaphorical",
+        "thinking": "The user is using metaphorical language to describe perceived performance decline. Checking VO2 max trends can determine if this matches objective fitness data. No specific timeframe mentioned, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Show me my VO2 max trends since I started taking the stairs at work",
+        "type": "behavioral",
+        "thinking": "User wants to see impact of a specific behavioral change (taking stairs) on cardio fitness. Need VO2 max data since this habit began. No exact start date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I've been waking up with my heart racing before morning runs this month",
+        "type": "symptom",
+        "thinking": "Describes physical symptoms potentially related to cardio fitness. VO2 max analysis can help assess fitness levels. 'This month' suggests about 30 days of data.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Compare my VO2 max from morning vs evening workouts last week",
+        "type": "explicit",
+        "thinking": "Clear request for time-of-day comparison of fitness metrics. 'Last week' translates to 7 days of segmented data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My recovery heart rate hasn't been improving despite consistent training",
+        "type": "implicit",
+        "thinking": "Implies concern about training effectiveness. VO2 max data can show if cardio fitness is progressing. No timeframe specified, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like a car running on empty by mile 3 of my runs now",
+        "type": "metaphorical",
+        "thinking": "Vehicle metaphor suggests endurance issues. VO2 max can verify if fitness has changed. 'Now' implies recent change, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "How has my VO2 max changed since I began cold showers after workouts?",
+        "type": "behavioral",
+        "thinking": "Asks about impact of recovery routine change on fitness. Need VO2 max data since this practice began. No exact start date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm getting lightheaded during HIIT sessions the past few days",
+        "type": "symptom",
+        "thinking": "Reports concerning physical symptoms during exercise. VO2 max can help assess cardio fitness levels. 'Past few days' suggests about 5 days of data.",
+        "numdays": 5,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Display my VO2 max progression since New Year's resolutions started",
+        "type": "explicit",
+        "thinking": "Direct request for fitness progress tracking. Assuming resolutions began ~30 days ago if current date is February.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My running pace feels stuck in quicksand lately",
+        "type": "metaphorical",
+        "thinking": "Metaphor suggests perceived performance plateau. VO2 max data can confirm if progress has stalled. 'Lately' is vague, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since increasing my protein intake, my endurance feels different",
+        "type": "behavioral",
+        "thinking": "Diet change may be affecting workout performance. VO2 max trends since this change can show impacts. No exact date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I need to see my cardio fitness numbers for insurance purposes",
+        "type": "explicit",
+        "thinking": "Direct request for VO2 max documentation. No timeframe specified, so providing standard 7-day snapshot.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My breathing sounds like a freight train during tempo runs now",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor suggests increased respiratory effort. VO2 max can assess if fitness has changed. 'Now' implies recent change, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Has my VO2 max improved since I stopped eating late at night?",
+        "type": "behavioral",
+        "thinking": "Asks about dietary change impact on fitness. Need VO2 max data since this habit changed. No exact date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm getting passed by walkers during my runs - what's wrong?",
+        "type": "implicit",
+        "thinking": "Implies significant performance decline. VO2 max trends can help diagnose fitness changes. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Plot my VO2 max against my stress levels for the past 10 work days",
+        "type": "explicit",
+        "thinking": "Clear request for correlation analysis with specific timeframe. Exactly 10 days as requested.",
+        "numdays": 10,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My legs feel like concrete pillars during long runs now",
+        "type": "metaphorical",
+        "thinking": "Metaphor suggests perceived endurance issues. VO2 max can verify if fitness has changed. 'Now' implies recent change, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since switching to minimalist shoes, my cardio feels different",
+        "type": "behavioral",
+        "thinking": "Equipment change may be affecting workouts. VO2 max trends since this switch can show impacts. No exact date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm yawning constantly during my warmups this week",
+        "type": "symptom",
+        "thinking": "Unusual fatigue symptom potentially related to cardio fitness. VO2 max can help assess. 'This week' suggests 7 days of data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Show me my VO2 max trends since daylight savings time began",
+        "type": "explicit",
+        "thinking": "Direct request for seasonal schedule change impact. Typically ~30 days since DST change.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My heart pounds like a drum solo during easy runs now",
+        "type": "metaphorical",
+        "thinking": "Musical metaphor suggests cardiovascular strain. VO2 max can assess fitness changes. 'Now' implies recent change, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since starting meditation, my workout recovery feels different",
+        "type": "behavioral",
+        "thinking": "Mental practice may be affecting physical recovery. VO2 max trends since starting can show impacts. No exact date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm sweating twice as much during workouts as I did last month",
+        "type": "symptom",
+        "thinking": "Describes physiological changes potentially related to fitness. VO2 max comparison can help explain. 'Last month' suggests ~30 day comparison.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Breakdown my VO2 max by workout type for the past 15 sessions",
+        "type": "explicit",
+        "thinking": "Clear request for segmented fitness data. Assuming 3-4 sessions/week, this covers about 20 days.",
+        "numdays": 20,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like I'm breathing through a coffee stirrer during sprints",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor suggests respiratory restriction. VO2 max can assess if fitness has changed. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Has my VO2 max changed since I started taking magnesium supplements?",
+        "type": "behavioral",
+        "thinking": "Asks about supplement impact on fitness. Need VO2 max data since starting regimen. No exact date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My smartwatch says my cardio fitness is declining - show me the data",
+        "type": "explicit",
+        "thinking": "Direct request to verify device alert. Need recent VO2 max data to confirm - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm gasping like I just ran a marathon during warmup laps",
+        "type": "metaphorical",
+        "thinking": "Exaggerated comparison suggests breathing difficulties. VO2 max can assess fitness levels. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since cutting caffeine, my workout energy feels different",
+        "type": "behavioral",
+        "thinking": "Dietary change may be affecting performance. VO2 max trends since this change can show impacts. No exact date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My resting heart rate has been higher than normal this week",
+        "type": "symptom",
+        "thinking": "Reports physiological changes potentially related to fitness. VO2 max can help assess. 'This week' suggests 7 days of data.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Compare my VO2 max from before and after my vacation last month",
+        "type": "explicit",
+        "thinking": "Clear request for pre/post-break comparison. Need data from before vacation and since return (~30 day window).",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like an old car that's lost its horsepower during workouts",
+        "type": "metaphorical",
+        "thinking": "Vehicle metaphor suggests perceived performance decline. VO2 max can verify if fitness has changed. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since switching to night shifts, my morning runs feel impossible",
+        "type": "behavioral",
+        "thinking": "Schedule change may be affecting workouts. VO2 max trends since shift change can show impacts. No exact date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm getting stitch pains much sooner into my runs now",
+        "type": "symptom",
+        "thinking": "Describes physical symptom changes during exercise. VO2 max can help assess fitness levels. 'Now' implies recent change, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Show me my VO2 max trends since I hit my 10,000 step goal daily",
+        "type": "explicit",
+        "thinking": "Direct request for activity goal impact analysis. Need data since this habit became consistent (~30 days for habit formation).",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My lungs feel like they're two sizes too small during intervals",
+        "type": "metaphorical",
+        "thinking": "Metaphor suggests breathing capacity concerns. VO2 max can assess fitness changes. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since starting yoga, my running endurance feels different",
+        "type": "behavioral",
+        "thinking": "New exercise modality may be affecting cardio. VO2 max trends since starting can show impacts. No exact date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm seeing stars after climbing just one flight of stairs lately",
+        "type": "symptom",
+        "thinking": "Describes concerning physical symptoms. VO2 max can help assess cardio fitness. 'Lately' is vague, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Graph my VO2 max against my sleep hours for the past 2 weeks",
+        "type": "explicit",
+        "thinking": "Clear request for correlation analysis with specific timeframe. Exactly 14 days as requested.",
+        "numdays": 14,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My breathing sounds like a broken accordion during cool-downs",
+        "type": "metaphorical",
+        "thinking": "Creative metaphor suggests respiratory issues. VO2 max can assess fitness levels. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since moving to a hilly area, my usual distance feels harder",
+        "type": "behavioral",
+        "thinking": "Environmental change may be affecting workouts. VO2 max trends since move can show impacts. No exact date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm getting calf cramps much earlier in my runs this month",
+        "type": "symptom",
+        "thinking": "Reports physical symptom changes potentially related to fitness. VO2 max can help assess. 'This month' suggests ~30 days of data.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Show me my VO2 max trends since I began foam rolling daily",
+        "type": "explicit",
+        "thinking": "Direct request for recovery routine impact analysis. Need data since this practice began (~30 days for consistent habit).",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My chest feels like it's in a vise during hill repeats",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor suggests workout discomfort. VO2 max can assess if this reflects fitness changes. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since getting a dog, my walking endurance has changed",
+        "type": "behavioral",
+        "thinking": "Lifestyle change may be affecting fitness. VO2 max trends since this change can show impacts. No exact date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I'm getting dizzy spells during my usual cycling routine",
+        "type": "symptom",
+        "thinking": "Reports concerning physical symptoms during exercise. VO2 max can help assess cardio fitness. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Compare my VO2 max from before and after my injury recovery",
+        "type": "explicit",
+        "thinking": "Clear request for pre/post-injury comparison. Need data from before injury and since recovery (~30 day window).",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like I'm wearing an invisible weight vest during workouts",
+        "type": "metaphorical",
+        "thinking": "Metaphor suggests perceived increased effort. VO2 max can verify if fitness has changed. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Since starting a standing desk, my afternoon energy for workouts changed",
+        "type": "behavioral",
+        "thinking": "Work habit change may be affecting exercise performance. VO2 max trends since this change can show impacts. No exact date, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "My heart races just thinking about my workout lately",
+        "type": "symptom",
+        "thinking": "Describes anxiety-like symptoms related to exercise. VO2 max can help assess fitness levels. 'Lately' is vague, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "Show me my VO2 max progression since I turned 40 last month",
+        "type": "explicit",
+        "thinking": "Direct request for age-related fitness tracking. 'Last month' suggests ~30 days of data since birthday.",
+        "numdays": 30,
+        "function": "get_vo2max_data"
+    },
+    {
+        "query": "I feel like I'm trying to breathe through a straw during tempo runs",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor suggests respiratory restriction. VO2 max can assess fitness changes. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_vo2max_data"
+    }
+]

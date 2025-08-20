@@ -1,0 +1,1815 @@
+[
+    {
+        "query": "Can you show me how my oxygen levels have been over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user is directly requesting their blood oxygen saturation trends over a specific period. This justifies a call to get_oxygen_saturation_data to analyze SpO2 patterns. The phrase 'last 10 days' maps directly to numdays = 10.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been feeling a bit foggy lately—do you think it could be oxygen-related?",
+        "type": "symptom",
+        "thinking": "The user is experiencing mental fog and is wondering if it could be related to low oxygen levels. It's important to call get_oxygen_saturation_data to explore any abnormalities. Since there's no timeframe mentioned, defaulting to the last 7 days makes sense.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Ever since I started sleeping with the window closed, I’ve felt more tired in the mornings.",
+        "type": "behavioral",
+        "thinking": "The user has changed their sleep environment, which might have impacted oxygen levels during sleep. It's appropriate to use get_oxygen_saturation_data to detect any SpO2 dips. 'Ever since' suggests an ongoing concern, so using the max range of 30 days provides a good overview.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Is my oxygen level doing okay this week?",
+        "type": "explicit",
+        "thinking": "The user is checking on their oxygen levels specifically for this week. To fulfill this, we need to call get_oxygen_saturation_data. 'This week' typically covers the last 7 days, so numdays = 7.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Why do I feel like I’m climbing a mountain even when I’m just walking to the kitchen?",
+        "type": "metaphorical",
+        "thinking": "The user is using figurative language to describe breathlessness, potentially linked to oxygen saturation. get_oxygen_saturation_data can help uncover any related issues. No time range is provided, so we’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Since Sunday, my smartwatch has been giving me low oxygen alerts.",
+        "type": "symptom",
+        "thinking": "The user mentions receiving low SpO2 alerts starting from Sunday, which raises a health concern. get_oxygen_saturation_data should be called to verify and investigate this. Assuming today is Tuesday, 'since Sunday' maps to numdays = 2.",
+        "numdays": 2,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Do you think my oxygen levels improved after I started my breathing exercises last week?",
+        "type": "behavioral",
+        "thinking": "The user is reflecting on a new habit—breathing exercises—and wondering about its effect. This merits a call to get_oxygen_saturation_data to compare recent SpO2 trends. 'Last week' implies the last 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Lately I’ve been waking up gasping a bit. Not every night, but it’s worrying me.",
+        "type": "implicit",
+        "thinking": "The user is describing occasional breathing difficulties upon waking, which may point to oxygen issues. It’s reasonable to use get_oxygen_saturation_data to check for irregularities. No exact time is given, so we'll default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you check if my oxygen levels have dropped during the past 15 days?",
+        "type": "explicit",
+        "thinking": "The user is concerned about a potential drop in oxygen levels and specifies a timeframe. Calling get_oxygen_saturation_data will allow analysis of SpO2 trends. 'Past 15 days' clearly maps to numdays = 15.",
+        "numdays": 15,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like my body is suffocating from the inside out lately.",
+        "type": "metaphorical",
+        "thinking": "The user is expressing a deep sense of breathlessness or oxygen deprivation using metaphorical language. This suggests an urgent need to analyze oxygen data through get_oxygen_saturation_data. No timeframe is mentioned, so the default 7-day window will be used.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "How’s my blood oxygen been doing over the last week?",
+        "type": "explicit",
+        "thinking": "The user is directly asking for an analysis of their blood oxygen saturation over the past week. This clear request justifies calling get_oxygen_saturation_data to retrieve SpO2 levels. The time reference 'last week' maps to 7 days for the numdays parameter.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been feeling really tired since Monday. Is my oxygen level okay?",
+        "type": "symptom",
+        "thinking": "The user mentions fatigue starting from Monday, suggesting a concern about their health, possibly linked to blood oxygen levels. Calling get_oxygen_saturation_data is appropriate to check SpO2 trends. Since Monday implies a 5-day period (assuming today is Saturday), numdays is set to 5.",
+        "numdays": 5,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been sleeping more than usual this month. Could my oxygen levels be off?",
+        "type": "behavioral",
+        "thinking": "The user notes increased sleep duration over the month, hinting at a potential health issue like low oxygen saturation. get_oxygen_saturation_data is needed to analyze SpO2 trends. The query mentions 'this month,' so I’ll use 30 days to capture the full period.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My chest feels heavy lately, like I’m not getting enough air. What’s going on with my oxygen?",
+        "type": "symptom",
+        "thinking": "The user describes a physical symptom of chest heaviness, implying a concern about oxygen intake. get_oxygen_saturation_data will help assess SpO2 levels for potential issues. No specific time is mentioned, so I’ll default to 7 days for a recent trend.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like I’m drowning in shallow water these past 10 days. Are my oxygen levels normal?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('drowning in shallow water') to express difficulty breathing or distress over the past 10 days, suggesting an oxygen-related concern. get_oxygen_saturation_data is justified to check SpO2 levels. The time reference 'past 10 days' maps directly to numdays = 10.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you check my oxygen saturation for the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests a check of their blood oxygen saturation for the past two weeks. get_oxygen_saturation_data is the appropriate function to retrieve this data. The time reference 'past two weeks' translates to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been short of breath during walks this week. Is it related to my oxygen levels?",
+        "type": "symptom",
+        "thinking": "The user reports shortness of breath during physical activity this week, indicating a possible issue with oxygen saturation. get_oxygen_saturation_data will provide SpO2 data to explore this. 'This week' suggests a 7-day period for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I haven’t been myself since last weekend. Could my blood oxygen be low?",
+        "type": "implicit",
+        "thinking": "The user vaguely expresses feeling off since last weekend, possibly hinting at a health concern like low oxygen levels. get_oxygen_saturation_data is needed to check SpO2 trends. 'Since last weekend' (assuming today is Saturday) implies 6 days, but I’ll round to 7 for a full week.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been avoiding stairs lately because I get winded. Is my oxygen okay?",
+        "type": "behavioral",
+        "thinking": "The user mentions avoiding stairs due to breathlessness, suggesting a change in behavior linked to potential oxygen issues. get_oxygen_saturation_data will help analyze SpO2 levels. No specific time is given, so I’ll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My energy’s been drained for the last 12 days, like I’m running on empty. What’s my oxygen saturation like?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('running on empty') to describe low energy over 12 days, possibly indicating an oxygen-related issue. get_oxygen_saturation_data is justified to check SpO2 levels. The time reference 'last 12 days' maps directly to numdays = 12.",
+        "numdays": 12,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "How have my oxygen levels been since the start of the month?",
+        "type": "explicit",
+        "thinking": "The user directly asks for oxygen level data since the start of the month. get_oxygen_saturation_data is needed to retrieve SpO2 records. Assuming today is August 5, 'start of the month' implies 5 days, so numdays is set to 5.",
+        "numdays": 5,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been waking up with headaches for the past three weeks. Could it be my oxygen?",
+        "type": "symptom",
+        "thinking": "The user reports morning headaches over three weeks, suggesting a possible link to oxygen saturation. get_oxygen_saturation_data will provide relevant SpO2 data. 'Past three weeks' translates to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel off, like my body’s not getting what it needs. Any issues with my oxygen levels?",
+        "type": "implicit",
+        "thinking": "The user vaguely describes feeling unwell, hinting at a potential oxygen saturation issue. get_oxygen_saturation_data is appropriate to investigate SpO2 trends. No time is specified, so I’ll use the default of 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been taking more naps this past week. Is my oxygen level stable?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased napping over the past week, indicating a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help assess SpO2 stability. 'Past week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It’s like I’m climbing a mountain every time I move lately. What’s up with my oxygen?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('climbing a mountain') to describe physical exertion, suggesting an oxygen-related concern. get_oxygen_saturation_data is needed to check SpO2 levels. No specific time is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you look at my blood oxygen data for the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood oxygen data for the last 15 days. get_oxygen_saturation_data is the correct function to retrieve this. The time reference 'last 15 days' directly maps to numdays = 15.",
+        "numdays": 15,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My fingers have been tingling since last Tuesday. Could it be my oxygen levels?",
+        "type": "symptom",
+        "thinking": "The user reports tingling fingers since Tuesday, a symptom that might relate to oxygen saturation. get_oxygen_saturation_data will provide relevant SpO2 data. Assuming today is Saturday, 'since last Tuesday' implies 11 days, so numdays is 11.",
+        "numdays": 11,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been quieter at work lately, just don’t have the energy. Is my oxygen okay?",
+        "type": "behavioral",
+        "thinking": "The user notes reduced energy and social engagement at work, suggesting a possible oxygen issue. get_oxygen_saturation_data will help analyze SpO2 trends. No time is specified, so I’ll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like I’m suffocating in my own skin this month. Are my oxygen levels normal?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('suffocating in my own skin') to express distress over the month, likely related to oxygen levels. get_oxygen_saturation_data is justified to check SpO2. 'This month' suggests 30 days for numdays to cover the period.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "What’s my oxygen saturation been like over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for oxygen saturation data over the last 10 days. get_oxygen_saturation_data is needed to retrieve SpO2 levels. The time reference 'last 10 days' maps directly to numdays = 10.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been dizzy when I stand up this week. Could my oxygen levels be low?",
+        "type": "symptom",
+        "thinking": "The user reports dizziness when standing, a symptom potentially linked to low oxygen saturation, over this week. get_oxygen_saturation_data will provide SpO2 data. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Something’s not right, I just don’t feel as sharp as usual. Can you check my oxygen?",
+        "type": "implicit",
+        "thinking": "The user vaguely expresses feeling less mentally sharp, possibly hinting at an oxygen-related issue. get_oxygen_saturation_data is appropriate to check SpO2 trends. No time is mentioned, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been skipping my morning runs for the past two weeks. Is my oxygen level okay?",
+        "type": "behavioral",
+        "thinking": "The user mentions stopping morning runs over two weeks, a behavioral change that may relate to oxygen issues. get_oxygen_saturation_data will help assess SpO2 levels. 'Past two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It’s like my lungs are half-full these days. What’s my oxygen saturation been?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('lungs are half-full') to describe breathing difficulty, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No specific time is given, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you pull my oxygen data since last Friday?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests oxygen data since last Friday. get_oxygen_saturation_data is the appropriate function. Assuming today is Saturday, 'since last Friday' implies 8 days, so numdays is set to 8.",
+        "numdays": 8,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My lips feel tingly this past week. Is that related to my oxygen levels?",
+        "type": "symptom",
+        "thinking": "The user reports tingling lips over the past week, a symptom possibly linked to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data to investigate. 'Past week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been out of sorts since the holiday weekend. Could my oxygen be off?",
+        "type": "implicit",
+        "thinking": "The user vaguely describes feeling off since the holiday weekend, possibly indicating an oxygen issue. get_oxygen_saturation_data is justified to check SpO2 trends. Assuming the holiday was 10 days ago, numdays is set to 10.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been staying in bed longer these past 12 days. Is my oxygen level normal?",
+        "type": "behavioral",
+        "thinking": "The user notes spending more time in bed over 12 days, a behavioral change that might relate to oxygen levels. get_oxygen_saturation_data will help analyze SpO2 trends. 'Past 12 days' maps directly to numdays = 12.",
+        "numdays": 12,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like I’m breathing through a straw lately. What’s my oxygen saturation?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('breathing through a straw') to express breathing difficulty, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "How’s my blood oxygen been for the past three weeks?",
+        "type": "explicit",
+        "thinking": "The user directly asks for blood oxygen data over the past three weeks. get_oxygen_saturation_data is the appropriate function to retrieve SpO2 levels. 'Past three weeks' translates to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been getting winded just talking this month. Is my oxygen okay?",
+        "type": "symptom",
+        "thinking": "The user reports breathlessness during conversation over the month, a symptom possibly tied to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'This month' suggests 30 days for numdays to cover the period.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I don’t feel right, like I’m not fully here. Can you check my oxygen levels?",
+        "type": "implicit",
+        "thinking": "The user vaguely describes feeling detached, possibly hinting at an oxygen-related issue. get_oxygen_saturation_data is appropriate to investigate SpO2 trends. No time is mentioned, so I’ll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been less active at the gym since last month. Could my oxygen be low?",
+        "type": "behavioral",
+        "thinking": "The user mentions reduced gym activity since last month, a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help assess SpO2 trends. 'Since last month' suggests 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It’s like I’m stuck in quicksand when I try to move. What’s my oxygen like?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('stuck in quicksand') to describe physical difficulty, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No specific time is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you show me my oxygen saturation for the last 9 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests oxygen saturation data for the last 9 days. get_oxygen_saturation_data is the correct function to retrieve this. The time reference 'last 9 days' directly maps to numdays = 9.",
+        "numdays": 9,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My heart’s been racing when I climb stairs this week. Is my oxygen level okay?",
+        "type": "symptom",
+        "thinking": "The user reports a racing heart during physical activity this week, a symptom possibly linked to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been feeling foggy since last Wednesday. Could it be my oxygen?",
+        "type": "implicit",
+        "thinking": "The user vaguely describes feeling foggy since last Wednesday, possibly indicating an oxygen issue. get_oxygen_saturation_data is justified to check SpO2 trends. Assuming today is Saturday, 'since last Wednesday' implies 10 days, so numdays is 10.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been skipping my evening walks for the past 15 days. Is my oxygen alright?",
+        "type": "behavioral",
+        "thinking": "The user mentions stopping evening walks over 15 days, a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help analyze SpO2 trends. 'Past 15 days' maps directly to numdays = 15.",
+        "numdays": 15,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like I’m gasping for air in a storm these days. What’s my oxygen saturation?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('gasping for air in a storm') to describe breathing difficulty, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "What’s my blood oxygen been like since last Sunday?",
+        "type": "explicit",
+        "thinking": "The user directly asks for blood oxygen data since last Sunday. get_oxygen_saturation_data is the appropriate function. Assuming today is Saturday, 'since last Sunday' implies 6 days, but I’ll round to 7 for a full week.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been coughing a lot this past month. Could my oxygen levels be off?",
+        "type": "symptom",
+        "thinking": "The user reports persistent coughing over the past month, a symptom potentially linked to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'Past month' suggests 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I haven’t been feeling my best lately. Can you look at my oxygen levels?",
+        "type": "implicit",
+        "thinking": "The user vaguely expresses feeling unwell, possibly hinting at an oxygen-related issue. get_oxygen_saturation_data is appropriate to check SpO2 trends. No time is mentioned, so I’ll default to 7 days for a recent analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been moving slower at work this week. Is my oxygen saturation okay?",
+        "type": "behavioral",
+        "thinking": "The user notes slower movement at work this week, a behavioral change that might relate to oxygen levels. get_oxygen_saturation_data will help assess SpO2 trends. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It’s like I’m underwater when I try to breathe. What’s my oxygen level?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('underwater') to describe breathing difficulty, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No specific time is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you check my oxygen levels for the past 20 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests oxygen level data for the past 20 days. get_oxygen_saturation_data is the correct function to retrieve this. The time reference 'past 20 days' directly maps to numdays = 20.",
+        "numdays": 20,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been feeling lightheaded after workouts this month. Is my oxygen normal?",
+        "type": "symptom",
+        "thinking": "The user reports lightheadedness after workouts over the month, a symptom possibly linked to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'This month' suggests 30 days for numdays to cover the period.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been off my game since last month. Could my oxygen be low?",
+        "type": "implicit",
+        "thinking": "The user vaguely describes being off since last month, possibly hinting at an oxygen issue. get_oxygen_saturation_data is justified to check SpO2 trends. 'Since last month' suggests 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been avoiding long conversations this week. Is my oxygen level alright?",
+        "type": "behavioral",
+        "thinking": "The user mentions avoiding long conversations this week, a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help analyze SpO2 trends. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like I’m running out of air every step I take. What’s my oxygen saturation?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('running out of air') to describe physical exertion, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No specific time is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "How’s my oxygen saturation been over the last two weekends?",
+        "type": "explicit",
+        "thinking": "The user directly asks for oxygen saturation data over the last two weekends. get_oxygen_saturation_data is the appropriate function. Assuming today is Saturday, 'last two weekends' implies 14 days (covering two full weeks), so numdays is 14.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you show me how my oxygen levels looked over the past 8 days?",
+        "type": "explicit",
+        "thinking": "The user wants to examine their oxygen saturation over a specific time window. It's appropriate to call get_oxygen_saturation_data to retrieve and analyze the SpO2 values. 'Past 8 days' maps directly to numdays = 8.",
+        "numdays": 8,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been feeling weirdly tired even after a full night’s sleep.",
+        "type": "symptom",
+        "thinking": "The user is reporting persistent fatigue, which may relate to low oxygen levels during sleep. This justifies retrieving their SpO2 data using get_oxygen_saturation_data. No time was mentioned, so we’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Ever since I started using the humidifier, I wonder if my breathing has improved.",
+        "type": "behavioral",
+        "thinking": "The user is evaluating the impact of a new behavior on their oxygen levels. We should call get_oxygen_saturation_data to check for changes. 'Ever since' implies a longer span, so using 20 days is appropriate.",
+        "numdays": 20,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can we look at my oxygen levels for the last three weekends?",
+        "type": "explicit",
+        "thinking": "The user is asking to review SpO2 levels across three weekends, which spans roughly 15 days. A call to get_oxygen_saturation_data is needed to retrieve data from that window. 'Last three weekends' maps to numdays = 15.",
+        "numdays": 15,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Lately, even light walking makes me short of breath.",
+        "type": "symptom",
+        "thinking": "The user is experiencing breathlessness, which could be due to low oxygen saturation. It's important to fetch SpO2 data via get_oxygen_saturation_data. No timeframe is given, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Is there a way to check if my oxygen levels have improved this week?",
+        "type": "explicit",
+        "thinking": "The user is directly requesting a check on their oxygen trends for the current week. This warrants a call to get_oxygen_saturation_data. 'This week' translates to numdays = 7.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Since I started yoga two weeks ago, I feel calmer. I wonder if my oxygen levels reflect that.",
+        "type": "behavioral",
+        "thinking": "The user is associating a behavior change with a possible physiological improvement. We should call get_oxygen_saturation_data to look for trends. 'Two weeks ago' maps to numdays = 14.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Breathing feels heavier than usual. What’s going on?",
+        "type": "symptom",
+        "thinking": "The user is reporting breathing difficulty, suggesting a potential oxygen saturation issue. It's appropriate to retrieve their SpO2 levels via get_oxygen_saturation_data. No timeframe is mentioned, so we use 7 days by default.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like I’m suffocating in my own skin lately.",
+        "type": "metaphorical",
+        "thinking": "The user is expressing distress using metaphorical language that suggests low oxygen levels. A call to get_oxygen_saturation_data will help investigate. No timeframe is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Could you check if my SpO2 levels dipped at night this past week?",
+        "type": "explicit",
+        "thinking": "The user wants to analyze overnight SpO2 patterns over a specific period. get_oxygen_saturation_data is required to review that. 'This past week' equates to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been waking up gasping for air more than once this month.",
+        "type": "symptom",
+        "thinking": "The user reports recurring breathing issues during sleep. Retrieving blood oxygen levels via get_oxygen_saturation_data can help uncover patterns. 'This month' maps reasonably to 30 days.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Ever since the air quality went bad, I’ve felt off.",
+        "type": "implicit",
+        "thinking": "The user is implying a link between poor air and potential oxygen issues. It’s worth checking their SpO2 using get_oxygen_saturation_data. The event likely occurred in the last 10 days, so we’ll use that.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I tried sleeping without my CPAP machine three nights this week. Did my oxygen drop?",
+        "type": "behavioral",
+        "thinking": "The user changed a sleep-related behavior and wants to know if it impacted oxygen levels. get_oxygen_saturation_data should be called. 'This week' suggests 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "How’s my blood oxygen been since I came back from the mountains?",
+        "type": "explicit",
+        "thinking": "The user returned from a high-altitude trip and wants to review oxygen levels since then. Assuming the return was recent, using 10 days is reasonable. get_oxygen_saturation_data is appropriate here.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Why do I feel like I’m breathing through a straw every morning?",
+        "type": "metaphorical",
+        "thinking": "The user describes a troubling symptom using metaphor, hinting at oxygen issues. It’s necessary to call get_oxygen_saturation_data. No specific date is mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you tell if my SpO2 was stable over the past 12 days?",
+        "type": "explicit",
+        "thinking": "The user requests a stability check on oxygen saturation levels for a defined period. This requires calling get_oxygen_saturation_data. 'Past 12 days' gives numdays = 12.",
+        "numdays": 12,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I noticed I get dizzy every afternoon lately. Could it be my oxygen?",
+        "type": "implicit",
+        "thinking": "The user is making a connection between dizziness and possible low oxygen. get_oxygen_saturation_data can help investigate. No time range is provided, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Ever since I got that cold two weeks ago, I haven’t felt the same.",
+        "type": "symptom",
+        "thinking": "The user implies lingering effects post-illness. Checking their oxygen levels via get_oxygen_saturation_data could reveal changes. 'Two weeks ago' suggests numdays = 14.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’m curious if my deep breathing practice is showing any effect.",
+        "type": "behavioral",
+        "thinking": "The user wants to assess the impact of a breathing habit. It’s valid to analyze SpO2 via get_oxygen_saturation_data. Since no time was given, we use the default 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Breathing feels heavier when I wake up. Can you check what’s up?",
+        "type": "symptom",
+        "thinking": "The user experiences morning breathing discomfort, possibly linked to oxygen levels. Calling get_oxygen_saturation_data is appropriate. No timeframe is given, so use 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been feeling more winded than usual after my morning walks this week.",
+        "type": "behavioral",
+        "thinking": "The user mentions increased breathlessness during routine exercise, suggesting possible oxygen level concerns. Checking SpO2 trends could reveal if this correlates with lower oxygenation. Since they specify 'this week', I'll look at the past 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you show me my oxygen levels from the last two weeks? I've been recovering from COVID.",
+        "type": "explicit",
+        "thinking": "This is a direct request for SpO2 data with clear medical context (post-COVID recovery). The user specifies 'last two weeks', so we'll retrieve 14 days of data to monitor recovery progress.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My meditation app says my breathing patterns have been irregular since the weather changed.",
+        "type": "implicit",
+        "thinking": "While not directly about SpO2, irregular breathing could impact oxygenation. The weather change reference suggests we should check recent data - defaulting to 7 days as no specific timeframe is given.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I wake up feeling like I'm drowning every morning. Could this be oxygen related?",
+        "type": "metaphorical",
+        "thinking": "The drowning metaphor strongly suggests breathing/oxygen concerns, particularly upon waking. This warrants checking overnight SpO2 patterns. No timeframe given, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My smartwatch keeps alerting me about low oxygen at night for the past 10 days.",
+        "type": "symptom",
+        "thinking": "The user reports concrete device alerts about nocturnal desaturation. We should examine the exact period mentioned (10 days) to identify patterns in nighttime SpO2 drops.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "After switching to a new apartment, I've had constant headaches. Could poor air quality be affecting my oxygen?",
+        "type": "implicit",
+        "thinking": "The user connects environmental change to physical symptoms that could relate to oxygenation. Checking SpO2 trends since the move would help assess this theory. No exact date given, so using 7-day default.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Show me a graph of my blood oxygen levels from the past month.",
+        "type": "explicit",
+        "thinking": "Clear request for visualized SpO2 data with specified timeframe ('past month'). We'll retrieve 30 days of data for comprehensive trend analysis.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've stopped going to my high-altitude yoga class because I feel lightheaded.",
+        "type": "behavioral",
+        "thinking": "Behavior change due to lightheadedness suggests possible altitude-related oxygenation issues. Checking recent SpO2 data (default 7 days) might reveal adaptation difficulties.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My lips look bluer than normal in the mirror lately.",
+        "type": "symptom",
+        "thinking": "Cyanosis (bluish discoloration) can indicate oxygenation issues. The term 'lately' suggests checking recent SpO2 trends - defaulting to past week's data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Ever since the wildfire smoke came through, I feel like I'm breathing through a straw.",
+        "type": "metaphorical",
+        "thinking": "The straw metaphor clearly describes breathing difficulty potentially linked to air quality. Checking SpO2 since the smoke exposure began is warranted, but without exact dates, we'll use 7-day default.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "How have my oxygen levels been during sleep for the past three nights?",
+        "type": "explicit",
+        "thinking": "Direct request for nocturnal SpO2 data with precise timeframe ('past three nights'). We'll retrieve exactly 3 days of sleep-specific oxygenation data.",
+        "numdays": 3,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My afternoon energy crashes feel worse than usual - could oxygen be part of this?",
+        "type": "implicit",
+        "thinking": "While not directly about SpO2, energy fluctuations could relate to oxygenation. The comparison suggests checking recent trends against baseline - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been using my rescue inhaler more frequently this month.",
+        "type": "behavioral",
+        "thinking": "Increased inhaler use suggests respiratory changes that may affect oxygenation. The timeframe 'this month' indicates we should examine 30 days of SpO2 data.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My fingers sometimes look like I've been in cold water, even when it's warm.",
+        "type": "symptom",
+        "thinking": "Peripheral cyanosis description suggests possible circulation/oxygenation issues. Without specific timeframe, we'll check the past week's SpO2 data for abnormalities.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It's like my lungs forgot how to breathe deeply since I got back from Denver.",
+        "type": "metaphorical",
+        "thinking": "The metaphor suggests possible altitude adjustment difficulties affecting respiration. Checking SpO2 since returning from high altitude would help, defaulting to 7 days without exact dates.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Compare my daytime and nighttime oxygen levels over the past two weeks.",
+        "type": "explicit",
+        "thinking": "Clear comparative request with specified timeframe ('past two weeks'). We'll retrieve 14 days of data segmented by day/night periods.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My partner says I've been gasping in my sleep since we got the new mattress.",
+        "type": "implicit",
+        "thinking": "Sleep breathing changes linked to environmental change may indicate oxygenation issues. Checking SpO2 since the mattress change would help assess impact, defaulting to 7 days without exact date.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I canceled my hiking trip because I couldn't catch my breath during training.",
+        "type": "behavioral",
+        "thinking": "Activity avoidance due to dyspnea strongly suggests oxygenation concerns. Checking recent SpO2 during physical activity would be valuable - defaulting to past week's data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The veins in my hands seem more prominent than before.",
+        "type": "symptom",
+        "thinking": "Vascular changes might indicate circulatory/oxygenation adaptations. Without timeframe, we'll examine if recent SpO2 trends (7 days) correlate with this observation.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Breathing feels like trying to sip a thick milkshake through a thin straw.",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor indicates significant breathing resistance potentially affecting oxygenation. Checking current SpO2 status is warranted, defaulting to recent 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Has my blood oxygen changed since I started the new breathing exercises last Monday?",
+        "type": "explicit",
+        "thinking": "Direct request to evaluate intervention impact with clear reference point ('last Monday'). We'll calculate days since that date to determine timeframe.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My yoga teacher says I'm panting during poses that never used to wind me.",
+        "type": "implicit",
+        "thinking": "Third-party observation of increased respiratory effort suggests possible oxygenation changes. Checking SpO2 during activity periods would help - defaulting to 7-day review.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been sleeping 10 hours but still wake up exhausted - could oxygen be low at night?",
+        "type": "symptom",
+        "thinking": "Unrefreshing sleep may indicate nocturnal oxygenation issues. The duration mention suggests examining at least several nights - defaulting to 7 days of sleep SpO2 data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My chest feels like there's an elephant sitting on it when I lie down.",
+        "type": "metaphorical",
+        "thinking": "The metaphor describes significant respiratory restriction potentially affecting oxygenation. Positional symptoms warrant checking SpO2 in different postures - defaulting to 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Show me oxygen trends from all my flights in the past month.",
+        "type": "explicit",
+        "thinking": "Specific request for travel-related SpO2 data with clear timeframe ('past month'). We'll retrieve 30 days of data focusing on flight periods.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've started propping up with extra pillows at night because breathing feels easier that way.",
+        "type": "behavioral",
+        "thinking": "Positional adaptation suggests possible orthopnea (breathing difficulty when lying flat). Checking nocturnal SpO2 changes would help evaluate this - defaulting to 7 nights.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The skin around my nails looks darker than usual this week.",
+        "type": "symptom",
+        "thinking": "Peripheral color changes could indicate oxygenation issues. The timeframe 'this week' directs us to examine the past 7 days of SpO2 data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It's like my body forgot how to use oxygen efficiently after I had the flu.",
+        "type": "metaphorical",
+        "thinking": "The metaphor describes possible post-viral oxygenation impairment. Checking SpO2 recovery trends since illness would help - defaulting to 14 days for post-infection period.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Give me a breakdown of my oxygen levels before and after meals for the past 10 days.",
+        "type": "explicit",
+        "thinking": "Detailed request for SpO2 analysis around mealtimes with specified duration. We'll retrieve exactly 10 days of data segmented by pre/post-prandial periods.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My Apple Watch shows more spikes in my breathing rate since the heat wave started.",
+        "type": "implicit",
+        "thinking": "Device data suggests respiratory changes potentially affecting oxygenation during environmental stress. Checking SpO2 since the heat wave began is warranted - defaulting to 7 days without exact start date.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been yawning constantly during meetings, even when well-rested.",
+        "type": "behavioral",
+        "thinking": "Excessive yawning may indicate attempts to increase oxygenation. Checking SpO2 during sedentary periods would help evaluate this - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The pulse ox at my doctor's office showed 92% today - is this part of a trend?",
+        "type": "symptom",
+        "thinking": "Specific low reading prompts concern about ongoing patterns. Comparing with historical data requires recent context - defaulting to 7 days prior to assess trends.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Breathing in this polluted city feels like trying to fill a balloon with molasses.",
+        "type": "metaphorical",
+        "thinking": "The striking metaphor describes severely impaired breathing potentially affecting oxygenation. Environmental context suggests checking current SpO2 status - defaulting to recent 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Analyze my oxygen saturation during workouts over the last 5 training sessions.",
+        "type": "explicit",
+        "thinking": "Precise request for exercise-related SpO2 analysis. Since workout frequency varies, we'll determine timeframe based on when these 5 sessions occurred (likely 7-10 days).",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My afternoon naps have gotten longer since I started working from home.",
+        "type": "implicit",
+        "thinking": "Increased sleep need may relate to oxygenation changes from reduced activity. Checking SpO2 patterns since the lifestyle change would help - defaulting to 14 days for adequate comparison.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been craving iron-rich foods much more than usual.",
+        "type": "behavioral",
+        "thinking": "Dietary changes might reflect the body compensating for potential oxygenation issues. Checking recent SpO2 trends could reveal correlations - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The corners of my mouth have been tingling when I walk upstairs.",
+        "type": "symptom",
+        "thinking": "Perioral paresthesia during exertion may indicate oxygenation challenges. Checking SpO2 during activity periods is warranted - defaulting to 7 days of data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My lungs feel like deflated balloons after a long workday at my desk.",
+        "type": "metaphorical",
+        "thinking": "The metaphor suggests possible shallow breathing patterns affecting oxygenation. Checking SpO2 during sedentary periods would help evaluate this - defaulting to 7-day review.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Compare my morning and evening oxygen levels since I quit smoking last month.",
+        "type": "explicit",
+        "thinking": "Clear comparative request tied to behavioral change with timeframe ('since last month'). We'll calculate days since quit date to determine analysis period (likely 30 days).",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My forehead wrinkles disappear slower when I press them - does this relate to oxygen?",
+        "type": "implicit",
+        "thinking": "Unusual observation about skin turgor might reflect circulatory/oxygenation changes. Checking recent SpO2 trends could help assess - defaulting to 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've started opening windows even in winter because rooms feel 'stale'.",
+        "type": "behavioral",
+        "thinking": "Increased air circulation seeking may indicate sensitivity to oxygenation. Checking SpO2 in different environments would help - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My cheeks stay flushed longer after coming inside from the cold.",
+        "type": "symptom",
+        "thinking": "Prolonged vasodilation might indicate circulatory adaptations affecting oxygenation. Checking SpO2 recovery patterns would help - defaulting to 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Taking a deep breath feels like stretching a rubber band that's lost its elasticity.",
+        "type": "metaphorical",
+        "thinking": "The metaphor vividly describes restricted breathing potentially impacting oxygenation. Checking current SpO2 status is warranted - defaulting to recent 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Show me how my oxygen levels correlate with my stress journal entries over the past 3 weeks.",
+        "type": "explicit",
+        "thinking": "Sophisticated request for cross-data analysis with clear timeframe. We'll retrieve 21 days of SpO2 data to match the stress journal period.",
+        "numdays": 21,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My singing voice cracks more often during choir practice lately.",
+        "type": "implicit",
+        "thinking": "Vocal changes may reflect breathing control or oxygenation issues during activity. Checking SpO2 during exertion periods would help - defaulting to 7-day review.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been unconsciously holding my breath while working on the computer.",
+        "type": "behavioral",
+        "thinking": "Unintentional breath-holding could lead to intermittent hypoxia. Checking SpO2 during sedentary focus periods is warranted - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The tips of my fingers get cold faster than before when I'm typing.",
+        "type": "symptom",
+        "thinking": "Peripheral circulation changes might affect oxygenation. Checking SpO2 during repetitive hand use would help - defaulting to 7 days of data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Inhaling feels like drinking air through one of those tiny coffee stirrer straws.",
+        "type": "metaphorical",
+        "thinking": "The metaphor precisely describes severely restricted air intake potentially impacting oxygenation. Immediate SpO2 check is warranted - defaulting to most recent 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Analyze my oxygen trends during allergy season compared to last month.",
+        "type": "explicit",
+        "thinking": "Direct comparative request between two defined periods. We'll need both current allergy season data (default 30 days) and previous month's data for comparison.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My vision gets slightly darker when I stand up quickly from sitting.",
+        "type": "implicit",
+        "thinking": "Orthostatic symptoms may indicate circulation/oxygenation changes. Checking SpO2 during postural transitions would help - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been preferring to sleep on my right side instead of my back now.",
+        "type": "behavioral",
+        "thinking": "Positional sleep preference change may indicate breathing/O2 optimization attempts. Checking side-sleeping vs supine SpO2 would help - defaulting to 7 nights.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The rings on my fingers feel tighter in the evenings lately.",
+        "type": "symptom",
+        "thinking": "Peripheral edema might reflect circulatory changes affecting oxygenation. Checking diurnal SpO2 patterns would help - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Getting air into my lungs feels like trying to inflate a punctured beach ball.",
+        "type": "metaphorical",
+        "thinking": "The metaphor describes significant respiratory effort with poor retention, strongly suggesting oxygenation concerns. Immediate SpO2 review is warranted - defaulting to 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Show me how my oxygen levels changed during my recent business trip to Denver.",
+        "type": "explicit",
+        "thinking": "Direct request for travel-related SpO2 analysis. Without exact trip duration, we'll default to 10 days to capture pre/during/post altitude exposure.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My tea cools faster on my desk now - could my breathing have changed?",
+        "type": "implicit",
+        "thinking": "Unusual observation might reflect altered exhalation patterns affecting oxygenation. Checking recent SpO2 trends could reveal connections - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been avoiding my evening walk because the hill feels harder to climb.",
+        "type": "behavioral",
+        "thinking": "Activity avoidance due to perceived exertion increase suggests possible oxygenation changes. Checking SpO2 during graded exercise would help - defaulting to 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The skin between my eyebrows stays pale longer when I press it now.",
+        "type": "symptom",
+        "thinking": "Delayed capillary refill might indicate circulatory/oxygenation changes. Checking recent SpO2 trends could help assess - defaulting to 7-day review.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Is my blood oxygen fine lately? I’ve been feeling kinda low-energy.",
+        "type": "implicit",
+        "thinking": "The user is expressing general fatigue and wondering if low oxygen might be a factor. We should call get_oxygen_saturation_data to explore this. No time frame is provided, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "How were my oxygen levels over the last 9 days?",
+        "type": "explicit",
+        "thinking": "The user is clearly asking for SpO2 data over a specific range. A call to get_oxygen_saturation_data will help analyze that. 'Last 9 days' maps to numdays = 9.",
+        "numdays": 9,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been skipping my evening walks—maybe that’s affecting my breathing?",
+        "type": "behavioral",
+        "thinking": "The user mentions a recent behavior change and suspects it might influence their oxygen levels. We should use get_oxygen_saturation_data to verify. As no duration is mentioned, use default of 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Last time I felt this lightheaded, my oxygen was low. Could it be happening again?",
+        "type": "symptom",
+        "thinking": "The user associates a previous experience with low oxygen and suspects a recurrence. We should retrieve recent oxygen data using get_oxygen_saturation_data. Default to 7 days since no time is stated.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you check if I had any dips in SpO2 since the weather turned colder?",
+        "type": "explicit",
+        "thinking": "The user is asking for a review since a seasonal change, implying a longer timeframe. We’ll assume 'since the weather turned colder' covers around 20 days. get_oxygen_saturation_data is appropriate here.",
+        "numdays": 20,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Breathing feels like dragging air through molasses.",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphor to describe difficulty breathing, suggesting a possible drop in oxygen saturation. It's suitable to call get_oxygen_saturation_data. No timeframe given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Let’s look at my oxygen levels during the last two weeks.",
+        "type": "explicit",
+        "thinking": "The user directly requests to analyze SpO2 trends for a clear timeframe. A call to get_oxygen_saturation_data will retrieve that. 'Last two weeks' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been feeling off since that long flight last weekend.",
+        "type": "implicit",
+        "thinking": "The user hints at a change in wellbeing since a specific event. SpO2 data via get_oxygen_saturation_data could reveal insights. Assume 5 days have passed since the flight, so numdays = 5.",
+        "numdays": 5,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Ever since I stopped taking my allergy meds, something feels off.",
+        "type": "behavioral",
+        "thinking": "The user notes a medication change and suspects it might affect breathing. We should retrieve oxygen data via get_oxygen_saturation_data. 'Ever since' implies some time has passed, so use 10 days.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like I’ve been living in a fog this past week.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to describe a potentially oxygen-related symptom. get_oxygen_saturation_data should be used to investigate. 'This past week' means numdays = 7.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My watch showed low oxygen alerts twice last night. Can we look into it?",
+        "type": "explicit",
+        "thinking": "The user is responding to wearable alerts and wants to verify their accuracy. Calling get_oxygen_saturation_data is warranted. Assuming it's the next day, use numdays = 1.",
+        "numdays": 1,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I keep waking up with a dry mouth and tight chest.",
+        "type": "symptom",
+        "thinking": "These symptoms could indicate disturbed breathing or low SpO2 overnight. It's helpful to analyze this via get_oxygen_saturation_data. No time window was given, so use 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Have my oxygen levels been okay the past 6 days?",
+        "type": "explicit",
+        "thinking": "The user wants to evaluate their SpO2 trends for a specific period. A call to get_oxygen_saturation_data is necessary. 'Past 6 days' maps to numdays = 6.",
+        "numdays": 6,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’m not sure, but breathing has felt different since I started the new meds last week.",
+        "type": "implicit",
+        "thinking": "The user is uncertain but implies a connection between medication and oxygen. get_oxygen_saturation_data can help verify. 'Last week' implies 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been meditating daily. I wonder if it’s helping my oxygen levels.",
+        "type": "behavioral",
+        "thinking": "The user is tracking the effect of a new habit on their SpO2. A data check via get_oxygen_saturation_data is reasonable. No time is mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My chest feels like it's holding back something heavy.",
+        "type": "metaphorical",
+        "thinking": "The metaphor suggests difficulty breathing or oxygen deprivation. Calling get_oxygen_saturation_data will provide clarity. No time mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Check if my SpO2 levels were stable over the last 20 days.",
+        "type": "explicit",
+        "thinking": "The user requests a long-term trend analysis of oxygen saturation. A call to get_oxygen_saturation_data is appropriate. 'Last 20 days' means numdays = 20.",
+        "numdays": 20,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Do you think my oxygen levels dipped when I had that migraine last week?",
+        "type": "symptom",
+        "thinking": "The user suspects a link between migraine and SpO2. To confirm this, we need to call get_oxygen_saturation_data. 'Last week' gives us 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Breathing’s been fine during the day but rough at night lately.",
+        "type": "symptom",
+        "thinking": "The user is describing a pattern of nighttime breathing issues. We should retrieve SpO2 data using get_oxygen_saturation_data. No range is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Since the wildfire smoke rolled in, I’ve been coughing more. Is my oxygen okay?",
+        "type": "implicit",
+        "thinking": "The user implies their respiratory symptoms might be linked to air quality. A check on SpO2 via get_oxygen_saturation_data is justified. Assume this happened recently—use 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you tell me how my oxygen levels have been since last Monday?",
+        "type": "explicit",
+        "thinking": "The user is directly requesting their blood oxygen saturation data since last Monday. get_oxygen_saturation_data is needed to retrieve SpO2 levels. Assuming today is Tuesday, August 5, 2025, 'since last Monday' refers to 8 days, so numdays is set to 8.",
+        "numdays": 8,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been feeling super sluggish this past week. Could my oxygen be low?",
+        "type": "symptom",
+        "thinking": "The user describes feeling sluggish over the past week, which may indicate an issue with oxygen saturation. get_oxygen_saturation_data will help analyze SpO2 trends. The time reference 'past week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve stopped going for my evening jogs this month. Is my oxygen level okay?",
+        "type": "behavioral",
+        "thinking": "The user mentions a change in behavior by stopping evening jogs this month, possibly linked to oxygen levels. get_oxygen_saturation_data is appropriate to check SpO2 trends. 'This month' implies up to 30 days, so numdays is set to 30.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like my chest is tight all the time. What’s going on with my oxygen?",
+        "type": "symptom",
+        "thinking": "The user reports a persistent tight chest, a symptom that could relate to oxygen saturation issues. get_oxygen_saturation_data will provide SpO2 data to investigate. No time is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It’s like I’m trying to breathe through a fog these past 12 days. Are my oxygen levels normal?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('breathe through a fog') to express breathing difficulty over 12 days, suggesting an oxygen concern. get_oxygen_saturation_data is justified to check SpO2 levels. 'Past 12 days' maps directly to numdays = 12.",
+        "numdays": 12,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you check my blood oxygen for the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for blood oxygen data over the past two weeks. get_oxygen_saturation_data is the correct function to retrieve SpO2 levels. 'Past two weeks' translates to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been out of breath climbing stairs since last weekend. Is my oxygen alright?",
+        "type": "symptom",
+        "thinking": "The user reports breathlessness during physical activity since last weekend, possibly linked to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. Assuming today is Tuesday, 'since last weekend' implies 9 days, so numdays is 9.",
+        "numdays": 9,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I haven’t felt like myself for a while. Could it be my oxygen levels?",
+        "type": "implicit",
+        "thinking": "The user vaguely expresses feeling off, potentially hinting at an oxygen-related issue. get_oxygen_saturation_data is needed to check SpO2 trends. No specific time is mentioned, so I’ll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been cutting my workouts short this week. Could my oxygen be off?",
+        "type": "behavioral",
+        "thinking": "The user mentions shortening workouts this week, a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help assess SpO2 trends. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like I’m wading through mud when I walk. What’s my oxygen saturation?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('wading through mud') to describe difficulty moving, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "How’s my oxygen been over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests oxygen saturation data for the last 10 days. get_oxygen_saturation_data is the appropriate function. The time reference 'last 10 days' maps directly to numdays = 10.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My hands have been cold and numb this month. Is that tied to my oxygen levels?",
+        "type": "symptom",
+        "thinking": "The user reports cold and numb hands over the month, symptoms that might relate to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'This month' suggests 30 days for numdays to cover the period.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been zoning out a lot lately. Can you check my oxygen?",
+        "type": "implicit",
+        "thinking": "The user vaguely describes zoning out, possibly indicating an oxygen-related issue. get_oxygen_saturation_data is appropriate to investigate SpO2 trends. No time is mentioned, so I’ll default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been skipping my yoga classes for the past 15 days. Is my oxygen level stable?",
+        "type": "behavioral",
+        "thinking": "The user mentions skipping yoga classes over 15 days, a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help analyze SpO2 trends. 'Past 15 days' maps directly to numdays = 15.",
+        "numdays": 15,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It’s like my lungs are locked in a cage these past 9 days. What’s my oxygen like?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('lungs locked in a cage') to express breathing difficulty over 9 days, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. 'Past 9 days' maps to numdays = 9.",
+        "numdays": 9,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you look at my oxygen saturation since the start of July?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests oxygen saturation data since the start of July. get_oxygen_saturation_data is needed. Assuming today is August 5, 2025, 'start of July' implies 35 days, but since numdays is capped at 30, I’ll use 30 days.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been waking up gasping for air this week. Could my oxygen be low?",
+        "type": "symptom",
+        "thinking": "The user reports waking up gasping for air this week, a symptom likely tied to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been feeling off since my trip last week. Is my oxygen okay?",
+        "type": "implicit",
+        "thinking": "The user vaguely expresses feeling off since a trip last week, possibly hinting at an oxygen issue. get_oxygen_saturation_data is justified to check SpO2 trends. 'Last week' implies 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been avoiding hiking since last month. Could my oxygen levels be off?",
+        "type": "behavioral",
+        "thinking": "The user mentions avoiding hiking since last month, a behavioral change possibly linked to oxygen levels. get_oxygen_saturation_data will help assess SpO2 trends. 'Since last month' suggests 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like I’m fighting for every breath lately. What’s my oxygen saturation?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('fighting for every breath') to describe breathing difficulty, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "What’s my blood oxygen been like for the past 20 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for blood oxygen data over the past 20 days. get_oxygen_saturation_data is the appropriate function. The time reference 'past 20 days' maps directly to numdays = 20.",
+        "numdays": 20,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My legs feel heavy when I walk this week. Is my oxygen level normal?",
+        "type": "symptom",
+        "thinking": "The user reports heavy legs during walking this week, a symptom possibly linked to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been out of it since last Tuesday. Could my oxygen be low?",
+        "type": "implicit",
+        "thinking": "The user vaguely describes feeling off since last Tuesday, possibly indicating an oxygen issue. get_oxygen_saturation_data is justified to check SpO2 trends. Assuming today is Tuesday, 'since last Tuesday' implies 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been taking shorter walks for the past 10 days. Is my oxygen okay?",
+        "type": "behavioral",
+        "thinking": "The user mentions taking shorter walks over 10 days, a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help analyze SpO2 trends. 'Past 10 days' maps directly to numdays = 10.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It’s like I’m trying to breathe in a vacuum these days. What’s my oxygen saturation?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('breathe in a vacuum') to express breathing difficulty, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you pull my oxygen data for the last three weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests oxygen data for the last three weeks. get_oxygen_saturation_data is the appropriate function. 'Last three weeks' translates to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been getting headaches after exercise this month. Could it be my oxygen?",
+        "type": "symptom",
+        "thinking": "The user reports headaches after exercise over the month, a symptom possibly tied to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'This month' suggests 30 days for numdays to cover the period.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been feeling a bit lost lately. Can you check my oxygen levels?",
+        "type": "implicit",
+        "thinking": "The user vaguely expresses feeling lost, possibly hinting at an oxygen-related issue. get_oxygen_saturation_data is appropriate to investigate SpO2 trends. No time is mentioned, so I’ll default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been skipping my dance classes for the past 12 days. Is my oxygen level alright?",
+        "type": "behavioral",
+        "thinking": "The user mentions skipping dance classes over 12 days, a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help analyze SpO2 trends. 'Past 12 days' maps directly to numdays = 12.",
+        "numdays": 12,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like my breath is trapped in a bottle these past 8 days. What’s my oxygen like?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('breath trapped in a bottle') to describe breathing difficulty over 8 days, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. 'Past 8 days' maps to numdays = 8.",
+        "numdays": 8,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "How have my oxygen levels been since last Friday?",
+        "type": "explicit",
+        "thinking": "The user directly asks for oxygen level data since last Friday. get_oxygen_saturation_data is the appropriate function. Assuming today is Tuesday, 'since last Friday' implies 11 days, so numdays is set to 11.",
+        "numdays": 11,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been feeling faint when I stand up this week. Is my oxygen okay?",
+        "type": "symptom",
+        "thinking": "The user reports feeling faint when standing this week, a symptom possibly linked to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been off my game since the weekend. Could my oxygen be low?",
+        "type": "implicit",
+        "thinking": "The user vaguely describes being off since the weekend, possibly hinting at an oxygen issue. get_oxygen_saturation_data is justified to check SpO2 trends. Assuming today is Tuesday, 'since the weekend' implies 9 days, so numdays is 9.",
+        "numdays": 9,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been avoiding long bike rides for the past 20 days. Is my oxygen level stable?",
+        "type": "behavioral",
+        "thinking": "The user mentions avoiding long bike rides over 20 days, a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help analyze SpO2 trends. 'Past 20 days' maps directly to numdays = 20.",
+        "numdays": 20,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It’s like I’m breathing through a tiny straw lately. What’s my oxygen saturation?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('breathing through a tiny straw') to describe breathing difficulty, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you check my oxygen saturation for the past 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests oxygen saturation data for the past 15 days. get_oxygen_saturation_data is the correct function. The time reference 'past 15 days' maps directly to numdays = 15.",
+        "numdays": 15,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My chest feels like it’s being squeezed this month. Could my oxygen be off?",
+        "type": "symptom",
+        "thinking": "The user reports a squeezed chest feeling over the month, a symptom possibly tied to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'This month' suggests 30 days for numdays to cover the period.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been feeling drained for no reason. Can you look at my oxygen levels?",
+        "type": "implicit",
+        "thinking": "The user vaguely expresses feeling drained, possibly hinting at an oxygen-related issue. get_oxygen_saturation_data is appropriate to check SpO2 trends. No time is mentioned, so I’ll default to 7 days for recent analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been taking more breaks at work this week. Is my oxygen level okay?",
+        "type": "behavioral",
+        "thinking": "The user mentions taking more breaks at work this week, a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help analyze SpO2 trends. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like I’m suffocating in slow motion these days. What’s my oxygen saturation?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('suffocating in slow motion') to describe breathing difficulty, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "How’s my blood oxygen been since last Wednesday?",
+        "type": "explicit",
+        "thinking": "The user directly asks for blood oxygen data since last Wednesday. get_oxygen_saturation_data is the appropriate function. Assuming today is Tuesday, 'since last Wednesday' implies 13 days, so numdays is set to 13.",
+        "numdays": 13,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been short of breath during meetings this week. Is my oxygen normal?",
+        "type": "symptom",
+        "thinking": "The user reports shortness of breath during meetings this week, a symptom possibly linked to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been feeling foggy since last month. Could my oxygen be off?",
+        "type": "implicit",
+        "thinking": "The user vaguely describes feeling foggy since last month, possibly indicating an oxygen issue. get_oxygen_saturation_data is justified to check SpO2 trends. 'Since last month' suggests 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been skipping my morning swims for the past 10 days. Is my oxygen alright?",
+        "type": "behavioral",
+        "thinking": "The user mentions skipping morning swims over 10 days, a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help analyze SpO2 trends. 'Past 10 days' maps directly to numdays = 10.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It’s like my lungs are stuck in quicksand these past 14 days. What’s my oxygen like?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('lungs stuck in quicksand') to describe breathing difficulty over 14 days, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. 'Past 14 days' maps to numdays = 14.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you show me my oxygen levels for the last 18 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests oxygen level data for the last 18 days. get_oxygen_saturation_data is the correct function. The time reference 'last 18 days' maps directly to numdays = 18.",
+        "numdays": 18,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been getting dizzy spells this week. Could my oxygen levels be low?",
+        "type": "symptom",
+        "thinking": "The user reports dizzy spells this week, a symptom possibly linked to oxygen saturation. get_oxygen_saturation_data will provide SpO2 data. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been out of sorts since last Thursday. Can you check my oxygen?",
+        "type": "implicit",
+        "thinking": "The user vaguely expresses being out of sorts since last Thursday, possibly hinting at an oxygen issue. get_oxygen_saturation_data is justified to check SpO2 trends. Assuming today is Tuesday, 'since last Thursday' implies 12 days, so numdays is 12.",
+        "numdays": 12,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I’ve been avoiding my evening runs for the past 16 days. Is my oxygen level okay?",
+        "type": "behavioral",
+        "thinking": "The user mentions avoiding evening runs over 16 days, a behavioral change that may relate to oxygen levels. get_oxygen_saturation_data will help analyze SpO2 trends. 'Past 16 days' maps directly to numdays = 16.",
+        "numdays": 16,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I feel like I’m drowning in air these days. What’s my oxygen saturation?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('drowning in air') to describe breathing difficulty, suggesting an oxygen concern. get_oxygen_saturation_data is needed to check SpO2 levels. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "How’s my oxygen saturation been over the last two months?",
+        "type": "explicit",
+        "thinking": "The user directly asks for oxygen saturation data over the last two months. get_oxygen_saturation_data is the appropriate function. Since two months exceeds the 30-day cap, I’ll use 30 days for numdays to cover the maximum allowed period.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My fitness tracker shows my SpO2 drops below 90% most nights this month. Should I worry?",
+        "type": "explicit",
+        "thinking": "User directly references concerning SpO2 readings with clear timeframe ('this month'). Need to analyze 30 days of nocturnal data to assess frequency/severity of desaturation events.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Ever since the pollen count spiked, I feel like I'm breathing through a wet blanket.",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor suggests respiratory distress potentially affecting oxygenation. Environmental trigger implies checking SpO2 since allergy season onset - defaulting to 14 days for adequate baseline.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've started taking the elevator at work because the stairs make me see stars.",
+        "type": "behavioral",
+        "thinking": "Activity avoidance due to presyncope suggests possible exertion hypoxia. Checking SpO2 during physical activity would help evaluate - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Can you compare my oxygen levels before and after starting the new asthma medication?",
+        "type": "explicit",
+        "thinking": "Clear request for medication impact analysis. Without exact start date, defaulting to 14 days to capture pre/post treatment periods.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My morning headaches feel worse when I sleep past 8 hours.",
+        "type": "implicit",
+        "thinking": "Duration-dependent symptoms may indicate nocturnal oxygenation issues. Checking SpO2 patterns during extended sleep would help - defaulting to 7 nights of data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The pulse ox at my mom's house showed 88% yesterday - is that normal for me?",
+        "type": "symptom",
+        "thinking": "Specific low reading requires context. Comparing with user's typical range means checking recent 7-day SpO2 trends for baseline.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Breathing in my new apartment feels like trying to suck pudding through a straw.",
+        "type": "metaphorical",
+        "thinking": "Graphic metaphor indicates severe perceived breathing restriction. Environmental change suggests checking SpO2 since move-in - defaulting to 10 days without exact date.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Show me oxygen trends during my work hours vs weekends for the past 3 weeks.",
+        "type": "explicit",
+        "thinking": "Detailed comparative request with clear timeframe. Analyzing 21 days segmented by work/leisure periods will reveal lifestyle impacts.",
+        "numdays": 21,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been propping my head up with two pillows instead of one since July.",
+        "type": "behavioral",
+        "thinking": "Positional adaptation suggests possible orthopnea. Checking SpO2 since behavior change began requires calculating days since July start (~30 days currently).",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My lips tingle when I walk the dog in cold weather now.",
+        "type": "symptom",
+        "thinking": "Cold-induced paresthesia may indicate oxygenation challenges. Checking SpO2 during outdoor activity would help - defaulting to 7-day review.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "It's like someone turned down the oxygen dial in my office this week.",
+        "type": "metaphorical",
+        "thinking": "Creative metaphor suggests perceived air quality issues. Checking workplace SpO2 patterns during specified week (7 days) could validate concerns.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Analyze my SpO2 during Zoom meetings vs in-person workdays since June.",
+        "type": "explicit",
+        "thinking": "Specific comparison request with implied timeframe (~60 days). Using maximum 30-day limit to maintain reasonable data scope.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My afternoon tea doesn't steam as much when I breathe on it lately.",
+        "type": "implicit",
+        "thinking": "Subtle observation may indicate reduced exhalation volume/force. Checking recent SpO2 trends could reveal connections - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've stopped wearing turtlenecks because they make me feel suffocated.",
+        "type": "behavioral",
+        "thinking": "Clothing avoidance suggests heightened respiratory sensitivity. Checking SpO2 in different attire would help - defaulting to 7-day review.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The veins in my wrists look more pronounced after my evening run.",
+        "type": "symptom",
+        "thinking": "Vascular changes post-exercise may reflect oxygenation demands. Checking SpO2 recovery patterns would help - defaulting to 7 workouts.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Inhaling deeply feels like stretching a dried-out rubber band.",
+        "type": "metaphorical",
+        "thinking": "Metaphor describes reduced pulmonary compliance. Checking current SpO2 status is warranted - defaulting to recent 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Graph my nighttime oxygen levels during full moon vs new moon cycles.",
+        "type": "explicit",
+        "thinking": "Unique environmental comparison request. Requires ~30 days to capture complete lunar cycle for analysis.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My smart ring shows lower SpO2 on days I skip breakfast.",
+        "type": "implicit",
+        "thinking": "Correlation between nutrition and oxygenation suggested. Need to examine 7 days of meal timing vs SpO2 patterns.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been opening car windows even in rain because the air feels 'thick'.",
+        "type": "behavioral",
+        "thinking": "Unusual environmental preference suggests air quality concerns. Checking SpO2 in different ventilation conditions would help - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My cuticles look bluish after using hand sanitizer frequently.",
+        "type": "symptom",
+        "thinking": "Chemical exposure linked to possible peripheral changes. Checking SpO2 patterns around hygiene routines would help - defaulting to 5-day review.",
+        "numdays": 5,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Yawning feels like my lungs are trying to grab oxygen with tiny hands.",
+        "type": "metaphorical",
+        "thinking": "Creative personification suggests oxygenation difficulty. Checking current SpO2 status is warranted - defaulting to 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Show me oxygen trends during my work commute for the past 15 days.",
+        "type": "explicit",
+        "thinking": "Clear request with specific timeframe and activity context. Exactly 15 days of transit-period SpO2 data needed.",
+        "numdays": 15,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My wine tastes different since I started that new allergy med.",
+        "type": "implicit",
+        "thinking": "Sensory change may indicate medication side effects affecting respiration. Checking SpO2 since starting treatment would help - defaulting to 10 days.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been avoiding my afternoon coffee because it makes me short of breath.",
+        "type": "behavioral",
+        "thinking": "Beverage avoidance linked to respiratory symptoms. Checking SpO2 around caffeine consumption would help - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The skin under my wedding ring stays indented longer than before.",
+        "type": "symptom",
+        "thinking": "Edema changes may reflect circulatory/oxygenation shifts. Checking recent SpO2 trends could help - defaulting to 7-day review.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Breathing in the morning feels like trying to inflate decades-old bicycle tires.",
+        "type": "metaphorical",
+        "thinking": "Vintage metaphor describes stiff, resistant breathing. Checking morning SpO2 patterns is warranted - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Compare my SpO2 at sea level vs during my Colorado trip last week.",
+        "type": "explicit",
+        "thinking": "Clear altitude comparison request. 'Last week' specifies 7-day analysis focused on travel period.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My scented candles don't smell as strong from across the room now.",
+        "type": "implicit",
+        "thinking": "Olfactory changes may indicate altered breathing patterns. Checking recent SpO2 trends could reveal connections - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've started taking shallower breaths during Zoom calls without realizing.",
+        "type": "behavioral",
+        "thinking": "Unconscious respiratory pattern change may affect oxygenation. Checking SpO2 during video conferences would help - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My knees look slightly purple after sitting cross-legged for 30 minutes.",
+        "type": "symptom",
+        "thinking": "Positional discoloration may indicate circulation/oxygenation issues. Checking SpO2 during prolonged sitting would help - defaulting to 5-day review.",
+        "numdays": 5,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Getting air into my lungs feels like pouring syrup through a coffee filter.",
+        "type": "metaphorical",
+        "thinking": "Viscous metaphor describes severely impaired breathing. Immediate SpO2 check warranted - defaulting to 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Analyze how my oxygen levels changed after increasing water intake 10 days ago.",
+        "type": "explicit",
+        "thinking": "Direct hydration impact request with clear timeframe. Exactly 10 days of pre/post intervention data needed.",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My watch shows higher respiratory rate when I work from the basement office.",
+        "type": "implicit",
+        "thinking": "Environment-linked breathing changes may affect oxygenation. Checking SpO2 by location would help - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been craving high-altitude training masks at the gym recently.",
+        "type": "behavioral",
+        "thinking": "Unusual equipment interest suggests oxygenation optimization attempts. Checking current SpO2 during exercise would help - defaulting to 7 workouts.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The thermometer takes longer to register under my tongue now.",
+        "type": "symptom",
+        "thinking": "Oral temperature changes may reflect circulatory shifts. Checking recent SpO2 trends could help assess - defaulting to 7-day review.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Taking a deep breath feels like unfolding a origami crane made of lead foil.",
+        "type": "metaphorical",
+        "thinking": "Complex metaphor describes heavy, resistant breathing. Checking current SpO2 status is warranted - defaulting to 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Show me oxygen trends during my menstrual cycle over the past 3 months.",
+        "type": "explicit",
+        "thinking": "Detailed physiological comparison request. Using maximum 30-day limit while noting need for longer-term data.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My beard grows slower on the right side of my face this season.",
+        "type": "implicit",
+        "thinking": "Asymmetric hair growth may indicate circulation differences. Checking SpO2 patterns could reveal connections - defaulting to 14-day analysis.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been preferring cold showers because steam makes me lightheaded.",
+        "type": "behavioral",
+        "thinking": "Temperature avoidance linked to presyncope suggests oxygenation concerns. Checking SpO2 in different bathing conditions would help - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Paper cuts on my fingers take longer to stop bleeding lately.",
+        "type": "symptom",
+        "thinking": "Coagulation changes may reflect circulatory/oxygenation shifts. Checking recent SpO2 trends could help - defaulting to 7-day review.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Breathing through my nose feels like drinking a thick smoothie through a cocktail straw.",
+        "type": "metaphorical",
+        "thinking": "Precise metaphor describes significant nasal airflow restriction. Checking SpO2 during nasal vs mouth breathing would help - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Compare my oxygen levels during work presentations vs normal meetings this quarter.",
+        "type": "explicit",
+        "thinking": "Stress-related comparison request. 'This quarter' is too broad - defaulting to 30-day maximum analysis period.",
+        "numdays": 30,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My new leather jacket leaves deeper creases in my arms than my old one.",
+        "type": "implicit",
+        "thinking": "Unusual observation about tissue compression may reflect fluid changes. Checking recent SpO2 trends could help assess - defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've started humming unconsciously when concentrating hard.",
+        "type": "behavioral",
+        "thinking": "Vocalization behavior may regulate breathing patterns. Checking SpO2 during focused work would help - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "The whites of my eyes have faint red streaks after long flights.",
+        "type": "symptom",
+        "thinking": "Travel-related vascular changes may indicate oxygenation stress. Checking SpO2 during/after flights would help - defaulting to last 3 trips (~10 days).",
+        "numdays": 10,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Inhaling feels like trying to start a stubborn lawnmower engine.",
+        "type": "metaphorical",
+        "thinking": "Mechanical metaphor describes labored breathing initiation. Checking current SpO2 status is warranted - defaulting to 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Show me how my SpO2 correlates with my stress levels since daylight savings time changed.",
+        "type": "explicit",
+        "thinking": "Clear circadian rhythm impact request. Calculating days since time change (typically 7-30 days) - using 20 days for balanced analysis.",
+        "numdays": 20,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Ice cubes melt slower in my drinks than my partner's for some reason.",
+        "type": "implicit",
+        "thinking": "Subtle thermal observation may reflect metabolic/breathing differences. Checking SpO2 patterns could reveal connections - defaulting to 7-day analysis.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "I've been preferring to sleep with a fan directly on my face.",
+        "type": "behavioral",
+        "thinking": "Unusual sleep preference may indicate air hunger. Checking nocturnal SpO2 with/without airflow would help - defaulting to 7 nights.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "My new tattoo is healing slower than the artist predicted.",
+        "type": "symptom",
+        "thinking": "Delayed wound healing may reflect oxygenation issues. Checking recent SpO2 trends could help assess - defaulting to 14-day review since inking.",
+        "numdays": 14,
+        "function": "get_oxygen_saturation_data"
+    },
+    {
+        "query": "Breathing through this summer humidity feels like trying to filter soup through a sock.",
+        "type": "metaphorical",
+        "thinking": "Graphic metaphor describes severely impaired respiration in specific conditions. Checking current SpO2 status is warranted - defaulting to 7-day data.",
+        "numdays": 7,
+        "function": "get_oxygen_saturation_data"
+    }
+]

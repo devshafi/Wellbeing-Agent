@@ -1,0 +1,1773 @@
+[
+    {
+        "query": "How many calories have I burned this week from my workouts?",
+        "type": "explicit",
+        "thinking": "The user is directly asking for calories burned during workouts for the current week. Calling get_calories_burned_data is appropriate to fetch the total calories burned from activities. The query specifies 'this week,' which maps to 7 days, starting from today.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been feeling super sluggish lately, any chance it’s tied to my exercise?",
+        "type": "symptom",
+        "thinking": "The user mentions feeling sluggish, which may relate to their exercise patterns or calorie expenditure. To explore this, get_calories_burned_data can provide insight into their activity levels. No specific time window is mentioned, so I’ll default to 7 days to assess recent trends.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I started running every morning for the past 10 days, how’s that going for me?",
+        "type": "behavioral",
+        "thinking": "The user indicates a new running habit over the past 10 days and wants to evaluate its impact. Using get_calories_burned_data will quantify the calories burned from this activity. The query explicitly mentions 'past 10 days,' so numdays is set to 10.",
+        "numdays": 10,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My energy’s been through the roof since I got back into cycling last month!",
+        "type": "symptom",
+        "thinking": "The user’s high energy suggests increased physical activity, specifically cycling, over the past month. get_calories_burned_data can confirm the extent of calorie burn from cycling. 'Last month' implies roughly 30 days, so numdays is set to 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I’m running on empty, even with my gym sessions.",
+        "type": "metaphorical",
+        "thinking": "The phrase 'running on empty' suggests fatigue despite gym activity, hinting at a need to check exercise intensity or consistency. get_calories_burned_data will reveal calorie expenditure patterns. No time window is provided, so I’ll use the default of 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Can you check how many calories I burned hiking over the last two weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests calorie data for hiking over the last two weeks. get_calories_burned_data will provide the total calories burned during these activities. 'Last two weeks' translates to 14 days, so numdays is 14.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been pushing myself hard at the gym lately, maybe too much?",
+        "type": "implicit",
+        "thinking": "The user implies concern about overexertion at the gym, suggesting a need to review exercise intensity. get_calories_burned_data can quantify their recent calorie burn to assess if it’s excessive. 'Lately' is vague, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I added yoga to my routine since Monday, how’s that impacting my calorie burn?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting yoga since Monday, indicating a new behavior they want to evaluate. get_calories_burned_data will show the calorie impact of this change. Assuming today is Tuesday, August 5, 2025, 'since Monday' (August 4) is 1 day, but I’ll use the minimum of 5 days for a meaningful sample.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m so out of breath after my runs these days, what’s going on?",
+        "type": "symptom",
+        "thinking": "The user reports breathlessness after running, which could relate to exercise intensity or frequency. get_calories_burned_data will help analyze their running calorie expenditure. 'These days' is unspecified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My workouts are my lifeline right now, how much are they actually doing for me?",
+        "type": "metaphorical",
+        "thinking": "The user describes workouts as a 'lifeline,' indicating emotional reliance on exercise and curiosity about its impact. get_calories_burned_data will quantify the calorie burn from these activities. No time window is mentioned, so I’ll use 7 days as default.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories did I burn swimming over the last three weekends?",
+        "type": "explicit",
+        "thinking": "The user directly asks for calories burned from swimming over the last three weekends. get_calories_burned_data can fetch this data, focusing on weekend activities. Assuming weekends are Saturday and Sunday, three weekends cover 6 days, but I’ll use 21 days to capture the full period.",
+        "numdays": 21,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been skipping my walks lately, and I’m feeling off.",
+        "type": "behavioral",
+        "thinking": "The user notes a change in behavior—skipping walks—and links it to feeling 'off.' get_calories_burned_data can reveal the drop in calorie burn from reduced activity. 'Lately' is vague, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m curious if my evening jogs are making a difference this month.",
+        "type": "implicit",
+        "thinking": "The user indirectly asks if their evening jogs are impactful, suggesting a desire to measure their effect. get_calories_burned_data will provide calorie burn data for jogging. 'This month' implies up to 30 days, so numdays is set to 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My legs feel like lead after my bike rides this week.",
+        "type": "symptom",
+        "thinking": "The user describes heavy legs after cycling, indicating possible overexertion or fatigue. get_calories_burned_data can assess calorie expenditure from bike rides to check intensity. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I’m climbing mountains with my daily workouts!",
+        "type": "metaphorical",
+        "thinking": "The 'climbing mountains' metaphor suggests intense or challenging workouts, with curiosity about their impact. get_calories_burned_data will quantify the calorie burn from these efforts. No specific time is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories have I burned from my dance classes since last Friday?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for calories burned from dance classes since last Friday. get_calories_burned_data will fetch this data. Assuming today is Tuesday, August 5, 2025, 'since last Friday' (July 31) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been too tired to hit the gym as much this month.",
+        "type": "behavioral",
+        "thinking": "The user indicates reduced gym activity due to fatigue, suggesting a need to check exercise patterns. get_calories_burned_data will show changes in calorie burn. 'This month' implies up to 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Is my hiking burning enough calories over the past two weeks?",
+        "type": "implicit",
+        "thinking": "The user questions if hiking is sufficiently effective, implying a need to evaluate calorie burn. get_calories_burned_data will provide the necessary data. 'Past two weeks' maps to 14 days, so numdays is 14.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My heart’s been racing after my workouts lately.",
+        "type": "symptom",
+        "thinking": "The user reports a racing heart post-workout, which could relate to exercise intensity. get_calories_burned_data will help analyze calorie burn to assess effort levels. 'Lately' is vague, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m burning the candle at both ends with my runs and gym time.",
+        "type": "metaphorical",
+        "thinking": "The 'burning the candle' metaphor suggests overexertion from running and gym activities. get_calories_burned_data will quantify the calorie burn to check if it’s excessive. No time window is given, so I’ll use 7 days as default.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories did I burn from my spin classes this past month?",
+        "type": "explicit",
+        "thinking": "The user directly requests calorie data for spin classes over the past month. get_calories_burned_data will fetch this information. 'Past month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I started weightlifting three weeks ago, how’s that going calorie-wise?",
+        "type": "behavioral",
+        "thinking": "The user mentions a new weightlifting routine and wants to assess its calorie impact. get_calories_burned_data will provide the relevant data. 'Three weeks ago' maps to 21 days, so numdays is 21.",
+        "numdays": 21,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m wondering if my daily walks are doing enough for me.",
+        "type": "implicit",
+        "thinking": "The user indirectly questions the effectiveness of daily walks, suggesting a need to measure calorie burn. get_calories_burned_data will provide this data. No specific time is mentioned, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been so sore after my workouts this week, is that normal?",
+        "type": "symptom",
+        "thinking": "The user reports soreness after workouts, which may relate to exercise intensity. get_calories_burned_data can help evaluate calorie expenditure to assess effort. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My exercise routine feels like a marathon lately.",
+        "type": "metaphorical",
+        "thinking": "The 'marathon' metaphor implies a grueling exercise routine, with interest in its impact. get_calories_burned_data will quantify calorie burn to gauge intensity. No time window is given, so I’ll use 7 days as default.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories have I burned from my runs since last Sunday?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for calories burned from running since last Sunday. get_calories_burned_data will fetch this data. Assuming today is Tuesday, August 5, 2025, 'since last Sunday' (August 3) is 2 days, but I’ll use 5 days as the minimum for a meaningful sample.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been slacking on my gym sessions this month, and I feel it.",
+        "type": "behavioral",
+        "thinking": "The user notes reduced gym activity and connects it to feeling off, suggesting a need to check calorie burn changes. get_calories_burned_data will reveal this trend. 'This month' implies up to 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Are my morning jogs over the last 10 days making an impact?",
+        "type": "implicit",
+        "thinking": "The user questions the impact of morning jogs, implying a desire to measure calorie burn. get_calories_burned_data will provide the necessary data. 'Last 10 days' is explicit, so numdays is 10.",
+        "numdays": 10,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My body feels drained after my hikes this month.",
+        "type": "symptom",
+        "thinking": "The user reports feeling drained after hiking, suggesting high exertion. get_calories_burned_data can assess calorie burn to check intensity. 'This month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I’m carrying the world with my workouts.",
+        "type": "metaphorical",
+        "thinking": "The 'carrying the world' metaphor suggests intense workouts and curiosity about their effect. get_calories_burned_data will quantify calorie burn. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories did I burn from yoga over the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user directly asks for calories burned from yoga over the past two weeks. get_calories_burned_data will fetch this data. 'Past two weeks' maps to 14 days, so numdays is 14.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been hitting the treadmill more since last month started.",
+        "type": "behavioral",
+        "thinking": "The user indicates increased treadmill use since the start of last month, suggesting a behavior change. get_calories_burned_data will show the calorie impact. 'Since last month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m not sure if my cycling is doing much for me these days.",
+        "type": "implicit",
+        "thinking": "The user questions the effectiveness of cycling, implying a need to check calorie burn. get_calories_burned_data will provide this data. 'These days' is vague, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My muscles are screaming after my workouts this week.",
+        "type": "symptom",
+        "thinking": "The user reports muscle soreness after workouts, indicating possible high intensity. get_calories_burned_data can assess calorie burn to evaluate effort. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My runs feel like I’m chasing the wind lately.",
+        "type": "metaphorical",
+        "thinking": "The 'chasing the wind' metaphor suggests effortful running with interest in its impact. get_calories_burned_data will quantify calorie burn. No time window is given, so I’ll use 7 days as default.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories have I burned from swimming since last Wednesday?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for calories burned from swimming since last Wednesday. get_calories_burned_data will fetch this data. Assuming today is Tuesday, August 5, 2025, 'since last Wednesday' (July 30) is 6 days, so numdays is 6.",
+        "numdays": 6,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been doing more HIIT workouts over the past 15 days.",
+        "type": "behavioral",
+        "thinking": "The user mentions increased HIIT workouts, indicating a behavior change. get_calories_burned_data will show the calorie impact. 'Past 15 days' is explicit, so numdays is 15.",
+        "numdays": 15,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Is my daily yoga enough to keep me active this month?",
+        "type": "implicit",
+        "thinking": "The user questions if daily yoga is sufficient for activity, implying a need to measure calorie burn. get_calories_burned_data will provide this data. 'This month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m wiped out after my evening runs this week.",
+        "type": "symptom",
+        "thinking": "The user reports exhaustion after evening runs, suggesting high exertion. get_calories_burned_data can assess calorie burn to check intensity. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My workouts feel like pushing a boulder uphill.",
+        "type": "metaphorical",
+        "thinking": "The 'pushing a boulder uphill' metaphor implies strenuous workouts and curiosity about their effect. get_calories_burned_data will quantify calorie burn. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories did I burn from my gym sessions over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for calories burned from gym sessions over the last 10 days. get_calories_burned_data will fetch this data. 'Last 10 days' is explicit, so numdays is 10.",
+        "numdays": 10,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been walking less this month, and I’m feeling it.",
+        "type": "behavioral",
+        "thinking": "The user notes reduced walking and links it to feeling off, suggesting a need to check calorie burn changes. get_calories_burned_data will reveal this trend. 'This month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Are my weekend hikes burning enough calories this month?",
+        "type": "implicit",
+        "thinking": "The user questions if weekend hikes are sufficiently effective, implying a need to measure calorie burn. get_calories_burned_data will provide this data. 'This month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My joints ache after my runs this week.",
+        "type": "symptom",
+        "thinking": "The user reports joint pain after running, which may relate to exercise intensity. get_calories_burned_data can assess calorie burn to evaluate effort. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I’m fighting a losing battle with my workouts.",
+        "type": "metaphorical",
+        "thinking": "The 'losing battle' metaphor suggests frustration with workout efforts, with interest in their impact. get_calories_burned_data will quantify calorie burn. No time window is given, so I’ll use 7 days as default.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories have I burned from cycling over the past 12 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for calories burned from cycling over the past 12 days. get_calories_burned_data will fetch this data. 'Past 12 days' is explicit, so numdays is 12.",
+        "numdays": 12,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I started doing Zumba last week, how’s that working out?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting Zumba last week, indicating a new behavior they want to evaluate. get_calories_burned_data will show the calorie impact. 'Last week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m not sure if my gym time is worth it these days.",
+        "type": "implicit",
+        "thinking": "The user questions the value of gym time, implying a need to measure calorie burn. get_calories_burned_data will provide this data. 'These days' is vague, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m so stiff after my yoga sessions this month.",
+        "type": "symptom",
+        "thinking": "The user reports stiffness after yoga, suggesting possible overexertion. get_calories_burned_data can assess calorie burn to check intensity. 'This month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My workouts are like treading water sometimes.",
+        "type": "metaphorical",
+        "thinking": "The 'treading water' metaphor implies workouts feel unproductive, with curiosity about their effect. get_calories_burned_data will quantify calorie burn. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I've been feeling sluggish lately, and I wonder if my activity levels dropped.",
+        "type": "symptom",
+        "thinking": "The user is expressing a physical symptom (sluggishness) and indirectly linking it to potential decreased activity. Since no specific time frame is mentioned, I'll default to the last 7 days to check for changes in calorie expenditure.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me my calories burned over the past two weeks.",
+        "type": "explicit",
+        "thinking": "This is a direct request for calorie data with a clear time window ('past two weeks'). The function should return data for 14 days to match the user's ask.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Ever since I started my new job, I feel like I'm moving less.",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavior change (new job) and suspects reduced movement. No specific timeframe is given, so we'll compare the last 7 days against their pre-job baseline.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My fitness tracker says I'm burning fewer calories, but is that really true?",
+        "type": "implicit",
+        "thinking": "The user is questioning their tracker's data, implying they want verification. Without a specified period, we'll analyze the past week (7 days) for comparison.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like a sloth these days...",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('sloth') to express low activity levels. 'These days' suggests a recent timeframe, so we'll examine the last 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Did I burn more calories this weekend compared to last?",
+        "type": "explicit",
+        "thinking": "This is a direct comparison request between two specific time periods. Since weekends are 2 days each, we'll pull data for 4 days total (last weekend + current weekend).",
+        "numdays": 4,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My jeans feel tighter—have I been less active this month?",
+        "type": "symptom",
+        "thinking": "The user connects a physical change (clothing fit) to potential reduced activity. 'This month' implies a 30-day window to analyze.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since switching to remote work, my energy feels drained by noon.",
+        "type": "behavioral",
+        "thinking": "The user associates a lifestyle change (remote work) with energy levels. No timeframe is specified, so we'll check activity data for the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Is there a way to see my calorie burn from the 15th to today?",
+        "type": "explicit",
+        "thinking": "This is a precise request for data between two dates. Assuming today is the 22nd, this would cover 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm a couch potato lately...",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('couch potato') to imply inactivity. 'Lately' suggests a recent timeframe, so we'll analyze the last 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Why do I feel so exhausted after work now? Could it be my activity?",
+        "type": "implicit",
+        "thinking": "The user hints at a possible connection between fatigue and activity levels. Since they mention 'now,' we'll compare the past 7 days to earlier periods.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Give me a breakdown of calories burned per day for the last 10 days.",
+        "type": "explicit",
+        "thinking": "This is a clear request for daily calorie data over a specified 10-day window.",
+        "numdays": 10,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My dog passed away last month, and I haven't been walking much since.",
+        "type": "behavioral",
+        "thinking": "The user describes an emotional event leading to reduced activity. 'Last month' suggests we should analyze the past 30 days.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like my metabolism is slower—could my workouts be less effective?",
+        "type": "symptom",
+        "thinking": "The user connects a physical sensation to potential workout changes. No timeframe is given, so we'll examine the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My Apple Watch rings are never closed anymore.",
+        "type": "implicit",
+        "thinking": "The user implies reduced activity by mentioning unclosed activity rings. 'Anymore' suggests a recent change, so we'll analyze the past 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Compare my calories burned this week versus when I was on vacation in July.",
+        "type": "explicit",
+        "thinking": "This is a direct comparison request between two time periods. Assuming 'this week' is 7 days and 'July vacation' was 7 days, we'll pull 14 days total.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I've turned into a desk chair these past few weeks.",
+        "type": "metaphorical",
+        "thinking": "The user humorously compares themselves to furniture to imply inactivity. 'Past few weeks' suggests a 21-day window.",
+        "numdays": 21,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Has my afternoon walk made any difference in the last 5 days?",
+        "type": "explicit",
+        "thinking": "This is a specific query about the impact of a recent behavior change over 5 days.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My back pain started when I stopped going to the gym.",
+        "type": "symptom",
+        "thinking": "The user links a physical symptom to an activity change. No timeframe is specified, so we'll examine the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm curious if gardening this weekend burned more calories than usual.",
+        "type": "implicit",
+        "thinking": "The user hints at wanting to compare a specific activity's impact. Since it's about 'this weekend,' we'll look at 2 days of data.",
+        "numdays": 2,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me my most active day in the past month.",
+        "type": "explicit",
+        "thinking": "This is a direct request to identify peak activity within a 30-day window.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like a wind-up toy that's running down...",
+        "type": "metaphorical",
+        "thinking": "The user uses a mechanical metaphor to describe declining energy. We'll analyze activity over the past 7 days to check for patterns.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since my partner went out of town, I haven't been to the gym.",
+        "type": "behavioral",
+        "thinking": "The user describes a behavior change linked to a social factor. Without a timeframe, we'll examine the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My legs feel heavy—am I not moving enough this week?",
+        "type": "symptom",
+        "thinking": "The user connects a physical sensation to potential inactivity. 'This week' means we'll analyze 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Has my new standing desk made any difference in daily burn?",
+        "type": "implicit",
+        "thinking": "The user implies wanting to assess the impact of a workspace change. No timeframe is given, so we'll compare the past 7 days to earlier data.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Break down my calorie burn by day since I got this fitness tracker.",
+        "type": "explicit",
+        "thinking": "This is a direct request for daily data since a specific event. Assuming they got the tracker 15 days ago, we'll use that window.",
+        "numdays": 15,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm a balloon losing air...",
+        "type": "metaphorical",
+        "thinking": "The user employs a deflating balloon metaphor to describe energy loss. We'll examine activity data for the past 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My sleep app says I'm less active, but I don't feel different.",
+        "type": "implicit",
+        "thinking": "The user questions conflicting data about their activity levels. Without a timeframe, we'll analyze the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories did I burn during my hiking trip last week?",
+        "type": "explicit",
+        "thinking": "This is a specific request for data during a 7-day trip.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Ever since daylight savings ended, I can't seem to get moving.",
+        "type": "behavioral",
+        "thinking": "The user links activity changes to a seasonal shift. Assuming this was 10 days ago, we'll use that window.",
+        "numdays": 10,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My knees ache more now—is it because I stopped taking the stairs?",
+        "type": "symptom",
+        "thinking": "The user connects joint pain to an activity reduction. 'Now' implies recent change, so we'll examine the past 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm like a car idling in park...",
+        "type": "metaphorical",
+        "thinking": "The user compares themselves to a stationary vehicle to imply inactivity. We'll analyze the past week's data (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me calories burned on weekdays versus weekends this month.",
+        "type": "explicit",
+        "thinking": "This is a direct comparison request between two time patterns within a 30-day window.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My smart scale says my metabolism changed—has my activity dropped?",
+        "type": "implicit",
+        "thinking": "The user hints at wanting to correlate device data with activity levels. Without a timeframe, we'll examine the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since the heat wave started, I've been indoors more.",
+        "type": "behavioral",
+        "thinking": "The user describes weather impacting activity patterns. Assuming the heat wave began 5 days ago, we'll use that window.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I'm moving through molasses in the mornings.",
+        "type": "metaphorical",
+        "thinking": "The user uses a viscosity metaphor to describe sluggishness. We'll check morning activity data for the past 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Has my calorie burn changed since I turned 40 last month?",
+        "type": "explicit",
+        "thinking": "This is a direct query about activity changes around a life event. 'Last month' suggests a 30-day window.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My doctor said to be more active—how have I been doing?",
+        "type": "implicit",
+        "thinking": "The user implies wanting an assessment of recent activity. Without a timeframe, we'll analyze the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Break down my activity calories since school started.",
+        "type": "explicit",
+        "thinking": "This is a direct request for data since a specific event. Assuming school started 20 days ago, we'll use that window.",
+        "numdays": 20,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm a windmill with no wind...",
+        "type": "metaphorical",
+        "thinking": "The user compares themselves to a motionless object to imply inactivity. We'll examine the past 7 days of data.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My resting heart rate is up—could it be from less movement?",
+        "type": "symptom",
+        "thinking": "The user connects a physiological change to potential activity reduction. We'll analyze the past week (7 days) for patterns.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Compare my workday vs. holiday activity for the past two weeks.",
+        "type": "explicit",
+        "thinking": "This is a direct request to analyze two activity patterns over 14 days.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like gravity got stronger this past week.",
+        "type": "metaphorical",
+        "thinking": "The user humorously implies increased difficulty moving. We'll examine activity data for the mentioned 7-day period.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since pulling my hamstring, my daily steps have probably tanked.",
+        "type": "behavioral",
+        "thinking": "The user describes an injury affecting activity. Assuming the injury occurred 10 days ago, we'll use that window.",
+        "numdays": 10,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My energy crashes around 3 PM—am I burning too many calories early?",
+        "type": "symptom",
+        "thinking": "The user connects a daily energy pattern to potential calorie expenditure. We'll analyze the past 7 days of hourly data.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me my calorie burn trend for the last 3 Mondays.",
+        "type": "explicit",
+        "thinking": "This is a specific request comparing similar days across 3 weeks (21 days to capture all instances).",
+        "numdays": 21,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm a phone battery that won't charge past 50%...",
+        "type": "metaphorical",
+        "thinking": "The user compares their energy to a malfunctioning device. We'll examine activity patterns over the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Has working from home affected my activity levels this month?",
+        "type": "implicit",
+        "thinking": "The user implies wanting to assess lifestyle impact. 'This month' means we'll analyze 30 days of data.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My yoga teacher says I seem stiffer—have I been moving less?",
+        "type": "symptom",
+        "thinking": "The user connects physical feedback to potential activity changes. Without a timeframe, we'll examine the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Break down my calories burned during work hours for the past 5 workdays.",
+        "type": "explicit",
+        "thinking": "This is a precise request for activity data during specific times across 5 days.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm like a solar panel in Seattle...",
+        "type": "metaphorical",
+        "thinking": "The user humorously implies low energy production/activity. We'll analyze the past week's data (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since quitting caffeine, my workouts feel harder—is my burn different?",
+        "type": "behavioral",
+        "thinking": "The user links a lifestyle change to exercise perception. Assuming they quit caffeine 14 days ago, we'll use that window.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Can you show how many calories I’ve burned this week?",
+        "type": "explicit",
+        "thinking": "The user is clearly requesting their calorie expenditure data. To fulfill this, we will call get_calories_burned_data. The phrase 'this week' corresponds to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'd like to see my calories burned over the past 10 days.",
+        "type": "explicit",
+        "thinking": "The user explicitly wants to review calorie burn for a specified window. We will retrieve data using get_calories_burned_data. 'Past 10 days' maps directly to numdays = 10.",
+        "numdays": 10,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Pull up my total calories burned since Sunday.",
+        "type": "explicit",
+        "thinking": "The user is asking for a specific calorie summary. To provide this, we’ll use get_calories_burned_data. 'Since Sunday' is interpreted as 5 days.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me my burned calories over the last three weekends.",
+        "type": "explicit",
+        "thinking": "The user wants a calorie breakdown over recent weekends. We will use get_calories_burned_data, and 'last three weekends' is approximated as 15 days.",
+        "numdays": 15,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Could you summarize how many calories I burned last month?",
+        "type": "explicit",
+        "thinking": "The user directly requests calorie data for the previous month. We’ll retrieve this using get_calories_burned_data. 'Last month' is mapped to 30 days.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I’ve been sweating more lately.",
+        "type": "implicit",
+        "thinking": "The user hints at increased physical effort. We’ll use get_calories_burned_data to verify if calorie burn has risen. No time specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My jeans are fitting looser. Am I burning more?",
+        "type": "implicit",
+        "thinking": "The user suspects body changes due to increased activity. To confirm, we call get_calories_burned_data. Since no time frame is mentioned, we use 7 days by default.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been super tired—maybe I’m burning more calories than usual?",
+        "type": "implicit",
+        "thinking": "The user is indirectly connecting fatigue with calorie expenditure. We’ll use get_calories_burned_data. As there’s no specific time frame, default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Not seeing weight loss. Wonder if I’m even burning enough.",
+        "type": "implicit",
+        "thinking": "The user questions their activity effectiveness. We'll analyze this using get_calories_burned_data. Since no time period is stated, we use 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Started jogging every morning since last Friday.",
+        "type": "behavioral",
+        "thinking": "The user has adopted a new routine likely to affect calorie burn. We’ll call get_calories_burned_data to examine impact. 'Since last Friday' maps to 6 days.",
+        "numdays": 6,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Been biking to work for the past 2 weeks.",
+        "type": "behavioral",
+        "thinking": "The user reports a consistent new activity. We should evaluate it using get_calories_burned_data. 'Past 2 weeks' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been swimming every weekend for the last month.",
+        "type": "behavioral",
+        "thinking": "The user mentions routine weekend activity. We’ll assess calories using get_calories_burned_data. 'Last month' is interpreted as 30 days.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I added HIIT workouts this week. Curious if they made a difference.",
+        "type": "behavioral",
+        "thinking": "The user changed their routine by adding high-intensity workouts. To see the effect, we’ll use get_calories_burned_data. 'This week' means 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been walking a lot lately.",
+        "type": "behavioral",
+        "thinking": "The user describes a behavioral shift that may impact calories. We’ll retrieve data using get_calories_burned_data. No explicit range mentioned; default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Even simple tasks make me feel drained lately.",
+        "type": "symptom",
+        "thinking": "The user reports unusual fatigue, possibly tied to activity levels. We’ll use get_calories_burned_data. No window provided; we’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been feeling more exhausted than usual over the past week.",
+        "type": "symptom",
+        "thinking": "The user notices increased tiredness, suggesting potential calorie burn variation. We'll examine this using get_calories_burned_data. 'Past week' equals 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My muscles are always sore lately. Is it from burning too many calories?",
+        "type": "symptom",
+        "thinking": "The user links muscle soreness with energy expenditure. We’ll check trends via get_calories_burned_data. No time mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve had no energy since Monday.",
+        "type": "symptom",
+        "thinking": "The user reports fatigue starting from a known day. We’ll call get_calories_burned_data to investigate. 'Since Monday' is interpreted as 5 days.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Why am I always tired after my workouts this month?",
+        "type": "symptom",
+        "thinking": "The user is concerned about post-exercise fatigue. We’ll check using get_calories_burned_data. 'This month' approximates to 6 days so far.",
+        "numdays": 6,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I’ve been burning the candle at both ends.",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphor to imply physical exhaustion. We’ll interpret this as possible overexertion and call get_calories_burned_data. No timeframe provided, default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "It feels like I’m on fire with workouts lately.",
+        "type": "metaphorical",
+        "thinking": "The figurative expression implies intense physical activity. To quantify it, we’ll use get_calories_burned_data. No time mentioned, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been torching calories like crazy the past 9 days.",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically suggests a high activity level. We'll verify it with get_calories_burned_data. 'Past 9 days' directly gives numdays = 9.",
+        "numdays": 9,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My body feels like a furnace this week.",
+        "type": "metaphorical",
+        "thinking": "The user uses symbolic language to describe high exertion. We'll analyze it using get_calories_burned_data. 'This week' corresponds to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I’ve been burning rubber during all my workouts lately.",
+        "type": "metaphorical",
+        "thinking": "The metaphor suggests intense physical effort. We’ll assess activity using get_calories_burned_data. No time specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Did I burn fewer calories during the rainy days last week?",
+        "type": "explicit",
+        "thinking": "The user is checking if weather affected activity. We’ll verify this via get_calories_burned_data. 'Last week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I've felt super sluggish since the start of the month.",
+        "type": "symptom",
+        "thinking": "The user feels unusually low energy. We'll call get_calories_burned_data to assess recent activity. 'Since the start of the month' maps to 6 days.",
+        "numdays": 6,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Am I burning enough calories for my weight loss goal?",
+        "type": "implicit",
+        "thinking": "The user implies a concern about insufficient calorie burn. We'll retrieve recent data using get_calories_burned_data. No time given, default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since joining my hiking group two weeks ago, I feel more energized.",
+        "type": "behavioral",
+        "thinking": "The user started hiking regularly. We’ll use get_calories_burned_data to measure impact. 'Two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Do my gym workouts show up in calorie burn data for this week?",
+        "type": "explicit",
+        "thinking": "The user directly asks for recent calorie trends. We'll retrieve this using get_calories_burned_data. 'This week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I’ve been on full blast with workouts the past 12 days.",
+        "type": "metaphorical",
+        "thinking": "The user is figuratively describing intense exercise. We’ll assess actual calorie burn using get_calories_burned_data. 'Past 12 days' corresponds to numdays = 12.",
+        "numdays": 12,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Ever since I got a standing desk, I’ve been more active.",
+        "type": "behavioral",
+        "thinking": "The user notes a lifestyle change likely affecting activity. We'll verify this using get_calories_burned_data. No explicit time range, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Is my new evening walk habit paying off in calories burned?",
+        "type": "implicit",
+        "thinking": "The user is curious about the effectiveness of their recent habit. We will call get_calories_burned_data. No time frame specified, so we default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "This HIIT program is brutal. I must be burning tons of calories.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to emphasize intensity. We'll use get_calories_burned_data to measure results. No timeframe given; we default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I skipped workouts the last 5 days. Curious if it shows.",
+        "type": "behavioral",
+        "thinking": "The user is wondering if their inactivity affected calorie output. We'll retrieve data using get_calories_burned_data. 'Last 5 days' → numdays = 5.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Lately I feel like I crash by the end of the day.",
+        "type": "symptom",
+        "thinking": "The user describes fatigue possibly linked to physical exertion. We’ll evaluate recent activity using get_calories_burned_data. No specific time frame, so use 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel more alive since I started dancing again last weekend.",
+        "type": "behavioral",
+        "thinking": "The user resumed dancing, which may increase calorie burn. We'll assess this change using get_calories_burned_data. 'Since last weekend' → approx. 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been chasing my toddler around nonstop this week.",
+        "type": "behavioral",
+        "thinking": "The user’s increase in activity could affect calories burned. We’ll analyze this using get_calories_burned_data. 'This week' is mapped to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "It’s like I’m constantly running a marathon lately.",
+        "type": "metaphorical",
+        "thinking": "The user expresses ongoing exhaustion metaphorically. To assess if calorie burn is contributing, we call get_calories_burned_data. No time given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been going hard at the gym. Curious about the impact.",
+        "type": "implicit",
+        "thinking": "The user implies increased workout intensity and wants to assess its effect. We'll call get_calories_burned_data. No timeframe mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I started a new workout app 2 weeks ago—want to see if it's working.",
+        "type": "behavioral",
+        "thinking": "The user began a fitness routine and is seeking evidence of its effectiveness. We'll retrieve data using get_calories_burned_data. '2 weeks ago' → numdays = 14.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "It feels like I’ve been burning off stress along with calories lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphor to link exercise with emotional relief. We’ll check physical exertion using get_calories_burned_data. No specific window given; default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve noticed my heart rate spiking more during recent workouts.",
+        "type": "implicit",
+        "thinking": "The user suspects higher activity intensity and wants confirmation. We'll verify via get_calories_burned_data. No time mentioned, so we use 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve barely moved this week—did my calorie burn drop?",
+        "type": "explicit",
+        "thinking": "The user is seeking confirmation of reduced calorie burn. We’ll use get_calories_burned_data. 'This week' translates to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I added stretching and mobility sessions to my routine this month.",
+        "type": "behavioral",
+        "thinking": "The user adopted new low-intensity exercises. We'll analyze the cumulative effect with get_calories_burned_data. 'This month' → 6 days so far.",
+        "numdays": 6,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Every little chore feels like a workout these days.",
+        "type": "symptom",
+        "thinking": "The user experiences exaggerated fatigue, possibly tied to energy expenditure. We'll examine trends using get_calories_burned_data. No timeframe mentioned; default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I'm burning fuel faster than I can refuel.",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically describes excessive energy usage. We'll assess calorie burn with get_calories_burned_data. No time given, default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Do I burn more calories on my outdoor runs than indoor workouts?",
+        "type": "explicit",
+        "thinking": "The user wants to compare recent calorie output by context. We’ll retrieve overall trends using get_calories_burned_data. No explicit time mentioned; default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since I stopped driving and started walking everywhere, I feel different.",
+        "type": "behavioral",
+        "thinking": "The user shifted from passive to active commuting. We’ll call get_calories_burned_data to measure this change. No timeframe given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been taking evening strolls with my partner for the last 6 days.",
+        "type": "behavioral",
+        "thinking": "The user added light physical activity to their daily routine. We'll assess calorie impact using get_calories_burned_data. 'Last 6 days' means numdays = 6.",
+        "numdays": 6,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories did I burn during my runs this past week?",
+        "type": "explicit",
+        "thinking": "The user directly requests calorie burn data for running over the past week. get_calories_burned_data will provide the total calories burned from these activities. 'Past week' clearly maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been feeling off since I stopped my evening walks.",
+        "type": "symptom",
+        "thinking": "The user connects feeling 'off' to stopping evening walks, suggesting a need to evaluate the impact of reduced activity. get_calories_burned_data can show the change in calorie burn. No specific time is given, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I picked up kickboxing two weeks ago, how’s that going for me?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting kickboxing, indicating a new behavior they want to assess. get_calories_burned_data will quantify the calorie burn from this activity. 'Two weeks ago' maps to 14 days, so numdays is 14.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My mood’s been great since I started swimming last month!",
+        "type": "symptom",
+        "thinking": "The user links improved mood to starting swimming, suggesting increased activity. get_calories_burned_data can confirm the calorie burn from swimming. 'Last month' implies approximately 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like my workouts are just spinning my wheels.",
+        "type": "metaphorical",
+        "thinking": "The 'spinning my wheels' metaphor suggests the user feels their workouts aren’t effective, prompting a need to check calorie burn. get_calories_burned_data will provide data to evaluate this. No time window is mentioned, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories have I burned from my gym sessions since last Monday?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for calories burned from gym sessions since last Monday. get_calories_burned_data will fetch this data. Assuming today is Tuesday, August 5, 2025, 'since last Monday' (July 28) is 8 days, so numdays is 8.",
+        "numdays": 8,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m worried I’m not doing enough with my daily yoga.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about the effectiveness of daily yoga, implying a need to measure its impact. get_calories_burned_data will provide calorie burn data. No specific time is mentioned, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been doing more cycling since the start of this month.",
+        "type": "behavioral",
+        "thinking": "The user indicates increased cycling activity since the month began, suggesting a behavior change. get_calories_burned_data will show the calorie impact. Assuming the month started on August 1, 2025, this is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m exhausted after my hikes over the past two weekends.",
+        "type": "symptom",
+        "thinking": "The user reports exhaustion after hiking, indicating possible high exertion. get_calories_burned_data can assess calorie burn to evaluate intensity. 'Past two weekends' (4 days) is less than the minimum, so I’ll use 14 days to cover the period.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My runs feel like I’m dragging a weight behind me.",
+        "type": "metaphorical",
+        "thinking": "The 'dragging a weight' metaphor implies running feels unusually tough, suggesting a need to check calorie burn. get_calories_burned_data will quantify the effort. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories did I burn from my dance classes this month?",
+        "type": "explicit",
+        "thinking": "The user directly requests calorie data for dance classes this month. get_calories_burned_data will fetch this information. 'This month' implies up to 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been skipping my morning jogs lately, and I’m feeling low.",
+        "type": "behavioral",
+        "thinking": "The user notes reduced jogging and connects it to feeling low, suggesting a link to activity levels. get_calories_burned_data will reveal changes in calorie burn. 'Lately' is vague, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m curious if my weekend workouts are doing enough.",
+        "type": "implicit",
+        "thinking": "The user questions the effectiveness of weekend workouts, implying a need to measure calorie burn. get_calories_burned_data will provide this data. No specific time is mentioned, so I’ll default to 7 days to capture recent weekends.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My body feels heavy after my gym sessions this week.",
+        "type": "symptom",
+        "thinking": "The user reports a heavy feeling post-gym, suggesting high exertion or fatigue. get_calories_burned_data can assess calorie burn to check intensity. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My workouts feel like I’m swimming against the current.",
+        "type": "metaphorical",
+        "thinking": "The 'swimming against the current' metaphor suggests workouts are challenging, with curiosity about their impact. get_calories_burned_data will quantify calorie burn. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories have I burned hiking over the past 12 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for calories burned from hiking over the past 12 days. get_calories_burned_data will fetch this data. 'Past 12 days' is explicit, so numdays is 12.",
+        "numdays": 12,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I started Pilates last week, how’s that affecting my calorie burn?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting Pilates, indicating a new behavior they want to evaluate. get_calories_burned_data will show the calorie impact. 'Last week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m not sure if my evening runs are worth the effort lately.",
+        "type": "implicit",
+        "thinking": "The user questions the value of evening runs, implying a need to check calorie burn. get_calories_burned_data will provide this data. 'Lately' is vague, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My legs are killing me after my bike rides this month.",
+        "type": "symptom",
+        "thinking": "The user reports leg pain after cycling, suggesting high exertion. get_calories_burned_data can assess calorie burn to evaluate intensity. 'This month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I’m stuck in quicksand with my workouts.",
+        "type": "metaphorical",
+        "thinking": "The 'stuck in quicksand' metaphor implies workouts feel unproductive or exhausting. get_calories_burned_data will quantify calorie burn to assess effort. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories did I burn from my yoga sessions since last Tuesday?",
+        "type": "explicit",
+        "thinking": "The user directly asks for calories burned from yoga since last Tuesday. get_calories_burned_data will fetch this data. Assuming today is Tuesday, August 5, 2025, 'since last Tuesday' (July 29) is 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been doing more weightlifting over the past three weeks.",
+        "type": "behavioral",
+        "thinking": "The user indicates increased weightlifting, suggesting a behavior change. get_calories_burned_data will show the calorie impact. 'Past three weeks' maps to 21 days, so numdays is 21.",
+        "numdays": 21,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m wondering if my daily walks are making a difference this month.",
+        "type": "implicit",
+        "thinking": "The user questions the effectiveness of daily walks, implying a need to measure calorie burn. get_calories_burned_data will provide this data. 'This month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m so sore after my spin classes this week.",
+        "type": "symptom",
+        "thinking": "The user reports soreness after spin classes, indicating possible high intensity. get_calories_burned_data can assess calorie burn to evaluate effort. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My workouts feel like I’m climbing a never-ending ladder.",
+        "type": "metaphorical",
+        "thinking": "The 'never-ending ladder' metaphor suggests workouts are exhausting or relentless. get_calories_burned_data will quantify calorie burn to gauge intensity. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories have I burned from my runs over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for calories burned from running over the last 10 days. get_calories_burned_data will fetch this data. 'Last 10 days' is explicit, so numdays is 10.",
+        "numdays": 10,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been slacking on my gym time since last month.",
+        "type": "behavioral",
+        "thinking": "The user notes reduced gym activity, suggesting a behavior change. get_calories_burned_data will reveal changes in calorie burn. 'Since last month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Are my weekend bike rides doing enough for me?",
+        "type": "implicit",
+        "thinking": "The user questions the effectiveness of weekend bike rides, implying a need to measure calorie burn. get_calories_burned_data will provide this data. No specific time is mentioned, so I’ll default to 7 days to capture recent weekends.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My heart’s pounding after my workouts this week.",
+        "type": "symptom",
+        "thinking": "The user reports a pounding heart post-workout, suggesting high exertion. get_calories_burned_data can assess calorie burn to evaluate intensity. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My exercise routine feels like running through mud.",
+        "type": "metaphorical",
+        "thinking": "The 'running through mud' metaphor implies workouts are tough or slow-going. get_calories_burned_data will quantify calorie burn to assess effort. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories did I burn from my HIIT workouts since last Friday?",
+        "type": "explicit",
+        "thinking": "The user directly asks for calories burned from HIIT workouts since last Friday. get_calories_burned_data will fetch this data. Assuming today is Tuesday, August 5, 2025, 'since last Friday' (July 31) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I started Zumba two weeks ago, how’s that impacting my calorie burn?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting Zumba, indicating a new behavior they want to evaluate. get_calories_burned_data will show the calorie impact. 'Two weeks ago' maps to 14 days, so numdays is 14.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m not sure if my morning jogs are enough these days.",
+        "type": "implicit",
+        "thinking": "The user questions the sufficiency of morning jogs, implying a need to measure calorie burn. get_calories_burned_data will provide this data. 'These days' is vague, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My arms are so tired after my gym sessions this month.",
+        "type": "symptom",
+        "thinking": "The user reports arm fatigue after gym sessions, suggesting high exertion. get_calories_burned_data can assess calorie burn to check intensity. 'This month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My workouts feel like I’m rowing against the tide.",
+        "type": "metaphorical",
+        "thinking": "The 'rowing against the tide' metaphor suggests workouts are challenging or ineffective. get_calories_burned_data will quantify calorie burn to assess effort. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories have I burned from swimming over the past 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for calories burned from swimming over the past 15 days. get_calories_burned_data will fetch this data. 'Past 15 days' is explicit, so numdays is 15.",
+        "numdays": 15,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been doing more evening walks since last week.",
+        "type": "behavioral",
+        "thinking": "The user indicates increased evening walks, suggesting a behavior change. get_calories_burned_data will show the calorie impact. 'Since last week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Are my daily runs making a difference this month?",
+        "type": "implicit",
+        "thinking": "The user questions the impact of daily runs, implying a need to measure calorie burn. get_calories_burned_data will provide this data. 'This month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m out of breath after my yoga classes this week.",
+        "type": "symptom",
+        "thinking": "The user reports breathlessness after yoga, suggesting high exertion or intensity. get_calories_burned_data can assess calorie burn to evaluate effort. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My workouts feel like I’m trying to move mountains.",
+        "type": "metaphorical",
+        "thinking": "The 'move mountains' metaphor implies workouts are extremely challenging. get_calories_burned_data will quantify calorie burn to gauge intensity. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories did I burn from my spin classes over the last 20 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for calories burned from spin classes over the last 20 days. get_calories_burned_data will fetch this data. 'Last 20 days' is explicit, so numdays is 20.",
+        "numdays": 20,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’ve been hitting the gym less this month, and I’m feeling sluggish.",
+        "type": "behavioral",
+        "thinking": "The user notes reduced gym activity and links it to feeling sluggish, suggesting a need to check calorie burn changes. get_calories_burned_data will reveal this trend. 'This month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m wondering if my hiking is enough to stay active this week.",
+        "type": "implicit",
+        "thinking": "The user questions if hiking is sufficient for staying active, implying a need to measure calorie burn. get_calories_burned_data will provide this data. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My joints are stiff after my runs this month.",
+        "type": "symptom",
+        "thinking": "The user reports joint stiffness after running, suggesting possible overexertion. get_calories_burned_data can assess calorie burn to check intensity. 'This month' implies 30 days, so numdays is 30.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My exercise feels like I’m fighting an uphill battle.",
+        "type": "metaphorical",
+        "thinking": "The 'uphill battle' metaphor suggests workouts are tough or frustrating. get_calories_burned_data will quantify calorie burn to assess effort. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "How many calories have I burned from my gym workouts since last Thursday?",
+        "type": "explicit",
+        "thinking": "The user directly asks for calories burned from gym workouts since last Thursday. get_calories_burned_data will fetch this data. Assuming today is Tuesday, August 5, 2025, 'since last Thursday' (July 31) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I started doing more cardio last week, how’s that going?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased cardio, indicating a behavior change they want to evaluate. get_calories_burned_data will show the calorie impact. 'Last week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m not sure if my daily swims are doing much for me.",
+        "type": "implicit",
+        "thinking": "The user questions the effectiveness of daily swims, implying a need to measure calorie burn. get_calories_burned_data will provide this data. No specific time is mentioned, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I’m wiped out after my dance classes this week.",
+        "type": "symptom",
+        "thinking": "The user reports exhaustion after dance classes, suggesting high exertion. get_calories_burned_data can assess calorie burn to evaluate intensity. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My workouts feel like I’m stuck in a rut.",
+        "type": "metaphorical",
+        "thinking": "The 'stuck in a rut' metaphor implies workouts feel repetitive or ineffective. get_calories_burned_data will quantify calorie burn to assess progress. No time window is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like my body's battery is stuck in low-power mode.",
+        "type": "metaphorical",
+        "thinking": "The user uses a tech metaphor to describe low energy. Since no timeframe is specified, we'll analyze the last 7 days of activity data to identify patterns.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me my calorie burn for every weekend in October.",
+        "type": "explicit",
+        "thinking": "This is a direct request for weekend-specific data. Assuming October has 5 weekends (10 days total), we'll retrieve that period.",
+        "numdays": 10,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Ever since I got promoted, I barely leave my desk.",
+        "type": "behavioral",
+        "thinking": "The user connects a work change to reduced movement. Without a specific timeframe, we'll compare the last 7 days to their pre-promotion activity.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My joints feel stiffer than usual—am I moving enough?",
+        "type": "symptom",
+        "thinking": "The user links physical discomfort to potential inactivity. 'Than usual' implies comparison, so we'll examine the past week (7 days) versus their baseline.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Has my evening walk routine made any difference since I started it three weeks ago?",
+        "type": "implicit",
+        "thinking": "The user hints at wanting to assess a new habit's impact. 'Three weeks ago' specifies a 21-day window for analysis.",
+        "numdays": 21,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Break down my active calories by hour for the past five workdays.",
+        "type": "explicit",
+        "thinking": "This is a precise request for hourly activity data during recent workdays (5 days specified).",
+        "numdays": 5,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm a sloth wearing a weighted blanket...",
+        "type": "metaphorical",
+        "thinking": "The user combines two metaphors to emphasize inactivity. We'll analyze the past week's data (7 days) to check for movement patterns.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My smart ring keeps scolding me about being sedentary—is it right?",
+        "type": "implicit",
+        "thinking": "The user questions device feedback about inactivity. No timeframe is given, so we'll verify against the last 7 days of data.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since moving downtown, I walk everywhere—but am I actually burning more?",
+        "type": "behavioral",
+        "thinking": "The user describes a lifestyle change affecting activity. 'Since moving' implies we should analyze data since their relocation date (assumed 30 days ago).",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Compare my morning vs. evening calorie burn over the last fortnight.",
+        "type": "explicit",
+        "thinking": "This is a direct comparison request between two daily periods over 14 days ('fortnight').",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My legs feel like they're filled with sand when I try to exercise.",
+        "type": "symptom",
+        "thinking": "The user describes physical heaviness during activity. We'll examine exercise patterns and calorie burn over the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm curious if my calorie burn changed after cutting out afternoon coffee.",
+        "type": "implicit",
+        "thinking": "The user hints at wanting to assess dietary impact on activity. Assuming they stopped coffee 10 days ago, we'll use that timeframe.",
+        "numdays": 10,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me days I burned over 500 calories in the past month.",
+        "type": "explicit",
+        "thinking": "This is a filtered request for high-activity days within a 30-day window.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I've become one with my recliner...",
+        "type": "metaphorical",
+        "thinking": "The user humorously implies extreme inactivity through furniture fusion metaphor. We'll check the past week's movement data (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My physical therapist said I'm recovering slower—could activity play a role?",
+        "type": "symptom",
+        "thinking": "The user connects professional feedback to potential movement patterns. Without timeframe specifics, we'll analyze the last 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Break down my calorie burn before and after daylight savings time this year.",
+        "type": "explicit",
+        "thinking": "This is a specific request comparing activity around a time change. Assuming DST was 15 days ago, we'll compare 15 days before/after (30 days total).",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm a wind-up toy that's been left on the shelf...",
+        "type": "metaphorical",
+        "thinking": "The user compares themselves to an unused toy to imply inactivity. We'll examine movement patterns over the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Has WFH made me more sedentary than when I commuted? Compare last month to pre-pandemic.",
+        "type": "behavioral",
+        "thinking": "The user wants to compare two distinct lifestyle periods. We'll analyze 30 days of current data versus historical benchmarks.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My Apple Watch says my stand hours dropped—how bad is it really?",
+        "type": "implicit",
+        "thinking": "The user questions the severity of activity reduction reported by their device. We'll verify with the past week's data (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me calories burned during my kid's soccer practices this season.",
+        "type": "explicit",
+        "thinking": "This is a specific request tied to recurring events. Assuming 8 weeks of practices (2x/week) over 16 days, we'll use that window.",
+        "numdays": 16,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I'm wading through pudding just to get to the mailbox.",
+        "type": "metaphorical",
+        "thinking": "The user uses a viscosity metaphor to describe exertion. We'll analyze daily activity patterns over the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since my gym closed for renovations, I feel puffier—am I moving less?",
+        "type": "symptom",
+        "thinking": "The user connects physical changes to disrupted routine. Assuming renovations began 14 days ago, we'll use that timeframe.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Compare my weekday dog walks to weekend hikes for the past three weeks.",
+        "type": "explicit",
+        "thinking": "This is a direct comparison between two activity types over 21 days.",
+        "numdays": 21,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm a phone that's always at 15% battery...",
+        "type": "metaphorical",
+        "thinking": "The user compares their energy to a nearly depleted device. We'll examine calorie expenditure patterns over the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My doctor said to increase NEAT—how have I been doing since my last visit?",
+        "type": "implicit",
+        "thinking": "The user references non-exercise activity thermogenesis (NEAT) recommendations. Assuming their last visit was 20 days ago, we'll use that window.",
+        "numdays": 20,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Break down my active minutes vs. calories burned this past pay period.",
+        "type": "explicit",
+        "thinking": "This is a specific request tied to a work cycle. Assuming biweekly pay periods (14 days), we'll analyze that timeframe.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like a glacier—slow-moving and heavy.",
+        "type": "metaphorical",
+        "thinking": "The user employs a geological metaphor to describe their movement. We'll analyze activity data for the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since adopting a cat, my step count has probably changed.",
+        "type": "behavioral",
+        "thinking": "The user links pet ownership to potential activity shifts. Assuming they got the cat 25 days ago, we'll use that timeframe.",
+        "numdays": 25,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My back stiffness coincides with less yard work—is there a connection?",
+        "type": "symptom",
+        "thinking": "The user suspects physical symptoms relate to activity changes. Without specific dates, we'll examine the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me when I'm most active during the day for the last 10 weekdays.",
+        "type": "explicit",
+        "thinking": "This is a request to identify daily activity peaks over 10 specified days.",
+        "numdays": 10,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm a sundial during a week of rain...",
+        "type": "metaphorical",
+        "thinking": "The user poetically implies inactivity through weather-dependent imagery. We'll check the past week's movement data (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Has using a standing desk actually increased my daily burn?",
+        "type": "implicit",
+        "thinking": "The user questions the impact of an ergonomic change. Assuming they've used it for 3 weeks (21 days), we'll analyze that period.",
+        "numdays": 21,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Compare my calorie burn during morning workouts vs. evening ones this month.",
+        "type": "explicit",
+        "thinking": "This is a direct temporal comparison request within a 30-day window.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My knees sound like popcorn when I stand up—am I too sedentary?",
+        "type": "symptom",
+        "thinking": "The user connects joint noises to potential inactivity. We'll examine movement patterns over the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm a car that's been parked in the garage all winter...",
+        "type": "metaphorical",
+        "thinking": "The user compares themselves to an unused vehicle during cold months. We'll analyze activity data for the past 2 weeks (14 days) to assess movement.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since switching to night shifts, my activity patterns feel off.",
+        "type": "behavioral",
+        "thinking": "The user describes work schedule impacts on movement. Assuming the switch occurred 3 weeks ago (21 days), we'll use that timeframe.",
+        "numdays": 21,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me calories burned during my commute days versus telework days.",
+        "type": "explicit",
+        "thinking": "This is a direct comparison request between two work modes. Assuming a 2-week period (14 days) with mixed days, we'll analyze accordingly.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My fitness tracker's 'active minutes' seem low—is that accurate?",
+        "type": "implicit",
+        "thinking": "The user questions device metrics about movement. We'll verify with the past week's calorie burn data (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I feel like I'm swimming upstream just to do basic chores.",
+        "type": "metaphorical",
+        "thinking": "The user employs a hydrodynamic metaphor to describe exertion. We'll examine activity patterns over the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Break down my activity calories by work meetings vs. focus time this sprint.",
+        "type": "explicit",
+        "thinking": "This is a specific request tied to work cycles. Assuming a 2-week sprint (14 days), we'll analyze that period.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My yoga mat has been gathering dust—how much has my activity dropped?",
+        "type": "implicit",
+        "thinking": "The user hints at reduced exercise through equipment neglect. Without timeframe specifics, we'll compare the past week to their typical routine.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm a wind chime with no breeze...",
+        "type": "metaphorical",
+        "thinking": "The user poetically implies stillness through weather imagery. We'll analyze movement data for the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me my most and least active days since getting this fitness tracker.",
+        "type": "explicit",
+        "thinking": "This is a request for activity extremes. Assuming they got the tracker 25 days ago, we'll use that window.",
+        "numdays": 25,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My energy crashes after lunch—am I burning too many calories before then?",
+        "type": "symptom",
+        "thinking": "The user connects afternoon fatigue to potential morning overexertion. We'll examine hourly burn patterns over the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since my partner started traveling for work, my step count has probably dropped.",
+        "type": "behavioral",
+        "thinking": "The user links relationship changes to activity patterns. Assuming travel began 18 days ago, we'll use that timeframe.",
+        "numdays": 18,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Compare my calorie burn during work trips versus home weeks this quarter.",
+        "type": "explicit",
+        "thinking": "This is a direct comparison request between two lifestyle modes. Assuming 12 weeks (84 days) in a quarter, we'll analyze patterns within that period.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "I'm a clock with dying batteries...",
+        "type": "metaphorical",
+        "thinking": "The user compares themselves to a slowing timepiece to describe energy decline. We'll examine activity patterns over the past week (7 days).",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Has taking the stairs instead of the elevator made any measurable difference?",
+        "type": "implicit",
+        "thinking": "The user hints at wanting to assess a behavior modification. Assuming they've done this for 2 weeks (14 days), we'll analyze that period.",
+        "numdays": 14,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Show me my activity spikes during holiday shopping days last month.",
+        "type": "explicit",
+        "thinking": "This is a specific request for event-tied data. Assuming 8 shopping days in November, we'll analyze that period.",
+        "numdays": 8,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "My fitness app's 'activity stars' have been looking lonely lately...",
+        "type": "metaphorical",
+        "thinking": "The user creatively references app graphics to imply reduced activity. 'Lately' suggests recent changes, so we'll analyze calorie burn patterns over the past 7 days.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Since my neighborhood installed sidewalks, I've been walking more - but is it enough to impact my weekly burn?",
+        "type": "behavioral",
+        "thinking": "The user connects infrastructure changes to activity habits. The query references 'weekly' comparison, so we'll examine the past 7 days against pre-sidewalk data.",
+        "numdays": 7,
+        "function": "get_calories_burned_data"
+    },
+    {
+        "query": "Break down my calorie burn during Zoom calls versus in-person meetings this quarter.",
+        "type": "explicit",
+        "thinking": "This is a specific request comparing activity across meeting types. Since quarters span ~90 days but our max is 30, we'll analyze the most recent 30 days with meeting data.",
+        "numdays": 30,
+        "function": "get_calories_burned_data"
+    }
+]

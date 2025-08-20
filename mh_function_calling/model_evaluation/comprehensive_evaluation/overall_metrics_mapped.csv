@@ -1,0 +1,2 @@
+total_samples,extraction_success,overall_success,function_accuracy,function_precision,function_recall,function_f1,parameter_accuracy
+765,1.0,0.6169934640522876,0.8104575163398693,0.8242022346683823,0.8104575163398693,0.8130126857380809,0.7542483660130719

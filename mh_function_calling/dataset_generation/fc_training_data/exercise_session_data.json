@@ -1,0 +1,1759 @@
+[
+    {
+        "query": "How have my workouts been going this month?",
+        "type": "explicit",
+        "thinking": "The user is directly asking for an overview of their exercise sessions for the current month. This requires retrieving workout data to analyze frequency, duration, or intensity trends. Since 'this month' typically spans about 30 days, I’ll set numdays to 30 to cover the entire period.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like I’ve been slacking on exercise lately.",
+        "type": "implicit",
+        "thinking": "The user hints at a concern about reduced exercise frequency or effort without specifying a time frame. This suggests a need to check recent workout consistency. With no explicit time mentioned, I’ll default to 7 days to assess recent activity.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been skipping my morning runs since last Monday.",
+        "type": "behavioral",
+        "thinking": "The user mentions a specific change in behavior—skipping morning runs—starting from last Monday. This indicates a need to analyze exercise session data to confirm the extent of this change. Assuming today is Tuesday, August 5, 2025, 'since last Monday' (July 28) implies 8 days, so I’ll set numdays to 8.",
+        "numdays": 8,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My legs feel so heavy after workouts this week.",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom (heavy legs) linked to recent workouts, suggesting a need to examine exercise intensity or type. The time frame 'this week' typically means the past 7 days, so I’ll use numdays of 7 to retrieve relevant session data.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My exercise routine feels like running in circles lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to express a sense of stagnation or lack of progress in their workouts. This implies a need to analyze session variety or progress. No specific time is given, so I’ll default to 7 days to evaluate recent patterns.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you check how often I’ve worked out in the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests a frequency analysis of their workouts over a clear time frame—past two weeks. This requires retrieving session data to count workout occurrences. 'Past two weeks' translates to 14 days, so I’ll set numdays to 14.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m not sure if I’m pushing myself enough in my gym sessions.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about workout intensity or effectiveness. This suggests analyzing session data for metrics like duration or effort. No time frame is specified, so I’ll default to 7 days to review recent gym activity.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been doing yoga every evening since the start of July.",
+        "type": "behavioral",
+        "thinking": "The user describes a consistent behavior—daily yoga since July 1. This requires checking session data to verify frequency and consistency. From July 1 to August 5, 2025, is 35 days, but since numdays is capped at 30, I’ll use 30 days.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel so drained after my runs this past month.",
+        "type": "symptom",
+        "thinking": "The user reports feeling drained, a symptom possibly tied to running intensity or frequency. This warrants analyzing run data over the mentioned period. 'This past month' suggests 30 days, so I’ll set numdays to 30.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like climbing a mountain these days.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor suggests workouts feel unusually challenging, possibly due to increased difficulty or fatigue. This requires checking session data for changes in intensity. No time frame is given, so I’ll use a default of 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How consistent have I been with cardio over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks about cardio workout consistency over a specific period. This requires retrieving session data filtered for cardio activities. The 'last 10 days' clearly maps to numdays of 10.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I haven’t felt motivated to hit the gym lately.",
+        "type": "implicit",
+        "thinking": "The user hints at a lack of motivation, likely impacting gym attendance. This suggests checking recent gym session frequency. No time frame is provided, so I’ll default to 7 days to assess recent trends.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been trying to lift heavier weights this month.",
+        "type": "behavioral",
+        "thinking": "The user mentions a change in behavior—lifting heavier weights—over the current month. This requires analyzing strength training sessions for intensity changes. 'This month' implies 30 days, so I’ll set numdays to 30.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My body feels off after workouts this past week.",
+        "type": "symptom",
+        "thinking": "The user describes a vague physical symptom ('feels off') post-workout, suggesting a need to check session intensity or recovery patterns. 'This past week' indicates 7 days, so I’ll set numdays to 7.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My exercise routine is like a broken record right now.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor implies repetitive or stagnant workouts, suggesting a need to analyze session variety. No time frame is mentioned, so I’ll default to 7 days to evaluate recent patterns.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you look at my cycling sessions from the last three weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests analysis of cycling sessions over a specific period. This requires retrieving cycling-specific workout data. 'Last three weeks' translates to 21 days, so I’ll set numdays to 21.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m worried I’m not getting enough exercise these days.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about insufficient exercise, suggesting a need to check workout frequency. No time frame is given, so I’ll use a default of 7 days to assess recent activity levels.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been running longer distances since last weekend.",
+        "type": "behavioral",
+        "thinking": "The user notes a change in running behavior—longer distances—starting last weekend. This requires analyzing running session data for distance trends. Assuming last weekend was July 26-27, 2025, that’s 9-10 days, so I’ll set numdays to 10.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My joints ache more after workouts this month.",
+        "type": "symptom",
+        "thinking": "The user reports increased joint pain tied to workouts, indicating a need to examine session intensity or type. 'This month' suggests 30 days, so I’ll set numdays to 30 to cover the period.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like wading through mud lately.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor suggests workouts feel slow or difficult, possibly due to fatigue or lack of progress. This requires checking session data for trends. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How many strength workouts did I do in the last 12 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for a count of strength workouts over a specific period. This requires retrieving strength training session data. 'Last 12 days' clearly maps to numdays of 12.",
+        "numdays": 12,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like my exercise routine is slipping away.",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests a decline in their exercise routine, indicating a need to check session frequency or consistency. No time frame is provided, so I’ll default to 7 days to assess recent trends.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been mixing up my workouts more since mid-July.",
+        "type": "behavioral",
+        "thinking": "The user describes a change in behavior—increased workout variety—since mid-July. This requires analyzing session types for diversity. From July 15 to August 5, 2025, is 21 days, so I’ll set numdays to 21.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m so sore after my workouts this past week.",
+        "type": "symptom",
+        "thinking": "The user reports post-workout soreness, a physical symptom that suggests high intensity or insufficient recovery. 'This past week' indicates 7 days, so I’ll set numdays to 7 to analyze recent sessions.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My exercise feels like pushing a boulder uphill.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor implies workouts feel extremely challenging, possibly due to intensity or mental barriers. This requires checking session data for trends. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you tell me about my workouts since last Friday?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests details about workouts since last Friday. This requires retrieving session data for analysis. Assuming last Friday was July 31, 2025, that’s 5 days, so I’ll set numdays to 5.",
+        "numdays": 5,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m not sure if I’m overdoing it with exercise lately.",
+        "type": "implicit",
+        "thinking": "The user hints at a concern about overexertion, suggesting a need to check workout intensity or frequency. No time frame is specified, so I’ll default to 7 days to review recent activity.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been doing more HIIT sessions this month.",
+        "type": "behavioral",
+        "thinking": "The user mentions a shift toward more HIIT workouts this month, indicating a need to verify this change in session data. 'This month' suggests 30 days, so I’ll set numdays to 30.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My energy levels crash after workouts this week.",
+        "type": "symptom",
+        "thinking": "The user reports low energy post-workout, a symptom that may relate to intensity or recovery issues. 'This week' indicates 7 days, so I’ll set numdays to 7 to analyze recent sessions.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like chasing my own tail lately.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor suggests a lack of progress or repetitive routines, requiring analysis of session variety. No time frame is given, so I’ll default to 7 days to check recent patterns.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How many workouts did I miss in the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks about missed workouts over a specific period, requiring a frequency analysis of sessions. 'Last 15 days' clearly maps to numdays of 15.",
+        "numdays": 15,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like exercise isn’t doing much for me anymore.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses dissatisfaction with exercise outcomes, suggesting a need to analyze session effectiveness. No time frame is provided, so I’ll default to 7 days to assess recent trends.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been cutting back on cardio since last month.",
+        "type": "behavioral",
+        "thinking": "The user describes a reduction in cardio workouts since last month, requiring analysis of cardio session frequency. 'Last month' suggests 30 days, so I’ll set numdays to 30.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My muscles feel tight after workouts this past week.",
+        "type": "symptom",
+        "thinking": "The user reports muscle tightness post-workout, indicating a need to check session intensity or stretching habits. 'This past week' maps to 7 days, so I’ll set numdays to 7.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My exercise routine is like treading water right now.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor implies a lack of progress or effort in workouts, suggesting a need to analyze session trends. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you review my workouts from the past 20 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests a review of workouts over a specific period. This requires retrieving session data for analysis. 'Past 20 days' clearly maps to numdays of 20.",
+        "numdays": 20,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m not sure if I’m sticking to my exercise goals lately.",
+        "type": "implicit",
+        "thinking": "The user hints at uncertainty about meeting exercise goals, suggesting a need to check session consistency. No time frame is provided, so I’ll default to 7 days to review recent activity.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been doing more evening workouts since last Tuesday.",
+        "type": "behavioral",
+        "thinking": "The user notes a shift to evening workouts starting last Tuesday. This requires analyzing session timing and frequency. From July 29 to August 5, 2025, is 7 days, so I’ll set numdays to 7.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel anxious before workouts this month.",
+        "type": "symptom",
+        "thinking": "The user reports pre-workout anxiety, an emotional symptom that may relate to session intensity or expectations. 'This month' suggests 30 days, so I’ll set numdays to 30 to analyze trends.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like I’m stuck in quicksand.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor suggests workouts feel slow or unproductive, requiring analysis of session progress. No time frame is given, so I’ll default to 7 days to evaluate recent patterns.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How intense have my workouts been since last Sunday?",
+        "type": "explicit",
+        "thinking": "The user directly asks about workout intensity since last Sunday. This requires retrieving session data to analyze effort metrics. Assuming last Sunday was August 3, 2025, that’s 5 days, so I’ll set numdays to 5.",
+        "numdays": 5,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like I’m not getting anywhere with my runs.",
+        "type": "implicit",
+        "thinking": "The user hints at a lack of progress in running, suggesting a need to check running session metrics like distance or pace. No time frame is provided, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been focusing on flexibility workouts this month.",
+        "type": "behavioral",
+        "thinking": "The user describes a focus on flexibility workouts this month, requiring analysis of session types. 'This month' suggests 30 days, so I’ll set numdays to 30 to verify this shift.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My heart races too much during workouts this week.",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom—elevated heart rate—during workouts, suggesting a need to check intensity. 'This week' indicates 7 days, so I’ll set numdays to 7 to analyze sessions.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My exercise feels like rowing against the current.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor implies workouts feel challenging or futile, requiring analysis of session trends. No time frame is given, so I’ll default to 7 days to check recent patterns.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you check my workout frequency for the last 25 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests a frequency analysis of workouts over a specific period. This requires retrieving session data to count occurrences. 'Last 25 days' clearly maps to numdays of 25.",
+        "numdays": 25,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m worried my workouts aren’t balanced enough lately.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about workout balance, suggesting a need to analyze session types for variety. No time frame is provided, so I’ll default to 7 days to review recent activity.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been doing shorter workouts since last month.",
+        "type": "behavioral",
+        "thinking": "The user notes a change to shorter workouts since last month, requiring analysis of session duration. 'Last month' suggests 30 days, so I’ll set numdays to 30.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel lightheaded after workouts this past week.",
+        "type": "symptom",
+        "thinking": "The user reports lightheadedness post-workout, a symptom that may relate to intensity or hydration. 'This past week' indicates 7 days, so I’ll set numdays to 7 to analyze sessions.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like I’m spinning my wheels.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor suggests a lack of progress or effort in workouts, requiring analysis of session trends. No time frame is given, so I’ll default to 7 days to evaluate recent patterns.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you show me how consistent my workouts have been over the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user is asking for an overview of their workout regularity, indicating interest in exercise session frequency and distribution. Retrieving exercise session data is necessary to assess consistency. The phrase 'past two weeks' maps directly to numdays = 14.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I haven't been feeling that active lately. Wonder if I'm actually working out less.",
+        "type": "implicit",
+        "thinking": "The user suspects a decline in physical activity and is looking for indirect validation. Exercise session data can confirm any decrease in workout frequency. No explicit time frame is mentioned, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "This month I’ve been trying to stay on track with my gym schedule. Any insights?",
+        "type": "behavioral",
+        "thinking": "The user mentions a recent behavioral effort to maintain a workout routine. Checking exercise session logs can help evaluate adherence. 'This month' suggests a rough span of 30 days.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My legs feel heavy—have I been overdoing leg days recently?",
+        "type": "symptom",
+        "thinking": "The user is experiencing physical fatigue likely linked to recent workouts. Analyzing recent exercise sessions can identify if there's been an intensity spike. 'Recently' is vague; defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "It feels like I’ve been dancing with my limits lately.",
+        "type": "metaphorical",
+        "thinking": "The figurative language implies the user might be pushing themselves physically. Looking into recent exercise sessions can validate intensity or frequency changes. No time is given, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Compare my weekend workouts for the last three weekends.",
+        "type": "explicit",
+        "thinking": "The user wants a comparison of weekend exercise sessions over three consecutive weeks. Exercise session data is essential to retrieve and compare relevant workouts. 'Last three weekends' maps to approximately 21 days.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I think my workouts have been all over the place this week.",
+        "type": "implicit",
+        "thinking": "The user suspects inconsistency in their routine and seeks validation. Reviewing exercise session data will help analyze patterns. 'This week' maps to numdays = 7.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Ever since Sunday, I’ve felt more motivated to work out.",
+        "type": "behavioral",
+        "thinking": "The user notes an increase in workout motivation beginning on Sunday. Exercise session data is relevant to assess changes. Assuming today is Tuesday, 'since Sunday' translates to 2 days.",
+        "numdays": 2,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Lately I’ve been waking up sore. What does my recent training look like?",
+        "type": "symptom",
+        "thinking": "Soreness may indicate recent intense or frequent workouts. Analyzing recent exercise sessions helps understand possible causes. 'Lately' is interpreted as 7 days by default.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like a blur—have I even done anything this week?",
+        "type": "metaphorical",
+        "thinking": "The user is unsure about their recent activity level, expressed in figurative terms. Fetching this week's exercise sessions can bring clarity. 'This week' means numdays = 7.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you show me how many workouts I’ve done in the past 10 days?",
+        "type": "explicit",
+        "thinking": "The user is directly requesting a count or summary of workouts. Exercise session data is needed for this. The phrase 'past 10 days' maps directly to numdays = 10.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I don’t think I’ve been sticking to my plan since the start of the month.",
+        "type": "implicit",
+        "thinking": "The user suspects a drop in consistency and refers to a time window starting at the beginning of the current month. Assuming we're mid-month, estimate 15 days.",
+        "numdays": 15,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been more regular with my spin classes lately.",
+        "type": "behavioral",
+        "thinking": "The user highlights a behavior change toward consistent spin classes. Exercise session data will help confirm this trend. 'Lately' is vague; defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Why do my shoulders ache so much this week?",
+        "type": "symptom",
+        "thinking": "The user is experiencing physical discomfort and wants to link it to workouts. Reviewing sessions from this week helps correlate the symptom. 'This week' implies 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Feels like I’ve been in beast mode recently.",
+        "type": "metaphorical",
+        "thinking": "The user is metaphorically expressing high workout intensity. Retrieving recent sessions helps quantify this. 'Recently' defaults to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "What does my training log from the last 5 days look like?",
+        "type": "explicit",
+        "thinking": "The user seeks a snapshot of their recent workout log. This requires accessing exercise session data. 'Last 5 days' clearly maps to numdays = 5.",
+        "numdays": 5,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My routine hasn’t felt the same since I got back from vacation two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user suggests a change in behavior starting after vacation. Analyzing sessions for the last 14 days will capture post-vacation patterns. 'Two weeks ago' maps to 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve started lifting again after a long break.",
+        "type": "behavioral",
+        "thinking": "The user signals resumption of strength training. Reviewing recent sessions validates this behavioral change. No time specified, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been feeling drained after workouts—has my frequency increased?",
+        "type": "symptom",
+        "thinking": "The user suspects fatigue might be due to increased workout frequency. Exercise session data can reveal trends. No exact time mentioned, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been chasing the burn all week.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to suggest intense training. Retrieving this week's sessions helps confirm that. 'All week' translates to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Check how many sessions I completed last week.",
+        "type": "explicit",
+        "thinking": "The user wants a summary of sessions from the previous calendar week. Exercise session data will provide this. 'Last week' implies numdays = 7.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like I’ve been slacking off ever since last Friday.",
+        "type": "implicit",
+        "thinking": "The user perceives a decline in their routine starting from last Friday. Reviewing session data from that day onward can validate this. Assuming today is Tuesday, 'since last Friday' maps to 4 days.",
+        "numdays": 4,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m getting back into HIIT—need to see how often I’ve done it lately.",
+        "type": "behavioral",
+        "thinking": "The user is resuming HIIT training and wants to monitor frequency. Exercise session data will help verify this behavior. 'Lately' defaults to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been exhausted every evening—could my workouts be too frequent?",
+        "type": "symptom",
+        "thinking": "Evening fatigue could be tied to recent workout intensity or frequency. Checking session data helps investigate. No time given, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been moving like a machine this past week.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to express consistent activity. Pulling session data from the past week can support this. 'Past week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How often did I work out in the past 12 days?",
+        "type": "explicit",
+        "thinking": "The user requests workout frequency over a 12-day span. Exercise session data is required. 'Past 12 days' maps directly to numdays = 12.",
+        "numdays": 12,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m not sure if I’ve been slacking or just busy lately.",
+        "type": "implicit",
+        "thinking": "The user is uncertain about their workout discipline. Exercise session data can objectively clarify. No time is mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve added yoga twice this week to my routine.",
+        "type": "behavioral",
+        "thinking": "User is noting a new workout habit. Verifying sessions helps confirm the behavioral shift. 'This week' means 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been sore in my upper body since Monday.",
+        "type": "symptom",
+        "thinking": "The user connects soreness to recent workouts. Checking session data from Monday onward may explain it. Assuming today is Friday, that’s 4 days.",
+        "numdays": 4,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Been grinding all week long.",
+        "type": "metaphorical",
+        "thinking": "User expresses persistent effort using a metaphor. Session data for this week confirms intensity or frequency. 'All week' = 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you check how consistent I’ve been this past 3 weeks?",
+        "type": "explicit",
+        "thinking": "The user wants to evaluate consistency over a 3-week span. Exercise session data enables this. 'Past 3 weeks' = 21 days.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Ever since the new program started 10 days ago, I’ve been pushing hard.",
+        "type": "implicit",
+        "thinking": "User started a new routine and believes they’ve increased effort. Analyzing exercise sessions since then will confirm. '10 days ago' maps to numdays = 10.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I began doing morning workouts last week.",
+        "type": "behavioral",
+        "thinking": "The user highlights a new behavior—morning exercise. Session data from last week onward will show changes. 'Last week' = 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My back has been stiff since I started that kettlebell challenge.",
+        "type": "symptom",
+        "thinking": "The user’s back pain might be linked to recent workouts. Reviewing recent sessions could identify intensity triggers. No exact time given, default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "It’s like I’ve been living at the gym lately.",
+        "type": "metaphorical",
+        "thinking": "User uses a figure of speech to imply high workout frequency. Exercise session data can confirm the claim. 'Lately' defaults to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Give me a breakdown of my workouts from the past 15 days.",
+        "type": "explicit",
+        "thinking": "The user wants detailed exercise session data from the last 15 days. The request is direct and clearly specifies the range. 'Past 15 days' = 15.",
+        "numdays": 15,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Haven’t felt the same ever since I stopped tracking workouts three weeks ago.",
+        "type": "implicit",
+        "thinking": "The user reflects on a behavioral shift that began 3 weeks ago. Reviewing sessions since then can help assess impact. 'Three weeks' = 21 days.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve started doing two-a-days this week.",
+        "type": "behavioral",
+        "thinking": "The user is indicating an increase in workout frequency per day. Checking exercise session data from this week helps verify. 'This week' = 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "These workouts are draining me—has my volume gone up?",
+        "type": "symptom",
+        "thinking": "User expresses fatigue possibly due to increased training. Reviewing recent exercise sessions helps assess volume. No time frame, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My calendar’s been packed with workouts lately.",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically refers to a full workout schedule. Reviewing session data confirms if activity has increased. 'Lately' defaults to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Pull up my sessions from the last 20 days.",
+        "type": "explicit",
+        "thinking": "The user wants to see their exercise activity from the past 20 days. This is a direct request requiring session data. 'Last 20 days' maps to numdays = 20.",
+        "numdays": 20,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Haven’t been hitting the gym as much since my workload picked up two weeks ago.",
+        "type": "implicit",
+        "thinking": "The user suspects decreased activity after workload increase. Reviewing the past 14 days of session data can verify this. 'Two weeks ago' = 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Just got back on track with daily workouts.",
+        "type": "behavioral",
+        "thinking": "The user has resumed a consistent routine. Session data is needed to validate this behavioral change. No time range is specified, default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been so sore that I can barely move—what’s my training load lately?",
+        "type": "symptom",
+        "thinking": "The user is concerned their soreness may be due to heavy training. Reviewing recent sessions helps assess overload. 'Lately' defaults to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like I’ve been training like a warrior lately.",
+        "type": "metaphorical",
+        "thinking": "The user is metaphorically describing intense effort. Pulling recent session data helps validate this. No time provided, default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been slacking on my workouts this past week and feel guilty about it.",
+        "type": "behavioral",
+        "thinking": "The user is expressing guilt over reduced exercise frequency. This requires analyzing their workout history to understand the pattern. Since they mentioned 'this past week', we'll look at the last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My energy levels have dropped since I stopped going to the gym regularly.",
+        "type": "symptom",
+        "thinking": "The user connects their low energy to decreased gym attendance. We should examine their exercise patterns to identify when the change occurred. No specific timeframe given, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you show me my workout consistency over the last two weeks?",
+        "type": "explicit",
+        "thinking": "This is a direct request for workout consistency metrics. The user specified 'last two weeks', so we'll retrieve data for 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like I'm running on empty during my workouts lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language to describe workout fatigue. We should analyze recent exercise sessions to spot patterns. No timeframe mentioned, using default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Has my running duration changed significantly since the new year?",
+        "type": "explicit",
+        "thinking": "User wants to compare current running duration to their new year baseline. Since it's August, this would require about 30 days for meaningful comparison.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My muscles ache constantly after switching to morning workouts.",
+        "type": "symptom",
+        "thinking": "Physical symptoms are reported after a schedule change. We should examine exercise intensity and frequency since the switch. Assuming the change happened recently, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I wonder if skipping yoga is making me more irritable.",
+        "type": "implicit",
+        "thinking": "The user hints at a connection between missed yoga and mood changes. We should analyze yoga session frequency. No timeframe specified, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Show me my most active days in June.",
+        "type": "explicit",
+        "thinking": "Direct request for activity analysis during a specific month. June has 30 days, so we'll retrieve the full month's data.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workout routine feels like a broken record - same thing every day.",
+        "type": "metaphorical",
+        "thinking": "User expresses monotony in their exercise routine metaphorically. We should analyze workout variety. No timeframe given, using 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've doubled my gym visits this month but don't see results.",
+        "type": "behavioral",
+        "thinking": "User reports increased gym attendance without expected outcomes. Need to compare current month's data to previous. Using 30 days for full month analysis.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Why do I feel more anxious on days I don't exercise?",
+        "type": "implicit",
+        "thinking": "User implies a connection between skipped workouts and anxiety. We should compare exercise days vs non-exercise days. Defaulting to 7 days for recent pattern.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Has my average cycling distance changed in the past 10 days?",
+        "type": "explicit",
+        "thinking": "Direct question about cycling performance changes. User specified 'past 10 days', so we'll use that exact timeframe.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I'm a hamster on a wheel - working out but going nowhere.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical expression of workout frustration. Need to analyze progress metrics. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My sleep improved after adding evening walks three weeks ago.",
+        "type": "behavioral",
+        "thinking": "User reports positive change from a behavioral modification. Should examine walk consistency since the change (21 days).",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you compare my weekend vs weekday workout intensity?",
+        "type": "explicit",
+        "thinking": "Direct request for activity comparison. Need several weeks for reliable pattern, so using 21 days (3 weeks).",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel weaker during workouts since returning from vacation.",
+        "type": "symptom",
+        "thinking": "Reports physical symptoms post-vacation. Should analyze workout performance since return. Assuming vacation ended recently, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My motivation to exercise disappears like morning fog.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical description of motivation loss. Need to examine recent workout patterns. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Have I been consistent with my physical therapy exercises this month?",
+        "type": "explicit",
+        "thinking": "Direct question about therapy exercise consistency. Month-long period requires 30 days of data.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I'm curious if my afternoon workouts are more productive than mornings.",
+        "type": "implicit",
+        "thinking": "Implied interest in comparing workout times. Need sufficient data for comparison - using 14 days for reliable pattern.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My joints hurt more since increasing running frequency.",
+        "type": "symptom",
+        "thinking": "Physical symptoms tied to behavior change. Should analyze running frequency changes. Assuming recent change, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Show me my exercise patterns since I got my fitness tracker.",
+        "type": "explicit",
+        "thinking": "Direct request for data since a specific event. Assuming tracker was acquired recently, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Workouts feel like climbing Everest - exhausting before I start.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical expression of exercise difficulty. Need to analyze recent workout metrics. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've missed my usual Monday workouts for three weeks straight.",
+        "type": "behavioral",
+        "thinking": "Reports a consistent behavioral change. Should verify this pattern over the mentioned 21-day period.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Do I exercise less when work gets busy?",
+        "type": "implicit",
+        "thinking": "Implied question about work stress affecting exercise. Need sufficient data for correlation - using 30 days for comprehensive analysis.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My recovery time seems longer after high-intensity workouts.",
+        "type": "symptom",
+        "thinking": "Reports physical recovery symptoms. Should analyze workout intensity and frequency. No timeframe, using default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you show my progress since starting the marathon training plan?",
+        "type": "explicit",
+        "thinking": "Direct request for progress tracking since a specific start date. Assuming plan began recently, checking last 21 days.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Exercise has become my anchor during this stressful period.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical expression of exercise's emotional role. Should analyze workout consistency. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been more consistent with yoga but feel less flexible.",
+        "type": "behavioral",
+        "thinking": "Reports behavioral change with unexpected results. Need to examine yoga frequency and duration. No timeframe, using 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Has my step count decreased since the weather got colder?",
+        "type": "implicit",
+        "thinking": "Implied question about weather impact on activity. Need recent data for comparison - using 14 days for meaningful analysis.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My knees ache after switching from treadmill to outdoor running.",
+        "type": "symptom",
+        "thinking": "Physical symptoms tied to exercise change. Should analyze running patterns since the switch. Assuming recent change, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Show me my most and least active days over the past month.",
+        "type": "explicit",
+        "thinking": "Direct request for activity extremes. 'Past month' indicates 30 days of data needed.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Working out is my lightning rod for stress, but I've been skipping.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical expression of exercise's role with recent behavioral change. Need to analyze skipped sessions. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've added swimming to my routine but feel more tired than energized.",
+        "type": "behavioral",
+        "thinking": "Reports new activity with unexpected results. Should examine workout balance since the addition. Assuming recent change, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Is there a pattern to when I skip my evening walks?",
+        "type": "implicit",
+        "thinking": "Implied interest in understanding walk consistency patterns. Need sufficient data - using 21 days for reliable insights.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My shoulders feel tense after reducing weight training frequency.",
+        "type": "symptom",
+        "thinking": "Physical symptoms tied to workout reduction. Should analyze weight training changes. Assuming recent change, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Compare my pre-dawn workouts to my after-work sessions this month.",
+        "type": "explicit",
+        "thinking": "Direct request for time-of-day comparison. Month-long period requires 30 days of data.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Exercise used to be my sanctuary, now it feels like a chore.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical expression of changed exercise perception. Need to analyze recent workout patterns. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been doing shorter but more frequent workouts - is this better?",
+        "type": "behavioral",
+        "thinking": "Reports modified exercise approach with implicit question about effectiveness. Should analyze new pattern. Assuming change occurred recently, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Do I compensate with more steps on days I skip the gym?",
+        "type": "implicit",
+        "thinking": "Implied question about activity substitution patterns. Need sufficient data - using 21 days for reliable analysis.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I get headaches after high-intensity interval training sessions.",
+        "type": "symptom",
+        "thinking": "Physical symptoms tied to specific workout type. Should analyze HIIT frequency and timing. No timeframe, using default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Show me my activity trends since I recovered from the flu.",
+        "type": "explicit",
+        "thinking": "Direct request for post-illness activity analysis. Assuming recent recovery, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workout motivation is a rollercoaster - up and down constantly.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical description of inconsistent motivation. Need to examine workout patterns. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been walking the dog instead of gym sessions - is this enough?",
+        "type": "behavioral",
+        "thinking": "Reports activity substitution with implicit question about adequacy. Should analyze new routine. Assuming recent change, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Do I exercise less when my mood is lower?",
+        "type": "implicit",
+        "thinking": "Implied question about mood-exercise connection. Need sufficient data for correlation - using 30 days for comprehensive analysis.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My back pain flares up after strength training sessions.",
+        "type": "symptom",
+        "thinking": "Physical symptoms tied to specific activity. Should analyze strength training frequency. No timeframe, using default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How has my running pace changed since I got new shoes?",
+        "type": "explicit",
+        "thinking": "Direct question about equipment change impact. Assuming recent purchase, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Exercise feels like pushing a boulder uphill these days.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical expression of exercise difficulty. Need to analyze recent workout metrics. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I switched to lunchtime workouts but feel sluggish afterwards.",
+        "type": "behavioral",
+        "thinking": "Reports schedule change with negative effects. Should analyze new workout timing. Assuming recent switch, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Is there a connection between my workout time and sleep quality?",
+        "type": "implicit",
+        "thinking": "Implied interest in exercise-sleep relationship. Need sufficient data - using 30 days for reliable pattern analysis.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My hands tremble after intense weightlifting sessions.",
+        "type": "symptom",
+        "thinking": "Physical symptoms post-exercise. Should analyze weightlifting intensity and frequency. No timeframe, using default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Show me my activity patterns since daylight hours decreased.",
+        "type": "explicit",
+        "thinking": "Direct request for seasonal impact analysis. Assuming recent daylight change, checking last 21 days.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Have I been keeping up with my workouts over the past two months?",
+        "type": "explicit",
+        "thinking": "The user is directly asking about their workout consistency over the past two months. This requires retrieving exercise session data to evaluate frequency and patterns. Since two months is approximately 60 days, I’ll cap numdays at 30, the maximum allowed, to cover a significant portion of the period.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like I’m in a rut with my exercise routine.",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests dissatisfaction or stagnation in their exercise routine, indicating a need to analyze session variety or progress. No time frame is specified, so I’ll default to 7 days to assess recent trends.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been walking more since the start of this week.",
+        "type": "behavioral",
+        "thinking": "The user mentions a specific behavior change—increased walking—starting this week. This requires checking session data to confirm the frequency of walking. Assuming today is August 5, 2025, and the week started on Monday, August 4, I’ll set numdays to 5 to cover Monday to today.",
+        "numdays": 5,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been super tired after my gym sessions this month.",
+        "type": "symptom",
+        "thinking": "The user reports excessive fatigue after gym sessions, a physical symptom that may relate to workout intensity or recovery. The time frame ‘this month’ suggests 30 days, so I’ll set numdays to 30 to analyze recent sessions.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like I’m carrying the world on my shoulders.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor implies workouts feel burdensome or overwhelming, suggesting a need to check for high intensity or mental fatigue. No time frame is provided, so I’ll default to 7 days to evaluate recent patterns.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you tell me how many yoga sessions I did in the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests a count of yoga sessions over a specific period. This requires retrieving yoga-specific session data. The ‘last 10 days’ clearly maps to numdays of 10.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m not sure if I’m exercising enough to feel good.",
+        "type": "implicit",
+        "thinking": "The user hints at uncertainty about whether their exercise is sufficient for mental or physical benefits, suggesting a need to check session frequency and type. No time frame is given, so I’ll default to 7 days to review recent activity.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been adding more stretching to my routine since last Wednesday.",
+        "type": "behavioral",
+        "thinking": "The user describes a change in behavior—incorporating more stretching—since last Wednesday. This requires analyzing session data for stretching activities. From July 30 to August 5, 2025, is 6 days, so I’ll set numdays to 6.",
+        "numdays": 6,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My knees hurt after running this past week.",
+        "type": "symptom",
+        "thinking": "The user reports knee pain after running, a physical symptom that may indicate overexertion or improper form. The time frame ‘this past week’ suggests 7 days, so I’ll set numdays to 7 to analyze running sessions.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My exercise routine feels like walking a tightrope.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor suggests workouts feel precarious or difficult to maintain, indicating a need to check consistency or balance. No time frame is provided, so I’ll default to 7 days to assess recent trends.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How intense were my workouts in the last three weeks?",
+        "type": "explicit",
+        "thinking": "The user directly asks about workout intensity over a specific period. This requires retrieving session data to analyze effort metrics. ‘Last three weeks’ translates to 21 days, so I’ll set numdays to 21.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like I’m losing my drive to work out.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses a decline in motivation for exercise, suggesting a need to check session frequency or engagement. No time frame is specified, so I’ll default to 7 days to review recent activity.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been doing more outdoor runs since the start of July.",
+        "type": "behavioral",
+        "thinking": "The user mentions a shift to more outdoor running since July 1, requiring analysis of running session data. From July 1 to August 5, 2025, is 35 days, but since numdays is capped at 30, I’ll use 30 days.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel jittery after my workouts this week.",
+        "type": "symptom",
+        "thinking": "The user reports feeling jittery post-workout, an emotional or physical symptom that may relate to intensity or hydration. ‘This week’ suggests 7 days, so I’ll set numdays to 7 to analyze recent sessions.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts are like trying to swim upstream.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor implies workouts feel challenging or unproductive, suggesting a need to analyze session progress or difficulty. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you check my gym attendance for the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests an analysis of gym attendance over a specific period. This requires retrieving session data for frequency. ‘Last 15 days’ clearly maps to numdays of 15.",
+        "numdays": 15,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m not sure if my workouts are helping my mood lately.",
+        "type": "implicit",
+        "thinking": "The user hints at uncertainty about the mental health benefits of their workouts, suggesting a need to check session consistency or type. No time frame is provided, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been skipping my evening workouts since last Friday.",
+        "type": "behavioral",
+        "thinking": "The user describes a behavior change—skipping evening workouts—since last Friday. This requires analyzing session data to confirm the change. From July 31 to August 5, 2025, is 5 days, so I’ll set numdays to 5.",
+        "numdays": 5,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My back feels stiff after workouts this month.",
+        "type": "symptom",
+        "thinking": "The user reports back stiffness post-workout, a physical symptom that may relate to exercise type or form. ‘This month’ suggests 30 days, so I’ll set numdays to 30 to analyze sessions.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My exercise feels like I’m stuck in a hamster wheel.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor suggests repetitive or unproductive workouts, requiring analysis of session variety. No time frame is given, so I’ll default to 7 days to check recent patterns.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How many cardio sessions did I do in the last 20 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for a count of cardio sessions over a specific period. This requires retrieving cardio-specific session data. ‘Last 20 days’ clearly maps to numdays of 20.",
+        "numdays": 20,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like my workouts aren’t worth the effort anymore.",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses dissatisfaction with workout outcomes, suggesting a need to analyze session effectiveness or engagement. No time frame is provided, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been trying group fitness classes since last month.",
+        "type": "behavioral",
+        "thinking": "The user mentions a shift to group fitness classes since last month, requiring analysis of session types. ‘Last month’ suggests 30 days, so I’ll set numdays to 30.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel irritable after my workouts this week.",
+        "type": "symptom",
+        "thinking": "The user reports irritability post-workout, an emotional symptom that may relate to overexertion or stress. ‘This week’ suggests 7 days, so I’ll set numdays to 7 to analyze sessions.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like climbing a never-ending ladder.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor implies workouts feel exhausting or futile, suggesting a need to check intensity or progress. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you look at my swimming sessions from the last 12 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests analysis of swimming sessions over a specific period. This requires retrieving swimming-specific session data. ‘Last 12 days’ clearly maps to numdays of 12.",
+        "numdays": 12,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m worried I’m not recovering well from my workouts.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about recovery, suggesting a need to analyze session intensity or rest periods. No time frame is provided, so I’ll default to 7 days to assess recent trends.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been doing more bodyweight exercises since last Monday.",
+        "type": "behavioral",
+        "thinking": "The user describes a shift to bodyweight exercises since last Monday. This requires checking session data for exercise types. From July 28 to August 5, 2025, is 8 days, so I’ll set numdays to 8.",
+        "numdays": 8,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My shoulders feel sore after workouts this past month.",
+        "type": "symptom",
+        "thinking": "The user reports shoulder soreness post-workout, a physical symptom that may relate to exercise type or form. ‘This past month’ suggests 30 days, so I’ll set numdays to 30.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My exercise routine feels like banging my head against a wall.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor suggests frustration or lack of progress in workouts, requiring analysis of session trends. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How consistent have I been with running since last Sunday?",
+        "type": "explicit",
+        "thinking": "The user directly asks about running consistency since last Sunday. This requires retrieving running session data. Assuming last Sunday was August 3, 2025, that’s 5 days, so I’ll set numdays to 5.",
+        "numdays": 5,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like I’m not making progress with my workouts.",
+        "type": "implicit",
+        "thinking": "The user hints at a lack of progress in their workouts, suggesting a need to analyze session metrics like intensity or duration. No time frame is provided, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been focusing on morning workouts since mid-July.",
+        "type": "behavioral",
+        "thinking": "The user mentions a shift to morning workouts since mid-July, requiring analysis of session timing. From July 15 to August 5, 2025, is 21 days, so I’ll set numdays to 21.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel shaky after my workouts this week.",
+        "type": "symptom",
+        "thinking": "The user reports feeling shaky post-workout, a physical symptom that may relate to intensity or nutrition. ‘This week’ suggests 7 days, so I’ll set numdays to 7 to analyze sessions.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like I’m lost in a maze.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor implies confusion or lack of direction in workouts, suggesting a need to analyze session structure. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you review my workout duration for the last 25 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests an analysis of workout duration over a specific period. This requires retrieving session data for duration metrics. ‘Last 25 days’ clearly maps to numdays of 25.",
+        "numdays": 25,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m not sure if I’m overtraining lately.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about potential overtraining, suggesting a need to check workout frequency or intensity. No time frame is provided, so I’ll default to 7 days to assess recent activity.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been doing more cycling since last month.",
+        "type": "behavioral",
+        "thinking": "The user describes a shift to more cycling since last month, requiring analysis of cycling session frequency. ‘Last month’ suggests 30 days, so I’ll set numdays to 30.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel nauseous after workouts this past week.",
+        "type": "symptom",
+        "thinking": "The user reports nausea post-workout, a physical symptom that may relate to intensity or hydration. ‘This past week’ suggests 7 days, so I’ll set numdays to 7 to analyze sessions.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like I’m running on empty.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor suggests exhaustion or lack of energy in workouts, requiring analysis of session intensity or frequency. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How many weightlifting sessions did I do in the last 18 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for a count of weightlifting sessions over a specific period. This requires retrieving weightlifting-specific session data. ‘Last 18 days’ clearly maps to numdays of 18.",
+        "numdays": 18,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel like my workouts are just going through the motions.",
+        "type": "implicit",
+        "thinking": "The user hints at a lack of engagement or purpose in workouts, suggesting a need to analyze session variety or intensity. No time frame is provided, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been cutting back on evening runs since last month.",
+        "type": "behavioral",
+        "thinking": "The user describes a reduction in evening runs since last month, requiring analysis of running session frequency. ‘Last month’ suggests 30 days, so I’ll set numdays to 30.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My head hurts after workouts this week.",
+        "type": "symptom",
+        "thinking": "The user reports headaches post-workout, a physical symptom that may relate to hydration or intensity. ‘This week’ suggests 7 days, so I’ll set numdays to 7 to analyze sessions.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like I’m fighting a losing battle.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor implies workouts feel futile or overly challenging, suggesting a need to analyze session progress or difficulty. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you check my workout variety for the last 22 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests an analysis of workout variety over a specific period. This requires retrieving session data for exercise types. ‘Last 22 days’ clearly maps to numdays of 22.",
+        "numdays": 22,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’m worried my workouts aren’t challenging enough.",
+        "type": "implicit",
+        "thinking": "The user expresses concern about insufficient workout challenge, suggesting a need to analyze session intensity. No time frame is provided, so I’ll default to 7 days to assess recent activity.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I’ve been incorporating more cardio since last Tuesday.",
+        "type": "behavioral",
+        "thinking": "The user describes a shift to more cardio since last Tuesday. This requires analyzing session data for cardio activities. From July 29 to August 5, 2025, is 7 days, so I’ll set numdays to 7.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I feel unusually sore after workouts this month.",
+        "type": "symptom",
+        "thinking": "The user reports unusual soreness post-workout, a physical symptom that may relate to intensity or recovery. ‘This month’ suggests 30 days, so I’ll set numdays to 30 to analyze sessions.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workouts feel like I’m trudging through snow.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor suggests workouts feel slow or laborious, requiring analysis of session effort or progress. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been crushing my workouts this month but my mood hasn't improved like I expected.",
+        "type": "behavioral",
+        "thinking": "User reports increased exercise intensity without expected emotional benefits. Need to analyze workout patterns and compare to mood data. Specified 'this month', so using 30 days.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My legs feel like jelly after switching to daily stair climbing.",
+        "type": "symptom",
+        "thinking": "Physical symptoms reported after exercise routine change. Should examine frequency and intensity of new activity. Assuming recent change, checking last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you show me how many calories I've burned during morning vs evening workouts in the past fortnight?",
+        "type": "explicit",
+        "thinking": "Direct request for time-of-day comparison of calorie expenditure. 'Past fortnight' means we need 14 days of data.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Exercise used to be my happy pill, now it's just another checkbox.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical expression of changed exercise perception. Need to analyze recent workout patterns for changes. No timeframe given, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I wonder if my inconsistent sleep is affecting my workout performance.",
+        "type": "implicit",
+        "thinking": "User hints at connection between sleep and exercise quality. Need to analyze both metrics. No timeframe specified, using default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Since adding weekend hikes, my weekday workouts feel easier.",
+        "type": "behavioral",
+        "thinking": "Reports positive change from new activity pattern. Should examine workout performance since adding hikes. Assuming change occurred 3 weeks ago, using 21 days.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My breathing feels more labored during runs this past week.",
+        "type": "symptom",
+        "thinking": "Physical symptom during exercise reported. Need to analyze running sessions and possible contributing factors. Specified 'past week', so 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Show me my most skipped workout days over the last 30 days.",
+        "type": "explicit",
+        "thinking": "Direct request for consistency analysis. User specified exact timeframe of 30 days.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My motivation to exercise is a candle flickering in the wind.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical description of inconsistent motivation. Should examine workout patterns for drops in consistency. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've stopped doing cool-down stretches and notice more muscle tightness.",
+        "type": "behavioral",
+        "thinking": "Reports behavior change with physical consequences. Need to analyze workout completeness since change. Assuming recent change, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Is there a connection between my caffeine intake and workout quality?",
+        "type": "implicit",
+        "thinking": "Implied interest in substance-exercise relationship. Need sufficient data for correlation - using 21 days for meaningful analysis.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My knees click during squats since increasing weight last week.",
+        "type": "symptom",
+        "thinking": "Physical symptom tied to recent intensity change. Should analyze weight training patterns. Specified 'last week', so 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Compare my pre-work and post-work exercise sessions this month.",
+        "type": "explicit",
+        "thinking": "Direct request for time-of-day comparison. 'This month' indicates 30 days of data needed.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Working out feels like dragging an anchor through sand these days.",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor expressing exercise difficulty. Need to analyze recent workout metrics for changes. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been doing yoga every morning but feel stiffer than before.",
+        "type": "behavioral",
+        "thinking": "Reports increased activity with unexpected results. Should examine yoga consistency and possible overtraining. No timeframe, using 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Do I compensate with longer workouts after indulgent meals?",
+        "type": "implicit",
+        "thinking": "Implied question about behavioral compensation patterns. Need sufficient data - using 14 days for reliable insights.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I get dizzy spells after high-altitude treadmill sessions.",
+        "type": "symptom",
+        "thinking": "Physical symptoms tied to specific workout type. Should analyze frequency and intensity of these sessions. No timeframe, using default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Show me my heart rate trends during cardio over the past 15 days.",
+        "type": "explicit",
+        "thinking": "Direct request for specific performance metric. User specified exact 15-day timeframe.",
+        "numdays": 15,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My enthusiasm for the gym is a deflating balloon.",
+        "type": "metaphorical",
+        "thinking": "Creative metaphor describing waning motivation. Need to examine workout consistency patterns. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Since moving my workout to before breakfast, I crash by afternoon.",
+        "type": "behavioral",
+        "thinking": "Reports schedule change with negative consequences. Should analyze energy patterns since change. Assuming recent change, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I'm curious if weather changes affect my outdoor running consistency.",
+        "type": "implicit",
+        "thinking": "Implied interest in environmental impact on exercise. Need sufficient data - using 30 days for comprehensive analysis.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My shoulders burn for days after swimming sessions now.",
+        "type": "symptom",
+        "thinking": "Physical symptoms tied to specific activity. Should analyze swimming frequency and intensity changes. 'Now' implies recent change, checking last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How has my average workout duration changed since spring began?",
+        "type": "explicit",
+        "thinking": "Direct request for seasonal comparison. Assuming spring began recently, checking last 21 days.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Exercise is my lightning rod, but lately the storms keep coming.",
+        "type": "metaphorical",
+        "thinking": "Creative metaphor about stress management through exercise. Need to analyze recent workout patterns. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've replaced weight training with bodyweight exercises but feel weaker.",
+        "type": "behavioral",
+        "thinking": "Reports exercise substitution with unexpected results. Should analyze new routine effectiveness. Assuming recent change, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Do I exercise less when my work calendar gets packed?",
+        "type": "implicit",
+        "thinking": "Implied question about work-life-exercise balance. Need sufficient data for correlation - using 30 days for reliable pattern.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My hands shake for hours after intense rock climbing sessions.",
+        "type": "symptom",
+        "thinking": "Physical symptoms post-exercise. Should analyze climbing frequency and intensity. No timeframe, using default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Show me my activity patterns since switching to a standing desk.",
+        "type": "explicit",
+        "thinking": "Direct request for data since workplace change. Assuming recent switch, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workout motivation is a desert - vast and empty.",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor describing motivation lack. Need to examine recent workout patterns. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been doing lunchtime walks but feel more tired in evenings.",
+        "type": "behavioral",
+        "thinking": "Reports new routine with unexpected fatigue. Should analyze activity patterns since change. Assuming recent adoption, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Is there a pattern to when I choose low-intensity vs high-intensity workouts?",
+        "type": "implicit",
+        "thinking": "Implied interest in understanding exercise selection patterns. Need sufficient data - using 21 days for reliable insights.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My lower back twinges after dead-lifts since increasing weight.",
+        "type": "symptom",
+        "thinking": "Physical symptoms tied to specific exercise intensity. Should analyze weight progression patterns. 'Since' implies recent change, checking last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Compare my workout consistency before and after daylight savings time.",
+        "type": "explicit",
+        "thinking": "Direct request for seasonal time change impact. Assuming recent change, checking last 21 days (before and after).",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Exercise feels like trying to start a car with a dead battery.",
+        "type": "metaphorical",
+        "thinking": "Creative metaphor describing difficulty initiating workouts. Need to analyze recent exercise patterns. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been doing yoga before bed but having trouble falling asleep.",
+        "type": "behavioral",
+        "thinking": "Reports new routine with unintended consequences. Should examine timing and sleep patterns. Assuming recent change, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Do I compensate with more steps on days I skip strength training?",
+        "type": "implicit",
+        "thinking": "Implied question about activity substitution patterns. Need sufficient data - using 14 days for reliable analysis.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My ankles swell after long runs in this summer heat.",
+        "type": "symptom",
+        "thinking": "Physical symptoms tied to environmental exercise conditions. Should analyze running patterns and weather correlation. No timeframe, using default 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Show me my heart rate variability during workouts this past month.",
+        "type": "explicit",
+        "thinking": "Direct request for specific physiological metric. 'Past month' indicates 30 days of data needed.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My exercise routine is a ship without a rudder right now.",
+        "type": "metaphorical",
+        "thinking": "Metaphor describing lack of direction in workouts. Need to analyze recent exercise patterns for inconsistency. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Since starting meditation, my workout focus has improved dramatically.",
+        "type": "behavioral",
+        "thinking": "Reports positive change from new practice. Should examine workout quality since starting meditation. Assuming recent start, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I wonder if my hydration levels affect my workout endurance.",
+        "type": "implicit",
+        "thinking": "Implied interest in physiological factors affecting performance. Need sufficient data - using 21 days for meaningful correlation.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My wrists ache after increasing my push-up frequency.",
+        "type": "symptom",
+        "thinking": "Physical symptoms tied to exercise intensity change. Should analyze push-up progression. Assuming recent increase, checking last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "How has my resting heart rate changed since I began cycling to work?",
+        "type": "explicit",
+        "thinking": "Direct request for physiological impact analysis. Assuming recent behavior change, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Working out feels like chewing cardboard - bland and unappealing.",
+        "type": "metaphorical",
+        "thinking": "Creative metaphor describing exercise dissatisfaction. Need to analyze recent workout patterns for changes. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been doing shorter, more intense workouts but feel constantly drained.",
+        "type": "behavioral",
+        "thinking": "Reports modified routine with negative consequences. Should analyze workout intensity and recovery patterns. Assuming recent change, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Do I naturally gravitate toward cardio or strength training more?",
+        "type": "implicit",
+        "thinking": "Implied question about exercise preferences. Need sufficient data - using 30 days for comprehensive analysis.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My calves cramp up during night since increasing running mileage.",
+        "type": "symptom",
+        "thinking": "Physical symptoms tied to exercise volume change. Should analyze running progression. Assuming recent increase, checking last 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Show me my activity trends since I started using a fitness app.",
+        "type": "explicit",
+        "thinking": "Direct request for data since technology adoption. Assuming recent start, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My workout motivation is a yo-yo - up and down constantly.",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor describing inconsistent motivation. Need to examine workout patterns for fluctuations. No timeframe, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been doing cool-down stretches but still feel stiff the next day.",
+        "type": "behavioral",
+        "thinking": "Reports behavior adoption with incomplete results. Should analyze recovery patterns. Assuming recent change, checking last 10 days.",
+        "numdays": 10,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "My post-workout fatigue lasts longer since I turned 40 last month.",
+        "type": "symptom",
+        "thinking": "User reports age-related change in recovery patterns. Should analyze workout intensity and recovery duration since birthday. Specified 'last month', so using 30 days.",
+        "numdays": 30,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Can you show me my progress since starting the 75 Hard Challenge?",
+        "type": "explicit",
+        "thinking": "Direct request for program progress tracking. Assuming recent start to the challenge, checking last 21 days for meaningful progress data.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Exercise feels like wading through molasses this week.",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor describing workout difficulty. Need to analyze recent exercise sessions for intensity changes. Specified 'this week', so 7 days.",
+        "numdays": 7,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "I've been doing sunrise workouts but find myself napping by 3pm.",
+        "type": "behavioral",
+        "thinking": "Reports schedule change with unintended consequences. Should examine energy patterns since switching to morning workouts. Assuming recent change, checking last 14 days.",
+        "numdays": 14,
+        "function": "get_exercise_session_data"
+    },
+    {
+        "query": "Do I push myself harder when I exercise with friends versus alone?",
+        "type": "implicit",
+        "thinking": "Implied question about social influence on workout intensity. Need sufficient comparison data - using 21 days for reliable patterns.",
+        "numdays": 21,
+        "function": "get_exercise_session_data"
+    }
+]

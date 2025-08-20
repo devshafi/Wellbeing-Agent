@@ -1,0 +1,1759 @@
+[
+    {
+        "query": "I've been feeling really lightheaded every morning this week. Could my blood pressure be dropping too low?",
+        "type": "symptom",
+        "thinking": "The user is expressing concern about lightheadedness, which could be related to low blood pressure. Since they mention 'this week', we should check their blood pressure data for the past 7 days to identify any patterns that might explain their symptoms.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Show me my BP trends since I started my new medication 10 days ago.",
+        "type": "explicit",
+        "thinking": "This is a direct request to compare blood pressure readings before and after starting new medication. The user specifies '10 days ago' as the timeframe, so we'll retrieve data for that exact period to analyze medication impact.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My doctor says I should watch my numbers more closely. What do they look like lately?",
+        "type": "implicit",
+        "thinking": "While not directly asking for blood pressure data, the user implies concern about their readings following a doctor's advice. Since no specific timeframe is mentioned, we'll default to showing the past week's data to give them a recent overview.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've been walking 10,000 steps daily for the past two weeks - has it made any difference to my heart health?",
+        "type": "behavioral",
+        "thinking": "The user wants to know if their increased physical activity has affected their blood pressure. They mention 'past two weeks', so we'll retrieve 14 days of data to correlate with their new exercise routine.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My head feels like it's in a vice grip after work. Could this be pressure-related?",
+        "type": "metaphorical",
+        "thinking": "The user uses vivid imagery to describe tension that might relate to high blood pressure. Without a specific timeframe mentioned, we'll examine the past week's readings to check for elevated levels that might explain their symptoms.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Compare my morning and evening readings for the last 5 work days.",
+        "type": "explicit",
+        "thinking": "This is a clear request for comparative blood pressure analysis between different times of day. The user specifies 'last 5 work days', so we'll retrieve exactly that timeframe while noting to exclude weekend data.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Ever since that stressful meeting three weeks ago, I haven't felt quite right.",
+        "type": "implicit",
+        "thinking": "The user suggests a potential connection between a stressful event and their wellbeing, possibly affecting blood pressure. They mention 'three weeks ago', so we'll examine data from that 21-day period to identify any sustained changes.",
+        "numdays": 21,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I stopped drinking coffee last month. Any changes in my numbers?",
+        "type": "behavioral",
+        "thinking": "The user is inquiring about the impact of a significant lifestyle change (eliminating caffeine) on their blood pressure. Since they reference 'last month', we'll pull 30 days of data to fully capture the period since their behavior change.",
+        "numdays": 30,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My heart feels like it's racing against time lately. Should I be worried?",
+        "type": "metaphorical",
+        "thinking": "The user employs metaphorical language expressing concern about heart palpitations that might indicate blood pressure issues. With no specific timeframe given, we'll default to showing the past week's readings to assess any concerning patterns.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "The last three weekends, I've had terrible headaches. Could my BP be spiking?",
+        "type": "symptom",
+        "thinking": "The user reports a pattern of weekend headaches potentially linked to blood pressure changes. Since they mention 'three weekends', we'll retrieve 21 days of data (covering three full weeks) to examine weekend-specific patterns while maintaining context.",
+        "numdays": 21,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've been feeling really stressed lately and wonder if my blood pressure's been high this week.",
+        "type": "symptom",
+        "thinking": "The user mentions feeling stressed, which could be linked to elevated blood pressure, and is curious about their readings this week. Calling get_blood_pressure_data is justified to retrieve recent blood pressure data to check for any spikes correlating with stress. The query specifies 'this week,' which maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you check my blood pressure trends since last Monday?",
+        "type": "explicit",
+        "thinking": "The user directly asks to check blood pressure trends with a clear time reference of 'since last Monday.' This indicates a desire to analyze recent data, so get_blood_pressure_data is needed to fetch the readings. 'Since last Monday' suggests a period of 8 days, assuming today is Tuesday, August 5, 2025.",
+        "numdays": 8,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been eating a lot of salty snacks lately; is that affecting my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user is concerned about how their recent behavior of eating salty snacks might impact blood pressure. This implies a need to review blood pressure data to identify any changes, so get_blood_pressure_data is appropriate. No specific time is mentioned, so I’ll default to 7 days to capture recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My heart feels like it’s racing all the time these past 10 days; what’s my blood pressure been like?",
+        "type": "symptom",
+        "thinking": "The user describes a physical symptom—heart racing—over the past 10 days, suggesting a possible connection to blood pressure issues. get_blood_pressure_data is necessary to retrieve readings and check for abnormalities. The query explicitly mentions 'past 10 days,' so numdays is set to 10.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my blood pressure holding steady, or is it all over the place like my mood?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor, comparing blood pressure fluctuations to mood swings, indicating concern about stability. get_blood_pressure_data is needed to analyze recent readings for consistency or variability. No time window is provided, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I haven’t been sleeping well for the last two weeks; could that mess with my blood pressure?",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about poor sleep over two weeks potentially affecting blood pressure. This suggests a need to examine blood pressure data for correlations, so get_blood_pressure_data is appropriate. The query specifies 'last two weeks,' which maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Show me my blood pressure data for the past month.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood pressure data for a specific period, 'the past month.' This requires calling get_blood_pressure_data to retrieve the relevant readings. 'Past month' approximates to 30 days, so numdays is set to 30.",
+        "numdays": 30,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I started exercising daily since Sunday; has it helped my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions a new behavior—daily exercise since Sunday—and wants to know its impact on blood pressure. get_blood_pressure_data is needed to compare recent readings with this change. Assuming today is Tuesday, August 5, 2025, 'since Sunday' means 2 days, but I’ll use a minimum of 5 days to ensure sufficient data.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My head’s been pounding for the last three weekends; is my blood pressure okay?",
+        "type": "symptom",
+        "thinking": "The user reports headaches over the last three weekends, suggesting a potential blood pressure issue. get_blood_pressure_data is required to check readings for patterns or spikes. 'Last three weekends' implies data from the past 15 days (covering three weekends, assuming weekly intervals), so numdays is 15.",
+        "numdays": 15,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My life’s been a rollercoaster lately; is my blood pressure riding that wave too?",
+        "type": "metaphorical",
+        "thinking": "The user uses a rollercoaster metaphor to describe life’s ups and downs, hinting at concern about blood pressure fluctuations. get_blood_pressure_data is needed to assess recent readings for variability. No time is specified, so I’ll default to 7 days to capture recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you check how my blood pressure has been doing over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user is making a direct request to review their blood pressure trends. I’ll call get_blood_pressure_data to retrieve systolic and diastolic values. The specified time window is 10 days, so numdays is set to 10.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling dizzy and lightheaded lately — is my blood pressure acting up?",
+        "type": "symptom",
+        "thinking": "The user is describing symptoms commonly associated with abnormal blood pressure. I’ll retrieve recent data using get_blood_pressure_data to explore possible correlations. No specific time mentioned, so I’ll default to the past 7 days.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Since I started cutting back on salt two weeks ago, have my numbers improved?",
+        "type": "behavioral",
+        "thinking": "The user changed their diet and wants to evaluate the effect on their blood pressure. I’ll use get_blood_pressure_data to analyze readings from the past 14 days. The phrase 'two weeks ago' maps directly to numdays = 14.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Lately I’ve been under a lot of stress — maybe that’s pushing my pressure up?",
+        "type": "implicit",
+        "thinking": "The user suspects that recent stress is impacting their blood pressure. I’ll confirm or refute that assumption by calling get_blood_pressure_data. Since no time window is given, I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Feels like my veins are holding a thunderstorm. Can you check what’s been going on with my pressure?",
+        "type": "metaphorical",
+        "thinking": "The user uses vivid imagery to describe a possible spike in blood pressure. I’ll interpret this as a request to check for anomalies and retrieve data using get_blood_pressure_data. No timeframe was mentioned, so I’ll use the default 7-day window.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Could you see how my blood pressure looked this week?",
+        "type": "explicit",
+        "thinking": "The user wants to review blood pressure readings from the current week. I’ll use get_blood_pressure_data and interpret 'this week' as the last 7 days, setting numdays accordingly.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I stopped drinking coffee about 9 days ago. Curious if my blood pressure responded.",
+        "type": "behavioral",
+        "thinking": "The user made a lifestyle change and is checking for physiological changes. I’ll use get_blood_pressure_data to review the last 9 days of readings. The time window is clearly stated as 9 days.",
+        "numdays": 9,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling kind of sluggish since Monday — could it be my pressure?",
+        "type": "symptom",
+        "thinking": "The user links recent sluggishness to potential blood pressure issues. Today being Tuesday, 'since Monday' covers 2 days, so I’ll retrieve 2 days of data using get_blood_pressure_data. However, since the minimum allowed is 5, I’ll use numdays = 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Have my readings been consistent across the last three weekends?",
+        "type": "explicit",
+        "thinking": "The user wants to evaluate blood pressure patterns specifically over the past three weekends. To capture that span, I’ll retrieve data for the last 21 days using get_blood_pressure_data.",
+        "numdays": 21,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Sometimes it feels like my heart’s trying to punch through my chest — is my pressure behind it?",
+        "type": "metaphorical",
+        "thinking": "The user uses intense metaphorical language to describe symptoms that may be blood pressure-related. I’ll interpret it as concern over elevated readings and call get_blood_pressure_data for the past 7 days due to lack of specific timeframe.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you check how stable my blood pressure was over the past 15 days?",
+        "type": "explicit",
+        "thinking": "The user is requesting a direct evaluation of blood pressure stability. I’ll retrieve readings using get_blood_pressure_data. 'Past 15 days' maps directly to numdays = 15.",
+        "numdays": 15,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I don’t know if it’s just the heat, but I’ve been feeling off lately.",
+        "type": "implicit",
+        "thinking": "The user is indirectly pointing to a potential physical issue related to blood pressure. I’ll call get_blood_pressure_data to examine any fluctuations over the last 7 days since no timeframe was provided.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I cut down on processed food this month — is it showing in my numbers?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavior change (diet improvement) and wants to know its impact. 'This month' implies around 30 days, so I’ll retrieve that window using get_blood_pressure_data.",
+        "numdays": 30,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Why do I get headaches every afternoon? Could it be pressure-related?",
+        "type": "symptom",
+        "thinking": "Recurring headaches might be linked to blood pressure irregularities. I’ll use get_blood_pressure_data to look for patterns. No timeframe was given, so I’ll default to the last 7 days.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Lately it feels like my heart’s wearing a heavy coat.",
+        "type": "metaphorical",
+        "thinking": "The metaphor suggests the user may be experiencing high blood pressure. I’ll use get_blood_pressure_data to investigate the last 7 days since no time period was stated.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Could you see if my blood pressure improved in the last 6 days?",
+        "type": "explicit",
+        "thinking": "The user clearly requests recent data. I’ll retrieve 6 days of blood pressure readings using get_blood_pressure_data.",
+        "numdays": 6,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Since I got that new desk job, I wonder if my pressure’s been creeping up.",
+        "type": "behavioral",
+        "thinking": "The user notes a sedentary behavior change and suspects it might affect blood pressure. No clear timeframe, so I’ll default to 7 days using get_blood_pressure_data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve had this tightness in my chest since last Tuesday. Could you take a look?",
+        "type": "symptom",
+        "thinking": "Chest tightness can be related to blood pressure issues. If today is Wednesday, ‘since last Tuesday’ implies 8 days. I’ll use get_blood_pressure_data for that window.",
+        "numdays": 8,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My body feels like a pressure cooker lately. Can we check what’s going on?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language implying elevated pressure. I’ll retrieve the last 7 days of blood pressure readings using get_blood_pressure_data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you see if there’s been any improvement in my blood pressure over the last two weekends?",
+        "type": "explicit",
+        "thinking": "The user wants data from two weekends. I’ll retrieve 14 days of readings to capture relevant data using get_blood_pressure_data.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I stopped taking my meds five days ago — is it already showing up in my pressure?",
+        "type": "behavioral",
+        "thinking": "The user altered their medication routine. I’ll call get_blood_pressure_data to evaluate changes over the last 5 days, matching the mentioned timeframe.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My blood pressure monitor says I’m fine, but I don’t feel fine.",
+        "type": "implicit",
+        "thinking": "Despite normal readings from a personal device, the user suspects a deeper issue. I’ll retrieve 7 days of data using get_blood_pressure_data to validate.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've been feeling more tense than usual since last Thursday.",
+        "type": "symptom",
+        "thinking": "The user reports increased tension which might relate to elevated blood pressure. 'Since last Thursday' suggests 6 days if today is Wednesday, so I’ll use numdays = 6.",
+        "numdays": 6,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Every time I walk upstairs, I feel pressure in my head. What's going on?",
+        "type": "symptom",
+        "thinking": "The physical symptom might be tied to abnormal blood pressure. I’ll use get_blood_pressure_data to review the last 7 days since no timeframe is mentioned.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I haven't had coffee in three days. Has my blood pressure dropped at all?",
+        "type": "behavioral",
+        "thinking": "The user cut caffeine and is checking for physiological effects. I’ll retrieve 3 days of data, but since the minimum is 5, I’ll set numdays = 5 using get_blood_pressure_data.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Does my blood pressure spike every Monday morning or is it just in my head?",
+        "type": "implicit",
+        "thinking": "The user suspects a recurring blood pressure pattern. I’ll use get_blood_pressure_data to analyze the last 21 days to check for weekly trends.",
+        "numdays": 21,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My body feels like it’s being squeezed by invisible hands. Can we check my pressure?",
+        "type": "metaphorical",
+        "thinking": "The metaphor implies physical discomfort possibly due to high blood pressure. I’ll retrieve 7 days of readings using get_blood_pressure_data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been exercising more regularly for the past 2 weeks — any effect on my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user is tracking the impact of exercise on blood pressure. 'Past 2 weeks' maps to 14 days, so I’ll retrieve that window using get_blood_pressure_data.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "How’s my blood pressure looked since Sunday?",
+        "type": "explicit",
+        "thinking": "The user wants to track readings from Sunday onward. Assuming today is Friday, that’s 5 days. I’ll retrieve 5 days of data using get_blood_pressure_data.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been anxious and on edge this week. Could that be messing with my blood pressure?",
+        "type": "symptom",
+        "thinking": "The user connects emotional stress to possible physiological changes. 'This week' is interpreted as the last 7 days. I’ll call get_blood_pressure_data for that span.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "It feels like my heartbeat echoes in my ears. Should we look into that?",
+        "type": "metaphorical",
+        "thinking": "The user describes a symptom in vivid terms, likely pointing to elevated blood pressure. I’ll retrieve 7 days of data using get_blood_pressure_data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Have my readings been calmer during the evenings over the past week?",
+        "type": "explicit",
+        "thinking": "The user wants time-of-day analysis for the past week. I’ll fetch 7 days of blood pressure data using get_blood_pressure_data to explore diurnal patterns.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My new meditation routine started 12 days ago. I hope it’s helping.",
+        "type": "behavioral",
+        "thinking": "The user adopted a new calming habit and wants to track its impact. I’ll call get_blood_pressure_data for the last 12 days as stated.",
+        "numdays": 12,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you pull up my pressure data from the last 20 days?",
+        "type": "explicit",
+        "thinking": "This is a direct request for blood pressure trends. I’ll retrieve 20 days of readings using get_blood_pressure_data as specified.",
+        "numdays": 20,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is there a link between my pressure and how agitated I’ve been feeling lately?",
+        "type": "implicit",
+        "thinking": "The user suspects a connection between agitation and blood pressure. I’ll retrieve data for the past 7 days using get_blood_pressure_data since no specific timeframe was mentioned.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Every time I lie down, I feel like gravity’s pulling me too hard.",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor implies physical discomfort possibly related to blood pressure. I’ll call get_blood_pressure_data for the past 7 days.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Ever since I stopped going for morning walks, I feel heavier somehow. Can we check my numbers?",
+        "type": "behavioral",
+        "thinking": "The user discontinued a physical activity and wants to monitor its effects. No specific timeframe is given, so I’ll default to retrieving the last 7 days using get_blood_pressure_data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve felt calm all week — is my blood pressure reflecting that?",
+        "type": "implicit",
+        "thinking": "The user expects a physiological improvement matching their mental state. 'All week' implies 7 days, so I’ll retrieve that using get_blood_pressure_data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "How’s my pressure looked over the last 25 days?",
+        "type": "explicit",
+        "thinking": "A straightforward request for extended data. I’ll retrieve 25 days of blood pressure readings using get_blood_pressure_data.",
+        "numdays": 25,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "After switching to a vegan diet two weeks ago, I’m curious if it’s had any effect on my pressure.",
+        "type": "behavioral",
+        "thinking": "The user made a significant dietary change and wants to evaluate its impact. 'Two weeks ago' maps to 14 days, so I’ll retrieve 14 days of data using get_blood_pressure_data.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been getting lightheaded when I stand up since the weekend.",
+        "type": "symptom",
+        "thinking": "Lightheadedness on standing can be linked to blood pressure changes. Assuming today is Thursday, 'since the weekend' is around 5 days. I’ll use get_blood_pressure_data with numdays = 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’m feeling a strange pressure behind my eyes — is that connected to blood pressure?",
+        "type": "symptom",
+        "thinking": "The user describes a physical symptom potentially related to elevated blood pressure. No timeframe provided, so I’ll use get_blood_pressure_data for the past 7 days.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Every time I get into traffic, I feel like my blood’s boiling.",
+        "type": "metaphorical",
+        "thinking": "The metaphor indicates the user may experience blood pressure spikes under stress. I’ll retrieve 7 days of data using get_blood_pressure_data to examine possible patterns.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Could you pull up my blood pressure readings from the last 18 days?",
+        "type": "explicit",
+        "thinking": "This is a direct request for blood pressure data. I’ll retrieve readings from the last 18 days using get_blood_pressure_data.",
+        "numdays": 18,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been skipping my morning yoga sessions for about a week — I wonder if that’s affecting me.",
+        "type": "behavioral",
+        "thinking": "The user notes a disruption in a calming routine and suspects it may impact their pressure. I’ll use get_blood_pressure_data for the last 7 days to investigate.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you check how my blood pressure’s been trending for the last 9 days?",
+        "type": "explicit",
+        "thinking": "The user wants to monitor trends in blood pressure over a specific period. I’ll retrieve 9 days of data using get_blood_pressure_data.",
+        "numdays": 9,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve felt strangely calm since last Friday. Has that helped regulate my pressure?",
+        "type": "implicit",
+        "thinking": "The user is indirectly checking if emotional calmness has translated to physiological improvement. If today is Thursday, 'since last Friday' covers 6 days, so I’ll use 6 days.",
+        "numdays": 6,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "It’s like my head’s full of static lately. Could that be blood pressure?",
+        "type": "metaphorical",
+        "thinking": "The metaphor describes a fuzzy mental state, possibly related to blood pressure. I’ll use get_blood_pressure_data to retrieve data for the past 7 days.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is there any noticeable pattern in my blood pressure across the last three Mondays?",
+        "type": "explicit",
+        "thinking": "The user suspects a weekly pattern. To detect changes across three specific days, I’ll retrieve 21 days of data using get_blood_pressure_data.",
+        "numdays": 21,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've been drinking more water over the past 10 days — has that helped with my pressure?",
+        "type": "behavioral",
+        "thinking": "The user made a positive habit change and is interested in the physiological impact. I’ll call get_blood_pressure_data for the past 10 days.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "This pressure in my chest won’t go away. Can we see if there’s a pattern in my numbers?",
+        "type": "symptom",
+        "thinking": "Chest pressure can be a sign of elevated blood pressure. I’ll retrieve 7 days of data using get_blood_pressure_data since no timeframe is given.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Feels like there’s a storm in my veins every evening.",
+        "type": "metaphorical",
+        "thinking": "The user uses dramatic language to suggest evening blood pressure spikes. I’ll retrieve the past 7 days of readings using get_blood_pressure_data to check for recurring evening patterns.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Have my readings changed since I switched antihypertensives 8 days ago?",
+        "type": "behavioral",
+        "thinking": "The user changed their blood pressure medication. I’ll retrieve 8 days of data using get_blood_pressure_data to track the effect.",
+        "numdays": 8,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you check if my blood pressure dropped after I started deep breathing exercises 11 days ago?",
+        "type": "behavioral",
+        "thinking": "The user implemented a calming intervention and wants to know its impact. I’ll call get_blood_pressure_data for the past 11 days.",
+        "numdays": 11,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "The past couple of weeks have been chaotic. Can you see if my pressure reacted?",
+        "type": "implicit",
+        "thinking": "The user refers to recent emotional turmoil that may have physiological consequences. 'Couple of weeks' implies 14 days, so I’ll retrieve 14 days of data using get_blood_pressure_data.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "How did my blood pressure behave last Saturday?",
+        "type": "explicit",
+        "thinking": "The user wants data from a specific day. I’ll retrieve a 5-day window including Saturday and adjacent days to provide context, as 5 is the minimum allowed.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my pressure lower on days I sleep more? Like, this past week?",
+        "type": "implicit",
+        "thinking": "The user suspects a link between sleep and blood pressure. I’ll use get_blood_pressure_data to retrieve the last 7 days to explore any such pattern.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I skipped gym all of last week — was there any spike in pressure?",
+        "type": "behavioral",
+        "thinking": "The user reduced physical activity and wonders if it affected blood pressure. I’ll retrieve 7 days of data using get_blood_pressure_data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My blood pressure feels like a ticking time bomb lately.",
+        "type": "metaphorical",
+        "thinking": "The user expresses intense concern through metaphor. I’ll retrieve the last 7 days of readings using get_blood_pressure_data to investigate possible spikes.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been super anxious since the start of the month; how’s my blood pressure been?",
+        "type": "symptom",
+        "thinking": "The user mentions anxiety since the start of the month, which may elevate blood pressure, and is inquiring about their readings. get_blood_pressure_data is needed to check for any spikes or patterns. 'Since the start of the month' (August 1, 2025) to today (August 5, 2025) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you look at my blood pressure for the last 12 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests blood pressure data for the last 12 days. This clear request justifies calling get_blood_pressure_data to retrieve the specified data. The query explicitly states 'last 12 days,' so numdays is set to 12.",
+        "numdays": 12,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been drinking more coffee this week; is that doing anything to my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased coffee consumption this week and questions its impact on blood pressure. get_blood_pressure_data is required to analyze recent readings for changes. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My chest feels tight lately; what’s my blood pressure been like over the past two weeks?",
+        "type": "symptom",
+        "thinking": "The user reports chest tightness, a potential blood pressure-related symptom, over the past two weeks. get_blood_pressure_data is needed to examine readings for abnormalities. The query specifies 'past two weeks,' which maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my blood pressure as chaotic as my work schedule lately?",
+        "type": "metaphorical",
+        "thinking": "The user compares blood pressure to a chaotic work schedule, suggesting concern about fluctuations. get_blood_pressure_data is necessary to check for variability in recent readings. No time window is provided, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been forgetting to take my meds regularly since last Friday; how’s my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions irregular medication adherence since last Friday, which could affect blood pressure. get_blood_pressure_data is needed to assess recent readings. Assuming today is Tuesday, August 5, 2025, 'since last Friday' (July 31, 2025) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Please show my blood pressure data for the last 20 days.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood pressure data for the last 20 days. This straightforward request justifies calling get_blood_pressure_data to fetch the data. The query specifies 'last 20 days,' so numdays is set to 20.",
+        "numdays": 20,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I feel like I’m carrying the world on my shoulders; is my blood pressure okay?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor about carrying a heavy burden, hinting at stress-related blood pressure concerns. get_blood_pressure_data is needed to check recent readings for stability. No time is mentioned, so I’ll default to 7 days for a recent overview.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been getting dizzy spells this past week; could my blood pressure be off?",
+        "type": "symptom",
+        "thinking": "The user reports dizziness over the past week, which could indicate blood pressure issues. get_blood_pressure_data is required to analyze readings for anomalies. The query specifies 'this past week,' mapping to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Work’s been intense since the new project started 10 days ago; is my blood pressure handling it?",
+        "type": "implicit",
+        "thinking": "The user indirectly connects intense work stress over 10 days to potential blood pressure changes. get_blood_pressure_data is needed to review readings for stress-related impacts. The query mentions '10 days ago,' so numdays is 10.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I started a low-sodium diet last Tuesday; has it made a difference to my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions adopting a low-sodium diet since last Tuesday and wants to know its effect on blood pressure. get_blood_pressure_data is needed to compare recent readings. Assuming today is Tuesday, August 5, 2025, 'last Tuesday' (July 29, 2025) is 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you tell me about my blood pressure for the last three weeks?",
+        "type": "explicit",
+        "thinking": "The user directly asks for blood pressure data over the last three weeks. This requires calling get_blood_pressure_data to retrieve the data. 'Last three weeks' maps to 21 days, so numdays is 21.",
+        "numdays": 21,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My energy’s been all over the place lately; is my blood pressure acting up too?",
+        "type": "symptom",
+        "thinking": "The user describes fluctuating energy levels, which may relate to blood pressure issues. get_blood_pressure_data is needed to check for corresponding fluctuations in readings. No time window is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been staying up late for the past 15 days; could that affect my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions staying up late for 15 days, suggesting a possible impact on blood pressure. get_blood_pressure_data is required to analyze recent readings. The query specifies 'past 15 days,' so numdays is 15.",
+        "numdays": 15,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my blood pressure keeping up with the whirlwind of my life right now?",
+        "type": "metaphorical",
+        "thinking": "The user uses a whirlwind metaphor to describe a hectic life, implying concern about blood pressure stability. get_blood_pressure_data is needed to assess recent readings. No time is mentioned, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling off since the family reunion last weekend; how’s my blood pressure?",
+        "type": "implicit",
+        "thinking": "The user vaguely mentions feeling off since last weekend’s family reunion, hinting at a blood pressure concern. get_blood_pressure_data is needed to check recent readings. Assuming today is Tuesday, August 5, 2025, 'last weekend' (August 1-2) is 3-4 days, but I’ll use 5 days as the minimum for sufficient data.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Check my blood pressure trends for the past 25 days, please.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood pressure trends for the past 25 days. This clear request justifies calling get_blood_pressure_data to fetch the data. The query specifies 'past 25 days,' so numdays is 25.",
+        "numdays": 25,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been super irritable this week; is my blood pressure spiking?",
+        "type": "symptom",
+        "thinking": "The user reports irritability this week, which could be linked to blood pressure fluctuations. get_blood_pressure_data is needed to check for spikes. The query mentions 'this week,' mapping to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been skipping my morning walks since last Monday; is that bad for my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions stopping morning walks since last Monday, questioning its effect on blood pressure. get_blood_pressure_data is needed to analyze recent readings. 'Since last Monday' (July 28, 2025) to today (August 5, 2025) is 8 days, so numdays is 8.",
+        "numdays": 8,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My heart’s been pounding like a drum lately; what’s my blood pressure doing?",
+        "type": "metaphorical",
+        "thinking": "The user uses a drumming metaphor to describe a pounding heart, suggesting concern about blood pressure. get_blood_pressure_data is needed to check recent readings. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been under a lot of pressure at home since last week; is my blood pressure okay?",
+        "type": "implicit",
+        "thinking": "The user indirectly connects home stress since last week to potential blood pressure issues. get_blood_pressure_data is needed to review readings for stress-related changes. 'Since last week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you pull up my blood pressure data since the start of July?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood pressure data since the start of July. get_blood_pressure_data is needed to fetch the data. From July 1 to August 5, 2025, is 35 days, but since numdays is capped at 30, I’ll use 30 days.",
+        "numdays": 30,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been getting nosebleeds for the past 10 days; is my blood pressure too high?",
+        "type": "symptom",
+        "thinking": "The user reports nosebleeds over the past 10 days, a symptom potentially linked to high blood pressure. get_blood_pressure_data is needed to check for elevated readings. The query specifies 'past 10 days,' so numdays is 10.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been meditating daily for two weeks; has it calmed my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions daily meditation for two weeks and wants to know its impact on blood pressure. get_blood_pressure_data is needed to compare recent readings. 'Two weeks' maps to 14 days, so numdays is 14.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my blood pressure steady, or is it bouncing around like my stress levels?",
+        "type": "metaphorical",
+        "thinking": "The user compares blood pressure to fluctuating stress levels, indicating concern about stability. get_blood_pressure_data is needed to assess recent readings for consistency. No time is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling lightheaded since last Thursday; what’s going on with my blood pressure?",
+        "type": "symptom",
+        "thinking": "The user reports lightheadedness since last Thursday, which may relate to blood pressure issues. get_blood_pressure_data is needed to check for anomalies. Assuming today is Tuesday, August 5, 2025, 'since last Thursday' (July 30, 2025) is 6 days, so numdays is 6.",
+        "numdays": 6,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been cutting back on alcohol for the past three weeks; how’s my blood pressure doing?",
+        "type": "behavioral",
+        "thinking": "The user mentions reducing alcohol consumption for three weeks and questions its effect on blood pressure. get_blood_pressure_data is needed to analyze recent readings. 'Past three weeks' maps to 21 days, so numdays is 21.",
+        "numdays": 21,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you check my blood pressure trends for the last 9 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests blood pressure trends for the last 9 days. This clear request justifies calling get_blood_pressure_data to fetch the data. The query specifies 'last 9 days,' so numdays is 9.",
+        "numdays": 9,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling like my heart’s under strain lately; is my blood pressure okay?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor about heart strain, suggesting concern about blood pressure. get_blood_pressure_data is needed to check recent readings for issues. No time is mentioned, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been arguing a lot with my partner this month; could that be raising my blood pressure?",
+        "type": "implicit",
+        "thinking": "The user indirectly connects frequent arguments this month to potential blood pressure increases. get_blood_pressure_data is needed to review readings for stress-related changes. 'This month' (August 1-5, 2025) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been having blurry vision for the last 12 days; is my blood pressure too high?",
+        "type": "symptom",
+        "thinking": "The user reports blurry vision over the last 12 days, a symptom that could indicate high blood pressure. get_blood_pressure_data is needed to check for elevated readings. The query specifies 'last 12 days,' so numdays is 12.",
+        "numdays": 12,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I started yoga last Monday; has it helped my blood pressure at all?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting yoga last Monday and wants to know its impact on blood pressure. get_blood_pressure_data is needed to compare recent readings. 'Last Monday' (July 28, 2025) to today (August 5, 2025) is 8 days, so numdays is 8.",
+        "numdays": 8,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Show me my blood pressure data for the past 18 days.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood pressure data for the past 18 days. This requires calling get_blood_pressure_data to fetch the data. The query specifies 'past 18 days,' so numdays is 18.",
+        "numdays": 18,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My nerves have been shot lately; is my blood pressure spiking because of it?",
+        "type": "symptom",
+        "thinking": "The user describes feeling nervous, which may be linked to blood pressure spikes. get_blood_pressure_data is needed to check recent readings. No time is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been eating out a lot this week; is that messing with my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions frequent eating out this week, questioning its effect on blood pressure. get_blood_pressure_data is needed to analyze recent readings. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my blood pressure as unsteady as my emotions right now?",
+        "type": "metaphorical",
+        "thinking": "The user compares blood pressure to unsteady emotions, indicating concern about fluctuations. get_blood_pressure_data is needed to assess recent readings for variability. No time is mentioned, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling off since my new job started two weeks ago; how’s my blood pressure?",
+        "type": "implicit",
+        "thinking": "The user vaguely connects feeling off since starting a new job two weeks ago to potential blood pressure issues. get_blood_pressure_data is needed to check recent readings. 'Two weeks ago' maps to 14 days, so numdays is 14.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you look at my blood pressure for the last 16 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests blood pressure data for the last 16 days. This clear request justifies calling get_blood_pressure_data to fetch the data. The query specifies 'last 16 days,' so numdays is 16.",
+        "numdays": 16,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been getting short of breath this past week; is my blood pressure okay?",
+        "type": "symptom",
+        "thinking": "The user reports shortness of breath over the past week, which could relate to blood pressure issues. get_blood_pressure_data is needed to check for anomalies. The query specifies 'this past week,' mapping to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been cutting out processed foods since last Sunday; has it helped my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions cutting out processed foods since last Sunday and wants to know its impact on blood pressure. get_blood_pressure_data is needed to compare recent readings. 'Since last Sunday' (August 3, 2025) to today (August 5, 2025) is 2 days, but I’ll use 5 days as the minimum for sufficient data.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My life feels like a pressure cooker lately; is my blood pressure under control?",
+        "type": "metaphorical",
+        "thinking": "The user uses a pressure cooker metaphor to describe life stress, hinting at blood pressure concerns. get_blood_pressure_data is needed to check recent readings for control. No time is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been dealing with family stress since last Tuesday; could that be affecting my blood pressure?",
+        "type": "implicit",
+        "thinking": "The user indirectly connects family stress since last Tuesday to potential blood pressure changes. get_blood_pressure_data is needed to review readings for stress-related impacts. 'Since last Tuesday' (July 29, 2025) to today (August 5, 2025) is 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been having headaches since last Friday; is my blood pressure too high?",
+        "type": "symptom",
+        "thinking": "The user reports headaches since last Friday, a symptom potentially linked to high blood pressure. get_blood_pressure_data is needed to check for elevated readings. 'Since last Friday' (July 31, 2025) to today (August 5, 2025) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Please show my blood pressure trends for the last 22 days.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood pressure trends for the last 22 days. This requires calling get_blood_pressure_data to fetch the data. The query specifies 'last 22 days,' so numdays is 22.",
+        "numdays": 22,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been trying to drink more water this month; has it done anything for my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased water intake this month and questions its effect on blood pressure. get_blood_pressure_data is needed to analyze recent readings. 'This month' (August 1-5, 2025) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my blood pressure keeping pace with the madness of my daily life?",
+        "type": "metaphorical",
+        "thinking": "The user compares blood pressure to a chaotic daily life, suggesting concern about its stability. get_blood_pressure_data is needed to assess recent readings for fluctuations. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling unusually tired for the last 10 days; could my blood pressure be off?",
+        "type": "symptom",
+        "thinking": "The user reports unusual tiredness over the last 10 days, which may relate to blood pressure issues. get_blood_pressure_data is needed to check for anomalies. The query specifies 'last 10 days,' so numdays is 10.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been working overtime since last week; is my blood pressure handling it okay?",
+        "type": "implicit",
+        "thinking": "The user indirectly connects overtime work since last week to potential blood pressure concerns. get_blood_pressure_data is needed to review readings for stress-related changes. 'Since last week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you check my blood pressure data for the past 17 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests blood pressure data for the past 17 days. This clear request justifies calling get_blood_pressure_data to fetch the data. The query specifies 'past 17 days,' so numdays is 17.",
+        "numdays": 17,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've noticed my hands shaking more than usual in the past few days. Could this be related to my blood pressure?",
+        "type": "symptom",
+        "thinking": "The user is connecting physical symptoms (shaking hands) to potential blood pressure issues. They mention 'past few days', which we'll interpret as 5 days to capture recent changes without being too narrow.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Give me a breakdown of my BP readings since my vacation started 2 weeks ago.",
+        "type": "explicit",
+        "thinking": "This is a direct request for blood pressure data tied to a specific event (vacation). The user specifies '2 weeks ago', so we'll retrieve 14 days of data to analyze vacation-related patterns.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've been eating more salty foods recently... should I be checking anything?",
+        "type": "implicit",
+        "thinking": "While not directly asking about blood pressure, the user hints at concern regarding dietary changes that typically affect BP. Since no timeframe is specified, we'll default to 7 days to show recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Ever since I switched to night shifts 3 weeks back, I feel different. Show me the numbers.",
+        "type": "behavioral",
+        "thinking": "The user connects lifestyle changes (shift work) to potential health impacts. They mention '3 weeks back', so we'll examine 21 days of data to cover the transition period fully.",
+        "numdays": 21,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My temples keep pounding like distant drums all afternoon. What do my readings say?",
+        "type": "metaphorical",
+        "thinking": "The user uses poetic language to describe symptoms potentially related to blood pressure. Without a specific timeframe, we'll show the past week's data to identify any concerning patterns.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Compare my readings from this month's yoga days versus non-yoga days.",
+        "type": "explicit",
+        "thinking": "This is a clear request for comparative analysis based on activity. Since they reference 'this month' and we're mid-month, we'll use 15 days to get balanced data while avoiding partial weeks.",
+        "numdays": 15,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "The mirror shows my face looking redder than usual lately.",
+        "type": "implicit",
+        "thinking": "The user hints at physical changes that might indicate blood pressure fluctuations. The term 'lately' is vague, so we'll default to 7 days to show recent trends that might explain this observation.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've been using my standing desk more this past week - any effect on my numbers?",
+        "type": "behavioral",
+        "thinking": "The user is curious about how a change in work habits affects their health metrics. They specify 'this past week', so we'll retrieve exactly 7 days of data to match their behavioral change period.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "It feels like there's an angry storm in my chest when I wake up.",
+        "type": "metaphorical",
+        "thinking": "The user employs vivid imagery to describe morning sensations that might relate to blood pressure. With no timeframe given, we'll examine the past week's morning readings specifically.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My vision gets blurry sometimes after lunch for the past 10 days.",
+        "type": "symptom",
+        "thinking": "The user reports a time-specific symptom that could indicate postprandial blood pressure changes. They mention 'past 10 days', so we'll retrieve data for that exact period to identify patterns.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Break down my readings by time of day for the last fortnight.",
+        "type": "explicit",
+        "thinking": "This is a direct request for chronologically segmented blood pressure data. 'Fortnight' clearly indicates 14 days, which we'll use as our timeframe.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Family says I've been more irritable this month. Could it be my pressure?",
+        "type": "implicit",
+        "thinking": "The user indirectly connects mood changes to potential blood pressure issues. They reference 'this month', so we'll examine 30 days of data to correlate mood observations with readings.",
+        "numdays": 30,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Since cutting caffeine 5 days ago, I expected more changes. Show me the data.",
+        "type": "behavioral",
+        "thinking": "The user expects physiological changes from a lifestyle modification and wants verification. They specify '5 days ago', so we'll retrieve exactly that timeframe to assess immediate effects.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "There's a marching band in my ears that won't quit since yesterday.",
+        "type": "metaphorical",
+        "thinking": "The user describes tinnitus-like symptoms that often accompany blood pressure changes. Though they mention 'since yesterday', we'll show 7 days of data for clinical context while highlighting recent readings.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I keep waking up feeling like I ran a marathon - what do my overnight numbers say?",
+        "type": "symptom",
+        "thinking": "The user describes morning fatigue potentially linked to nocturnal blood pressure patterns. Without a specific timeframe, we'll show the past week's nighttime readings for analysis.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Show me my BP variance during work hours for the last 3 weeks.",
+        "type": "explicit",
+        "thinking": "This is a precise request for work-hour specific data analysis. The user specifies 'last 3 weeks', so we'll retrieve 21 days of daytime readings for thorough assessment.",
+        "numdays": 21,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My new blood pressure meds should be working by now...",
+        "type": "implicit",
+        "thinking": "The user implies they want to see if their medication is effective without directly asking. Since they don't specify timeframe but mention medication should be working 'by now', we'll show 14 days as a standard evaluation period.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've been practicing breathing exercises twice daily for 9 days straight. Any impact?",
+        "type": "behavioral",
+        "thinking": "The user wants to assess the effect of a new stress-reduction technique. They specify '9 days', so we'll retrieve exactly that timeframe to match their intervention period.",
+        "numdays": 9,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My pulse feels like a hummingbird's wings when I sit still.",
+        "type": "metaphorical",
+        "thinking": "The user poetically describes palpitations that might indicate blood pressure issues. With no timeframe mentioned, we'll show the past week's data to check for tachycardia patterns.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I get dizzy every time I stand up quickly these past two weeks.",
+        "type": "symptom",
+        "thinking": "The user describes orthostatic symptoms potentially related to blood pressure regulation. They mention 'past two weeks', so we'll examine 14 days of positional change readings.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Compare my weekend vs weekday readings for October so far.",
+        "type": "explicit",
+        "thinking": "This is a clear request for lifestyle pattern analysis. Since October has 31 days and the query is mid-month, we'll use 15 days for balanced weekly comparisons.",
+        "numdays": 15,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My rings have been fitting tighter this month for some reason...",
+        "type": "implicit",
+        "thinking": "The user hints at fluid retention that often accompanies blood pressure changes. They reference 'this month', so we'll examine 30 days of data to correlate with their observation.",
+        "numdays": 30,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Started taking magnesium supplements 6 days ago - see any difference?",
+        "type": "behavioral",
+        "thinking": "The user wants to evaluate the impact of a new supplement regimen. They specify '6 days ago', so we'll retrieve exactly that timeframe to assess changes.",
+        "numdays": 6,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "It's like my heart forgets its rhythm sometimes when I'm stressed.",
+        "type": "metaphorical",
+        "thinking": "The user poetically describes arrhythmia-like symptoms potentially related to blood pressure. Without timeframe specifics, we'll show the past week's data focusing on stressful periods.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I keep seeing spots when I bend over lately.",
+        "type": "symptom",
+        "thinking": "The user reports visual disturbances that could indicate blood pressure fluctuations. The term 'lately' is nonspecific, so we'll default to 7 days to show recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Show me a minute-by-minute breakdown of my BP during yesterday's important meeting.",
+        "type": "explicit",
+        "thinking": "This is a hyper-specific request for stress-response data. While we can't show minute data, we'll retrieve 7 days for context while focusing on yesterday's patterns.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My partner says I snore differently since we returned from the mountains.",
+        "type": "implicit",
+        "thinking": "The user hints at physiological changes potentially related to altitude's effect on blood pressure. Since no timeframe is given but travel is recent, we'll show 10 days of post-travel data.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've been sleeping with my head elevated for 12 nights now. Any changes?",
+        "type": "behavioral",
+        "thinking": "The user wants to assess the impact of a sleep position modification. They specify '12 nights', so we'll retrieve exactly that timeframe to evaluate effects.",
+        "numdays": 12,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My neck feels like there's invisible hands squeezing it every evening.",
+        "type": "metaphorical",
+        "thinking": "The user describes tension sensations that might correlate with blood pressure patterns. Without timeframe specifics, we'll show the past week's evening readings for analysis.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I wake up with nosebleeds three mornings this week.",
+        "type": "symptom",
+        "thinking": "The user reports specific symptoms that can indicate blood pressure issues. They mention 'this week', so we'll examine 7 days of morning readings for correlations.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Graph my systolic readings against my sleep hours for the past 20 days.",
+        "type": "explicit",
+        "thinking": "This is a direct request for correlational analysis between two health metrics. The user specifies 'past 20 days', so we'll retrieve exactly that timeframe.",
+        "numdays": 20,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My cheeks flush easily during meetings now.",
+        "type": "implicit",
+        "thinking": "The user hints at physiological stress responses that might relate to blood pressure. The term 'now' suggests recent changes, so we'll show 10 days of data to capture the new pattern.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Started cold showers every morning for the past 18 days - see any cardiovascular impact?",
+        "type": "behavioral",
+        "thinking": "The user wants to evaluate the physiological effects of a new wellness practice. They specify '18 days', so we'll retrieve exactly that intervention period.",
+        "numdays": 18,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My heartbeat sounds like a distant thunderstorm when I lie down.",
+        "type": "metaphorical",
+        "thinking": "The user poetically describes pulsatile tinnitus that might indicate blood pressure changes. Without timeframe specifics, we'll show the past week's nocturnal readings.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I get sudden waves of nausea when standing up from my desk recently.",
+        "type": "symptom",
+        "thinking": "The user describes orthostatic symptoms potentially linked to blood pressure regulation. The term 'recently' is nonspecific, so we'll default to 10 days to capture the new pattern.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Show me my BP readings from 7am-9am versus 7pm-9pm for the last lunar month.",
+        "type": "explicit",
+        "thinking": "This is a precise chronobiological request. A lunar month is approximately 28 days, which we'll use as our timeframe for comprehensive circadian analysis.",
+        "numdays": 28,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My watch keeps giving me high heart rate alerts during Zoom calls...",
+        "type": "implicit",
+        "thinking": "The user hints at stress-induced physiological changes without directly mentioning blood pressure. Since this appears to be a new pattern, we'll show 14 days of data to establish baseline versus stress periods.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've been doing 10 minutes of meditation before bed for 16 days straight. Any effect on my nighttime numbers?",
+        "type": "behavioral",
+        "thinking": "The user wants to assess the impact of a new relaxation practice on nocturnal readings. They specify '16 days', so we'll retrieve exactly that intervention period.",
+        "numdays": 16,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "There's a balloon slowly inflating behind my eyes when I'm tired.",
+        "type": "metaphorical",
+        "thinking": "The user describes pressure sensations that might indicate blood pressure changes. Without timeframe specifics, we'll show the past week's data focusing on fatigue periods.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I keep yawning excessively during afternoon meetings for the past week.",
+        "type": "symptom",
+        "thinking": "The user reports unusual fatigue patterns that could relate to blood pressure dips. They specify 'past week', so we'll examine exactly 7 days of afternoon readings.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Compare my pre-dinner and post-dinner readings since Daylight Savings Time started.",
+        "type": "explicit",
+        "thinking": "This is a direct request for mealtime analysis tied to a seasonal change. Since DST began about 3 weeks ago for most regions, we'll use 21 days for thorough assessment.",
+        "numdays": 21,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My forehead veins look more pronounced in the mirror lately.",
+        "type": "implicit",
+        "thinking": "The user hints at physical changes that might indicate blood pressure fluctuations. The term 'lately' is nonspecific, so we'll default to 10 days to show recent trends.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I began taking the stairs instead of the elevator at work 8 days ago. Any cardiovascular benefits yet?",
+        "type": "behavioral",
+        "thinking": "The user wants to evaluate the immediate impact of increased physical activity. They specify '8 days ago', so we'll retrieve exactly that timeframe.",
+        "numdays": 8,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My pulse feels like a trapped bird fluttering in my wrists when I'm anxious.",
+        "type": "metaphorical",
+        "thinking": "The user poetically describes palpitations during stress that might relate to blood pressure. Without timeframe specifics, we'll show the past week's data focusing on anxious periods.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I wake up with a pounding headache three out of the last five mornings.",
+        "type": "symptom",
+        "thinking": "The user reports a specific pattern of morning symptoms that could indicate blood pressure issues. They mention 'last five mornings', so we'll examine exactly 5 days of data.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Show me my blood pressure trends during my most active vs least active hours for the past fortnight.",
+        "type": "explicit",
+        "thinking": "This is a clear request for activity-correlated analysis. 'Fortnight' indicates 14 days, which we'll use as our timeframe for comprehensive assessment.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My nose randomly starts bleeding when I'm stressed these days.",
+        "type": "implicit",
+        "thinking": "The user connects stress to physical symptoms that might involve blood pressure. The term 'these days' suggests recent changes, so we'll show 14 days of data to capture the new pattern.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Started drinking hibiscus tea daily for its supposed benefits 25 days ago. Any measurable impact?",
+        "type": "behavioral",
+        "thinking": "The user wants to verify the effects of a dietary change purported to affect blood pressure. They specify '25 days ago', so we'll retrieve exactly that timeframe for assessment.",
+        "numdays": 25,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "There's an ocean's tide rushing in my ears when I lie on my left side.",
+        "type": "metaphorical",
+        "thinking": "The user describes pulsatile tinnitus that might indicate blood pressure changes positionally. Without timeframe specifics, we'll show the past week's lateral position readings.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I get sudden dizzy spells when turning my head quickly this past week.",
+        "type": "symptom",
+        "thinking": "The user reports positional vertigo that could relate to blood pressure regulation. They specify 'this past week', so we'll examine exactly 7 days of data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Analyze my BP variability during work-from-home days vs office days this month.",
+        "type": "explicit",
+        "thinking": "This is a direct request for environment-related analysis. Since they reference 'this month', we'll use 30 days for comprehensive comparison between settings.",
+        "numdays": 30,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My Fitbit shows higher resting heart rates since the project deadline loomed...",
+        "type": "implicit",
+        "thinking": "The user hints at stress-related physiological changes without directly mentioning blood pressure. Since this appears work-stress related, we'll show 14 days to capture pre-deadline changes.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've been doing breath-holding exercises for 11 days to improve oxygenation. Any effect on my numbers?",
+        "type": "behavioral",
+        "thinking": "The user wants to assess the impact of a specific breathing technique. They specify '11 days', so we'll retrieve exactly that intervention period.",
+        "numdays": 11,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My skull feels like it's in a slowly tightening vice after long calls.",
+        "type": "metaphorical",
+        "thinking": "The user describes tension headaches potentially related to stress-induced blood pressure changes. Without timeframe specifics, we'll show the past week's post-call readings.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I see flashing lights when I stand up too fast now.",
+        "type": "symptom",
+        "thinking": "The user reports orthostatic visual disturbances that could indicate blood pressure drops. The term 'now' suggests recent onset, so we'll show 10 days to capture the new symptom period.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Compare my morning readings before and after I changed my alarm sound 17 days ago.",
+        "type": "explicit",
+        "thinking": "This is a precise request to evaluate the impact of a sleep-related change. They specify '17 days ago', so we'll retrieve exactly that timeframe for before/after analysis.",
+        "numdays": 17,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My collar feels tighter by the end of the day recently, though I haven't gained weight.",
+        "type": "implicit",
+        "thinking": "The user hints at fluid retention that often accompanies blood pressure changes. The term 'recently' is nonspecific, so we'll default to 14 days to show recent diurnal patterns.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Started wearing compression socks during flights 3 trips ago (about 24 days). Any difference in my travel numbers?",
+        "type": "behavioral",
+        "thinking": "The user wants to assess the effect of a travel-specific intervention. They estimate '24 days' across multiple trips, which we'll use for comprehensive travel-period analysis.",
+        "numdays": 24,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Could you check how my blood pressure has changed in the past 13 days?",
+        "type": "explicit",
+        "thinking": "The user is making a direct request to track blood pressure changes. I’ll retrieve 13 days of data using get_blood_pressure_data as explicitly stated.",
+        "numdays": 13,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Ever since that argument two weeks ago, I’ve felt off. Think my pressure’s been high?",
+        "type": "implicit",
+        "thinking": "The user links emotional stress from an event to possible physiological effects. 'Two weeks ago' maps to 14 days, so I’ll retrieve that window using get_blood_pressure_data.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I replaced my evening coffee with herbal tea last 9 days — is that helping?",
+        "type": "behavioral",
+        "thinking": "The user reports a behavioral change and expects a health benefit. I’ll retrieve 9 days of blood pressure data using get_blood_pressure_data.",
+        "numdays": 9,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My chest feels like it's holding a balloon that might pop.",
+        "type": "metaphorical",
+        "thinking": "The figurative expression suggests possible hypertension. I’ll use get_blood_pressure_data to retrieve the past 7 days of readings since no timeframe was specified.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I get these weird head rushes every morning — could it be pressure-related?",
+        "type": "symptom",
+        "thinking": "The user experiences recurring symptoms that could signal blood pressure irregularities. I’ll retrieve data from the last 7 days using get_blood_pressure_data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I stopped drinking soda 6 days ago — any changes yet?",
+        "type": "behavioral",
+        "thinking": "The user cut out sugary drinks and wants to check for effects on blood pressure. I’ll use get_blood_pressure_data to retrieve 6 days of data.",
+        "numdays": 6,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Check if there’s been a pattern in my pressure across the last four Fridays.",
+        "type": "explicit",
+        "thinking": "The user wants to detect recurring patterns on specific weekdays. I’ll retrieve 28 days of data using get_blood_pressure_data to cover four Fridays.",
+        "numdays": 28,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "It’s like my body’s been on edge since last Monday. Think my pressure shows it?",
+        "type": "implicit",
+        "thinking": "The user suggests persistent stress and suspects it’s reflected in their vitals. Assuming today is Wednesday, that’s 9 days. I’ll use get_blood_pressure_data for that window.",
+        "numdays": 9,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been sleeping better this week — is that calming my blood pressure?",
+        "type": "implicit",
+        "thinking": "The user connects improved sleep to a potential health benefit. I’ll retrieve 7 days of readings using get_blood_pressure_data to explore this correlation.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My head’s been pounding since Sunday night — what’s going on with my pressure?",
+        "type": "symptom",
+        "thinking": "The user is describing headaches that may signal elevated blood pressure. If today is Friday, that’s 5 days. I’ll call get_blood_pressure_data for that period.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Do my blood pressure readings spike every evening?",
+        "type": "explicit",
+        "thinking": "The user wants to identify possible evening-specific fluctuations. I’ll retrieve 7 days of data using get_blood_pressure_data to analyze time-of-day patterns.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My body feels like it’s tightening every time I skip breakfast.",
+        "type": "metaphorical",
+        "thinking": "The metaphor hints at blood pressure issues tied to meal-skipping. I’ll retrieve 7 days of data using get_blood_pressure_data to check for such a pattern.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I've cut back on smoking over the last 17 days. Can we see if it’s helped my pressure?",
+        "type": "behavioral",
+        "thinking": "The user reports a significant lifestyle change and wants to see results. I’ll use get_blood_pressure_data for the past 17 days as specified.",
+        "numdays": 17,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling oddly calm since Saturday — has my pressure dropped?",
+        "type": "implicit",
+        "thinking": "The user suspects a correlation between mood and blood pressure. Assuming today is Thursday, 'since Saturday' covers 5 days. I’ll retrieve that data using get_blood_pressure_data.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My ears start ringing when I climb stairs — is that a pressure issue?",
+        "type": "symptom",
+        "thinking": "The user reports exertion-induced symptoms that may indicate abnormal blood pressure. No specific time mentioned, so I’ll default to retrieving the past 7 days using get_blood_pressure_data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been super tense since my big presentation last Tuesday; how’s my blood pressure doing?",
+        "type": "symptom",
+        "thinking": "The user mentions feeling tense since a presentation last Tuesday, suggesting stress that could affect blood pressure. get_blood_pressure_data is needed to check for any related changes in readings. 'Since last Tuesday' (July 29, 2025) to today (August 5, 2025) is 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you show my blood pressure for the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood pressure data for the last 15 days. This direct request justifies calling get_blood_pressure_data to retrieve the data. The query specifies 'last 15 days,' so numdays is 15.",
+        "numdays": 15,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been drinking less water this week; is that bad for my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions reduced water intake this week and questions its impact on blood pressure. get_blood_pressure_data is needed to analyze recent readings for any effects. 'This week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been waking up with a racing pulse since last weekend; what’s my blood pressure like?",
+        "type": "symptom",
+        "thinking": "The user reports a racing pulse since last weekend, a symptom potentially linked to blood pressure issues. get_blood_pressure_data is required to check for abnormalities. 'Since last weekend' (August 2-3, 2025) to today (August 5, 2025) is 2-3 days, but I’ll use 5 days as the minimum for sufficient data.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my blood pressure as turbulent as my thoughts lately?",
+        "type": "metaphorical",
+        "thinking": "The user compares blood pressure to turbulent thoughts, indicating concern about fluctuations. get_blood_pressure_data is needed to assess recent readings for variability. No time is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been avoiding salty foods since last Monday; has it helped my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions avoiding salty foods since last Monday and wants to know its effect on blood pressure. get_blood_pressure_data is needed to compare recent readings. 'Since last Monday' (July 28, 2025) to today (August 5, 2025) is 8 days, so numdays is 8.",
+        "numdays": 8,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Please check my blood pressure trends for the past 20 days.",
+        "type": "explicit",
+        "thinking": "The user directly requests blood pressure trends for the past 20 days. This requires calling get_blood_pressure_data to fetch the data. The query specifies 'past 20 days,' so numdays is 20.",
+        "numdays": 20,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I feel like my heart’s under a heavy load; is my blood pressure okay?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor about a heavy load on the heart, suggesting concern about blood pressure stability. get_blood_pressure_data is needed to check recent readings. No time is mentioned, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been getting sharp chest pains for the past 10 days; could my blood pressure be high?",
+        "type": "symptom",
+        "thinking": "The user reports chest pains over the past 10 days, a serious symptom that could indicate high blood pressure. get_blood_pressure_data is needed to check for elevated readings. The query specifies 'past 10 days,' so numdays is 10.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Work’s been overwhelming since the new quarter started; is my blood pressure holding up?",
+        "type": "implicit",
+        "thinking": "The user indirectly connects work stress since the new quarter to potential blood pressure issues. get_blood_pressure_data is needed to review readings for stress-related changes. Assuming the quarter started July 1, 2025, to today (August 5, 2025) is over 30 days, so I’ll cap numdays at 30.",
+        "numdays": 30,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I started taking evening walks last Wednesday; has it done anything for my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting evening walks last Wednesday and wants to know its impact on blood pressure. get_blood_pressure_data is needed to compare recent readings. 'Last Wednesday' (July 30, 2025) to today (August 5, 2025) is 6 days, so numdays is 6.",
+        "numdays": 6,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you pull up my blood pressure data for the last 12 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood pressure data for the last 12 days. This clear request justifies calling get_blood_pressure_data to fetch the data. The query specifies 'last 12 days,' so numdays is 12.",
+        "numdays": 12,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling jittery since last Friday; is my blood pressure spiking?",
+        "type": "symptom",
+        "thinking": "The user reports feeling jittery since last Friday, which could be linked to blood pressure fluctuations. get_blood_pressure_data is needed to check for spikes. 'Since last Friday' (July 31, 2025) to today (August 5, 2025) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been eating more fast food this month; could that be raising my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased fast food consumption this month, questioning its effect on blood pressure. get_blood_pressure_data is needed to analyze recent readings. 'This month' (August 1-5, 2025) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my blood pressure riding the same storm as my anxiety lately?",
+        "type": "metaphorical",
+        "thinking": "The user compares blood pressure to a storm linked to anxiety, indicating concern about fluctuations. get_blood_pressure_data is needed to assess recent readings for variability. No time is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been dealing with a lot of arguments at home since last week; how’s my blood pressure?",
+        "type": "implicit",
+        "thinking": "The user indirectly connects home arguments since last week to potential blood pressure changes. get_blood_pressure_data is needed to review readings for stress-related impacts. 'Since last week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Show me my blood pressure for the past 25 days.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood pressure data for the past 25 days. This requires calling get_blood_pressure_data to fetch the data. The query specifies 'past 25 days,' so numdays is 25.",
+        "numdays": 25,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been having trouble focusing for the last two weeks; could my blood pressure be off?",
+        "type": "symptom",
+        "thinking": "The user reports difficulty focusing over the last two weeks, which may relate to blood pressure issues. get_blood_pressure_data is needed to check for anomalies. 'Last two weeks' maps to 14 days, so numdays is 14.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been trying deep breathing exercises since last Sunday; has it helped my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting deep breathing exercises since last Sunday and wants to know its effect on blood pressure. get_blood_pressure_data is needed to compare recent readings. 'Since last Sunday' (August 3, 2025) to today (August 5, 2025) is 2 days, but I’ll use 5 days as the minimum for sufficient data.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my blood pressure as unsteady as my sleep schedule lately?",
+        "type": "metaphorical",
+        "thinking": "The user compares blood pressure to an unsteady sleep schedule, suggesting concern about fluctuations. get_blood_pressure_data is needed to assess recent readings for variability. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling unusually sweaty since last Thursday; is my blood pressure okay?",
+        "type": "symptom",
+        "thinking": "The user reports excessive sweating since last Thursday, which could indicate blood pressure issues. get_blood_pressure_data is needed to check for anomalies. 'Since last Thursday' (July 31, 2025) to today (August 5, 2025) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been cutting back on caffeine for the past 10 days; how’s my blood pressure doing?",
+        "type": "behavioral",
+        "thinking": "The user mentions reducing caffeine intake for the past 10 days and questions its effect on blood pressure. get_blood_pressure_data is needed to analyze recent readings. The query specifies 'past 10 days,' so numdays is 10.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you check my blood pressure trends for the last 18 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests blood pressure trends for the last 18 days. This clear request justifies calling get_blood_pressure_data to fetch the data. The query specifies 'last 18 days,' so numdays is 18.",
+        "numdays": 18,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My life’s been like a tightrope walk lately; is my blood pressure staying balanced?",
+        "type": "metaphorical",
+        "thinking": "The user uses a tightrope metaphor to describe life’s stress, hinting at blood pressure concerns. get_blood_pressure_data is needed to check recent readings for stability. No time is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling super drained since the kids went back to school last week; how’s my blood pressure?",
+        "type": "implicit",
+        "thinking": "The user indirectly connects feeling drained since last week’s school start to potential blood pressure issues. get_blood_pressure_data is needed to review readings for related changes. 'Since last week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been getting ringing in my ears for the past 12 days; is my blood pressure too high?",
+        "type": "symptom",
+        "thinking": "The user reports ear ringing over the past 12 days, a symptom potentially linked to high blood pressure. get_blood_pressure_data is needed to check for elevated readings. The query specifies 'past 12 days,' so numdays is 12.",
+        "numdays": 12,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I started a new workout routine last Monday; has it affected my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting a new workout routine last Monday and wants to know its impact on blood pressure. get_blood_pressure_data is needed to compare recent readings. 'Last Monday' (July 28, 2025) to today (August 5, 2025) is 8 days, so numdays is 8.",
+        "numdays": 8,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Please show my blood pressure data for the last 22 days.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood pressure data for the last 22 days. This requires calling get_blood_pressure_data to fetch the data. The query specifies 'last 22 days,' so numdays is 22.",
+        "numdays": 22,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling like my heart’s in a vise lately; is my blood pressure okay?",
+        "type": "metaphorical",
+        "thinking": "The user uses a vise metaphor to describe heart discomfort, suggesting blood pressure concerns. get_blood_pressure_data is needed to check recent readings. No time is specified, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been under a lot of deadline pressure since last Tuesday; could that be spiking my blood pressure?",
+        "type": "implicit",
+        "thinking": "The user indirectly connects deadline stress since last Tuesday to potential blood pressure spikes. get_blood_pressure_data is needed to review readings for stress-related changes. 'Since last Tuesday' (July 29, 2025) to today (August 5, 2025) is 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been getting random nosebleeds since last Sunday; is my blood pressure too high?",
+        "type": "symptom",
+        "thinking": "The user reports nosebleeds since last Sunday, a symptom that could indicate high blood pressure. get_blood_pressure_data is needed to check for elevated readings. 'Since last Sunday' (August 3, 2025) to today (August 5, 2025) is 2 days, but I’ll use 5 days as the minimum for sufficient data.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been eating more fruits and veggies for the past two weeks; has it helped my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions a healthier diet for two weeks and wants to know its effect on blood pressure. get_blood_pressure_data is needed to compare recent readings. 'Past two weeks' maps to 14 days, so numdays is 14.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you look at my blood pressure for the last 16 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests blood pressure data for the last 16 days. This clear request justifies calling get_blood_pressure_data to fetch the data. The query specifies 'last 16 days,' so numdays is 16.",
+        "numdays": 16,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling super on edge lately; is my blood pressure acting up?",
+        "type": "symptom",
+        "thinking": "The user reports feeling on edge, which could be linked to blood pressure fluctuations. get_blood_pressure_data is needed to check recent readings for issues. No time is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been skipping my usual runs since last Friday; is that affecting my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions stopping runs since last Friday and questions its effect on blood pressure. get_blood_pressure_data is needed to analyze recent readings. 'Since last Friday' (July 31, 2025) to today (August 5, 2025) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my blood pressure as wild as my recent mood swings?",
+        "type": "metaphorical",
+        "thinking": "The user compares blood pressure to mood swings, indicating concern about fluctuations. get_blood_pressure_data is needed to assess recent readings for variability. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been dealing with a lot of family drama since last week; how’s my blood pressure holding up?",
+        "type": "implicit",
+        "thinking": "The user indirectly connects family drama since last week to potential blood pressure issues. get_blood_pressure_data is needed to review readings for stress-related changes. 'Since last week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been getting headaches every evening for the past 10 days; is my blood pressure okay?",
+        "type": "symptom",
+        "thinking": "The user reports evening headaches over the past 10 days, which could indicate blood pressure issues. get_blood_pressure_data is needed to check for anomalies. The query specifies 'past 10 days,' so numdays is 10.",
+        "numdays": 10,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I started drinking herbal tea daily since last Monday; has it calmed my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions drinking herbal tea daily since last Monday and wants to know its effect on blood pressure. get_blood_pressure_data is needed to compare recent readings. 'Since last Monday' (July 28, 2025) to today (August 5, 2025) is 8 days, so numdays is 8.",
+        "numdays": 8,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Please pull up my blood pressure data for the last 30 days.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests blood pressure data for the last 30 days. This requires calling get_blood_pressure_data to fetch the data. The query specifies 'last 30 days,' so numdays is 30.",
+        "numdays": 30,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "My heart feels like it’s carrying too much weight lately; is my blood pressure okay?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor about heart weight, suggesting blood pressure concerns. get_blood_pressure_data is needed to check recent readings for stability. No time is specified, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling off since starting a new medication last Wednesday; how’s my blood pressure?",
+        "type": "implicit",
+        "thinking": "The user vaguely connects feeling off since starting a new medication last Wednesday to potential blood pressure issues. get_blood_pressure_data is needed to review readings for related changes. 'Since last Wednesday' (July 30, 2025) to today (August 5, 2025) is 6 days, so numdays is 6.",
+        "numdays": 6,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been having blurry vision since last Thursday; could my blood pressure be too high?",
+        "type": "symptom",
+        "thinking": "The user reports blurry vision since last Thursday, a symptom potentially linked to high blood pressure. get_blood_pressure_data is needed to check for elevated readings. 'Since last Thursday' (July 31, 2025) to today (August 5, 2025) is 5 days, so numdays is 5.",
+        "numdays": 5,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been eating less red meat for the past two weeks; has it helped my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions reducing red meat consumption for two weeks and wants to know its effect on blood pressure. get_blood_pressure_data is needed to compare recent readings. 'Past two weeks' maps to 14 days, so numdays is 14.",
+        "numdays": 14,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Can you check my blood pressure for the last 17 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests blood pressure data for the last 17 days. This clear request justifies calling get_blood_pressure_data to fetch the data. The query specifies 'last 17 days,' so numdays is 17.",
+        "numdays": 17,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling like my heart’s racing out of control lately; is my blood pressure okay?",
+        "type": "symptom",
+        "thinking": "The user reports a racing heart, which could be linked to blood pressure issues. get_blood_pressure_data is needed to check recent readings for abnormalities. No time is specified, so I’ll default to 7 days for recent trends.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been working night shifts since last Tuesday; is that messing with my blood pressure?",
+        "type": "behavioral",
+        "thinking": "The user mentions working night shifts since last Tuesday and questions its effect on blood pressure. get_blood_pressure_data is needed to analyze recent readings. 'Since last Tuesday' (July 29, 2025) to today (August 5, 2025) is 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "Is my blood pressure as shaky as my confidence right now?",
+        "type": "metaphorical",
+        "thinking": "The user compares blood pressure to shaky confidence, indicating concern about fluctuations. get_blood_pressure_data is needed to assess recent readings for variability. No time is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been feeling off since my move to a new city last week; how’s my blood pressure?",
+        "type": "implicit",
+        "thinking": "The user vaguely connects feeling off since moving last week to potential blood pressure issues. get_blood_pressure_data is needed to review readings for related changes. 'Since last week' maps to 7 days, so numdays is 7.",
+        "numdays": 7,
+        "function": "get_blood_pressure_data"
+    },
+    {
+        "query": "I’ve been getting short of breath for the past 12 days; is my blood pressure okay?",
+        "type": "symptom",
+        "thinking": "The user reports shortness of breath over the past 12 days, which could indicate blood pressure issues. get_blood_pressure_data is needed to check for anomalies. The query specifies 'past 12 days,' so numdays is 12.",
+        "numdays": 12,
+        "function": "get_blood_pressure_data"
+    }
+]

@@ -1,0 +1,142 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "json",
+  "dataset_size": 1409438,
+  "description": "",
+  "download_checksums": {
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/blood_glucose_data.json": {
+      "num_bytes": 106478,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/blood_pressure_data.json": {
+      "num_bytes": 109334,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/bmr_data.json": {
+      "num_bytes": 91365,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/body_fat_data.json": {
+      "num_bytes": 93261,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/body_temp_data.json": {
+      "num_bytes": 83894,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/calories_burned_data.json": {
+      "num_bytes": 96157,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/distance_data.json": {
+      "num_bytes": 99946,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/exercise_heart_rate_data.json": {
+      "num_bytes": 108260,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/exercise_session_data.json": {
+      "num_bytes": 95143,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/heart_rate_data.json": {
+      "num_bytes": 89539,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/height_data.json": {
+      "num_bytes": 92716,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/nutrition_data.json": {
+      "num_bytes": 97929,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/oxygen_saturation_data.json": {
+      "num_bytes": 108400,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/power_data.json": {
+      "num_bytes": 97522,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/sleep_data.json": {
+      "num_bytes": 94117,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/speed_data.json": {
+      "num_bytes": 100837,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/steps_data.json": {
+      "num_bytes": 80319,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/stress_data.json": {
+      "num_bytes": 78004,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/vo2max_data.json": {
+      "num_bytes": 95527,
+      "checksum": null
+    },
+    "/home/jovyan/Works/MSc_Thesis/mh_function_calling/dataset_generation/fc_training_data/weight_data.json": {
+      "num_bytes": 97989,
+      "checksum": null
+    }
+  },
+  "download_size": 1916737,
+  "features": {
+    "patient_query": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "type": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "thinking": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "num_days": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "function": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "patient_id": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "assistant_response": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 3326175,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 1409438,
+      "num_examples": 5099,
+      "dataset_name": "json"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

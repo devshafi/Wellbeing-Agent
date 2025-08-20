@@ -1,0 +1,1780 @@
+[
+    {
+        "query": "I've been feeling heavier lately, can you check my body fat trends for the past two weeks?",
+        "type": "symptom",
+        "thinking": "The user feels 'heavier,' suggesting a concern about potential body fat increase. Calling get_body_fat_data is appropriate to analyze recent body fat percentage trends. The query specifies 'past two weeks,' which maps to numdays=14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "How’s my body fat been doing since I started my new workout routine last month?",
+        "type": "behavioral",
+        "thinking": "The user mentions a new workout routine, indicating a behavior change that may affect body fat. get_body_fat_data will help assess the impact of this change. 'Last month' suggests a 30-day period, so numdays=30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you tell me about my body fat percentage over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests body fat percentage data for a specific period. get_body_fat_data is needed to retrieve this information. 'Last 10 days' clearly maps to numdays=10.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel like my clothes are tighter this week, is my body fat up?",
+        "type": "symptom",
+        "thinking": "The user’s mention of tighter clothes suggests concern about body fat increase. get_body_fat_data can confirm if body fat has risen. 'This week' indicates a 7-day period, so numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My energy’s been low since Sunday, could my body fat be affecting this?",
+        "type": "symptom",
+        "thinking": "Low energy could relate to body composition changes, prompting the user’s query. get_body_fat_data will provide body fat trends to explore this connection. 'Since Sunday' (assuming today is Tuesday, August 5, 2025) covers 9 days, so numdays=9.",
+        "numdays": 9,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been eating more carbs lately, has that changed my body fat?",
+        "type": "behavioral",
+        "thinking": "The user links increased carb intake to potential body fat changes, indicating a behavioral shift. get_body_fat_data will reveal any trends in body fat percentage. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Is my body fat percentage on track for the past three weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about body fat percentage trends. get_body_fat_data is required to fetch this data. 'Past three weeks' translates to numdays=21.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’m feeling more sluggish than usual, is my body fat creeping up?",
+        "type": "symptom",
+        "thinking": "Sluggishness may reflect concerns about body fat increases. get_body_fat_data will help analyze recent trends to address this. No specific time is mentioned, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body feels like it’s carrying extra weight since the holidays, what’s going on?",
+        "type": "metaphorical",
+        "thinking": "The phrase 'carrying extra weight' metaphorically suggests increased body fat. get_body_fat_data will clarify actual trends. 'Since the holidays' (assuming recent, e.g., July 4, 2025) suggests about 30 days, so numdays=30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Have I made progress with my body fat since starting keto two weeks ago?",
+        "type": "behavioral",
+        "thinking": "The user references starting a keto diet, a behavior change likely aimed at reducing body fat. get_body_fat_data will show progress. 'Two weeks ago' maps to numdays=14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you check if my body fat’s been stable this month?",
+        "type": "explicit",
+        "thinking": "The user directly asks about body fat stability. get_body_fat_data is needed to evaluate trends. 'This month' suggests a 30-day period, so numdays=30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been hitting the gym hard for the last 12 days, is my body fat down?",
+        "type": "behavioral",
+        "thinking": "Intense gym activity indicates a behavior change that may lower body fat. get_body_fat_data will verify this. 'Last 12 days' clearly maps to numdays=12.",
+        "numdays": 12,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel like I’m not as lean as I was last week, what’s my body fat doing?",
+        "type": "implicit",
+        "thinking": "The user implies concern about losing leanness, likely tied to body fat. get_body_fat_data will provide clarity on recent changes. 'Last week' indicates numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body’s feeling off since I stopped running, can you look at my body fat?",
+        "type": "behavioral",
+        "thinking": "Stopping running suggests a behavior change that could increase body fat. get_body_fat_data will assess this impact. No time frame is specified, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Is my body fat percentage okay for the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests body fat percentage data. get_body_fat_data will provide the relevant trends. 'Last 15 days' maps to numdays=15.",
+        "numdays": 15,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’m feeling puffier than usual, is my body fat up this week?",
+        "type": "symptom",
+        "thinking": "Feeling 'puffier' suggests concern about body fat increase. get_body_fat_data will confirm trends. 'This week' indicates numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body’s been a bit of a burden lately, how’s my fat percentage?",
+        "type": "metaphorical",
+        "thinking": "'Burden' metaphorically hints at increased body fat. get_body_fat_data will reveal actual trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since I started fasting last Monday, has my body fat changed?",
+        "type": "behavioral",
+        "thinking": "Fasting is a behavior change that could affect body fat. get_body_fat_data will show any changes. 'Last Monday' (assuming today is Tuesday, August 5, 2025) suggests 8 days, so numdays=8.",
+        "numdays": 8,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you look at my body fat trends for the past 20 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests body fat trends. get_body_fat_data is needed to fetch this data. 'Past 20 days' maps to numdays=20.",
+        "numdays": 20,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been snacking a lot at night, is that affecting my body fat?",
+        "type": "behavioral",
+        "thinking": "Nighttime snacking is a behavior that could increase body fat. get_body_fat_data will help analyze its impact. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I don’t feel as fit as I did last month, what’s up with my body fat?",
+        "type": "implicit",
+        "thinking": "Feeling less fit implies concern about body fat changes. get_body_fat_data will provide insight into trends. 'Last month' suggests numdays=30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My stamina’s down since last weekend, could body fat be a factor?",
+        "type": "symptom",
+        "thinking": "Lower stamina may relate to body fat changes. get_body_fat_data will explore this possibility. 'Since last weekend' (assuming today is Tuesday) suggests 9 days, so numdays=9.",
+        "numdays": 9,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Is my body fat percentage trending okay since I cut out sugar?",
+        "type": "behavioral",
+        "thinking": "Cutting out sugar is a behavior change that may reduce body fat. get_body_fat_data will show trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body feels like it’s holding onto extra baggage, what’s my fat percentage?",
+        "type": "metaphorical",
+        "thinking": "'Extra baggage' metaphorically suggests higher body fat. get_body_fat_data will clarify trends. No time frame is specified, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "How’s my body fat been over the last three weekends?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for body fat trends over a specific period. get_body_fat_data will provide the data. 'Last three weekends' (assuming weekly intervals) spans about 21 days, so numdays=21.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been less active since my injury, is my body fat up?",
+        "type": "behavioral",
+        "thinking": "Reduced activity due to injury could increase body fat. get_body_fat_data will check for changes. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel bloated after meals lately, is my body fat increasing?",
+        "type": "symptom",
+        "thinking": "Feeling bloated may indicate concern about body fat. get_body_fat_data will confirm if trends align with this. No time frame is specified, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you analyze my body fat for the past 25 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests body fat analysis for a specific period. get_body_fat_data is needed. 'Past 25 days' maps to numdays=25.",
+        "numdays": 25,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’m not feeling as light on my feet, what’s my body fat doing?",
+        "type": "implicit",
+        "thinking": "Not feeling 'light on my feet' implies concern about body fat increase. get_body_fat_data will provide clarity. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since I started lifting weights 10 days ago, has my body fat changed?",
+        "type": "behavioral",
+        "thinking": "Weight lifting is a behavior change that could affect body fat. get_body_fat_data will show trends. '10 days ago' maps to numdays=10.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body feels heavier since I got sick, what’s my fat percentage?",
+        "type": "symptom",
+        "thinking": "Feeling heavier post-illness suggests concern about body fat. get_body_fat_data will reveal trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Is my body fat trending down since I started yoga two weeks ago?",
+        "type": "behavioral",
+        "thinking": "Starting yoga is a behavior change that may reduce body fat. get_body_fat_data will verify progress. 'Two weeks ago' maps to numdays=14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel like I’m carrying more than I should, how’s my body fat?",
+        "type": "metaphorical",
+        "thinking": "'Carrying more' metaphorically hints at increased body fat. get_body_fat_data will provide actual trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you check my body fat trends since last Friday?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests body fat trends for a specific period. get_body_fat_data will fetch this data. 'Since last Friday' (assuming today is Tuesday, August 5, 2025) covers 11 days, so numdays=11.",
+        "numdays": 11,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been eating healthier this month, has my body fat dropped?",
+        "type": "behavioral",
+        "thinking": "Healthier eating is a behavior change likely aimed at reducing body fat. get_body_fat_data will show trends. 'This month' suggests numdays=30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I don’t feel as toned as I did two weeks ago, is my body fat up?",
+        "type": "implicit",
+        "thinking": "Feeling less toned implies concern about body fat increase. get_body_fat_data will clarify trends. 'Two weeks ago' maps to numdays=14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My joints ache more lately, could my body fat be a factor?",
+        "type": "symptom",
+        "thinking": "Joint aches may relate to body fat changes. get_body_fat_data will help explore this. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "How’s my body fat been since I started jogging last week?",
+        "type": "behavioral",
+        "thinking": "Starting jogging is a behavior change that could lower body fat. get_body_fat_data will show trends. 'Last week' maps to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body feels like it’s dragging, what’s my fat percentage?",
+        "type": "metaphorical",
+        "thinking": "'Dragging' metaphorically suggests higher body fat. get_body_fat_data will provide clarity. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you look at my body fat for the last 18 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests body fat data for a specific period. get_body_fat_data is needed. 'Last 18 days' maps to numdays=18.",
+        "numdays": 18,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been skipping breakfast lately, is my body fat affected?",
+        "type": "behavioral",
+        "thinking": "Skipping breakfast is a behavior change that could impact body fat. get_body_fat_data will reveal trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel less agile since last month, is my body fat up?",
+        "type": "implicit",
+        "thinking": "Feeling less agile suggests concern about body fat increase. get_body_fat_data will clarify trends. 'Since last month' maps to numdays=30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My workouts feel harder this week, could body fat be involved?",
+        "type": "symptom",
+        "thinking": "Harder workouts may relate to body fat changes. get_body_fat_data will explore this possibility. 'This week' indicates numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since I started a new diet 20 days ago, how’s my body fat?",
+        "type": "behavioral",
+        "thinking": "A new diet is a behavior change that may affect body fat. get_body_fat_data will show trends. '20 days ago' maps to numdays=20.",
+        "numdays": 20,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body’s feeling weighed down, what’s my fat percentage?",
+        "type": "metaphorical",
+        "thinking": "'Weighed down' metaphorically suggests increased body fat. get_body_fat_data will provide actual trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "How’s my body fat percentage been over the last 9 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for body fat percentage trends. get_body_fat_data is needed. 'Last 9 days' maps to numdays=9.",
+        "numdays": 9,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been drinking more water lately, has that impacted my body fat?",
+        "type": "behavioral",
+        "thinking": "Increased water intake is a behavior change that could indirectly affect body fat. get_body_fat_data will show trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I don’t feel as strong as I did last week, is my body fat up?",
+        "type": "implicit",
+        "thinking": "Feeling less strong implies concern about body fat increase. get_body_fat_data will clarify trends. 'Last week' maps to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My breathing feels heavier since last weekend, is body fat a factor?",
+        "type": "symptom",
+        "thinking": "Heavier breathing may relate to body fat changes. get_body_fat_data will explore this. 'Since last weekend' (assuming today is Tuesday) suggests 9 days, so numdays=9.",
+        "numdays": 9,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Is my body fat percentage okay since I started swimming 15 days ago?",
+        "type": "behavioral",
+        "thinking": "Starting swimming is a behavior change that could reduce body fat. get_body_fat_data will show trends. '15 days ago' maps to numdays=15.",
+        "numdays": 15,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been tracking my body fat and noticed it's been creeping up over the past two weeks. Should I be concerned?",
+        "type": "explicit",
+        "thinking": "The user is directly asking about their body fat trends over a specific period. Since they mention 'past two weeks', we should analyze their body fat data for 14 days to identify any concerning patterns and provide appropriate feedback.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My clothes feel tighter around the waist lately.",
+        "type": "implicit",
+        "thinking": "The user is hinting at potential body fat changes without directly stating it. Checking their body fat data for the default period (7 days) could help determine if this is a recent change or a longer-term trend.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since I stopped going to the gym last month, I feel like my body composition has changed.",
+        "type": "behavioral",
+        "thinking": "The user connects a behavior change (stopping gym visits) with potential body fat changes. Since they mention 'last month', we should examine their body fat data over 30 days to assess the impact of this lifestyle change.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been feeling more sluggish and heavy when I move around.",
+        "type": "symptom",
+        "thinking": "The physical symptoms described (sluggishness, heaviness) may correlate with body fat changes. Without a specific time reference, we'll analyze the past week's data to look for relevant patterns.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "It feels like I'm carrying around extra baggage these days.",
+        "type": "metaphorical",
+        "thinking": "The metaphorical language suggests concern about weight or body composition. Interpreting this as potential body fat concern, we'll check the default 7-day period since no specific timeframe is mentioned.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you show me how my body fat percentage has changed since the holidays?",
+        "type": "explicit",
+        "thinking": "This is a direct request for body fat analysis with a clear temporal marker ('since the holidays'). Assuming holidays were about 3 weeks ago, we'll examine 21 days of data.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My fitness tracker says my body fat is up, but I don't feel different.",
+        "type": "implicit",
+        "thinking": "The user is expressing doubt about their body fat readings while acknowledging the data. Comparing recent measurements (default 7 days) might help reconcile this discrepancy.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Ever since I started working night shifts, my eating patterns have changed and I'm worried about fat gain.",
+        "type": "behavioral",
+        "thinking": "The user associates schedule changes with potential body fat changes. Since they mention a lifestyle shift but no specific duration, we'll analyze the past week's data as a starting point.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been waking up feeling bloated and puffy for the past 5 days.",
+        "type": "symptom",
+        "thinking": "Physical symptoms over a specific period (5 days) may indicate body composition changes. We'll analyze this exact timeframe to look for correlations with body fat measurements.",
+        "numdays": 5,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My reflection in the mirror looks like it's melting downward.",
+        "type": "metaphorical",
+        "thinking": "The melting metaphor suggests concern about body shape changes, possibly related to fat distribution. Without a time reference, we'll examine the past week's body fat data.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "What's my current body fat trend looking like?",
+        "type": "explicit",
+        "thinking": "Direct request for body fat trend analysis without a specified timeframe. Following standard protocol, we'll display data from the past 7 days.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I think my new medication might be affecting my weight.",
+        "type": "implicit",
+        "thinking": "The user implies concern about body composition changes due to medication. Checking body fat data for the past week could help identify any recent changes since starting treatment.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since switching to a vegetarian diet three weeks ago, I'm curious about my body composition.",
+        "type": "behavioral",
+        "thinking": "The user connects a dietary change with potential body fat alterations. Since they specify 'three weeks ago', we'll analyze 21 days of data to assess the impact.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My joints have been aching more than usual this week.",
+        "type": "symptom",
+        "thinking": "While not directly about body fat, joint pain can be related to weight changes. Examining this week's (7 days) body fat data might reveal relevant patterns.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel like a balloon that's been slowly inflating.",
+        "type": "metaphorical",
+        "thinking": "The inflation metaphor suggests perceived gradual weight gain. Without a specific timeframe, we'll analyze the past week's body fat measurements to address this concern.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Show me my body fat percentage fluctuations over the last 10 days.",
+        "type": "explicit",
+        "thinking": "Clear request for body fat data with a precise time window (10 days). We'll retrieve and display exactly this duration of measurements.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My wedding is in a month and I want to make sure I'm on track with my body composition goals.",
+        "type": "implicit",
+        "thinking": "The user implies concern about body fat progress toward an upcoming event. We'll analyze 30 days of data to provide meaningful insights leading up to the wedding.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been walking 10,000 steps daily for two weeks - has it affected my body fat?",
+        "type": "behavioral",
+        "thinking": "The user explicitly connects an exercise routine with body fat concerns over a 14-day period. We'll analyze this exact timeframe to evaluate the intervention's impact.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Lately I've been getting out of breath easier when climbing stairs.",
+        "type": "symptom",
+        "thinking": "Reduced stamina could relate to body composition changes. Without a specific timeframe mentioned, we'll examine the past week's body fat data for correlations.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body feels like it's working against me these days.",
+        "type": "metaphorical",
+        "thinking": "The adversarial metaphor may indicate frustration with body changes, possibly including fat accumulation. We'll check the default 7-day period for objective data.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Compare my current body fat percentage to where I was at this time last month.",
+        "type": "explicit",
+        "thinking": "Direct comparison request between now and 30 days ago. We'll analyze both the current week and the same period 30 days prior for meaningful comparison.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I'm not sure if I'm imagining it, but my face looks fuller recently.",
+        "type": "implicit",
+        "thinking": "The user hints at potential facial fat changes without certainty. Examining the past week's body fat data could help determine if this perception has a measurable basis.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since my injury prevented me from exercising, I'm worried about losing muscle and gaining fat.",
+        "type": "behavioral",
+        "thinking": "The user connects forced inactivity with body composition concerns. Without a specific injury date, we'll analyze the past week's data as a starting point for discussion.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've had unusual swelling in my ankles for the past few days.",
+        "type": "symptom",
+        "thinking": "While edema may have various causes, checking body fat changes over the past 5 days could help rule out or confirm weight-related factors.",
+        "numdays": 5,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My scale numbers are like a rollercoaster this month - up and down unpredictably.",
+        "type": "metaphorical",
+        "thinking": "The rollercoaster metaphor describes weight fluctuations. Since they reference 'this month', we'll analyze 30 days of body fat data to identify patterns.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Give me a breakdown of my body fat changes over the past three weekends.",
+        "type": "explicit",
+        "thinking": "Specific request focusing on weekend measurements. Three weekends cover approximately 21 days (including the days between), so we'll analyze this period.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My doctor said to watch my body composition, but didn't explain what to look for.",
+        "type": "implicit",
+        "thinking": "The user needs help interpreting body composition changes following medical advice. We'll start with the past week's data to establish a baseline for discussion.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I started intermittent fasting 10 days ago - can you show any effects on my body fat?",
+        "type": "behavioral",
+        "thinking": "Clear connection between a dietary intervention and body fat inquiry. The user specifies the exact duration (10 days), so we'll analyze this precise timeframe.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been feeling unusually warm and sweaty even in cool temperatures this week.",
+        "type": "symptom",
+        "thinking": "While primarily a thermal regulation issue, this could relate to body composition changes. Examining the past week's (7 days) body fat data might reveal relevant patterns.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body feels like it's storing every calorie like a squirrel preparing for winter.",
+        "type": "metaphorical",
+        "thinking": "The squirrel metaphor expresses concern about perceived efficient fat storage. Without a timeframe, we'll examine the past week's measurements for objective data.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Plot my body fat percentage since the beginning of this fitness program 3 weeks ago.",
+        "type": "explicit",
+        "thinking": "Direct request with a clear temporal marker (3 weeks). We'll display the full 21 days of data since program initiation to show progression.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My rings have been fitting tighter than usual.",
+        "type": "implicit",
+        "thinking": "The jewelry tightness hints at potential fluid retention or fat gain in extremities. Checking the past week's body fat data could help identify recent changes.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since reducing my alcohol intake a fortnight ago, has my body fat changed?",
+        "type": "behavioral",
+        "thinking": "The user connects a lifestyle change (reduced alcohol) with body composition. 'Fortnight' specifies 14 days, so we'll analyze this exact period.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've had persistent lower back pain for the last 10 days that seems worse when standing.",
+        "type": "symptom",
+        "thinking": "While back pain has many causes, weight changes could be a factor. We'll analyze the specified 10-day period for body fat correlations.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My stomach looks like it's hosting its own gravitational field lately.",
+        "type": "metaphorical",
+        "thinking": "The humorous gravity metaphor suggests concern about abdominal fat. Without a specific timeframe, we'll examine the past week's body fat measurements.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Show me my body fat trends broken down by morning vs evening over the past 15 days.",
+        "type": "explicit",
+        "thinking": "Detailed request with specific time segmentation and duration (15 days). We'll retrieve the exact requested data period with time-of-day analysis.",
+        "numdays": 15,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I think my body might be reacting differently to foods as I get older.",
+        "type": "implicit",
+        "thinking": "The user implies concern about age-related metabolic changes affecting body composition. Without a timeframe, we'll analyze the past week's data as a baseline.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since moving to a more sedentary job 6 weeks ago, I've noticed changes in my shape.",
+        "type": "behavioral",
+        "thinking": "The user connects occupational changes with physical changes. The specified 6-week period (42 days) will be analyzed for body fat trends.",
+        "numdays": 42,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been getting more frequent headaches in the afternoons this month.",
+        "type": "symptom",
+        "thinking": "While headaches may have various causes, we'll examine 30 days of body fat data to check for potential correlations with dietary or hydration changes.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My energy levels are like a phone battery that drains faster than it used to.",
+        "type": "metaphorical",
+        "thinking": "The battery metaphor describes perceived energy depletion, which could relate to body composition. Without a timeframe, we'll analyze the past week's data.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Generate a report of my body fat variability during workdays vs weekends for the past month.",
+        "type": "explicit",
+        "thinking": "Detailed analytical request comparing different day types over 30 days. We'll process the exact requested duration with day-type segmentation.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My skin feels tighter around my muscles, but I'm not sure if that's good or bad.",
+        "type": "implicit",
+        "thinking": "The physical sensation description hints at body composition curiosity. We'll examine the past week's body fat data to provide context for this observation.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been sleeping an extra hour nightly for the past 12 days - any effect on body fat?",
+        "type": "behavioral",
+        "thinking": "The user connects sleep pattern changes with body composition inquiry. The exact 12-day duration will be analyzed for correlations.",
+        "numdays": 12,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've noticed more skin breakouts than usual in the past week.",
+        "type": "symptom",
+        "thinking": "While primarily a skin concern, dietary or body composition changes could be factors. We'll analyze the specified 7-day period for relevant patterns.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My waistline is like a slowly expanding universe.",
+        "type": "metaphorical",
+        "thinking": "The cosmic metaphor expresses concern about gradual abdominal expansion. Without a timeframe, we'll examine the past week's body fat measurements.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Compare my body fat percentage from the first half of this month to the second half.",
+        "type": "explicit",
+        "thinking": "Direct comparison request splitting the current month (approximately 15 days per half). We'll analyze and compare these two 15-day periods.",
+        "numdays": 15,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My knees have been clicking more when I walk upstairs recently.",
+        "type": "implicit",
+        "thinking": "While primarily a joint concern, this could relate to weight changes. We'll examine the past week's body fat data as potential contributing factor.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since cutting out processed sugars 18 days ago, I'm curious about body fat changes.",
+        "type": "behavioral",
+        "thinking": "The user connects a dietary change with body composition interest. The exact 18-day period since the change will be analyzed.",
+        "numdays": 18,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've had unusual cravings for salty foods all week.",
+        "type": "symptom",
+        "thinking": "Dietary cravings could indicate electrolyte imbalances or relate to body composition changes. We'll analyze the past week's (7 days) body fat data for context.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My scale tells one story but my mirror tells another - which should I believe?",
+        "type": "metaphorical",
+        "thinking": "The conflicting narratives metaphor describes uncertainty about body composition assessment. We'll analyze the past week's body fat data to provide objective clarity.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Show me my body fat trends for each of the last 4 weeks separately.",
+        "type": "explicit",
+        "thinking": "Detailed request for segmented weekly analysis over 28 days (4 weeks). We'll process the data in exact 7-day increments as requested.",
+        "numdays": 28,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel like my metabolism has changed since turning 40 last year.",
+        "type": "implicit",
+        "thinking": "The user implies concern about age-related metabolic changes affecting body composition. Without a specific timeframe, we'll analyze the past week's data.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since starting probiotics 9 days ago, has there been any impact on my body fat?",
+        "type": "behavioral",
+        "thinking": "The user connects supplementation with body composition interest. The exact 9-day period will be analyzed for any measurable effects.",
+        "numdays": 9,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been feeling colder than usual in normal temperatures for the past several days.",
+        "type": "symptom",
+        "thinking": "Temperature sensitivity changes could relate to metabolic or body composition shifts. We'll analyze the past week's (7 days) body fat data for potential connections.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body seems to be writing checks my activity level can't cash.",
+        "type": "metaphorical",
+        "thinking": "The financial metaphor suggests perceived imbalance between intake and expenditure. We'll examine the past week's body fat data to assess the situation objectively.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you check how my body fat changed over the last 2 weeks?",
+        "type": "explicit",
+        "thinking": "The user directly asked to analyze body fat changes. This justifies calling get_body_fat_data to observe trends. The phrase 'last 2 weeks' maps to numdays = 14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been avoiding mirrors lately. Something feels off.",
+        "type": "implicit",
+        "thinking": "The user is expressing body image concerns, possibly related to fat gain. It’s reasonable to retrieve body fat data using get_body_fat_data. No time range is given, so numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I switched to keto 10 days ago—any change in fat levels?",
+        "type": "behavioral",
+        "thinking": "The user introduced a dietary change and wants to see its impact. This supports calling get_body_fat_data. The time frame '10 days ago' maps to numdays = 10.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel heavy and sluggish this week.",
+        "type": "symptom",
+        "thinking": "The user reported physical symptoms often tied to increased fat levels. get_body_fat_data should be called. 'This week' corresponds to numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "It’s like I’m wrapped in a blanket of fat lately.",
+        "type": "metaphorical",
+        "thinking": "The metaphor suggests perceived fat gain. Retrieving data via get_body_fat_data is justified. No timeframe mentioned, so numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Could you show my body fat stats since last weekend?",
+        "type": "explicit",
+        "thinking": "User explicitly requested body fat trends. get_body_fat_data is appropriate. 'Since last weekend' is interpreted as numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My jeans started feeling tighter again.",
+        "type": "implicit",
+        "thinking": "The user is subtly implying fat gain. Retrieving fat percentage via get_body_fat_data is appropriate. No timeframe given → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've started going to spin class this past week.",
+        "type": "behavioral",
+        "thinking": "User began a new workout routine and wants to assess impact on fat. get_body_fat_data can reveal trends. 'Past week' = numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Why do I feel bloated and puffy for the last 5 days?",
+        "type": "symptom",
+        "thinking": "User reports physical discomfort possibly linked to fat gain. Calling get_body_fat_data is warranted. 'Last 5 days' → numdays = 5.",
+        "numdays": 5,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Lately, I feel like I’m moving through molasses.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language indicating sluggishness and fat gain. get_body_fat_data can verify this. No timeframe → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Please show my body fat changes from the past 3 weekends.",
+        "type": "explicit",
+        "thinking": "User requested body fat trends across multiple weekends. get_body_fat_data is appropriate. 'Past 3 weekends' = numdays = 21.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Feels like my belly has been growing lately.",
+        "type": "implicit",
+        "thinking": "User implies an increase in fat around the abdomen. Use get_body_fat_data to validate. No time given → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been doing strength training every day for the last 8 days.",
+        "type": "behavioral",
+        "thinking": "User made a workout change and is curious about fat results. get_body_fat_data will help track that. 'Last 8 days' → numdays = 8.",
+        "numdays": 8,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Lately I’m winded after stairs, even though I haven’t gained weight.",
+        "type": "symptom",
+        "thinking": "User may have increased body fat without weight change. get_body_fat_data can clarify. No time range → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body's been acting like a storage unit for fat this month.",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically expresses concern about fat accumulation. get_body_fat_data will provide insight. 'This month' = numdays = 30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Let me see how my fat percentage trended over the past 6 days.",
+        "type": "explicit",
+        "thinking": "User made a direct request for body fat trend. get_body_fat_data is relevant. 'Past 6 days' → numdays = 6.",
+        "numdays": 6,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Clothes feel weird since the long weekend.",
+        "type": "implicit",
+        "thinking": "The user subtly suggests body changes. get_body_fat_data will confirm if fat increased. 'Since the long weekend' = numdays = 9.",
+        "numdays": 9,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I started cutting carbs about two weeks ago.",
+        "type": "behavioral",
+        "thinking": "User changed diet to reduce fat. Calling get_body_fat_data helps evaluate progress. 'Two weeks ago' = numdays = 14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My face looks puffier lately.",
+        "type": "symptom",
+        "thinking": "User notices facial bloating possibly related to fat gain. get_body_fat_data will help verify. No time → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Feels like I’m growing sideways this week.",
+        "type": "metaphorical",
+        "thinking": "User uses figurative language to imply fat accumulation. Calling get_body_fat_data is justified. 'This week' = numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Check how my fat levels changed over the last 9 days.",
+        "type": "explicit",
+        "thinking": "User explicitly asked for fat trend analysis. get_body_fat_data will provide that. 'Last 9 days' → numdays = 9.",
+        "numdays": 9,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been eating cleaner since Monday.",
+        "type": "behavioral",
+        "thinking": "User refers to a change in nutrition and wants to check fat impact. get_body_fat_data is suitable. 'Since Monday' = numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve noticed more softness around my arms and belly.",
+        "type": "symptom",
+        "thinking": "User observes physical changes likely due to increased fat. Retrieving get_body_fat_data can verify. No timeframe → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’m becoming a marshmallow these past 10 days.",
+        "type": "metaphorical",
+        "thinking": "User used metaphor to describe body fat gain. get_body_fat_data is appropriate. 'Past 10 days' = numdays = 10.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Show me my fat data since two Mondays ago.",
+        "type": "explicit",
+        "thinking": "User requested fat data over a time window. get_body_fat_data is needed. 'Since two Mondays ago' = numdays = 14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My shirts feel snug around the chest again.",
+        "type": "implicit",
+        "thinking": "User implies body fat increase. It's valid to retrieve body fat info using get_body_fat_data. No time mentioned → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I stopped snacking after dinner this month.",
+        "type": "behavioral",
+        "thinking": "User made a habit change to reduce fat. get_body_fat_data can show the impact. 'This month' = numdays = 30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel more bloated when I wake up lately.",
+        "type": "symptom",
+        "thinking": "User is noticing physical bloating possibly linked to fat gain. get_body_fat_data will help assess it. No time → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body feels like it’s inflating like a balloon over the past two weeks.",
+        "type": "metaphorical",
+        "thinking": "The user used symbolic imagery to express concern about fat. get_body_fat_data can validate. 'Past two weeks' = numdays = 14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "How has my fat changed in the past fortnight?",
+        "type": "explicit",
+        "thinking": "User asked for body fat trend. get_body_fat_data is the appropriate function. 'Past fortnight' = numdays = 14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been walking 10,000 steps every day for the past 2 weeks.",
+        "type": "behavioral",
+        "thinking": "The user reports a consistent behavioral change likely aimed at reducing fat. Retrieving body fat data via get_body_fat_data will show if there's been an effect. 'Past 2 weeks' maps to numdays = 14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you check if my fat percentage dropped since last Tuesday?",
+        "type": "explicit",
+        "thinking": "The user explicitly wants to compare fat data since a reference point. Calling get_body_fat_data is appropriate. 'Since last Tuesday' → numdays = 8.",
+        "numdays": 8,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My arms feel jiggly again.",
+        "type": "symptom",
+        "thinking": "The user reports a subjective symptom that could be linked to body fat increase. get_body_fat_data can provide objective metrics. No specific time mentioned → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been stress eating since exams started.",
+        "type": "behavioral",
+        "thinking": "The user has described a behavioral pattern that may have impacted fat levels. get_body_fat_data will help assess the impact. Assuming 'since exams started' maps to numdays = 10.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "It feels like I’m slowly turning into a pillow.",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphor to express a softening of their body, likely due to increased fat. get_body_fat_data can confirm this. No time mentioned, so numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been on a strict meal plan for the past 12 days.",
+        "type": "behavioral",
+        "thinking": "The user made a change to their eating habits and wants to evaluate the effect on body fat. Calling get_body_fat_data is relevant. 'Past 12 days' = numdays = 12.",
+        "numdays": 12,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My thighs feel bulkier when I walk.",
+        "type": "symptom",
+        "thinking": "The user perceives physical changes likely related to increased fat mass. Retrieving data via get_body_fat_data can help verify. No time mentioned → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Show me if there’s been any fat loss in the last 3 weeks.",
+        "type": "explicit",
+        "thinking": "The user made a direct request to analyze body fat change. get_body_fat_data is appropriate. 'Last 3 weeks' → numdays = 21.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel like I’ve been expanding horizontally since Thanksgiving.",
+        "type": "metaphorical",
+        "thinking": "The figurative language implies fat gain post-holiday. get_body_fat_data can help assess changes. 'Since Thanksgiving' is estimated to be 14 days ago → numdays = 14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My shirts started clinging more over the last 6 days.",
+        "type": "symptom",
+        "thinking": "The user observes a change in fit, possibly due to fat gain. Retrieving body fat data via get_body_fat_data is warranted. 'Last 6 days' = numdays = 6.",
+        "numdays": 6,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I cut out junk food last weekend. Has it helped?",
+        "type": "behavioral",
+        "thinking": "The user is checking if a dietary change affected body fat. get_body_fat_data can show progress. 'Last weekend' maps to numdays = 5.",
+        "numdays": 5,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Please check my fat data since the start of the month.",
+        "type": "explicit",
+        "thinking": "The user explicitly wants body fat analysis from a known start point. get_body_fat_data is appropriate. Assuming it's the 5th today → numdays = 5.",
+        "numdays": 5,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been skipping workouts for the past 9 days.",
+        "type": "behavioral",
+        "thinking": "The user reports reduced physical activity, which may increase fat. get_body_fat_data will help assess changes. 'Past 9 days' → numdays = 9.",
+        "numdays": 9,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Feels like I’m carrying more than just stress lately.",
+        "type": "metaphorical",
+        "thinking": "This metaphorical expression suggests increased body fat. Calling get_body_fat_data is valid. No timeframe provided → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been on vacation for two weeks—did my fat go up?",
+        "type": "behavioral",
+        "thinking": "The user suspects body fat increase during a break. get_body_fat_data can confirm. 'Two weeks' = numdays = 14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you compare my fat levels from the past 7 days?",
+        "type": "explicit",
+        "thinking": "The user is directly requesting a comparison of fat data. This warrants calling get_body_fat_data. 'Past 7 days' = numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My belly seems softer in the mornings lately.",
+        "type": "symptom",
+        "thinking": "The user reports a physical change that could be due to body fat. get_body_fat_data is relevant. No time window provided → numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel like a bean bag this week.",
+        "type": "metaphorical",
+        "thinking": "The user uses symbolic language to suggest fat accumulation. Retrieving data via get_body_fat_data is justified. 'This week' = numdays = 7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I stopped drinking soda 11 days ago.",
+        "type": "behavioral",
+        "thinking": "User changed their diet, possibly affecting body fat. get_body_fat_data can reveal results. '11 days ago' = numdays = 11.",
+        "numdays": 11,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I haven’t moved much since the snowstorm.",
+        "type": "behavioral",
+        "thinking": "The user indicates reduced activity likely causing fat gain. get_body_fat_data will help assess the change. Assuming 6 days since storm → numdays = 6.",
+        "numdays": 6,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been cutting back on junk food for the last 10 days, has my body fat changed?",
+        "type": "behavioral",
+        "thinking": "The user mentions reducing junk food, indicating a dietary change that may affect body fat. get_body_fat_data will show if this has impacted body fat percentage. 'Last 10 days' maps to numdays=10.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My pants feel snugger this month, is my body fat up?",
+        "type": "symptom",
+        "thinking": "Snugger pants suggest concern about a possible body fat increase. get_body_fat_data will provide recent trends to confirm this. 'This month' indicates a 30-day period, so numdays=30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you check my body fat percentage for the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user directly requests body fat percentage data for a specific time frame. get_body_fat_data is needed to retrieve this information. 'Past two weeks' maps to numdays=14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel like my body’s getting heavier, what’s my fat percentage?",
+        "type": "metaphorical",
+        "thinking": "'Getting heavier' metaphorically hints at increased body fat. get_body_fat_data will reveal actual trends. No time frame is specified, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been super stressed and eating more, is my body fat affected?",
+        "type": "behavioral",
+        "thinking": "Increased eating due to stress is a behavioral change that could raise body fat. get_body_fat_data will assess any impact. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I don’t feel as sharp in my workouts since last week, is my body fat up?",
+        "type": "implicit",
+        "thinking": "Feeling less sharp in workouts implies concern about body fat changes. get_body_fat_data will clarify recent trends. 'Since last week' maps to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "How’s my body fat been since I started cycling three weeks ago?",
+        "type": "behavioral",
+        "thinking": "Starting cycling is a behavior change that may reduce body fat. get_body_fat_data will show progress. 'Three weeks ago' maps to numdays=21.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My energy’s been off since the weekend, could body fat be involved?",
+        "type": "symptom",
+        "thinking": "Low energy may relate to body fat changes. get_body_fat_data will explore this connection. 'Since the weekend' (assuming today is Tuesday, August 5, 2025) covers 2-3 days, but since numdays must be at least 5, use numdays=5.",
+        "numdays": 5,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you look at my body fat trends for the last 12 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests body fat trends for a specific period. get_body_fat_data will fetch this data. 'Last 12 days' maps to numdays=12.",
+        "numdays": 12,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel like I’m losing my edge, is my body fat creeping up?",
+        "type": "implicit",
+        "thinking": "Losing 'edge' suggests concern about body fat increase. get_body_fat_data will provide clarity on trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since I started meal prepping last month, has my body fat gone down?",
+        "type": "behavioral",
+        "thinking": "Meal prepping is a behavior change likely aimed at improving body composition. get_body_fat_data will show trends. 'Last month' suggests numdays=30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body feels like it’s stuck in a rut, what’s my fat percentage?",
+        "type": "metaphorical",
+        "thinking": "'Stuck in a rut' metaphorically hints at stagnant or increased body fat. get_body_fat_data will reveal actual trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been sleeping less lately, is that affecting my body fat?",
+        "type": "behavioral",
+        "thinking": "Reduced sleep is a behavioral change that could influence body fat. get_body_fat_data will assess any impact. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Is my body fat percentage stable for the past 18 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks about body fat stability over a specific period. get_body_fat_data is needed to evaluate trends. 'Past 18 days' maps to numdays=18.",
+        "numdays": 18,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’m feeling more tired after short walks, is my body fat up?",
+        "type": "symptom",
+        "thinking": "Increased fatigue during walks may indicate body fat changes. get_body_fat_data will confirm trends. No time frame is specified, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since I started intermittent fasting two weeks ago, how’s my body fat?",
+        "type": "behavioral",
+        "thinking": "Intermittent fasting is a behavior change that may reduce body fat. get_body_fat_data will show trends. 'Two weeks ago' maps to numdays=14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My confidence is down lately, could my body fat be a factor?",
+        "type": "implicit",
+        "thinking": "Lower confidence may reflect concerns about body composition. get_body_fat_data will provide insight into trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you analyze my body fat for the last 25 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests body fat analysis for a specific period. get_body_fat_data is needed. 'Last 25 days' maps to numdays=25.",
+        "numdays": 25,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body’s feeling like it’s carrying a load, what’s my fat percentage?",
+        "type": "metaphorical",
+        "thinking": "'Carrying a load' metaphorically suggests increased body fat. get_body_fat_data will clarify trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been drinking more soda lately, has that impacted my body fat?",
+        "type": "behavioral",
+        "thinking": "Increased soda consumption is a behavior that could raise body fat. get_body_fat_data will show any trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I don’t feel as quick on my feet since last month, is my body fat up?",
+        "type": "implicit",
+        "thinking": "Feeling less quick suggests concern about body fat increase. get_body_fat_data will clarify trends. 'Since last month' maps to numdays=30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My knees hurt more when I climb stairs, could body fat be involved?",
+        "type": "symptom",
+        "thinking": "Knee pain during activity may relate to body fat changes. get_body_fat_data will explore this possibility. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "How’s my body fat been since I started hiking last week?",
+        "type": "behavioral",
+        "thinking": "Starting hiking is a behavior change that could lower body fat. get_body_fat_data will show trends. 'Last week' maps to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you check my body fat trends since last Friday?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests body fat trends for a specific period. get_body_fat_data will fetch this data. 'Since last Friday' (assuming today is Tuesday, August 5, 2025) covers 11 days, so numdays=11.",
+        "numdays": 11,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been eating more protein since Sunday, has my body fat changed?",
+        "type": "behavioral",
+        "thinking": "Increased protein intake is a behavior change that may affect body fat. get_body_fat_data will show trends. 'Since Sunday' (assuming today is Tuesday) covers 2 days, but since numdays must be at least 5, use numdays=5.",
+        "numdays": 5,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel like my body’s slowing down, what’s my fat percentage?",
+        "type": "metaphorical",
+        "thinking": "'Slowing down' metaphorically hints at increased body fat. get_body_fat_data will provide actual trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’m not feeling as fit since I stopped yoga, is my body fat up?",
+        "type": "behavioral",
+        "thinking": "Stopping yoga is a behavior change that could increase body fat. get_body_fat_data will check for trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My stamina’s been lower this week, is body fat a factor?",
+        "type": "symptom",
+        "thinking": "Lower stamina may relate to body fat changes. get_body_fat_data will explore this. 'This week' indicates numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you look at my body fat for the past 20 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests body fat data for a specific period. get_body_fat_data is needed. 'Past 20 days' maps to numdays=20.",
+        "numdays": 20,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been feeling less confident in my clothes, is my body fat up?",
+        "type": "implicit",
+        "thinking": "Lower confidence in clothes suggests concern about body fat increase. get_body_fat_data will clarify trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since I started a low-carb diet 15 days ago, how’s my body fat?",
+        "type": "behavioral",
+        "thinking": "A low-carb diet is a behavior change that may reduce body fat. get_body_fat_data will show trends. '15 days ago' maps to numdays=15.",
+        "numdays": 15,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body feels like it’s holding extra weight, what’s my fat percentage?",
+        "type": "metaphorical",
+        "thinking": "'Holding extra weight' metaphorically suggests increased body fat. get_body_fat_data will provide clarity. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been working out less this month, has my body fat gone up?",
+        "type": "behavioral",
+        "thinking": "Reduced workouts are a behavior change that could increase body fat. get_body_fat_data will show trends. 'This month' suggests numdays=30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel winded after light exercise, could body fat be a factor?",
+        "type": "symptom",
+        "thinking": "Feeling winded may relate to body fat changes. get_body_fat_data will explore this possibility. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "How’s my body fat percentage been over the last 9 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for body fat percentage trends. get_body_fat_data is needed. 'Last 9 days' maps to numdays=9.",
+        "numdays": 9,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been eating out more lately, is my body fat affected?",
+        "type": "behavioral",
+        "thinking": "Eating out more is a behavior change that could impact body fat. get_body_fat_data will reveal trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I don’t feel as lean since last week, what’s my body fat doing?",
+        "type": "implicit",
+        "thinking": "Feeling less lean implies concern about body fat increase. get_body_fat_data will clarify trends. 'Since last week' maps to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My back’s been aching lately, could body fat be involved?",
+        "type": "symptom",
+        "thinking": "Back aches may relate to body fat changes. get_body_fat_data will explore this connection. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since I started running 10 days ago, has my body fat dropped?",
+        "type": "behavioral",
+        "thinking": "Starting running is a behavior change that could reduce body fat. get_body_fat_data will show trends. '10 days ago' maps to numdays=10.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body feels like it’s bogged down, what’s my fat percentage?",
+        "type": "metaphorical",
+        "thinking": "'Bogged down' metaphorically suggests increased body fat. get_body_fat_data will provide actual trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Can you check my body fat for the last three weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests body fat data for a specific period. get_body_fat_data is needed. 'Last three weeks' maps to numdays=21.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been skipping workouts since my vacation, is my body fat up?",
+        "type": "behavioral",
+        "thinking": "Skipping workouts is a behavior change that could increase body fat. get_body_fat_data will check trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel less nimble lately, is my body fat increasing?",
+        "type": "implicit",
+        "thinking": "Feeling less nimble suggests concern about body fat increase. get_body_fat_data will clarify trends. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My workouts feel sluggish since last weekend, is body fat a factor?",
+        "type": "symptom",
+        "thinking": "Sluggish workouts may relate to body fat changes. get_body_fat_data will explore this. 'Since last weekend' (assuming today is Tuesday) covers 2-3 days, but since numdays must be at least 5, use numdays=5.",
+        "numdays": 5,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since I started a vegan diet two weeks ago, how’s my body fat?",
+        "type": "behavioral",
+        "thinking": "A vegan diet is a behavior change that may affect body fat. get_body_fat_data will show trends. 'Two weeks ago' maps to numdays=14.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body feels like it’s carrying extra baggage, what’s my fat percentage?",
+        "type": "metaphorical",
+        "thinking": "'Extra baggage' metaphorically suggests increased body fat. get_body_fat_data will provide clarity. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "How’s my body fat been over the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for body fat trends over a specific period. get_body_fat_data is needed. 'Last 15 days' maps to numdays=15.",
+        "numdays": 15,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I’ve been snacking less this month, has my body fat gone down?",
+        "type": "behavioral",
+        "thinking": "Reduced snacking is a behavior change that may lower body fat. get_body_fat_data will show trends. 'This month' suggests numdays=30.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I don’t feel as strong since last week, is my body fat up?",
+        "type": "implicit",
+        "thinking": "Feeling less strong implies concern about body fat increase. get_body_fat_data will clarify trends. 'Since last week' maps to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My legs feel heavier when I run, could body fat be a factor?",
+        "type": "symptom",
+        "thinking": "Heavier legs during running may relate to body fat changes. get_body_fat_data will explore this possibility. No time frame is given, so default to numdays=7.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been intermittent fasting for 16 days now - has it made any difference to my body fat percentage?",
+        "type": "behavioral",
+        "thinking": "The user is explicitly connecting a dietary change (intermittent fasting) with potential body fat changes over a precise 16-day period. We should analyze this exact timeframe to evaluate the impact of their fasting regimen.",
+        "numdays": 16,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My jeans from last summer don't button comfortably anymore.",
+        "type": "implicit",
+        "thinking": "The user is hinting at potential body composition changes through clothing fit without directly stating it. Since no timeframe is specified, we'll examine the past week's body fat data as a starting point.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Chart my body fat fluctuations during my menstrual cycle over the past month.",
+        "type": "explicit",
+        "thinking": "This is a direct request for body fat analysis correlated with hormonal cycles over 30 days. The user wants to understand cyclical patterns, so we'll provide the full month's data with cycle phase markers.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I feel like a snowman melting in reverse - getting denser instead of lighter.",
+        "type": "metaphorical",
+        "thinking": "The reverse melting metaphor suggests perceived gradual weight gain or body composition changes. Without a specific timeframe, we'll analyze the default 7-day period to provide objective data.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Ever since my vacation ended 12 days ago, my appetite has been unpredictable.",
+        "type": "behavioral",
+        "thinking": "The user connects post-vacation appetite changes with potential body composition effects. Since they specify '12 days ago', we'll analyze this exact period since their return.",
+        "numdays": 12,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Show me how my body fat percentage changed during my recent 5-day business trip.",
+        "type": "explicit",
+        "thinking": "Clear request for body fat analysis during a specific 5-day travel period. We'll display data for exactly these 5 days to assess travel-related impacts.",
+        "numdays": 5,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My skin feels looser around my thighs recently.",
+        "type": "symptom",
+        "thinking": "Physical changes in skin texture may indicate body composition shifts. The term 'recently' suggests examining the past week's data for correlations with body fat measurements.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I'm a balloon that's lost some air but kept its shape - what does my body fat data say?",
+        "type": "metaphorical",
+        "thinking": "The balloon metaphor describes perceived volume loss without proportional shape change. We'll check the past week's body fat data (default period) to interpret this subjective experience objectively.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since increasing my protein intake three weeks ago, I'm curious about muscle-fat ratios.",
+        "type": "behavioral",
+        "thinking": "The user connects dietary modification with body composition interest over 21 days. We'll analyze this exact period to assess the impact of increased protein consumption.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My smart scale says I'm gaining muscle but the mirror tells a different story.",
+        "type": "implicit",
+        "thinking": "The user expresses doubt about body composition assessments. Comparing the past week's body fat data with their subjective observations might help reconcile these differences.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Break down my body fat changes by time of day for the past fortnight.",
+        "type": "explicit",
+        "thinking": "Specific request for diurnal variation analysis over 14 days ('fortnight'). We'll provide the requested timeframe with time-segmented data.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been waking up feeling 'thicker' around my midsection this week.",
+        "type": "symptom",
+        "thinking": "The subjective sensation of abdominal changes suggests body composition concerns. Since they specify 'this week', we'll analyze the past 7 days of body fat data.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body is like clay that keeps getting reshaped without my consent.",
+        "type": "metaphorical",
+        "thinking": "The clay metaphor expresses concern about uncontrolled body changes. Without a timeframe, we'll examine the past week's body fat measurements to ground this concern in data.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Compare my pre- and post-workout body fat measurements over the last 8 training sessions.",
+        "type": "explicit",
+        "thinking": "Direct request for exercise-impact analysis across approximately 8 days (assuming daily training). We'll analyze this period with workout timing markers.",
+        "numdays": 8,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since switching birth control methods a month ago, I feel puffier.",
+        "type": "behavioral",
+        "thinking": "The user connects medication change with perceived body composition effects over 30 days. We'll analyze this full period to assess potential correlations.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "The numbers on my scale haven't changed but my reflection looks different lately.",
+        "type": "implicit",
+        "thinking": "The user hints at body recomposition concerns despite stable weight. Examining the past week's body fat data might reveal changes not reflected in overall weight.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've had persistent water retention signs for the past 10 days - any connection to body fat?",
+        "type": "symptom",
+        "thinking": "Physical symptoms (edema) may relate to body composition. The specified 10-day period will be analyzed for correlations with body fat measurements.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body is like a savings account that keeps depositing fat instead of money.",
+        "type": "metaphorical",
+        "thinking": "The financial metaphor humorously expresses concern about fat accumulation. We'll check the past week's body fat data to address this concern objectively.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Show me my body fat percentage trends for each phase of my sleep cycle over 3 weeks.",
+        "type": "explicit",
+        "thinking": "Detailed request connecting sleep architecture with body composition over 21 days. We'll provide the requested analysis with sleep phase correlations.",
+        "numdays": 21,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My fitness tracker shows more fat burn during Netflix than workouts - is this accurate?",
+        "type": "implicit",
+        "thinking": "The user questions the validity of their body composition data. Comparing the past week's measurements might help evaluate these unexpected patterns.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since starting antidepressants 15 days ago, I've noticed changes in my body shape.",
+        "type": "behavioral",
+        "thinking": "The user connects medication with physical changes over a precise 15-day period. We'll analyze this exact timeframe to assess potential effects.",
+        "numdays": 15,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My rings are leaving indentations they never did before.",
+        "type": "symptom",
+        "thinking": "Physical changes in jewelry fit may indicate fluid retention or fat distribution changes. Without a timeframe, we'll examine the past week's body fat data.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I'm a sculpture where the artist keeps adding clay to the wrong places.",
+        "type": "metaphorical",
+        "thinking": "The art metaphor expresses frustration with fat distribution. We'll analyze the past week's body fat measurements to provide objective perspective.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Plot my body fat percentage against my stress levels for the past 25 days.",
+        "type": "explicit",
+        "thinking": "Direct request for correlational analysis over 25 days. We'll provide the exact requested period with stress level overlays.",
+        "numdays": 25,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My posture feels different - like I'm carrying extra weight up front.",
+        "type": "implicit",
+        "thinking": "The user hints at potential abdominal changes affecting posture. Checking the past week's body fat data might reveal relevant composition shifts.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since reducing my cardio and increasing weights 18 days ago, how has my body fat changed?",
+        "type": "behavioral",
+        "thinking": "The user connects exercise regimen changes with body composition interest over 18 days. We'll analyze this exact period to evaluate the impact.",
+        "numdays": 18,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been getting more comments about 'looking healthy' which worries me.",
+        "type": "symptom",
+        "thinking": "Social feedback has triggered body composition concerns. Without a timeframe, we'll examine the past week's body fat data to assess recent changes.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body is like a graph where the y-axis keeps expanding unpredictably.",
+        "type": "metaphorical",
+        "thinking": "The data visualization metaphor describes perceived uncontrolled changes. We'll analyze the past week's actual body fat measurements for clarity.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Compare my weekend vs weekday body fat variability for the past 2 months.",
+        "type": "explicit",
+        "thinking": "Specific request for lifestyle pattern analysis over 60 days. We'll provide the extended timeframe with day-type segmentation as requested.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My face looks rounder in recent photos but the scale hasn't moved.",
+        "type": "implicit",
+        "thinking": "Visual changes despite stable weight suggest body recomposition. Examining the past week's body fat data might explain this discrepancy.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since getting a standing desk 9 days ago, has my body composition shifted?",
+        "type": "behavioral",
+        "thinking": "The user connects workplace changes with body interest over 9 days. We'll analyze this exact period to assess any measurable effects.",
+        "numdays": 9,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've noticed more cellulite dimpling in the past fortnight.",
+        "type": "symptom",
+        "thinking": "Physical skin changes may reflect body composition shifts. The specified 14-day period ('fortnight') will be analyzed for correlations.",
+        "numdays": 14,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My metabolism feels like a lazy river instead of the rapid stream it used to be.",
+        "type": "metaphorical",
+        "thinking": "The water metaphor describes perceived metabolic slowing. We'll check the past week's body fat data to evaluate actual changes.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Show me how my body fat percentage changed during each trimester of my pregnancy.",
+        "type": "explicit",
+        "thinking": "Direct request for segmented pregnancy analysis (approximately 30 days per trimester). We'll provide trimester-by-trimester body fat data.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My watch band keeps getting tighter despite no weight gain.",
+        "type": "implicit",
+        "thinking": "The user hints at potential localized changes through accessory fit. Checking the past week's body fat distribution might explain this observation.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since quitting smoking 22 days ago, I'm worried about weight redistribution.",
+        "type": "behavioral",
+        "thinking": "The user connects smoking cessation with body composition concerns over 22 days. We'll analyze this exact period to address their worries.",
+        "numdays": 22,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've had more digestive bloating than usual this past week.",
+        "type": "symptom",
+        "thinking": "Gastrointestinal symptoms may relate to body composition. The specified 7-day period will be analyzed for relevant body fat patterns.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body is like a chemistry experiment where the proportions keep changing unexpectedly.",
+        "type": "metaphorical",
+        "thinking": "The science metaphor expresses concern about unpredictable changes. We'll examine the past week's body fat data to provide concrete measurements.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Analyze my body fat trends in relation to my work travel schedule over the past 6 weeks.",
+        "type": "explicit",
+        "thinking": "Detailed request connecting travel with body composition over 42 days. We'll provide the extended analysis with travel day markers.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My cheeks look fuller in Zoom calls recently.",
+        "type": "implicit",
+        "thinking": "The user notices facial changes through video calls. Without a specific timeframe, we'll examine the past week's body fat data for insights.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since starting thyroid medication 17 days ago, has my body fat distribution changed?",
+        "type": "behavioral",
+        "thinking": "The user connects medical treatment with body composition interest over 17 days. We'll analyze this exact period to assess any medication effects.",
+        "numdays": 17,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've been feeling more joint stiffness when I wake up for the past 10 days.",
+        "type": "symptom",
+        "thinking": "Morning stiffness could relate to inflammation or weight changes. The specified 10-day period will be analyzed for body fat correlations.",
+        "numdays": 10,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My scale is like a politician - the numbers keep promising things that don't match reality.",
+        "type": "metaphorical",
+        "thinking": "The political metaphor humorously describes measurement distrust. We'll analyze the past week's body fat data to provide reliable information.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Show me my body fat percentage changes correlated with my menstrual cycle over 2 cycles.",
+        "type": "explicit",
+        "thinking": "Direct request for hormonal cycle analysis over approximately 60 days. We'll provide the extended timeframe with cycle phase correlations.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My favorite chair feels smaller than it used to.",
+        "type": "implicit",
+        "thinking": "The furniture observation hints at potential body changes. Without a timeframe, we'll check the past week's body fat data for recent shifts.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Since going through menopause 3 months ago, I feel like my body stores fat differently.",
+        "type": "behavioral",
+        "thinking": "The user connects life stage changes with body composition concerns. While the transition was 3 months ago, we'll analyze the past 30 days for recent patterns.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "I've noticed more stretch marks appearing on my thighs recently.",
+        "type": "symptom",
+        "thinking": "Skin changes may indicate rapid body composition shifts. The term 'recently' suggests examining the past week's body fat data for correlations.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "My body is like a garden where the soil composition keeps changing without my input.",
+        "type": "metaphorical",
+        "thinking": "The gardening metaphor describes perceived uncontrolled changes. We'll analyze the past week's actual body fat measurements for objective data.",
+        "numdays": 7,
+        "function": "get_body_fat_data"
+    },
+    {
+        "query": "Break down my body fat percentage by time of month for the past 4 menstrual cycles.",
+        "type": "explicit",
+        "thinking": "Detailed request for hormonal cycle analysis over approximately 120 days. We'll provide the extended analysis with cycle phase segmentation.",
+        "numdays": 30,
+        "function": "get_body_fat_data"
+    }
+]

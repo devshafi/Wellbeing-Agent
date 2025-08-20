@@ -1,0 +1,1759 @@
+[
+    {
+        "query": "How far have I been running in the last week?",
+        "type": "explicit",
+        "thinking": "The user is directly asking about their running distance over the past week, indicating a clear interest in tracking exercise performance. Calling get_distance_data is appropriate to fetch the requested exercise distance data. The query specifies 'last week,' which maps to 7 days for the numdays parameter.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I haven’t been getting out much lately. How much have I walked?",
+        "type": "implicit",
+        "thinking": "The user hints at reduced activity by saying they haven’t been getting out much, suggesting a concern about low exercise levels. get_distance_data will provide insight into their walking distance to assess this concern. No specific time window is mentioned, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been skipping my evening runs this month. Can you check my running distance?",
+        "type": "behavioral",
+        "thinking": "The user mentions a change in behavior—skipping evening runs—indicating a potential decline in exercise consistency. get_distance_data will quantify their running distance to evaluate this change. 'This month' suggests a 30-day period for numdays to capture the full scope of the behavior shift.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m so tired all the time. Have I been cycling enough this week?",
+        "type": "symptom",
+        "thinking": "The user reports feeling tired, which could relate to inadequate exercise, and asks about cycling distance. get_distance_data will help determine if their cycling activity is sufficient, potentially linking to their fatigue. 'This week' clearly maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My legs feel like they’re carrying the weight of the world. How far have I hiked lately?",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to describe leg fatigue, implying physical strain from hiking and seeking distance data. get_distance_data will reveal their hiking activity to contextualize this feeling. No time window is specified, so I’ll use 7 days as the default for recent activity.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you tell me my total walking distance for the past 10 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests their walking distance for a specific period, showing interest in monitoring exercise. get_distance_data is needed to retrieve this data accurately. 'Past 10 days' directly maps to numdays = 10.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been feeling off. Have I been running as much as usual?",
+        "type": "implicit",
+        "thinking": "The user’s mention of feeling off suggests a potential link to changes in exercise habits, specifically running. get_distance_data will provide running distance to compare with their usual activity. No time frame is given, so I’ll default to 7 days for a recent snapshot.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I started biking to work last Monday. How far have I gone?",
+        "type": "behavioral",
+        "thinking": "The user indicates a new behavior—biking to work starting last Monday—suggesting a need to track this new activity. get_distance_data will quantify their biking distance. 'Since last Monday' implies a period of about 8 days, assuming today is Tuesday, so numdays = 8.",
+        "numdays": 8,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My knees are aching so much. How much have I been running lately?",
+        "type": "symptom",
+        "thinking": "The user reports knee pain, which may be linked to running activity, and seeks distance data. get_distance_data will clarify their running volume to assess if overuse is a factor. No time frame is provided, so I’ll use 7 days as the default for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m stuck in a rut. How far have I been walking this month?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphorical ‘stuck in a rut’ suggests emotional stagnation, possibly tied to low physical activity. get_distance_data will provide walking distance to evaluate their activity level. 'This month' indicates a 30-day period for numdays.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "What’s my running distance been like over the last two weeks?",
+        "type": "explicit",
+        "thinking": "The user directly asks for running distance over a specific period, showing interest in performance tracking. get_distance_data is the right function to retrieve this data. 'Last two weeks' translates to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I haven’t felt motivated to exercise lately. How much have I been cycling?",
+        "type": "implicit",
+        "thinking": "The user implies a lack of motivation, which may reflect in reduced cycling activity. get_distance_data will help assess their recent cycling distance to understand this trend. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been walking more to clear my head. Can you check my distance since Sunday?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased walking to cope mentally, indicating a purposeful behavior change. get_distance_data will quantify this walking distance. 'Since Sunday' suggests 2 days if today is Tuesday, but I’ll use 5 days as the minimum for meaningful data.",
+        "numdays": 5,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel so sluggish. Have I been hiking enough this week?",
+        "type": "symptom",
+        "thinking": "The user describes feeling sluggish, possibly due to insufficient exercise, and asks about hiking. get_distance_data will reveal their hiking distance to evaluate this. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My heart feels heavy. How far have I run in the last 10 days?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphorical ‘heavy heart’ suggests emotional distress, possibly linked to exercise levels, and they specify running distance. get_distance_data will provide the data to explore this connection. 'Last 10 days' maps to numdays = 10.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How many miles did I cycle in the past three weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests cycling distance for a defined period, indicating a focus on tracking progress. get_distance_data will fetch this data accurately. 'Past three weeks' translates to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been avoiding my usual jogs. What’s my running distance lately?",
+        "type": "behavioral",
+        "thinking": "The user notes a behavior change—avoiding jogs—suggesting reduced exercise. get_distance_data will quantify their running distance to confirm this trend. No time frame is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m so restless at night. Have I been walking enough?",
+        "type": "symptom",
+        "thinking": "The user reports restlessness, which could relate to insufficient physical activity like walking. get_distance_data will provide walking distance to assess this. No time window is mentioned, so I’ll use 7 days as the default.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m running in circles. How far have I actually gone this week?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative ‘running in circles’ suggests frustration or lack of progress, tied to running activity. get_distance_data will clarify their actual running distance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you show me my hiking distance for the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests hiking distance for a specific period, showing interest in tracking activity. get_distance_data is needed to retrieve this data. 'Last 15 days' directly maps to numdays = 15.",
+        "numdays": 15,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been too busy to exercise much. How far have I walked lately?",
+        "type": "implicit",
+        "thinking": "The user implies reduced exercise due to a busy schedule, focusing on walking. get_distance_data will reveal their walking distance to assess this. No time frame is provided, so I’ll default to 7 days for recent activity.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I took up daily runs two weeks ago. How far have I gone?",
+        "type": "behavioral",
+        "thinking": "The user mentions a new habit of daily runs, indicating a positive behavior change. get_distance_data will quantify their running distance since starting. 'Two weeks ago' suggests 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My body feels heavy and slow. Have I been cycling enough this month?",
+        "type": "symptom",
+        "thinking": "The user describes physical symptoms of heaviness, possibly linked to low cycling activity. get_distance_data will provide cycling distance to evaluate this. 'This month' indicates a 30-day period for numdays.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m trudging through life right now. How much have I hiked?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphorical ‘trudging through life’ suggests emotional struggle, possibly reflected in hiking activity. get_distance_data will provide hiking distance to explore this. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "What’s my total running distance for the past 12 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for running distance over a specific period, indicating a focus on tracking progress. get_distance_data will fetch this data accurately. 'Past 12 days' maps to numdays = 12.",
+        "numdays": 12,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been feeling down. Is my walking distance okay?",
+        "type": "implicit",
+        "thinking": "The user hints at low mood, which may relate to reduced physical activity like walking. get_distance_data will provide walking distance to assess this connection. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been hiking every weekend this month. How far did I go?",
+        "type": "behavioral",
+        "thinking": "The user describes a consistent hiking habit on weekends, indicating a positive behavior. get_distance_data will quantify their hiking distance. 'This month' with weekend focus suggests 30 days for numdays to cover all weekends.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m always so tense. Have I been running enough lately?",
+        "type": "symptom",
+        "thinking": "The user reports tension, which could be alleviated by sufficient running. get_distance_data will reveal their running distance to check this. No time window is mentioned, so I’ll use 7 days as the default.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m climbing mountains every day. How far have I actually hiked?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative ‘climbing mountains’ suggests emotional or physical effort, tied to hiking activity. get_distance_data will provide actual hiking distance to ground this metaphor. No time frame is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How far did I cycle over the last 20 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests cycling distance for a specific period, showing interest in performance tracking. get_distance_data is needed to retrieve this data. 'Last 20 days' maps to numdays = 20.",
+        "numdays": 20,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I haven’t had much energy to get out. How much have I been walking?",
+        "type": "implicit",
+        "thinking": "The user implies low energy and reduced activity, focusing on walking. get_distance_data will provide walking distance to assess this concern. No time window is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I started running again last week. Can you check my distance?",
+        "type": "behavioral",
+        "thinking": "The user indicates resuming running, a significant behavior change. get_distance_data will quantify their running distance to track this progress. 'Last week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My joints are so stiff. Have I been hiking enough this month?",
+        "type": "symptom",
+        "thinking": "The user reports joint stiffness, which may relate to insufficient hiking. get_distance_data will provide hiking distance to evaluate this. 'This month' indicates a 30-day period for numdays.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m carrying a load everywhere. How far have I walked this week?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphorical ‘carrying a load’ suggests emotional or physical burden, tied to walking. get_distance_data will clarify their walking distance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "What’s my walking distance been for the past 9 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for walking distance over a specific period, indicating a focus on tracking activity. get_distance_data will fetch this data accurately. 'Past 9 days' maps to numdays = 9.",
+        "numdays": 9,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been too stressed to exercise much. How far have I run?",
+        "type": "implicit",
+        "thinking": "The user suggests stress is limiting exercise, specifically running. get_distance_data will provide running distance to assess this impact. No time frame is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been cycling every morning for two weeks. How far did I go?",
+        "type": "behavioral",
+        "thinking": "The user describes a new daily cycling habit, indicating consistent behavior. get_distance_data will quantify their cycling distance. 'Two weeks' suggests 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m always so anxious. Have I been walking enough this week?",
+        "type": "symptom",
+        "thinking": "The user reports anxiety, which may be influenced by walking activity levels. get_distance_data will provide walking distance to check this. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m dragging my feet through the day. How much have I run lately?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative ‘dragging my feet’ suggests low energy or motivation, possibly tied to running. get_distance_data will reveal their running distance. No time window is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you tell me my hiking distance for the last three weeks?",
+        "type": "explicit",
+        "thinking": "The user directly requests hiking distance for a specific period, showing interest in tracking progress. get_distance_data is needed to retrieve this data. 'Last three weeks' maps to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been feeling out of sorts. How much have I been cycling?",
+        "type": "implicit",
+        "thinking": "The user hints at feeling unwell, possibly linked to reduced cycling activity. get_distance_data will provide cycling distance to assess this. No time frame is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been walking to work since last Tuesday. How far is that?",
+        "type": "behavioral",
+        "thinking": "The user mentions a new habit of walking to work, indicating a behavior change. get_distance_data will quantify their walking distance. 'Since last Tuesday' suggests 7 days if today is Tuesday, so numdays = 7.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My back’s been hurting. Have I been running too much this month?",
+        "type": "symptom",
+        "thinking": "The user reports back pain, possibly due to excessive running. get_distance_data will provide running distance to evaluate this. 'This month' indicates a 30-day period for numdays.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m lost in the woods. How far have I hiked this week?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphorical ‘lost in the woods’ suggests disorientation, possibly linked to hiking activity. get_distance_data will clarify their hiking distance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How many miles did I run in the past 16 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests running distance for a specific period, indicating a focus on tracking performance. get_distance_data will fetch this data accurately. 'Past 16 days' maps to numdays = 16.",
+        "numdays": 16,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I haven’t been myself lately. How much have I been walking?",
+        "type": "implicit",
+        "thinking": "The user implies a change in well-being, possibly tied to reduced walking. get_distance_data will provide walking distance to assess this. No time window is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been jogging every evening for 10 days. How far did I go?",
+        "type": "behavioral",
+        "thinking": "The user describes a consistent jogging habit, indicating a positive behavior change. get_distance_data will quantify their jogging distance. '10 days' directly maps to numdays = 10.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m so out of breath lately. Have I been cycling enough?",
+        "type": "symptom",
+        "thinking": "The user reports breathlessness, which could relate to insufficient cycling. get_distance_data will provide cycling distance to evaluate this. No time frame is mentioned, so I’ll use 7 days as the default.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m chasing my own tail. How far have I run this month?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative ‘chasing my own tail’ suggests frustration or lack of progress, tied to running. get_distance_data will clarify their running distance. 'This month' indicates a 30-day period for numdays.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "What’s my cycling distance been for the last 25 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for cycling distance over a specific period, showing interest in tracking activity. get_distance_data is needed to retrieve this data. 'Last 25 days' maps to numdays = 25.",
+        "numdays": 25,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you show me how far I’ve walked this week?",
+        "type": "explicit",
+        "thinking": "The user is explicitly asking to review the distance they’ve walked over the course of this week. This justifies calling the get_distance_data function. 'This week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been trying to move more lately—how much distance have I covered?",
+        "type": "behavioral",
+        "thinking": "The user is reflecting on a recent behavior change involving increased activity. To validate this, we should call get_distance_data. No exact time window is mentioned, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Why does it feel like I’m not getting anywhere, even though I walk daily?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor suggesting frustration about perceived lack of progress. To assess if their physical activity supports this feeling, we should retrieve exercise distance via get_distance_data. No specific time is given, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Have I walked more than usual since last Friday?",
+        "type": "implicit",
+        "thinking": "The user indirectly seeks insight into their walking trend since last Friday. This warrants fetching exercise distance via get_distance_data. Assuming today is Tuesday, 'since last Friday' implies 5 days.",
+        "numdays": 5,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m out of breath just climbing stairs lately—am I not walking enough?",
+        "type": "symptom",
+        "thinking": "The user reports a physical symptom and suspects reduced activity as a cause. Checking their exercise distance with get_distance_data will help assess this. No timeframe is mentioned, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Could you check how far I jogged in the past 10 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for jogging distance over the past 10 days. This clearly maps to a call to get_distance_data with a 10-day window.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been feeling more tired than usual lately. Did I walk less this week?",
+        "type": "symptom",
+        "thinking": "The user feels increased fatigue and suspects decreased activity. Retrieving their walking distance using get_distance_data for the past week will help confirm this. 'This week' maps to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Did I hit my walking goals over the last two weekends?",
+        "type": "explicit",
+        "thinking": "The user wants to assess their walking performance over two weekends. Assuming weekends cover 2 days each, this maps to the last 4 days. To ensure coverage, use a 7-day window with get_distance_data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My legs have been sore lately—could it be from walking more than usual?",
+        "type": "symptom",
+        "thinking": "The user suspects a correlation between leg soreness and increased walking. To investigate, we should use get_distance_data. No time range is given, so we’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Have I been more active since the start of the month?",
+        "type": "implicit",
+        "thinking": "The user is curious about changes in activity since the beginning of the month. Assuming today is the 20th, we’ll query get_distance_data for the last 20 days.",
+        "numdays": 20,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How far did I go in total last week?",
+        "type": "explicit",
+        "thinking": "The user is requesting total distance data for last week. This directly maps to a call to get_distance_data with a 7-day window.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been taking long walks after dinner. Has it made a difference in my activity?",
+        "type": "behavioral",
+        "thinking": "The user has adopted a new walking habit and wants to know its impact. We should fetch exercise distance using get_distance_data. Since no timeframe is mentioned, default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How much ground have I covered in the past 3 weeks?",
+        "type": "explicit",
+        "thinking": "The user asks for a summary of exercise distance over the past 3 weeks. 3 weeks equals 21 days, so we’ll call get_distance_data with numdays=21.",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I walked to work every day last week. Just curious how far that adds up to.",
+        "type": "behavioral",
+        "thinking": "The user mentions consistent walking behavior and is curious about cumulative distance. We'll use get_distance_data with a 7-day window for last week.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Even though I’ve been walking daily, I feel like I’m stuck in one place.",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically describes emotional stagnation despite physical activity. Checking their recent walking distance via get_distance_data can validate this perception. No specific time is given, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Has my distance increased since I started using the treadmill last Monday?",
+        "type": "implicit",
+        "thinking": "The user wants to analyze distance trends since beginning treadmill use last Monday. Assuming today is Wednesday, that's 9 days. We'll use get_distance_data with numdays=9.",
+        "numdays": 9,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How far did I go yesterday?",
+        "type": "explicit",
+        "thinking": "The user is asking for a daily summary of exercise distance. Since only one day is mentioned, we set numdays to 1 for get_distance_data.",
+        "numdays": 1,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I've been dragging myself around lately—am I just walking less?",
+        "type": "symptom",
+        "thinking": "The user links low energy with potentially decreased walking. To confirm this, we should fetch recent exercise distance using get_distance_data. No timeframe is provided, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Ever since I stopped driving, I’ve been walking more. Can we check that?",
+        "type": "behavioral",
+        "thinking": "The user notes a lifestyle shift that likely increased walking. We can verify this change by calling get_distance_data. Without a defined timeframe, we’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Please show me how far I’ve walked over the last 12 days.",
+        "type": "explicit",
+        "thinking": "The user explicitly requests walking distance over a 12-day window. This maps directly to numdays=12 for get_distance_data.",
+        "numdays": 12,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I used to be more active—how far have I gone this month so far?",
+        "type": "implicit",
+        "thinking": "The user hints at reduced activity and wants data for this month. Assuming today is the 18th, we’ll retrieve data from get_distance_data with numdays=18.",
+        "numdays": 18,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My knees are sore again. Can you see if I’ve been overdoing it lately?",
+        "type": "symptom",
+        "thinking": "The user suspects physical overexertion based on knee pain. To investigate, we should check recent walking distances with get_distance_data. No timeframe mentioned, so using 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Last 14 days—how far have I traveled by foot?",
+        "type": "explicit",
+        "thinking": "The user directly asks for foot-traveled distance over the past 14 days. This requires a call to get_distance_data with numdays=14.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you tell if my walking habits changed after my vacation ended?",
+        "type": "implicit",
+        "thinking": "The user wants to see if post-vacation activity levels changed. Assuming vacation ended 10 days ago, we’ll call get_distance_data with numdays=10.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Every step feels like a mile lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language indicating exhaustion or discouragement. To explore this, we’ll examine actual walking distances using get_distance_data. No time mentioned—defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Pull up how much distance I covered during the last 5 days.",
+        "type": "explicit",
+        "thinking": "The user clearly asks for exercise distance over the past 5 days. We’ll call get_distance_data with numdays=5.",
+        "numdays": 5,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m walking everywhere since my car broke down last week. How’s that looking?",
+        "type": "behavioral",
+        "thinking": "The user has increased walking due to external circumstances. To reflect this change, we’ll call get_distance_data for the last 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How far have I been walking in the mornings lately?",
+        "type": "implicit",
+        "thinking": "The user wants a general sense of their recent walking routine. No specific time window is given, so we’ll default to 7 days with get_distance_data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you summarize my walking stats for the past 2 weeks?",
+        "type": "explicit",
+        "thinking": "The user wants a summary of walking distance for the last 14 days. We’ll query get_distance_data using numdays=14.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "It feels like I’m walking more lately, but is that actually true?",
+        "type": "implicit",
+        "thinking": "The user expresses a perception of increased walking and seeks validation. To confirm this, we’ll retrieve recent walking data using get_distance_data. No time specified, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Please check how much distance I’ve covered since Sunday.",
+        "type": "explicit",
+        "thinking": "The user is requesting walking distance from Sunday to today. Assuming today is Thursday, that spans 4 days, so we’ll set numdays=4 for get_distance_data.",
+        "numdays": 4,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I think I’ve been more active over the past 9 days. Can you confirm?",
+        "type": "implicit",
+        "thinking": "The user suspects an uptick in activity and wants to confirm it. To validate this, we’ll call get_distance_data with numdays=9.",
+        "numdays": 9,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Even after all those walks, I still feel stuck.",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language to express emotional frustration. To evaluate whether the walks have been substantial, we’ll retrieve recent distance using get_distance_data. No time mentioned—default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My therapist asked me to walk more—have I followed through this week?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral goal related to walking and wants to assess compliance. We'll use get_distance_data for this week, mapping to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Just wondering how far I’ve gone over the last 20 days.",
+        "type": "explicit",
+        "thinking": "The user clearly asks for walking distance over the last 20 days. This maps directly to get_distance_data with numdays=20.",
+        "numdays": 20,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Lately, walking feels harder. Am I moving less than before?",
+        "type": "symptom",
+        "thinking": "The user describes increased physical effort and suspects reduced movement. To assess this, we should analyze recent walking distance using get_distance_data. No timeframe is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I switched to walking instead of driving since last Wednesday—how’s my progress?",
+        "type": "behavioral",
+        "thinking": "The user changed behavior by replacing driving with walking. To analyze impact, we'll use get_distance_data since last Wednesday. Assuming today is Monday, that's 5 days.",
+        "numdays": 5,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Check my distance for the past 30 days.",
+        "type": "explicit",
+        "thinking": "The user directly requests walking distance for the past month. This clearly maps to get_distance_data with numdays=30.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Do I even move anymore?",
+        "type": "metaphorical",
+        "thinking": "The user is figuratively expressing concern over physical inactivity. To explore this, we’ll call get_distance_data for recent trends. No time mentioned—defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Have my walking habits changed since I got my new shoes last weekend?",
+        "type": "implicit",
+        "thinking": "The user wonders if a new factor has impacted their walking routine. Assuming today is Friday, 'since last weekend' covers 5 days. We'll use get_distance_data accordingly.",
+        "numdays": 5,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I need to know how far I walked each day over the past week.",
+        "type": "explicit",
+        "thinking": "The user asks for a breakdown of daily walking distance across the past 7 days. This requires calling get_distance_data with numdays=7.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Walking helps me clear my head. Am I still doing enough of it?",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language to imply they rely on walking for mental clarity. To assess their recent walking activity, we’ll call get_distance_data. No time range is given—default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "It’s been two weeks since I restarted my walking routine. Can we see the difference?",
+        "type": "behavioral",
+        "thinking": "The user resumed a walking habit and wants to evaluate its impact. We'll analyze data using get_distance_data over a 14-day period.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How far did I walk between Monday and today?",
+        "type": "explicit",
+        "thinking": "The user wants to measure walking distance from Monday to the current day. Assuming today is Friday, that spans 5 days, so numdays=5.",
+        "numdays": 5,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Ever since the weather got better, I’ve been walking more. Can you check?",
+        "type": "implicit",
+        "thinking": "The user suggests weather has influenced their walking habits. To confirm this behavioral shift, we’ll call get_distance_data. No time window given, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me how much distance I’ve covered walking over the past 6 days.",
+        "type": "explicit",
+        "thinking": "The user requests walking distance for the past 6 days. This directly maps to get_distance_data with numdays=6.",
+        "numdays": 6,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel restless even though I’ve been walking every day lately.",
+        "type": "symptom",
+        "thinking": "The user describes emotional restlessness despite daily walking. To explore this mismatch, we’ll fetch recent walking data via get_distance_data. No timeframe specified—defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My therapist told me to walk 5km a day. Have I kept up with that this past week?",
+        "type": "behavioral",
+        "thinking": "The user has a walking goal and wants to know if they’ve followed through. We’ll assess their walking distance over 7 days using get_distance_data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Lately, I feel like I’m just circling the block and getting nowhere.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to express a lack of perceived progress. To evaluate their actual physical activity, we’ll retrieve recent walking distance using get_distance_data. No timeframe specified—default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I've been running more lately but don't feel any better. What's going on?",
+        "type": "behavioral",
+        "thinking": "The user mentions increased running (behavior change) but expresses concern about not feeling improvement. To assess this, we need to examine their exercise distance patterns. Since no specific time frame is mentioned, we'll default to the past 7 days to analyze their recent activity.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you show me my walking distance from last Tuesday to today?",
+        "type": "explicit",
+        "thinking": "This is a direct request for walking distance data with a clear time window (last Tuesday to today). The function will retrieve this specific date range. Assuming today is Thursday, this would cover 9 days of data.",
+        "numdays": 9,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My knees hurt after increasing my jogging routine.",
+        "type": "symptom",
+        "thinking": "The user connects physical symptoms (knee pain) with increased jogging. To understand potential overexertion, we should examine their distance trends. Without a specified time frame, we'll analyze the past week's data as a baseline.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I'm running in circles with my fitness progress.",
+        "type": "metaphorical",
+        "thinking": "The user employs metaphorical language suggesting frustration with progress. To assess this, we should quantify their actual running distance patterns. Defaulting to 7 days as no specific time period is mentioned.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Has my cycling distance changed much this month?",
+        "type": "explicit",
+        "thinking": "Direct question comparing cycling distance over the current month. Assuming it's the 15th, we'll look at the past 15 days to cover the month-to-date period.",
+        "numdays": 15,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I wonder if my afternoon walks are making any difference.",
+        "type": "implicit",
+        "thinking": "The user subtly questions the efficacy of their walking routine without directly asking for data. To address this implicit concern, we'll analyze their walking distance. Using default 7 days as no timeframe is specified.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Since getting my new shoes, my mileage feels different.",
+        "type": "behavioral",
+        "thinking": "User associates equipment change with perceived difference in running distance. To verify this subjective feeling, we need objective distance data. Since they don't specify when they got the shoes, we'll use the past week as a sample period.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My workout partner says I'm slowing down our runs.",
+        "type": "symptom",
+        "thinking": "Social feedback about running pace suggests possible changes in performance. Examining distance data might reveal patterns in their running capability. Defaulting to 7 days for analysis.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my hiking distance for the past three weekends.",
+        "type": "explicit",
+        "thinking": "Clear request for specific recreational activity data focused on weekends. Three weekends cover approximately 21 days (counting Friday-Sunday for each).",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm a leaf blowing in the wind when it comes to sticking with my exercise plan.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical expression suggesting inconsistency in exercise routine. To evaluate this claim, we need to analyze distance patterns in their workouts. Using default 7-day window.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "The past 10 days of running have felt unusually difficult.",
+        "type": "symptom",
+        "thinking": "User reports subjective experience of increased difficulty during runs over a specific period (10 days). We should examine distance data to see if there are objective changes in their routine.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Compare my walking distance from this week to last week.",
+        "type": "explicit",
+        "thinking": "Direct comparison request between two specific time periods. Each week is 7 days, so we'll retrieve 14 days total to enable the comparison.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I think I overdid it with my marathon training yesterday.",
+        "type": "implicit",
+        "thinking": "User implies concern about overexertion during a specific training session. To contextualize this, we should examine their recent training distances. Looking at past week to see training progression.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My fitness tracker says I'm moving less, but I feel more tired.",
+        "type": "behavioral",
+        "thinking": "Discrepancy between device data and subjective energy levels suggests examining exercise patterns. Need distance data to understand activity levels. Default 7-day period as no time specified.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm stuck in a rut with my morning runs.",
+        "type": "metaphorical",
+        "thinking": "Metaphorical expression suggesting exercise routine has become stagnant. To evaluate this, we'll analyze running distance patterns over the past week.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Has my daily step count affected my weekend hiking distance?",
+        "type": "explicit",
+        "thinking": "Direct question about relationship between two activity metrics. Need hiking distance data to answer. Focusing on weekend hikes from past 4 weekends (about 28 days to capture multiple data points).",
+        "numdays": 28,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Ever since daylight savings ended, my evening walks have been shorter.",
+        "type": "behavioral",
+        "thinking": "User associates time change with behavioral modification. To verify this claim, we should compare walking distances before and after the time change. Assuming DST ended 10 days ago, we'll examine that period.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel sluggish after reducing my running distance.",
+        "type": "symptom",
+        "thinking": "User connects decreased running with physical symptoms. Need to quantify the distance reduction they're referring to. Using past 7 days as baseline unless they specify otherwise.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you break down my cycling kilometers by week for the past month?",
+        "type": "explicit",
+        "thinking": "Clear request for weekly aggregated cycling data over a month-long period. One month typically covers about 30 days for comprehensive weekly breakdowns.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My motivation to run seems to come and go like the tides.",
+        "type": "metaphorical",
+        "thinking": "Tidal metaphor suggests fluctuating exercise patterns. To assess this, we need to examine running distance consistency. Defaulting to past 7 days for analysis.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I've noticed I walk less when it rains.",
+        "type": "behavioral",
+        "thinking": "User identifies weather as a factor affecting walking behavior. To analyze this pattern, we need distance data. Looking at past 14 days to likely capture some rainy and dry days.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my running distance since I started using the new app.",
+        "type": "explicit",
+        "thinking": "Direct request tied to a specific event (app adoption). Need to know when they started - assuming it was 15 days ago based on typical usage patterns.",
+        "numdays": 15,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My legs feel heavier after increasing my trail running.",
+        "type": "symptom",
+        "thinking": "Physical symptoms connected to activity change. To assess potential overtraining, we need to quantify the distance increase. Using past 10 days to capture the change period.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm curious if my lunchtime walks are adding up to anything meaningful.",
+        "type": "implicit",
+        "thinking": "User subtly questions the cumulative impact of regular walks. To answer, we need to quantify their walking distance. Defaulting to past 7 days unless they specify otherwise.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Give me my swimming distance totals for each of the last 8 days.",
+        "type": "explicit",
+        "thinking": "Precise request for daily swimming data over a specific 8-day period. Will retrieve exactly 8 days worth of distance records.",
+        "numdays": 8,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My exercise routine has been all over the place since vacation.",
+        "type": "behavioral",
+        "thinking": "User describes post-vacation inconsistency in workouts. To evaluate this, we need distance data since their return. Assuming vacation ended 12 days ago based on typical durations.",
+        "numdays": 12,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm like a car running on empty with my current workout routine.",
+        "type": "metaphorical",
+        "thinking": "Vehicle metaphor suggests exhaustion or ineffectiveness in workouts. To assess this feeling, we should examine exercise distance patterns. Using default 7-day window.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Has my walking distance decreased since the start of the semester?",
+        "type": "explicit",
+        "thinking": "Direct question about activity change tied to academic calendar. Assuming semester started 20 days ago based on typical academic schedules.",
+        "numdays": 20,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel more anxious on days I don't hit my step goal.",
+        "type": "symptom",
+        "thinking": "User connects mental health symptom with exercise patterns. To explore this relationship, we need distance/step data. Examining past 7 days to see step goal achievement frequency.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can I see a graph of my running distances over the past two weeks?",
+        "type": "explicit",
+        "thinking": "Clear visualization request for a specific 14-day period. Will retrieve exactly two weeks worth of running distance data.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My dog's energy level seems to match my walking habits.",
+        "type": "implicit",
+        "thinking": "User hints at a connection between their walking routine and their pet's behavior. To explore this, we need walking distance data. Defaulting to past 7 days for analysis.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I've been walking meetings but don't know if it's making an impact.",
+        "type": "behavioral",
+        "thinking": "User adopted new behavior (walking meetings) but is uncertain about benefits. Need distance data to quantify activity. Using past 10 days to capture this new habit's implementation period.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My fitness journey has more ups and downs than a mountain trail.",
+        "type": "metaphorical",
+        "thinking": "Mountain trail metaphor suggests exercise inconsistency. To evaluate this claim, we need to analyze distance patterns. Using past 7 days as representative sample.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my average running distance on weekdays versus weekends.",
+        "type": "explicit",
+        "thinking": "Specific request comparing two distinct time patterns. Need sufficient data - using past 21 days (3 weeks) to ensure multiple instances of both weekday and weekend runs.",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I think my evening walks aren't as long as they used to be.",
+        "type": "implicit",
+        "thinking": "User implies concern about decreased walking distance without direct measurement. To verify this perception, we need actual distance data. Comparing current week (7 days) to assess recent patterns.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My back pain seems worse when I skip my daily walk.",
+        "type": "symptom",
+        "thinking": "User connects physical symptoms with exercise patterns. To analyze this relationship, we need walking distance data. Examining past 14 days to capture several walk/skip instances.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Break down my cycling distance by time of day for the past 10 days.",
+        "type": "explicit",
+        "thinking": "Detailed request for time-segmented cycling data over a specific 10-day period. Will retrieve exactly 10 days worth of records for temporal analysis.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm like a wind-up toy that's running out of steam with my runs.",
+        "type": "metaphorical",
+        "thinking": "Mechanical metaphor suggests decreasing exercise energy/performance. To assess this, we need running distance data. Using past 7 days to evaluate recent trends.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Has my hiking distance increased since I got my new backpack?",
+        "type": "explicit",
+        "thinking": "Direct question about equipment change affecting activity. Need to know when they got the backpack - assuming 12 days ago based on typical purchase-to-use patterns.",
+        "numdays": 12,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel guilty when I see my weekly walking summary.",
+        "type": "symptom",
+        "thinking": "Emotional response connected to activity data. To understand this reaction, we need to examine the walking distances that trigger these feelings. Looking at past 7 days as referenced by 'weekly'.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My running seems to follow a pattern of two good days then one off day.",
+        "type": "behavioral",
+        "thinking": "User identifies a specific activity pattern. To verify this observation, we need running distance data. Examining past 15 days to capture multiple cycles of this alleged pattern.",
+        "numdays": 15,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you show me which days last month I walked more than 5 miles?",
+        "type": "explicit",
+        "thinking": "Precise request for filtered walking data over a month-long period. Using 30 days to cover 'last month' comprehensively.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm a hamster on a wheel with my current exercise routine.",
+        "type": "metaphorical",
+        "thinking": "Hamster wheel metaphor suggests exercise feels repetitive or unproductive. To evaluate this, we need to analyze distance patterns. Using past 7 days as representative sample.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My partner says I'm obsessed with hitting my daily step count.",
+        "type": "implicit",
+        "thinking": "Social feedback suggests possible overfocus on metrics. To assess this, we should examine walking distance patterns. Defaulting to past 7 days for analysis.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I've been more consistent with morning runs since daylight savings began.",
+        "type": "behavioral",
+        "thinking": "User connects time change with improved exercise consistency. To verify this, we need running distance data. Assuming DST began 20 days ago, we'll examine that period.",
+        "numdays": 20,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my peak running distance in the past three weeks.",
+        "type": "explicit",
+        "thinking": "Direct request for maximum performance metric over a specific 21-day period. Will retrieve three weeks of data to identify the peak distance.",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My knees thank me when I keep my runs under 3 miles.",
+        "type": "symptom",
+        "thinking": "User connects physical wellbeing with specific exercise distance. To analyze this pattern, we need running distance data. Examining past 14 days to see compliance with their 3-mile threshold.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm curious how my weekend cycling distances compare to weekdays.",
+        "type": "implicit",
+        "thinking": "User expresses interest in activity patterns without direct request. To satisfy this curiosity, we need cycling data. Using past 28 days to ensure multiple weekends and weekdays for comparison.",
+        "numdays": 28,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Break down my walking distance by location for the past fortnight.",
+        "type": "explicit",
+        "thinking": "Specific request for geographically segmented data over 14 days. 'Fortnight' precisely indicates we should retrieve exactly two weeks of records.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My energy levels mirror my exercise consistency - both are unpredictable.",
+        "type": "metaphorical",
+        "thinking": "Mirror metaphor connects energy with exercise patterns. To evaluate this claim, we need distance data. Using past 10 days to assess consistency.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I think I pushed too hard in my runs last week.",
+        "type": "implicit",
+        "thinking": "User implies concern about overexertion during a specific time period (last week). To assess this, we need running distance data from those 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my progress toward the 100-mile monthly walking challenge.",
+        "type": "explicit",
+        "thinking": "Direct request tied to a specific fitness challenge. Assuming it's the 25th of the month, we'll look at past 25 days of walking data to assess progress.",
+        "numdays": 25,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How many miles have I walked in the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user is directly requesting their walking distance over a specific timeframe, indicating a focus on tracking exercise progress. get_distance_data will retrieve the precise walking distance. 'Past two weeks' clearly maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been feeling kinda stuck lately. How far have I been running?",
+        "type": "implicit",
+        "thinking": "The user hints at feeling stuck, which may suggest reduced physical activity impacting their mood. get_distance_data will provide running distance to assess their exercise level. No time window is mentioned, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been biking instead of driving this week. How far did I go?",
+        "type": "behavioral",
+        "thinking": "The user describes a shift to biking instead of driving, indicating a deliberate change in behavior. get_distance_data will quantify their biking distance to track this new habit. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My feet are killing me. Have I been hiking too much lately?",
+        "type": "symptom",
+        "thinking": "The user reports foot pain, possibly linked to excessive hiking, and seeks distance data. get_distance_data will clarify their hiking activity to evaluate potential overuse. No time frame is specified, so I’ll default to 7 days for recent activity.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m wandering aimlessly. How much have I walked this month?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative ‘wandering aimlessly’ suggests emotional disorientation, possibly tied to walking habits. get_distance_data will provide walking distance to contextualize their activity. 'This month' indicates a 30-day period for numdays.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you check my running distance for the last 8 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for running distance over a defined period, showing interest in monitoring performance. get_distance_data is needed to fetch this data accurately. 'Last 8 days' directly maps to numdays = 8.",
+        "numdays": 8,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I haven’t been in the mood to exercise. How far have I cycled lately?",
+        "type": "implicit",
+        "thinking": "The user implies low motivation for exercise, which may reflect in reduced cycling. get_distance_data will reveal their cycling distance to assess this concern. No time window is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been trying to walk more since Monday. What’s my distance?",
+        "type": "behavioral",
+        "thinking": "The user mentions a new effort to walk more, indicating a positive behavior change. get_distance_data will quantify their walking distance to track this progress. 'Since Monday' suggests 8 days if today is Tuesday, so numdays = 8.",
+        "numdays": 8,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m so exhausted these days. Have I been running enough?",
+        "type": "symptom",
+        "thinking": "The user reports exhaustion, which could be linked to insufficient running activity. get_distance_data will provide running distance to evaluate this connection. No time frame is mentioned, so I’ll use 7 days as the default.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m sinking. How far have I hiked this week?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphorical ‘sinking’ suggests emotional struggle, possibly related to hiking activity. get_distance_data will clarify their hiking distance to explore this link. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "What’s my total cycling distance for the past 18 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests cycling distance for a specific period, indicating a focus on tracking exercise. get_distance_data will fetch this data accurately. 'Past 18 days' maps to numdays = 18.",
+        "numdays": 18,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been too overwhelmed to get out much. How much have I walked?",
+        "type": "implicit",
+        "thinking": "The user suggests being overwhelmed, which may reduce their walking activity. get_distance_data will provide walking distance to assess this impact. No time window is specified, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been running every morning for the last 10 days. How far is that?",
+        "type": "behavioral",
+        "thinking": "The user describes a new daily running routine, indicating consistent behavior. get_distance_data will quantify their running distance to track this habit. 'Last 10 days' maps to numdays = 10.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My legs feel so heavy. Have I been hiking enough this month?",
+        "type": "symptom",
+        "thinking": "The user reports heavy legs, possibly due to insufficient hiking activity. get_distance_data will provide hiking distance to evaluate this. 'This month' indicates a 30-day period for numdays.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m just going through the motions. How far have I run lately?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative ‘going through the motions’ suggests lack of engagement, possibly tied to running. get_distance_data will reveal their running distance to contextualize this feeling. No time frame is given, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How far have I cycled since last Wednesday?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for cycling distance since a specific day, showing interest in tracking activity. get_distance_data is needed to retrieve this data. 'Since last Wednesday' suggests 6 days if today is Tuesday, so numdays = 6.",
+        "numdays": 6,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been feeling really low. Is my walking distance okay?",
+        "type": "implicit",
+        "thinking": "The user hints at low mood, which may be linked to reduced walking activity. get_distance_data will provide walking distance to assess this connection. No time window is mentioned, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been hiking every Sunday this month. What’s my total distance?",
+        "type": "behavioral",
+        "thinking": "The user describes a consistent Sunday hiking habit, indicating a positive behavior. get_distance_data will quantify their hiking distance. 'This month' with Sunday focus suggests 30 days for numdays to cover all Sundays.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m so stiff all the time. Have I been running enough this week?",
+        "type": "symptom",
+        "thinking": "The user reports stiffness, which may relate to insufficient running. get_distance_data will provide running distance to evaluate this. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m running on empty. How far have I walked this week?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative ‘running on empty’ suggests exhaustion, possibly linked to walking activity. get_distance_data will clarify their walking distance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you tell me my hiking distance for the last 12 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests hiking distance for a specific period, showing interest in tracking progress. get_distance_data will fetch this data accurately. 'Last 12 days' maps to numdays = 12.",
+        "numdays": 12,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been too tired to exercise much. How far have I cycled?",
+        "type": "implicit",
+        "thinking": "The user implies fatigue is limiting their cycling activity. get_distance_data will provide cycling distance to assess this impact. No time frame is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I started jogging last Friday. How much have I run?",
+        "type": "behavioral",
+        "thinking": "The user mentions starting jogging, indicating a new behavior. get_distance_data will quantify their running distance to track this change. 'Since last Friday' suggests 4 days if today is Tuesday, but I’ll use 5 days as the minimum for meaningful data.",
+        "numdays": 5,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My shoulders are so tense. Have I been biking enough lately?",
+        "type": "symptom",
+        "thinking": "The user reports shoulder tension, which could be influenced by insufficient biking. get_distance_data will provide biking distance to evaluate this. No time window is mentioned, so I’ll use 7 days as the default.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m climbing a steep hill. How far have I hiked?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphorical ‘climbing a steep hill’ suggests effort or struggle, possibly tied to hiking. get_distance_data will reveal their hiking distance to ground this metaphor. No time frame is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "What’s my running distance for the past 20 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for running distance over a specific period, indicating a focus on tracking performance. get_distance_data will fetch this data accurately. 'Past 20 days' maps to numdays = 20.",
+        "numdays": 20,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been feeling off-balance. How much have I walked lately?",
+        "type": "implicit",
+        "thinking": "The user hints at feeling off-balance, which may relate to reduced walking activity. get_distance_data will provide walking distance to assess this connection. No time window is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been cycling to the park every day this week. How far is that?",
+        "type": "behavioral",
+        "thinking": "The user describes a daily cycling habit to the park, indicating consistent behavior. get_distance_data will quantify their cycling distance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m so out of sorts. Have I been running enough this month?",
+        "type": "symptom",
+        "thinking": "The user reports feeling out of sorts, possibly linked to insufficient running. get_distance_data will provide running distance to evaluate this. 'This month' indicates a 30-day period for numdays.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m stuck in quicksand. How far have I cycled this week?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative ‘stuck in quicksand’ suggests feeling trapped, possibly tied to cycling activity. get_distance_data will clarify their cycling distance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How many miles have I hiked in the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests hiking distance for a specific period, showing interest in tracking activity. get_distance_data is needed to retrieve this data. 'Last 15 days' maps to numdays = 15.",
+        "numdays": 15,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been too distracted to get out much. How far have I run?",
+        "type": "implicit",
+        "thinking": "The user suggests distraction is limiting their running activity. get_distance_data will provide running distance to assess this impact. No time frame is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been walking every evening for two weeks. What’s my distance?",
+        "type": "behavioral",
+        "thinking": "The user describes a consistent evening walking habit, indicating a positive behavior change. get_distance_data will quantify their walking distance. 'Two weeks' suggests 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My hips are aching. Have I been hiking too much this week?",
+        "type": "symptom",
+        "thinking": "The user reports hip pain, possibly due to excessive hiking. get_distance_data will provide hiking distance to evaluate this. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m carrying the world on my shoulders. How far have I run?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphorical ‘carrying the world’ suggests emotional burden, possibly tied to running activity. get_distance_data will reveal their running distance. No time frame is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you show me my cycling distance for the last 22 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for cycling distance over a specific period, indicating a focus on tracking progress. get_distance_data will fetch this data accurately. 'Last 22 days' maps to numdays = 22.",
+        "numdays": 22,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been feeling restless. How much have I been walking?",
+        "type": "implicit",
+        "thinking": "The user hints at restlessness, which may be linked to insufficient walking. get_distance_data will provide walking distance to assess this connection. No time window is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been running to clear my mind since last Sunday. How far did I go?",
+        "type": "behavioral",
+        "thinking": "The user mentions running to cope mentally, indicating a purposeful behavior change. get_distance_data will quantify their running distance. 'Since last Sunday' suggests 9 days if today is Tuesday, so numdays = 9.",
+        "numdays": 9,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m so sore all over. Have I been cycling enough this month?",
+        "type": "symptom",
+        "thinking": "The user reports widespread soreness, which may relate to cycling activity levels. get_distance_data will provide cycling distance to evaluate this. 'This month' indicates a 30-day period for numdays.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m treading water. How far have I hiked lately?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative ‘treading water’ suggests lack of progress, possibly tied to hiking. get_distance_data will reveal their hiking distance to ground this metaphor. No time frame is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "What’s my walking distance for the past 10 days?",
+        "type": "explicit",
+        "thinking": "The user directly requests walking distance for a specific period, showing interest in tracking activity. get_distance_data is needed to retrieve this data. 'Past 10 days' maps to numdays = 10.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been feeling foggy-headed. How much have I run lately?",
+        "type": "implicit",
+        "thinking": "The user hints at mental fog, which may be linked to reduced running activity. get_distance_data will provide running distance to assess this connection. No time window is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been biking every weekend for three weeks. How far is that?",
+        "type": "behavioral",
+        "thinking": "The user describes a consistent weekend biking habit, indicating a positive behavior. get_distance_data will quantify their biking distance. 'Three weeks' with weekend focus suggests 21 days for numdays to cover all weekends.",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My calves are so tight. Have I been walking enough this week?",
+        "type": "symptom",
+        "thinking": "The user reports tight calves, possibly linked to walking activity levels. get_distance_data will provide walking distance to evaluate this. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m spinning my wheels. How far have I cycled?",
+        "type": "metaphorical",
+        "thinking": "The user’s figurative ‘spinning my wheels’ suggests frustration or lack of progress, possibly tied to cycling. get_distance_data will reveal their cycling distance. No time frame is specified, so I’ll default to 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "How far have I run in the last 16 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for running distance over a specific period, indicating a focus on tracking performance. get_distance_data will fetch this data accurately. 'Last 16 days' maps to numdays = 16.",
+        "numdays": 16,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been feeling flat lately. How much have I hiked?",
+        "type": "implicit",
+        "thinking": "The user hints at low energy or mood, which may be linked to reduced hiking activity. get_distance_data will provide hiking distance to assess this connection. No time window is given, so I’ll default to 7 days for recent data.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’ve been walking to the store daily since last week. How far is that?",
+        "type": "behavioral",
+        "thinking": "The user describes a daily walking habit to the store, indicating a consistent behavior change. get_distance_data will quantify their walking distance. 'Since last week' suggests 7 days if today is Tuesday, so numdays = 7.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I’m so achy lately. Have I been running too much this month?",
+        "type": "symptom",
+        "thinking": "The user reports general achiness, possibly due to excessive running. get_distance_data will provide running distance to evaluate this. 'This month' indicates a 30-day period for numdays.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like I’m lost at sea. How far have I walked this week?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphorical ‘lost at sea’ suggests disorientation, possibly tied to walking activity. get_distance_data will clarify their walking distance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like my morning runs have lost their spark lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphorical language ('lost their spark') to express dissatisfaction with recent runs. To assess this, we need to examine their running distance patterns. Since 'lately' is vague, we'll default to the past 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my cycling distance for every odd-numbered day this month.",
+        "type": "explicit",
+        "thinking": "This is a precise, unusual request for filtered cycling data. Assuming it's the 15th, we'll retrieve 15 days of data to cover all odd-numbered days in the current month.",
+        "numdays": 15,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My physio says I shouldn't increase my walking distance by more than 10% weekly.",
+        "type": "behavioral",
+        "thinking": "User references medical advice about gradual progression. To check compliance, we need walking distance data. Comparing the past 14 days (2 weeks) will show progression rates.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you compare my hiking distance from this rainy season to last dry season?",
+        "type": "explicit",
+        "thinking": "Complex request comparing seasonal activity patterns. Assuming 3 months per season, we'll use 30 days as a representative sample from each period (current request focuses on rainy season).",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm a snail compared to my running group lately.",
+        "type": "metaphorical",
+        "thinking": "Animal metaphor suggests perceived slowness in group context. To evaluate this, we need the user's running distance data. 'Lately' implies recent timeframe - defaulting to past 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My Apple Watch keeps buzzing that I'm behind on distance goals.",
+        "type": "implicit",
+        "thinking": "Device notifications imply the user is falling short of targets. To address this concern, we need to examine their actual distance data. Using past 7 days to assess recent performance.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Break down my swimming laps by distance for the past five Tuesday sessions.",
+        "type": "explicit",
+        "thinking": "Very specific request targeting a particular day's activity. Five Tuesdays span about 35 days (5 weeks), but we'll retrieve 30 days as maximum allowed.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Ever since I changed jobs, my lunchtime walks have disappeared.",
+        "type": "behavioral",
+        "thinking": "User connects lifestyle change (new job) with activity reduction. To verify this claim, we need walking distance data. Assuming job change was 20 days ago based on typical transition periods.",
+        "numdays": 20,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My knees click like an old clock when I exceed 5km runs.",
+        "type": "metaphorical",
+        "thinking": "Creative metaphor links physical symptoms with specific distance. To assess frequency of this issue, we need running distance data. Examining past 14 days to capture multiple run instances.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Why do I feel more anxious on days I skip my evening walk?",
+        "type": "symptom",
+        "thinking": "User connects mental health symptom with missed exercise. To explore this correlation, we need walking distance data. Analyzing past 10 days to identify skip-day patterns.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my running distance on days it was above 70°F this month.",
+        "type": "explicit",
+        "thinking": "Weather-filtered request for activity data. Assuming it's mid-month, we'll examine past 15 days to likely capture some warm-weather runs.",
+        "numdays": 15,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I think my dog is getting fat because our walks have been shorter.",
+        "type": "implicit",
+        "thinking": "User hints at concern about pet health linked to reduced walking. To investigate, we need the user's walking distance data. Using past 14 days to assess duration changes.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My marathon training log feels like a rollercoaster of distances.",
+        "type": "metaphorical",
+        "thinking": "Rollercoaster metaphor suggests training inconsistency. To evaluate this perception, we need running distance data. Examining past 21 days (3 weeks) of training.",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you graph my walking distance against my sleep quality for past 2 weeks?",
+        "type": "explicit",
+        "thinking": "Direct request for correlation analysis between two metrics. Precisely asking for 14 days of walking distance data to match sleep records.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I've been doing 'walking meetings' but my boss thinks it's just an excuse.",
+        "type": "behavioral",
+        "thinking": "Workplace situation involving new exercise habit. To validate the user's claim, we need walking distance data. Using past 10 days since implementing this change.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My Fitbit cheers make me feel guilty about missed steps.",
+        "type": "symptom",
+        "thinking": "Emotional response to fitness notifications suggests examining activity patterns. Need walking distance data to understand what triggers these feelings. Default 7-day period.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me every day in May that I biked more than 10 miles.",
+        "type": "explicit",
+        "thinking": "Precise historical request with distance threshold. For a full month view, we'll use 30 days (though May has 31, we'll cap at maximum allowed).",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm like a wind-up toy that slows down by Friday with my workouts.",
+        "type": "metaphorical",
+        "thinking": "Mechanical metaphor suggests weekly energy depletion. To assess this pattern, we need exercise distance data. Examining past 14 days to capture two full weekly cycles.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Has my swimming distance improved since I started the breathing exercises?",
+        "type": "explicit",
+        "thinking": "Direct question about technique change impact. Assuming breathing exercises began 12 days ago based on typical habit formation timelines.",
+        "numdays": 12,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My Apple Fitness+ streaks are motivating me to go further.",
+        "type": "behavioral",
+        "thinking": "User describes positive behavior change from gamification. To quantify this 'going further', we need distance data. Using past 7 days to see recent improvements.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like a sloth on days I don't hit my step goal.",
+        "type": "metaphorical",
+        "thinking": "Animal metaphor connects self-perception with activity levels. To understand this feeling, we need walking distance data. Examining past 7 days for goal achievement patterns.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you show my running distance only for days it rained?",
+        "type": "explicit",
+        "thinking": "Weather-specific activity request. Need sufficient data - using past 21 days to likely capture several rainy days.",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My physical therapist wants to see my walking variability over 3 weeks.",
+        "type": "explicit",
+        "thinking": "Medical professional's request for specific analysis period. Precisely 21 days as instructed by the therapist.",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm a broken record with my same 3-mile loop every day.",
+        "type": "metaphorical",
+        "thinking": "Music metaphor suggests exercise routine lacks variety. To evaluate this claim, we need running distance data. Using past 7 days to assess route consistency.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My energy crashes after long walks but not short ones.",
+        "type": "symptom",
+        "thinking": "User connects physical response with activity duration. To analyze this pattern, we need walking distance data. Examining past 10 days to compare different walk lengths.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my distance trend since deleting social media apps.",
+        "type": "explicit",
+        "thinking": "Behavior change (app deletion) potentially affecting activity. Assuming this occurred 15 days ago based on typical usage patterns.",
+        "numdays": 15,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I think my walking app over counts distance when I'm window shopping.",
+        "type": "implicit",
+        "thinking": "User suspects device inaccuracy during specific activity. To investigate, we need walking distance data. Using past 7 days to identify potential overcounting patterns.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My weekend warrior hiking is leaving me hobbling by Monday.",
+        "type": "symptom",
+        "thinking": "Physical symptoms connected to recreational activity pattern. Need hiking distance data to assess potential overexertion. Focusing on past 3 weekends (about 21 days).",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you compare my pre-dawn vs. evening run distances this month?",
+        "type": "explicit",
+        "thinking": "Temporal comparison request within current month. Assuming it's the 20th, we'll use past 20 days for sufficient time-of-day data.",
+        "numdays": 20,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm a yo-yo with my running consistency since the time change.",
+        "type": "metaphorical",
+        "thinking": "Toy metaphor suggests exercise fluctuations post-daylight savings. Assuming DST change was 15 days ago, we'll examine that period.",
+        "numdays": 15,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My smart shoes say I'm dragging my feet more on tired days.",
+        "type": "behavioral",
+        "thinking": "Wearable data suggests gait changes correlating with fatigue. To explore this, we need walking distance data. Using past 10 days to match shoe metrics.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my distance covered while listening to podcasts vs music.",
+        "type": "explicit",
+        "thinking": "Unique request segmented by audio content. Need sufficient data - using past 21 days to ensure multiple instances of both podcast and music sessions.",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like a caged animal when I don't get my daily walk.",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor connects mental state with exercise routine. To understand this feeling, we need walking distance data. Examining past 7 days for missed walk patterns.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My running coach says my easy days aren't easy enough.",
+        "type": "implicit",
+        "thinking": "Professional feedback suggests possible overtraining. To assess this, we need running distance data. Using past 14 days to evaluate workout intensity distribution.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Break down my cycling distance by hour of the day for last fortnight.",
+        "type": "explicit",
+        "thinking": "Detailed temporal analysis request. 'Fortnight' precisely indicates we need 14 days of hourly segmented data.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm a broken pedometer with my inconsistent step counts this week.",
+        "type": "metaphorical",
+        "thinking": "Device metaphor suggests activity inconsistency. To evaluate this claim, we need walking distance data. Specifically examining the past 7 days as mentioned.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Has my walking distance changed since starting the new medication?",
+        "type": "explicit",
+        "thinking": "Direct question about pharmaceutical impact on activity. Assuming medication began 10 days ago based on typical prescription schedules.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My Garmin's 'recovery time' suggestions don't match how I feel after runs.",
+        "type": "implicit",
+        "thinking": "Discrepancy between device metrics and subjective experience. To investigate, we need running distance data. Using past 7 days to compare device suggestions with actual workouts.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my distance covered while traveling for work this quarter.",
+        "type": "explicit",
+        "thinking": "Business travel-specific activity request. For a quarterly view, we'll use the maximum 30 days as representative sample.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm a pendulum swinging between overtraining and complete laziness.",
+        "type": "metaphorical",
+        "thinking": "Physics metaphor suggests extreme exercise inconsistency. To assess this pattern, we need distance data. Examining past 21 days to capture oscillation cycles.",
+        "numdays": 21,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My walking meetings got canceled this week - did it affect my totals?",
+        "type": "behavioral",
+        "thinking": "Specific schedule change potentially impacting activity. Need walking distance data to compare. Precisely examining past 7 days (this week) as mentioned.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Can you flag days where my run distance spiked more than 20%?",
+        "type": "explicit",
+        "thinking": "Request for outlier detection in running patterns. Need sufficient data - using past 28 days to identify meaningful spikes.",
+        "numdays": 28,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I feel like a battery that drains faster when I skip my morning walk.",
+        "type": "metaphorical",
+        "thinking": "Energy metaphor connects exercise with vitality. To explore this, we need walking distance data. Comparing past 10 days with and without morning walks.",
+        "numdays": 10,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my distance covered while wearing the new running shoes vs old ones.",
+        "type": "explicit",
+        "thinking": "Equipment comparison request. Assuming shoe change occurred 15 days ago, we'll examine that period.",
+        "numdays": 15,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My walking routine evaporated when my walking buddy moved away.",
+        "type": "behavioral",
+        "thinking": "Social change impacting exercise habits. To quantify this 'evaporation', we need walking distance data. Assuming the move was 25 days ago based on typical relocation timelines.",
+        "numdays": 25,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm a GPS signal lost in the woods with my inconsistent hiking lately.",
+        "type": "metaphorical",
+        "thinking": "Technology metaphor suggests activity irregularity. To assess this claim, we need hiking distance data. 'Lately' implies recent timeframe - defaulting to past 7 days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Break down my cycling distance by weather conditions this month.",
+        "type": "explicit",
+        "thinking": "Weather-segmented activity request. For monthly analysis, we'll use 30 days of data to ensure various weather conditions are captured.",
+        "numdays": 30,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "My physical therapist says my recovery walks should be exactly 1.5 miles.",
+        "type": "behavioral",
+        "thinking": "Medical precision requirement for rehabilitation. To check compliance, we need walking distance data. Examining past 14 days to assess adherence to the prescribed distance.",
+        "numdays": 14,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "I'm a metronome stuck on one speed with my daily walks.",
+        "type": "metaphorical",
+        "thinking": "Music tool metaphor suggests exercise lacks variation. To evaluate this, we need walking distance data. Using past 7 days to assess pace consistency.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    },
+    {
+        "query": "Show me my running distance only for days I slept more than 7 hours.",
+        "type": "explicit",
+        "thinking": "Sleep-filtered activity request. Need sufficient data - using past 7 days to likely capture several good-sleep running days.",
+        "numdays": 7,
+        "function": "get_distance_data"
+    }
+]

@@ -1,0 +1,1794 @@
+[
+    {
+        "query": "How’s my energy been during workouts this past week?",
+        "type": "explicit",
+        "thinking": "The user is directly asking about their power output during recent workouts, indicating a focus on exercise performance. Calling get_power_data is appropriate to fetch this data. The query specifies 'this past week,' which maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel like I’m dragging during my runs lately. What’s going on?",
+        "type": "symptom",
+        "thinking": "The user reports feeling low energy ('dragging') during runs, suggesting a concern about reduced power output. get_power_data can help analyze recent exercise performance to identify trends. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been skipping my gym sessions more often this month. Can you check my workout intensity?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral change—skipping gym sessions—implying potential changes in exercise consistency or power output. get_power_data will provide insights into workout intensity over the mentioned period. 'This month' suggests about 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My workouts feel like I’m pushing a boulder uphill since last Monday. Any insights?",
+        "type": "metaphorical",
+        "thinking": "The user uses a metaphor ('pushing a boulder uphill') to describe workouts feeling unusually difficult, hinting at reduced power output. get_power_data can quantify this struggle. 'Since last Monday' indicates approximately 8 days, so numdays is set to 8.",
+        "numdays": 8,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m worried I’m not as strong as I used to be during cycling. Can you look at my data?",
+        "type": "implicit",
+        "thinking": "The user expresses concern about declining strength in cycling, indirectly requesting analysis of power output. get_power_data is needed to assess performance trends. No specific time is mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you tell me about my power output for the last 10 days of workouts?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests power output data for a specific timeframe. get_power_data is the right function to retrieve this information. 'Last 10 days' directly maps to numdays of 10.",
+        "numdays": 10,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been feeling wiped out after short runs this week. Is my performance off?",
+        "type": "symptom",
+        "thinking": "The user describes feeling unusually fatigued ('wiped out') after runs, suggesting a possible drop in power output. get_power_data can help evaluate performance. 'This week' indicates 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I haven’t been able to hit my usual pace since Sunday. What’s my workout data look like?",
+        "type": "behavioral",
+        "thinking": "The user notes a change in performance—failing to hit their usual pace—indicating a potential power output issue. get_power_data will provide relevant data. 'Since Sunday' (assuming today is Tuesday) suggests 9 days for numdays.",
+        "numdays": 9,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My gym sessions feel like wading through mud lately. Can you check what’s up?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor ('wading through mud') implies workouts feel sluggish, pointing to possible reduced power output. get_power_data can analyze this trend. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I think my stamina’s been off for the past couple of weeks. Can you confirm?",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about stamina, likely tied to power output during exercise. get_power_data is appropriate to check performance trends. 'Past couple of weeks' suggests 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_power_data"
+    },
+    {
+        "query": "What’s my average power output been like for the last 15 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for average power output over a specified period. get_power_data will fetch this data. 'Last 15 days' clearly maps to numdays of 15.",
+        "numdays": 15,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m so tired after workouts this month. Is my effort level dropping?",
+        "type": "symptom",
+        "thinking": "The user reports excessive tiredness after workouts, hinting at a possible decline in power output. get_power_data can assess effort levels. 'This month' suggests 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been cutting my workouts short the last few days. Can you look into it?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral shift—shortening workouts—which may reflect lower power output. get_power_data will provide insights into recent performance. 'Last few days' is vague but reasonably maps to 5 days.",
+        "numdays": 5,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My runs feel like I’m carrying a heavy load since last weekend. What’s going on?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'carrying a heavy load' suggests workouts feel harder, likely due to reduced power output. get_power_data can quantify this. 'Since last weekend' (assuming today is Tuesday) suggests 9 days for numdays.",
+        "numdays": 9,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I don’t feel as powerful in the gym lately. Can you check my stats?",
+        "type": "implicit",
+        "thinking": "The user implies a concern about reduced power during gym sessions. get_power_data is needed to analyze performance trends. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you show me my power output trends for the past three weeks?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests power output trends for a specific timeframe. get_power_data will provide the necessary data. 'Past three weeks' maps to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My legs feel heavy during cycling this week. Is my performance slipping?",
+        "type": "symptom",
+        "thinking": "The user describes a physical symptom ('heavy legs') during cycling, suggesting possible reduced power output. get_power_data can evaluate performance. 'This week' indicates 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been less consistent with my workouts since the holidays. How’s my output?",
+        "type": "behavioral",
+        "thinking": "The user notes inconsistent workout behavior since the holidays, which may affect power output. get_power_data will reveal performance trends. Assuming holidays were about 14 days ago, set numdays to 14.",
+        "numdays": 14,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My workouts are like running through quicksand this month. Any data on that?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor ('running through quicksand') suggests workouts feel unusually tough, likely due to lower power output. get_power_data can analyze this. 'This month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel like I’m losing my edge in spin class. Can you look at my numbers?",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about declining performance ('losing my edge') in spin class. get_power_data will provide relevant data. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "How’s my power output been for the last two weeks of training?",
+        "type": "explicit",
+        "thinking": "The user directly asks for power output data over a specific period. get_power_data is the appropriate function. 'Last two weeks' maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m struggling to keep up in my HIIT classes this week. What’s my data say?",
+        "type": "symptom",
+        "thinking": "The user reports difficulty ('struggling') in HIIT classes, indicating a potential power output issue. get_power_data can assess performance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been slacking on my runs since last Friday. Can you check my performance?",
+        "type": "behavioral",
+        "thinking": "The user acknowledges reduced effort ('slacking') in runs, suggesting a possible drop in power output. get_power_data will provide insights. 'Since last Friday' (assuming today is Tuesday) maps to 11 days for numdays.",
+        "numdays": 11,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My gym sessions feel like climbing a mountain lately. Can you analyze it?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'climbing a mountain' implies workouts feel exceptionally challenging, likely due to lower power output. get_power_data can quantify this. No time window is given, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m not sure if I’m pushing as hard in workouts as I was before. Can you check?",
+        "type": "implicit",
+        "thinking": "The user expresses uncertainty about their workout intensity, hinting at a possible decline in power output. get_power_data is needed to compare performance. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "What’s my power output been like since the start of the month?",
+        "type": "explicit",
+        "thinking": "The user directly requests power output data for a specific timeframe. get_power_data will fetch this information. Assuming today is August 5, 'start of the month' maps to 5 days for numdays.",
+        "numdays": 5,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel drained after lifting this week. Is my strength down?",
+        "type": "symptom",
+        "thinking": "The user reports feeling drained after lifting, suggesting a potential decrease in power output. get_power_data can evaluate strength trends. 'This week' indicates 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been doing shorter runs since last weekend. How’s my output holding up?",
+        "type": "behavioral",
+        "thinking": "The user mentions a change in behavior—shorter runs—which may impact power output. get_power_data will reveal performance trends. 'Since last weekend' (assuming today is Tuesday) maps to 9 days for numdays.",
+        "numdays": 9,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My workouts feel like I’m stuck in slow motion this month. What’s the deal?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'stuck in slow motion' suggests workouts feel sluggish, likely due to reduced power output. get_power_data can analyze this trend. 'This month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel like my workouts aren’t as intense lately. Can you look into it?",
+        "type": "implicit",
+        "thinking": "The user implies concern about reduced workout intensity, likely tied to power output. get_power_data is appropriate to assess performance. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you analyze my power output for the last 12 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests power output analysis for a specific timeframe. get_power_data will provide the data. 'Last 12 days' directly maps to numdays of 12.",
+        "numdays": 12,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My body feels sluggish during yoga this week. Is my performance off?",
+        "type": "symptom",
+        "thinking": "The user describes feeling sluggish during yoga, indicating a possible drop in power output. get_power_data can evaluate performance trends. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been missing my morning workouts since last Tuesday. How’s my data?",
+        "type": "behavioral",
+        "thinking": "The user notes a behavioral change—missing workouts—which may affect power output. get_power_data will provide insights. 'Since last Tuesday' (assuming today is Tuesday) maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My runs feel like I’m fighting the wind lately. Can you check my stats?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'fighting the wind' suggests runs feel harder, likely due to lower power output. get_power_data can quantify this. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m worried my cycling power has dropped over the last few weeks. Can you confirm?",
+        "type": "implicit",
+        "thinking": "The user expresses concern about a potential drop in cycling power, indirectly requesting data analysis. get_power_data is needed. 'Last few weeks' is vague but reasonably maps to 21 days for numdays.",
+        "numdays": 21,
+        "function": "get_power_data"
+    },
+    {
+        "query": "What’s my power output been like for the last 20 days of workouts?",
+        "type": "explicit",
+        "thinking": "The user directly asks for power output data over a specific period. get_power_data will fetch this information. 'Last 20 days' maps to numdays of 20.",
+        "numdays": 20,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m exhausted after short swims this week. Is my output lower than usual?",
+        "type": "symptom",
+        "thinking": "The user reports excessive exhaustion after swimming, suggesting a possible decline in power output. get_power_data can assess performance. 'This week' indicates 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been less motivated for workouts since last month. How’s my performance?",
+        "type": "behavioral",
+        "thinking": "The user mentions reduced motivation, which may correlate with lower power output. get_power_data will reveal performance trends. 'Since last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My gym sessions feel like I’m moving through water this week. Any insights?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'moving through water' implies workouts feel slow and difficult, likely due to reduced power output. get_power_data can analyze this. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I don’t think I’m performing as well in my runs lately. Can you check?",
+        "type": "implicit",
+        "thinking": "The user implies a concern about declining running performance, likely tied to power output. get_power_data is appropriate to assess trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you look at my power output for the last 25 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests power output data for a specific timeframe. get_power_data will provide the data. 'Last 25 days' directly maps to numdays of 25.",
+        "numdays": 25,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My workouts leave me more tired than usual this month. What’s my data show?",
+        "type": "symptom",
+        "thinking": "The user reports increased fatigue after workouts, suggesting a possible drop in power output. get_power_data can evaluate performance. 'This month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been skipping evening runs since last Wednesday. How’s my output?",
+        "type": "behavioral",
+        "thinking": "The user notes a behavioral change—skipping runs—which may impact power output. get_power_data will provide performance insights. 'Since last Wednesday' (assuming today is Tuesday) maps to 6 days for numdays.",
+        "numdays": 6,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My lifts feel like I’m stuck in molasses lately. Can you analyze it?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'stuck in molasses' suggests lifting feels unusually tough, likely due to lower power output. get_power_data can quantify this. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel like my workouts aren’t what they used to be. Can you look at my data?",
+        "type": "implicit",
+        "thinking": "The user implies concern about declining workout performance, likely related to power output. get_power_data is needed to analyze trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "How’s my power output been for the last 18 days of training?",
+        "type": "explicit",
+        "thinking": "The user directly requests power output data for a specific period. get_power_data will fetch this information. 'Last 18 days' maps to numdays of 18.",
+        "numdays": 18,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m struggling to finish my bike rides this week. Is my power output down?",
+        "type": "symptom",
+        "thinking": "The user reports difficulty completing bike rides, suggesting a possible decline in power output. get_power_data can assess performance. 'This week' indicates 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been less regular with my gym visits since last week. How’s my performance?",
+        "type": "behavioral",
+        "thinking": "The user mentions reduced gym attendance, which may affect power output. get_power_data will reveal performance trends. 'Since last week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My runs feel like I’m trudging through snow this month. What’s my data say?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'trudging through snow' implies runs feel challenging, likely due to lower power output. get_power_data can analyze this. 'This month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m not sure if I’m as strong in my workouts as I was before. Can you check?",
+        "type": "implicit",
+        "thinking": "The user expresses uncertainty about their workout strength, hinting at a possible power output decline. get_power_data is appropriate to assess trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you show me how my power output has changed over the last 10 days?",
+        "type": "explicit",
+        "thinking": "The user is asking directly to analyze their power output trends. This warrants calling the get_power_data function to retrieve the necessary values. The phrase 'last 10 days' maps to numdays = 10.",
+        "numdays": 10,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been feeling weaker during my bike rides lately.",
+        "type": "symptom",
+        "thinking": "The user reports a subjective feeling of reduced strength during exercise, which may reflect a decline in power output. The get_power_data function can help verify this trend. No time frame is mentioned, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I noticed a huge drop in effort this weekend. Can we check the stats?",
+        "type": "behavioral",
+        "thinking": "The user observed a behavioral shift—reduced effort—likely tied to lower power output. We should analyze power metrics using get_power_data. 'This weekend' refers to the past 2 days, so setting numdays = 2.",
+        "numdays": 2,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Have I been getting stronger or am I just imagining it?",
+        "type": "implicit",
+        "thinking": "The user is indirectly questioning improvements in performance, likely tied to power output. This justifies retrieving power data to evaluate progress. No date mentioned, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Let’s see if I’ve been turning up the watts this past week.",
+        "type": "metaphorical",
+        "thinking": "The phrase 'turning up the watts' metaphorically refers to increasing power output. We should fetch power data using get_power_data. 'This past week' means numdays = 7.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you pull my cycling power data from the last 14 days?",
+        "type": "explicit",
+        "thinking": "The user directly asks for power data from a defined period. We’ll use get_power_data to retrieve power output over 'last 14 days', so numdays = 14.",
+        "numdays": 14,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My legs feel dead lately after workouts. Something off?",
+        "type": "symptom",
+        "thinking": "The user describes post-exercise fatigue, which might relate to abnormal power output. We’ll fetch recent data via get_power_data. No timeframe mentioned; using default 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "How did my output look across the last 3 weekends?",
+        "type": "explicit",
+        "thinking": "The user wants to review power data specifically for recent weekends. Estimating 3 weekends as 6 days total, numdays = 6. We’ll use get_power_data to assess this.",
+        "numdays": 6,
+        "function": "get_power_data"
+    },
+    {
+        "query": "It feels like I’ve hit a plateau. Can you confirm?",
+        "type": "implicit",
+        "thinking": "The user hints at stalled progress, possibly reflected in steady power output. We'll call get_power_data to check for trends. No explicit time mentioned, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Did my output improve compared to earlier this month?",
+        "type": "explicit",
+        "thinking": "The user seeks a comparison involving historical performance. To address this, we’ll retrieve recent power data using get_power_data. Assuming 'earlier this month' refers to the past 15 days, numdays = 15.",
+        "numdays": 15,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been pushing harder than usual since last Sunday.",
+        "type": "behavioral",
+        "thinking": "The user mentions a change in workout intensity. To evaluate if it correlates with increased power, we’ll fetch data from get_power_data. Assuming today is Monday, 'since last Sunday' equals 8 days.",
+        "numdays": 8,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Why does it feel like I’m losing steam lately?",
+        "type": "symptom",
+        "thinking": "The user expresses concern about declining physical output, suggesting a review of power trends. We'll retrieve this via get_power_data. No time mentioned, so using default 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can I see my power stats from this week?",
+        "type": "explicit",
+        "thinking": "This is a direct request for recent power data. 'This week' is interpreted as the last 7 days. Calling get_power_data accordingly.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "It felt like I had extra energy during last Thursday’s session.",
+        "type": "behavioral",
+        "thinking": "The user sensed improved performance on a specific day. To validate this, we’ll retrieve power data via get_power_data. Since it’s a single day, numdays = 1.",
+        "numdays": 1,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Am I gaining more power or just getting used to the effort?",
+        "type": "implicit",
+        "thinking": "The user wonders about real improvement vs. perception. This justifies analyzing trends using get_power_data. No time reference, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My last three workouts felt sluggish. Was my output actually low?",
+        "type": "symptom",
+        "thinking": "The user reports decreased perceived performance across multiple sessions. Fetching data for 3 days via get_power_data to verify this.",
+        "numdays": 3,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Let’s check if my wattage spiked this past weekend.",
+        "type": "metaphorical",
+        "thinking": "The term 'wattage spiked' symbolically refers to increased power. We’ll use get_power_data to investigate. Assuming weekend = 2 days.",
+        "numdays": 2,
+        "function": "get_power_data"
+    },
+    {
+        "query": "How consistent has my power been over the last 20 days?",
+        "type": "explicit",
+        "thinking": "The user is asking for a consistency check over a defined time. Calling get_power_data with numdays = 20.",
+        "numdays": 20,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel like I’ve been crushing my rides lately.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language suggesting improved output. We'll confirm this with data from get_power_data. No time given, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Since the heatwave started, my rides have felt harder.",
+        "type": "symptom",
+        "thinking": "The user links external conditions to perceived reduced output. We’ll analyze power trends since 'the heatwave'. Assuming it's been 5 days, numdays = 5.",
+        "numdays": 5,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Compare my power output this week versus last week.",
+        "type": "explicit",
+        "thinking": "The user wants a comparison across two weeks. To start, we’ll retrieve power data for the most recent 14 days via get_power_data. numdays = 14.",
+        "numdays": 14,
+        "function": "get_power_data"
+    },
+    {
+        "query": "How did my output look across the last five sessions?",
+        "type": "explicit",
+        "thinking": "User wants session-based insights; assuming ~1 session per day, we’ll use get_power_data with numdays = 5.",
+        "numdays": 5,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Am I still hitting the same levels I was two weeks ago?",
+        "type": "implicit",
+        "thinking": "The user is uncertain about maintaining performance levels. To verify, we’ll call get_power_data for the past 14 days. numdays = 14.",
+        "numdays": 14,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Last night’s ride felt easier. Was I putting out more power?",
+        "type": "symptom",
+        "thinking": "User reports a perceived increase in performance. To verify objectively, we’ll call get_power_data for 1 day. numdays = 1.",
+        "numdays": 1,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you check how my power levels have varied this month?",
+        "type": "explicit",
+        "thinking": "User wants a broad look at their performance in the current month. We'll retrieve 30 days of data via get_power_data. numdays = 30.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Lately, I’ve been struggling to hit my targets.",
+        "type": "symptom",
+        "thinking": "The user indicates underperformance, possibly due to reduced power. We should retrieve recent output using get_power_data. Defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Am I generating more watts compared to last Monday?",
+        "type": "explicit",
+        "thinking": "The user is comparing recent output to a specific day. We’ll retrieve 8 days of data to include today and last Monday. numdays = 8.",
+        "numdays": 8,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I haven’t been feeling the same drive since my last competition.",
+        "type": "symptom",
+        "thinking": "The user notes a change in performance post-event. Assuming it was a week ago, we’ll retrieve 7 days of power data via get_power_data.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Pull my cycling stats from the past 12 days.",
+        "type": "explicit",
+        "thinking": "A direct request for cycling performance. We'll use get_power_data to retrieve data for 12 days. numdays = 12.",
+        "numdays": 12,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Have I been more powerful during morning workouts lately?",
+        "type": "implicit",
+        "thinking": "The user is exploring a possible pattern in power output. We’ll fetch recent data using get_power_data. No time given, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "This past week I felt like a rocket on the bike!",
+        "type": "metaphorical",
+        "thinking": "The user uses metaphor to suggest strong output. We’ll validate this by retrieving 7 days of power data via get_power_data.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Show me how my power output evolved over the last 25 days.",
+        "type": "explicit",
+        "thinking": "The user asks for a performance trend across 25 days. We'll retrieve power data using get_power_data. numdays = 25.",
+        "numdays": 25,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Check my stats since I started the new pre-workout supplement.",
+        "type": "behavioral",
+        "thinking": "The user began a new routine and wants to see its effect. Assuming they started 10 days ago, we'll use get_power_data with numdays = 10.",
+        "numdays": 10,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My watt numbers seem lower lately. Is that true?",
+        "type": "implicit",
+        "thinking": "The user suspects a drop in performance. We’ll verify this by calling get_power_data. No time specified, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been training with a new coach for the last 3 weeks.",
+        "type": "behavioral",
+        "thinking": "The user references a behavior change—coaching—which may impact power output. We'll evaluate performance via get_power_data for 21 days. numdays = 21.",
+        "numdays": 21,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Do my power stats show I’m improving or just surviving?",
+        "type": "metaphorical",
+        "thinking": "The user figuratively asks if they're progressing or stagnating. We’ll analyze recent trends via get_power_data. No time frame given; using 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Was my ride last Friday really stronger than usual?",
+        "type": "explicit",
+        "thinking": "The user wants validation for a perceived high-effort session. We'll use get_power_data to retrieve power from last Friday. numdays = 1.",
+        "numdays": 1,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been skipping rest days lately. Is it hurting my output?",
+        "type": "behavioral",
+        "thinking": "User mentions altered recovery behavior. We’ll evaluate its impact on power using get_power_data. Defaulting to 7 days as no timeframe given.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "How have I been performing since the weather cooled down?",
+        "type": "implicit",
+        "thinking": "User implies improved conditions may affect output. Assuming 'since weather cooled' means 6 days, we’ll use get_power_data with numdays = 6.",
+        "numdays": 6,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can we check how steady my output was this week?",
+        "type": "explicit",
+        "thinking": "The user wants consistency analysis over the current week. We’ll retrieve data via get_power_data. 'This week' means numdays = 7.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Feels like I’ve been running out of gas midway through.",
+        "type": "metaphorical",
+        "thinking": "The user expresses mid-session fatigue using metaphor. To assess this, we’ll check recent power data via get_power_data. Default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Has there been a dip in my output since switching routines?",
+        "type": "implicit",
+        "thinking": "The user suspects a change in performance tied to a routine shift. Estimating the switch was 9 days ago, so numdays = 9. Calling get_power_data.",
+        "numdays": 9,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Did that sprint interval session on Wednesday boost my power?",
+        "type": "explicit",
+        "thinking": "User wants to evaluate a specific session's impact. We’ll retrieve data from Wednesday using get_power_data. numdays = 1.",
+        "numdays": 1,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been feeling weaker during my workouts lately.",
+        "type": "symptom",
+        "thinking": "The user mentions feeling weaker, indicating a potential decline in power output. Checking their power data will help quantify this change. Since no specific timeframe is given, I'll default to the last 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you show me my power output trends from the past two weeks?",
+        "type": "explicit",
+        "thinking": "This is a direct request for power output data. The user specifies 'past two weeks', so we should retrieve data for 14 days. This will show them their performance trends over that period.",
+        "numdays": 14,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My cycling feels like I'm pedaling through molasses.",
+        "type": "metaphorical",
+        "thinking": "The molasses metaphor suggests the user perceives decreased power output. To assess this objectively, we need their actual power data. No timeframe mentioned, so using default 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've skipped my last 5 workouts because I just don't have the energy.",
+        "type": "behavioral",
+        "thinking": "The user reports behavioral changes (skipping workouts) due to low energy, which likely affects power output. Checking power data before this period (7 days as default) could reveal declining trends.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "How has my power output been since I started the new training program 10 days ago?",
+        "type": "explicit",
+        "thinking": "Clear request for power data tied to a specific event (new training program) with exact timeframe ('10 days ago'). We should analyze power output over these 10 days to evaluate program impact.",
+        "numdays": 10,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I wonder if my afternoon workouts are less effective than morning ones.",
+        "type": "implicit",
+        "thinking": "The user implies concern about power output variation by time of day. Comparing power data across sessions requires looking at recent history - defaulting to 7 days as no timeframe specified.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "After recovering from the flu, my sprints feel off.",
+        "type": "symptom",
+        "thinking": "The user connects illness recovery to perceived power output changes. Checking power data since recovery (assuming about 7 days unless specified) would quantify this impact.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Show me my power output for the last month.",
+        "type": "explicit",
+        "thinking": "Direct request with clear timeframe ('last month'). We should retrieve power data for 30 days to fulfill this request.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been more consistent with my training this month - has it helped my performance?",
+        "type": "behavioral",
+        "thinking": "User mentions behavioral change (consistent training) and asks about performance impact. Analyzing power output over the current month (about 30 days) would show any improvements.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My legs feel like lead weights when I run now.",
+        "type": "metaphorical",
+        "thinking": "The lead weights metaphor suggests perceived decrease in power output. To verify this subjective feeling, we should examine actual power data. No timeframe given, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Has my power output changed since switching to vegan diet 3 weeks ago?",
+        "type": "explicit",
+        "thinking": "User directly asks about power output changes related to diet change with specific timeframe ('3 weeks'). We should compare power data from these 21 days to pre-diet period.",
+        "numdays": 21,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I can't seem to hit my usual wattage numbers anymore.",
+        "type": "implicit",
+        "thinking": "The user implies concern about decreased power output without stating directly. Checking recent power data (default 7 days) would help identify if this is a real trend.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Every workout this week has felt harder than normal.",
+        "type": "symptom",
+        "thinking": "User reports consistent subjective difficulty increase. 'This week' suggests we should analyze power output over the past 7 days to see if objective data matches perception.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've added strength training - has it affected my cycling power?",
+        "type": "behavioral",
+        "thinking": "User describes behavior change (added strength training) and asks about impact. Without specific timeframe, we'll examine power output over default 7 days to assess recent effects.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power meter readings seem inconsistent lately.",
+        "type": "implicit",
+        "thinking": "The word 'lately' implies recent concern about power output variability. To investigate, we should retrieve power data for the default period of 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Compare my power output from last weekend to this weekend.",
+        "type": "explicit",
+        "thinking": "Direct request comparing two specific time periods. Since a weekend is 2 days, we'll look at power data for the past 4 days to cover both weekends.",
+        "numdays": 4,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel like I'm pushing harder but going slower.",
+        "type": "metaphorical",
+        "thinking": "The user describes a paradoxical situation suggesting possible power output issues. Examining actual power data (default 7 days) would clarify if perception matches reality.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Since increasing my protein intake 15 days ago, have my peak powers improved?",
+        "type": "explicit",
+        "thinking": "Specific query about power changes tied to dietary change with exact timeframe ('15 days'). We should analyze power data over this period focusing on peak values.",
+        "numdays": 15,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My usual 200W efforts now leave me breathless.",
+        "type": "symptom",
+        "thinking": "User reports physical symptom (breathlessness) at previously manageable power levels. Checking recent power data (default 7 days) could reveal physiological changes.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been more fatigued after workouts the past few days.",
+        "type": "behavioral",
+        "thinking": "User describes post-workout fatigue changes. 'Past few days' suggests examining power output over 5 days to see if output patterns correlate with increased fatigue.",
+        "numdays": 5,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Is my power output suffering because of poor sleep?",
+        "type": "implicit",
+        "thinking": "User implies concern about sleep affecting power output without direct request. To investigate, we need recent power data (default 7 days) to correlate with sleep patterns.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Give me a power output breakdown for the last 10 training sessions.",
+        "type": "explicit",
+        "thinking": "Direct request for power data across recent sessions. Assuming daily training, we'll retrieve power data for 10 days to cover all requested sessions.",
+        "numdays": 10,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My sprint power has disappeared like a magician's rabbit.",
+        "type": "metaphorical",
+        "thinking": "The magic trick metaphor suggests sudden power loss. To assess sprint power changes, we need actual data. No timeframe given, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Have my power numbers been declining since the time change?",
+        "type": "explicit",
+        "thinking": "User asks about power trends related to daylight savings time. Assuming this was about 7 days ago (typical recency), we'll analyze that period.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I'm not recovering between intervals like I used to.",
+        "type": "symptom",
+        "thinking": "User reports recovery issues affecting power output. Examining recent power data (default 7 days) during interval sessions would show recovery patterns.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been training at altitude for 3 weeks - how's my power?",
+        "type": "behavioral",
+        "thinking": "User describes environmental change and asks about power impact. The exact timeframe ('3 weeks') means we should analyze power data over these 21 days.",
+        "numdays": 21,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power curve looks different recently.",
+        "type": "implicit",
+        "thinking": "The word 'recently' suggests concern about power output changes without specifics. We'll examine power data for the default 7 days to assess these observations.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Show me power output since my last rest day 5 days ago.",
+        "type": "explicit",
+        "thinking": "Direct request tied to a specific event (rest day) with implied timeframe ('5 days'). We should analyze power data over this 5-day training block.",
+        "numdays": 5,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My legs feel empty even on easy rides now.",
+        "type": "metaphorical",
+        "thinking": "The 'empty' metaphor suggests unusual fatigue affecting power. To investigate, we need recent power data (default 7 days) including easy ride metrics.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Has my FTP changed in the past month?",
+        "type": "explicit",
+        "thinking": "Direct question about functional threshold power changes with clear timeframe ('past month'). We should analyze power data over 30 days to assess FTP trends.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I'm hitting my power targets but feeling more drained.",
+        "type": "symptom",
+        "thinking": "User reports achieving power goals but with increased fatigue. Comparing recent power data (default 7 days) with subjective feelings could reveal interesting patterns.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've reduced my training volume - is my power maintaining?",
+        "type": "behavioral",
+        "thinking": "User describes training change and asks about power maintenance. Without specific timeframe, we'll examine power data over default 7 days to assess current status.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power seems inconsistent since changing cleat position.",
+        "type": "implicit",
+        "thinking": "User implies concern about equipment change affecting power output. Assuming cleat change was recent, we'll analyze power data over default 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Break down my power zones for the past 20 days.",
+        "type": "explicit",
+        "thinking": "Direct request for detailed power analysis with specific timeframe ('20 days'). We should retrieve power data for exactly this period to provide zone breakdown.",
+        "numdays": 20,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power output is like a rollercoaster - up and down unpredictably.",
+        "type": "metaphorical",
+        "thinking": "The rollercoaster metaphor suggests power variability concerns. To assess consistency, we need actual power data. No timeframe given, so defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Have my 5-second power peaks improved this training block?",
+        "type": "explicit",
+        "thinking": "Specific question about short-term power with implied timeframe ('this training block'). Assuming a typical 3-week block, we'll analyze 21 days of power data.",
+        "numdays": 21,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I get sudden power drops during long rides now.",
+        "type": "symptom",
+        "thinking": "User reports specific symptom (power drops) during endurance efforts. Examining power data from recent long rides (default 7 days timeframe) could reveal patterns.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been doing more yoga - has it affected my cycling power?",
+        "type": "behavioral",
+        "thinking": "User describes new activity and asks about power impact. Without timeframe, we'll examine recent power data (default 7 days) for any changes.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My normal power feels harder to sustain recently.",
+        "type": "implicit",
+        "thinking": "User implies perceived increase in effort for usual power outputs. The word 'recently' suggests we should analyze power data over the default 7-day period.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Compare my morning vs evening power output last week.",
+        "type": "explicit",
+        "thinking": "Direct request for time-of-day comparison with clear timeframe ('last week'). We should analyze power data for 7 days segmented by session timing.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power output is a shadow of its former self.",
+        "type": "metaphorical",
+        "thinking": "The shadow metaphor suggests significant power decline. To quantify this, we need current power data compared to historical - starting with default 7 days for recent baseline.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Has my anaerobic power improved since starting HIIT 18 days ago?",
+        "type": "explicit",
+        "thinking": "Specific question about power system development with exact timeframe ('18 days'). We should analyze anaerobic power data over this period.",
+        "numdays": 18,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel strong but my power numbers don't show it.",
+        "type": "symptom",
+        "thinking": "User reports disconnect between perceived strength and measured power. Examining recent power data (default 7 days) could help reconcile this discrepancy.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been sleeping more - has it helped my power output?",
+        "type": "behavioral",
+        "thinking": "User describes sleep improvement and asks about power impact. Without specific timeframe, we'll examine power data over default 7 days to assess any changes.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power seems lower since the weather got hotter.",
+        "type": "implicit",
+        "thinking": "User implies environmental factor affecting power output. Assuming recent temperature change, we'll analyze power data over default 7 days to investigate.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Show me my power variability over the past 25 days.",
+        "type": "explicit",
+        "thinking": "Direct request for specific power metric with clear timeframe ('25 days'). We should retrieve and analyze power data for exactly this period.",
+        "numdays": 25,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power output is stuck in first gear.",
+        "type": "metaphorical",
+        "thinking": "The gear metaphor suggests inability to increase power. To assess this, we need actual power data across intensity levels. No timeframe given, defaulting to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Have my 30-minute power averages improved this month?",
+        "type": "explicit",
+        "thinking": "Specific question about endurance power with implied timeframe ('this month'). We should analyze 30-day power data focusing on sustained efforts.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I get sudden power surges followed by crashes.",
+        "type": "symptom",
+        "thinking": "User reports unstable power output pattern. Examining recent power data (default 7 days) would help identify these fluctuations and their frequency.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've cut out caffeine - is my power suffering?",
+        "type": "behavioral",
+        "thinking": "User describes dietary change and implies concern about power impact. Without timeframe, we'll examine recent power data (default 7 days) for changes.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power meter shows numbers I don't feel match my effort.",
+        "type": "implicit",
+        "thinking": "User implies distrust or confusion about power data. Comparing recent power outputs (default 7 days) with perceived exertion could help resolve this.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Analyze my power output during the last 8 interval sessions.",
+        "type": "explicit",
+        "thinking": "Direct request for specific session type analysis. Assuming interval sessions occur every other day, we'll retrieve power data for 16 days to cover 8 sessions.",
+        "numdays": 16,
+        "function": "get_power_data"
+    },
+    {
+        "query": "How’s my power output been for my swims over the past two weeks?",
+        "type": "explicit",
+        "thinking": "The user directly requests power output data for their swimming sessions over a specific timeframe. get_power_data is the appropriate function to retrieve this data. 'Past two weeks' clearly maps to 14 days for numdays.",
+        "numdays": 14,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been feeling off during my hikes lately. Can you check my performance?",
+        "type": "symptom",
+        "thinking": "The user mentions feeling 'off' during hikes, suggesting a possible decline in power output. get_power_data can analyze performance trends to clarify this concern. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been doing fewer weightlifting sessions since last month. How’s my output?",
+        "type": "behavioral",
+        "thinking": "The user notes a behavioral change—fewer weightlifting sessions—which may impact power output. get_power_data will provide insights into performance trends. 'Since last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My runs feel like I’m slogging through a swamp since last Tuesday. What’s up?",
+        "type": "metaphorical",
+        "thinking": "The user’s metaphor 'slogging through a swamp' suggests runs feel unusually difficult, likely due to reduced power output. get_power_data can quantify this struggle. 'Since last Tuesday' (today is Tuesday, August 5, 2025) maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m not sure if I’m pushing as hard in spin class as I used to. Can you look?",
+        "type": "implicit",
+        "thinking": "The user expresses uncertainty about their effort in spin class, hinting at a potential drop in power output. get_power_data is needed to assess performance trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you give me my power output stats for the last 8 days of workouts?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks for power output statistics over a specific period. get_power_data will fetch this data. 'Last 8 days' directly maps to numdays of 8.",
+        "numdays": 8,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My body feels so heavy during yoga this month. Is my energy down?",
+        "type": "symptom",
+        "thinking": "The user describes a physical symptom ('body feels heavy') during yoga, indicating possible reduced power output. get_power_data can evaluate performance trends. 'This month' maps to 30 days for numdays, but since it’s August 5, we’ll use 5 days.",
+        "numdays": 5,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been avoiding long runs since last weekend. How’s my performance holding up?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral shift—avoiding long runs—which may affect power output. get_power_data will reveal performance trends. 'Since last weekend' (assuming today is Tuesday) maps to 9 days for numdays.",
+        "numdays": 9,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My workouts feel like I’m dragging a sled lately. Can you check my data?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'dragging a sled' implies workouts feel unusually tough, likely due to lower power output. get_power_data can analyze this trend. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel like my strength is fading in the gym. Can you look at my numbers?",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about declining strength in the gym, likely tied to power output. get_power_data is appropriate to check performance trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "What’s my power output been like for the last 16 days of cycling?",
+        "type": "explicit",
+        "thinking": "The user directly requests power output data for cycling over a specific timeframe. get_power_data will provide the data. 'Last 16 days' maps to numdays of 16.",
+        "numdays": 16,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m so fatigued after short workouts this week. Is my output slipping?",
+        "type": "symptom",
+        "thinking": "The user reports excessive fatigue after short workouts, suggesting a possible drop in power output. get_power_data can assess performance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been less consistent with my swims since last Friday. Can you check my stats?",
+        "type": "behavioral",
+        "thinking": "The user notes reduced consistency in swimming, which may impact power output. get_power_data will provide performance insights. 'Since last Friday' (today is Tuesday) maps to 11 days for numdays.",
+        "numdays": 11,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My lifts feel like I’m fighting gravity this month. Any insights?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'fighting gravity' suggests lifting feels harder, likely due to reduced power output. get_power_data can quantify this. 'This month' maps to 30 days, but since it’s August 5, we’ll use 5 days for numdays.",
+        "numdays": 5,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m worried my endurance is dropping during runs. Can you confirm?",
+        "type": "implicit",
+        "thinking": "The user expresses concern about declining endurance in runs, indirectly requesting power output analysis. get_power_data is needed. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you analyze my power output for the last 22 days of workouts?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests power output analysis for a specific timeframe. get_power_data will provide the data. 'Last 22 days' directly maps to numdays of 22.",
+        "numdays": 22,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My legs feel like lead during runs this week. Is my performance off?",
+        "type": "symptom",
+        "thinking": "The user describes a physical symptom ('legs feel like lead') during runs, indicating possible reduced power output. get_power_data can evaluate performance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been cutting my gym time short since last Monday. How’s my output?",
+        "type": "behavioral",
+        "thinking": "The user mentions shortening gym sessions, which may affect power output. get_power_data will reveal performance trends. 'Since last Monday' (today is Tuesday) maps to 8 days for numdays.",
+        "numdays": 8,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My workouts feel like I’m swimming upstream lately. What’s going on?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'swimming upstream' implies workouts feel challenging, likely due to lower power output. get_power_data can analyze this trend. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I don’t feel as strong in my HIIT classes lately. Can you check my data?",
+        "type": "implicit",
+        "thinking": "The user implies a concern about reduced strength in HIIT classes, likely tied to power output. get_power_data is appropriate to assess performance trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "How’s my power output been for the last 10 days of strength training?",
+        "type": "explicit",
+        "thinking": "The user directly asks for power output data for strength training over a specific period. get_power_data will fetch this information. 'Last 10 days' maps to numdays of 10.",
+        "numdays": 10,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m wiped out after short bike rides this week. Is my effort level down?",
+        "type": "symptom",
+        "thinking": "The user reports excessive fatigue after short bike rides, suggesting a possible decline in power output. get_power_data can assess effort levels. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been skipping my evening workouts since last Sunday. How’s my performance?",
+        "type": "behavioral",
+        "thinking": "The user notes skipping evening workouts, which may impact power output. get_power_data will provide performance insights. 'Since last Sunday' (today is Tuesday) maps to 9 days for numdays.",
+        "numdays": 9,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My runs feel like I’m carrying bricks this month. Can you look into it?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'carrying bricks' suggests runs feel unusually tough, likely due to reduced power output. get_power_data can quantify this. 'This month' maps to 30 days, but since it’s August 5, we’ll use 5 days for numdays.",
+        "numdays": 5,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m not sure if my workouts are as effective as they used to be. Can you check?",
+        "type": "implicit",
+        "thinking": "The user expresses uncertainty about workout effectiveness, hinting at a possible power output decline. get_power_data is needed to analyze trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "What’s my power output trend for the last 13 days of running?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests power output trends for running over a specific timeframe. get_power_data will provide the data. 'Last 13 days' maps to numdays of 13.",
+        "numdays": 13,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel exhausted after light workouts this week. Is my output lower?",
+        "type": "symptom",
+        "thinking": "The user reports exhaustion after light workouts, indicating a potential drop in power output. get_power_data can evaluate performance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been less active in the gym since last Thursday. Can you check my stats?",
+        "type": "behavioral",
+        "thinking": "The user mentions reduced gym activity, which may affect power output. get_power_data will reveal performance trends. 'Since last Thursday' (today is Tuesday) maps to 12 days for numdays.",
+        "numdays": 12,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My workouts feel like I’m pushing against a wall lately. Any data on that?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'pushing against a wall' implies workouts feel extremely difficult, likely due to lower power output. get_power_data can analyze this trend. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel like my cycling performance is slipping. Can you look at my numbers?",
+        "type": "implicit",
+        "thinking": "The user implies concern about declining cycling performance, likely tied to power output. get_power_data is appropriate to assess trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you show me my power output for the last 17 days of workouts?",
+        "type": "explicit",
+        "thinking": "The user directly requests power output data for a specific timeframe. get_power_data will fetch this information. 'Last 17 days' maps to numdays of 17.",
+        "numdays": 17,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My arms feel weak during swims this week. Is my performance down?",
+        "type": "symptom",
+        "thinking": "The user describes a physical symptom ('arms feel weak') during swims, suggesting possible reduced power output. get_power_data can evaluate performance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been doing shorter gym sessions since last weekend. How’s my output?",
+        "type": "behavioral",
+        "thinking": "The user mentions shorter gym sessions, which may impact power output. get_power_data will provide performance insights. 'Since last weekend' (today is Tuesday) maps to 9 days for numdays.",
+        "numdays": 9,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My runs feel like I’m stuck in glue this month. What’s my data show?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'stuck in glue' suggests runs feel sluggish, likely due to reduced power output. get_power_data can quantify this. 'This month' maps to 30 days, but since it’s August 5, we’ll use 5 days for numdays.",
+        "numdays": 5,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m worried I’m not performing as well in yoga lately. Can you check?",
+        "type": "implicit",
+        "thinking": "The user expresses concern about declining yoga performance, likely tied to power output. get_power_data is needed to analyze trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "How’s my power output been for the last 19 days of training?",
+        "type": "explicit",
+        "thinking": "The user directly asks for power output data for a specific period. get_power_data will fetch this information. 'Last 19 days' maps to numdays of 19.",
+        "numdays": 19,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m so tired after quick runs this week. Is my effort dropping?",
+        "type": "symptom",
+        "thinking": "The user reports excessive tiredness after quick runs, suggesting a possible decline in power output. get_power_data can assess effort levels. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been missing my morning swims since last Wednesday. How’s my performance?",
+        "type": "behavioral",
+        "thinking": "The user notes missing morning swims, which may affect power output. get_power_data will provide performance insights. 'Since last Wednesday' (today is Tuesday) maps to 6 days for numdays.",
+        "numdays": 6,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My workouts feel like I’m wading through fog lately. Can you analyze it?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'wading through fog' implies workouts feel unclear and difficult, likely due to lower power output. get_power_data can analyze this trend. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I don’t think I’m as powerful in my lifts as before. Can you look at my data?",
+        "type": "implicit",
+        "thinking": "The user implies concern about reduced lifting power, likely tied to power output. get_power_data is appropriate to assess performance trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you look at my power output for the last 23 days of running?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests power output data for running over a specific timeframe. get_power_data will provide the data. 'Last 23 days' maps to numdays of 23.",
+        "numdays": 23,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My body feels drained after short hikes this week. Is my output lower?",
+        "type": "symptom",
+        "thinking": "The user reports feeling drained after short hikes, indicating a potential drop in power output. get_power_data can evaluate performance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been less regular with my workouts since last month. How’s my data?",
+        "type": "behavioral",
+        "thinking": "The user mentions reduced workout regularity, which may impact power output. get_power_data will reveal performance trends. 'Since last month' maps to 30 days for numdays.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My gym sessions feel like I’m battling a storm lately. What’s the data say?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'battling a storm' suggests gym sessions feel chaotic and tough, likely due to reduced power output. get_power_data can quantify this. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel like my stamina is waning during workouts. Can you check my stats?",
+        "type": "implicit",
+        "thinking": "The user implies concern about declining stamina, likely tied to power output. get_power_data is needed to analyze performance trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "What’s my power output been like for the last 15 days of yoga?",
+        "type": "explicit",
+        "thinking": "The user directly requests power output data for yoga over a specific timeframe. get_power_data will fetch this information. 'Last 15 days' maps to numdays of 15.",
+        "numdays": 15,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m struggling to keep up in my dance classes this week. Is my output off?",
+        "type": "symptom",
+        "thinking": "The user reports struggling in dance classes, suggesting a possible decline in power output. get_power_data can assess performance. 'This week' maps to 7 days for numdays.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been skipping my bike rides since last Saturday. How’s my performance?",
+        "type": "behavioral",
+        "thinking": "The user mentions skipping bike rides, which may affect power output. get_power_data will provide performance insights. 'Since last Saturday' (today is Tuesday) maps to 10 days for numdays.",
+        "numdays": 10,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My workouts feel like I’m running in quicksand this month. Can you check?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'running in quicksand' implies workouts feel extremely tough, likely due to reduced power output. get_power_data can analyze this. 'This month' maps to 30 days, but since it’s August 5, we’ll use 5 days for numdays.",
+        "numdays": 5,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m not sure if I’m performing as well in my swims as before. Can you look?",
+        "type": "implicit",
+        "thinking": "The user expresses uncertainty about swimming performance, hinting at a possible power output decline. get_power_data is appropriate to assess trends. No time is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel like my power output has plateaued over the past two months.",
+        "type": "metaphorical",
+        "thinking": "The plateau metaphor suggests stagnation in power output. To verify this, we need objective data. 'Past two months' exceeds our max range, so we'll analyze the last 30 days.",
+        "numdays": 30,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you compare my morning vs. evening workout power from the last 14 days?",
+        "type": "explicit",
+        "thinking": "Direct request for time-of-day power comparison with clear timeframe ('last 14 days'). We'll retrieve and segment power data accordingly.",
+        "numdays": 14,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Ever since daylight savings ended, my cycling feels sluggish.",
+        "type": "implicit",
+        "thinking": "User implies a correlation between time change and decreased power. Assuming DST ended recently, we'll analyze power data for the default 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My sprint power has dropped like a rock since I got back from vacation.",
+        "type": "metaphorical",
+        "thinking": "The 'dropped like a rock' metaphor indicates sudden power decline. Since vacations typically last 1-2 weeks, we'll analyze power data for 14 days post-return.",
+        "numdays": 14,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Show me my power output trends since switching to clipless pedals 10 days ago.",
+        "type": "behavioral",
+        "thinking": "User links equipment change to potential power changes with exact timeframe ('10 days'). We should analyze power data over this adaptation period.",
+        "numdays": 10,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I'm hitting power targets but feel completely drained afterward.",
+        "type": "symptom",
+        "thinking": "User reports achieving goals but with excessive fatigue. Examining recent power data (default 7 days) alongside recovery metrics could reveal insights.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Break down my power zones for the last three weekends.",
+        "type": "explicit",
+        "thinking": "Specific request focusing on weekends. Three weekends equal 6 days (Sat-Sun), but we'll extend to 10 days to capture surrounding training context.",
+        "numdays": 10,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My legs feel like they've lost their spring.",
+        "type": "metaphorical",
+        "thinking": "The 'lost spring' metaphor suggests decreased explosive power. To assess this, we need recent power data (default 7 days) focusing on high-intensity efforts.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Has my 5-minute power improved since starting VO2 max sessions 3 weeks ago?",
+        "type": "behavioral",
+        "thinking": "Clear question linking training change to specific power metric with exact timeframe ('3 weeks'). We'll analyze 21 days of power data focusing on 5-minute efforts.",
+        "numdays": 21,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I can't seem to hold my threshold power like I could last month.",
+        "type": "implicit",
+        "thinking": "User implies a decline in sustained power output. 'Last month' suggests comparing current 7-day data to previous period.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power meter shows wild fluctuations during steady-state rides.",
+        "type": "symptom",
+        "thinking": "User reports inconsistent power readings during endurance efforts. Examining recent steady-state power data (default 7 days) could identify patterns.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Analyze my power output since increasing carbs before workouts 12 days ago.",
+        "type": "explicit",
+        "thinking": "Direct request tying nutritional change to power output with exact timeframe ('12 days'). We should analyze power data over this period.",
+        "numdays": 12,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power output is like a faulty lightbulb - flickering unpredictably.",
+        "type": "metaphorical",
+        "thinking": "The lightbulb metaphor suggests power inconsistency. To investigate, we need recent power data (default 7 days) to assess variability.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been skipping cool-downs - has this affected my recovery power?",
+        "type": "behavioral",
+        "thinking": "User describes behavior change and asks about recovery impact. Without timeframe, we'll examine power data over default 7 days focusing on post-exercise recovery.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Why do my power numbers crash after the first hour of riding?",
+        "type": "implicit",
+        "thinking": "User implies concern about endurance power sustainability. Examining recent long-ride power data (default 7 days) could reveal fueling or pacing issues.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Show me my peak power values from the last 8 training sessions.",
+        "type": "explicit",
+        "thinking": "Specific request for peak power metrics. Assuming 8 sessions over 10 days (some doubles), we'll retrieve data for this period.",
+        "numdays": 10,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power output feels stuck in quicksand during intervals.",
+        "type": "metaphorical",
+        "thinking": "The quicksand metaphor suggests difficulty maintaining interval power. To assess, we need recent interval session data (default 7 days).",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Have my 20-minute power averages changed since reducing alcohol intake 15 days ago?",
+        "type": "behavioral",
+        "thinking": "User links lifestyle change to specific power metric with exact timeframe ('15 days'). We'll analyze 20-minute power data over this period.",
+        "numdays": 15,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I get sudden power drops that weren't happening before.",
+        "type": "symptom",
+        "thinking": "User reports new symptom of unexpected power decreases. Comparing recent power data (default 7 days) to historical baseline could identify changes.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Compare my commuting ride power this week to last week.",
+        "type": "explicit",
+        "thinking": "Direct comparison request between two 7-day periods. We'll analyze power data for 14 days to cover both weeks.",
+        "numdays": 14,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power output is like a car running on empty.",
+        "type": "metaphorical",
+        "thinking": "The car metaphor suggests inadequate energy for power output. To investigate, we need recent power data (default 7 days) alongside possible fueling patterns.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been doing more yoga - has it smoothed my power delivery?",
+        "type": "behavioral",
+        "thinking": "User asks about supplementary training's impact on power consistency. Without timeframe, we'll examine recent power data (default 7 days) for variability changes.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Why can't I hit my usual power numbers on humid days?",
+        "type": "implicit",
+        "thinking": "User implies weather affects power output. Examining recent power data (default 7 days) alongside humidity metrics could reveal correlations.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Show me my power curve progression over the past 18 days.",
+        "type": "explicit",
+        "thinking": "Direct request for power curve analysis with exact timeframe ('18 days'). We'll retrieve and analyze power data for this period.",
+        "numdays": 18,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My legs feel like they're filled with cement during climbs.",
+        "type": "metaphorical",
+        "thinking": "The cement metaphor suggests extreme climbing power difficulties. To assess, we need recent climbing power data (default 7 days).",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Has my normalized power improved since following a structured plan for 25 days?",
+        "type": "behavioral",
+        "thinking": "User links training plan to specific power metric with exact timeframe ('25 days'). We'll analyze normalized power data over this period.",
+        "numdays": 25,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I experience power surges when I get angry during workouts.",
+        "type": "symptom",
+        "thinking": "User reports emotional state affecting power output. Examining recent power data (default 7 days) for spikes could validate this observation.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Compare my power output before and after switching to a vegan diet 20 days ago.",
+        "type": "explicit",
+        "thinking": "Direct before/after request with exact transition point ('20 days'). We'll analyze power data for 20 days post-change and compare to previous period.",
+        "numdays": 20,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power meter shows numbers that feel disconnected from my effort.",
+        "type": "implicit",
+        "thinking": "User implies potential equipment or physiological issues affecting power readings. Checking recent power data (default 7 days) could help diagnose.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Analyze my power output during heatwave conditions last week.",
+        "type": "explicit",
+        "thinking": "Specific request tied to environmental conditions with clear timeframe ('last week'). We'll analyze power data for 7 days during this period.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power output is like a radio with bad reception - cutting in and out.",
+        "type": "metaphorical",
+        "thinking": "The radio metaphor suggests intermittent power delivery. To assess consistency, we need recent power data (default 7 days) with variability analysis.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been using compression socks - has this affected my power endurance?",
+        "type": "behavioral",
+        "thinking": "User asks about equipment change's impact on sustained power. Without timeframe, we'll examine recent endurance power data (default 7 days).",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Why does my power drop sharply after 90 minutes of riding?",
+        "type": "implicit",
+        "thinking": "User implies concern about endurance power sustainability. Examining recent long-ride power data (default 7 days) could reveal fueling or pacing issues.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Show me my power variability index for the last 9 interval sessions.",
+        "type": "explicit",
+        "thinking": "Specific request for advanced power metric. Assuming 9 sessions over 12 days, we'll retrieve data for this period.",
+        "numdays": 12,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power output feels like it's fighting against an invisible force.",
+        "type": "metaphorical",
+        "thinking": "The invisible force metaphor suggests perceived power limitations. To investigate, we need recent power data (default 7 days) across intensities.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Has my anaerobic capacity improved since adding plyometrics 16 days ago?",
+        "type": "behavioral",
+        "thinking": "User links new training modality to power system development with exact timeframe ('16 days'). We'll analyze anaerobic power data over this period.",
+        "numdays": 16,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I get sudden power spikes when listening to certain songs.",
+        "type": "symptom",
+        "thinking": "User reports music affecting power output. Examining recent power data (default 7 days) alongside workout playlists could reveal patterns.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Compare my indoor vs outdoor power output for the past 10 training days.",
+        "type": "explicit",
+        "thinking": "Direct environment comparison request with exact timeframe ('10 days'). We'll segment and analyze power data by workout location.",
+        "numdays": 10,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power output is like a battery that won't hold a charge.",
+        "type": "metaphorical",
+        "thinking": "The battery metaphor suggests inability to sustain power. To assess, we need recent power data (default 7 days) focusing on endurance efforts.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been meditating before workouts - has it stabilized my power?",
+        "type": "behavioral",
+        "thinking": "User asks about mindfulness practice's impact on power consistency. Without timeframe, we'll examine recent power variability (default 7 days).",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Why can't I reproduce my trainer power numbers outdoors?",
+        "type": "implicit",
+        "thinking": "User implies concern about environment affecting power output. Comparing recent indoor/outdoor power data (default 7 days) could reveal differences.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Show me my power duration curve for the last 22 days of base training.",
+        "type": "explicit",
+        "thinking": "Specific request for advanced power analysis with exact timeframe ('22 days'). We'll retrieve and format power data accordingly.",
+        "numdays": 22,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My legs feel like overstretched rubber bands during sprints.",
+        "type": "metaphorical",
+        "thinking": "The rubber band metaphor suggests decreased power elasticity. To assess sprint power, we need recent high-intensity data (default 7 days).",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Has my power-to-weight ratio improved since losing 5kg 28 days ago?",
+        "type": "behavioral",
+        "thinking": "User links weight loss to power efficiency with exact timeframe ('28 days'). We'll analyze power data alongside weight changes over this period.",
+        "numdays": 28,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I experience power lags when transitioning from seated to standing.",
+        "type": "symptom",
+        "thinking": "User reports specific movement-related power issues. Examining recent power data (default 7 days) during position changes could reveal patterns.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Analyze my power output since adjusting my bike fit 9 days ago.",
+        "type": "explicit",
+        "thinking": "Direct request tying equipment change to power output with exact timeframe ('9 days'). We should analyze power data over this adaptation period.",
+        "numdays": 9,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power meter shows consistent numbers, but they feel artificially low.",
+        "type": "implicit",
+        "thinking": "User implies potential calibration issues or physiological changes. Checking recent power data (default 7 days) against perceived exertion could help.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Break down my power output by terrain type for the last 15 rides.",
+        "type": "explicit",
+        "thinking": "Specific request for terrain-based power analysis. Assuming 15 rides over 18 days, we'll retrieve data for this period.",
+        "numdays": 18,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power output is like an old engine - slow to warm up.",
+        "type": "metaphorical",
+        "thinking": "The engine metaphor suggests poor power activation. To assess warm-up patterns, we need recent session-start power data (default 7 days).",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I've been taking cold showers post-workout - any effect on next-day power?",
+        "type": "behavioral",
+        "thinking": "User asks about recovery method's impact on subsequent power. Without timeframe, we'll examine next-day power data (default 7 days).",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Why does my power drop when riding in a group versus solo?",
+        "type": "implicit",
+        "thinking": "User implies social dynamics affect power output. Comparing recent group/solo ride power data (default 7 days) could reveal patterns.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Can you check my power output for the last three weekends of hiking?",
+        "type": "explicit",
+        "thinking": "The user directly requests power output data for hiking sessions over a specific timeframe. get_power_data will fetch this information. 'Last three weekends' (assuming weekends are Saturday and Sunday, and today is Tuesday, August 5, 2025) covers 6 days (July 19-20, July 26-27, August 2-3), so numdays is set to 15 to capture the period including intervening days.",
+        "numdays": 15,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I feel like my energy’s been sapped during my dance workouts lately. What’s the data say?",
+        "type": "symptom",
+        "thinking": "The user describes a symptom of low energy ('sapped') during dance workouts, suggesting a potential drop in power output. get_power_data can evaluate performance trends. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’ve been sticking to lighter weights since last Thursday. How’s my output looking?",
+        "type": "behavioral",
+        "thinking": "The user mentions a behavioral change—using lighter weights—which may impact power output. get_power_data will provide insights into performance trends. 'Since last Thursday' (today is Tuesday, August 5, 2025) maps to 12 days (July 24 to August 5) for numdays.",
+        "numdays": 12,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My rowing sessions feel like I’m pulling through cement this week. Any insights?",
+        "type": "metaphorical",
+        "thinking": "The metaphor 'pulling through cement' suggests rowing feels unusually strenuous, likely due to reduced power output. get_power_data can quantify this trend. 'This week' maps to 7 days for numdays, covering July 30 to August 5, 2025.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I’m not sure if I’m keeping up in my bootcamp classes anymore. Can you check my stats?",
+        "type": "implicit",
+        "thinking": "The user indirectly expresses concern about their ability to keep up in bootcamp classes, hinting at a possible decline in power output. get_power_data is appropriate to assess performance trends. No time window is specified, so default to 7 days.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power output during tempo efforts feels like I'm pushing through wet sand.",
+        "type": "metaphorical",
+        "thinking": "The wet sand metaphor suggests unusual resistance during sustained efforts. To assess tempo power, we need recent power data (default 7 days) focusing on tempo zones.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Has my climbing power improved since focusing on hill repeats 17 days ago?",
+        "type": "behavioral",
+        "thinking": "User links specific training to climbing performance with exact timeframe ('17 days'). We'll analyze climbing power data over this period.",
+        "numdays": 17,
+        "function": "get_power_data"
+    },
+    {
+        "query": "I get sudden power drops when distracted by traffic.",
+        "type": "symptom",
+        "thinking": "User reports environmental distractions affecting power output. Examining recent outdoor power data (default 7 days) could identify focus-related dips.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "Compare my power output before and after work meetings this week.",
+        "type": "explicit",
+        "thinking": "Direct request comparing mental states' impact on power. 'This week' suggests analyzing power data for 7 days segmented by meeting times.",
+        "numdays": 7,
+        "function": "get_power_data"
+    },
+    {
+        "query": "My power meter readings seem unusually low since the last firmware update.",
+        "type": "implicit",
+        "thinking": "User implies technical issues may be affecting power data accuracy. Checking recent power data (default 7 days) against perceived exertion could validate concerns.",
+        "numdays": 7,
+        "function": "get_power_data"
+    }
+]

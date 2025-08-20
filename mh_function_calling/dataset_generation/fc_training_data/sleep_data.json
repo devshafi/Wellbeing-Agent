@@ -1,0 +1,1759 @@
+[
+    {
+        "query": "Over the past two weeks, I’ve been waking up with a dry mouth and headache. Could this be sleep-related?",
+        "type": "symptom",
+        "thinking": "The user associates physical symptoms with potential sleep disruptions. Given the two-week timeframe, analyzing 14 days of data will help identify correlations with breathing irregularities or sleep stage abnormalities.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since switching to a new mattress three weeks ago, my sleep feels less restful. Is this adjustment period or a problem?",
+        "type": "behavioral",
+        "thinking": "The user is tracking a specific change in sleep environment. Comparing 21 days of data (spanning pre- and post-mattress transition) will objectively measure changes in sleep efficiency and restlessness.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you display my REM and deep sleep percentages from last week?",
+        "type": "explicit",
+        "thinking": "The user requests a focused analysis of sleep architecture. Extracting 7 days of data aligns precisely with their specified timeframe and allows for trend observation without unnecessary scope.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My nights are a labyrinth—I fall asleep quickly but wake up disoriented multiple times.",
+        "type": "metaphorical",
+        "thinking": "The metaphor suggests fragmented sleep. Reviewing 10 nights of data will quantify the frequency of awakenings and determine if this is episodic or a persistent pattern.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I’ve noticed more daytime fatigue recently, despite consistent bedtimes. Any insights?",
+        "type": "implicit",
+        "thinking": "The user implies a decline in sleep quality without obvious causes. Examining 5 days of data balances recent relevance with enough scope to detect subtle disruptions in sleep stages or duration.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep tracker flagged ‘unusually high resting heart rate’ during sleep last night. Should I be concerned?",
+        "type": "symptom",
+        "thinking": "An acute anomaly like this warrants targeted investigation. Isolating last night’s data will contextualize the heart rate spike alongside sleep phases and potential triggers (e.g., late exercise or stress).",
+        "numdays": 1,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I started meditating before bed 10 days ago. Has it impacted my sleep latency?",
+        "type": "behavioral",
+        "thinking": "The user is testing a behavioral intervention. Comparing the last 10 days to the 10 days prior will isolate the effects of meditation on time-to-sleep metrics.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past month, my dreams have been unusually vivid. Is this reflected in my sleep data?",
+        "type": "implicit",
+        "thinking": "Vivid dreams often correlate with prolonged REM sleep. Analyzing 30 days of data will reveal whether REM duration has increased significantly during the reported period.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep report says I had ‘zero deep sleep’ on Tuesday. Could this be accurate?",
+        "type": "explicit",
+        "thinking": "The user questions a specific anomaly. Focusing on the reported night (and 2 adjacent nights for context) will clarify whether this was a sensor error or true physiological deviation.",
+        "numdays": 3,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since returning from my trip, my sleep schedule is erratic. How long until it normalizes?",
+        "type": "behavioral",
+        "thinking": "Jet lag or routine disruption typically resolves within 1-2 weeks. Pulling 7 days of post-trip data will gauge recovery progress and identify lingering irregularities.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past 5 nights, I've been waking up exactly 90 minutes after falling asleep. What's causing this?",
+        "type": "symptom",
+        "thinking": "The user reports a precise, recurring sleep interruption pattern. Analyzing these 5 nights will help determine if this aligns with ultradian rhythm disruptions or specific sleep stage transitions.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since increasing my water intake before bed, I've noticed more bathroom trips at night. How much is this affecting my sleep quality?",
+        "type": "behavioral",
+        "thinking": "The user is tracking hydration's impact on sleep continuity. Comparing 7 nights before and after the habit change will quantify nocturia frequency and its correlation with sleep fragmentation.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my deep sleep percentages from last month to this month?",
+        "type": "explicit",
+        "thinking": "Direct request for longitudinal comparison. Retrieving 30 days for each period provides sufficient data to identify statistically significant changes in slow-wave sleep patterns.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep feels like a fragile vase - one disturbance and it shatters completely.",
+        "type": "metaphorical",
+        "thinking": "The metaphor suggests extreme sleep fragility. Reviewing 10 nights will reveal how frequently minor disruptions lead to prolonged awakenings or difficulty returning to sleep.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've been using a white noise machine for two weeks now. Has it made any difference to my sleep continuity?",
+        "type": "behavioral",
+        "thinking": "The user is evaluating an environmental modification. Examining 14 nights of data (7 pre- and post-implementation) will show changes in sleep fragmentation and awakenings.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep tracker shows inconsistent heart rate patterns during sleep over the last month. Should I be concerned?",
+        "type": "symptom",
+        "thinking": "Irregular nocturnal heart rate could indicate various physiological factors. Analyzing 30 days of data will help distinguish between benign variability and concerning patterns.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting my new medication three days ago, I've had extremely vivid dreams. Is this normal?",
+        "type": "symptom",
+        "thinking": "Many medications affect REM sleep. Focusing on these 3 nights will help establish if there's a direct correlation between medication initiation and dream intensity changes.",
+        "numdays": 3,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My nights are a broken mirror - fragmented and impossible to piece together.",
+        "type": "metaphorical",
+        "thinking": "This vivid metaphor describes severe sleep fragmentation. Reviewing 7 nights will quantify the number and duration of awakenings to assess the severity.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've been traveling across time zones for work. How long does it typically take for my sleep to readjust?",
+        "type": "behavioral",
+        "thinking": "Jet lag recovery varies by individual. Tracking 10 days post-travel will show how quickly sleep duration and timing return to baseline patterns.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep efficiency metrics for the last 21 days.",
+        "type": "explicit",
+        "thinking": "Specific request for recent sleep efficiency trends. Three weeks of data provides enough context to identify patterns while excluding older, less relevant information.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For about a week now, I wake up feeling like I haven't slept at all, despite getting 7-8 hours. What could explain this?",
+        "type": "implicit",
+        "thinking": "The user describes non-restorative sleep despite adequate duration. Analyzing 7 nights will help identify potential issues like alpha-wave intrusions or sleep stage imbalances.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since the heatwave began five days ago, my sleep has suffered. How much has it actually affected me?",
+        "type": "behavioral",
+        "thinking": "Environmental temperature significantly impacts sleep quality. Comparing these 5 hot nights to 5 preceding cooler nights will quantify the effect.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a shallow pond - never reaching the depths I need.",
+        "type": "metaphorical",
+        "thinking": "The user poetically describes insufficient deep sleep. Reviewing 14 nights will objectively measure slow-wave sleep percentages against healthy benchmarks.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show me how many times per night I typically wake up, averaged over the past month?",
+        "type": "explicit",
+        "thinking": "Request for specific sleep continuity metric. Thirty days provides a comprehensive baseline while smoothing out night-to-night variability.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've noticed more daytime sleepiness since reducing my carbohydrate intake two weeks ago. Is there a connection?",
+        "type": "behavioral",
+        "thinking": "Dietary changes can affect sleep quality. Examining 14 days of sleep data alongside dietary logs may reveal correlations between macronutrient intake and daytime alertness.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Every night this week, I've had difficulty falling asleep despite feeling tired. Why is this happening?",
+        "type": "implicit",
+        "thinking": "The user describes sleep onset insomnia. Analyzing these 7 nights will help identify potential causes like increased sleep latency or pre-sleep cognitive arousal.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep tracker shows I'm getting less REM sleep than average. How does my recent data compare to normal ranges?",
+        "type": "explicit",
+        "thinking": "Request for normative comparison. Pulling 21 days of data provides enough recent history to make statistically valid comparisons to population benchmarks.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since adopting a 'no screens before bed' rule ten days ago, I expected better sleep. Has there been any improvement?",
+        "type": "behavioral",
+        "thinking": "The user is testing a common sleep hygiene intervention. Comparing the 10 days pre- and post-implementation will objectively measure changes in sleep quality metrics.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My nights are a tangled web - the more I try to sleep, the more trapped I feel.",
+        "type": "metaphorical",
+        "thinking": "This describes sleep effort syndrome. Reviewing 5 nights will help quantify how sleep attempts correlate with increased wakefulness and frustration.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past three nights, my sleep has been interrupted by leg cramps. Could this be related to my sleep stages?",
+        "type": "symptom",
+        "thinking": "Nocturnal leg cramps often occur during specific sleep stages. Analyzing these 3 nights will identify if they cluster in particular phases of the sleep cycle.",
+        "numdays": 3,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've been waking up with a dry throat every morning for about two weeks. Could this be sleep apnea?",
+        "type": "symptom",
+        "thinking": "Morning dry throat is a common sleep apnea symptom. Reviewing 14 nights will help detect breathing irregularities or oxygen desaturations that might explain this.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep data from the night before yesterday to see if it explains my poor performance at work yesterday.",
+        "type": "explicit",
+        "thinking": "Specific request linking sleep to cognitive performance. Isolating that single night's data will provide the most relevant insights for their workday functioning.",
+        "numdays": 1,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting a new exercise regimen five days ago, I've been sleeping more deeply. Is this a real effect or just perception?",
+        "type": "behavioral",
+        "thinking": "Exercise often improves deep sleep. Comparing these 5 active days to 5 sedentary days prior will objectively measure changes in slow-wave sleep duration.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep feels like a fragile thread - always on the verge of breaking.",
+        "type": "metaphorical",
+        "thinking": "The metaphor suggests unstable sleep maintenance. Reviewing 7 nights will quantify sleep continuity and identify vulnerability to disruptions.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you display my average time spent in each sleep stage over the past six weeks?",
+        "type": "explicit",
+        "thinking": "Comprehensive request for sleep architecture overview. Six weeks (42 days) provides enough data to establish reliable averages while capturing recent patterns.",
+        "numdays": 42,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've been experiencing more mid-afternoon sleepiness lately. Could changes in my nighttime sleep explain this?",
+        "type": "implicit",
+        "thinking": "Daytime sleepiness often reflects poor nocturnal sleep. Analyzing 10 days of nighttime data will help identify potential causes like sleep debt or circadian misalignment.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since installing blackout curtains two weeks ago, I've been waking up later. Is this improving or harming my sleep?",
+        "type": "behavioral",
+        "thinking": "Environmental darkness affects circadian timing. Comparing 14 days pre- and post-installation will reveal changes in sleep duration, quality, and timing.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a desert - long stretches of nothingness punctuated by brief oases of rest.",
+        "type": "metaphorical",
+        "thinking": "This describes severely fragmented sleep. Reviewing 5 nights will quantify the ratio of wakefulness to actual sleep during the night.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past ten days, I've been using a new pillow. Has it affected my sleep posture or quality?",
+        "type": "behavioral",
+        "thinking": "Pillow changes can impact spinal alignment and comfort. Comparing these 10 nights to the 10 preceding nights will reveal objective changes in sleep metrics and movement patterns.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I woke up last night feeling like I couldn't breathe. Can you check my sleep data from that night?",
+        "type": "symptom",
+        "thinking": "Acute nocturnal dyspnea requires immediate investigation. Isolating that specific night's data will help identify potential apnea events or other breathing abnormalities.",
+        "numdays": 1,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past 10 nights, I've been dreaming in languages I don't speak. Could this reflect sleep quality issues?",
+        "type": "symptom",
+        "thinking": "Unusual dream content may indicate REM sleep abnormalities. Reviewing these 10 nights will help correlate dream reports with sleep stage patterns and potential disruptions.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a scratched vinyl record - stuck repeating the same 2-hour wake-up cycle.",
+        "type": "metaphorical",
+        "thinking": "This vivid metaphor describes ultradian rhythm disruption. Analyzing 7 nights will determine if awakenings occur at consistent 90-120 minute intervals.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since adopting a weighted blanket three weeks ago, has my sleep become more consistent?",
+        "type": "behavioral",
+        "thinking": "Weighted blankets may improve sleep maintenance. Comparing 21 days of data (pre- and post-use) will reveal changes in awakenings and sleep efficiency.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my sleep stage transitions from last Tuesday to Friday?",
+        "type": "explicit",
+        "thinking": "Specific request for a 4-day analysis of sleep architecture. This focused timeframe will highlight nightly variations in stage progression.",
+        "numdays": 4,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've noticed more sleep talking since starting my new job. Is stress affecting my sleep?",
+        "type": "implicit",
+        "thinking": "Sleep talking often increases with stress. Reviewing 14 nights (covering the job transition) may show correlations between work days and parasomnia episodes.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Every night this month, I wake up at exactly 4:17 AM. What could cause such precision?",
+        "type": "symptom",
+        "thinking": "Remarkably timed awakenings suggest possible circadian or hormonal factors. Examining 30 days will verify the consistency and explore potential triggers.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep feels like a faulty elevator - constantly starting and stopping.",
+        "type": "metaphorical",
+        "thinking": "This describes severe sleep fragmentation. Analyzing 5 nights will quantify the number of awakenings per hour (arousal index).",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since switching to a plant-based diet two weeks ago, my dreams are more vivid. Is this nutritional or sleep-related?",
+        "type": "behavioral",
+        "thinking": "Dietary changes can affect REM sleep. Comparing 14 nights of sleep data with food logs may reveal correlations between nutrient intake and dream intensity.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my oxygen variation during sleep over the past 5 nights.",
+        "type": "explicit",
+        "thinking": "Direct request for nocturnal oxygen metrics. Five nights provides recent data while minimizing the impact of day-to-day variability.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I fall asleep quickly but wake up feeling like I ran a marathon. Why?",
+        "type": "implicit",
+        "thinking": "Suggests possible sleep quality issues despite good sleep latency. Reviewing 7 nights will examine sleep architecture for imbalances or disruptions.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since the new year began, my sleep duration has gradually decreased. Can we track this trend?",
+        "type": "behavioral",
+        "thinking": "Requests longitudinal analysis. Pulling 60 days of data (30 pre- and post-new year) will objectively measure the reported decline.",
+        "numdays": 60,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My nights are a broken hourglass - time slips away without rest.",
+        "type": "metaphorical",
+        "thinking": "Poetic description of non-restorative sleep. Reviewing 10 nights will assess sleep efficiency and actual restorative sleep time.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For three nights straight, my smartwatch detected 'no sleep' despite me being in bed. What's happening?",
+        "type": "symptom",
+        "thinking": "Likely device misclassification. Isolating these 3 nights will help distinguish between technical errors and possible severe insomnia.",
+        "numdays": 3,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my weekend vs weekday sleep patterns over the past month?",
+        "type": "explicit",
+        "thinking": "Request for social jet lag analysis. Thirty days provides enough weekends (8-10) for meaningful comparison against weekdays.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've been waking up with my heart pounding for a week now. Could this be sleep-related?",
+        "type": "symptom",
+        "thinking": "Nocturnal tachycardia may indicate sleep apnea or stress. Reviewing 7 nights will correlate heart rate spikes with sleep stages and breathing patterns.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since moving my workout to evenings two weeks ago, I sleep deeper but wake earlier. Is this normal?",
+        "type": "behavioral",
+        "thinking": "Evening exercise affects sleep architecture. Comparing 14 nights pre- and post-schedule change will quantify changes in deep sleep and wake times.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a fragile bridge - any disturbance makes it collapse.",
+        "type": "metaphorical",
+        "thinking": "Describes hyperarousal and sleep fragility. Analyzing 5 nights will measure sleep continuity and responsiveness to disruptions.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me all nights in March where my deep sleep was below 1 hour.",
+        "type": "explicit",
+        "thinking": "Targeted request for sleep deficiency episodes. A full month (31 days) ensures comprehensive identification of problematic nights.",
+        "numdays": 31,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've been grinding my teeth more since daylight savings ended. Could sleep changes be causing this?",
+        "type": "implicit",
+        "thinking": "Bruxism often increases with sleep disruptions. Reviewing 21 days (covering the time change) may show correlations between circadian shifts and jaw activity.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past 5 nights, my sleep tracker shows zero REM sleep. Is this possible?",
+        "type": "symptom",
+        "thinking": "Complete REM suppression is unlikely without medication. Examining these 5 nights will verify device accuracy or identify unusual sleep patterns.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a leaky boat - no matter how much I get, I still feel drained.",
+        "type": "metaphorical",
+        "thinking": "Suggests poor sleep quality despite adequate duration. Reviewing 7 nights will assess sleep efficiency and restorative sleep percentages.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting allergy medication, I sleep longer but feel groggier. Is this temporary?",
+        "type": "behavioral",
+        "thinking": "Many antihistamines affect sleep architecture. Comparing 10 days pre- and post-medication will show changes in sleep stages and morning alertness.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my sleep data from the night before my last migraine?",
+        "type": "explicit",
+        "thinking": "Request for targeted analysis of potential triggers. Isolating that specific night may reveal sleep abnormalities preceding migraine onset.",
+        "numdays": 1,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've been waking up with jaw pain for two weeks. Could my sleep position be causing this?",
+        "type": "symptom",
+        "thinking": "Nocturnal jaw pain often relates to bruxism or positioning. Reviewing 14 nights of movement data may identify problematic sleep postures.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep feels like a corrupted file - fragmented and missing pieces.",
+        "type": "metaphorical",
+        "thinking": "Digital metaphor for sleep fragmentation. Analyzing 5 nights will quantify sleep continuity errors and missing stage transitions.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since reducing screen time before bed, has my sleep onset improved?",
+        "type": "behavioral",
+        "thinking": "Tests a common sleep hygiene intervention. Comparing 7 nights before and after the change will measure reductions in sleep latency.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my average bedtime and wake time variability over the past 6 weeks.",
+        "type": "explicit",
+        "thinking": "Request for circadian rhythm analysis. Six weeks (42 days) provides sufficient data to calculate meaningful variability metrics.",
+        "numdays": 42,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've been experiencing sleep paralysis episodes about once a week. Can we identify triggers?",
+        "type": "symptom",
+        "thinking": "Sleep paralysis often occurs at REM sleep boundaries. Reviewing 28 days will help correlate episodes with sleep deprivation, stress, or schedule changes.",
+        "numdays": 28,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a desert mirage - the more I chase it, the further it retreats.",
+        "type": "metaphorical",
+        "thinking": "Describes sleep effort syndrome. Reviewing 10 nights will quantify how sleep attempts paradoxically increase wakefulness.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since installing a sleep tracker last month, I've become obsessed with optimizing my scores. Is this helping or hurting?",
+        "type": "behavioral",
+        "thinking": "Orthosomnia (sleep perfectionism) may backfire. Comparing 30 days of tracker use against subjective satisfaction will reveal potential negative effects.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I keep waking up with my heart racing around 3 AM. What's happening?",
+        "type": "symptom",
+        "thinking": "Nocturnal panic or sleep apnea could explain this. Reviewing the past week (7 nights) will help identify patterns in heart rate spikes and possible triggers.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep feels like a broken compass - I can't find my way to proper rest.",
+        "type": "metaphorical",
+        "thinking": "This suggests circadian rhythm disruption. Analyzing the last week's data will reveal inconsistencies in sleep timing and quality.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since switching to bamboo sheets, I sleep cooler. Has this improved my deep sleep?",
+        "type": "behavioral",
+        "thinking": "Temperature regulation affects sleep stages. Comparing 7 nights before and after the change will show if deep sleep duration increased.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my sleep data from last Thursday?",
+        "type": "explicit",
+        "thinking": "Specific request for a single night's analysis. Focusing on that night will provide targeted insights.",
+        "numdays": 1,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've been grinding my teeth more lately. Could stress be ruining my sleep?",
+        "type": "implicit",
+        "thinking": "Bruxism often correlates with stress-related sleep disruptions. Reviewing the past week will look for increased jaw activity and restless sleep.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My dreams are so vivid they exhaust me. Is this normal?",
+        "type": "symptom",
+        "thinking": "Excessive dream intensity may indicate REM sleep abnormalities. Checking the last 7 nights will assess REM duration and disruptions.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep is a distant island - I can see it but never reach it.",
+        "type": "metaphorical",
+        "thinking": "Describes chronic insomnia. Reviewing the past week's sleep latency and efficiency will quantify the difficulty.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Has my sleep improved since I stopped eating after 8 PM?",
+        "type": "behavioral",
+        "thinking": "Late eating can disrupt sleep. Comparing 7 nights before and after this change will measure improvements in sleep quality.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my average sleep duration over the past week.",
+        "type": "explicit",
+        "thinking": "Straightforward request for recent sleep trends. Seven days provides a representative sample.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I wake up every morning with a stiff neck. Could my sleep position be the cause?",
+        "type": "symptom",
+        "thinking": "Poor sleep posture often leads to neck pain. Reviewing the past week's movement data may reveal problematic positions.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My nights are a tangled fishing line - the more I struggle, the worse it gets.",
+        "type": "metaphorical",
+        "thinking": "Illustrates sleep effort syndrome. Analyzing the last 7 nights will show how sleep attempts correlate with wakefulness.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since using a sunrise alarm clock, I feel groggier. Is it disrupting my sleep cycles?",
+        "type": "behavioral",
+        "thinking": "Artificial dawn simulation may affect natural awakening. Comparing the past week to the previous week will assess its impact.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my weekend and weekday sleep from last week?",
+        "type": "explicit",
+        "thinking": "Request for social jet lag analysis. Focusing on the most recent week (2 weekend nights + 5 weekdays) provides relevant insights.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've been waking up with dry eyes. Could this be related to poor sleep?",
+        "type": "implicit",
+        "thinking": "Nocturnal lagophthalmos (incomplete eyelid closure) may occur during poor sleep. Reviewing the past week will look for correlations.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a fading radio signal - full of static and hard to tune into.",
+        "type": "metaphorical",
+        "thinking": "Describes fragmented, low-quality sleep. Analyzing the last 7 nights will quantify interruptions and efficiency.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Has my sleep changed since I started taking magnesium supplements?",
+        "type": "behavioral",
+        "thinking": "Magnesium may improve sleep quality. Comparing 7 nights before and after starting will reveal any measurable effects.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my deepest sleep period from last night.",
+        "type": "explicit",
+        "thinking": "Specific request for a single night's slow-wave sleep analysis. Focusing on just that night provides precise data.",
+        "numdays": 1,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I keep having nightmares about work. Is my stress affecting my sleep?",
+        "type": "symptom",
+        "thinking": "Stress dreams often reflect real-life anxiety. Reviewing the past week will look for correlations between dream content and sleep disruptions.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep feels like trying to catch smoke with my bare hands.",
+        "type": "metaphorical",
+        "thinking": "Illustrates elusive, unsatisfying sleep. Analyzing the last 7 nights will assess sleep efficiency and restfulness.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting breathwork exercises, I fall asleep faster. Is this reflected in my data?",
+        "type": "behavioral",
+        "thinking": "Relaxation techniques should reduce sleep latency. Comparing the past 7 nights to the previous week will quantify improvements.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my sleep stages from two nights ago?",
+        "type": "explicit",
+        "thinking": "Targeted request for a specific night's architecture. Isolating that night allows for detailed analysis.",
+        "numdays": 1,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I wake up with my hands numb. Could this be sleep-related?",
+        "type": "symptom",
+        "thinking": "Nocturnal paresthesia may indicate nerve compression during sleep. Reviewing the past week's position data may reveal causes.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a shattered windshield - fragmented beyond recognition.",
+        "type": "metaphorical",
+        "thinking": "Vivid metaphor for severe sleep fragmentation. Analyzing the last 7 nights will quantify awakenings and sleep continuity.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Has my sleep improved since I started using a white noise machine?",
+        "type": "behavioral",
+        "thinking": "Environmental noise masking may enhance sleep quality. Comparing 7 nights before and after implementation will show effects.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep efficiency percentage for the past week.",
+        "type": "explicit",
+        "thinking": "Direct request for a key sleep metric. Seven days provides a representative average.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've been waking up with a sore jaw. Am I grinding my teeth at night?",
+        "type": "symptom",
+        "thinking": "Morning jaw pain strongly suggests bruxism. Reviewing the past week's jaw movement data will confirm if grinding occurs.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep is a mirage in this desert of exhaustion - always out of reach.",
+        "type": "metaphorical",
+        "thinking": "Poetic description of chronic insomnia. Reviewing the last 7 nights will quantify sleep attempts versus actual sleep.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since drinking tart cherry juice before bed, I sleep more soundly. Is this real?",
+        "type": "behavioral",
+        "thinking": "Cherry juice contains melatonin precursors. Comparing 7 nights pre- and post-intervention will verify subjective improvements.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my wake-up times for the past week?",
+        "type": "explicit",
+        "thinking": "Simple request for circadian rhythm analysis. Seven days captures a full weekly cycle.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I wake up feeling like I haven't breathed all night. Should I be concerned?",
+        "type": "symptom",
+        "thinking": "Suggests possible sleep apnea. Reviewing the past week's oxygen saturation and breathing patterns will help assess risk.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a broken melody - all the notes are there but they don't flow.",
+        "type": "metaphorical",
+        "thinking": "Describes disrupted sleep architecture. Analyzing the last 7 nights will identify irregularities in stage progression.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Over the past fiscal quarter, my sleep quality seems to have declined gradually. Can we analyze this trend?",
+        "type": "explicit",
+        "thinking": "The user requests longitudinal analysis of a slow decline. Examining 90 days provides sufficient data to identify subtle trends while accounting for normal variability.",
+        "numdays": 90,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep feels like a corrupted database - fragmented and missing crucial recovery cycles.",
+        "type": "metaphorical",
+        "thinking": "Technical metaphor suggesting poor sleep consolidation. Reviewing 14 nights will quantify sleep fragmentation and missing deep/REM cycles.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since adopting the 4-7-8 breathing technique last fortnight, has my sleep latency improved?",
+        "type": "behavioral",
+        "thinking": "Breathing exercises should reduce sleep onset time. Comparing 14 days pre- and post-implementation will objectively measure changes in time-to-sleep.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past 72 hours, I've experienced micro-awakenings every 30 minutes. What could cause this pattern?",
+        "type": "symptom",
+        "thinking": "Extremely regular awakenings may indicate ultradian rhythm disruption. Analyzing these 3 nights will verify the consistency and explore potential neurological or environmental triggers.",
+        "numdays": 3,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my sleep metrics from this academic semester to last semester?",
+        "type": "explicit",
+        "thinking": "Request for seasonal lifestyle impact analysis. Assuming 120 days per semester, this comparison will reveal how academic pressures affect sleep patterns.",
+        "numdays": 120,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since the solstice last month, my sleep duration has increased significantly. Is this seasonally appropriate?",
+        "type": "behavioral",
+        "thinking": "Photoperiod changes affect circadian biology. Comparing 30 days pre- and post-solstice will contextualize the duration change against normal seasonal variations.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a failing RAID array - when one element crashes, the whole system collapses.",
+        "type": "metaphorical",
+        "thinking": "Systems metaphor for sleep fragility. Analyzing 10 nights will assess how minor disruptions cascade into complete sleep breakdowns.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Every night this menstrual cycle, my core body temperature disrupts my sleep. Can we quantify the impact?",
+        "type": "symptom",
+        "thinking": "Hormonal fluctuations affect thermoregulation. Tracking 28 days will correlate temperature changes with sleep quality across physiological phases.",
+        "numdays": 28,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep continuity metrics from the week of my recent business trip.",
+        "type": "explicit",
+        "thinking": "Targeted request for travel impact analysis. Isolating those 7 days will reveal how time zone changes and hotel stays affected sleep maintenance.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since implementing 'digital sunset' two weeks ago, my dream recall has improved. Is this reflected in REM patterns?",
+        "type": "behavioral",
+        "thinking": "Blue light reduction may enhance REM sleep. Comparing 14 nights before and after this intervention will measure changes in REM duration and quality.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a poorly optimized algorithm - consuming resources without delivering results.",
+        "type": "metaphorical",
+        "thinking": "Computational metaphor for non-restorative sleep. Reviewing 7 nights will calculate the ratio of sleep effort to actual sleep efficiency.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past five nights, my smart ring reports 'no deep sleep' despite 8-hour durations. Possible sensor error?",
+        "type": "symptom",
+        "thinking": "Extended zero deep sleep readings may indicate device malfunction. Examining these 5 nights will help differentiate between technical issues and true physiological anomalies.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you display my sleep stage distribution during the recent Mercury retrograde period?",
+        "type": "explicit",
+        "thinking": "Unconventional request potentially related to perceived stress patterns. Analyzing the standard 21-day retrograde period will objectively assess any sleep changes.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting HRV biofeedback training last month, has my sleep become more regular?",
+        "type": "behavioral",
+        "thinking": "HRV training should improve autonomic regulation during sleep. Comparing 30 days pre- and post-training will measure changes in sleep consistency metrics.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a fragmented hard drive - full of bad sectors and failed reads.",
+        "type": "metaphorical",
+        "thinking": "Storage device metaphor for severe sleep fragmentation. Reviewing 10 nights will quantify sleep continuity errors and 'failed' sleep cycles.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "During my last quarterly exam period, how did my sleep architecture change?",
+        "type": "explicit",
+        "thinking": "Request for academic stress impact analysis. Comparing the 21-day exam period to the preceding 21 days will reveal stress-related sleep alterations.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since adding Himalayan salt to my nighttime routine three weeks ago, I wake up less dehydrated. Has this affected sleep quality?",
+        "type": "behavioral",
+        "thinking": "Electrolyte balance may influence sleep maintenance. Examining 21 days of data will correlate hydration improvements with sleep continuity metrics.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a collapsing bridge - the foundation seems solid but the structure fails.",
+        "type": "metaphorical",
+        "thinking": "Engineering metaphor for paradoxical insomnia. Analyzing 7 nights will assess the disconnect between perceived and measured sleep quality.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past 10 nights, my blood glucose levels spike during sleep. Could this explain my morning fatigue?",
+        "type": "symptom",
+        "thinking": "Nocturnal hyperglycemia often disrupts sleep quality. Correlating these 10 nights of glucose readings with sleep metrics may reveal metabolic-sleep interactions.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep efficiency during the recent lunar eclipse window.",
+        "type": "explicit",
+        "thinking": "Unusual request potentially related to celestial events. Analyzing the 3-day eclipse period will objectively assess any sleep disturbances.",
+        "numdays": 3,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since incorporating adaptogens into my evening tea last fortnight, my sleep feels more restorative. Is this measurable?",
+        "type": "behavioral",
+        "thinking": "Adaptogens may improve sleep quality. Comparing 14 days pre- and post-intervention will quantify changes in sleep depth and morning alertness.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a corrupted JSON file - the structure appears intact but the data is unreadable.",
+        "type": "metaphorical",
+        "thinking": "Programming metaphor for non-restorative sleep. Reviewing 7 nights will analyze sleep architecture for 'parsing errors' in stage transitions.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "During my recent 10-day meditation retreat, how did my sleep patterns change?",
+        "type": "explicit",
+        "thinking": "Request for intensive practice impact analysis. Comparing those 10 days to the 10 days prior will isolate meditation effects from normal variability.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since switching to a ground-based sleep surface last month, my back pain has improved but my dreams are more vivid. Are these related?",
+        "type": "behavioral",
+        "thinking": "Sleep surface changes affect both posture and sleep architecture. Analyzing 30 days of data will explore correlations between spinal alignment and REM sleep changes.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a failing SSL handshake - constantly renegotiating connection but never securing it.",
+        "type": "metaphorical",
+        "thinking": "Networking metaphor for sleep initiation difficulties. Reviewing 5 nights will quantify sleep latency and failed sleep attempts.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past 6 nights, my oxygen saturation drops below 90% during sleep. Should I consult a specialist?",
+        "type": "symptom",
+        "thinking": "Repeated nocturnal desaturation warrants medical attention. Examining these 6 nights will document frequency and severity of oxygen dips for clinical review.",
+        "numdays": 6,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my sleep data from this year's allergy season to last year's?",
+        "type": "explicit",
+        "thinking": "Request for annual comparative analysis. Assuming 60-day allergy seasons, this comparison will reveal year-to-year variations in allergy-related sleep disruptions.",
+        "numdays": 60,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since beginning cryotherapy three weeks ago, my deep sleep scores have fluctuated wildly. Is this expected?",
+        "type": "behavioral",
+        "thinking": "Cold exposure affects sleep architecture unpredictably. Reviewing 21 days of data will identify whether fluctuations represent adaptation patterns or random variability.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a blockchain with too many forks - multiple chains but no consensus.",
+        "type": "metaphorical",
+        "thinking": "Cryptocurrency metaphor for sleep fragmentation. Analyzing 7 nights will quantify competing sleep attempts and lack of continuous sleep.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "During the recent 5-day power outage, my sleep patterns changed dramatically. Can we analyze this natural experiment?",
+        "type": "explicit",
+        "thinking": "Unique opportunity to study artificial light deprivation. Comparing those 5 nights to the 5 nights post-outage will reveal effects of complete darkness on sleep regulation.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting lunar cycle tracking last month, I notice sleep changes around the full moon. Is this measurable?",
+        "type": "behavioral",
+        "thinking": "Controversial but testable hypothesis. Analyzing 30 days of data will objectively assess correlations between lunar phases and sleep metrics.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a machine learning model overfitting its training data - all noise, no signal.",
+        "type": "metaphorical",
+        "thinking": "AI metaphor for non-restorative sleep. Reviewing 10 nights will assess whether sleep attempts yield diminishing returns in actual rest.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past 9 nights, my heart rate variability during sleep has decreased significantly. What could this indicate?",
+        "type": "symptom",
+        "thinking": "Reduced nocturnal HRV suggests autonomic nervous system imbalance. Examining these 9 nights will correlate HRV changes with sleep stages and potential stressors.",
+        "numdays": 9,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my sleep architecture during the recent planetary alignment period?",
+        "type": "explicit",
+        "thinking": "Astrologically curious request. Analyzing the standard 7-day alignment window will objectively assess any sleep pattern changes during this period.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since incorporating red light therapy into my evening routine last fortnight, my sleep feels deeper. Can we verify this?",
+        "type": "behavioral",
+        "thinking": "Red light may enhance melatonin production. Comparing 14 days pre- and post-intervention will measure changes in slow-wave sleep duration.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a quantum superposition - both occurring and not occurring until observed.",
+        "type": "metaphorical",
+        "thinking": "Physics metaphor for paradoxical insomnia. Analyzing 5 nights will assess the discrepancy between subjective and objective sleep measures.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "During my recent 14-day water fast, how did my sleep patterns evolve?",
+        "type": "explicit",
+        "thinking": "Request for metabolic impact analysis. Tracking sleep changes across the entire fasting period will reveal adaptations to ketosis and calorie restriction.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting earthing practices last month, my sleep interruptions have decreased. Is this statistically significant?",
+        "type": "behavioral",
+        "thinking": "Grounding may affect sleep continuity. Comparing 30 days pre- and post-implementation will objectively measure changes in awakening frequency.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a DNS lookup that never resolves - constant requests but no connection.",
+        "type": "metaphorical",
+        "thinking": "Networking metaphor for sleep initiation failure. Reviewing 7 nights will quantify unsuccessful sleep attempts versus actual sleep time.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past 12 nights, my respiratory rate during sleep has increased by 20%. Should I be concerned?",
+        "type": "symptom",
+        "thinking": "Sustained elevated respiratory rate may indicate physiological changes. Examining these 12 nights will correlate breathing patterns with sleep stages and oxygen levels.",
+        "numdays": 12,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my sleep data from this rainy season to last year's dry season?",
+        "type": "explicit",
+        "thinking": "Request for climatic impact analysis. Comparing equivalent 90-day periods will reveal weather-related sleep pattern differences.",
+        "numdays": 90,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting my ancestral diet experiment last quarter, my dream vividness has increased dramatically. Is this reflected in REM metrics?",
+        "type": "behavioral",
+        "thinking": "Dietary changes may affect neurotransmitter balance. Analyzing 90 days of data will explore correlations between nutritional shifts and REM sleep alterations.",
+        "numdays": 90,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a broken API - sending requests but receiving no meaningful response.",
+        "type": "metaphorical",
+        "thinking": "Programming metaphor for non-restorative sleep. Reviewing 10 nights will assess the disconnect between sleep attempts and actual restoration.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "During the recent 7-day silent retreat, how did my sleep architecture change?",
+        "type": "explicit",
+        "thinking": "Request for sensory deprivation impact analysis. Comparing those 7 days to the preceding week will isolate effects of reduced auditory stimulation.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since implementing circadian lighting in my bedroom last month, my sleep onset has become more consistent. Can we quantify this?",
+        "type": "behavioral",
+        "thinking": "Dynamic lighting should strengthen circadian signals. Comparing 30 days pre- and post-implementation will measure reductions in sleep timing variability.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a blockchain orphan block - valid but not incorporated into the main chain.",
+        "type": "metaphorical",
+        "thinking": "Cryptocurrency metaphor for unconsolidated sleep. Analyzing 5 nights will quantify periods of valid but non-restorative sleep.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past 15 nights, my skin temperature during sleep has been abnormally high. Could this explain my restless sleep?",
+        "type": "symptom",
+        "thinking": "Elevated nocturnal skin temperature impairs sleep quality. Reviewing these 15 nights will correlate temperature readings with sleep fragmentation metrics.",
+        "numdays": 15,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you analyze my sleep patterns during the recent solar storm activity?",
+        "type": "explicit",
+        "thinking": "Geomagnetic impact inquiry. Examining the 3-day storm period will objectively assess any correlations between space weather and sleep disturbances.",
+        "numdays": 3,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting my gratitude journaling practice last fortnight, my sleep feels more refreshing. Is this measurable?",
+        "type": "behavioral",
+        "thinking": "Positive psychology interventions may reduce pre-sleep cognitive arousal. Comparing 14 days pre- and post-implementation will quantify changes in sleep efficiency.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a machine learning model with high bias - consistently missing the mark.",
+        "type": "metaphorical",
+        "thinking": "AI metaphor for chronic sleep dissatisfaction. Reviewing 7 nights will assess the gap between sleep expectations and objective metrics.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My anxiety spikes at 2 AM like clockwork. Is my sleep data showing why this keeps happening?",
+        "type": "symptom",
+        "thinking": "Nocturnal anxiety often correlates with REM sleep or cortisol spikes. Reviewing 14 nights will identify if awakenings align with specific sleep stages or autonomic patterns.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since my breakup last month, sleep feels impossible. Can we see how bad it really is?",
+        "type": "behavioral",
+        "thinking": "Grief commonly disrupts sleep architecture. Comparing 30 days pre- and post-breakup will quantify changes in sleep latency and REM density.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My depression makes sleep feel like drowning in thick fog. What do the numbers say?",
+        "type": "metaphorical",
+        "thinking": "Metaphor suggests psychomotor retardation. Analyzing 7 nights will measure sleep inertia and prolonged awakenings characteristic of depressive insomnia.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my sleep patterns from the week I started my new antidepressant?",
+        "type": "explicit",
+        "thinking": "SSRIs often initially disrupt REM sleep. Isolating those 7 days will track medication adaptation effects on sleep architecture.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've had nightmares every night since the trauma. Does my data show why they won't stop?",
+        "type": "symptom",
+        "thinking": "PTSD frequently causes REM sleep abnormalities. Reviewing 21 nights will quantify nightmare frequency and correlate with sleep fragmentation.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since my ADHD diagnosis, I've been tracking sleep. Any correlations with focus days?",
+        "type": "behavioral",
+        "thinking": "ADHD and sleep share bidirectional links. Comparing 30 days of sleep data with self-reported focus scores may reveal restorative sleep thresholds.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My bipolar episodes feel tied to sleep changes. Can we spot warning signs?",
+        "type": "symptom",
+        "thinking": "Sleep disruption often precedes mood episodes. Analyzing 60 days of data will identify predictive patterns in sleep duration variability.",
+        "numdays": 60,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep feels like walking through quicksand since the panic attacks began.",
+        "type": "metaphorical",
+        "thinking": "Suggests sleep effort syndrome from hypervigilance. Reviewing 10 nights will quantify prolonged sleep latency and micro-awakenings.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my deepest sleep periods during the week I tapered off benzodiazepines.",
+        "type": "explicit",
+        "thinking": "Benzodiazepine withdrawal severely impacts slow-wave sleep. Isolating those 7 days will document rebound insomnia patterns.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My OCD rituals eat into sleep time. How much am I actually losing?",
+        "type": "symptom",
+        "thinking": "Compulsions often delay sleep onset. Tracking 14 nights will quantify time spent on rituals versus actual sleep opportunity.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting therapy for PTSD, my dreams are more vivid but less terrifying. Is this progress?",
+        "type": "behavioral",
+        "thinking": "Therapy often modulates nightmare intensity before frequency. Comparing 28 days pre- and post-therapy will track REM sleep emotional tone changes.",
+        "numdays": 28,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a house with broken locks - nightmares keep barging in.",
+        "type": "metaphorical",
+        "thinking": "Metaphor for impaired threat modulation during sleep. Analyzing 5 nights will measure REM sleep disruptions characteristic of trauma disorders.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my sleep before and after starting mood stabilizers?",
+        "type": "explicit",
+        "thinking": "Mood stabilizers often regulate sleep continuity. Comparing 21 days pre- and post-medication will quantify circadian stabilization effects.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I dissociate at night and lose hours. Does my tracker show what's happening?",
+        "type": "symptom",
+        "thinking": "Dissociation may manifest as sleep-state misperception. Reviewing 10 nights will compare subjective reports with objective sleep measurements.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since my autism diagnosis, I've learned I need strict sleep routines. Is the data supporting this?",
+        "type": "behavioral",
+        "thinking": "Neurodivergent individuals often benefit from sleep regularity. Analyzing 30 days will assess how routine adherence correlates with sleep quality metrics.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a broken mirror - every fragment shows a different distorted version of rest.",
+        "type": "metaphorical",
+        "thinking": "Suggests severe sleep fragmentation with perceptual disturbances. Reviewing 7 nights will quantify awakenings and sleep stage inconsistencies.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep data from the week my seasonal depression worsened.",
+        "type": "explicit",
+        "thinking": "Request for photoperiod impact analysis. Isolating those 7 days will correlate daylight exposure changes with sleep architecture alterations.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My health anxiety makes me monitor my sleep data obsessively. Is this helping or hurting?",
+        "type": "symptom",
+        "thinking": "Orthosomnia (sleep perfectionism) may exacerbate insomnia. Comparing 14 days of tracker engagement with sleep satisfaction scores will reveal paradoxical effects.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since practicing DBT skills, my pre-sleep rumination has decreased. Has this improved sleep metrics?",
+        "type": "behavioral",
+        "thinking": "DBT targets hyperarousal. Reviewing 21 days pre- and post-intervention will measure changes in sleep onset latency and awakenings.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep feels like being stuck in a buffer zone - not awake but not truly resting.",
+        "type": "metaphorical",
+        "thinking": "Describes non-restorative sleep common in depression. Analyzing 10 nights will assess sleep efficiency and alpha-delta sleep patterns.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my REM sleep changes since increasing my SSRI dosage?",
+        "type": "explicit",
+        "thinking": "SSRIs suppress REM sleep dose-dependently. Comparing 14 days pre- and post-dosage change will quantify this pharmacological effect.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My PTSD nightmares cluster around the anniversary date. Can we see this in past years' data?",
+        "type": "symptom",
+        "thinking": "Trauma anniversaries often reactivate symptoms. Analyzing 30 days surrounding the date across multiple years will identify cyclical sleep disruption patterns.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since learning about sleep hygiene in CBT-I, I've improved bedtime habits. Are the numbers reflecting this?",
+        "type": "behavioral",
+        "thinking": "CBT-I targets behavioral sleep drivers. Comparing 28 days pre- and post-therapy will objectively measure sleep efficiency improvements.",
+        "numdays": 28,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a frozen computer - processes running but nothing moving forward.",
+        "type": "metaphorical",
+        "thinking": "Suggests sleep maintenance insomnia with cognitive hyperactivity. Reviewing 5 nights will quantify awakenings and sleep-stage transitions.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep stability during the month I was tapering off sleep medications.",
+        "type": "explicit",
+        "thinking": "Request for withdrawal period analysis. Reviewing 30 days will document rebound insomnia and gradual stabilization patterns.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sensory processing disorder makes falling asleep agonizing. Does the data show why?",
+        "type": "symptom",
+        "thinking": "SPD often increases sleep latency through hyperawareness. Analyzing 14 nights will measure environmental sensitivity correlates with prolonged sleep onset.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since using a weighted blanket for my anxiety, has my sleep become more continuous?",
+        "type": "behavioral",
+        "thinking": "Deep pressure stimulation may reduce nighttime awakenings. Comparing 21 days pre- and post-intervention will quantify sleep continuity changes.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep feels like being stuck in a loading screen - perpetual anticipation without progress.",
+        "type": "metaphorical",
+        "thinking": "Digital metaphor for sleep initiation insomnia. Reviewing 7 nights will measure sleep latency and failed sleep attempts.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my sleep during manic versus depressive episodes?",
+        "type": "explicit",
+        "thinking": "Bipolar episodes show distinct sleep patterns. Analyzing 30-day segments from each state will contrast reduced need for sleep versus hypersomnia.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My trauma therapist says nightmares should decrease with EMDR. Can we track this?",
+        "type": "behavioral",
+        "thinking": "EMDR often reduces PTSD-related nightmares gradually. Reviewing 56 days of therapy will correlate sessions with REM sleep disturbances.",
+        "numdays": 56,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a corrupted file - all the components exist but won't properly assemble.",
+        "type": "metaphorical",
+        "thinking": "Suggests sleep architecture fragmentation. Analyzing 10 nights will quantify disrupted stage progression and missing restorative cycles.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep data from the week my agoraphobia worsened.",
+        "type": "explicit",
+        "thinking": "Anxiety spikes often disrupt sleep continuity. Isolating those 7 days will correlate panic symptoms with sleep fragmentation metrics.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since my psychiatrist adjusted my antipsychotic, I sleep longer but feel groggier. Is this temporary?",
+        "type": "symptom",
+        "thinking": "Sedating psychotropics often cause initial sleep inertia. Reviewing 14 days post-adjustment will track how the body adapts to new dosages.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My autism makes typical sleep advice ineffective. What does my personal data suggest?",
+        "type": "behavioral",
+        "thinking": "Neurodivergent sleep patterns often differ. Analyzing 30 days will identify individualized sleep windows and sensory needs for optimal rest.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep feels like treading water in a storm - exhausting but never reaching safety.",
+        "type": "metaphorical",
+        "thinking": "Describes the fatigue of chronic insomnia. Reviewing 7 nights will quantify sleep effort versus actual sleep obtained.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my REM sleep changes since starting prazosin for nightmares?",
+        "type": "explicit",
+        "thinking": "Prazosin targets noradrenergic hyperactivity in PTSD. Comparing 21 days pre- and post-medication will measure nightmare-related REM disruptions.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My PMDD makes the week before my period disastrous for sleep. How bad is it really?",
+        "type": "symptom",
+        "thinking": "Hormonal fluctuations severely impact sleep. Analyzing 90 days will correlate menstrual cycles with sleep quality deterioration patterns.",
+        "numdays": 90,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since practicing radical acceptance for my insomnia, I stress less about sleep. Has this paradoxically helped?",
+        "type": "behavioral",
+        "thinking": "Reducing sleep effort often improves outcomes. Comparing 28 days pre- and post-intervention will measure changes in sleep efficiency and perceived quality.",
+        "numdays": 28,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a broken record of anxious thoughts - the same worries repeating all night.",
+        "type": "metaphorical",
+        "thinking": "Suggests cognitive hyperarousal in insomnia. Analyzing 5 nights will quantify pre-sleep cognitive activity correlates with sleep latency.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep stability during the 2 months I was unemployed versus now working.",
+        "type": "explicit",
+        "thinking": "Request for lifestyle impact analysis. Comparing 60-day periods will reveal how occupational stress or lack of routine affects sleep patterns.",
+        "numdays": 60,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since my therapist suggested 'sleep restriction' for insomnia, I'm exhausted but sleeping deeper. Is this the expected pattern?",
+        "type": "behavioral",
+        "thinking": "Sleep restriction initially increases sleep drive. Reviewing 14 days of implementation will track the trajectory of sleep consolidation improvements.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a frozen computer screen - outwardly calm but internally stuck.",
+        "type": "metaphorical",
+        "thinking": "Describes the paradox of tired-but-wired insomnia. Analyzing 7 nights will assess discrepancies between physiological and perceived sleep.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my sleep during high-stress work deadlines versus vacation periods?",
+        "type": "explicit",
+        "thinking": "Request for stress impact analysis. Comparing equivalent 14-day periods will quantify how work pressure affects sleep architecture.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since developing chronic pain, I wake up every 90 minutes like clockwork. Is this visible in my sleep cycles?",
+        "type": "symptom",
+        "thinking": "Pain often disrupts ultradian rhythms. Reviewing 21 nights will correlate pain flare timings with sleep stage interruptions.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My therapist says my sleep patterns resemble complex PTSD. What does the data show?",
+        "type": "behavioral",
+        "thinking": "CPTSD often involves hypervigilance during sleep. Analyzing 30 days will measure sleep fragmentation and autonomic instability markers.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep feels like trying to assemble furniture without instructions - frustrating and never quite right.",
+        "type": "metaphorical",
+        "thinking": "Suggests impaired sleep homeostasis. Reviewing 10 nights will assess sleep drive dysregulation and inconsistent sleep architecture.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My anxiety meds were adjusted 3 days ago - has my sleep improved or worsened?",
+        "type": "symptom",
+        "thinking": "Medication changes often have immediate sleep effects. Comparing these 3 nights to the 3 prior will identify early response patterns.",
+        "numdays": 3,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since my schizophrenia diagnosis last year, sleep feels dangerous. What does the data show?",
+        "type": "symptom",
+        "thinking": "Paranoia often disrupts sleep initiation. Reviewing 30 days will identify night-to-night variability and correlations with symptom severity.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My anorexia makes me wake up starving at 4 AM. Is this disrupting my sleep cycles?",
+        "type": "symptom",
+        "thinking": "Malnutrition affects sleep architecture. Analyzing 14 nights will correlate early awakenings with nutritional intake and weight trends.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my REM sleep from the week my depression was most severe?",
+        "type": "explicit",
+        "thinking": "Request for depressive episode analysis. Isolating those 7 days will examine characteristic REM density increases and slow-wave sleep deficits.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Every full moon for 6 months, my bipolar symptoms worsen. Does my sleep data reflect this?",
+        "type": "symptom",
+        "thinking": "Investigating lunar cycle correlations. Reviewing 180 days will objectively assess if sleep disruptions follow 28-day patterns.",
+        "numdays": 180,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting exposure therapy for PTSD 2 weeks ago, my nightmares are different. Are we making progress?",
+        "type": "behavioral",
+        "thinking": "Therapy often changes nightmare content before frequency. Comparing these 14 nights to pre-therapy will track emotional intensity reductions.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a haunted house - full of terrors I can't escape.",
+        "type": "metaphorical",
+        "thinking": "Metaphor for trauma-related sleep disturbances. Reviewing 7 nights will quantify nightmare frequency and sleep avoidance patterns.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep data from the night before my last panic attack.",
+        "type": "explicit",
+        "thinking": "Request for prodromal sleep analysis. Isolating that night may reveal sleep disruptions preceding the attack.",
+        "numdays": 1,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I binge eat at night then sleep poorly. How much is this actually affecting me?",
+        "type": "symptom",
+        "thinking": "Night eating syndrome disrupts sleep. Tracking 21 days will correlate binge episodes with sleep efficiency metrics.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since increasing my antipsychotic last month, I sleep 12 hours but still feel tired. Is this normal?",
+        "type": "symptom",
+        "thinking": "Sedating medications often cause excessive but non-restorative sleep. Reviewing 30 days will assess sleep quality versus quantity tradeoffs.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My depression makes mornings unbearable. Does my data show why waking up is so hard?",
+        "type": "symptom",
+        "thinking": "Morning psychomotor retardation is common in depression. Analyzing 14 nights will measure sleep inertia and delayed awakening patterns.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep feels like being trapped in a room with my anxious thoughts.",
+        "type": "metaphorical",
+        "thinking": "Suggests cognitive hyperarousal in insomnia. Reviewing 5 nights will quantify pre-sleep rumination correlates with sleep latency.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my sleep during active bulimia episodes versus recovery periods?",
+        "type": "explicit",
+        "thinking": "Request for eating disorder impact analysis. Comparing 30-day segments will reveal how purging behaviors affect sleep architecture.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For 3 nights after my weekly therapy session, I sleep better. Is this real or placebo?",
+        "type": "behavioral",
+        "thinking": "Therapeutic breakthroughs may temporarily improve sleep. Tracking 12 weeks will establish if this 3-day pattern persists across sessions.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My schizophrenia meds make me drowsy all day. Is my nighttime sleep actually restorative?",
+        "type": "symptom",
+        "thinking": "Antipsychotics often impair sleep quality despite increasing duration. Analyzing 14 nights will assess slow-wave sleep preservation.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since my OCD diagnosis, I check my sleep tracker 50+ times a night. What is this doing to my sleep?",
+        "type": "behavioral",
+        "thinking": "Compulsive monitoring exacerbates insomnia. Comparing 7 nights of tracker engagement with actual sleep metrics will reveal paradoxical effects.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a broken elevator - stuck between floors of consciousness.",
+        "type": "metaphorical",
+        "thinking": "Describes hypnagogic/hypnopompic disturbances. Reviewing 10 nights will quantify sleep transition abnormalities.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my deepest sleep periods during the month I was hospitalized for depression.",
+        "type": "explicit",
+        "thinking": "Request for inpatient treatment impact analysis. Reviewing those 30 days will assess how institutionalization affects sleep architecture.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "I've had sleep paralysis every 3-4 days for 2 months. Can we identify triggers?",
+        "type": "symptom",
+        "thinking": "Sleep paralysis often follows specific patterns. Analyzing 60 days will correlate episodes with stress, sleep deprivation, or schedule changes.",
+        "numdays": 60,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting EMDR therapy 6 weeks ago, are my trauma nightmares decreasing?",
+        "type": "behavioral",
+        "thinking": "EMDR typically shows gradual nightmare reduction. Reviewing 42 days will track frequency and intensity changes across treatment phases.",
+        "numdays": 42,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My anorexia makes me afraid to sleep - like I'll lose control. What does the data say?",
+        "type": "symptom",
+        "thinking": "Eating disorder anxiety often targets sleep. Analyzing 21 nights will correlate restrictive behaviors with sleep avoidance patterns.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep feels like walking through a maze of my own anxious thoughts.",
+        "type": "metaphorical",
+        "thinking": "Illustrates cognitive insomnia. Reviewing 7 nights will measure how pre-sleep rumination prolongs sleep onset.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my sleep stability during the 2 weeks before my last psychotic episode?",
+        "type": "explicit",
+        "thinking": "Request for prodromal analysis. Isolating those 14 days may reveal sleep disruptions preceding symptom onset.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since my PTSD diagnosis, I avoid sleep until exhaustion. How much rest am I actually getting?",
+        "type": "behavioral",
+        "thinking": "Sleep avoidance is common in trauma disorders. Tracking 28 days will quantify delayed bedtimes versus actual sleep obtained.",
+        "numdays": 28,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My depression medication makes me dream vividly. Is this affecting sleep quality?",
+        "type": "symptom",
+        "thinking": "Some antidepressants increase REM intensity. Reviewing 14 nights will assess whether vivid dreams correlate with restorative sleep.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past 5 nights, my eating disorder thoughts peak at 3 AM. Is this disrupting sleep?",
+        "type": "symptom",
+        "thinking": "Nocturnal eating disorder rumination impairs sleep. Analyzing these 5 nights will identify awakenings correlated with symptom flares.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a broken mirror maze - reflections of anxiety in every direction.",
+        "type": "metaphorical",
+        "thinking": "Suggests pervasive sleep-related anxiety. Reviewing 10 nights will quantify cognitive arousal during awakenings.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep data from the night I had my worst hallucination.",
+        "type": "explicit",
+        "thinking": "Request for symptom-sleep correlation. Isolating that night may reveal sleep architecture abnormalities preceding the episode.",
+        "numdays": 1,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since increasing my anxiety meds last week, I sleep more but feel groggy. Will this improve?",
+        "type": "behavioral",
+        "thinking": "Initial sedative effects often stabilize. Comparing these 7 days to the previous week will track adaptation patterns.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My bipolar depression makes me sleep 14 hours but still exhausted. Why?",
+        "type": "symptom",
+        "thinking": "Hypersomnia in depression often involves non-restorative sleep. Analyzing 21 nights will measure sleep efficiency despite extended duration.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep feels like being stuck in a buffer between reality and nightmares.",
+        "type": "metaphorical",
+        "thinking": "Describes trauma-related sleep disturbances. Reviewing 5 nights will quantify transitions between wakefulness and nightmare states.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my sleep during manic versus depressive episodes last year?",
+        "type": "explicit",
+        "thinking": "Request for bipolar sleep pattern analysis. Comparing 30-day segments from each phase will contrast characteristic sleep changes.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting DBT for borderline personality disorder, has my sleep become more stable?",
+        "type": "behavioral",
+        "thinking": "Emotion regulation skills should improve sleep. Reviewing 56 days of therapy will track reductions in night-to-night variability.",
+        "numdays": 56,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My antipsychotic makes mornings feel like waking through tar. Is this visible in my sleep data?",
+        "type": "symptom",
+        "thinking": "Neuroleptic-induced sleep inertia is common. Analyzing 14 mornings will quantify prolonged awakening times post-medication.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For 2 months since the trauma, I haven't dreamed at all. Is this protective?",
+        "type": "symptom",
+        "thinking": "REM suppression may follow psychological trauma. Reviewing 60 nights will assess whether dream absence correlates with emotional numbing.",
+        "numdays": 60,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a frozen lake - superficially calm but fragile beneath.",
+        "type": "metaphorical",
+        "thinking": "Suggests tenuous sleep maintenance. Analyzing 7 nights will measure sleep fragility and micro-awakenings.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my sleep patterns during the week my eating disorder relapsed.",
+        "type": "explicit",
+        "thinking": "Request for relapse impact analysis. Isolating those 7 days will correlate disordered eating with sleep disruptions.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since my agoraphobia worsened last month, I nap excessively. How is this affecting nighttime sleep?",
+        "type": "behavioral",
+        "thinking": "Daytime napping often fragments nocturnal sleep. Comparing 30 days pre- and post-symptom exacerbation will quantify this effect.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My depression makes sleep feel like sinking into quicksand - heavy but not restful.",
+        "type": "metaphorical",
+        "thinking": "Illustrates psychomotor retardation in sleep. Reviewing 10 nights will measure prolonged sleep transitions and reduced mobility.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you analyze my sleep during the 3 days after my monthly ketamine treatment?",
+        "type": "explicit",
+        "thinking": "Request for post-treatment analysis. Isolating these 72 hours will track how the dissociative aftereffects influence sleep architecture.",
+        "numdays": 3,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since developing schizoaffective disorder, my sleep schedule drifts unpredictably. Can we map this?",
+        "type": "symptom",
+        "thinking": "Circadian disruption is common in psychotic disorders. Analyzing 90 days will identify patterns in sleep timing variability.",
+        "numdays": 90,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My PTSD makes me afraid to fall asleep. What does a week of my sleep data reveal?",
+        "type": "behavioral",
+        "thinking": "Hypervigilance often delays sleep onset. Reviewing 7 nights will quantify bedtime avoidance and prolonged sleep latency.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep feels like being stuck in a loading screen between wakefulness and rest.",
+        "type": "metaphorical",
+        "thinking": "Digital metaphor for sleep initiation failure. Analyzing 5 nights will measure time spent in transitional states.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Show me my REM sleep changes since starting topiramate for binge eating disorder.",
+        "type": "explicit",
+        "thinking": "Topiramate often suppresses REM sleep. Comparing 21 days pre- and post-medication will quantify this effect.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "For the past 10 nights, my OCD rituals have added 2 hours to my bedtime routine. How much sleep am I losing?",
+        "type": "symptom",
+        "thinking": "Compulsions severely delay sleep opportunity. Reviewing these 10 nights will quantify ritual time versus actual sleep time.",
+        "numdays": 10,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since adjusting my bipolar meds, I sleep less but feel more energetic. Is this hypomania or improvement?",
+        "type": "behavioral",
+        "thinking": "Reduced sleep need may signal hypomania. Comparing 14 days pre- and post-adjustment will assess whether sleep changes are within therapeutic ranges.",
+        "numdays": 14,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My sleep is a broken record of the same anxious thoughts every night.",
+        "type": "metaphorical",
+        "thinking": "Illustrates cognitive loops in insomnia. Reviewing 7 nights will measure rumination persistence across nights.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you show my sleep data from the week my bulimia was most severe?",
+        "type": "explicit",
+        "thinking": "Request for acute episode analysis. Isolating those 7 days will correlate purging behaviors with sleep disruptions.",
+        "numdays": 7,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since my social anxiety worsened, I stay up until 4 AM when the world is quiet. Is this sustainable?",
+        "type": "behavioral",
+        "thinking": "Delayed sleep phase is common in anxiety disorders. Tracking 21 nights will assess how this pattern affects sleep duration and quality.",
+        "numdays": 21,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "My antipsychotic makes me sleep 14 hours but still yawn all day. What's wrong?",
+        "type": "symptom",
+        "thinking": "Neuroleptics often cause excessive but non-restorative sleep. Analyzing 30 days will assess sleep efficiency despite extended duration.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Sleep feels like being trapped in a room where the walls keep changing.",
+        "type": "metaphorical",
+        "thinking": "Describes perceptual instability in psychotic disorders. Reviewing 5 nights will quantify sleep state misperceptions.",
+        "numdays": 5,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Can you compare my sleep during depressive episodes versus when I'm stable?",
+        "type": "explicit",
+        "thinking": "Request for mood state comparison. Analyzing matched 30-day periods will contrast hypersomnia versus normal sleep patterns.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since starting family therapy for my eating disorder, has my nighttime binge-sleep cycle improved?",
+        "type": "behavioral",
+        "thinking": "Family interventions may disrupt binge-sleep patterns. Comparing 28 days pre- and post-therapy will measure changes in nocturnal eating episodes.",
+        "numdays": 28,
+        "function": "get_sleep_data"
+    },
+    {
+        "query": "Since switching from seroquel to lithium last month, my sleep feels shallow but my nightmares stopped. Is this trade-off normal?",
+        "type": "symptom",
+        "thinking": "Medication transitions often involve sleep quality tradeoffs. Comparing 30 days pre- and post-switch will quantify: 1) Reduction in nightmare-related awakenings, 2) Changes in slow-wave sleep percentage, and 3) Sleep continuity improvements despite perceived lightness. This reveals whether the benefits outweigh the subjective quality change.",
+        "numdays": 30,
+        "function": "get_sleep_data"
+    }
+]

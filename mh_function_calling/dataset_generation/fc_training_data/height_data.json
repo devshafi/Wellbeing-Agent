@@ -1,0 +1,1773 @@
+[
+    {
+        "query": "Can you show how my height has changed over the past year?",
+        "type": "explicit",
+        "thinking": "The user wants to examine height trends over the last 12 months, likely to monitor growth or medical changes. Retrieving height data over a full year can reveal long-term patterns. The phrase 'past year' maps to numdays = 365.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’ve grown taller recently. Can you check?",
+        "type": "implicit",
+        "thinking": "The user suspects a recent change in height, suggesting curiosity or concern. It's reasonable to review height data to confirm if there’s a measurable increase. No specific time is given, so we’ll default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My jeans are suddenly shorter—have I grown this week?",
+        "type": "behavioral",
+        "thinking": "The user noticed clothing no longer fits as expected, hinting at a potential height increase. This warrants a check of recent height data. 'This week' implies reviewing the last 7 days, so numdays = 7.",
+        "numdays": 7,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My legs have been aching a lot lately. Is it from a growth spurt?",
+        "type": "symptom",
+        "thinking": "The user is experiencing physical discomfort and suspects growth. Analyzing height over time can help identify a recent spurt. 'Lately' suggests a short-term window; we'll use the default of 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I'm stretching toward the clouds.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to express feeling taller. It's worth verifying this through recent height data. No time range was mentioned, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Have there been any changes in my height since the beginning of summer?",
+        "type": "explicit",
+        "thinking": "The user wants to know if their height has changed from the start of summer. Assuming this is early June and today is August 5, that covers ~65 days. So numdays = 65.",
+        "numdays": 65,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Everyone says I look taller than last Christmas.",
+        "type": "implicit",
+        "thinking": "The user is comparing height to the Christmas period. Estimating from December 25 to now (August 5) gives ~225 days. So numdays = 225.",
+        "numdays": 225,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Lately I’ve been hitting my head on doorframes more than usual.",
+        "type": "behavioral",
+        "thinking": "The user describes a new pattern of interaction with the environment, suggesting height gain. Height data can confirm this. 'Lately' is vague; we’ll use the default of 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My back hurts—I wonder if it’s because I’ve grown too fast.",
+        "type": "symptom",
+        "thinking": "The user suspects rapid growth as a cause of discomfort. Reviewing height data can validate this. Since no timeframe was provided, we default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’ve shot up like a bamboo shoot!",
+        "type": "metaphorical",
+        "thinking": "The user metaphorically describes sudden growth. To verify this perception, we’ll review recent height data. No timeframe mentioned, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Compare my height now to how it was around New Year's.",
+        "type": "explicit",
+        "thinking": "The user wants a comparison between current height and the New Year. From January 1 to August 5 is about 217 days. So numdays = 217.",
+        "numdays": 217,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Do you think I’ve gotten any taller over the last 90 days?",
+        "type": "explicit",
+        "thinking": "The user explicitly wants to check for height change in the past 90 days. This is a direct query for growth tracking. 'Last 90 days' maps directly to numdays = 90.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I swear I could reach the top shelf without standing on tiptoes this week!",
+        "type": "behavioral",
+        "thinking": "The user notices a functional change related to height. Checking height over the week can validate this perception. 'This week' translates to numdays = 7.",
+        "numdays": 7,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My posture's better now. Has my height changed too?",
+        "type": "behavioral",
+        "thinking": "The user implies improved posture might have affected perceived height. Retrieving height data can confirm actual changes. No time range is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Is there any growth trend in the last six months?",
+        "type": "explicit",
+        "thinking": "The user directly asks for height trend analysis over the past 6 months. That maps to about 180 days. So numdays = 180.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Have I gotten any taller since my last birthday?",
+        "type": "explicit",
+        "thinking": "The user wants to compare their height from today to their last birthday. Assuming that was 10 months ago, estimate numdays = 300.",
+        "numdays": 300,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you check if I’ve had any height growth this semester?",
+        "type": "explicit",
+        "thinking": "The user is referring to a school semester. Assuming a typical semester is ~4 months, we estimate numdays = 120.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "People keep saying I look taller. Is it true?",
+        "type": "implicit",
+        "thinking": "The user is reacting to comments from others and wants validation. We’ll pull recent height data to check. No time is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel stretched like elastic lately.",
+        "type": "metaphorical",
+        "thinking": "This figurative description suggests the user feels taller. To verify, we should check their height records. No timeframe was provided, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Since I started eating more protein, have I grown taller?",
+        "type": "behavioral",
+        "thinking": "The user associates dietary changes with potential growth. To confirm, we’ll analyze height trends since the change. Assuming this was 60 days ago, numdays = 60.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height increased since I joined the basketball team?",
+        "type": "behavioral",
+        "thinking": "The user links joining a sport with potential physical changes. Estimating the start date as 3 months ago, numdays = 90.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I haven’t checked my height in a while—any updates?",
+        "type": "explicit",
+        "thinking": "The user is asking for a general update on their height. Since no period is specified, we’ll use the default 30 days to evaluate recent data.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Do you think my growth has slowed down recently?",
+        "type": "implicit",
+        "thinking": "The user suspects a change in growth rate. Recent height data can help confirm this. 'Recently' is vague, so we default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has there been any noticeable change since the school year started?",
+        "type": "explicit",
+        "thinking": "The user refers to the beginning of the academic year. If that started 10 months ago, we estimate numdays = 300.",
+        "numdays": 300,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Lately I’ve been bumping my head on low ceilings.",
+        "type": "behavioral",
+        "thinking": "The user notices an environmental interaction change. This could be due to height growth. 'Lately' implies recent changes, so use default 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel taller this morning than I did yesterday.",
+        "type": "symptom",
+        "thinking": "The user expresses a feeling of physical change overnight. Although small, it's worth checking. Time range is 1 day, but minimum is 30 days, so we use numdays = 30.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Was there any spike in my height during July?",
+        "type": "explicit",
+        "thinking": "The user asks for height trends during a specific month. July is 31 days, so numdays = 31.",
+        "numdays": 31,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Check my growth progress since spring started.",
+        "type": "explicit",
+        "thinking": "Spring typically starts in late March. From late March to early August is about 130 days. So numdays = 130.",
+        "numdays": 130,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I think I’ve hit a growth spurt this month.",
+        "type": "implicit",
+        "thinking": "The user suspects recent growth. We’ll verify by retrieving height data for the current month. Assume 30 days for 'this month'.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Do you notice any height trends in the last quarter?",
+        "type": "explicit",
+        "thinking": "The user wants to analyze growth over a business quarter. A quarter is ~90 days. So numdays = 90.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I think I’ve grown taller since switching schools.",
+        "type": "behavioral",
+        "thinking": "The user is correlating environmental change with physical growth. Estimate the switch as 4 months ago, so numdays = 120.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m towering over my classmates lately.",
+        "type": "metaphorical",
+        "thinking": "This figurative language implies a noticeable height difference. Checking recent height data can validate. Use default 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Was there any growth since my last pediatrician visit?",
+        "type": "explicit",
+        "thinking": "The user wants comparison since their last checkup. If it occurred 6 months ago, numdays = 180.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Have I grown taller over the summer break?",
+        "type": "explicit",
+        "thinking": "The user asks about changes over summer. Assuming a 2-month break, numdays = 60.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I think I need new clothes again—have I grown?",
+        "type": "behavioral",
+        "thinking": "The user infers growth from needing larger clothes. Reviewing recent height data is appropriate. No time given, so use default 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Lately, I’ve been feeling more stretched out.",
+        "type": "symptom",
+        "thinking": "This vague sensation could suggest height growth. Verifying with height data is helpful. Default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Did my height increase over the last three weekends?",
+        "type": "explicit",
+        "thinking": "The user wants to see if there’s growth across three weekends. That spans 21 days, but minimum is 30, so we use numdays = 30.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you show how I’ve grown since March?",
+        "type": "explicit",
+        "thinking": "The user refers to a fixed point in the past. From March to now is approximately 150 days. So numdays = 150.",
+        "numdays": 150,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel taller every time I look in the mirror lately.",
+        "type": "symptom",
+        "thinking": "The user has a subjective sense of height gain. Reviewing recent height data can verify. No specific time, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Is there any growth pattern since I started physical therapy?",
+        "type": "explicit",
+        "thinking": "The user relates therapy with potential growth. Assuming the start was 2 months ago, we’ll set numdays = 60.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Check if my height has changed in the last 45 days.",
+        "type": "explicit",
+        "thinking": "The user directly requests height data for the past 45 days. This helps track moderate-term growth. So numdays = 45.",
+        "numdays": 45,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I think my body’s reaching new heights—literally.",
+        "type": "metaphorical",
+        "thinking": "The user uses figurative language to express possible growth. We should validate this through height data. Default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "It feels like I’m growing out of my space.",
+        "type": "metaphorical",
+        "thinking": "The user implies they feel too big for their usual surroundings, suggesting growth. Check height data for confirmation. Default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Am I still growing?",
+        "type": "explicit",
+        "thinking": "The user wants to know if growth is ongoing. Analyzing recent height data can reveal a trend. No specific time range is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Have I grown any taller in the last year?",
+        "type": "explicit",
+        "thinking": "The user is directly asking about height changes over the past year. This clear request justifies calling get_height_data to retrieve height measurements. The time window 'last year' maps to 365 days.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I'm not as tall as I used to be since last summer.",
+        "type": "implicit",
+        "thinking": "The user hints at a concern about possibly losing height since last summer, suggesting a need to check height trends. Calling get_height_data is appropriate to analyze measurements. 'Since last summer' roughly translates to 365 days, assuming summer was about a year ago.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I've been slouching more lately, could that affect my height records this month?",
+        "type": "behavioral",
+        "thinking": "The user mentions a change in posture (slouching) and wonders about its impact on height records, indicating a need to review recent height data. get_height_data will help assess measurements for consistency. 'This month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My back’s been hurting a lot the past two months, is my height okay?",
+        "type": "symptom",
+        "thinking": "The user connects back pain to a potential height concern, suggesting a need to check height stability. get_height_data is needed to evaluate height trends alongside the symptom. 'Past two months' maps to 60 days.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I'm shrinking into myself over the last few weeks.",
+        "type": "metaphorical",
+        "thinking": "The user uses 'shrinking' figuratively, possibly reflecting a concern about physical height or self-perception. get_height_data will clarify if there's an actual height change. 'Last few weeks' maps to 21 days.",
+        "numdays": 21,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you check if my height changed since January?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests a height change check since January, which requires historical data. get_height_data will retrieve the relevant measurements. Assuming January was about 7 months ago (Jan to Aug 2025), this maps to 210 days.",
+        "numdays": 210,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My clothes don’t fit as well as they did last spring, am I shorter?",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a concern about height by mentioning clothes fit, possibly hinting at height loss. get_height_data will help verify any changes. 'Last spring' (around April) maps to roughly 120 days.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been doing yoga for the past 3 months, has it helped my height?",
+        "type": "behavioral",
+        "thinking": "The user links yoga practice to potential height changes, suggesting a need to track height data. get_height_data will show if there’s been any impact. 'Past 3 months' maps to 90 days.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My knees have been aching since last month, could that mean my height’s off?",
+        "type": "symptom",
+        "thinking": "The user associates knee pain with a possible height issue, indicating a need to check height records. get_height_data will provide clarity on any changes. 'Since last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m standing smaller these days.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'standing smaller' suggests a metaphorical concern that may relate to physical height. get_height_data will confirm if there’s an actual change. No time window is specified, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height been stable over the last 6 months?",
+        "type": "explicit",
+        "thinking": "The user directly asks about height stability over a specific period, requiring historical data. get_height_data will provide the necessary measurements. 'Last 6 months' maps to 180 days.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I noticed my reflection looks different since the holidays.",
+        "type": "implicit",
+        "thinking": "The user subtly suggests a change in appearance, possibly related to height, since the holidays. get_height_data will help verify any height changes. Assuming holidays refer to December 2024, this maps to about 240 days.",
+        "numdays": 240,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been stretching every morning for the past two weeks, any height difference?",
+        "type": "behavioral",
+        "thinking": "The user mentions a new stretching habit and asks about height changes, indicating a need for recent data. get_height_data will assess any impact. 'Past two weeks' maps to 14 days, but since numdays must be at least 30, we use 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My neck’s been stiff for the last couple of months, is my height affected?",
+        "type": "symptom",
+        "thinking": "The user connects neck stiffness to a potential height concern, suggesting a need to review height data. get_height_data will clarify if there’s a trend. 'Last couple of months' maps to 60 days.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m sinking lower every day this month.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'sinking lower' implies a possible concern about height loss, expressed figuratively. get_height_data will check for actual changes. 'This month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you tell if I’ve grown since last fall?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about growth since last fall, requiring historical height data. get_height_data will retrieve the measurements. 'Last fall' (around October 2024) maps to about 300 days.",
+        "numdays": 300,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My shoes feel tighter than they did last winter, could my height have changed?",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests a height concern through shoe fit, possibly indicating posture or height changes. get_height_data will verify trends. 'Last winter' (around February 2024) maps to about 180 days.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been lifting weights for the past 4 months, does that affect my height?",
+        "type": "behavioral",
+        "thinking": "The user questions if weightlifting impacts height, indicating a need to check measurements. get_height_data will provide relevant data. 'Past 4 months' maps to 120 days.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve had hip pain since early this year, is my height still the same?",
+        "type": "symptom",
+        "thinking": "The user links hip pain to a possible height change, suggesting a need to review data. get_height_data will check for stability. 'Since early this year' (January 2025) maps to about 210 days.",
+        "numdays": 210,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m not standing as tall as I should.",
+        "type": "metaphorical",
+        "thinking": "The user’s phrase 'not standing as tall' may reflect a concern about physical height or confidence. get_height_data will clarify physical changes. No time window is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Did my height change at all in the past 3 weeks?",
+        "type": "explicit",
+        "thinking": "The user directly asks about height changes over a recent period. get_height_data will retrieve the data. 'Past 3 weeks' maps to 21 days, but since numdays must be at least 30, we use 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My pants seem shorter than they were last month, am I taller?",
+        "type": "implicit",
+        "thinking": "The user hints at possible height increase through pants fit, suggesting a need to check data. get_height_data will verify changes. 'Last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been swimming daily for the past 2 months, has it changed my height?",
+        "type": "behavioral",
+        "thinking": "The user wonders if swimming affects height, indicating a need for data analysis. get_height_data will show any trends. 'Past 2 months' maps to 60 days.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My shoulders feel tight this week, could that mess with my height?",
+        "type": "symptom",
+        "thinking": "The user connects shoulder tightness to a potential height issue, suggesting a need to check records. get_height_data will assess trends. 'This week' maps to 7 days, but since numdays must be at least 30, we use 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m crumbling under pressure lately.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'crumbling' may metaphorically suggest height loss or emotional strain. get_height_data will confirm physical changes. No time window is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you see if my height’s been steady since last quarter?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about height stability over the last quarter. get_height_data will retrieve the data. 'Last quarter' (April-June 2025) maps to about 90 days.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My mirror seems higher up since last year, am I shorter?",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a height concern through the mirror’s perceived height. get_height_data will check for changes. 'Since last year' maps to 365 days.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I started running every day for the past month, any height changes?",
+        "type": "behavioral",
+        "thinking": "The user links running to potential height changes, requiring recent data. get_height_data will assess any impact. 'Past month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My legs feel heavy since last week, is my height okay?",
+        "type": "symptom",
+        "thinking": "The user associates leg heaviness with a possible height issue, suggesting a need to review data. get_height_data will clarify trends. 'Since last week' maps to 7 days, but since numdays must be at least 30, we use 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m shrinking away this year.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'shrinking away' suggests a figurative concern about height loss. get_height_data will verify physical changes. 'This year' maps to about 210 days (January to August 2025).",
+        "numdays": 210,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height gone up at all since last summer?",
+        "type": "explicit",
+        "thinking": "The user directly asks about height increase since last summer. get_height_data will retrieve the data. 'Last summer' (around July 2024) maps to about 365 days.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My belts don’t fit right since last fall, could my height be different?",
+        "type": "implicit",
+        "thinking": "The user hints at a height change through belt fit issues, suggesting a need for data. get_height_data will check trends. 'Since last fall' (October 2024) maps to about 300 days.",
+        "numdays": 300,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been doing Pilates for the last 5 months, has it affected my height?",
+        "type": "behavioral",
+        "thinking": "The user wonders if Pilates impacts height, indicating a need for data analysis. get_height_data will show trends. 'Last 5 months' maps to 150 days.",
+        "numdays": 150,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My lower back’s been sore since June, is my height still normal?",
+        "type": "symptom",
+        "thinking": "The user connects back pain to a potential height issue, suggesting a need to check records. get_height_data will assess stability. 'Since June' (June to August 2025) maps to about 60 days.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m folding into myself these days.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'folding into myself' may reflect a concern about height or posture. get_height_data will confirm physical changes. No time window is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you check my height trends for the past 9 months?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests height trend analysis for a specific period. get_height_data will retrieve the data. 'Past 9 months' maps to 270 days.",
+        "numdays": 270,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My hats feel looser since last winter, am I shorter?",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests a height concern through hat fit, possibly indicating a change. get_height_data will verify trends. 'Last winter' (February 2024) maps to about 180 days.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been doing daily stretches since March, any height difference?",
+        "type": "behavioral",
+        "thinking": "The user links stretching to potential height changes, requiring data analysis. get_height_data will assess impact. 'Since March' (March to August 2025) maps to about 150 days.",
+        "numdays": 150,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My feet hurt more this month, could that affect my height?",
+        "type": "symptom",
+        "thinking": "The user connects foot pain to a possible height issue, suggesting a need to check data. get_height_data will clarify trends. 'This month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m shrinking under the weight of everything lately.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'shrinking' suggests a figurative concern that may relate to height. get_height_data will check for physical changes. No time window is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Is my height the same as it was last spring?",
+        "type": "explicit",
+        "thinking": "The user directly asks about height consistency since last spring. get_height_data will retrieve the data. 'Last spring' (April 2024) maps to about 120 days.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My posture feels off since last month, could my height have changed?",
+        "type": "implicit",
+        "thinking": "The user hints at a height concern through posture changes, suggesting a need for data. get_height_data will verify trends. 'Since last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been hiking every weekend for the past 3 months, any height impact?",
+        "type": "behavioral",
+        "thinking": "The user wonders if hiking affects height, indicating a need for data analysis. get_height_data will show trends. 'Past 3 months' maps to 90 days.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My joints have been creaky since last fall, is my height okay?",
+        "type": "symptom",
+        "thinking": "The user links joint issues to a potential height concern, suggesting a need to check records. get_height_data will assess stability. 'Since last fall' (October 2024) maps to about 300 days.",
+        "numdays": 300,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m not measuring up physically this year.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'not measuring up' may metaphorically suggest a height concern. get_height_data will confirm physical changes. 'This year' maps to about 210 days.",
+        "numdays": 210,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you track my height changes since last Christmas?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests height change tracking since last Christmas. get_height_data will retrieve the data. 'Since last Christmas' (December 2024) maps to about 240 days.",
+        "numdays": 240,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My jackets feel longer since last summer, am I shorter?",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests a height concern through jacket fit, possibly indicating a change. get_height_data will verify trends. 'Since last summer' (July 2024) maps to about 365 days.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been doing core workouts for the past 6 weeks, any height changes?",
+        "type": "behavioral",
+        "thinking": "The user links core workouts to potential height changes, requiring recent data. get_height_data will assess impact. 'Past 6 weeks' maps to 42 days.",
+        "numdays": 42,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My spine feels stiff since last month, could that affect my height?",
+        "type": "symptom",
+        "thinking": "The user connects spine stiffness to a possible height issue, suggesting a need to check data. get_height_data will clarify trends. 'Since last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m diminishing bit by bit this year.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'diminishing' suggests a figurative concern about height loss. get_height_data will verify physical changes. 'This year' maps to about 210 days.",
+        "numdays": 210,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I haven't grown at all this year. Can you check?",
+        "type": "symptom",
+        "thinking": "The user expresses concern about lack of growth, indicating they want to review their height data. Since they mention 'this year', I'll look at data from the past 365 days to assess their growth pattern.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My doctor asked if my growth has been steady over the past 6 months.",
+        "type": "explicit",
+        "thinking": "This is a direct request for height data analysis with a specific time frame mentioned. 'Past 6 months' clearly indicates we should examine the last 180 days of height measurements.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "All my friends are taller than me now...",
+        "type": "implicit",
+        "thinking": "The user is hinting at concerns about their height relative to peers. No specific time frame is mentioned, so we'll default to showing the last 30 days of data to check recent trends.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I've been stretching every morning for 3 months - has it made any difference?",
+        "type": "behavioral",
+        "thinking": "The user changed their behavior (stretching routine) and wants to see if it affected their height. They mention '3 months', so we'll analyze height data from the past 90 days.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm the shortest in my class and it's making me sad.",
+        "type": "symptom",
+        "thinking": "The user associates their height with emotional distress. No time frame is specified, so we'll show the last 30 days of data to start the conversation about growth patterns.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my growth spurt started yet?",
+        "type": "explicit",
+        "thinking": "Direct question about growth patterns. Since no time is specified, we'll examine the last 30 days to look for any sudden changes in height measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My pants keep getting shorter - am I imagining things?",
+        "type": "metaphorical",
+        "thinking": "The user uses clothing as a metaphor for potential growth. This suggests they want to check if their height has increased. No specific time mentioned, so defaulting to 30 days of data.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you show my height changes since school started in September?",
+        "type": "explicit",
+        "thinking": "Clear request with a specific time reference ('since September'). Depending on current month, this would typically be about 3-5 months (90-150 days) worth of data needed.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like a sapling among redwoods at basketball practice.",
+        "type": "metaphorical",
+        "thinking": "The user uses tree metaphors to express feeling shorter than teammates. They likely want to understand their growth pattern. No time specified, so we'll show 30 days of data.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My growth chart from last year shows I was supposed to be taller by now.",
+        "type": "implicit",
+        "thinking": "The user implies concern about not meeting expected height projections. They reference 'last year', so we should compare current height with measurements from the past 365 days.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height changed since I started my new diet two weeks ago?",
+        "type": "behavioral",
+        "thinking": "User connects dietary changes to potential height changes. The time frame is clearly 'two weeks', so we'll examine the last 14 days of height data.",
+        "numdays": 14,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I need my height records for the past quarter for my sports physical.",
+        "type": "explicit",
+        "thinking": "Direct request with specific time frame ('past quarter'). A quarter equals about 90 days, so we'll retrieve that much height data.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Everyone says I've shot up recently - can you check?",
+        "type": "implicit",
+        "thinking": "User is asking indirectly about recent growth. 'Recently' is vague, so we'll default to showing the last 30 days of height measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My back has been hurting and I wonder if it's from growing.",
+        "type": "symptom",
+        "thinking": "User associates physical discomfort with potential growth. No specific time mentioned, so we'll examine the last 30 days of height data to check for growth spurts.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can I see how much I've grown since my birthday?",
+        "type": "explicit",
+        "thinking": "Clear request with time reference ('since birthday'). Depending on when the birthday was, this could range from days to nearly a year. Defaulting to 180 days as a reasonable middle ground.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm always the one in front for class photos.",
+        "type": "implicit",
+        "thinking": "User hints at being shorter than classmates by mentioning photo positions. No time frame specified, so we'll show the last 30 days of height data to start the analysis.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My little brother is catching up to me in height!",
+        "type": "behavioral",
+        "thinking": "User notices a behavioral change in sibling's height relative to theirs. No specific time mentioned, so we'll examine the last 30 days of their height data for changes.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I'm stuck at the same height while everyone else grows.",
+        "type": "symptom",
+        "thinking": "User expresses emotional concern about perceived lack of growth. No time specified, so we'll analyze the last 90 days of data to check for any height changes.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you compare my height now versus when I started high school?",
+        "type": "explicit",
+        "thinking": "Direct request for height comparison with a specific reference point. Assuming high school started about 180 days ago, we'll use that timeframe.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm a late bloomer when it comes to growth.",
+        "type": "metaphorical",
+        "thinking": "User uses metaphorical language about growth patterns. They likely want to see their height data. No time specified, so defaulting to 90 days to assess recent trends.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My growth seems to have slowed down this semester.",
+        "type": "behavioral",
+        "thinking": "User observes a change in their growth pattern during a specific time ('this semester'). Assuming a semester is about 4 months, we'll examine the last 120 days of data.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Am I on track to reach my predicted adult height?",
+        "type": "explicit",
+        "thinking": "Direct question about growth projections. To assess this, we need sufficient data - defaulting to the past year (365 days) to analyze growth trends.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like a tiny seedling in a forest of trees.",
+        "type": "metaphorical",
+        "thinking": "User employs nature metaphors to express feeling short. They likely want height data. No time specified, so we'll show the last 30 days of measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height increased since summer vacation started?",
+        "type": "explicit",
+        "thinking": "Clear request with time reference ('since summer started'). Depending on current date, this is typically 30-90 days, so we'll use 60 days as a midpoint.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My knees have been aching - could this be growing pains?",
+        "type": "symptom",
+        "thinking": "User connects physical symptoms to potential growth. To check for growth spurts that might cause this, we'll examine the last 30 days of height data.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I think I've grown an inch since last month.",
+        "type": "behavioral",
+        "thinking": "User reports a perceived height change with specific time ('since last month'). We'll verify this by examining the last 30 days of height measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you show my height progression over the past year?",
+        "type": "explicit",
+        "thinking": "Direct request with clear time frame ('past year'). We'll retrieve the full 365 days of height data for comprehensive analysis.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm always looking up to my friends these days.",
+        "type": "implicit",
+        "thinking": "User hints at being shorter than friends by mentioning physical perspective. 'These days' suggests recent concern, so we'll show the last 30 days of height data.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My growth seems to have stalled since the winter.",
+        "type": "behavioral",
+        "thinking": "User observes a change in growth pattern with seasonal reference. Depending on current season, this could be 3-6 months (90-180 days) worth of data needed.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I need to update my driver's license height - has it changed much since last measurement?",
+        "type": "explicit",
+        "thinking": "Direct request about height change since last measurement. Without knowing when that was, we'll default to showing the last 90 days of data for meaningful comparison.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel vertically challenged at family gatherings.",
+        "type": "metaphorical",
+        "thinking": "User uses humorous metaphor about height. They likely want to see their growth data. No time specified, so we'll show the last 30 days of measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My pediatrician wants to know if I've had any growth spurts recently.",
+        "type": "implicit",
+        "thinking": "User implies need to check for sudden height changes. 'Recently' is vague, so we'll examine the last 60 days of data to identify any spurts.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you show my height changes week by week for the past month?",
+        "type": "explicit",
+        "thinking": "Very specific request for weekly data over a month. We'll retrieve the last 30 days of height measurements to show weekly trends.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I've been sleeping more - does that correlate with any height changes?",
+        "type": "behavioral",
+        "thinking": "User connects behavioral change (sleep patterns) to potential growth. No specific time mentioned, so we'll examine the last 30 days of height and sleep data.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm worried I stopped growing too early.",
+        "type": "symptom",
+        "thinking": "User expresses anxiety about premature growth cessation. To assess this, we need sufficient data - defaulting to the past 180 days to analyze growth trends.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My height percentile at my last physical was lower than expected.",
+        "type": "implicit",
+        "thinking": "User hints at concern about growth metrics from a medical visit. Since physicals are typically annual, we'll examine the past 365 days of data for context.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you compare my current height to where I was at the start of puberty?",
+        "type": "explicit",
+        "thinking": "Direct request for long-term height comparison. Since puberty typically starts years ago, we'll use the maximum available data (365 days) as a proxy for recent growth.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like a dwarf in the land of giants.",
+        "type": "metaphorical",
+        "thinking": "User employs fantasy metaphor to express feeling short. They likely want height data. No time specified, so we'll show the last 30 days of measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my growth rate changed since I began my new exercise routine?",
+        "type": "behavioral",
+        "thinking": "User connects exercise changes to potential growth impact. Without knowing when routine began, we'll examine the last 60 days of height data for changes.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My height hasn't changed on the chart in three months.",
+        "type": "symptom",
+        "thinking": "User reports a specific concern about lack of growth. They mention 'three months', so we'll verify this by examining the last 90 days of height measurements.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you show my height trends since we got this tracking device?",
+        "type": "explicit",
+        "thinking": "Direct request with time reference tied to device acquisition. Without knowing exactly when that was, we'll default to showing the last 90 days of height data.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm always the last one picked for basketball.",
+        "type": "implicit",
+        "thinking": "User hints at height concerns through sports experience. No time specified, so we'll show the last 30 days of height data to start the conversation.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My parents were both late growers - am I following that pattern?",
+        "type": "explicit",
+        "thinking": "User asks directly about genetic growth patterns. To assess this, we need sufficient data - defaulting to the past 365 days to analyze growth trends.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I'm shrinking instead of growing!",
+        "type": "metaphorical",
+        "thinking": "User uses exaggeration to express concern about growth. They likely want to see height data. No time specified, so we'll show the last 30 days of measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height increased since I stopped drinking soda?",
+        "type": "behavioral",
+        "thinking": "User connects dietary change to potential height impact. Without knowing when they stopped soda, we'll examine the last 60 days of height data for changes.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I need my height records for the past 8 weeks for my sports team.",
+        "type": "explicit",
+        "thinking": "Direct request with specific time frame ('past 8 weeks'). We'll retrieve the last 56 days of height measurements as requested.",
+        "numdays": 56,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My younger cousin is taller than me now.",
+        "type": "behavioral",
+        "thinking": "User notices a change in height relative to family member. No time specified, so we'll examine the last 90 days of their height data for trends.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like a sapling that stopped getting sunlight.",
+        "type": "metaphorical",
+        "thinking": "User employs nature metaphor to express growth concerns. They likely want height data. No time specified, so we'll show the last 30 days of measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you show my growth curve over the past 6 months?",
+        "type": "explicit",
+        "thinking": "Direct request with clear time frame ('past 6 months'). We'll retrieve the last 180 days of height measurements to show the growth curve.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My growth plates might be closing - can you check my recent changes?",
+        "type": "symptom",
+        "thinking": "User expresses medical concern about growth potential. 'Recent' is vague, so we'll examine the last 90 days of height data for meaningful trends.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I've been tracking my height daily for the past month - any patterns?",
+        "type": "explicit",
+        "thinking": "Direct request to analyze a specific dataset ('past month'). We'll examine the last 30 days of daily height measurements for patterns.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm always having to hem my pants shorter.",
+        "type": "implicit",
+        "thinking": "User hints at potential height decrease through clothing adjustments. This suggests checking height data. No time specified, so defaulting to 90 days of measurements.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Did my height change at all since the start of this year?",
+        "type": "explicit",
+        "thinking": "The user is directly asking about any changes in height since the beginning of 2025. This clear request warrants calling get_height_data to fetch height measurements. 'Since the start of this year' (January to August 2025) maps to approximately 210 days.",
+        "numdays": 210,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My shirts feel tighter around the shoulders lately, am I shorter?",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests a concern about height through the fit of shirts, possibly hinting at posture or height changes. get_height_data will help confirm any trends. No specific time window is provided, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been doing daily meditation for the past 2 months, could that affect my height?",
+        "type": "behavioral",
+        "thinking": "The user wonders if their meditation practice might influence height, possibly through posture improvements. get_height_data is needed to check for any changes. 'Past 2 months' maps to 60 days.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been feeling unsteady on my feet this week, is my height okay?",
+        "type": "symptom",
+        "thinking": "The user connects feeling unsteady to a potential height issue, indicating a need to review height data. get_height_data will assess stability. 'This week' maps to 7 days, but since numdays must be at least 30, we use 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m losing ground bit by bit this month.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'losing ground' metaphor may reflect a concern about physical height or stability. get_height_data will clarify if there’s an actual height change. 'This month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you tell if I’ve grown taller in the last 8 months?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about height growth over the past 8 months. get_height_data will retrieve the necessary measurements. 'Last 8 months' maps to 240 days.",
+        "numdays": 240,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My desk chair feels too low since last spring, could my height have changed?",
+        "type": "implicit",
+        "thinking": "The user hints at a possible height change by noting the chair feels off, suggesting a need to check data. get_height_data will verify trends. 'Since last spring' (around April 2024) maps to about 120 days.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I started jogging every evening for the past 3 months, has it impacted my height?",
+        "type": "behavioral",
+        "thinking": "The user questions if jogging might affect height, possibly through posture or compression. get_height_data will show any trends. 'Past 3 months' maps to 90 days.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My ankles have been swollen since last month, could that mess with my height?",
+        "type": "symptom",
+        "thinking": "The user links ankle swelling to a potential height concern, suggesting a need to review measurements. get_height_data will clarify if there’s a trend. 'Since last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m sinking into the background these days.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'sinking into the background' may metaphorically suggest a height or presence concern. get_height_data will confirm physical changes. No time window is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height stayed the same over the past year?",
+        "type": "explicit",
+        "thinking": "The user directly asks about height stability over the past year. get_height_data will provide the relevant measurements. 'Past year' maps to 365 days.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My doorframes seem higher since last winter, am I shorter?",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a height concern by noting doorframes seem higher, possibly indicating a change. get_height_data will check for trends. 'Since last winter' (February 2024) maps to about 180 days.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been practicing tai chi for the past 4 months, any height changes?",
+        "type": "behavioral",
+        "thinking": "The user wonders if tai chi practice affects height, possibly through posture. get_height_data will assess any impact. 'Past 4 months' maps to 120 days.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My hips feel stiff since last week, is my height affected?",
+        "type": "symptom",
+        "thinking": "The user connects hip stiffness to a potential height issue, suggesting a need to check records. get_height_data will clarify trends. 'Since last week' maps to 7 days, but since numdays must be at least 30, we use 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m shrinking under stress this month.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'shrinking under stress' suggests a figurative concern that may relate to height. get_height_data will verify physical changes. 'This month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you check if my height’s changed since last fall?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests a height change check since last fall. get_height_data will retrieve the measurements. 'Last fall' (October 2024) maps to about 300 days.",
+        "numdays": 300,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My coats feel longer than they did last summer, am I shorter?",
+        "type": "implicit",
+        "thinking": "The user hints at a height concern through coat fit, suggesting a possible change. get_height_data will verify trends. 'Last summer' (July 2024) maps to about 365 days.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been doing strength training for the past 5 months, has it affected my height?",
+        "type": "behavioral",
+        "thinking": "The user questions if strength training impacts height, indicating a need for data analysis. get_height_data will show trends. 'Past 5 months' maps to 150 days.",
+        "numdays": 150,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My calves have been tight since last month, could that affect my height?",
+        "type": "symptom",
+        "thinking": "The user links calf tightness to a possible height issue, suggesting a need to check data. get_height_data will clarify trends. 'Since last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m not standing as proud as I used to.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'not standing as proud' may reflect a concern about height or posture. get_height_data will confirm physical changes. No time window is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Did my height change at all in the past 6 months?",
+        "type": "explicit",
+        "thinking": "The user directly asks about height changes over the past 6 months. get_height_data will retrieve the data. 'Past 6 months' maps to 180 days.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My belts feel off since last spring, could my height be different?",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests a height concern through belt fit issues. get_height_data will verify any changes. 'Since last spring' (April 2024) maps to about 120 days.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been doing barre classes for the past 2 months, any height impact?",
+        "type": "behavioral",
+        "thinking": "The user wonders if barre classes affect height, possibly through posture. get_height_data will assess trends. 'Past 2 months' maps to 60 days.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My neck feels sore this week, could that mess with my height?",
+        "type": "symptom",
+        "thinking": "The user connects neck soreness to a potential height issue, suggesting a need to check records. get_height_data will clarify trends. 'This week' maps to 7 days, but since numdays must be at least 30, we use 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m fading into the floor lately.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'fading into the floor' may metaphorically suggest a height or presence concern. get_height_data will confirm physical changes. No time window is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you see if my height’s been consistent since last Christmas?",
+        "type": "explicit",
+        "thinking": "The user explicitly asks about height consistency since last Christmas. get_height_data will retrieve the data. 'Since last Christmas' (December 2024) maps to about 240 days.",
+        "numdays": 240,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My shoes feel looser since last fall, am I taller?",
+        "type": "implicit",
+        "thinking": "The user hints at a possible height increase through shoe fit, suggesting a need to check data. get_height_data will verify trends. 'Since last fall' (October 2024) maps to about 300 days.",
+        "numdays": 300,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been cycling daily for the past 3 months, has it changed my height?",
+        "type": "behavioral",
+        "thinking": "The user questions if cycling impacts height, possibly through posture or compression. get_height_data will show trends. 'Past 3 months' maps to 90 days.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My knees feel wobbly since last month, is my height still okay?",
+        "type": "symptom",
+        "thinking": "The user links knee issues to a potential height concern, suggesting a need to review data. get_height_data will assess stability. 'Since last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m collapsing inward this year.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'collapsing inward' suggests a figurative concern about height or posture. get_height_data will verify physical changes. 'This year' maps to about 210 days.",
+        "numdays": 210,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height gone up since last summer?",
+        "type": "explicit",
+        "thinking": "The user directly asks about a height increase since last summer. get_height_data will retrieve the measurements. 'Last summer' (July 2024) maps to about 365 days.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My pants feel tighter since last winter, could I be taller?",
+        "type": "implicit",
+        "thinking": "The user indirectly suggests a height concern through pants fit, possibly indicating growth. get_height_data will verify trends. 'Since last winter' (February 2024) maps to about 180 days.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been doing Zumba for the past 4 months, any height changes?",
+        "type": "behavioral",
+        "thinking": "The user wonders if Zumba affects height, possibly through posture or activity. get_height_data will assess impact. 'Past 4 months' maps to 120 days.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My back feels achy since last week, could that affect my height?",
+        "type": "symptom",
+        "thinking": "The user connects back pain to a possible height issue, suggesting a need to check data. get_height_data will clarify trends. 'Since last week' maps to 7 days, but since numdays must be at least 30, we use 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m shrinking into the shadows this month.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'shrinking into the shadows' may reflect a concern about height or presence. get_height_data will confirm physical changes. 'This month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you track my height since last Easter?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests height tracking since last Easter. get_height_data will retrieve the data. 'Since last Easter' (around April 2024) maps to about 120 days.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My hats feel tighter since last summer, could my height have changed?",
+        "type": "implicit",
+        "thinking": "The user hints at a height concern through hat fit, suggesting a possible change. get_height_data will verify trends. 'Since last summer' (July 2024) maps to about 365 days.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been doing morning stretches for the past 6 weeks, any height difference?",
+        "type": "behavioral",
+        "thinking": "The user links stretching to potential height changes, requiring recent data. get_height_data will assess impact. 'Past 6 weeks' maps to 42 days.",
+        "numdays": 42,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My shoulders feel heavy since last month, is my height okay?",
+        "type": "symptom",
+        "thinking": "The user connects shoulder heaviness to a potential height issue, suggesting a need to check records. get_height_data will clarify trends. 'Since last month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m not rising to my full height lately.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'not rising to my full height' may reflect a concern about physical height or confidence. get_height_data will confirm physical changes. No time window is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Is my height the same as it was last fall?",
+        "type": "explicit",
+        "thinking": "The user directly asks about height consistency since last fall. get_height_data will retrieve the data. 'Last fall' (October 2024) maps to about 300 days.",
+        "numdays": 300,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My mirror feels too high since last spring, am I shorter?",
+        "type": "implicit",
+        "thinking": "The user indirectly raises a height concern through the mirror’s perceived height. get_height_data will check for changes. 'Since last spring' (April 2024) maps to about 120 days.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been doing yoga retreats for the past 3 months, has it affected my height?",
+        "type": "behavioral",
+        "thinking": "The user wonders if yoga retreats impact height, possibly through posture. get_height_data will show trends. 'Past 3 months' maps to 90 days.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My legs feel stiff since last week, could that affect my height?",
+        "type": "symptom",
+        "thinking": "The user connects leg stiffness to a potential height issue, suggesting a need to check data. get_height_data will clarify trends. 'Since last week' maps to 7 days, but since numdays must be at least 30, we use 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m dwindling away this year.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'dwindling away' suggests a figurative concern about height loss. get_height_data will verify physical changes. 'This year' maps to about 210 days.",
+        "numdays": 210,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you check my height trends for the past 9 months?",
+        "type": "explicit",
+        "thinking": "The user explicitly requests height trend analysis for the past 9 months. get_height_data will retrieve the data. 'Past 9 months' maps to 270 days.",
+        "numdays": 270,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My jackets seem shorter since last winter, could I be taller?",
+        "type": "implicit",
+        "thinking": "The user hints at a possible height increase through jacket fit. get_height_data will verify trends. 'Since last winter' (February 2024) maps to about 180 days.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been swimming laps for the past 5 months, any height changes?",
+        "type": "behavioral",
+        "thinking": "The user questions if swimming impacts height, possibly through posture or decompression. get_height_data will assess trends. 'Past 5 months' maps to 150 days.",
+        "numdays": 150,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My joints ache more this month, is my height still normal?",
+        "type": "symptom",
+        "thinking": "The user connects joint pain to a potential height issue, suggesting a need to check records. get_height_data will assess stability. 'This month' maps to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like I’m shrinking into nothingness lately.",
+        "type": "metaphorical",
+        "thinking": "The user’s 'shrinking into nothingness' may reflect a concern about height or presence. get_height_data will confirm physical changes. No time window is given, so default to 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I swear my bedroom doorway feels lower than it used to - am I getting taller?",
+        "type": "metaphorical",
+        "thinking": "User uses environmental perception to hint at height changes. They're indirectly asking about growth. No specific timeframe mentioned, so defaulting to 30 days of height data.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Can you generate a height progress report for my endocrinologist appointment next week?",
+        "type": "explicit",
+        "thinking": "Direct request for medical documentation. Since they need it for an upcoming appointment, we'll provide comprehensive data from the past 90 days.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Ever since I turned 16, my growth seems to have plateaued.",
+        "type": "behavioral",
+        "thinking": "User connects age milestone to growth pattern change. 'Since turning 16' suggests we should examine data from their birthday (assuming ~90 days ago).",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My knees keep knocking into things that never used to be in my way.",
+        "type": "symptom",
+        "thinking": "Physical coordination changes suggest possible growth. No timeframe specified, so we'll check the last 60 days for height increases that might affect spatial awareness.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Show me my height fluctuations during basketball season this year.",
+        "type": "explicit",
+        "thinking": "Clear request tied to a specific period. Assuming a 3-month season, we'll display height data from the past 90 days.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm the same height as my mom now and it feels weird.",
+        "type": "implicit",
+        "thinking": "User hints at concern about reaching parental height milestone. To assess growth trajectory, we'll examine the past 120 days of data.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my vertical jump improvement correlated with any height changes this semester?",
+        "type": "behavioral",
+        "thinking": "User connects athletic performance to potential growth. 'This semester' suggests examining the past 4 months (120 days) of height and jump data.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My shadow looks longer at sunset lately - does that mean I'm taller?",
+        "type": "metaphorical",
+        "thinking": "Creative use of shadow observation to inquire about height. 'Lately' is vague, so we'll show the last 45 days of measurements.",
+        "numdays": 45,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I've been having growing pains every night for the past two weeks.",
+        "type": "symptom",
+        "thinking": "Physical symptoms suggest active growth. The specified timeframe is 'past two weeks', so we'll examine those 14 days for height changes.",
+        "numdays": 14,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Compare my current height to where I was before summer camp.",
+        "type": "explicit",
+        "thinking": "Direct comparison request with event-based timeframe. Assuming camp was about 60 days ago, we'll use that period for comparison.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "All my hoodies have become crop tops this winter.",
+        "type": "implicit",
+        "thinking": "Clothing changes hint at possible growth. 'This winter' suggests examining the past 90 days (one season) of height data.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my posture improvement affected my measured height since starting physical therapy?",
+        "type": "behavioral",
+        "thinking": "User connects therapeutic intervention to height measurement. Without knowing therapy start date, we'll examine last 60 days for changes.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I feel like a stretched rubber band that won't snap back.",
+        "type": "metaphorical",
+        "thinking": "Creative metaphor expressing growth sensations. No timeframe given, so we'll display the last 30 days of height measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My joints have been cracking more than usual this month - growth spurt?",
+        "type": "symptom",
+        "thinking": "Physical changes potentially linked to growth. 'This month' clearly indicates we should examine the past 30 days of height data.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Generate a height percentile chart showing my progress since elementary school.",
+        "type": "explicit",
+        "thinking": "Direct request for long-term analysis. Since elementary school spans years, we'll show the maximum available data (365 days) with percentiles.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My little sister keeps stealing my clothes because they fit her now.",
+        "type": "implicit",
+        "thinking": "Family clothing situation hints at height concerns. No timeframe specified, so we'll examine the user's last 60 days of height data.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my swimming routine affected my growth rate since joining the team?",
+        "type": "behavioral",
+        "thinking": "User connects athletic participation to growth changes. Without team join date, we'll examine the past 90 days for correlations.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm a human telescope - extending slowly but surely.",
+        "type": "metaphorical",
+        "thinking": "Humorous metaphor about gradual growth. No timeframe given, so we'll show the last 45 days to assess 'slow but sure' changes.",
+        "numdays": 45,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My appetite has doubled but my height doesn't seem to match.",
+        "type": "symptom",
+        "thinking": "Connects dietary changes to growth expectations. No timeframe specified, so we'll examine the past 60 days of height measurements.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Plot my height against my sleep hours for the past quarter.",
+        "type": "explicit",
+        "thinking": "Clear request for correlation analysis. 'Past quarter' means we'll use 90 days of height and sleep data.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I used to be the tall one in all my childhood photos.",
+        "type": "implicit",
+        "thinking": "Nostalgic comparison hints at current height concerns. No timeframe given, so we'll show the last 30 days of data to start discussion.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Since switching to a vegan diet 6 weeks ago, I wonder if it's affected my growth.",
+        "type": "behavioral",
+        "thinking": "Specific dietary change with exact timeframe. We'll examine height data from the past 42 days (6 weeks) since the diet change.",
+        "numdays": 42,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm like a bonsai tree - perfectly formed but not growing taller.",
+        "type": "metaphorical",
+        "thinking": "Creative plant metaphor expressing growth concerns. No timeframe specified, so we'll display the last 60 days of measurements.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My shoes suddenly feel tight - could that mean I'm having a growth spurt?",
+        "type": "symptom",
+        "thinking": "Physical symptom potentially indicating growth. 'Suddenly' suggests recent changes, so we'll examine the past 14 days of height data.",
+        "numdays": 14,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Show my height velocity chart since puberty began.",
+        "type": "explicit",
+        "thinking": "Direct request for developmental analysis. Since puberty spans years, we'll show the maximum available data (365 days) with growth rates.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My annual checkup showed I'm below the growth curve.",
+        "type": "implicit",
+        "thinking": "Medical assessment hinting at concern. 'Annual' suggests we should examine the past 365 days to understand growth patterns.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my meditation practice affected my posture and measured height?",
+        "type": "behavioral",
+        "thinking": "Connects wellness practice to height measurement. No timeframe given, so we'll examine the last 45 days for changes.",
+        "numdays": 45,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm a human sundial - my shadow tells the time but never gets longer.",
+        "type": "metaphorical",
+        "thinking": "Creative time metaphor expressing growth frustration. No timeframe specified, so we'll show the last 30 days of measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My legs have been cramping at night for the past month.",
+        "type": "symptom",
+        "thinking": "Physical discomfort potentially linked to growth. 'Past month' clearly indicates examining the last 30 days of height data.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Compare my growth pattern to population averages for my age group.",
+        "type": "explicit",
+        "thinking": "Direct request for statistical comparison. To provide meaningful analysis, we'll use the past 180 days of height data.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Family reunions make me feel like I stopped growing too soon.",
+        "type": "implicit",
+        "thinking": "Social context hinting at height concerns. No timeframe given, so we'll examine the last 90 days of growth data.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height changed since I started taking these vitamin supplements?",
+        "type": "behavioral",
+        "thinking": "Connects supplement regimen to potential growth. Without start date, we'll examine the past 60 days for changes.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm a human accordion - expanding sideways but not upwards.",
+        "type": "metaphorical",
+        "thinking": "Humorous musical metaphor about growth patterns. No timeframe specified, so we'll display the last 30 days of measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My spine has been extra clicky when I stretch in the mornings.",
+        "type": "symptom",
+        "thinking": "Physical sensations potentially indicating growth. No timeframe given, so we'll examine the past 30 days of height data.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Show me my monthly height increments since last Christmas.",
+        "type": "explicit",
+        "thinking": "Clear request with holiday timeframe. Depending on current month, this is about 7-8 months (210-240 days) of data needed.",
+        "numdays": 210,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I need to duck through doorways that never used to be a problem.",
+        "type": "implicit",
+        "thinking": "Environmental interaction hinting at height increase. No timeframe specified, so we'll examine the last 60 days for growth spurts.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height changed since I began my nighttime stretching routine?",
+        "type": "behavioral",
+        "thinking": "Connects new habit to potential growth. Without routine start date, we'll examine the past 45 days for changes.",
+        "numdays": 45,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm a human elevator stuck between floors.",
+        "type": "metaphorical",
+        "thinking": "Mechanical metaphor expressing growth plateau. No timeframe given, so we'll show the last 30 days of height data.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My limbs feel like they're being pulled when I wake up.",
+        "type": "symptom",
+        "thinking": "Physical sensations suggesting growth. No timeframe specified, so we'll examine the past 30 days for height increases.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Generate a height prediction model based on my last growth phase.",
+        "type": "explicit",
+        "thinking": "Direct request for projection analysis. To identify previous growth phase, we'll examine the past 180 days of data.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My jeans have turned into capris without washing shrinkage.",
+        "type": "implicit",
+        "thinking": "Clothing changes hinting at growth. No timeframe given, so we'll examine the last 45 days of height measurements.",
+        "numdays": 45,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height increased since I improved my calcium intake?",
+        "type": "behavioral",
+        "thinking": "Connects dietary change to potential growth. Without knowing when intake changed, we'll examine the past 60 days.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm a human pogo stick that lost its spring.",
+        "type": "metaphorical",
+        "thinking": "Playful metaphor expressing growth frustration. No timeframe specified, so we'll display the last 30 days of measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My shoulders keep bumping into things that used to clear my head.",
+        "type": "symptom",
+        "thinking": "Physical spatial awareness changes suggesting growth. No timeframe given, so we'll examine the past 30 days for height increases.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Show my height standard deviations from the mean for my age cohort.",
+        "type": "explicit",
+        "thinking": "Direct request for statistical analysis. To provide meaningful data, we'll use the past 365 days of measurements.",
+        "numdays": 365,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I used to be able to see over everyone's heads at concerts.",
+        "type": "implicit",
+        "thinking": "Nostalgic comparison hinting at height concerns. No timeframe specified, so we'll show the last 60 days of data to start discussion.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my height changed since I started getting 8 hours of sleep regularly?",
+        "type": "behavioral",
+        "thinking": "Connects sleep habit change to potential growth. Without knowing when this began, we'll examine the past 75 days.",
+        "numdays": 75,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm a human Eiffel Tower that stopped construction.",
+        "type": "metaphorical",
+        "thinking": "Architectural metaphor expressing growth cessation. No timeframe given, so we'll display the last 30 days of measurements.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My feet have outgrown three shoe sizes this year already.",
+        "type": "symptom",
+        "thinking": "Physical change potentially indicating growth. 'This year' suggests examining the past 180 days (half year) of height data.",
+        "numdays": 180,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Calculate my growth velocity percentiles since my last birthday.",
+        "type": "explicit",
+        "thinking": "Direct request with event-based timeframe. Depending on birthday recency, we'll use approximately 120 days of data.",
+        "numdays": 120,
+        "function": "get_height_data"
+    },
+    {
+        "query": "All my childhood 'growth marks' on the wall are now below my head.",
+        "type": "implicit",
+        "thinking": "Nostalgic physical markers hinting at height. No timeframe specified, so we'll examine the last 90 days of measurements.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Have I gotten any taller since the new year?",
+        "type": "explicit",
+        "thinking": "The user is directly asking about height changes since the start of 2025. This straightforward request justifies calling get_height_data to retrieve height measurements. 'Since the new year' (January to August 2025) maps to approximately 210 days.",
+        "numdays": 210,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I’ve been feeling wobbly when I stand since last weekend, is my height okay?",
+        "type": "symptom",
+        "thinking": "The user connects feeling wobbly while standing to a potential height concern, indicating a need to check recent height data. get_height_data will help assess stability. 'Since last weekend' maps to about 7 days, but since numdays must be at least 30, we use 30 days.",
+        "numdays": 30,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I started rock climbing every week for the past 2 months, has it changed my height?",
+        "type": "behavioral",
+        "thinking": "The user wonders if rock climbing, a new physical activity, has impacted their height, possibly through posture or spinal alignment. get_height_data will provide data to evaluate any changes. 'Past 2 months' maps to 60 days.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "My car seat keeps needing adjustment - could I be growing again in my 20s?",
+        "type": "behavioral",
+        "thinking": "User notices ergonomic changes suggesting possible late growth. Since they mention being in their 20s, we'll examine the past 90 days for subtle height changes that might affect seating position.",
+        "numdays": 90,
+        "function": "get_height_data"
+    },
+    {
+        "query": "I'm a sapling in a redwood forest at my new job - everyone towers over me.",
+        "type": "metaphorical",
+        "thinking": "Nature metaphor expressing workplace height dynamics. The user likely wants to understand their growth potential. No timeframe specified, so we'll show the last 60 days of height data.",
+        "numdays": 60,
+        "function": "get_height_data"
+    },
+    {
+        "query": "Has my posture correction affected my measured height since starting chiropractic care?",
+        "type": "explicit",
+        "thinking": "Direct question connecting therapeutic intervention to height measurement. Without knowing exact start date, we'll examine the past 45 days for changes that might reflect improved posture.",
+        "numdays": 45,
+        "function": "get_height_data"
+    }
+]

@@ -1,0 +1,62 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "mental_chat16_k",
+  "dataset_size": 46460430,
+  "description": "",
+  "download_checksums": {
+    "hf://datasets/ShenLab/MentalChat16K@5f60cd380cfc58f0f12d44892bed41ee3670a70a/Interview_Data_6K.csv": {
+      "num_bytes": 13580450,
+      "checksum": null
+    },
+    "hf://datasets/ShenLab/MentalChat16K@5f60cd380cfc58f0f12d44892bed41ee3670a70a/Synthetic_Data_10K.csv": {
+      "num_bytes": 32843740,
+      "checksum": null
+    }
+  },
+  "download_size": 46424190,
+  "features": {
+    "instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "query": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "response": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "query_length": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "response_length": {
+      "dtype": "int64",
+      "_type": "Value"
+    },
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 92884620,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 46460430,
+      "num_examples": 16084,
+      "dataset_name": "mental_chat16_k"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}
