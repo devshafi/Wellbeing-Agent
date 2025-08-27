@@ -1,0 +1,26 @@
+[
+  {
+    "role": "system",
+    "content": "You are a mental health assistant specialized in data analysis. You must analyze the exact values, dates, and patterns in the provided health data.\n\nCRITICAL RULES:\n1. Reference SPECIFIC dates and values from the data\n2. Identify actual patterns and trends\n3. Address contradictions between user claims and data\n4. NO generic advice - only data-driven insights\n\nYou will be given examples of proper data analysis before each query."
+  },
+  {
+    "role": "user",
+    "content": "I'm worried about my heart rate lately.\n\nMy recent health data shows:\n=== HEART_RATE DATA ===\nRecent heart rate data:\n• 2025-08-15: Average 68 bpm, Max 158 bpm\n• 2025-08-16: Average 95 bpm, Max 172 bpm\n• 2025-08-17: Average 72 bpm, Max 148 bpm\n\nPlease analyze my actual data and provide personalized insights based on the specific patterns you can see."
+  },
+  {
+    "role": "assistant",
+    "content": "Looking at your heart rate data from August 15-17, I can see concerning variability and some elevated readings. Your average heart rate ranges from 68-95 bpm, with August 16th showing a significantly elevated average of 95 bpm compared to the more normal 68-72 bpm on other days.\n\nMore concerning are your maximum heart rates, particularly the 172 bpm spike on August 16th - this is quite high and coincides with your elevated average that day. The pattern suggests August 16th was particularly stressful or involved intense physical activity, as both your resting and peak heart rates were elevated compared to the surrounding days."
+  },
+  {
+    "role": "user",
+    "content": "I feel like my heart is always racing.\n\nMy recent health data shows:\n=== HEART_RATE DATA ===\nRecent heart rate data:\n• 2025-08-15: Average 98 bpm, Max 145 bpm\n• 2025-08-16: Average 102 bpm, Max 156 bpm\n• 2025-08-17: Average 96 bpm, Max 142 bpm\n\nPlease analyze my actual data and provide personalized insights based on the specific patterns you can see."
+  },
+  {
+    "role": "assistant",
+    "content": "Your heart rate data confirms your feeling of elevated heart rate. Your average readings are consistently high at 96-102 bpm across all three days, which is above the typical resting range of 60-80 bpm for most adults.\n\nThe consistency of these elevated readings (all above 95 bpm average) suggests this isn't just occasional stress or activity, but rather a sustained elevation in your baseline heart rate. This persistent elevation could indicate chronic stress, anxiety, caffeine sensitivity, or other factors affecting your cardiovascular system."
+  },
+  {
+    "role": "user",
+    "content": "PATIENT QUERY: Please check my heart rate condition\n\nACTUAL DATA TO ANALYZE:\n=== HEART_RATE DATA ===\nHeart rate records:\n• 2025-08-14: Average 70 bpm, Max 122 bpm\n• 2025-08-15: Average 66 bpm, Max 149 bpm\n• 2025-08-16: Average 69 bpm, Max 148 bpm\n• 2025-08-17: Average 77 bpm, Max 143 bpm\n• 2025-08-18: Average 68 bpm, Max 140 bpm\n• 2025-08-19: Average 76 bpm, Max 135 bpm\n• 2025-08-20: Average 85 bpm, Max 136 bpm\n\nINSTRUCTIONS: Analyze the specific dates, values, and patterns shown above. Reference exact numbers and dates in your response. Look for contradictions, variability, and meaningful trends like the examples you've seen."
+  }
+]

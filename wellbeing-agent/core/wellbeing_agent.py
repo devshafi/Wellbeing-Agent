@@ -18,7 +18,7 @@ class WellbeingAgent:
     
     def setup_models(self):
         """Initialize all models with specific paths"""
-        conversation_model_path = "/home/jovyan/Works/MSc_Thesis/mh_conversation/finetuned_model/llama3.2_3b_mh_conversation_v7"
+        conversation_model_path = "/home/jovyan/Works/MSc_Thesis/mh_conversation/finetuned_model/llama3.2_3b_mh_conversation_v3"
         function_calling_model_path = "/home/jovyan/Works/MSc_Thesis/mh_function_calling/model_training/finetuned_models/llama3.2_3b_mh_function_calling_v6"
         
         print("🚀 Initializing Agentic Mental Health System...")

@@ -15,10 +15,10 @@ class HistoryManager:
         })
         
         # Keep only last 10 exchanges (20 messages) to avoid context overflow
-        if len(self.conversation_history[patient_id]) > 20:
-            self.conversation_history[patient_id] = self.conversation_history[patient_id][-20:] 
+        if len(self.conversation_history[patient_id]) > 40:
+            self.conversation_history[patient_id] = self.conversation_history[patient_id][-40:] 
     
-    def get_conversation_context(self, patient_id, max_history=6):
+    def get_conversation_context(self, patient_id, max_history=20):
         """Get recent conversation history for context"""
         if patient_id not in self.conversation_history:
             return []

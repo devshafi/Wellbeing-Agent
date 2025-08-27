@@ -10,7 +10,8 @@ class FunctionRegistry:
         self.functions = {
             
             "get_sleep_data": self.get_sleep_data,
-            "get_heart_rate_data": self.get_heart_rate_data,           
+            "get_heart_rate_data": self.get_heart_rate_data,
+            "get_stress_data": self.get_stress_data,           
         
         }
     
@@ -49,8 +50,8 @@ class FunctionRegistry:
             date = datetime.now() - timedelta(days=num_days-1-i)  # Most recent day last
             sleep_record = {
                 "date": date.strftime("%Y-%m-%d"),
-                "hours_slept": round(random.uniform(4.0, 9.0), 1),
-                "quality": random.choice(["Poor", "Fair", "Good", "Excellent"])
+                "hours_slept": round(random.uniform(4.0, 5.0), 1),
+                "quality": random.choice(["Poor"])
             }
             sleep_records.append(sleep_record)
         
@@ -70,6 +71,28 @@ class FunctionRegistry:
             hr_records.append(hr_record)
         
         return hr_records
+    
+    def get_stress_data(self, patient_id: str, num_days: int = 7) -> List[Dict[str, Any]]:
+        """Get stress level data for the specified number of days
+        
+        Args:
+            patient_id: ID of the patient
+            num_days: Number of days to retrieve data for (default: 7)
+            
+        Returns:
+            List of stress records with date and stress_level (1-100)
+        """
+        stress_records = []
+        
+        for i in range(num_days):
+            date = datetime.now() - timedelta(days=num_days-1-i)  # Most recent day last
+            stress_record = {
+                "date": date.strftime("%Y-%m-%d"),
+                "stress_level": random.randint(1, 100)  # Stress level from 1-100
+            }
+            stress_records.append(stress_record)
+        
+        return stress_records
     
   
    

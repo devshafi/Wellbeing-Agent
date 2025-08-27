@@ -49,6 +49,8 @@ class ConversationProcessor:
             # Add conversation history AFTER few-shot examples but BEFORE current query
             messages.extend(history)
             
+            
+            
             # Add current query (ONLY ONCE)
             messages.append({
                 "role": "user",
@@ -65,7 +67,7 @@ class ConversationProcessor:
             with torch.no_grad():
                 outputs = model.generate(
                     **inputs,
-                    max_new_tokens=128,
+                    max_new_tokens=256,
                     do_sample=True,
                     num_beams=3,
                     temperature=0.7,
@@ -75,6 +77,7 @@ class ConversationProcessor:
                     eos_token_id=tokenizer.eos_token_id,
                 )
             
+            print("responding using conversation model")
             response_tokens = outputs[0][input_length:]
             response = tokenizer.decode(response_tokens, skip_special_tokens=True)
             response = response.replace(tokenizer.eos_token, "").strip()

@@ -174,7 +174,7 @@ class HybridProcessor:
             if not function_calls:
                 print("🔍 Trying function name detection...")
                 known_functions = [
-                    "get_sleep_data", "get_heart_rate_data", "get_mood_data",
+                    "get_sleep_data", "get_stress_data", "get_heart_rate_data", "get_mood_data",
                     "get_exercise_data", "get_medication_data", "get_steps_data",
                     "get_weight_data", "get_health_summary"
                 ]
@@ -220,18 +220,15 @@ class HybridProcessor:
             # Create data context summary
             data_context = self._create_data_context(collected_data)
             
-            # Create dynamic few-shot examples based on collected data types
-            few_shot_examples = FewShotExamples.get_examples_for_data_types(list(collected_data.keys()))
+            # Create dynamic system prompt with few-shot examples based on collected data types
+            system_prompt_with_examples = FewShotExamples.get_system_prompt_with_examples(list(collected_data.keys()))
             
             messages = [
                 {
                     "role": "system",
-                    "content": """You are a mental health assistant who analyzes actual health data. When provided with user data, you must reference specific dates, values, and patterns from that data in your response. Do not give generic advice - analyze the actual data provided and give personalized insights."""
+                    "content": system_prompt_with_examples
                 },
             ]
-            
-            # Add dynamic few-shot examples
-            messages.extend(few_shot_examples)
             
             # Add conversation history
             messages.extend(history)
@@ -239,13 +236,15 @@ class HybridProcessor:
             # Add current query with embedded data context
             messages.append({
                 "role": "user",
-                "content": f"""Query: {query}
+                "content": f"""PATIENT QUERY: {query}
 
-My recent health data shows:
+ACTUAL DATA TO ANALYZE:
 {data_context}
 
-Please analyze my actual data and provide personalized insights based on the specific patterns you can see."""
+INSTRUCTIONS: Analyze the specific dates, values, and patterns shown above. Reference exact numbers and dates in your response. Look for contradictions, variability, and meaningful trends like the examples you've seen."""
             })
+            
+            print(messages)
             
             tokenizer = self.model_manager.get_tokenizer("conversation")
             model = self.model_manager.get_model("conversation")
@@ -254,14 +253,17 @@ Please analyze my actual data and provide personalized insights based on the spe
             inputs = tokenizer(prompt, return_tensors="pt").to(model.device)
             input_length = inputs['input_ids'].shape[1]
             
+            print("entered here for data aug")
+            
             with torch.no_grad():
                 outputs = model.generate(
                     **inputs,
-                    max_new_tokens=300,
+                    max_new_tokens=256,
                     do_sample=True,
-                    temperature=0.1,     # Very low temperature for focused responses
-                    top_p=0.8,          # Lower top_p to stay focused
-                    repetition_penalty=1.3,  # Higher penalty to avoid repetitive generic phrases
+                    # num_beams=3,
+                    temperature=0.7,
+                    top_p=0.9,
+                    repetition_penalty=1.1,
                     pad_token_id=tokenizer.eos_token_id,
                     eos_token_id=tokenizer.eos_token_id,
                 )
@@ -292,7 +294,7 @@ Please analyze my actual data and provide personalized insights based on the spe
             context_parts.append(f"=== {data_type.upper()} DATA ===")
             
             if data_type == "sleep" and isinstance(data, list):
-                context_parts.append("Recent sleep records:")
+                context_parts.append("Sleep records:")
                 for record in data:
                     date = record.get('date', 'Unknown')
                     hours = record.get('hours_slept', 0)
@@ -300,14 +302,24 @@ Please analyze my actual data and provide personalized insights based on the spe
                     context_parts.append(f"• {date}: {hours} hours, {quality} quality")
                     
             elif data_type == "heart_rate" and isinstance(data, list):
-                context_parts.append("Recent heart rate data:")
+                context_parts.append("Heart rate records:")
                 for record in data:
                     date = record.get('date', 'Unknown')
                     avg_hr = record.get('avg_heart_rate', 0)
-                    context_parts.append(f"• {date}: Average {avg_hr} bpm")
+                    max_hr = record.get('max_heart_rate', 0)
+                    context_parts.append(f"• {date}: Average {avg_hr} bpm, Max {max_hr} bpm")
+                    
+            elif data_type == "stress" and isinstance(data, list):
+                context_parts.append("Stress level records:")
+                for record in data:
+                    date = record.get('date', 'Unknown')
+                    stress_level = record.get('stress_level', 0)
+                    context_parts.append(f"• {date}: Stress level {stress_level}/100")
+                    
             else:
                 # Fallback for other data types
-                context_parts.append(f"Raw data: {json.dumps(data, indent=2)}")
+                context_parts.append(f"Data records:")
+                context_parts.append(f"{json.dumps(data, indent=2)}")
             
             context_parts.append("")  # Empty line between data types
         

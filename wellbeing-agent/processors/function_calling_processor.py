@@ -37,7 +37,7 @@ class FunctionCallingProcessor:
             with torch.no_grad():
                 outputs = model.generate(
                     **inputs,
-                    max_new_tokens=1024,
+                    max_new_tokens=256,
                     do_sample=True,
                     temperature=0.01,
                     top_p=0.95,
@@ -152,8 +152,8 @@ class FunctionCallingProcessor:
                     print("🔍 Trying function name detection...")
                     known_functions = [
                         "get_exercise_data", "get_sleep_data", "get_heart_rate_data",
-                        "get_medication_data", "get_mood_data", "get_weight_data",
-                        "get_steps_data", "get_health_summary"
+                        "get_stress_data", "get_medication_data", "get_mood_data", 
+                        "get_weight_data", "get_steps_data", "get_health_summary"
                     ]
                     
                     for func_name in known_functions:
@@ -268,7 +268,7 @@ Please provide a natural, conversational response interpreting this data for the
             with torch.no_grad():
                 outputs = model.generate(
                     **inputs,
-                    max_new_tokens=400,
+                    max_new_tokens=256,
                     do_sample=True,
                     pad_token_id=tokenizer.eos_token_id,
                     eos_token_id=tokenizer.eos_token_id,
@@ -303,6 +303,13 @@ Please provide a natural, conversational response interpreting this data for the
             else:
                 avg_resting = data.get('average_resting_hr', 0)
                 return f"Heart Rate Data: Average resting {avg_resting} bpm"
+        elif function_name == "get_stress_data":
+            if isinstance(data, list):
+                avg_stress = sum(record.get('stress_level', 0) for record in data) / len(data) if data else 0
+                max_stress = max(record.get('stress_level', 0) for record in data) if data else 0
+                return f"Stress Data: {len(data)} days, average {avg_stress:.1f}/100, peak {max_stress}/100"
+            else:
+                return f"Stress Data: {str(data)[:100]}..."
         else:
             return f"Data retrieved from {function_name}: {str(data)[:200]}..."
     
@@ -318,6 +325,8 @@ Please provide a natural, conversational response interpreting this data for the
             return f"**😴 Sleep Data:**\n```json\n{json.dumps(data, indent=2)}\n```"
         elif function_name == "get_heart_rate_data":
             return f"**❤️ Heart Rate Data:**\n```json\n{json.dumps(data, indent=2)}\n```"
+        elif function_name == "get_stress_data":
+            return f"**😰 Stress Data:**\n```json\n{json.dumps(data, indent=2)}\n```"
         else:
             return f"**📊 {function_name} Results:**\n```json\n{json.dumps(data, indent=2)}\n```"
 
