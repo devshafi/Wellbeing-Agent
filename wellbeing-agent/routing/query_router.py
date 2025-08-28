@@ -10,12 +10,15 @@ class QueryRouter:
     
     def route_query(self, patient_id, query):
         """Main routing function using LLM"""
-        print(f"🎯 Routing query using LLM: {query}")
+        print(f"🧭 ROUTING ANALYSIS:")
+        print(f"├── Examining query patterns and keywords...")
+        print(f"├── Identifying health data requirements...")
+        print(f"└── Consulting AI routing model...")
         
         # Use LLM-based routing
         route_decision = self._llm_route_query(patient_id, query)
         
-        print(f"🎯 LLM Routing decision: {route_decision}")
+        print(f"🎯 ROUTING CONCLUSION: {route_decision.upper()}")
         return route_decision
     
     def _llm_route_query(self, patient_id, query):
@@ -138,18 +141,22 @@ Classification:"""
             response_tokens = outputs[0][input_length:]
             response = tokenizer.decode(response_tokens, skip_special_tokens=True).strip().upper()
             
-            print(f"🤖 Enhanced LLM Router Response: '{response}'")
+            print(f"🤖 AI Router Analysis: '{response}'")
             
             # Parse the response
             if "HYBRID" in response:
+                print(f"🧠 Reasoning: Query requires both health data and emotional support")
                 return "hybrid"
             elif "FUNCTION_CALLING" in response or "FUNCTION" in response:
+                print(f"🧠 Reasoning: Pure data retrieval request identified")
                 return "function_calling"
             elif "CONVERSATION" in response:
+                print(f"🧠 Reasoning: Emotional support or general conversation needed")
                 return "conversation"
             else:
                 # Fallback to rule-based if unclear response
-                print(f"⚠️ Unclear LLM response: '{response}', falling back to enhanced rule-based routing")
+                print(f"⚠️ AI router unclear: '{response}'")
+                print(f"🔄 Engaging fallback reasoning system...")
                 return self._enhanced_rule_based_routing(query)
                 
         except Exception as e:

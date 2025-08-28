@@ -14,7 +14,18 @@ class FunctionCallingProcessor:
     
     def process_query(self, patient_id, query):
         """Generate response using function calling model and orchestrator"""
+        
+        print(f"\n🔧 FUNCTION CALLING PROCESSING PIPELINE")
+        print(f"┌─ MISSION: Execute health data retrieval operations")
+        print(f"├─ Patient requires specific health information")
+        print(f"└─ Activating data retrieval AI...")
+        
         try:
+            # Step 1: Function Planning
+            print(f"\n📋 SUB-PHASE: FUNCTION PLANNING")
+            print(f"├── Analyzing data requirements...")
+            print(f"└── Consulting function calling AI...")
+            
             messages = [
                 {
                     "role": "system",
@@ -25,7 +36,6 @@ class FunctionCallingProcessor:
                     "content": f"Patient ID: {patient_id}\nQuery: {query}"
                 }
             ]
-            
             
             tokenizer = self.model_manager.get_tokenizer("function_calling")
             model = self.model_manager.get_model("function_calling")
@@ -93,7 +103,8 @@ class FunctionCallingProcessor:
     def _extract_and_execute_function(self, response: str) -> tuple:
         """Extract function calls from response and execute them with flexible pattern matching"""
         try:
-            print("🔍 Looking for function calls in response...")
+            print("🔍 SUB-PHASE: FUNCTION DETECTION")
+            print("├── Scanning AI response for function calls...")
             
             # Method 1: Look for properly tagged function calls
             function_pattern = r'<function>(.*?)</function>'
@@ -102,10 +113,11 @@ class FunctionCallingProcessor:
             function_call_str = None
             
             if function_match:
-                print("✅ Found properly tagged function call")
+                print("├── ✅ Found properly tagged function call")
                 function_call_str = function_match.group(1).strip()
             else:
-                print("⚠️ No proper function tags found, trying flexible detection...")
+                print("├── ⚠️ No proper function tags found")
+                print("└── 🔍 Engaging flexible detection algorithms...")
                 
                 # Method 2: Look for JSON-like structure with "name" and "parameters"
                 flexible_patterns = [

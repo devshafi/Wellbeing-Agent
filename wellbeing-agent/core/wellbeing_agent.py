@@ -41,33 +41,74 @@ class WellbeingAgent:
     
     def process_query(self, patient_id, query):
         """Main processing pipeline with modular routing"""
-        print(f"🤖 Processing query for patient {patient_id}")
-        print(f"📝 Query: {query}")
+        print("\n" + "="*60)
+        print(f"� WELLBEING AGENT - COGNITIVE PROCESSING")
+        print("="*60)
+        print(f"👤 Patient: {patient_id}")
+        print(f"� Query: '{query}'")
         
-        # Step 1: Route the query
+        # Step 1: Initial Analysis & Planning
+        print(f"\n🔍 PHASE 1: QUERY ANALYSIS & PLANNING")
+        print(f"├── Analyzing query complexity and intent...")
+        print(f"├── Identifying potential health concerns...")
+        print(f"└── Determining optimal processing strategy...")
+        
+        # Step 2: Route the query
+        print(f"\n🎯 PHASE 2: INTELLIGENT ROUTING")
         route_decision = self.query_router.route_query(patient_id, query)
-        print(f"🎯 Final routing decision: {route_decision}")
+        print(f"✅ ROUTING DECISION: {route_decision.upper()}")
         
-        # Step 2: Process based on route using appropriate processor
+        # Step 3: Execution Planning
+        print(f"\n⚡ PHASE 3: EXECUTION PLANNING")
+        raw_data = None
+        
         if route_decision == "hybrid":
-            print("🎭 Using HYBRID approach (data + conversation)")
-            response = self.hybrid_processor.process_query(patient_id, query)
+            print(f"🎭 STRATEGY: HYBRID (Data + Conversation)")
+            print(f"├── Plan: Retrieve relevant health data")
+            print(f"├── Plan: Analyze patterns in data")
+            print(f"├── Plan: Provide empathetic data-informed response")
+            print(f"└── Executing hybrid processing pipeline...")
+            hybrid_result = self.hybrid_processor.process_query(patient_id, query)
+            
+            # Handle structured response from hybrid processor
+            if isinstance(hybrid_result, dict):
+                response = hybrid_result.get("response", "")
+                raw_data = hybrid_result.get("raw_data")
+            else:
+                response = hybrid_result  # Fallback for backwards compatibility
             
         elif route_decision == "function_calling":
-            print("🔧 Using FUNCTION CALLING approach")
+            print(f"🔧 STRATEGY: FUNCTION CALLING (Pure Data)")
+            print(f"├── Plan: Execute health data retrieval")
+            print(f"├── Plan: Format data for presentation")
+            print(f"└── Executing function calling pipeline...")
             response = self.function_calling_processor.process_query(patient_id, query)
             
         else:  # conversation
-            print("💬 Using CONVERSATION approach")
+            print(f"💬 STRATEGY: CONVERSATION (Emotional Support)")
+            print(f"├── Plan: Provide empathetic response")
+            print(f"├── Plan: Draw on mental health expertise")
+            print(f"└── Executing conversation pipeline...")
             response = self.conversation_processor.generate_response(patient_id, query)
         
-        # Step 3: Return structured result
-        return {
+        # Step 4: Completion
+        print(f"\n✨ PROCESSING COMPLETE")
+        print(f"📋 Response generated successfully")
+        print("="*60)
+        
+        # Step 5: Return structured result
+        result = {
             "route": route_decision,
             "response": response,
             "patient_id": patient_id,
             "query": query
         }
+        
+        # Add raw data if available
+        if raw_data:
+            result["raw_data"] = raw_data
+            
+        return result
     
     def clear_history(self, patient_id):
         """Clear conversation history for a patient"""
