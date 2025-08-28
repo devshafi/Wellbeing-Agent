@@ -20,12 +20,30 @@ class HybridProcessor:
         # Step 1: Use function calling model to determine what data we need
         function_calls = self._get_function_calls_from_model(patient_id, query)
         
-        # Step 2: Execute the function calls to collect relevant data
-        collected_data = {}
-        executed_functions = set()  # Track executed functions to avoid duplicates
+        # Step 1.5: Validate that the function calls make sense for available functions
+        valid_functions = list(function_registry.functions.keys())
+        valid_function_calls = []
         
         if function_calls:
             for func_call in function_calls:
+                function_name = func_call.get("name")
+                if function_name in valid_functions:
+                    valid_function_calls.append(func_call)
+                    print(f"✅ Valid function call: {function_name}")
+                else:
+                    print(f"⚠️ Invalid function call ignored: {function_name} (not in {valid_functions})")
+        
+        # If no valid function calls, fall back to conversation mode
+        if not valid_function_calls:
+            print("🔄 No valid function calls found, falling back to conversation mode")
+            from processors.conversation_processor import conversation_processor
+            return conversation_processor.generate_response(patient_id, query)
+        
+        # Step 2: Execute the valid function calls to collect relevant data
+        collected_data = {}
+        executed_functions = set()  # Track executed functions to avoid duplicates
+        
+        for func_call in valid_function_calls:
                 try:
                     function_name = func_call.get("name")
                     parameters = func_call.get("parameters", {})

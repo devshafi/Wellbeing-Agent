@@ -59,9 +59,6 @@ EXAMPLES OF PROPER THERAPEUTIC DATA ANALYSIS:
             "sleep": FewShotExamples._get_sleep_system_prompt_examples,
             "heart_rate": FewShotExamples._get_heart_rate_system_prompt_examples,
             "stress": FewShotExamples._get_stress_system_prompt_examples,
-            "mood": FewShotExamples._get_mood_system_prompt_examples,
-            "exercise": FewShotExamples._get_exercise_system_prompt_examples,
-            "medication": FewShotExamples._get_medication_system_prompt_examples,
         }
         
         return examples_map.get(data_type, FewShotExamples._get_generic_system_prompt_examples)()
@@ -109,89 +106,14 @@ Proper Response: "Your feeling of being 'always stressed out' is really reflecte
 """
 
     @staticmethod
-    def _get_mood_system_prompt_examples():
-        """System prompt examples for mood data analysis"""
-        return """Example 1 - Declining Pattern:
-User: "I've been feeling off emotionally recently."
-Data: 2025-08-15: Mood score 6/10, Neutral; 2025-08-16: Mood score 4/10, Stressed; 2025-08-17: Mood score 2/10, Depressed
-Proper Response: "I can really see in your mood data what you've been experiencing emotionally. Your mood scores show a concerning decline over these three days - from a neutral 6/10 on August 15th, down to 4/10 with stress on the 16th, and then to just 2/10 with depression on the 17th. That's a significant emotional shift in just a few days, and I can imagine how difficult this has been for you. The progression from neutral to stressed to depressed suggests something may have happened around August 16th that triggered this downward spiral. It's important to recognize that this pattern you're experiencing is real and valid - your instinct that something feels 'off' emotionally is being confirmed by your data. Have you been able to identify what might have contributed to this shift, or would it help to talk through what was happening during these days?"
-
-Example 2 - Erratic Swings:
-User: "My emotions feel all over the place."
-Data: 2025-08-15: Mood score 8/10, Happy; 2025-08-16: Mood score 3/10, Anxious; 2025-08-17: Mood score 7/10, Content
-Proper Response: "Your description of emotions feeling 'all over the place' is really reflected in your mood data, and I want you to know that recognizing this pattern is an important first step. The scores show significant emotional ups and downs: you went from feeling happy at 8/10 on August 15th, then dropped dramatically to 3/10 with anxiety on the 16th, followed by a recovery to 7/10 feeling content on the 17th. These kinds of intense emotional swings can be exhausting and disorienting - it's like being on an emotional rollercoaster. The positive news is that you showed resilience in bouncing back from that low point on August 16th. These rapid changes might be your emotional system responding intensely to daily stressors or situations. What do you think might have triggered that anxious day on the 16th, and how did you manage to find your way back to feeling more content?"
-"""
-
-    @staticmethod
-    def _get_exercise_system_prompt_examples():
-        """System prompt examples for exercise data analysis"""
-        return """Example 1 - Low Activity Pattern:
-User: "I haven't been feeling motivated to exercise."
-Data: 2025-08-15: 0 minutes, No activity; 2025-08-16: 15 minutes, Light walking; 2025-08-17: 0 minutes, No activity
-Proper Response: "Looking at your exercise data from August 15-17, I can see a pattern of very low activity levels. You had no recorded exercise on August 15th and 17th, with only 15 minutes of light walking on August 16th. This minimal activity level over three days suggests you're going through a period of low motivation or energy. The brief walking session on August 16th shows you did make some effort, which is positive."
-"""
-
-    @staticmethod
-    def _get_medication_system_prompt_examples():
-        """System prompt examples for medication data analysis"""
-        return """Example 1 - Inconsistent Adherence:
-User: "I'm concerned about my medication routine."
-Data: 2025-08-15: Sertraline 50mg - Taken; 2025-08-16: Sertraline 50mg - Missed; 2025-08-17: Sertraline 50mg - Taken
-Proper Response: "Looking at your medication data from August 15-17, I can see you missed your Sertraline dose on August 16th but took it on the other days. Missing doses of antidepressants like Sertraline can affect your mood stability and overall wellbeing. While you've been mostly consistent (taking it 2 out of 3 days), it's important to maintain daily consistency with Sertraline for optimal effectiveness."
-"""
-
-    @staticmethod
     def _get_generic_system_prompt_examples():
-        """Generic system prompt examples for other data types"""
-        return """Example:
-User: "I have some health concerns lately."
-Data: [Various health metrics with specific dates and values]
-Proper Response: "Looking at your health data, I can see specific patterns in the values and dates provided. [Reference specific data points, dates, and numerical values from the actual data to provide personalized insights based on what the data actually shows about your health patterns.]"
+        """Generic system prompt examples for unknown data types"""
+        return """Example - General Health Data Analysis:
+User: "I'm concerned about my health metrics lately."
+Data: Recent measurements show some variation in patterns
+Proper Response: "I can see from your health data that there are some patterns worth discussing. Let me walk you through what I'm observing in your measurements and what this might mean for your overall well-being. The data shows variations that could be related to several factors, and I'd like to help you understand these patterns in the context of your daily life. What specific concerns do you have about these measurements, and have you noticed any changes in how you're feeling day-to-day?"
 """
-        """Few-shot examples for sleep data analysis - multiple scenarios"""
-        return [
-            # Example 1: High variability and contradictions
-            {
-                "role": "user", 
-                "content": """I've been having trouble sleeping lately.
 
-My recent health data shows:
-=== SLEEP DATA ===
-Recent sleep records:
-• 2025-08-15: 4.2 hours, Excellent quality
-• 2025-08-16: 8.1 hours, Good quality
-• 2025-08-17: 4.0 hours, Excellent quality
-
-Please analyze my actual data and provide personalized insights based on the specific patterns you can see."""
-            },
-            {
-                "role": "assistant",
-                "content": """Looking at your sleep data from August 15-17, I can see a highly irregular pattern with extreme variability. You slept only 4.2 hours on the 15th and 4.0 hours on the 17th, yet you rated both nights as "Excellent" quality. This is concerning because getting less than 5 hours of sleep is typically associated with poor recovery, not excellent quality.
-
-The middle night shows 8.1 hours with "Good" quality, creating a 4.0-8.1 hour range - that's over 4 hours of variation between nights. This erratic pattern suggests either inconsistent sleep timing or possible sleep perception issues where you're adapting to chronic sleep deprivation and rating inadequate sleep as excellent."""
-            },
-            # Example 2: Consistent but poor quality
-            {
-                "role": "user",
-                "content": """I'm getting enough sleep but don't feel rested.
-
-My recent health data shows:
-=== SLEEP DATA ===
-Recent sleep records:
-• 2025-08-15: 7.5 hours, Poor quality
-• 2025-08-16: 7.8 hours, Poor quality
-• 2025-08-17: 7.2 hours, Fair quality
-
-Please analyze my actual data and provide personalized insights based on the specific patterns you can see."""
-            },
-            {
-                "role": "assistant",
-                "content": """Your sleep data shows a clear pattern: you're consistently getting adequate duration (7.2-7.8 hours) but experiencing poor to fair quality across all three nights. This explains why you're not feeling rested despite getting sufficient sleep time.
-
-The fact that you're getting 7+ hours consistently but rating the quality as poor suggests the issue isn't sleep timing or duration, but rather sleep architecture - you may be experiencing frequent awakenings, light sleep stages, or other disruptions that prevent restorative deep sleep."""
-            }
-        ]
-    
     @staticmethod
     def _get_heart_rate_example():
         """Few-shot examples for heart rate data analysis - multiple scenarios"""
@@ -235,119 +157,5 @@ Please analyze my actual data and provide personalized insights based on the spe
                 "content": """Your heart rate data confirms your feeling of elevated heart rate. Your average readings are consistently high at 96-102 bpm across all three days, which is above the typical resting range of 60-80 bpm for most adults.
 
 The consistency of these elevated readings (all above 95 bpm average) suggests this isn't just occasional stress or activity, but rather a sustained elevation in your baseline heart rate. This persistent elevation could indicate chronic stress, anxiety, caffeine sensitivity, or other factors affecting your cardiovascular system."""
-            }
-        ]
-    
-    @staticmethod
-    def _get_mood_example():
-        """Few-shot examples for mood data analysis - multiple scenarios"""
-        return [
-            # Example 1: Declining pattern
-            {
-                "role": "user",
-                "content": """I've been feeling off emotionally recently.
-
-My recent health data shows:
-=== MOOD DATA ===
-Recent mood records:
-• 2025-08-15: Mood score 6/10, Neutral
-• 2025-08-16: Mood score 4/10, Stressed
-• 2025-08-17: Mood score 2/10, Depressed
-
-Please analyze my actual data and provide personalized insights based on the specific patterns you can see."""
-            },
-            {
-                "role": "assistant",
-                "content": """Looking at your mood data from August 15-17, I can see a clear declining pattern that confirms your feeling of being "off" emotionally. Your mood score has dropped consistently from 6/10 (neutral) to 4/10 (stressed) to 2/10 (depressed) over just three days.
-
-This 4-point drop in such a short time, combined with the progression from neutral to stressed to depressed, suggests something significant may have occurred around August 16th that triggered this emotional decline. The fact that you went from a manageable neutral state to clinical-level depression scores (2/10) in 48 hours indicates this needs attention."""
-            },
-            # Example 2: Inconsistent mood swings
-            {
-                "role": "user",
-                "content": """My emotions feel all over the place.
-
-My recent health data shows:
-=== MOOD DATA ===
-Recent mood records:
-• 2025-08-15: Mood score 8/10, Happy
-• 2025-08-16: Mood score 3/10, Anxious
-• 2025-08-17: Mood score 7/10, Content
-
-Please analyze my actual data and provide personalized insights based on the specific patterns you can see."""
-            },
-            {
-                "role": "assistant",
-                "content": """Your mood data perfectly reflects your description of emotions being "all over the place." The scores show extreme variability: 8/10 (happy) to 3/10 (anxious) to 7/10 (content) - that's a 5-point swing between consecutive days.
-
-This level of mood instability, particularly the dramatic drop from 8 to 3 and then rapid recovery to 7, suggests significant emotional reactivity. The swing from happiness to anxiety and back to contentment in just three days indicates your mood may be highly sensitive to external triggers or internal factors."""
-            }
-        ]
-    
-    @staticmethod
-    def _get_exercise_example():
-        """Few-shot example for exercise data analysis"""
-        return [
-            {
-                "role": "user",
-                "content": """I haven't been feeling motivated to exercise.
-
-My recent health data shows:
-=== EXERCISE DATA ===
-Recent exercise records:
-• 2025-08-15: 0 minutes, No activity
-• 2025-08-16: 15 minutes, Light walking
-• 2025-08-17: 0 minutes, No activity
-
-Please analyze my actual data and provide personalized insights based on the specific patterns you can see."""
-            },
-            {
-                "role": "assistant",
-                "content": """Looking at your exercise data from August 15-17, I can see a pattern of very low activity levels. You had no recorded exercise on August 15th and 17th, with only 15 minutes of light walking on August 16th.
-
-This minimal activity level over three days suggests you're going through a period of low motivation or energy. The brief walking session on August 16th shows you did make some effort, which is positive, but the overall pattern indicates you might benefit from starting with very small, manageable activities to rebuild your exercise routine."""
-            }
-        ]
-    
-    @staticmethod
-    def _get_medication_example():
-        """Few-shot example for medication data analysis"""
-        return [
-            {
-                "role": "user",
-                "content": """I'm concerned about my medication routine.
-
-My recent health data shows:
-=== MEDICATION DATA ===
-Recent medication records:
-• 2025-08-15: Sertraline 50mg - Taken
-• 2025-08-16: Sertraline 50mg - Missed
-• 2025-08-17: Sertraline 50mg - Taken
-
-Please analyze my actual data and provide personalized insights based on the specific patterns you can see."""
-            },
-            {
-                "role": "assistant",
-                "content": """Looking at your medication data from August 15-17, I can see you missed your Sertraline dose on August 16th but took it on the other days. Missing doses of antidepressants like Sertraline can affect your mood stability and overall wellbeing.
-
-While you've been mostly consistent (taking it 2 out of 3 days), it's important to maintain daily consistency with Sertraline for optimal effectiveness. The missed dose on August 16th might contribute to any mood fluctuations you're experiencing."""
-            }
-        ]
-    
-    @staticmethod
-    def _get_generic_example():
-        """Generic few-shot example for other data types"""
-        return [
-            {
-                "role": "user", 
-                "content": """I have some health concerns lately.
-
-My recent health data shows specific patterns and values.
-
-Please analyze my actual data and provide personalized insights based on the specific patterns you can see."""
-            },
-            {
-                "role": "assistant",
-                "content": """Looking at your health data, I can see specific patterns in the values and dates provided. Let me analyze these specific data points and trends to give you personalized insights based on what the data actually shows about your health patterns."""
             }
         ]

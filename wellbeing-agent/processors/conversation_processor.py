@@ -77,7 +77,6 @@ class ConversationProcessor:
                     eos_token_id=tokenizer.eos_token_id,
                 )
             
-            print("responding using conversation model")
             response_tokens = outputs[0][input_length:]
             response = tokenizer.decode(response_tokens, skip_special_tokens=True)
             response = response.replace(tokenizer.eos_token, "").strip()

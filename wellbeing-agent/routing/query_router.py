@@ -24,7 +24,7 @@ class QueryRouter:
             # Enhanced few-shot examples for routing
             few_shot_prompt = """You are an intelligent routing system for a mental health assistant. You need to classify user queries into these categories:
 
-1. "CONVERSATION" - for greetings, introductions, general chat, emotional support, mental health advice
+1. "CONVERSATION" - for greetings, introductions, general chat, emotional support, mental health advice, questions about the assistant itself
 2. "FUNCTION_CALLING" - for pure data retrieval, health metrics, information lookup only  
 3. "HYBRID" - ONLY when user has specific health symptoms AND would benefit from actual data to provide informed help
 
@@ -32,6 +32,18 @@ Examples:
 
 Query: "Hello, how are you?"
 Analysis: Simple greeting, no health concerns
+Classification: CONVERSATION
+
+Query: "What is your main speciality?"
+Analysis: Question about the assistant's capabilities, general conversation
+Classification: CONVERSATION
+
+Query: "What can you help me with?"
+Analysis: Question about the assistant's features, general conversation
+Classification: CONVERSATION
+
+Query: "Tell me about yourself"
+Analysis: General conversation about the assistant
 Classification: CONVERSATION
 
 Query: "My name is Sarah, nice to meet you"
@@ -162,6 +174,15 @@ Classification:"""
             r"^greetings|^salutations|what's up|how's it going"
         ]
         
+        # Assistant capability questions - always conversation
+        capability_patterns = [
+            r"what.*your.*speciality|what.*your.*specialty",
+            r"what.*can.*you.*help|what.*do.*you.*do",
+            r"tell.*me.*about.*yourself|what.*are.*you",
+            r"your.*main.*function|your.*purpose",
+            r"what.*are.*your.*capabilities|what.*features"
+        ]
+        
         conversation_keywords = [
             "feel", "feeling", "anxious", "stressed", "sad", "depressed",
             "help", "support", "advice", "talk", "discuss", "cope",
@@ -188,8 +209,12 @@ Classification:"""
         greeting_score = sum(1 for pattern in greeting_patterns 
                             if re.search(pattern, query_lower))
         
-        if greeting_score > 0:
-            print(f"🎯 Greeting detected, routing to conversation")
+        # Check for capability questions - always route to conversation  
+        capability_score = sum(1 for pattern in capability_patterns
+                              if re.search(pattern, query_lower))
+        
+        if greeting_score > 0 or capability_score > 0:
+            print(f"🎯 Greeting/capability question detected, routing to conversation")
             return "conversation"
         
         # Check for hybrid patterns
