@@ -26,7 +26,7 @@ def run_evaluation_auto():
     print(f"✅ Loaded API key from .env file")
     
     # Path to the generated test results
-    csv_path = "/home/jovyan/Works/MSc_Thesis/wellbeing-agent/testing/automated_agent_test_results_20250829_001147.csv"
+    csv_path = "/home/jovyan/Works/MSc_Thesis/wellbeing-agent/testing/comprehensive_agent_test_results_20250829_012244.csv"
     
     if not os.path.exists(csv_path):
         print(f"❌ Test results file not found: {csv_path}")
