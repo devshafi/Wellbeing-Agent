@@ -101,3 +101,6 @@ mh_function_calling/model_training/finetuned_models
 .mypy_cache/
 .dmypy.json
 dmypy.json
+
+# environment fodler
+.env

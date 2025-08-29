@@ -1,0 +1,115 @@
+test_id,patient_id,query,response,route,success,error,timestamp
+1,AUTOMATED_TEST_20250829_000852,I've been feeling really anxious lately and having trouble sleeping. Can you check my recent sleep data and help me understand what's going on?,"🎭 **Hybrid Response** (Data + Conversation)
+
+It's understandable that you've been feeling anxious lately and struggling with your sleep. Your recent sleep data shows a concerning pattern, with only 3.6 hours of sleep on the 23rd, 3.6 hours on the 25th, 3.8 hours on the 26th, and 3.8 hours on the 28th. These short sleep durations indicate that you're not getting enough restorative sleep, which can contribute to feelings of anxiety and difficulty falling asleep.
+
+To help improve your sleep quality, I would suggest establishing a consistent bedtime routine. Going to bed and waking up at the same time each day, even on weekends, can signal to your body that it's time to wind down and prepare for sleep. Additionally, creating a relaxing environment in your bedroom, such as keeping the room cool, dark, and quiet, can promote better sleep. It may also be helpful to avoid stimulating activities like using electronic devices or consuming caffeine close to bedtime, as they can interfere with your ability to fall asleep.
+
+By implementing these strategies, you may find that your sleep patterns begin to improve, allowing you to feel more rested and better equipped to manage your anxiety. Remember, it's important to be patient with yourself and give these changes time to take effect. If you continue to struggle with your sleep, it may be beneficial to consult with a healthcare professional for further guidance.",hybrid,True,,2025-08-29T00:09:05.726035
+2,AUTOMATED_TEST_20250829_000852,My stress levels seem really high this week. Could you look at my stress data and suggest some coping strategies?,"🎭 **Hybrid Response** (Data + Conversation)
+
+Based on your recent stress data, it appears that your stress levels have been fluctuating throughout the week. On August 24th, your stress level reached its highest at 94/100, while on August 25th, it dropped to 68/100. However, on August 26th, it spiked again to 95/100, followed by a slight decrease on August 27th to 66/100. Lastly, on August 28th and 29th, your stress levels remained relatively stable at 72/100 and 76/100, respectively.
+
+These fluctuations in your stress levels suggest that there may be multiple factors contributing to your current state. It's important to consider both internal and external factors that could be influencing your stress levels. One potential internal factor could be changes in your daily routine or personal life, such as work-related stress or relationship issues. On the other hand, external factors like financial difficulties or health concerns might also be playing a role.
+
+To help manage your stress levels, I would suggest implementing some coping strategies. One effective approach is practicing relaxation techniques, such as deep breathing exercises or progressive muscle relaxation. These techniques can help calm your mind and body, reducing feelings of anxiety and stress. Additionally, engaging in regular physical activity, such as walking or yoga, can release endorphins, which are natural mood boosters.
+
+It's also essential to prioritize self-care and make time for activities that bring you joy and relaxation. This could include hobbies, spending time with loved ones, or engaging in mindfulness practices like meditation or journaling. Remember, taking care of yourself is crucial in managing stress and maintaining overall well-being.
+
+I encourage you to explore these coping strategies and see which ones work best for you. If you find that your stress levels persist or worsen despite implementing these techniques, it may be helpful to seek additional support from a mental health professional who can provide personalized guidance tailored to your specific needs.",hybrid,True,,2025-08-29T00:09:21.362491
+3,AUTOMATED_TEST_20250829_000852,I'm worried about my heart rate - it feels like it's racing all the time. Can you check my heart rate data and tell me if I should be concerned?,"🎭 **Hybrid Response** (Data + Conversation)
+
+I can see that your heart rate has been consistently elevated during exercise, with an average of 127 bpm and a maximum of 174 bpm on August 8th, 163 bpm and 173 bpm on August 25th, 120 bpm and 194 bpm on August 26th, 176 bpm and 181 bpm on August 27th, 170 bpm and 176 bpm on August 28th, and 167 bpm and 172 bpm on August 29th. These readings indicate that your heart rate has been significantly higher than normal during physical activity, which could be a sign of anxiety or stress.
+
+It's important to note that while exercise is a great way to improve cardiovascular health, an elevated heart rate during exercise can be a cause for concern. I would recommend speaking with a healthcare professional to rule out any underlying medical conditions that may be contributing to your elevated heart rate. In the meantime, I suggest practicing relaxation techniques such as deep breathing exercises or progressive muscle relaxation to help manage your anxiety and reduce your heart rate.",hybrid,True,,2025-08-29T00:09:33.102457
+4,AUTOMATED_TEST_20250829_000852,I've been eating poorly and feeling sluggish. Can you review my nutrition data and help me make better food choices?,"🎭 **Hybrid Response** (Data + Conversation)
+
+I can see that you've been struggling with your eating habits and feeling sluggish lately. It's important to address these concerns, as they can have a significant impact on both your physical and mental well-being. Let's take a closer look at your nutrition data to identify any patterns or trends that may be contributing to your current situation.
+
+From what I've seen, it appears that your caloric intake has been inconsistent over the past few days. On August 25th, you consumed 1618 calories, which is significantly higher than your average daily intake. This could be a sign that you've been indulging in unhealthy foods or overeating. On the other hand, your caloric intake on August 26th was lower, with only 1492 calories consumed. This could indicate that you've been restricting your food intake or skipping meals altogether.
+
+Furthermore, I notice that your macronutrient intake has also been inconsistent. On August 25th, you consumed 27g of protein, which is significantly higher than your average daily intake. This could be a sign that you've been consuming more protein-rich foods than usual. Conversely, on August 26th, you consumed only 49g of protein, which is lower than your average daily intake. This could indicate that you've been consuming fewer protein-rich foods than usual.
+
+It's important to remember that these patterns can have a significant impact on your overall health and well-being. Eating poorly and feeling sluggish can lead to a range of negative consequences, including weight gain, decreased energy levels, and poor mental health. To help you make better food choices, I would suggest focusing on incorporating more balanced meals into your diet. This could include a variety of fruits, vegetables, whole grains, lean proteins, and healthy fats. Additionally, it may be helpful to keep a food diary to track your eating habits and identify any patterns or triggers that may be contributing to your current situation.
+
+Remember, it's important to approach this process with self-compassion and patience. Changing eating habits takes time and effort, but the rewards can be significant. I'm here to support you every step of the way. Let's work together to develop a plan that will help you make healthier food choices and improve your overall well-being.",hybrid,True,,2025-08-29T00:09:51.404164
+5,AUTOMATED_TEST_20250829_000852,I feel like I'm not getting enough exercise and it's affecting my mood. Can you look at my activity data and suggest a plan?,"🎭 **Hybrid Response** (Data + Conversation)
+
+Your concern about not getting enough exercise and its impact on your mood is a valid one. Let's take a closer look at your activity data to see if we can identify any patterns or trends that might help us develop a plan to address this issue.
+
+From what I've seen, it appears that your physical activity levels have been inconsistent over the past few days. On August 25th, you only managed to cover a distance of 0.22 kilometers, which is significantly lower than your average daily total. This could be a sign that you've been struggling to find the motivation or energy to engage in regular physical activity.
+
+Moreover, I notice that your running distances have been particularly low, with only 0.23 kilometers on August 24th and 0.27 kilometers on August 27th. This could indicate that you've been relying more heavily on walking as your primary mode of transportation, which may not provide the same level of cardiovascular benefits as running.
+
+To help you get back on track, I would suggest setting realistic and achievable goals for yourself. For instance, you could aim to increase your daily step count by taking short walks throughout the day, even if it's just for a few minutes at a time. Additionally, consider incorporating strength training exercises into your routine to help improve your overall fitness and boost your mood.
+
+Remember, it's important to be patient with yourself and celebrate small victories along the way. Every step you take, no matter how small, is a step in the right direction. And don't forget to listen to your body and take rest days when needed. The key is to find a balance that works for you and to make exercise a consistent part of your daily routine.
+
+I'm here to support you in any way I can, so please don't hesitate to reach out if you have any questions or need further guidance. Together, we can work towards improving your physical activity levels and, in turn, boosting your mood and overall well-being.",hybrid,True,,2025-08-29T00:10:08.683357
+6,AUTOMATED_TEST_20250829_000852,My blood pressure has been concerning me. Can you check my recent readings and explain what they mean for my health?,"🎭 **Hybrid Response** (Data + Conversation)
+
+Your concern about your blood pressure is understandable, and I'm here to help you understand what your recent readings mean for your health. Let's take a closer look at your blood pressure records.
+
+On August 8th, 2025, your blood pressure was 147/99 mmHg, which falls within the stage 2 hypertension range. This indicates that your blood pressure is slightly elevated, but it's still within a relatively safe range. However, it's essential to monitor your blood pressure closely to ensure that it doesn't continue to rise.
+
+On August 24th, 2025, your blood pressure increased to 164/93 mmHg, which is also within the stage 2 hypertension range. This suggests that your blood pressure may be gradually increasing, and it's crucial to take steps to manage it effectively.
+
+On August 25th, 2025, your blood pressure skyrocketed to 180/96 mmHg, which is significantly higher than the previous readings. This is a cause for concern, as high blood pressure can lead to serious health complications if left unaddressed.
+
+On August 26th, 2025, your blood pressure returned to 140/97 mmHg, which is still within the stage 2 hypertension range. However, it's essential to continue monitoring your blood pressure closely to ensure that it doesn't continue to rise.
+
+On August 27th, 2025, your blood pressure increased to 160/103 mmHg, which is also within the stage 2 hypertension range. This suggests that your blood pressure may be gradually increasing, and it's crucial to take steps to manage it effectively.
+
+On August 28th, 2025, your blood pressure decreased to 155/96 mmHg, which is still within the stage 2 hypertension range. However, it's essential to continue monitoring your blood pressure closely to ensure that it doesn't continue to rise.
+
+On August 29th, 2025, your blood pressure decreased to 154/95 mmHg, which is still within the stage 2 hypertension range. However, it's essential to continue monitoring your blood pressure closely to ensure that it doesn't continue to rise.
+
+In summary, your recent blood pressure readings indicate that your blood pressure has been fluctuating, with some readings within the stage 2 hypertension range and others significantly higher. It's crucial to take steps to manage your blood pressure effectively, such as making lifestyle changes, such as reducing sodium intake, increasing physical activity, and",hybrid,True,,2025-08-29T00:10:30.171486
+7,AUTOMATED_TEST_20250829_000852,I'm having trouble managing my weight and it's making me depressed. Can you look at my weight data and provide some guidance?,"🎭 **Hybrid Response** (Data + Conversation)
+
+I can see that you've been struggling with managing your weight, and it's been affecting your mental well-being. Your weight records show a fluctuating pattern, with increases and decreases over the past few days. On August 23rd, your weight was at 64.0 kg, which is an increase from the previous day. On August 24th, it remained stable at 63.1 kg. However, on August 25th, it decreased to 63.5 kg, and then increased again on August 26th to 63.7 kg. On August 27th, it continued to rise to 63.8 kg, and on August 28th, it stabilized at 63.4 kg. Lastly, on August 29th, it increased again to 63.1 kg.
+
+These fluctuations in your weight can be distressing, and it's understandable that they're impacting your mental health. It's important to recognize that weight fluctuations can be influenced by various factors, such as changes in appetite, water intake, and physical activity levels. However, it's also crucial to consider any underlying emotional or psychological factors that may be contributing to these fluctuations.
+
+One possible explanation for your weight fluctuations could be emotional eating. Sometimes, we turn to food as a way to cope with stress, sadness, or other emotions. This can lead to overeating or making unhealthy food choices, which can result in weight gain or loss. It's essential to explore any emotional triggers that may be contributing to your weight fluctuations and find healthier ways to manage your emotions.
+
+Another possibility is hormonal imbalances. Hormonal changes can affect our appetite and metabolism, leading to weight fluctuations. It's essential to consult with a healthcare professional to rule out any underlying hormonal imbalances that may be contributing to your weight fluctuations.
+
+Lastly, it's important to focus on overall health and well-being rather than just the number on the scale. Engage in regular physical activity, eat a balanced diet, and prioritize self-care activities that bring you joy and relaxation. Remember, it's a journey, and setbacks are a normal part of the process. Be patient with yourself and celebrate small victories along the way.
+
+In summary, your weight fluctuations can be influenced by various factors, including emotional eating, hormonal imbalances, and lifestyle choices. It's essential to explore these factors and find healthier ways to manage your emotions and overall health. Remember, it's a journey, and setbacks are a normal part of the process. Be patient with yourself and celebrate small victories along the",hybrid,True,,2025-08-29T00:10:51.066383
+8,AUTOMATED_TEST_20250829_000852,I feel tired all the time despite trying to sleep more. Can you check my sleep patterns and energy levels?,"🎭 **Hybrid Response** (Data + Conversation)
+
+Your sleep patterns and energy levels have been a source of concern for you lately, despite your efforts to prioritize restful nights. I understand that you've been feeling tired all the time, and it's disheartening to see that your sleep quality hasn't improved. Let's take a closer look at your sleep data to gain a better understanding of what might be contributing to your fatigue.
+
+Your BMR (Basal Metabolic Rate) and TDEE (Thermoregic Energy Expenditure) values indicate that your body requires a significant amount of energy to function properly. On August 23rd, your BMR was 1892 calories, and your TDEE was 2554 calories. This suggests that your body is expending a considerable amount of energy to maintain basic bodily functions. However, on August 24th, your BMR decreased to 1222 calories, and your TDEE decreased to 3022 calories. This decrease in energy expenditure could indicate that your body is not expending as much energy as it typically does, which might be contributing to your fatigue.
+
+Furthermore, let's examine your sleep patterns. On August 25th, your sleep duration was 7 hours and 30 minutes, which is slightly above the recommended 7-9 hours per night. However, on August 26th, your sleep duration was only 6 hours and 30 minutes, which is below the recommended range. This inconsistency in sleep duration could be impacting your overall energy levels and contributing to your fatigue.
+
+Based on these observations, I would suggest implementing a consistent sleep schedule and creating a relaxing bedtime routine to help improve your sleep quality. This could include activities such as reading a book, taking a warm bath, or practicing relaxation techniques like deep breathing or progressive muscle relaxation. Additionally, ensuring that your sleep environment is conducive to restful sleep, such as keeping the room cool, dark, and quiet, could also be beneficial.
+
+By implementing these strategies, you may be able to improve your sleep quality and, in turn, enhance your energy levels and overall well-being. Remember, it's essential to be patient with yourself as it may take some time to see noticeable improvements. If your fatigue persists or worsens, it may be helpful to consult with a healthcare professional for further evaluation and guidance.",hybrid,True,,2025-08-29T00:11:12.347574
+9,AUTOMATED_TEST_20250829_000852,I'm concerned about my overall fitness and how it might be affecting my mental health. Can you assess my fitness data?,"🎭 **Hybrid Response** (Data + Conversation)
+
+Your concern about your overall fitness and how it might be affecting your mental health is a valid one, and I'm here to help you assess your fitness data. Let's take a closer look at your recent VO2 max fitness records.
+
+On August 23rd, your VO2 max was 28.2 ml/kg/min, which falls into the poor category. This indicates that your body's ability to utilize oxygen during intense exercise is not optimal. On August 26th, your VO2 max was 22.8 ml/kg/min, also falling into the poor category. This suggests that your body's ability to utilize oxygen during intense exercise has not improved significantly over the past few days.
+
+It's important to note that a poor VO2 max can be an indicator of various health issues, including cardiovascular disease, diabetes, and obesity. These conditions can have a significant impact on your mental health, as they can lead to feelings of frustration, anxiety, and depression. Additionally, a poor VO2 max can make it more challenging to engage in regular physical activity, which is essential for maintaining good mental health.
+
+Given these findings, I would recommend that you focus on incorporating small, manageable steps into your daily routine to improve your overall fitness. This could include activities such as taking short walks, doing light stretching exercises, or engaging in gentle forms of exercise like yoga or swimming. Remember, the key is to start small and gradually increase the intensity and duration of your workouts as you become more comfortable.
+
+It's also essential to consult with a healthcare professional before starting any new exercise program, especially if you have any underlying health conditions or concerns. They can provide personalized guidance and help you create a safe and effective exercise plan tailored to your specific needs.
+
+In summary, your recent VO2 max fitness records indicate that your body's ability to utilize oxygen during intense exercise is not optimal. This can be an indicator of various health issues and can impact your mental health. I recommend focusing on incorporating small, manageable steps into your daily routine to improve your overall fitness, and consulting with a healthcare professional before starting any new exercise program. Remember, the key is to start small and gradually increase the intensity and duration of your workouts as you become more comfortable.",hybrid,True,,2025-08-29T00:11:31.489079
+10,AUTOMATED_TEST_20250829_000852,I've been feeling overwhelmed and want to understand how my physical health might be contributing to my mental state. Can you do a comprehensive health review?,"🎭 **Hybrid Response** (Data + Conversation)
+
+I understand that you've been feeling overwhelmed and want to understand how your physical health might be contributing to your mental state. Let's take a closer look at your body fat data to gain some insights.
+
+On August 26th, your body fat percentage was 32.0%, with a muscle mass of 23.7kg. This suggests that you have a relatively low body fat percentage, which is generally considered healthy. However, on August 28th, your body fat percentage increased to 34.6%, with a muscle mass of 21.1kg. This increase in body fat percentage could potentially be contributing to your feelings of overwhelm.
+
+It's important to note that body fat percentage is just one aspect of overall health, and it's essential to consider other factors as well. However, based on the data you've provided, it appears that your body fat percentage has been fluctuating over the past few days. This fluctuation could be a sign of stress or other emotional factors that are impacting your physical health.
+
+One coping strategy that might be helpful for you is to focus on self-care practices that promote relaxation and stress reduction. Engaging in activities such as deep breathing exercises, progressive muscle relaxation, or mindfulness meditation can help you manage stress and improve your overall well-being. Additionally, making sure you're getting enough sleep, eating a balanced diet, and engaging in regular physical activity can also contribute to better mental and physical health.
+
+Remember, it's essential to consult with a healthcare professional for a comprehensive assessment of your overall health and to discuss any concerns you may have. They can provide you with personalized guidance and support to help you navigate any challenges you may be facing.",hybrid,True,,2025-08-29T00:11:47.022621
